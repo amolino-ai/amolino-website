@@ -1,17 +1,28 @@
-import { Button } from '@/components/button'
+import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Heading, Subheading } from '@/components/text'
 import { Link } from '@/components/link'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import Image from 'next/image'
 
-const IntegrationCategory = ({ title, children }) => {
+interface IntegrationCategoryProps {
+  title: 'MEETINGS' | 'EMAIL' | 'MESSAGING' | 'CRM';
+  children: React.ReactNode;
+}
+
+interface IntegrationIconProps {
+  name: string;
+  src: string;
+  alt?: string;
+}
+
+const IntegrationCategory = ({ title, children }: IntegrationCategoryProps) => {
   const categoryColors = {
     MEETINGS: 'bg-blue-50',
     EMAIL: 'bg-purple-50',
     MESSAGING: 'bg-green-50',
     CRM: 'bg-blue-50'
-  }
+  } as const;
 
   return (
     <div className="flex flex-col items-center">
@@ -25,7 +36,7 @@ const IntegrationCategory = ({ title, children }) => {
   )
 }
 
-const IntegrationIcon = ({ name, src, alt }) => {
+const IntegrationIcon = ({ name, src, alt }: IntegrationIconProps) => {
   return (
     <div className="flex flex-col items-center">
       <div className="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center overflow-hidden">

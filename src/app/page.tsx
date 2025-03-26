@@ -1,5 +1,5 @@
 import { BentoCard } from '@/components/bento-card'
-import { Button } from '@/components/button'
+import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
@@ -17,6 +17,7 @@ import { Heading, Subheading } from '@/components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
 import { IntegrationsSection } from '@/components/integrations-section'
+import { Logo } from '@/components/Logo'
 
 export const metadata: Metadata = {
   description:

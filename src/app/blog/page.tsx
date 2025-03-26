@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
@@ -291,7 +291,7 @@ export default async function Blog({
         <Navbar />
         <Subheading className="mt-16">Blog</Subheading>
         <Heading as="h1" className="mt-2">
-          What’s happening at Radiant.
+          Whats happening at Radiant.
         </Heading>
         <Lead className="mt-6 max-w-3xl">
           Stay informed with product updates, company news, and insights on how

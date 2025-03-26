@@ -1,5 +1,5 @@
 import { AnimatedNumber } from '@/components/animated-number'
-import { Button } from '@/components/button'
+import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'

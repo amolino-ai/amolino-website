@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient, GradientBackground } from '@/components/gradient'

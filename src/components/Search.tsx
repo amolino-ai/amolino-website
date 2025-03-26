@@ -22,7 +22,7 @@ import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { navigation } from '@/components/Navigation'
-import { type Result } from '@/mdx/search.mjs'
+import type { Result } from '@/types/search'
 
 type EmptyObject = Record<string, never>
 
