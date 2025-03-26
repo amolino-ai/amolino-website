@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://amolino.ai
+
+# Sitemaps
+Sitemap: https://amolino.ai/sitemap.xml
