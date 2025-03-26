@@ -15,7 +15,7 @@ const links = [
   { href: '/pricing', label: 'Pricing' },
   { href: '/company', label: 'Company' },
   { href: '/blog', label: 'Blog' },
-  { href: '/login', label: 'Login' },
+  { href: 'https://app.amolino.ai', label: 'Login' },
 ]
 
 function DesktopNav() {

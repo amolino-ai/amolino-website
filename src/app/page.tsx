@@ -218,7 +218,7 @@ export default function Home() {
         <IntegrationsSection />
       </main>
       <Testimonials />
-      <Footer />
+   
     </div>
   )
 }

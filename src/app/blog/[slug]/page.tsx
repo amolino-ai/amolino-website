@@ -194,7 +194,7 @@ export default async function BlogPost({
           </div>
         </div>
       </Container>
-      <Footer />
+   
     </main>
   )
 }

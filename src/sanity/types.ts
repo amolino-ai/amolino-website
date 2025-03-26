@@ -124,6 +124,11 @@ export type Post = {
         _key: string
       }
     | {
+        style?: 'line' | 'space'
+        _type: 'separator'
+        _key: string
+      }
+    | {
         asset?: {
           _ref: string
           _type: 'reference'
@@ -193,6 +198,11 @@ export type BlockContent = Array<
       }>
       level?: number
       _type: 'block'
+      _key: string
+    }
+  | {
+      style?: 'line' | 'space'
+      _type: 'separator'
       _key: string
     }
   | {
@@ -415,6 +425,11 @@ export type POST_QUERYResult = {
         crop?: SanityImageCrop
         alt?: string
         _type: 'image'
+        _key: string
+      }
+    | {
+        style?: 'line' | 'space'
+        _type: 'separator'
         _key: string
       }
   > | null

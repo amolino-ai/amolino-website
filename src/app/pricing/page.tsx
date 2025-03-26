@@ -510,7 +510,7 @@ export default function Pricing({
       <PricingTable selectedTier={tier} />
       <Testimonial />
       <FrequentlyAskedQuestions />
-      <Footer />
+     
     </main>
   )
 }

@@ -467,7 +467,7 @@ export default function Company() {
       <Team />
       <Investors />
       <Careers />
-      <Footer />
+     
     </main>
   )
 }
