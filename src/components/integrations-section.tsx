@@ -4,6 +4,7 @@ import { Heading, Subheading } from '@/components/text'
 import { Link } from '@/components/link'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import Image from 'next/image'
+import { AnimatedNumber } from './animated-number'
 
 interface IntegrationCategoryProps {
   title: 'MEETINGS' | 'EMAIL' | 'MESSAGING' | 'CRM';
@@ -15,6 +16,7 @@ interface IntegrationIconProps {
   src: string;
   alt?: string;
 }
+
 
 const IntegrationCategory = ({ title, children }: IntegrationCategoryProps) => {
   const categoryColors = {
@@ -63,7 +65,7 @@ export function IntegrationsSection() {
 
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <IntegrationCategory title="MEETINGS">
-          <IntegrationIcon name="Teams" src="/icons/microsoft-teams.svg" />
+          <IntegrationIcon name="Teams" src="/icons/ms_teams_logo.jpeg" />
           <IntegrationIcon name="Zoom" src="/icons/zoom.svg" />
           <IntegrationIcon name="Google Calendar" src="/icons/google-calendar.svg" />
         </IntegrationCategory>
@@ -74,8 +76,8 @@ export function IntegrationsSection() {
         </IntegrationCategory>
 
         <IntegrationCategory title="MESSAGING">
-          <IntegrationIcon name="Slack" src="/icons/slack.svg" />
-          <IntegrationIcon name="Teams" src="/icons/microsoft-teams.svg" />
+          <IntegrationIcon name="Slack" src="/icons/slack_logo.png" />
+          <IntegrationIcon name="Teams" src="/icons/ms_teams_logo.jpeg" />
         </IntegrationCategory>
 
         <IntegrationCategory title="CRM">
@@ -83,6 +85,8 @@ export function IntegrationsSection() {
           <IntegrationIcon name="HubSpot" src="/icons/hubspot.svg" />
         </IntegrationCategory>
       </div>
+
+     
 
       <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
         <Button href="#" variant="primary">Use for Free</Button>

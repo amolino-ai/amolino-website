@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { Mark } from './Logo'
+import { Logo } from './Logo'
 
 function Row({ children }: { children: React.ReactNode }) {
   return (
@@ -11,7 +11,7 @@ function Row({ children }: { children: React.ReactNode }) {
   )
 }
 
-function Logo({
+function LogoItem({
   label,
   src,
   className,
@@ -48,77 +48,77 @@ export function LogoTimeline() {
           }}
         />
         <div className="relative flex size-24 items-center justify-center rounded-xl bg-linear-to-t from-white/5 to-white/25 ring-1 shadow-sm ring-white/10 outline outline-offset-[-5px] outline-white/5 ring-inset">
-          <Mark className="h-9 fill-white" />
+          <Logo className="h-9 fill-white" />
         </div>
       </div>
       <div className="[container-type:inline-size] absolute inset-0 grid grid-cols-1 pt-8">
         <Row>
-          <Logo
+          <LogoItem
             label="Loom"
             src="/logo-timeline/loom.svg"
             className="[animation-delay:-26s] [animation-duration:30s]"
           />
-          <Logo
+          <LogoItem
             label="Gmail"
             src="/logo-timeline/gmail.svg"
             className="[animation-delay:-8s] [animation-duration:30s]"
           />
         </Row>
         <Row>
-          <Logo
+          <LogoItem
             label="Asana"
             src="/logo-timeline/asana.svg"
             className="[animation-delay:-40s] [animation-duration:40s]"
           />
-          <Logo
+          <LogoItem
             label="Microsoft Teams"
             src="/logo-timeline/microsoft-teams.svg"
             className="[animation-delay:-20s] [animation-duration:40s]"
           />
         </Row>
         <Row>
-          <Logo
+          <LogoItem
             label="Google Calendar"
             src="/logo-timeline/google-calendar.svg"
             className="[animation-delay:-10s] [animation-duration:40s]"
           />
-          <Logo
+          <LogoItem
             label="Google Drive"
             src="/logo-timeline/google-drive.svg"
             className="[animation-delay:-32s] [animation-duration:40s]"
           />
         </Row>
         <Row>
-          <Logo
+          <LogoItem
             label="Basecamp"
             src="/logo-timeline/basecamp.svg"
             className="[animation-delay:-45s] [animation-duration:45s]"
           />
-          <Logo
+          <LogoItem
             label="Discord"
             src="/logo-timeline/discord.svg"
             className="[animation-delay:-23s] [animation-duration:45s]"
           />
         </Row>
         <Row>
-          <Logo
+          <LogoItem
             label="Hubspot"
             src="/logo-timeline/hubspot.svg"
             className="[animation-delay:-55s] [animation-duration:60s]"
           />
-          <Logo
+          <LogoItem
             label="Slack"
             src="/logo-timeline/slack.svg"
             className="[animation-delay:-20s] [animation-duration:60s]"
           />
         </Row>
         <Row>
-          <Logo
+          <LogoItem
             label="Adobe Creative Cloud"
             src="/logo-timeline/adobe-creative-cloud.svg"
             className="[animation-delay:-9s] [animation-duration:40s]"
           />
-          <Logo
+          <LogoItem
             label="Zoom"
             src="/logo-timeline/zoom.svg"
             className="[animation-delay:-28s] [animation-duration:40s]"

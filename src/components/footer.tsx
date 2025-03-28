@@ -55,31 +55,40 @@ function Sitemap() {
       <div>
         <SitemapHeading>Product</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing</SitemapLink>
-          <SitemapLink href="#">Analysis</SitemapLink>
-          <SitemapLink href="#">API</SitemapLink>
+          
+          <SitemapLink href="/pricing">Guided Selling</SitemapLink>
+          <SitemapLink href="/pricing">Revenue Forecasting</SitemapLink>
+          <SitemapLink href="/pricing">Pipeline Visibility and Inspections</SitemapLink>
+          {/* <SitemapLink href="#">Analysis</SitemapLink>
+          <SitemapLink href="#">API</SitemapLink> */}
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Careers</SitemapLink>
+        <SitemapLink href="/pricing">Pricing</SitemapLink>
           <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="/company">Company</SitemapLink>
+          <SitemapLink href="/company">About Us</SitemapLink>
+          <SitemapLink href="/help">Help center</SitemapLink>
+
         </SitemapLinks>
       </div>
       <div>
-        <SitemapHeading>Support</SitemapHeading>
+        <SitemapHeading>Use Cases</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Help center</SitemapLink>
-          <SitemapLink href="#">Community</SitemapLink>
+          <SitemapLink href="/use-cases/pipeline-visibility">Pipeline Visibility</SitemapLink>
+          <SitemapLink href="/use-cases/revenue-forecasting">Revenue Forecasting</SitemapLink>
+          <SitemapLink href="/use-cases/crm-automation">CRM Automation and Data Hygiene</SitemapLink>
+          <SitemapLink href="/use-cases/account-management-and-deal-tracking">Account Management and Deal Tracking</SitemapLink>
+          <SitemapLink href="/use-cases/deal-linearity">Deal Linearity</SitemapLink>
         </SitemapLinks>
       </div>
+      
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Terms of service</SitemapLink>
-          <SitemapLink href="#">Privacy policy</SitemapLink>
+          <SitemapLink href="/company/terms">Terms of service</SitemapLink>
+          <SitemapLink href="/company/privacy">Privacy policy</SitemapLink>
         </SitemapLinks>
       </div>
     </>

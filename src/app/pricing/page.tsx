@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer'
 import { Gradient, GradientBackground } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
-import { Navbar } from '@/components/navbar'
+import { Navbar } from '@/components/Navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
@@ -25,7 +25,7 @@ const tiers = [
     name: 'Starter' as const,
     slug: 'starter',
     description: 'Everything you need to start selling.',
-    priceMonthly: 99,
+    priceMonthly: 59,
     href: '#',
     highlights: [
       { description: 'Up to 3 team members' },
@@ -50,10 +50,10 @@ const tiers = [
     ],
   },
   {
-    name: 'Growth' as const,
+    name: 'Professional' as const,
     slug: 'growth',
     description: 'All the extras for your growing team.',
-    priceMonthly: 149,
+    priceMonthly: 99,
     href: '#',
     highlights: [
       { description: 'Up to 10 team members' },
@@ -81,7 +81,7 @@ const tiers = [
     name: 'Enterprise' as const,
     slug: 'enterprise',
     description: 'Added flexibility to close deals at scale.',
-    priceMonthly: 299,
+    priceMonthly: 199,
     href: '#',
     highlights: [
       { description: 'Unlimited active team members' },
