@@ -13,17 +13,14 @@ function CallToAction() {
         <Subheading>Get started</Subheading>
         <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
           Ready to dive in?
-          <br />
-          Start your free trial today.
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        Get the cheat codes for selling and unlock your team&apos;s revenue
-        potential.
+      <p className="mx-auto mt-6 max-w-2xs text-sm/6 text-gray-500">
+        Eliminate pipeline surprises, end of quarter scrambles, and empower your sales team to close more deals.
       </p>
       <div className="mt-6">
         <Button className="w-full sm:w-auto" href="#">
-          Get started
+        Start your for free today
         </Button>
       </div>
     </div>
@@ -143,7 +140,7 @@ function SocialLinks() {
         <SocialIconX className="size-4" />
       </Link>
       <Link
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/company/amolinoai/"
         target="_blank"
         aria-label="Visit us on LinkedIn"
         className="text-gray-950 data-hover:text-gray-950/75"
@@ -157,7 +154,7 @@ function SocialLinks() {
 function Copyright() {
   return (
     <div className="text-sm/6 text-gray-950">
-      &copy; {new Date().getFullYear()} Radiant Inc.
+      &copy; {new Date().getFullYear()} AmolinoAI Inc.
     </div>
   )
 }

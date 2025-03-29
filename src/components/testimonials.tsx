@@ -155,9 +155,8 @@ function TestimonialCard({
 function CallToAction() {
   return (
     <div>
-      <p className="max-w-sm text-sm/6 text-gray-600">
-        Join the best sellers in the business and start using Radiant to hit
-        your targets today.
+      <p className="max-w-lg text-sm/6 text-gray-600">
+      Ready to eliminate quarter-end scrambles and create predictable revenue flow? Join forward-thinking revenue leaders who have mastered the science of deal linearity with Amolino. Break free from hockey stick forecasts, margin erosion, and resource whiplash. Start your journey to revenue predictability today.
       </p>
       <div className="mt-2">
         <Link

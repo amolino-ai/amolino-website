@@ -291,7 +291,7 @@ export default async function Blog({
         <Navbar />
         <Subheading className="mt-16">Blog</Subheading>
         <Heading as="h1" className="mt-2">
-          Whats happening at Radiant.
+          Whats happening at Amolino.
         </Heading>
         <Lead className="mt-6 max-w-3xl">
           Stay informed with product updates, company news, and insights on how

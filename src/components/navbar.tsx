@@ -15,6 +15,7 @@ const links = [
   { href: '/pricing', label: 'Pricing' },
   { href: '/company', label: 'Company' },
   { href: '/blog', label: 'Blog' },
+  { href: '/use-cases', label: 'Use Cases' },
   { href: 'https://app.amolino.ai', label: 'Login' },
 ]
 

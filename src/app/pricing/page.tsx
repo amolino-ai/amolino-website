@@ -17,7 +17,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
-    'Companies all over the world have closed millions of deals with Radiant. Sign up today and start selling smarter.',
+    'Companies all over the world have closed millions of deals with Amolino. Sign up today and start selling smarter.',
 }
 
 const tiers = [
@@ -112,7 +112,7 @@ function Header() {
     <Container className="mt-16">
       <Heading as="h1">Pricing that grows with your team size.</Heading>
       <Lead className="mt-6 max-w-3xl">
-        Companies all over the world have closed millions of deals with Radiant.
+        Companies all over the world have closed millions of deals with AmolinoAI.
         Sign up today and start selling smarter.
       </Lead>
     </Container>

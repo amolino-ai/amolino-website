@@ -2,6 +2,9 @@ import { Guides } from '@/components/Guides'
 import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
 import { Navbar } from '@/components/Navbar'
+import { GradientBackground } from '@/components/gradient'
+import { Container } from '@/components/container'
+
 export const metadata = {
   title: 'API Documentation',
   description:
@@ -13,8 +16,10 @@ export const sections = [
   { title: 'Resources', id: 'resources' },
 ]
 
-<Navbar />
-<HeroPattern />
+<GradientBackground />
+<Container>
+  <Navbar />
+</Container>
 
 # AI-Powered Deal Intelligence: Transforming How You Win Business
 
