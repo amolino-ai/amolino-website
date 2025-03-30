@@ -7,7 +7,7 @@ import { Heading, Subheading } from '@/components/text'
 export function BentoSection() {
   return (
     <Container>
-      <Subheading>AI-powered Revenue Forecasting</Subheading>
+      <Subheading>Forecasting and Analytics</Subheading>
       <Heading as="h3" className="mt-2 max-w-5xl">
         From Pipeline Surprises to Pipeline Clarity.
       </Heading>

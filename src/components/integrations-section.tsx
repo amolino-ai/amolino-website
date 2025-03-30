@@ -66,13 +66,13 @@ export function IntegrationsSection() {
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <IntegrationCategory title="MEETINGS">
           <IntegrationIcon name="Teams" src="/icons/ms_teams_logo.jpeg" />
-          <IntegrationIcon name="Zoom" src="/icons/zoom.svg" />
-          <IntegrationIcon name="Google Calendar" src="/icons/google-calendar.svg" />
+          <IntegrationIcon name="Zoom" src="/icons/zoom.png" />
+          <IntegrationIcon name="Google Calendar" src="/icons/google_meet.png" />
         </IntegrationCategory>
 
         <IntegrationCategory title="EMAIL">
-          <IntegrationIcon name="Gmail" src="/icons/gmail.svg" />
-          <IntegrationIcon name="Outlook" src="/icons/outlook.svg" />
+          <IntegrationIcon name="Gmail" src="/icons/gmail.png" />
+          <IntegrationIcon name="Outlook" src="/icons/microsoft.png" />
         </IntegrationCategory>
 
         <IntegrationCategory title="MESSAGING">
@@ -81,8 +81,8 @@ export function IntegrationsSection() {
         </IntegrationCategory>
 
         <IntegrationCategory title="CRM">
-          <IntegrationIcon name="Salesforce" src="/icons/salesforce.svg" />
-          <IntegrationIcon name="HubSpot" src="/icons/hubspot.svg" />
+          <IntegrationIcon name="Salesforce" src="/icons/salesforce.png" />
+          <IntegrationIcon name="HubSpot" src="/icons/hubspot.png" />
         </IntegrationCategory>
       </div>
 

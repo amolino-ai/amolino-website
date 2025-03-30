@@ -17,7 +17,7 @@ export function FeatureSection() {
     },
     {
       id: 'manager',
-      title: 'Team Metrics',
+      title: 'Team Insights',
       src: '/screenshots/manager_dashboard.png',
       description: 'Empower Your Sales Leaders with Real-Time Insights.'
     },

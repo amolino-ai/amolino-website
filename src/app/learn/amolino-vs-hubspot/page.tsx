@@ -46,7 +46,7 @@ function FeatureCheck({ children }: { children: React.ReactNode }) {
           clipRule="evenodd"
         />
       </svg>
-      <span className="text-gray-600">{children}</span>
+      <span className="text-gray-300">{children}</span>
     </li>
   )
 }
@@ -56,15 +56,24 @@ function Hero() {
     <div className="relative isolate overflow-hidden">
       <Gradient className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" />
       <Container className="py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto text-center">
           <Badge text="Comparison" backgroundColor="bg-pink-50" textColor="text-pink-700" />
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Forecast with Confidence</h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">Why Amolino Outperforms HubSpot in Revenue Forecasting</p>
-          <p className="mt-6 text-base/relaxed text-gray-600">
-            In the high-stakes world of sales, accurate revenue forecasting can make or break your quarter. While
-            traditional tools rely on manual inputs and gut feelings, Amolino delivers a smarter, data-driven solution.
-            Discover why revenue leaders choose Amolino over HubSpot for superior forecasting precision and actionable
-            insights.
+          <h1 className="mx-auto mt-6 max-w-5xl pb-12 text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Amolino Outperforms HubSpot in Revenue Forecasting
+          </h1>
+        </div>
+        <div className="mx-auto max-w-2xl text-center">
+      
+          <h2> Forecasting without estimates, gut checks or endless meetings</h2>
+          <p className="mt-6 text-base/relaxed text-gray-600 text-left">
+            Forecasting with HubSpot has several limitations that can hinder its effectiveness. The process relies
+            heavily on manual inputs, where account executives (AEs) assign probabilities to deals based on their
+            subjective judgment rather than real-time data or advanced analytics. This gut-based approach often leads to
+            inconsistencies, as each AE may interpret probabilities differently, requiring extensive meetings to align
+            on definitions and expectations. Additionally, the lack of real-time updates means forecasts can quickly
+            become outdated, especially in fast-moving sales environments. These challenges are compounded by the
+            time-consuming nature of maintaining accurate data and configuring probabilities, which detracts from more
+            strategic sales activities.
           </p>
         </div>
       </Container>
@@ -197,7 +206,7 @@ export default function AmolinoVsHubspot() {
       <Comparisons />
       <Analysis />
       <Benefits />
-      <BottomCTA />
+      {/* <BottomCTA /> */}
     </>
   )
 }

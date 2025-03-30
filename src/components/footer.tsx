@@ -50,12 +50,11 @@ function Sitemap() {
   return (
     <>
       <div>
-        <SitemapHeading>Product</SitemapHeading>
+        <SitemapHeading>Learn</SitemapHeading>
         <SitemapLinks>
           
-          <SitemapLink href="/pricing">Guided Selling</SitemapLink>
-          <SitemapLink href="/pricing">Revenue Forecasting</SitemapLink>
-          <SitemapLink href="/pricing">Pipeline Visibility and Inspections</SitemapLink>
+          <SitemapLink href="/learn/amolino-vs-hubspot">AmolinoAI vs HubSpot</SitemapLink>
+
           {/* <SitemapLink href="#">Analysis</SitemapLink>
           <SitemapLink href="#">API</SitemapLink> */}
         </SitemapLinks>
