@@ -80,19 +80,19 @@ export default function Customer360() {
         comparisonTitle="AI-Powered Customer 360 vs Traditional CRM"
         comparisonSubtitle="Transform your customer relationships with comprehensive insights and predictive analytics."
         traditionalPoints={[
-          { text: 'Fragmented customer data across systems' },
-          { text: 'Manual relationship tracking' },
-          { text: 'Limited customer insights' },
-          { text: 'Reactive customer engagement' },
-          { text: 'Incomplete stakeholder mapping' },
+          'Fragmented customer data across systems',
+          'Manual relationship tracking',
+          'Limited customer insights',
+          'Reactive customer engagement',
+          'Incomplete stakeholder mapping',
         ]}
         aiPoweredPoints={[
-          { text: 'Unified customer view across all touchpoints' },
-          { text: 'Automated relationship tracking and scoring' },
-          { text: 'Deep customer insights and analytics' },
-          { text: 'Proactive engagement recommendations' },
-          { text: 'Comprehensive stakeholder mapping' },
-          { text: 'Predictive customer analytics' },
+          'Unified customer view across all touchpoints',
+          'Automated relationship tracking and scoring',
+          'Deep customer insights and analytics',
+          'Proactive engagement recommendations',
+          'Comprehensive stakeholder mapping',
+          'Predictive customer analytics',
         ]}
       />
       <BottomFeature

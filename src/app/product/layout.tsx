@@ -11,9 +11,9 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <div className="relative">
-        <Container>
+        {/* <Container>
           <Navbar />
-        </Container>
+        </Container> */}
 
         <main className="relative">{children}</main>
         <div className="mb-12">

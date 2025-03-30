@@ -1,6 +1,6 @@
 import { Container } from '@/components/container'
 import { Heading } from '@/components/text'
-import { XMarkIcon, CheckIcon } from '@heroicons/react/16/solid'
+import { XMarkIcon, CheckIcon, MinusIcon } from '@heroicons/react/16/solid'
 
 interface ComparisonItem {
   text: string
@@ -9,16 +9,16 @@ interface ComparisonItem {
 interface ComparisonSectionProps {
   title: string
   subtitle: string
-  traditional: ComparisonItem[]
-  aiPowered: ComparisonItem[]
+  traditional: string[]
+  aiPowered: string[]
 }
 
-const ComparisonSection: React.FC<ComparisonSectionProps> = ({
+export function ComparisonSection({
   title,
   subtitle,
   traditional,
   aiPowered,
-}) => {
+}: ComparisonSectionProps) {
   return (
     <Container className="py-24">
       <div className="text-center">
@@ -32,30 +32,30 @@ const ComparisonSection: React.FC<ComparisonSectionProps> = ({
 
       <div className="mt-16 grid gap-8 lg:grid-cols-2">
         {/* Traditional Approach */}
-        <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-100">
-          <h3 className="text-xl font-semibold text-gray-900">
+        <div className="rounded-2xl bg-gray-50 p-8">
+          <h3 className="text-xl font-semibold text-blue-600">
             Traditional Approach
           </h3>
-          <ul className="mt-8 space-y-4">
-            {traditional.map((item, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <XMarkIcon className="size-5 shrink-0 text-red-500" />
-                <span className="text-gray-700">{item.text}</span>
+          <ul className="mt-4 space-y-4 text-gray-600">
+            {traditional.map((point, index) => (
+              <li key={index} className="flex items-center">
+                <MinusIcon className="mr-3 h-5 w-5 text-blue-600" />
+                {point}
               </li>
             ))}
           </ul>
         </div>
 
         {/* AI-Powered Approach */}
-        <div className="rounded-2xl bg-blue-50/50 p-8 shadow-sm ring-1 ring-blue-100">
+        <div className="rounded-2xl bg-blue-50 p-8">
           <h3 className="text-xl font-semibold text-blue-600">
-            With AI-Powered Customer 360°
+            {title}
           </h3>
-          <ul className="mt-8 space-y-4">
-            {aiPowered.map((item, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <CheckIcon className="size-5 shrink-0 text-blue-500" />
-                <span className="text-gray-700">{item.text}</span>
+          <ul className="mt-4 space-y-4 text-gray-600">
+            {aiPowered.map((point, index) => (
+              <li key={index} className="flex items-center">
+                <CheckIcon className="mr-3 h-5 w-5 text-blue-600" />
+                {point}
               </li>
             ))}
           </ul>

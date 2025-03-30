@@ -17,8 +17,8 @@ interface FeatureShowcaseProps {
   screenshotSrc: string
   comparisonTitle: string
   comparisonSubtitle: string
-  traditionalPoints: { text: string }[]
-  aiPoweredPoints: { text: string }[]
+  traditionalPoints: string[]
+  aiPoweredPoints: string[]
 }
 
 export default function FeatureShowcase({

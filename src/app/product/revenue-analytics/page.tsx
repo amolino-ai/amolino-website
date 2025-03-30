@@ -1,7 +1,8 @@
 import BottomFeature from '@/app/product/components/BottomFeature'
 import FeatureShowcase from '@/app/product/components/FeatureShowcase'
 import Hero from '@/app/product/components/Hero'
-
+import { Container } from '@/components/container'
+import { Navbar } from '@/components/Navbar'
 const features = [
   {
     icon: (
@@ -51,6 +52,8 @@ const features = [
 export default function RevenueAnalytics() {
   return (
     <>
+    <Container>
+    <Navbar />
       <Hero
         badgeText="AI-Powered Revenue Analytics"
         title="From Pipeline Surprises to Pipeline Clarity."
@@ -60,25 +63,25 @@ export default function RevenueAnalytics() {
         screenshotSrc="/screenshots/pipeline_radar_heatmap_march2025.png"
       />
       <FeatureShowcase
-        title="Real-Time Forecast Accuracy."
+        title="AI-Powered Revenue Analytics."
         features={features}
-        screenshotSrc="/screenshots/dashboard_revenue_feb_2025.png"
-        comparisonTitle="AI-powered Analytics vs Gut-based Deal Probability"
-        comparisonSubtitle="Make data-informed decisions about where to invest your marketing spend, when to hire, or where you have room for improvement."
+        screenshotSrc="/screenshots/pipeline_radar_heatmap_march2025.png"
+        comparisonTitle="AI-Powered Revenue Analytics"
+        comparisonSubtitle="Transform your revenue forecasting with AI-powered insights and predictive analytics."
         traditionalPoints={[
-          { text: 'Deal proabiltiy based on gut-feel and incomplete data' },
-          { text: 'Relying on gut-feel and incomplete data in the CRM' },
-          { text: 'Suffers from over-optimism bias' },
-          { text: 'Deal assesment varies by sales person' },
-          { text: 'No proactive insights into how to improve chances of closing deals' },
+          'Manual pipeline reviews and updates',
+          'Gut-based forecasting decisions',
+          'Limited visibility into deal health',
+          'Reactive risk management',
+          'Inconsistent forecast accuracy',
         ]}
         aiPoweredPoints={[
-          { text: 'Deal-health based on 100s of signals' },
-          { text: 'Consistent deal assessment across sales team' },
-          { text: 'Proactive insights into how to improve chances of closing deals' },
-          { text: 'No over-optimism bias' },
-          { text: 'Data-driven deal prioritization' },
-          { text: 'Consistent evaluation criteria' },
+          'Automated pipeline monitoring and updates',
+          'Data-driven forecasting decisions',
+          'Real-time deal health insights',
+          'Proactive risk identification',
+          'Consistent forecast accuracy',
+          'Predictive revenue analytics',
         ]}
       />
       <BottomFeature
@@ -100,6 +103,7 @@ export default function RevenueAnalytics() {
         ]}
         screenshotSrc="/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
       />
+      </Container>
     </>
   )
 }

@@ -57,25 +57,25 @@ export default function GuidedSelling() {
         screenshotSrc="/screenshots/pipeline_radar_heatmap_march2025.png"
       />
       <FeatureShowcase
-        title="Smart Deal Navigation."
+        title="AI-Powered Guided Selling."
         features={features}
         screenshotSrc="/screenshots/dashboard_revenue_feb_2025.png"
-        comparisonTitle="AI-Guided Selling vs Traditional Sales Process"
-        comparisonSubtitle="Transform your sales process from reactive to proactive with AI-powered guidance."
+        comparisonTitle="AI-Powered Guided Selling vs Traditional Sales Process"
+        comparisonSubtitle="Transform your sales process with AI-powered guidance and predictive insights."
         traditionalPoints={[
-          { text: 'Generic sales playbooks that don&apos;t adapt to specific deals' },
-          { text: 'Manual stakeholder mapping and relationship tracking' },
-          { text: 'Reactive approach to deal progression' },
-          { text: 'Inconsistent sales processes across team' },
-          { text: 'No data-driven insights for deal strategy' },
+          'Manual deal tracking and updates',
+          'Limited visibility into deal health',
+          'Reactive risk management',
+          'Inconsistent sales process',
+          'No proactive guidance',
         ]}
         aiPoweredPoints={[
-          { text: 'Personalized action plans for each deal' },
-          { text: 'Automated stakeholder mapping and engagement tracking' },
-          { text: 'Proactive next steps based on deal patterns' },
-          { text: 'Consistent, proven sales methodology' },
-          { text: 'Data-driven deal strategy recommendations' },
-          { text: 'Real-time deal health monitoring' },
+          'Automated deal monitoring and updates',
+          'Real-time deal health insights',
+          'Proactive risk identification',
+          'Consistent sales process',
+          'AI-powered guidance and recommendations',
+          'Predictive deal analytics',
         ]}
       />
       <BottomFeature

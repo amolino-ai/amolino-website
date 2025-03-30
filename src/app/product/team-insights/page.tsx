@@ -74,25 +74,25 @@ export default function TeamInsights() {
         screenshotSrc="/screenshots/dashboard_managers_view_april_2025.jpg"
       />
       <FeatureShowcase
-        title="Comprehensive Team Analytics."
+        title="AI-Powered Team Insights."
         features={features}
         screenshotSrc="/screenshots/dashboard_managers_view_april_2025.jpg"
         comparisonTitle="AI-Powered Team Insights vs Traditional Management"
-        comparisonSubtitle="Transform your sales management approach with data-driven insights and automated coaching opportunities."
+        comparisonSubtitle="Transform your team management with AI-powered insights and predictive analytics."
         traditionalPoints={[
-          { text: 'Manual performance tracking and reporting' },
-          { text: 'Reactive coaching based on missed targets' },
-          { text: 'Limited visibility into team performance' },
-          { text: 'Inconsistent coaching across team members' },
-          { text: 'Time-consuming performance reviews' },
+          'Manual performance tracking',
+          'Limited visibility into team metrics',
+          'Reactive coaching approach',
+          'Inconsistent feedback',
+          'No data-driven insights',
         ]}
         aiPoweredPoints={[
-          { text: 'Real-time performance analytics and insights' },
-          { text: 'Proactive coaching opportunities identified by AI' },
-          { text: 'Comprehensive team performance dashboard' },
-          { text: 'Data-driven coaching recommendations' },
-          { text: 'Automated performance tracking and reporting' },
-          { text: 'Personalized development plans' },
+          'Automated performance monitoring',
+          'Real-time team metrics and insights',
+          'Proactive coaching recommendations',
+          'Consistent feedback and guidance',
+          'Data-driven team analytics',
+          'Predictive performance insights',
         ]}
       />
       <BottomFeature
