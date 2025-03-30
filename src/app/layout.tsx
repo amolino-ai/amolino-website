@@ -8,6 +8,7 @@ import { type Metadata } from 'next'
 
 
 import '@/styles/tailwind.css'
+import { GradientBackground } from '@/components/gradient'
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +32,7 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
         <PostHogProvider>
           <Providers>
-
+          <GradientBackground />  
             <div className="w-full">
               <Layout allSections={allSections}>{children}</Layout>
             </div>

@@ -1,17 +1,11 @@
-import FeatureShowcase from '@/app/product/components/FeatureShowcase'
 import BottomFeature from '@/app/product/components/BottomFeature'
+import FeatureShowcase from '@/app/product/components/FeatureShowcase'
 import Hero from '@/app/product/components/Hero'
 
 const features = [
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -21,17 +15,12 @@ const features = [
       </svg>
     ),
     title: 'See exactly where your deals stand',
-    description: 'AmolinoAI instantly flags at-risk opportunities and identifies your most promising prospects, helping your team prioritize where to focus.',
+    description:
+      'AmolinoAI instantly flags at-risk opportunities and identifies your most promising prospects, helping your team prioritize where to focus.',
   },
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -40,17 +29,12 @@ const features = [
       </svg>
     ),
     title: 'Make data-driven decisions',
-    description: 'Stop relying on gut feelings. AmolinoAI delivers clear, accurate insights based on comprehensive analysis of your entire revenue ecosystem.',
+    description:
+      'Stop relying on gut feelings. AmolinoAI delivers clear, accurate insights based on comprehensive analysis of your entire revenue ecosystem.',
   },
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -59,7 +43,8 @@ const features = [
       </svg>
     ),
     title: 'Forecast with confidence',
-    description: 'Know exactly what&apos;s coming with AmolinoAI&apos;s precision forecasting that learns from your historical performance and current deal patterns.',
+    description:
+      'Know exactly what&apos;s coming with AmolinoAI&apos;s precision forecasting that learns from your historical performance and current deal patterns.',
   },
 ]
 

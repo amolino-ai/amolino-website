@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://amolino.ai/sitemap.xml</loc><lastmod>2025-03-30T00:42:20.995Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/learn/amolino-vs-hubspot</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/company</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/login</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/company/privacy</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/product/revenue-analytics</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/product/guided-selling</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/company/terms</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/use-cases</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/use-cases/deal-linearity</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/use-cases/account-management-and-deal-tracking</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/use-cases/revenue-forecasting</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/use-cases/crm-automation</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/mdx</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://amolino.ai/use-cases/pipeline-visibility</loc><lastmod>2025-03-30T00:42:20.996Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/sitemap.xml</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/company</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/learn/amolino-vs-hubspot</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/product</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/product/customer-360</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/product/revenue-analytics</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/product/guided-selling</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/product/team-insights</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/company/privacy</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/use-cases</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/use-cases/revenue-forecasting</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/use-cases/revenue-linearity</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/use-cases/account-management-and-deal-tracking</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/use-cases/zero-crm-updates</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/use-cases/pipeline-visibility</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/company/terms</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai</loc><lastmod>2025-03-30T22:39:59.820Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://amolino.ai/blog</loc><lastmod>2025-03-30T22:39:59.830Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

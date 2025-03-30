@@ -32,7 +32,6 @@ export default async function BlogPost({
 
   return (
     <main className="overflow-hidden">
-      <GradientBackground />
       <Container>
         <Navbar />
         <Subheading className="mt-16">

@@ -55,7 +55,7 @@ export default function ProductOverview() {
   return (
     <>
       <Container>
-        <Navbar />
+       
         <div className="py-24">
           <div className="text-center">
             <Badge text="Products" />

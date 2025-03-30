@@ -74,9 +74,9 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="/use-cases/pipeline-visibility">Pipeline Visibility</SitemapLink>
           <SitemapLink href="/use-cases/revenue-forecasting">Revenue Forecasting</SitemapLink>
-          <SitemapLink href="/use-cases/crm-automation">CRM Automation and Data Hygiene</SitemapLink>
+          <SitemapLink href="/use-cases/zero-crm-updates">CRM Automation with zero updates, and Data Hygiene</SitemapLink>
           <SitemapLink href="/use-cases/account-management-and-deal-tracking">Account Management and Deal Tracking</SitemapLink>
-          <SitemapLink href="/use-cases/deal-linearity">Deal Linearity</SitemapLink>
+          <SitemapLink href="/use-cases/revenue-linearity">Revenue Linearity</SitemapLink>
         </SitemapLinks>
       </div>
       

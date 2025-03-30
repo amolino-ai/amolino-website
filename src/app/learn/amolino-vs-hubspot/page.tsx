@@ -1,7 +1,7 @@
 import { Badge } from '@/components/badge'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
-import { Gradient, GradientBackground } from '@/components/gradient'
+import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/Navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Heading, Subheading } from '@/components/text'
@@ -63,9 +63,8 @@ function Hero() {
           </h1>
         </div>
         <div className="mx-auto max-w-2xl text-center">
-      
           <h2> Forecasting without estimates, gut checks or endless meetings</h2>
-          <p className="mt-6 text-base/relaxed text-gray-600 text-left">
+          <p className="mt-6 text-left text-base/relaxed text-gray-600">
             Forecasting with HubSpot has several limitations that can hinder its effectiveness. The process relies
             heavily on manual inputs, where account executives (AEs) assign probabilities to deals based on their
             subjective judgment rather than real-time data or advanced analytics. This gut-based approach often leads to
@@ -198,8 +197,7 @@ function BottomCTA() {
 export default function AmolinoVsHubspot() {
   return (
     <>
-      <GradientBackground />
-      <Container>
+      <Container className="relative">
         <Navbar />
       </Container>
       <Hero />

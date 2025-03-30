@@ -1,6 +1,5 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
-import { GradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/Navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
@@ -16,27 +15,27 @@ function Header() {
     <Container className="mt-16">
       <Heading as="h1">See Clearly. Sell Smarter..</Heading>
       <Lead className="mt-6 max-w-3xl">
-        Transform sales performance with <b>Pipeline Visibility </b>and Deal Linearity.
+        Transform sales performance with <b>Real-time quarterly</b> forecasts, <b>Pipeline Visibility</b> and{' '}
+        <b>Deal Linearity</b>.
       </Lead>
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
-          <h2 className="text-2xl font-medium tracking-tight">Our mission</h2>
+          <h2 className="text-2xl font-medium tracking-tight">Our Misson</h2>
           <p className="mt-6 text-sm/6 text-gray-600">
-            Amolino.AI&apos;s mission is to empower sales teams to achieve predictable revenue growth by transforming
-            pipeline visibility. They value clarity over surprises, providing a deep understanding of pipeline health
-            through AI-driven analysis that uncovers hidden risks and prescribes actions to keep deals on track. By
-            eliminating busywork and providing actionable insights, Amolino.AI enables sales reps to focus on selling,
-            sales managers to lead effectively, and CROs to drive strategic decisions with confidence. Their commitment
-            to security and privacy ensures that customer data is protected while delivering enterprise-grade solutions
-            for businesses of all sizes.
+            Our mission is to transform revenue leadership from an art of intuition to a science of certainty. We
+            empower B2B organizations to achieve predictable, linear revenue growth by eliminating the fundamental
+            challenges of pipeline visibility, forecast accuracy, and deal execution. Through AI-powered intelligence,
+            we turn scattered customer signals into actionable insights that enable sales leaders to confidently answer
+            the most critical business question: &quot;Will we hit our number?&quot;
           </p>
-          <p className="mt-8 text-sm/6 text-gray-600">
-            It&apos;s a tool that can bring immense benefits to humanity, but only if used wisely and responsibly. We
-            think of AI as a new kind of power, with the potential to transform our lives. But just as electricity and
-            social media reshaped societies, AI&apos;s impact must be handled with care. This means that not just
-            companies, but also employees, customers, governments, and various organizations must work together
-            responsibly. At Amolino AI, we&apos;re committed to using AI transparently and responsibly, ensuring
-            it&apos;s a force for good that works for everyone.
+
+          <h2 className="mt-12 text-2xl font-medium tracking-tight">Our Vision</h2>
+          <p className="mt-6 text-sm/6 text-gray-600">
+            We envision a future where revenue organizations operate with complete certainty rather than hopeful
+            guesswork. A world where sales leaders no longer accept quarter-end loading, forecast inaccuracy, and
+            pipeline surprises as inevitable, but instead use scientific intelligence to architect predictable revenue
+            flow. Our vision is to make every revenue team data-driven, every forecast accurate, and every deal
+            execution optimized—transforming not just how companies sell, but how they grow.
           </p>
         </div>
         <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
@@ -101,8 +100,9 @@ function Team() {
       <Lead className="mt-6 max-w-3xl">
         AmolinoAI was founded by Aseem Asthana and Daniele Di Sarli, combining deep expertise in AI, sales, and
         technology. Their mission is to revolutionize sales operations by providing unparalleled pipeline visibility and
-        actionable insights for revenue growth. Backed by some of the world’s best in GTM and B2B sales, the founding
-        team is equipped with the knowledge and experience to help sales teams achieve predictable success.{' '}
+        actionable insights for revenue growth. Backed by some of the world&apos;s best in GTM and B2B sales, the
+        founding team is equipped with the knowledge and experience to help sales teams achieve predictable
+        success.{' '}
       </Lead>
       <div className="mt-12 grid grid-cols-1 gap-12">
         {/* <div className="max-w-3xl">
@@ -372,7 +372,6 @@ function Careers() {
 export default function Company() {
   return (
     <main className="overflow-hidden">
-      <GradientBackground />
       <Container>
         <Navbar />
       </Container>

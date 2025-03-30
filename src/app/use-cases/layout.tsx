@@ -1,5 +1,6 @@
 // components/Layout.tsx
 import { Container } from '@/components/container'
+import { GradientBackground } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/Navbar'
 
@@ -10,12 +11,11 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <div className="relative">
+      <div className="overflow-hidden">
         <Container>
           <Navbar />
         </Container>
-
-        <main className="relative">{children}</main>
+        <main >{children}</main>
         <div className="mb-12">
           <LogoCloud />
         </div>
