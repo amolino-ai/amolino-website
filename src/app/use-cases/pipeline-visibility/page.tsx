@@ -1,12 +1,17 @@
+import { AnimatedNumber } from '@/components/animated-number'
 import { Badge } from '@/components/badge'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Gradient } from '@/components/gradient'
-import { Screenshot } from '@/components/screenshot'
+import { Navbar } from '@/components/Navbar'
 import { Heading, Subheading } from '@/components/text'
-import { AnimatedNumber } from '@/components/animated-number'
 
-function StatsCard({ label, value, suffix = '', description = '' }: { 
+function StatsCard({
+  label,
+  value,
+  suffix = '',
+  description = '',
+}: {
   label: string
   value: number
   suffix?: string
@@ -19,9 +24,7 @@ function StatsCard({ label, value, suffix = '', description = '' }: {
         <AnimatedNumber start={0} end={value} />
         {suffix}
       </dd>
-      {description && (
-        <p className="mt-4 text-sm text-gray-600">{description}</p>
-      )}
+      {description && <p className="mt-4 text-sm text-gray-600">{description}</p>}
     </div>
   )
 }
@@ -35,22 +38,33 @@ function FeatureCard({ title, children }: { title: string; children: React.React
   )
 }
 
+{
+  /* <div className="relative">
+<Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
+<Container className="relative">
+  <Navbar /> */
+}
+
 function Hero() {
   return (
-    <div className="relative isolate overflow-hidden">
+    <div className="relative">
       <Gradient className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" />
-      <Container className="py-24 sm:py-32">
+      <Container className="relative py-24 sm:py-32">
+        <Navbar />
         <div className="mx-auto max-w-2xl text-center">
           <Badge text="Pipeline Visibility" backgroundColor="bg-pink-50" textColor="text-pink-700" />
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Your Key to Predictable Revenue Growth
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Transform your pipeline from a collection of opportunities into an actionable intelligence system driving predictable growth.
+            Transform your pipeline from a collection of opportunities into an actionable intelligence system driving
+            predictable growth.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button href="/demo">Transform Your Pipeline</Button>
-            <Button href="/contact" variant="secondary">Talk to Sales</Button>
+            <Button className="bg-amber-100" href="/contact" variant="secondary">
+              <div className="bg-amber-100"> Talk to Sales</div>
+            </Button>
           </div>
         </div>
       </Container>
@@ -66,36 +80,29 @@ function Challenge() {
           <Subheading>The Challenge</Subheading>
           <Heading as="h2">Why Traditional Methods Fail</Heading>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            83% of sales organizations struggle with forecast accuracy, missing quarterly projections by more than 10% despite expensive CRM investments.
+            83% of sales organizations struggle with forecast accuracy, missing quarterly projections by more than 10%
+            despite expensive CRM investments.
           </p>
         </div>
         <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
-          <StatsCard 
-            label="Sales Rep Time Wasted" 
-            value={5} 
+          <StatsCard
+            label="Sales Rep Time Wasted"
+            value={5}
             suffix="+ hrs/week"
             description="Manual CRM updates taking valuable time away from selling"
           />
-          <StatsCard 
-            label="Forecast Accuracy Gap" 
-            value={10} 
+          <StatsCard
+            label="Forecast Accuracy Gap"
+            value={10}
             suffix="%+"
             description="Average margin of error in quarterly revenue projections"
           />
         </dl>
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <FeatureCard title="Manual Updates">
-            Sales reps waste 5+ hours weekly on manual updates
-          </FeatureCard>
-          <FeatureCard title="Fragmented Data">
-            Critical insights remain trapped in fragmented systems
-          </FeatureCard>
-          <FeatureCard title="Late Detection">
-            Deal risks identified too late for intervention
-          </FeatureCard>
-          <FeatureCard title="Incomplete Data">
-            Decisions based on incomplete information rather than data
-          </FeatureCard>
+          <FeatureCard title="Manual Updates">Sales reps waste 5+ hours weekly on manual updates</FeatureCard>
+          <FeatureCard title="Fragmented Data">Critical insights remain trapped in fragmented systems</FeatureCard>
+          <FeatureCard title="Late Detection">Deal risks identified too late for intervention</FeatureCard>
+          <FeatureCard title="Incomplete Data">Decisions based on incomplete information rather than data</FeatureCard>
         </div>
       </Container>
     </div>
@@ -116,19 +123,31 @@ function Solution() {
             <ul className="mt-6 space-y-4 text-gray-600">
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Automated documentation of all customer interactions
               </li>
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Complete visibility into engagement patterns
               </li>
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Automatic stakeholder mapping
               </li>
@@ -139,19 +158,31 @@ function Solution() {
             <ul className="mt-6 space-y-4 text-gray-600">
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Sentiment analysis detects shifting buyer interest
               </li>
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Immediate competitive alerts
               </li>
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Early warning system for at-risk deals
               </li>
@@ -162,19 +193,31 @@ function Solution() {
             <ul className="mt-6 space-y-4 text-gray-600">
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Objective win probability scoring
               </li>
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Accurate timeline forecasting
               </li>
               <li className="flex gap-x-3">
                 <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Revenue impact visualization
               </li>
@@ -195,7 +238,9 @@ function Impact() {
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <Subheading dark>Measurable Impact</Subheading>
-          <Heading as="h2" dark>Strategic Advantages</Heading>
+          <Heading as="h2" dark>
+            Strategic Advantages
+          </Heading>
           <p className="mt-6 text-lg text-gray-300">
             Organizations using automated pipeline visibility report dramatic improvements across key metrics:
           </p>
@@ -220,11 +265,14 @@ function BottomCTA() {
             Don&apos;t just manage your pipeline—weaponize it
           </Heading>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Transform your pipeline from a collection of opportunities into an actionable intelligence system driving predictable growth.
+            Transform your pipeline from a collection of opportunities into an actionable intelligence system driving
+            predictable growth.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button href="/demo">Get Started</Button>
-            <Button href="/contact" variant="secondary">Talk to Sales</Button>
+            <Button href="/contact" variant="secondary">
+              Talk to Sales
+            </Button>
           </div>
         </div>
       </Container>
@@ -236,10 +284,13 @@ export default function PipelineVisibility() {
   return (
     <>
       <Hero />
-      <Challenge />
-      <Solution />
-      <Impact />
+
+      <main className="overflow-hidden">
+        <Challenge />
+        <Solution />
+        <Impact />
+      </main>
       <BottomCTA />
     </>
   )
-} 
+}

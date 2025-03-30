@@ -373,7 +373,7 @@ function Testimonial() {
           <div className="-mt-96 lg:-mt-52">
             <div className="-m-2 rounded-4xl bg-white/15 ring-1 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-black/5 max-lg:mx-auto max-lg:max-w-xs">
               <div className="rounded-4xl p-2 shadow-md shadow-black/5">
-                <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
+                <div className="overflow-hidden rounded-3xl shadow-2xl outline-1 -outline-offset-1 outline-black/10">
                   <img
                     alt=""
                     src="/testimonials/tina-yards.jpg"
@@ -386,7 +386,7 @@ function Testimonial() {
           <div className="flex max-lg:mt-16 lg:col-span-2 lg:px-16">
             <figure className="mx-auto flex max-w-xl flex-col gap-16 max-lg:text-center">
               <blockquote>
-                <p className="relative text-3xl tracking-tight text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-4xl">
+                <p className="relative text-3xl tracking-tight text-white before:absolute before:-translate-x-full before:content-['&quot;'] after:absolute after:content-['&quot;'] lg:text-4xl">
                   Thanks to Radiant, we&apos;re finding new leads that we never
                   would have found with legal methods.
                 </p>
@@ -447,7 +447,7 @@ function FrequentlyAskedQuestions() {
           </dl>
           <dl>
             <dt className="text-sm font-semibold">
-              Can I customize the workflow to match our company’s deal process?
+              Can I customize the workflow to match our company&apos;s deal process?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
               Yes, our platform is highly customizable, although there should be
@@ -467,7 +467,7 @@ function FrequentlyAskedQuestions() {
               We offer comprehensive support through multiple channels,
               including 24/7 live chat, email, and phone support. However, since
               we have full access to your internal network, we will know if
-              you’re having issues before you do.
+              you&apos;re having issues before you do.
             </dd>
           </dl>
           <dl>
@@ -510,7 +510,6 @@ export default function Pricing({
       <PricingTable selectedTier={tier} />
       <Testimonial />
       <FrequentlyAskedQuestions />
-     
     </main>
   )
 }

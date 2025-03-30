@@ -1,9 +1,6 @@
 import { clsx } from 'clsx'
 
-export function Gradient({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<'div'>) {
+export function Gradient({ className, ...props }: React.ComponentPropsWithoutRef<'div'>) {
   return (
     <div
       {...props}
@@ -22,7 +19,7 @@ export function GradientBackground() {
         className={clsx(
           'absolute -top-44 -right-60 h-60 w-[36rem] transform-gpu md:right-0',
           'bg-linear-115 from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff]',
-          'rotate-[-10deg] rounded-full blur-3xl',
+          'z-0 rotate-[-10deg] rounded-full blur-3xl',
         )}
       />
     </div>

@@ -24,7 +24,7 @@ export function BentoSection() {
           title="Instantly identify at-risk deals before they collapse"
           description="Continuously monitors all pipeline opportunities using AI, detecting subtle warning signs and engagement patterns that indicate deals in danger—allowing sales leaders to intervene before opportunities derail."
           graphic={
-            <div className="h-80 bg-[url(/screenshots/pipeline_radar_heatmap_march2025.png)] bg-[size:1000px_360px] bg-[left_-109px_top_-112px] bg-no-repeat" />
+            <div className="h-80 bg-[url(/screenshots/dashboard_rep_view_april_2025.jpg)] bg-[size:1800px_1125px] bg-[left_-915px_top_-400px] bg-no-repeat" />
           }
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
@@ -34,7 +34,7 @@ export function BentoSection() {
           title="Track deal movement across quarters with complete visibility"
           description="Automatically identifies opportunities that have been pushed from previous quarters and flags deals showing warning signs of potential pushes, eliminating costly surprises and enabling proactive management."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/pipeline_radar_pushed_opportunities_march2025.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/dashboard_revenue_forecast_april2025.jpg)] bg-[size:1100px_650px] bg-[left_-375px_top_-400px] bg-no-repeat" />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
@@ -44,9 +44,9 @@ export function BentoSection() {
           title="Real-time visibility into quarterly forecast attainment likelihood"
           description="Provides continuous, AI-powered assessment of your progress toward targets, incorporating pipeline quality, historical performance, and deal-specific signals to deliver accurate attainment predictions."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/pipeline_radar_forecast_analysis_march2025.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/dashboard_revenue_forecast_april2025.jpg)] bg-[size:1100px_650px] bg-[left_-80px_top_-0px] bg-no-repeat" />
           }
-          fade={['bottom']}
+          fade={['right']}
           className="lg:col-span-2 lg:rounded-bl-4xl"
         />
 
@@ -54,14 +54,20 @@ export function BentoSection() {
           eyebrow="Velocity Diagnostics"
           title="Pinpoint exactly what's slowing your revenue engine"
           description="Analyzes the four key components of sales velocity—deal value, win rate, sales cycle length, and opportunity count—identifying specific bottlenecks and prescribing targeted interventions to accelerate revenue."
-          graphic={<LogoCluster />}
+          graphic={
+            <div className="absolute inset-0 bg-[url(/screenshots/dashboard_revenue_forecast_april2025.jpg)] bg-[size:1100px_650px] bg-[left_-75px_top_-435px] bg-no-repeat" />
+          }
           className="lg:col-span-2"
+          fade={['right']}
         />
         <BentoCard
           eyebrow="Forecast Spectrum"
           title="See beyond single-number projections to true revenue potential"
           description="Delivers scientifically calculated best-case, worst-case, and most likely forecast scenarios based on deal-specific signals and historical patterns, replacing gut feel with statistical confidence."
-          graphic={<Map />}
+          graphic={
+            <div className="absolute inset-0 bg-[url(/screenshots/dashboard_revenue_forecast_april2025.jpg)] bg-[size:1100px_650px] bg-[left_-590px_top_-35px] bg-no-repeat" />
+          }
+          fade={['bottom']}
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
       </div>

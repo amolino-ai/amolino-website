@@ -19,7 +19,7 @@ export function BentoCard({
   title: React.ReactNode
   description: React.ReactNode
   graphic: React.ReactNode
-  fade?: ('top' | 'bottom')[]
+  fade?: ('top' | 'bottom' | 'left' | 'right')[]
 }) {
   return (
     <motion.div
@@ -41,6 +41,12 @@ export function BentoCard({
         )}
         {fade.includes('bottom') && (
           <div className="absolute inset-0 bg-linear-to-t from-white to-50% group-data-dark:from-gray-800 group-data-dark:from-[-25%]" />
+        )}
+        {fade.includes('left') && (
+          <div className="absolute inset-0 bg-linear-to-r from-white to-50% group-data-dark:from-gray-800 group-data-dark:from-[-25%]" />
+        )}
+        {fade.includes('right') && (
+          <div className="absolute inset-0 bg-linear-to-l from-white to-50% group-data-dark:from-gray-800 group-data-dark:from-[-25%]" />
         )}
       </div>
       <div className="relative p-10">

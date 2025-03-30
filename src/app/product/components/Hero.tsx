@@ -2,6 +2,7 @@ import { Badge } from '@/components/badge'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Screenshot } from '@/components/screenshot'
+import { Navbar } from '@/components/Navbar'
 
 interface HeroProps {
   badgeText: string
@@ -14,8 +15,9 @@ interface HeroProps {
 
 export default function Hero({ badgeText, title, description, ctaText, ctaHref, screenshotSrc }: HeroProps) {
   return (
-    <div className="relative overflow-hidden bg-white pt-16 pb-32">
+    <div className="relative h-full overflow-hidden bg-white pt-16 pb-32">
       <Container>
+        <Navbar />
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-16">
           <div className="lg:w-1/2">
             <Badge text={badgeText} />
@@ -29,7 +31,7 @@ export default function Hero({ badgeText, title, description, ctaText, ctaHref, 
               <Button href={ctaHref}>{ctaText}</Button>
             </div>
           </div>
-          <div className="mt-16 lg:mt-0 lg:w-1/2">
+          <div className="mt-16 lg:mt-0 lg:w-1/2 z-10">
             <Screenshot
               width={1216}
               height={768}

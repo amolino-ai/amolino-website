@@ -1,17 +1,11 @@
-import FeatureShowcase from '@/app/product/components/FeatureShowcase'
 import BottomFeature from '@/app/product/components/BottomFeature'
+import FeatureShowcase from '@/app/product/components/FeatureShowcase'
 import Hero from '@/app/product/components/Hero'
 
 const features = [
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -24,13 +18,7 @@ const features = [
   },
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -39,17 +27,12 @@ const features = [
       </svg>
     ),
     title: 'Stakeholder mapping',
-    description: 'Automatically identify key decision makers and influencers to ensure you&apos;re engaging with the right people.',
+    description:
+      'Automatically identify key decision makers and influencers to ensure you&apos;re engaging with the right people.',
   },
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"

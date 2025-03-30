@@ -5,6 +5,8 @@ import { type Section } from '@/components/SectionProvider'
 import glob from 'fast-glob'
 import { type Metadata } from 'next'
 
+
+
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
@@ -29,6 +31,7 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
         <PostHogProvider>
           <Providers>
+
             <div className="w-full">
               <Layout allSections={allSections}>{children}</Layout>
             </div>
@@ -39,17 +42,6 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
   )
 }
 
-export async function layoutB({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap" />
-        <link rel="alternate" type="application/rss+xml" title="The Amolino Blog" href="/blog/feed.xml" />
-      </head>
-      <body className="text-gray-950 antialiased">{children}</body>
-    </html>
-  )
-}
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return layoutA({ children })

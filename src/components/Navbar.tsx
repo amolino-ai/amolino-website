@@ -98,7 +98,7 @@ function ProductDropdown() {
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden lg:flex">
+    <nav className="relative hidden lg:flex z-[9999]">
       <PlusGridItem className="relative flex">
         <ProductDropdown />
       </PlusGridItem>

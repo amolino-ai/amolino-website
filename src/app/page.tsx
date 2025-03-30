@@ -4,10 +4,10 @@ import { IntegrationsSection } from '@/components/integrations-section'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Testimonials } from '@/components/testimonials'
 import type { Metadata } from 'next'
-import { BentoSection } from './page/bento-section'
-import { DarkBentoSection } from './page/dark-bento-section'
-import { Hero } from './page/hero'
-import { SecuritySection } from './page/security-section'
+import { BentoSection } from './page/components/bento-section'
+import { DarkBentoSection } from './page/components/dark-bento-section'
+import { Hero } from './page/components/hero'
+import { SecuritySection } from './page/components/security-section'
 
 export const metadata: Metadata = {
   description: 'Amolino helps you sell more by revealing sensitive information about your customers.',
