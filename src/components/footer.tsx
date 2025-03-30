@@ -122,22 +122,22 @@ function SocialIconLinkedIn(props: React.ComponentPropsWithoutRef<'svg'>) {
 function SocialLinks() {
   return (
     <>
-      <Link
+      {/* <Link
         href="https://facebook.com"
         target="_blank"
         aria-label="Visit us on Facebook"
         className="text-gray-950 data-hover:text-gray-950/75"
       >
         <SocialIconFacebook className="size-4" />
-      </Link>
-      <Link
+      </Link> */}
+      {/* <Link
         href="https://x.com"
         target="_blank"
         aria-label="Visit us on X"
         className="text-gray-950 data-hover:text-gray-950/75"
       >
         <SocialIconX className="size-4" />
-      </Link>
+      </Link> */}
       <Link
         href="https://www.linkedin.com/company/amolinoai/"
         target="_blank"

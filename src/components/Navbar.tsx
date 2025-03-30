@@ -28,12 +28,12 @@ const products = [
   },
   {
     name: 'Team Insights',
-    href: '/product/pipeline-visibility',
+    href: '/product/team-insights',
     description: 'Monitor team performance, and identify find coaching needs, for better sales outcomes',
   },
   {
     name: 'Customer 360',
-    href: '/product/pipeline-visibility',
+    href: '/product/customer-360',
     description: 'All customer interactions, contacts, and documents in one place for faster collaboration',
   },
 ]

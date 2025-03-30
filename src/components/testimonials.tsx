@@ -3,14 +3,7 @@
 import * as Headless from '@headlessui/react'
 import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
-import {
-  MotionValue,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  type HTMLMotionProps,
-} from 'framer-motion'
+import { MotionValue, motion, useMotionValueEvent, useScroll, useSpring, type HTMLMotionProps } from 'framer-motion'
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import useMeasure, { type RectReadOnly } from 'react-use-measure'
 import { Container } from './container'
@@ -20,45 +13,33 @@ import { Heading, Subheading } from './text'
 const testimonials = [
   {
     img: '/testimonials/tina-yards.jpg',
-    name: 'Tina Yards',
-    title: 'VP of Sales, Protocol',
+    name: '',
+    title: 'Director RevOps, SaaS Company with 65 sellers',
     quote:
-      'Thanks to Radiant, we’re finding new leads that we never would have found with legal methods.',
+      'After our forecast plummeted 7% overnight, Amolino now connects our scattered data, preventing problems before they happen',
   },
   {
     img: '/testimonials/conor-neville.jpg',
-    name: 'Conor Neville',
-    title: 'Head of Customer Success, TaxPal',
+    name: '',
+    title: 'CEO in Business Consulting industry',
     quote:
-      'Radiant made undercutting all of our competitors an absolute breeze.',
+      'Amolino eliminated our forecasting guesswork, transforming optimistic rep predictions and inconsistent CRM notes into accurate revenue projections.',
   },
   {
     img: '/testimonials/amy-chase.jpg',
-    name: 'Amy Chase',
-    title: 'Head of GTM, Pocket',
+    name: '',
+    title: 'VP of a sales in a construction industry',
     quote:
-      'We closed a deal in literally a few minutes because we knew their exact budget.',
+      "With Amolino's playbook checks, we never miss critical qualification steps. The system automatically flags missing BANT elements, keeping our sales process consistent and effective.",
   },
   {
     img: '/testimonials/veronica-winton.jpg',
-    name: 'Veronica Winton',
-    title: 'CSO, Planeteria',
+    name: '',
+    title: 'CEO in Series-C SaaS startup',
     quote:
-      'We’ve managed to put two of our main competitors out of business in 6 months.',
+      'Amolino cuts through our sales reps optimism and spotty CRM documentation to deliver forecasts we can trust.',
   },
-  {
-    img: '/testimonials/dillon-lenora.jpg',
-    name: 'Dillon Lenora',
-    title: 'VP of Sales, Detax',
-    quote: 'I was able to replace 80% of my team with RadiantAI bots.',
-  },
-  {
-    img: '/testimonials/harriet-arron.jpg',
-    name: 'Harriet Arron',
-    title: 'Account Manager, Commit',
-    quote:
-      'I’ve smashed all my targets without having to speak to a lead in months.',
-  },
+
 ]
 
 function TestimonialCard({
@@ -118,11 +99,7 @@ function TestimonialCard({
       {...props}
       className="relative flex aspect-9/16 w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-96"
     >
-      <img
-        alt=""
-        src={img}
-        className="absolute inset-x-0 top-0 aspect-square w-full object-cover"
-      />
+      <img alt="" src={img} className="absolute inset-x-0 top-0 aspect-square w-full object-cover" />
       <div
         aria-hidden="true"
         className="absolute inset-0 rounded-3xl bg-linear-to-t from-black from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-25%"
@@ -156,13 +133,12 @@ function CallToAction() {
   return (
     <div>
       <p className="max-w-lg text-sm/6 text-gray-600">
-      Ready to eliminate quarter-end scrambles and create predictable revenue flow? Join forward-thinking revenue leaders who have mastered the science of deal linearity with Amolino. Break free from hockey stick forecasts, margin erosion, and resource whiplash. Start your journey to revenue predictability today.
+        Ready to eliminate quarter-end scrambles and create predictable revenue flow? Join forward-thinking revenue
+        leaders who have mastered the science of deal linearity with Amolino. Break free from hockey stick forecasts,
+        margin erosion, and resource whiplash. Start your journey to revenue predictability today.
       </p>
       <div className="mt-2">
-        <Link
-          href="#"
-          className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
-        >
+        <Link href="#" className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600">
           Get started
           <ArrowLongRightIcon className="size-5" />
         </Link>
@@ -193,7 +169,7 @@ export function Testimonials() {
         <div ref={setReferenceWindowRef}>
           <Subheading>What everyone is saying</Subheading>
           <Heading as="h3" className="mt-2">
-            Trusted by professionals.
+            Trusted by Leading B2B Sales Teams.
           </Heading>
         </div>
       </Container>
@@ -229,9 +205,7 @@ export function Testimonials() {
               <Headless.Button
                 key={testimonialIndex}
                 onClick={() => scrollTo(testimonialIndex)}
-                data-active={
-                  activeIndex === testimonialIndex ? true : undefined
-                }
+                data-active={activeIndex === testimonialIndex ? true : undefined}
                 aria-label={`Scroll to testimonial from ${name}`}
                 className={clsx(
                   'size-2.5 rounded-full border border-transparent bg-gray-300 transition',

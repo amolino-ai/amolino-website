@@ -22,20 +22,21 @@ export function DarkBentoSection() {
             title="Know the health of your opportunities"
             description="Continuously evaluates opportunity health using AI analysis of engagement patterns, stakeholder involvement, and milestone achievement—comparing against successful deals to identify concerning deviations requiring attention.."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/sales_compass_deal_health_march_2025.png)] bg-[size:851px_344px] bg-no-repeat" />
+              <div className="h-80 bg-[url(/screenshots/sales_compass_full_view_modified_april_2025.jpg)] bg-[size:1000px_920px] bg-[left_-150px_top_-530px] bg-no-repeat" />
             }
-            fade={['top']}
+            fade={['left']}
             className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
           />
 
           <BentoCard
             dark
-            eyebrow="Sales Playbooks"
-            title="Apply proven BANT/MEDIC frameworks to every customer conversation"
-            description="Automatically analyzes customer interactions to verify qualification status across Budget, Authority, Need, Timeline, or MEDIC criteria—highlighting gaps and providing targeted conversation guides to strengthen qualification.."
+            eyebrow="Deal Summary"
+            title="Automatically updated Deal Summary"
+            description="Get insights into the decision-makers and influencers for each opportunity."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/sales_compass_bant_brief_march2025.png)] bg-[size:851px_344px] bg-no-repeat" />
+              <div className="h-80 bg-[url(/screenshots/sales_compass_full_view_modified_april_2025.jpg)] bg-[size:1000px_920px] bg-[left_-150px_top_-220px] bg-no-repeat" />
             }
+            fade={['bottom']}
             className="z-10 overflow-visible! lg:col-span-2 lg:rounded-tr-4xl"
           />
           <BentoCard
@@ -44,19 +45,20 @@ export function DarkBentoSection() {
             title="Understand Next Steps and Blockers"
             description="Analyzes successful deal patterns to recommend specific, high-impact next actions tailored to your deal's current stage—eliminating guesswork and ensuring your team never misses crucial momentum-building activities.."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/sales_compass_insights_march_2025.png)] bg-[size:851px_344px] bg-no-repeat" />
+              <div className="h-80 bg-[url(/screenshots/sales_compass_full_view_modified_april_2025.jpg)] bg-[size:1000px_920px] bg-[left_-150px_top_-520px] bg-no-repeat" />
             }
+            fade={['bottom']}
             className="lg:col-span-2 lg:rounded-bl-4xl"
           />
           <BentoCard
             dark
-            eyebrow="Sentiment Tracker"
-            title="Get stakeholder insights"
-            description="Get insights into the decision-makers and influencers for each opportunity."
+            eyebrow="Sales Playbooks"
+            title="Apply proven BANT/MEDIC frameworks to every customer conversation"
+            description="Automatically analyzes customer interactions to verify qualification status across Budget, Authority, Need, Timeline, or MEDIC criteria—highlighting gaps and providing targeted conversation guides to strengthen qualification.."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/unified360_people_march_2025.png)] bg-[size:851px_344px] bg-no-repeat" />
+              <div className="h-80 bg-[url(/screenshots/sales_compass_full_view_modified_april_2025.jpg)] bg-[size:1000px_920px] bg-[left_-150px_top_-250px] bg-no-repeat" />
             }
-            fade={['top']}
+            fade={['left']}
             className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
           />
         </div>
