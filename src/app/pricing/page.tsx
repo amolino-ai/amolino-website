@@ -418,9 +418,9 @@ function FrequentlyAskedQuestions() {
           <dl>
             <dt className="text-sm font-semibold">How quickly can I see results?</dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Most of our customers start seeing value withing the first days. After the initial integration with email you'll start 
-              seeing data in your AmolinoAI dashboard. Many of our customers report that they see data that they never
-              knew existing because it was never collected and updated in the CRM before.
+              Most of our customers start seeing value withing the first days. After the initial integration with email
+              you&apos;ll start seeing data in your AmolinoAI dashboard. Many of our customers report that they see data
+              that they never knew existing because it was never collected and updated in the CRM before.
             </dd>
           </dl>
           <dl>
