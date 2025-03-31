@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { Heading } from '@/components/Heading';
 import { Prose } from '@/components/Prose';
-import { Button } from '@/components/ButtonNew';
+import { Button } from '@/components/Button';
 import { Code as code, CodeGroup, Pre as pre } from '@/components/Code';
 
 // Re-exports

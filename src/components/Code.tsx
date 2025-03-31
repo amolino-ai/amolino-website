@@ -232,7 +232,7 @@ function CodeGroupPanels({
 
 function usePreventLayoutShift() {
   let positionRef = useRef<HTMLElement>(null)
-  let rafRef = useRef<number>()
+  let rafRef = useRef<number>(undefined)
 
   useEffect(() => {
     return () => {

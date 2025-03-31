@@ -453,7 +453,10 @@ function FrequentlyAskedQuestions() {
   )
 }
 
-export default function Pricing({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
+export default async function Pricing(
+  props: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }
+) {
+  const searchParams = await props.searchParams;
   let tier = typeof searchParams.tier === 'string' ? tiers.find(({ slug }) => slug === searchParams.tier)! : tiers[0]
 
   return (

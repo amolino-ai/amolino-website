@@ -5,10 +5,9 @@ import { type Section } from '@/components/SectionProvider'
 import glob from 'fast-glob'
 import { type Metadata } from 'next'
 
-
-
-import '@/styles/tailwind.css'
+import { Container } from '@/components/container'
 import { GradientBackground } from '@/components/gradient'
+import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
@@ -32,17 +31,18 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
         <PostHogProvider>
           <Providers>
-          <GradientBackground />  
-            <div className="w-full">
-              <Layout allSections={allSections}>{children}</Layout>
-            </div>
+            <Container>
+              <GradientBackground />
+              <div className="w-full">
+                <Layout allSections={allSections}>{children}</Layout>
+              </div>
+            </Container>
           </Providers>
         </PostHogProvider>
       </body>
     </html>
   )
 }
-
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return layoutA({ children })
