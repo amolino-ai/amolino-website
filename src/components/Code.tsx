@@ -216,7 +216,14 @@ function CodeGroupHeader({
                   : 'border-transparent text-zinc-400 hover:text-zinc-300',
               )}
             >
-              {getPanelTitle(isValidElement(child) ? child.props : {})}
+              {getPanelTitle(
+                isValidElement(child) && hasValidProps(child.props)
+                  ? { 
+                      title: child.props.title,
+                      language: child.props.language
+                    } 
+                  : {}
+              )}
             </Tab>
           ))}
         </TabList>
@@ -332,8 +339,11 @@ export function CodeGroup({
   let languages =
     Children.map(children, (child) =>
       getPanelTitle(
-        isValidElement(child) && isCodePanelProps(child.props)
-          ? { title: child.props.title, language: child.props.language }
+        isValidElement(child) && hasValidProps(child.props)
+          ? { 
+              title: child.props.title,
+              language: child.props.language
+            } 
           : {}
       )
     ) ?? []
@@ -399,4 +409,8 @@ export function Pre({
   }
 
   return <CodeGroup {...props}>{children}</CodeGroup>
+}
+
+function hasValidProps(props: any): props is { title?: string; language?: string } {
+  return props && typeof props === 'object';
 }
