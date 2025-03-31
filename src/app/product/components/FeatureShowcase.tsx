@@ -51,19 +51,19 @@ export default function FeatureShowcase({
                 ))}
               </div>
             </div>
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <Button variant="secondary">View Full Screen</Button>
-            </div>
+            </div> */}
           </div>
           <div className="mt-16">
-            <div className="relative overflow-hidden rounded-2xl">
+            <div className="relative mx-auto max-w-6xl overflow-hidden rounded-2xl">
               <Screenshot
                 width={1216}
                 height={768}
                 src={screenshotSrc}
-                className="relative z-10 mx-auto rounded-2xl shadow-2xl"
+                className="w-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-pink-100/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-100/50 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>

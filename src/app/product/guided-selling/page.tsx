@@ -54,12 +54,12 @@ export default function GuidedSelling() {
         description="Guided selling uses AI to analyze customer interactions and recommend specific actions."
         ctaText="Try AmolinoAI"
         ctaHref="https://app.amolino.ai"
-        screenshotSrc="/screenshots/pipeline_radar_heatmap_march2025.png"
+        screenshotSrc="/screenshots/dashboard_rep_view_april_2025.jpg"
       />
       <FeatureShowcase
         title="AI-Powered Guided Selling."
         features={features}
-        screenshotSrc="/screenshots/dashboard_revenue_feb_2025.png"
+        screenshotSrc="/screenshots/dashboard_rep_view_april_2025.jpg"
         comparisonTitle="AI-Powered Guided Selling vs Traditional Sales Process"
         comparisonSubtitle="Transform your sales process with AI-powered guidance and predictive insights."
         traditionalPoints={[

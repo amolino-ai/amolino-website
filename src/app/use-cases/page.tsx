@@ -14,9 +14,9 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ title, description, imagePath
   return (
     <Link
       href={href}
-      className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-gray-900"
+      className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md"
     >
-      <div className="mb-6 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+      <div className="mb-6 overflow-hidden rounded-lg bg-gray-100">
         <div className="relative aspect-video w-full">
           <Image
             src={imagePath}
@@ -26,12 +26,12 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ title, description, imagePath
           />
         </div>
       </div>
-      <h3 className="mb-2 text-xl font-semibold text-gray-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
+      <h3 className="mb-2 text-xl font-semibold text-gray-900 group-hover:text-blue-600">
         {title}
       </h3>
-      <p className="mb-4 flex-grow text-gray-600 dark:text-gray-400">{description}</p>
+      <p className="mb-4 flex-grow text-gray-600">{description}</p>
       <div className="mt-auto">
-        <span className="inline-flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-500 dark:text-blue-400">
+        <span className="inline-flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-500">
           Learn more
           <svg
             className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -87,13 +87,13 @@ export default function UseCasesPage() {
   ]
 
   return (
-    <div className="relative min-h-screen bg-white dark:bg-gray-950">
+    <div className="relative min-h-screen bg-white">
       <Container className="pt-24 pb-16">
         <div className="mx-auto max-w-3xl text-center">
-          <Heading as="h1" className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
+          <Heading as="h1" className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Transform Your Revenue Operations
           </Heading>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600">
             Discover how Amolino&apos;s intelligent platform addresses key challenges across your entire revenue
             operation, empowering your team to sell smarter, forecast accurately, and grow predictably.
           </p>
@@ -116,22 +116,22 @@ export default function UseCasesPage() {
       </Container>
 
       {/* Featured Use Case (Larger showcase) */}
-      <div className="bg-blue-50 py-16 dark:bg-blue-900/20">
+      <div className="bg-blue-50 py-16">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <Subheading as="h3" className="mb-2 text-blue-600 dark:text-blue-400">
+              <Subheading as="h3" className="mb-2 text-blue-600">
                 FEATURED USE CASE
               </Subheading>
               <Heading as="h2" className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
                 Account Management & Deal Tracking
               </Heading>
-              <p className="mb-6 text-lg text-gray-600 dark:text-gray-300">
+              <p className="mb-6 text-lg text-gray-600">
                 Today&apos;s Account Executives manage dozens of opportunities across multiple accounts while
                 coordinating with numerous internal stakeholders per deal. Even with CRM tools and sales methodologies,
                 critical deal details are often missed.
               </p>
-              <p className="mb-8 text-lg text-gray-600 dark:text-gray-300">
+              <p className="mb-8 text-lg text-gray-600">
                 Amolino transforms deal management by becoming your always-on, never-forgetting deal intelligence
                 partner that proactively organizes, prioritizes, and surfaces exactly what you need when you need it.
               </p>
@@ -167,13 +167,13 @@ export default function UseCasesPage() {
       </Container>
 
       {/* CTA Section */}
-      <div className="bg-gray-50 py-16 dark:bg-gray-900">
+      <div className="bg-gray-50 py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <Heading as="h2" className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
               Ready to transform your revenue operations?
             </Heading>
-            <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
+            <p className="mb-8 text-lg text-gray-600">
               Schedule a demo to see how Amolino&apos;s AI-powered platform can help your team overcome common revenue
               challenges and drive predictable growth.
             </p>

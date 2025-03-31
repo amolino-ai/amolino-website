@@ -1,17 +1,11 @@
-import FeatureShowcase from '@/app/product/components/FeatureShowcase'
 import BottomFeature from '@/app/product/components/BottomFeature'
+import FeatureShowcase from '@/app/product/components/FeatureShowcase'
 import Hero from '@/app/product/components/Hero'
 
 const features = [
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -20,17 +14,12 @@ const features = [
       </svg>
     ),
     title: 'Team Performance Analytics',
-    description: 'Get real-time insights into team performance, identify top performers, and spot areas for improvement.',
+    description:
+      'Get real-time insights into team performance, identify top performers, and spot areas for improvement.',
   },
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -43,13 +32,7 @@ const features = [
   },
   {
     icon: (
-      <svg
-        className="h-5 w-5 text-pink-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        stroke="currentColor"
-      >
+      <svg className="h-5 w-5 text-pink-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -116,4 +99,4 @@ export default function TeamInsights() {
       />
     </>
   )
-} 
+}

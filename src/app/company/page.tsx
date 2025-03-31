@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">See Clearly. Sell Smarter..</Heading>
+      <Heading as="h1">See Clearly. Sell Smarter.</Heading>
       <Lead className="mt-6 max-w-3xl">
         Transform sales performance with <b>Real-time quarterly</b> forecasts, <b>Pipeline Visibility</b> and{' '}
         <b>Deal Linearity</b>.
@@ -78,12 +78,34 @@ function Header() {
   )
 }
 
-function Person({ name, description, img }: { name: string; description: string; img: string }) {
+function Person({
+  name,
+  description,
+  img,
+  linkedinURL,
+}: {
+  name: string
+  description: string
+  img: string
+  linkedinURL?: string
+}) {
   return (
     <li className="flex items-center gap-4">
-      <img alt="" src={img} className="size-12 rounded-full" />
+      <img alt="" src={img} className="size-16 rounded-full" />
       <div className="text-sm/6">
-        <h3 className="font-medium">{name}</h3>
+        <div className="flex items-center gap-2">
+          <h3 className="font-medium">{name}</h3>
+          {linkedinURL && (
+            <a
+              href={linkedinURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900"
+            >
+              <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+            </a>
+          )}
+        </div>
         <p className="text-gray-500">{description}</p>
       </div>
     </li>
@@ -101,8 +123,7 @@ function Team() {
         AmolinoAI was founded by Aseem Asthana and Daniele Di Sarli, combining deep expertise in AI, sales, and
         technology. Their mission is to revolutionize sales operations by providing unparalleled pipeline visibility and
         actionable insights for revenue growth. Backed by some of the world&apos;s best in GTM and B2B sales, the
-        founding team is equipped with the knowledge and experience to help sales teams achieve predictable
-        success.{' '}
+        founding team is equipped with the knowledge and experience to help sales teams achieve predictable success.
       </Lead>
       <div className="mt-12 grid grid-cols-1 gap-12">
         {/* <div className="max-w-3xl">
@@ -123,21 +144,21 @@ function Team() {
               <img alt="Aseem Asthana" src="/photos/aseem_asthana_photo.jpg" className="block size-full object-cover" />
             </div>
             <h3 className="mt-4 text-lg font-semibold">Aseem Asthana</h3>
-            <p className="text-sm text-gray-600">CEO and Founder</p>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-gray-600">CEO and Founder</p>
+              <a
+                href="https://www.linkedin.com/in/aseemasthana/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+              </a>
+            </div>
             <p className="mt-2 text-sm text-gray-600">
               Aseem brings extensive experience in sales and AI, having previously led sales teams and developed AI
               solutions for enterprise customers.
             </p>
-            <a
-              href="https://www.linkedin.com/in/aseemasthana/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 text-gray-600 hover:text-gray-900"
-            >
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </a>
           </div>
           <div className="flex flex-col items-center text-center">
             <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
@@ -148,35 +169,67 @@ function Team() {
               />
             </div>
             <h3 className="mt-4 text-lg font-semibold">Daniele Di Sarli</h3>
-            <p className="text-sm text-gray-600">Founding CTO</p>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-gray-600">Founding CTO</p>
+              <a
+                href="https://www.linkedin.com/in/daniele-ds/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+              </a>
+            </div>
             <p className="mt-2 text-sm text-gray-600">
               Daniele brings deep technical expertise in AI and machine learning, having previously worked on
               cutting-edge AI solutions at leading tech companies.
             </p>
-            <a
-              href="https://www.linkedin.com/in/daniele-ds/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 text-gray-600 hover:text-gray-900"
-            >
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
-      <Subheading as="h3" className="mt-24">
-        Our Advisors
-      </Subheading>
+      <Subheading className="mt-24">Our Advisors</Subheading>
+
+      <Heading as="h3" className="mt-2">
+        Advised by industry experts.
+      </Heading>
       <hr className="mt-6 border-t border-gray-200" />
-      <ul role="list" className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <Person name="Adam Carson" description="" img="/photos/adam_carson.jpg" />
-        <Person name="Jai Desai" description="" img="/photos/jai_desai.jpg" />
-        <Person name="Jesse Marseille" description="Front-end Developer" img="/team/celeste-vandermark.jpg" />
-        <Person name="Sebastian Spitzer" description="Designer" img="/team/courtney-henry.jpg" />
-        <Person name="Barry Wilson" description="Director of Product" img="/team/marcus-eldridge.jpg" />
-        <Person name="Arun Reddy Nelakurthi" description="Copywriter" img="/team/whitney-francis.jpg" />
+      <ul role="list" className="mx-auto mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <Person
+          name="Jai Desai"
+          description="Go-to-Market and Enterprise Sales"
+          linkedinURL="https://www.linkedin.com/in/jaidesai/"
+          img="/photos/jai_desai.jpg"
+        />
+        <Person
+          name="Jesse Marseille"
+          description="Go-to-Market and  Sales"
+          linkedinURL="https://www.linkedin.com/in/jessemarseille/"
+          img="/photos/jesse_marseille.jpg"
+        />
+        <Person
+          name="Sebastian Spitzer"
+          description="Go-to-Market and Channel Sales"
+          linkedinURL="https://www.linkedin.com/in/seba-s/"
+          img="/photos/sebastian_spitzer.jpg"
+        />
+        <Person
+          name="Barry Wilson"
+          description="Enterprise Sales"
+          linkedinURL="https://www.linkedin.com/in/barry-wilson-9348204/"
+          img="/photos/barry_wilson.jpg"
+        />
+        <Person
+          name="Arun Reddy Nelakurthi"
+          linkedinURL="https://www.linkedin.com/in/arunreddy/"
+          description="AI/ML"
+          img="/photos/arun_nelakurthi.jpg"
+        />
+        <Person
+          name="Adam Carson"
+          linkedinURL="https://www.linkedin.com/in/acarson/"
+          description="Revenue and Finance"
+          img="/photos/adam_carson.jpg"
+        />
       </ul>
     </Container>
   )

@@ -11,14 +11,15 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <div className="relative">
-        {/* <Container>
-          <Navbar />
-        </Container> */}
+      <Container>
+        <Navbar />
+
 
         <main className="relative">{children}</main>
-        <div className="mb-12">
+        <div className="mb-12 z-10">
           <LogoCloud />
         </div>
+        </Container>
       </div>
     </>
   )

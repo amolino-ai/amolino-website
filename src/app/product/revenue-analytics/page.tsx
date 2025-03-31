@@ -1,8 +1,6 @@
 import BottomFeature from '@/app/product/components/BottomFeature'
 import FeatureShowcase from '@/app/product/components/FeatureShowcase'
 import Hero from '@/app/product/components/Hero'
-import { Container } from '@/components/container'
-import { Navbar } from '@/components/Navbar'
 const features = [
   {
     icon: (
@@ -52,20 +50,18 @@ const features = [
 export default function RevenueAnalytics() {
   return (
     <>
-    <Container>
-    <Navbar />
       <Hero
         badgeText="AI-Powered Revenue Analytics"
         title="From Pipeline Surprises to Pipeline Clarity."
         description="AI-powered revenue analytics transforms chaotic pipeline data into actionable intelligence. By automatically analyzing customer interactions, engagement patterns, and historical deal flows, Amolino provides unprecedented visibility into deal health, risk factors, and revenue projections—eliminating surprises and giving sales leaders complete confidence in their pipeline and forecast accuracy."
         ctaText="Try AmolinoAI"
         ctaHref="https://app.amolino.ai"
-        screenshotSrc="/screenshots/pipeline_radar_heatmap_march2025.png"
+        screenshotSrc="/screenshots/dashboard_revenue_forecast_april2025.jpg"
       />
       <FeatureShowcase
         title="AI-Powered Revenue Analytics."
         features={features}
-        screenshotSrc="/screenshots/pipeline_radar_heatmap_march2025.png"
+        screenshotSrc="/screenshots/dashboard_revenue_forecast_april2025.jpg"
         comparisonTitle="AI-Powered Revenue Analytics"
         comparisonSubtitle="Transform your revenue forecasting with AI-powered insights and predictive analytics."
         traditionalPoints={[
@@ -103,7 +99,6 @@ export default function RevenueAnalytics() {
         ]}
         screenshotSrc="/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
       />
-      </Container>
     </>
   )
 }

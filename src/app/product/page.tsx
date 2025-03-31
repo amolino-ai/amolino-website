@@ -1,8 +1,5 @@
-import { Badge } from '@/components/badge'
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
 import ProductGrid from './components/ProductGrid'
-import { Navbar } from '@/components/Navbar'
 
 const products = [
   {
@@ -39,25 +36,22 @@ const products = [
 export default function ProductOverview() {
   return (
     <>
-      <Container>
-      <Navbar />
-        <div className="py-16">
-          <div className="text-center">
-            {/* <Badge text="Products" /> */}
-            <h1 className="mt-6 text-4xl font-medium tracking-tight text-gray-900 sm:text-5xl">
-              Real-time Revenue Forecasting and Guided Selling
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-600">
-              Transform your sales organization with AI-powered insights, guided selling, and comprehensive analytics.
-            </p>
-            <div className="mt-8">
-              <Button href="https://app.amolino.ai">Try AmolinoAI</Button>
-            </div>
+      <div className="py-16">
+        <div className="text-center">
+          {/* <Badge text="Products" /> */}
+          <h1 className="mt-6 text-4xl font-medium tracking-tight text-gray-900 sm:text-5xl">
+            Real-time Revenue Forecasting and Guided Selling
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-600">
+            Transform your sales organization with AI-powered insights, guided selling, and comprehensive analytics.
+          </p>
+          <div className="mt-8">
+            <Button href="https://app.amolino.ai">Try AmolinoAI</Button>
           </div>
-
-          <ProductGrid products={products} />
         </div>
-      </Container>
+
+        <ProductGrid products={products} />
+      </div>
     </>
   )
 }

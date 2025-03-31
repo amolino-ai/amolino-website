@@ -20,21 +20,25 @@ const products = [
     name: 'AI Revenue Forecasting',
     href: '/product/revenue-analytics',
     description: 'Track pipeline, forecasts, and sales velocity. Make data-driven decisions to meet revenue goals',
+    icon: '/icons/revenue-analytics.svg'
   },
   {
     name: 'Guided Selling',
     href: '/product/guided-selling',
     description: 'AI-driven insights on deal health, customer sentiment, and next steps and competition',
+    icon: '/icons/guided-selling.svg'
   },
   {
     name: 'Team Insights',
     href: '/product/team-insights',
     description: 'Monitor team performance, and identify find coaching needs, for better sales outcomes',
+    icon: '/icons/team-insights.svg'
   },
   {
     name: 'Customer 360',
     href: '/product/customer-360',
     description: 'All customer interactions, contacts, and documents in one place for faster collaboration',
+    icon: '/icons/customer-360.svg'
   },
 ]
 
@@ -49,15 +53,20 @@ const links = [
 function ProductDropdown() {
   const [isOpen, setIsOpen] = useState(false)
   
+  const handleLinkClick = () => {
+    setIsOpen(false)
+  }
+  
   return (
-    <Popover className="relative">
+    <Popover className="relative h-full">
       {({ open }) => (
         <div
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
+          className="h-full"
         >
           <PopoverButton 
-            className="flex items-center gap-1 px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/[2.5%] outline-none"
+            className="flex items-center gap-1 px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/[2.5%] outline-none h-full"
           >
             Product
             <ChevronDownIcon className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
@@ -67,23 +76,38 @@ function ProductDropdown() {
             {isOpen && (
               <PopoverPanel 
                 static
-                className="absolute left-0 z-[9999] mt-1 w-screen max-w-sm rounded-2xl bg-white p-2 shadow-lg ring-1 ring-gray-950/5"
+                className="absolute left-0 z-50 mt-1 w-screen max-w-sm rounded-2xl bg-white p-2 shadow-lg ring-1 ring-gray-950/5"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.2 }}
-                  className="relative grid gap-2 z-[9999]"
+                  className="relative grid gap-2"
                 >
+                  <Link
+                    href="/product"
+                    onClick={handleLinkClick}
+                    className="relative flex items-start gap-3 rounded-xl p-4 text-gray-950 transition-colors hover:bg-gray-50 border-b border-gray-100"
+                  >
+                    <img src="/icons/all-products.svg" alt="" className="h-6 w-6 text-pink-600" />
+                    <div className="flex flex-col gap-1">
+                      <span className="text-base font-semibold">All Products</span>
+                      <span className="text-sm text-gray-600">View our complete product suite</span>
+                    </div>
+                  </Link>
                   {products.map((product) => (
                     <Link
                       key={product.href}
                       href={product.href}
-                      className="relative flex flex-col gap-1 rounded-xl p-4 text-gray-950 transition-colors hover:bg-gray-50"
+                      onClick={handleLinkClick}
+                      className="relative flex items-start gap-3 rounded-xl p-4 text-gray-950 transition-colors hover:bg-gray-50"
                     >
-                      <span className="text-base font-semibold">{product.name}</span>
-                      <span className="text-sm text-gray-600">{product.description}</span>
+                      <img src={product.icon} alt="" className="h-6 w-6 text-pink-600" />
+                      <div className="flex flex-col gap-1">
+                        <span className="text-base font-semibold">{product.name}</span>
+                        <span className="text-sm text-gray-600">{product.description}</span>
+                      </div>
                     </Link>
                   ))}
                 </motion.div>
@@ -98,19 +122,19 @@ function ProductDropdown() {
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden lg:flex z-[9999]">
-      <PlusGridItem className="relative flex">
+    <nav className="relative hidden lg:flex z-30">
+      <div className="flex items-center">
         <ProductDropdown />
-      </PlusGridItem>
+      </div>
       {links.map(({ href, label }) => (
-        <PlusGridItem key={href} className="relative flex">
+        <div key={href} className="flex items-center">
           <Link
             href={href}
             className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/[2.5%]"
           >
             {label}
           </Link>
-        </PlusGridItem>
+        </div>
       ))}
     </nav>
   )
@@ -179,7 +203,7 @@ function MobileNav() {
 
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
   return (
-    <Disclosure as="header" className="pt-12 sm:pt-16">
+    <Disclosure as="header" className="pt-12 sm:pt-16 relative z-50">
       <PlusGrid>
         <PlusGridRow className="relative flex justify-between">
           <div className="relative flex gap-6">
