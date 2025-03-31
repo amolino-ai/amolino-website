@@ -11,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <div className="relative">
-      <Container>
+      {/* <Container> */}
         <Navbar />
 
 
@@ -19,7 +19,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="mb-12 z-10">
           <LogoCloud />
         </div>
-        </Container>
+        {/* </Container> */}
       </div>
     </>
   )

@@ -31,12 +31,12 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
         <PostHogProvider>
           <Providers>
-            <Container>
+            {/* <Container> */}
               <GradientBackground />
               <div className="w-full">
                 <Layout allSections={allSections}>{children}</Layout>
               </div>
-            </Container>
+            {/* </Container> */}
           </Providers>
         </PostHogProvider>
       </body>
