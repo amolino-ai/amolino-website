@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
-import { Gradient, GradientBackground } from '@/components/gradient'
+import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/Navbar'
@@ -19,29 +19,34 @@ const tiers = [
   {
     name: 'Starter' as const,
     slug: 'starter',
-    description: 'Everything you need to start selling.',
+    description: 'Complete overview of your customers throughout their lifecycle.',
     priceMonthly: 59,
     href: '#',
     highlights: [
-      { description: 'Up to 3 team members' },
-      { description: 'Up to 5 deal progress boards' },
-      { description: 'Source leads from select platforms' },
-      { description: 'RadiantAI integrations', disabled: true },
-      { description: 'Competitor analysis', disabled: true },
+      { description: 'Customer 360' },
+      { description: 'Guided Selling', disabled: true },
+      { description: 'Team insights', disabled: true },
+      { description: 'Revenue Analytics', disabled: true },
     ],
     features: [
-      { section: 'Features', name: 'Accounts', value: 3 },
-      { section: 'Features', name: 'Deal progress boards', value: 5 },
-      { section: 'Features', name: 'Sourcing platforms', value: 'Select' },
-      { section: 'Features', name: 'Contacts', value: 100 },
-      { section: 'Features', name: 'AI assisted outreach', value: false },
-      { section: 'Analysis', name: 'Competitor analysis', value: false },
-      { section: 'Analysis', name: 'Dashboard reporting', value: false },
-      { section: 'Analysis', name: 'Community insights', value: false },
-      { section: 'Analysis', name: 'Performance analysis', value: false },
-      { section: 'Support', name: 'Email support', value: true },
-      { section: 'Support', name: '24 / 7 call center support', value: false },
-      { section: 'Support', name: 'Dedicated account manager', value: false },
+      { section: 'Customer 360', name: 'Overall Opportunity Summary', value: true },
+      { section: 'Customer 360', name: 'Number of Opportunities', value: '\u221E' },
+      { section: 'Customer 360', name: 'Automatic Timeline', value: true },
+      { section: 'Customer 360', name: 'Rapid Actions', value: true },
+      { section: 'Customer 360', name: 'Opportunity Contacts Updated', value: true },
+      { section: 'Customer 360', name: 'Ask Amolino', value: true },
+      { section: 'CRM', name: '2-way HubSpot Sync', value: true },
+      { section: 'CRM', name: '2-way SalesForce Sync', value: true },
+      { section: 'Email Integrations', name: 'Google Mail', value: true },
+      { section: 'Email Integrations', name: 'Microsoft 365 Email', value: true },
+      { section: 'Messaging Integrations', name: 'Slack', value: true },
+      { section: 'Messaging Integrations', name: 'Microsoft Teams', value: true },
+      { section: 'Conversational Intelligence', name: 'Google Meet', value: false },
+      { section: 'Conversational Intelligence', name: 'Zoom', value: false },
+      { section: 'Conversational Intelligence', name: 'Microsoft Teams', value: false },
+      { section: 'Conversational Intelligence', name: 'Cisco Webex', value: false },
+      
+
     ],
   },
   {
@@ -51,11 +56,10 @@ const tiers = [
     priceMonthly: 99,
     href: '#',
     highlights: [
-      { description: 'Up to 10 team members' },
-      { description: 'Unlimited deal progress boards' },
-      { description: 'Source leads from over 50 verified platforms' },
-      { description: 'RadiantAI integrations' },
-      { description: '5 competitor analyses per month' },
+      { description: 'Customer 360' },
+      { description: 'Guided Selling' },
+      { description: 'Team insights', disabled: false },
+      { description: 'Revenue Analytics', disabled: true },
     ],
     features: [
       { section: 'Features', name: 'Accounts', value: 10 },
@@ -73,17 +77,16 @@ const tiers = [
     ],
   },
   {
-    name: 'Enterprise' as const,
-    slug: 'enterprise',
+    name: 'Business' as const,
+    slug: 'business',
     description: 'Added flexibility to close deals at scale.',
     priceMonthly: 199,
     href: '#',
     highlights: [
-      { description: 'Unlimited active team members' },
-      { description: 'Unlimited deal progress boards' },
-      { description: 'Source leads from over 100 verified platforms' },
-      { description: 'RadiantAI integrations' },
-      { description: 'Unlimited competitor analyses' },
+      { description: 'Customer 360' },
+      { description: 'Guided Selling' },
+      { description: 'Team insights', disabled: false },
+      { description: 'Revenue Analytics', disabled: false },
     ],
     features: [
       { section: 'Features', name: 'Accounts', value: 'Unlimited' },
@@ -124,7 +127,6 @@ function PricingCards() {
             <PricingCard key={tierIndex} tier={tier} />
           ))}
         </div>
-        <LogoCloud />
       </Container>
     </div>
   )
@@ -145,10 +147,10 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
             </div>
           </div>
           <div className="mt-8">
-            <Button href={tier.href}>Start a free trial</Button>
+            <Button href="https://app.amolino.ai">21 day free trial</Button>
           </div>
           <div className="mt-8">
-            <h3 className="text-sm/6 font-medium text-gray-950">Start selling with:</h3>
+            <h3 className="text-sm/6 font-medium text-gray-950">Accelerate your sales with:</h3>
             <ul className="mt-3 space-y-3">
               {tier.highlights.map((props, featureIndex) => (
                 <FeatureItem key={featureIndex} {...props} />
@@ -228,7 +230,7 @@ function PricingTable({ selectedTier }: { selectedTier: (typeof tiers)[number] }
               </div>
             </td>
             <td colSpan={3} className="p-0 text-right">
-              <Button variant="outline" href={selectedTier.href}>
+              <Button variant="outline" href="https://app.amolino.ai" target="_blank">
                 Get started
               </Button>
             </td>
@@ -243,7 +245,7 @@ function PricingTable({ selectedTier }: { selectedTier: (typeof tiers)[number] }
                 data-selected={selectedTier === tier ? true : undefined}
                 className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden"
               >
-                <Button variant="outline" href={tier.href}>
+                <Button variant="outline" href="https://app.amolino.ai" target="_blank">
                   Get started
                 </Button>
               </td>
@@ -341,7 +343,7 @@ function Testimonial() {
             <figure className="mx-auto flex max-w-xl flex-col gap-16 max-lg:text-center">
               <blockquote>
                 <p className="relative text-3xl tracking-tight text-white before:absolute before:-translate-x-full before:content-['&quot;'] after:absolute after:content-['&quot;'] lg:text-4xl">
-                  Thanks to Radiant, we&apos;re finding new leads that we never would have found with legal methods.
+                  Thanks to AmolinoAI, we&apos;re finding new leads that we never would have found with legal methods.
                 </p>
               </blockquote>
               <figcaption className="mt-auto">
@@ -370,49 +372,50 @@ function FrequentlyAskedQuestions() {
         </Heading>
         <div className="mx-auto mt-16 mb-32 max-w-xl space-y-12">
           <dl>
-            <dt className="text-sm font-semibold">What measures are in place to ensure the security of our data?</dt>
+            <dt className="text-sm font-semibold">What's included in the free trial?</dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Data security is a top priority for us, which is ironic given that our business depends on others not
-              taking it very seriously. We understand that any breach could put both us and most of our customers out of
-              business—and behind bars. We employ robust security measures, including data encryption, secure data
-              centers, and regular security audits to ensure this never happens.
+              Our free trial includes full access to all features of the Professional plan for 14 days. This allows you
+              to experience our complete suite of AI-powered sales tools, including guided selling, revenue analytics,
+              and team insights. No credit card required to start.
             </dd>
           </dl>
           <dl>
-            <dt className="text-sm font-semibold">Is there a mobile app available for your platform?</dt>
+            <dt className="text-sm font-semibold">Can I upgrade or downgrade my plan later?</dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, we offer a mobile app that provides all the key functionalities of our desktop platform, allowing
-              sales reps to manage deals on the go. Additionally, we have another app pre-installed on most modern
-              smartphones that allows us to track your location, listen to your conversations, and access your camera
-              and microphone at any time. This app is not available for download.
+              Yes, you can change your plan at any time. When upgrading, you'll be prorated for the remainder of your
+              billing cycle. When downgrading, the change will take effect at the start of your next billing cycle.
             </dd>
           </dl>
           <dl>
-            <dt className="text-sm font-semibold">
-              Can I customize the workflow to match our company&apos;s deal process?
-            </dt>
+            <dt className="text-sm font-semibold">How does the team member limit work?</dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, our platform is highly customizable, although there should be no need. Before you sign up, we
-              discreetly gather information about your company and its processes from a variety of sources. We then use
-              this information to pre-configure the platform to match your existing workflows. This is why we ask for
-              your social security number and access to your email account during the sign-up process.
+              Team member limits are based on active users who can access the platform. You can add or remove team
+              members as needed within your plan's limit. The Starter plan allows up to 3 team members, Professional up
+              to 10, and Business offers unlimited team members.
             </dd>
           </dl>
           <dl>
             <dt className="text-sm font-semibold">What kind of support do you offer?</dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              We offer comprehensive support through multiple channels, including 24/7 live chat, email, and phone
-              support. However, since we have full access to your internal network, we will know if you&apos;re having
-              issues before you do.
+              All plans include email support. Professional and Business plans include 24/7 call center support.
+              Business plan customers also get a dedicated account manager for personalized assistance and strategic
+              guidance.
             </dd>
           </dl>
           <dl>
-            <dt className="text-sm font-semibold">Can I integrate the CRM with other sales intelligence tools?</dt>
+            <dt className="text-sm font-semibold">How does the competitor analysis feature work?</dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, our solution integrates seamlessly with a variety of other systems. However, be warned that most of
-              these integrations are short-lived. We have a dedicated team of engineers who reverse-engineer the APIs of
-              other tools, enabling us to build their functionality into our product and eventually put them out of
-              business.
+              Our AI-powered competitor analysis provides insights into market positioning, pricing strategies, and
+              competitive advantages. The Professional plan includes 5 analyses per month, while the Business plan
+              offers unlimited analyses to help you stay ahead of the competition.
+            </dd>
+          </dl>
+          <dl>
+            <dt className="text-sm font-semibold">What integrations are available?</dt>
+            <dd className="mt-4 text-sm/6 text-gray-600">
+              We integrate with major CRM platforms, sales tools, and data providers. The Professional and Business
+              plans include access to our full suite of integrations, including AmolinoAI capabilities. Starter plan
+              includes basic integrations with select platforms.
             </dd>
           </dl>
         </div>
@@ -434,6 +437,7 @@ export default function Pricing({ searchParams }: { searchParams: { [key: string
       <PricingTable selectedTier={tier} />
       <Testimonial />
       <FrequentlyAskedQuestions />
+      <LogoCloud />
     </main>
   )
 }
