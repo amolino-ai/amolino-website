@@ -29,7 +29,7 @@ export default function Home() {
         <DarkBentoSection />
         <IntegrationsSection />
       </main>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <SecuritySection />
     </div>
   )
