@@ -131,6 +131,22 @@ function CodePanelHeader({ tag, label }: { tag?: string; label?: string }) {
   )
 }
 
+interface CodePanelProps {
+  tag?: string
+  label?: string
+  code?: string
+  title?: string
+  language?: string
+}
+
+function isCodePanelProps(props: unknown): props is CodePanelProps {
+  return (
+    typeof props === 'object' &&
+    props !== null &&
+    ('tag' in props || 'label' in props || 'code' in props || 'title' in props || 'language' in props)
+  )
+}
+
 function CodePanel({
   children,
   tag,
@@ -144,7 +160,7 @@ function CodePanel({
 }) {
   let child = Children.only(children)
 
-  if (isValidElement(child)) {
+  if (isValidElement<CodePanelProps>(child)) {
     tag = child.props.tag ?? tag
     label = child.props.label ?? label
     code = child.props.code ?? code
@@ -220,7 +236,9 @@ function CodeGroupPanels({
       <TabPanels>
         {Children.map(children, (child) => (
           <TabPanel>
-            <CodePanel {...props}>{child}</CodePanel>
+            <CodePanel {...props}>
+              {isValidElement(child) && isCodePanelProps(child.props) ? child : null}
+            </CodePanel>
           </TabPanel>
         ))}
       </TabPanels>
@@ -313,7 +331,11 @@ export function CodeGroup({
 }: React.ComponentPropsWithoutRef<typeof CodeGroupPanels> & { title: string }) {
   let languages =
     Children.map(children, (child) =>
-      getPanelTitle(isValidElement(child) ? child.props : {}),
+      getPanelTitle(
+        isValidElement(child) && isCodePanelProps(child.props)
+          ? { title: child.props.title, language: child.props.language }
+          : {}
+      )
     ) ?? []
   let tabGroupProps = useTabGroupProps(languages)
   let hasTabs = Children.count(children) > 1
