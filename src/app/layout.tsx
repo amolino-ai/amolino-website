@@ -4,10 +4,30 @@ import { PostHogProvider } from '@/components/PostHogProvider'
 import { type Section } from '@/components/SectionProvider'
 import glob from 'fast-glob'
 import { type Metadata } from 'next'
+import { Inter, Lexend, JetBrains_Mono } from 'next/font/google'
 
 import { Container } from '@/components/container'
 import { GradientBackground } from '@/components/gradient'
 import '@/styles/tailwind.css'
+
+// Font configurations
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const lexend = Lexend({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-lexend',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains-mono',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +46,11 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
   )) as Array<[string, Array<Section>]>
   let allSections = Object.fromEntries(allSectionsEntries)
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
+    <html 
+      lang="en" 
+      className={`h-full ${inter.variable} ${lexend.variable} ${jetbrainsMono.variable}`} 
+      suppressHydrationWarning
+    >
       {/* <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900"> */}
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
         <PostHogProvider>

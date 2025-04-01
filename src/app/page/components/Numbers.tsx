@@ -20,7 +20,7 @@ export function NumbersSection() {
             </dd>
           </div>
           <div className="flex flex-col gap-y-2">
-            <dt className="text-sm/6 text-gray-600">Increase in Forecase Accuracy</dt>
+            <dt className="text-sm/6 text-gray-600">Increase in Forecast Accuracy</dt>
             <dd className="order-first text-6xl font-medium tracking-tight">
               <AnimatedNumber start={60} end={90} />%
             </dd>

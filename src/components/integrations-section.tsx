@@ -18,10 +18,10 @@ interface IntegrationIconProps {
 
 const IntegrationCategory = ({ title, children }: IntegrationCategoryProps) => {
   const categoryColors = {
-    MEETINGS: 'bg-blue-50',
-    EMAIL: 'bg-purple-50',
-    MESSAGING: 'bg-green-50',
-    CRM: 'bg-blue-50',
+    MEETINGS: 'bg-cyan-100',
+    EMAIL: 'bg-purple-100',
+    MESSAGING: 'bg-green-100',
+    CRM: 'bg-blue-100',
   } as const
 
   return (
@@ -35,7 +35,7 @@ const IntegrationCategory = ({ title, children }: IntegrationCategoryProps) => {
 const IntegrationIcon = ({ name, src, alt }: IntegrationIconProps) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-gray-200">
+      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-blue-600">
         <Image src={src} alt={alt || `${name} logo`} width={40} height={40} />
       </div>
     </div>
