@@ -65,8 +65,8 @@ export function BlindSalesSection() {
       )
     },
     {
-      title: "You&apos;re reacting instead of driving the quarter",
-      description: "Without real-time insights, you&apos;re constantly playing catch-up instead of proactively managing your pipeline.",
+      title: "You are reacting instead of driving the quarter",
+      description: "Without real-time insights, you're constantly playing catch-up instead of proactively managing your pipeline.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -97,7 +97,7 @@ export function BlindSalesSection() {
             
             <motion.div variants={item}>
               <Subheading className="text-xl md:text-2xl font-semibold text-gray-800">
-                Most sales teams fly blind:
+                Most sales teams fly blind
               </Subheading>
             </motion.div>
           </motion.div>
