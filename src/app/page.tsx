@@ -8,6 +8,7 @@ import { BentoSection } from './page/components/bento-section'
 import { DarkBentoSection } from './page/components/dark-bento-section'
 import { Hero } from './page/components/hero'
 import { SecuritySection } from './page/components/security-section'
+import { BlindSalesSection } from './page/components/blind-sales-section'
 
 export const metadata: Metadata = {
   description: 'Amolino helps you sell more by revealing sensitive information about your customers.',
@@ -21,6 +22,9 @@ export default function Home() {
         <Container className="mt-10">
           <LogoCloud />
         </Container>
+        
+        <BlindSalesSection />
+        
         <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
           <FeatureSection />
           <BentoSection />

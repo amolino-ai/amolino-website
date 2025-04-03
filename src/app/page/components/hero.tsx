@@ -11,14 +11,20 @@ export function Hero() {
       <Container className="relative">
         <Navbar />
         <div className="pt-1 pb-24 sm:pt-24 sm:pb-32 md:pt-24 md:pb-48">
-          <h1 className="font-display text-5xl/[1.1] font-semibold tracking-normal text-balance text-gray-950 sm:text-8xl/[1.05] md:text-8xl/[1.05] drop-shadow-sm">
-          Real-Time Sales Forecasts that Stays on Track
+          <h1 className="font-display text-5xl/[1.1] font-semibold tracking-normal text-balance text-gray-950 drop-shadow-sm sm:text-6xl/[1.05] md:text-6xl/[1.05]">
+            The AI Platform for Sales Forecasting, Pipeline Visibility, and Deal Execution.
           </h1>
           <p className="mt-8 max-w-3xl text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Sales leaders struggle with unreliable forecasts and missed revenue goals. Amolino provides real-time
-            insights, identifying pipeline risks early and offering prescriptive actions to drive accurate, confident
-            sales projections.
+            Amolino gives sales leaders a real-time command center—spot risk before it snowballs, improve forecast
+            accuracy, and guide every rep to close faster.
           </p>
+
+          <div className="mt-6 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
+            <Button href="#">Try Amolino Free</Button>
+            <Button variant="secondary" href="/demo">
+              Book a demo
+            </Button>
+          </div>
 
           <div className="mt-12">
             <NumbersSection />

@@ -12,10 +12,10 @@ function CallToAction() {
       <hgroup>
         <Subheading>Get started</Subheading>
         <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          Ready to dive in?
+        Give your team an unfair advantage.
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-2xs text-sm/6 text-gray-500">
+      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
         Eliminate pipeline surprises, end of quarter scrambles, and empower your sales team to close more deals.
       </p>
       <div className="mt-6">
