@@ -23,7 +23,7 @@ export default function Home() {
           <LogoCloud />
         </Container>
         
-        <BlindSalesSection />
+        {/* <BlindSalesSection /> */}
         
         <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
           <FeatureSection />

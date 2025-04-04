@@ -29,12 +29,12 @@ export function Hero() {
           <div className="mt-12">
             <NumbersSection />
           </div>
-          <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
+          {/* <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="https://app.amolino.ai">Get started</Button>
             <Button variant="secondary" href="/pricing">
               See pricing
             </Button>
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>
