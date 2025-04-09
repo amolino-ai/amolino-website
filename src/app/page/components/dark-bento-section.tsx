@@ -54,7 +54,7 @@ export function DarkBentoSection() {
             dark
             eyebrow="Sales Playbooks"
             title="Apply proven BANT/MEDIC frameworks to every customer conversation"
-            description="Automatically analyzes customer interactions to verify qualification status across Budget, Authority, Need, Timeline, or MEDIC criteria—highlighting gaps and providing targeted conversation guides to strengthen qualification.."
+            description="Automatically analyzes customer interactions to verify qualification status across Budget, Authority, Need, Timeline, or MEDDIC criteria—highlighting gaps and providing targeted conversation guides to strengthen qualification.."
             graphic={
               <div className="h-80 bg-[url(/screenshots/sales_compass_full_view_modified_april_2025.jpg)] bg-[size:1000px_920px] bg-[left_-150px_top_-250px] bg-no-repeat" />
             }
