@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { ThemeProvider, useTheme } from 'next-themes'
+import { MantineProvider } from '@mantine/core'
 
 function ThemeWatcher() {
   let { resolvedTheme, setTheme } = useTheme()
@@ -32,7 +33,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange defaultTheme="light" forcedTheme="light">
       <ThemeWatcher />
-      {children}
+      <MantineProvider>
+        {children}
+      </MantineProvider>
     </ThemeProvider>
   )
 }

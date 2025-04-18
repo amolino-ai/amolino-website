@@ -1,0 +1,450 @@
+import { ContentNavigation } from '@/components/ContentNavigation';
+import { sections } from '../components/sections';
+import Image from 'next/image';
+
+export const metadata = {
+  title: 'MEDDPICC Sales Qualification Framework',
+  description: 'Learn how the MEDDPICC framework helps qualify complex enterprise sales opportunities by assessing Metrics, Economic Buyer, Decision Criteria, Decision Process, Paper Process, Identify Pain, Champion, and Competition.',
+  images: {
+    hero: '/images/frameworks/meddpicc-hero.jpg',
+    overview: '/images/frameworks/meddpicc-hero.jpg',
+    components: '/images/frameworks/meddpicc-hero.jpg',
+    scenarios: '/images/frameworks/meddpicc-hero.jpg'
+  }
+};
+
+<div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+    <div className="lg:col-span-3">
+      <div className="relative h-[400px] w-full mb-12 rounded-xl overflow-hidden" style={{ position: 'relative', zIndex: 0 }}>
+        <Image
+          src={metadata.images.hero}
+          alt="MEDDPICC Framework - Comprehensive Enterprise Sales Qualification"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end">
+          <div className="p-8 text-white">
+            <h1 className="text-4xl font-bold mb-4">MEDDPICC Framework</h1>
+            <p className="text-xl text-gray-200">A comprehensive enterprise sales qualification framework for complex deals with multiple stakeholders and procurement processes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="overview">
+        # MEDDPICC Framework
+
+        <div className="bg-gradient-to-r from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/10 p-6 rounded-xl mb-10 mt-4">
+          <div className="grid md:grid-cols-4 gap-4 text-center">
+            {['Metrics', 'Economic Buyer', 'Decision Criteria', 'Decision Process', 'Paper Process', 'Identify Pain', 'Champion', 'Competition'].map((item) => (
+              <div key={item} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{item[0]}</div>
+                <div className="mt-2 font-medium text-gray-900 dark:text-white">{item}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="what-is-it" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">What is MEDDPICC?</h2>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          MEDDPICC is an extended version of MEDDIC designed for complex enterprise sales. It adds two crucial components to the original framework: Paper Process and Competition. This comprehensive approach helps sales teams navigate high-value deals with multiple stakeholders, procurement processes, and competitive landscapes.
+        </div>
+        
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
+          <Image
+            src={metadata.images.overview}
+            alt="MEDDPICC framework overview"
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        
+        <div className="text-gray-700 dark:text-gray-300">
+          The framework provides a systematic approach to enterprise sales qualification, ensuring no critical aspect of the deal is overlooked, from initial metrics to final procurement processes.
+        </div>
+      </div>
+      
+      <div id="history" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">History & Origin</h2>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          MEDDPICC evolved among enterprise sales teams in the late 1990s and 2000s as an extension of MEDDIC. It was developed to address the increasing complexity of enterprise sales cycles and reduce late-stage surprises.
+        </div>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          Unlike MEDDIC, which has a clear inventor, MEDDPICC emerged organically from sales practitioners who needed to account for additional factors in complex deals. It's particularly valuable for high-value transactions where legal/procurement hurdles and competition play significant roles.
+        </div>
+        <div className="text-gray-700 dark:text-gray-300">
+          The framework gained popularity in enterprise sales environments where traditional qualification methods proved insufficient for navigating complex procurement processes and competitive landscapes.
+        </div>
+      </div>
+
+      <div id="acronym" className="relative mb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl z-0" />
+        <div className="relative z-10 p-8">
+          <h2 className="text-2xl font-bold mb-6 text-center">The MEDDPICC Acronym Explained</h2>
+          
+          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+            <Image
+              src={metadata.images.components}
+              alt="MEDDPICC components visualization"
+              fill
+              className="object-cover rounded-lg"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">M - Metrics</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Quantifiable outcomes the prospect cares about. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What are the measurable business outcomes?</li>
+                  <li>How will success be quantified?</li>
+                  <li>What are the key performance indicators?</li>
+                  <li>How will ROI be measured?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-3">E - Economic Buyer</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The person with final approval authority. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Who has the final budget authority?</li>
+                  <li>What is their decision-making style?</li>
+                  <li>How do they evaluate investments?</li>
+                  <li>What are their key concerns?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">D - Decision Criteria</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                How the decision will be judged. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What are the evaluation criteria?</li>
+                  <li>How will vendors be compared?</li>
+                  <li>What are the must-have features?</li>
+                  <li>What are the deal-breakers?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-amber-600 dark:text-amber-400 mb-3">D - Decision Process</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                How the decision will be made. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What are the key milestones?</li>
+                  <li>Who is involved in each step?</li>
+                  <li>What is the timeline?</li>
+                  <li>What are the approval steps?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-red-600 dark:text-red-400 mb-3">P - Paper Process</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The formal process to finalize the purchase. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-red-50 dark:bg-red-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What are the procurement requirements?</li>
+                  <li>What legal reviews are needed?</li>
+                  <li>What compliance checks are required?</li>
+                  <li>What is the contract approval process?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-3">I - Identify Pain</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The pain points driving the deal. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What are the key business challenges?</li>
+                  <li>What are the consequences of inaction?</li>
+                  <li>How does this impact the organization?</li>
+                  <li>What is the cost of the current situation?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-pink-600 dark:text-pink-400 mb-3">C - Champion</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Your internal advocate. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-pink-50 dark:bg-pink-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Who is your internal advocate?</li>
+                  <li>What is their influence level?</li>
+                  <li>How can they help move the deal forward?</li>
+                  <li>What support do they need?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-teal-600 dark:text-teal-400 mb-3">C - Competition</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Who and what you're competing against. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-teal-50 dark:bg-teal-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Who are the direct competitors?</li>
+                  <li>What are the alternative solutions?</li>
+                  <li>How do you differentiate?</li>
+                  <li>What is your competitive strategy?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="example">
+        <h2 className="text-2xl font-bold mb-6">MEDDPICC in Action: Real-World Example</h2>
+
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md my-8">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Enterprise Software Company Selling ERP Solution</h3>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="bg-gray-100 dark:bg-gray-700">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Component</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Details</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Sales Strategy</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600 dark:text-blue-400">Metrics</td>
+                  <td className="px-6 py-4">30% reduction in operational costs, 50% faster reporting</td>
+                  <td className="px-6 py-4">Build ROI calculator and case studies</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600 dark:text-purple-400">Economic Buyer</td>
+                  <td className="px-6 py-4">CFO with final approval authority</td>
+                  <td className="px-6 py-4">Prepare financial impact analysis</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600 dark:text-green-400">Decision Criteria</td>
+                  <td className="px-6 py-4">Security, scalability, integration capabilities</td>
+                  <td className="px-6 py-4">Focus on enterprise-grade features</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-600 dark:text-amber-400">Decision Process</td>
+                  <td className="px-6 py-4">6-month evaluation, multiple stakeholder reviews</td>
+                  <td className="px-6 py-4">Create detailed project timeline</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-red-600 dark:text-red-400">Paper Process</td>
+                  <td className="px-6 py-4">Security review, legal approval, board sign-off</td>
+                  <td className="px-6 py-4">Prepare security documentation early</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-indigo-600 dark:text-indigo-400">Identify Pain</td>
+                  <td className="px-6 py-4">Manual processes causing delays and errors</td>
+                  <td className="px-6 py-4">Quantify cost of current inefficiencies</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-pink-600 dark:text-pink-400">Champion</td>
+                  <td className="px-6 py-4">IT Director with strong influence</td>
+                  <td className="px-6 py-4">Provide sales enablement materials</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-teal-600 dark:text-teal-400">Competition</td>
+                  <td className="px-6 py-4">Incumbent vendor and two competitors</td>
+                  <td className="px-6 py-4">Develop competitive battle cards</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <p className="font-semibold text-green-700 dark:text-green-400">Strategic Approach:</p>
+            <div className="text-gray-700 dark:text-gray-300">
+              With comprehensive MEDDPICC qualification, the sales team can develop a targeted strategy. They'll focus on demonstrating clear ROI metrics, engaging the CFO with financial impact analysis, addressing all decision criteria, managing the complex evaluation process, preparing for the formal procurement steps, quantifying the pain points, leveraging their champion effectively, and developing a strong competitive strategy.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tradeoffs" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Trade-Offs & Considerations</h2>
+        
+        <div className="space-y-4">
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Comprehensive coverage</span> of all aspects of complex enterprise sales</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Reduces late-stage surprises</span> by addressing procurement and competition early</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Complex and time-consuming</span> to implement for all deals</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Overkill for simple deals</span> and can slow down the sales process</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-yellow-600 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Requires significant training</span> and discipline to implement effectively</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="when-to-use" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">When to Use MEDDPICC</h2>
+        
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          MEDDPICC is most effective for complex enterprise sales with long sales cycles, multiple stakeholders, and significant procurement processes. It's particularly valuable when selling high-value solutions that require board approval or face strong competition.
+        </div>
+        
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
+          <Image
+            src={metadata.images.scenarios}
+            alt="MEDDPICC application scenarios"
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        
+        <div className="text-gray-700 dark:text-gray-300">
+          Consider using MEDDPICC when dealing with enterprise customers, government contracts, or any situation where the sales process involves multiple approval layers, legal reviews, and competitive bidding. For simpler sales cycles, a lighter framework like MEDDIC might be more appropriate.
+        </div>
+      </div>
+
+      <div id="summary">
+        <h2 className="text-2xl font-bold mb-6">Summary</h2>
+
+        <div className="bg-gradient-to-r from-blue-50 to-white dark:from-blue-900/10 dark:to-gray-800 rounded-xl p-8 my-8 shadow-sm">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h3>
+          
+          <ul className="mt-6 space-y-3">
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>MEDDPICC is an evolution of MEDDIC, adding Paper Process and Competition components for complex enterprise sales.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>The framework provides comprehensive coverage of all aspects of complex sales, from initial metrics to final procurement processes.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>MEDDPICC is particularly effective for high-value deals with long sales cycles, multiple stakeholders, and significant procurement processes.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>The framework requires significant training and discipline to implement effectively, and may be overkill for simpler sales cycles.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>When implemented correctly, MEDDPICC can significantly reduce late-stage surprises and improve win rates in complex deals.</span>
+            </li>
+          </ul>
+          
+          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="text-gray-700 dark:text-gray-300">
+              By effectively implementing MEDDPICC qualification, sales teams can navigate complex enterprise sales with confidence, ensuring all critical aspects of the deal are addressed and reducing the risk of late-stage surprises.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="other-frameworks" className="mt-12 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Explore Other Qualification Frameworks</h3>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <a href="/resources/frameworks/qualification/meddic" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-purple-600 dark:text-purple-400">MEDDIC</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Enterprise complex sales framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification/bant" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-amber-600 dark:text-amber-400">BANT</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Classic sales qualification approach</p>
+          </a>
+          <a href="/resources/frameworks/qualification" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-indigo-600 dark:text-indigo-400">View All</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Compare all qualification frameworks</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div className="hidden lg:block mt-24">
+      <ContentNavigation sections={sections} />
+    </div>
+  </div>
+
+  <div className="lg:hidden mt-12">
+    <ContentNavigation sections={sections} />
+  </div> 
+</div> 

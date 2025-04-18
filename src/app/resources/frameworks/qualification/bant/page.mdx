@@ -1,0 +1,411 @@
+import { ContentNavigation } from '@/components/ContentNavigation';
+import { sections } from '../components/sections';
+import Image from 'next/image';
+
+export const metadata = {
+  title: 'BANT Sales Qualification Framework',
+  description: 'Learn how the BANT framework helps qualify sales opportunities by assessing Budget, Authority, Need, and Timeline.',
+  images: {
+    hero: '/images/meddic.png',
+    overview: '/images/meddic.png',
+    components: '/images/meddic.png',
+    scenarios: '/images/meddic.png'
+  }
+};
+
+<div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+    <div className="lg:col-span-3">
+      {/* <div className="relative h-[400px] w-full mb-12 rounded-xl overflow-hidden" style={{ position: 'relative', zIndex: 0 }}>
+        <Image
+          src={metadata.images.hero}
+          alt="BANT Framework - Budget, Authority, Need, Timeline"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end">
+          <div className="p-8 text-white">
+            <h1 className="text-4xl font-bold mb-4">BANT Framework</h1>
+            <p className="text-xl text-gray-200">A classic sales qualification framework for evaluating opportunities based on Budget, Authority, Need, and Timeline.</p>
+          </div>
+        </div>
+      </div> */}
+
+      <div id="overview">
+        # BANT Framework
+
+        <div className="bg-gradient-to-r from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/10 p-6 rounded-xl mb-10 mt-4">
+          <div className="grid md:grid-cols-4 gap-4 text-center">
+            {['Budget', 'Authority', 'Need', 'Timeline'].map((item) => (
+              <div key={item} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{item[0]}</div>
+                <div className="mt-2 font-medium text-gray-900 dark:text-white">{item}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="what-is-it" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">What is BANT?</h2>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          BANT is a classic sales qualification framework that helps sales teams evaluate opportunities based on four key criteria: Budget, Authority, Need, and Timeline. Developed by IBM in the 1950s, it provides a systematic approach to determine if a prospect is worth pursuing.
+        </div>
+        
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
+          <Image
+            src={metadata.images.overview}
+            alt="BANT framework overview"
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        
+        <div className="text-gray-700 dark:text-gray-300">
+          The framework brings clarity and structure to the qualification process, helping sales professionals focus their efforts on opportunities with the highest likelihood of closing.
+        </div>
+      </div>
+      
+      <div id="history" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">History & Origin</h2>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          BANT was originally developed by IBM in the 1950s as a way to qualify sales leads and determine which opportunities were worth pursuing. The framework was created to help salespeople efficiently prioritize leads and optimize their time.
+        </div>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          As one of the oldest and most widely recognized sales qualification frameworks, BANT has been taught to generations of sales professionals. While it has been criticized in recent years for being too seller-centric, it remains a foundational approach that has influenced many other qualification methodologies.
+        </div>
+        <div className="text-gray-700 dark:text-gray-300">
+          IBM made the framework publicly available in the 1960s, and it quickly became a standard practice in enterprise sales. The simplicity and clarity of the BANT approach contributed to its widespread adoption across industries.
+        </div>
+      </div>
+
+      <div id="acronym" className="relative mb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl z-0" />
+        <div className="relative z-10 p-8">
+          <h2 className="text-2xl font-bold mb-6 text-center">The BANT Acronym Explained</h2>
+          
+          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+            <Image
+              src={metadata.images.components}
+              alt="BANT components visualization"
+              fill
+              className="object-cover rounded-lg"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">B - Budget</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The financial resources available for the purchase. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Does the prospect have an allocated budget?</li>
+                  <li>What is their typical spending on similar solutions?</li>
+                  <li>Who controls the budget?</li>
+                  <li>Is there flexibility in their budget?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-3">A - Authority</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The decision-making power within the organization. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Who will make the final purchase decision?</li>
+                  <li>How does the decision-making process work?</li>
+                  <li>Are there multiple stakeholders involved?</li>
+                  <li>What is the approval chain?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">N - Need</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The business problems or challenges to be solved. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What challenges is the prospect facing?</li>
+                  <li>How urgent or significant is this problem?</li>
+                  <li>What happens if they don't solve this problem?</li>
+                  <li>How well does your solution address their needs?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-amber-600 dark:text-amber-400 mb-3">T - Timeline</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The expected timeframe for implementation. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>When does the prospect need a solution?</li>
+                  <li>Are there any events or deadlines driving the timeline?</li>
+                  <li>What is their implementation process?</li>
+                  <li>Are there any obstacles that might delay the decision?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="example">
+        <h2 className="text-2xl font-bold mb-6">BANT in Action: Real-World Example</h2>
+
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md my-8">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">SaaS Company Selling Marketing Automation Software</h3>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="bg-gray-100 dark:bg-gray-700">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Component</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Details</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Sales Strategy</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600 dark:text-blue-400">Budget</td>
+                  <td className="px-6 py-4">$50,000 allocated for marketing technology improvements this fiscal year</td>
+                  <td className="px-6 py-4">Align pricing with available budget and demonstrate ROI</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600 dark:text-purple-400">Authority</td>
+                  <td className="px-6 py-4">Marketing Director with approval up to $25,000<br />VP approval needed for larger purchases</td>
+                  <td className="px-6 py-4">Include VP in next demonstration and prepare executive briefing</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600 dark:text-green-400">Need</td>
+                  <td className="px-6 py-4">20+ hours weekly spent on manual email campaigns<br />Delays and missed opportunities</td>
+                  <td className="px-6 py-4">Focus on automation benefits and time savings</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-600 dark:text-amber-400">Timeline</td>
+                  <td className="px-6 py-4">Need solution before Q3 product launch (2 months away)</td>
+                  <td className="px-6 py-4">Accelerate sales process and highlight quick implementation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <p className="font-semibold text-green-700 dark:text-green-400">Strategic Approach:</p>
+            <div className="text-gray-700 dark:text-gray-300">
+              With comprehensive BANT qualification, the sales rep can confidently build a targeted strategy. They'll focus on demonstrating ROI within the available budget, ensuring both the Marketing Director and VP are engaged in the process, highlighting the solution's ability to address the urgent need for automation, and accelerating the sales process to meet the Q3 deadline.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tradeoffs" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Trade-Offs & Considerations</h2>
+        
+        <div className="space-y-4">
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Simple and memorable</span> framework that's easy to teach and apply</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Efficient qualification</span> helps quickly identify promising opportunities</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Seller-centric approach</span> may not align with modern buyer-centric selling</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Rigid structure</span> may not work well for consultative selling approaches</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-yellow-600 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Modern adaptations</span> like ANUM or BANT+ may be more appropriate for complex sales</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="when-to-use" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">When to Use BANT</h2>
+        
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          BANT works best in scenarios where you need a quick, straightforward way to qualify opportunities. It's particularly effective for transactional sales with shorter sales cycles and when selling established products with clear market positioning.
+        </div>
+        
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
+          <Image
+            src={metadata.images.scenarios}
+            alt="BANT application scenarios"
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        
+        <div className="text-gray-700 dark:text-gray-300">
+          Consider using BANT when resources are limited and prioritization is crucial, or for initial qualification of a large volume of leads. For more complex sales cycles, you might want to complement BANT with other qualification approaches.
+        </div>
+      </div>
+
+      <div id="variations">
+        <h2 className="text-2xl font-bold mb-6">BANT Variations</h2>
+
+        <div className="overflow-x-auto mb-12">
+          <table className="min-w-full bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+            <thead className="bg-blue-100 dark:bg-blue-900/30">
+              <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wider">Variation</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wider">Description</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wider">Best For</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+              <tr>
+                <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900 dark:text-white">ANUM</td>
+                <td className="px-6 py-4">
+                  Authority, Need, Urgency, Money - Prioritizes authority and need before budget considerations
+                </td>
+                <td className="px-6 py-4">More buyer-centric qualification approach</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900 dark:text-white">BANT+</td>
+                <td className="px-6 py-4">
+                  Adds additional criteria like fit, competition, or implementation concerns
+                </td>
+                <td className="px-6 py-4">More complex sales scenarios</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900 dark:text-white">Flexible BANT</td>
+                <td className="px-6 py-4">
+                  Applies the criteria as guidelines rather than rigid qualifiers
+                </td>
+                <td className="px-6 py-4">Consultative selling approaches</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="summary">
+        <h2 className="text-2xl font-bold mb-6">Summary</h2>
+
+        <div className="bg-gradient-to-r from-blue-50 to-white dark:from-blue-900/10 dark:to-gray-800 rounded-xl p-8 my-8 shadow-sm">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h3>
+          
+          <ul className="mt-6 space-y-3">
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>BANT was developed by IBM in the 1950s and remains one of the most widely recognized sales qualification frameworks.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>The framework evaluates four key criteria: Budget, Authority, Need, and Timeline, providing a systematic approach to opportunity qualification.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>BANT is particularly effective for transactional sales with shorter sales cycles and when selling established products with clear market positioning.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>While criticized for being seller-centric, BANT remains a foundational approach that has influenced many modern qualification methodologies.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Modern adaptations like ANUM and BANT+ address some of the framework's limitations while maintaining its core benefits.</span>
+            </li>
+          </ul>
+          
+          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="text-gray-700 dark:text-gray-300">
+              By effectively implementing BANT qualification, sales teams can focus their energy on opportunities with the highest likelihood of closing, resulting in more efficient sales processes and improved conversion rates.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="other-frameworks" className="mt-12 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Explore Other Qualification Frameworks</h3>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <a href="/resources/frameworks/qualification/meddic" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-purple-600 dark:text-purple-400">MEDDIC</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Enterprise complex sales framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification/spiced" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-amber-600 dark:text-amber-400">SPICED</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Customer-centric qualification approach</p>
+          </a>
+          <a href="/resources/frameworks/qualification" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-indigo-600 dark:text-indigo-400">View All</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Compare all qualification frameworks</p>
+          </a>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div className="hidden lg:block mt-24">
+      <ContentNavigation sections={sections} />
+    </div>
+  </div>
+
+  <div className="lg:hidden mt-12">
+    <ContentNavigation sections={sections} />
+  </div> 
+</div>

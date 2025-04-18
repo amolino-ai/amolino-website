@@ -50,3 +50,7 @@ To learn more about the technologies used in this site template, see the followi
 - [Next.js](https://nextjs.org/docs) - the official Next.js documentation
 - [Headless UI](https://headlessui.dev) - the official Headless UI documentation
 - [Sanity](https://www.sanity.io) - the Sanity website
+
+
+https://chatgpt.com/share/67fec9c5-b670-8011-ac44-48a1c5bb4849
+https://www.perplexity.ai/search/things-like-bant-meddic-spiced-O_s3COKjTG.g6QRM25R1oA

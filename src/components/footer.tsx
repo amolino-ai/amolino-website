@@ -52,21 +52,24 @@ function Sitemap() {
       <div>
         <SitemapHeading>Learn</SitemapHeading>
         <SitemapLinks>
-          
           <SitemapLink href="/learn/amolino-vs-hubspot">AmolinoAI vs HubSpot</SitemapLink>
-
           {/* <SitemapLink href="#">Analysis</SitemapLink>
           <SitemapLink href="#">API</SitemapLink> */}
         </SitemapLinks>
       </div>
       <div>
+        <SitemapHeading>Resources</SitemapHeading>
+        <SitemapLinks>
+          <SitemapLink href="/resources/frameworks/qualification">Sales Qualification Frameworks</SitemapLink>
+        </SitemapLinks>
+      </div>
+      <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-        <SitemapLink href="/pricing">Pricing</SitemapLink>
+          <SitemapLink href="/pricing">Pricing</SitemapLink>
           <SitemapLink href="/blog">Blog</SitemapLink>
           <SitemapLink href="/company">About Us</SitemapLink>
           {/* <SitemapLink href="/help">Help center</SitemapLink> */}
-
         </SitemapLinks>
       </div>
       <div>

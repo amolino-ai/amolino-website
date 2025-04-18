@@ -1,0 +1,426 @@
+import { ContentNavigation } from '@/components/ContentNavigation';
+import { sections } from '../components/sections';
+import Image from 'next/image';
+
+export const metadata = {
+  title: 'GPCTBA/C&I Sales Qualification Framework',
+  description: 'Learn how the GPCTBA/C&I framework helps qualify sales opportunities through Goals, Plans, Challenges, Timeline, Budget, Authority, and Consequences & Implications.',
+  images: {
+    hero: '/images/meddic.png',
+    overview: '/images/meddic.png',
+    components: '/images/meddic.png',
+    scenarios: '/images/meddic.png'
+  }
+};
+
+<div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+    <div className="lg:col-span-3">
+      <div id="overview">
+        # GPCTBA/C&I Framework
+
+        <div className="bg-gradient-to-r from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/10 p-6 rounded-xl mb-10 mt-4">
+          <div className="grid md:grid-cols-4 gap-4 text-center">
+            {['Goals', 'Plans', 'Challenges', 'Timeline', 'Budget', 'Authority', 'Consequences', 'Implications'].map((item) => (
+              <div key={item} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{item[0]}</div>
+                <div className="mt-2 font-medium text-gray-900 dark:text-white">{item}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="what-is-it" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">What is GPCTBA/C&I?</h2>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          GPCTBA/C&I is a comprehensive sales qualification framework developed by HubSpot as part of their inbound sales methodology. It stands for Goals, Plans, Challenges, Timeline, Budget, Authority, and Consequences & Implications. This framework represents a shift from traditional qualification methods like BANT, focusing instead on a more consultative, buyer-centric approach.
+        </div>
+        
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
+          <Image
+            src={metadata.images.overview}
+            alt="GPCTBA/C&I framework overview"
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        
+        <div className="text-gray-700 dark:text-gray-300">
+          The framework provides a systematic approach to understanding a prospect's needs, challenges, and motivations, helping sales professionals act as trusted advisors rather than just vendors.
+        </div>
+      </div>
+      
+      <div id="history" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">History & Origin</h2>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          GPCTBA/C&I was developed by HubSpot in the 2010s as part of their inbound sales methodology. As HubSpot championed inbound marketing and sales, they found that traditional qualification methods like BANT didn't fit the consultative approach needed for inbound leads.
+        </div>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          Initially introduced as GPCT (Goals, Plans, Challenges, Timeline), the framework was later extended to GPCTBA/C&I to include Budget, Authority, and the crucial elements of Consequences and Implications. This evolution was driven by the need to better understand and qualify inbound leads who often needed help articulating their goals and challenges.
+        </div>
+        <div className="text-gray-700 dark:text-gray-300">
+          The framework gained prominence through HubSpot's sales blogs and training content, notably in a popular post titled "BANT Isn't Enough Anymore" by Pete Caputa in 2017. It represents a significant shift from traditional qualification methods, focusing on a more consultative, buyer-centric approach.
+        </div>
+      </div>
+
+      <div id="acronym" className="relative mb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl z-0" />
+        <div className="relative z-10 p-8">
+          <h2 className="text-2xl font-bold mb-6 text-center">The GPCTBA/C&I Acronym Explained</h2>
+          
+          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+            <Image
+              src={metadata.images.components}
+              alt="GPCTBA/C&I components visualization"
+              fill
+              className="object-cover rounded-lg"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">G - Goals</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The objectives the prospect aims to achieve. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What are your primary goals for this year?</li>
+                  <li>What metrics are you responsible for?</li>
+                  <li>Are these goals specific and quantifiable?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-3">P - Plans</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The prospect's current strategy to reach their goals. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>How are you planning to achieve those goals?</li>
+                  <li>What initiatives are currently underway?</li>
+                  <li>What resources are allocated to this plan?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">C - Challenges</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Obstacles preventing goal achievement. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What challenges do you anticipate?</li>
+                  <li>What's holding you back from reaching goals?</li>
+                  <li>How are current challenges impacting progress?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-amber-600 dark:text-amber-400 mb-3">T - Timeline</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                The timeframe for goal achievement. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>When do you need to achieve these goals?</li>
+                  <li>Are there any critical deadlines?</li>
+                  <li>What's driving the timeline?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-red-600 dark:text-red-400 mb-3">B - Budget</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Financial resources available. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-red-50 dark:bg-red-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Have you allocated funds for this initiative?</li>
+                  <li>What's the cost of not achieving goals?</li>
+                  <li>How does that compare to potential investment?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-3">A - Authority</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Decision-making power structure. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Who is involved in the decision?</li>
+                  <li>Who has final approval authority?</li>
+                  <li>What's the approval process?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-pink-600 dark:text-pink-400 mb-3">C - Consequences</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Negative outcomes of inaction. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-pink-50 dark:bg-pink-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What happens if goals aren't met?</li>
+                  <li>What are the business impacts?</li>
+                  <li>What are the personal consequences?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-teal-600 dark:text-teal-400 mb-3">I - Implications</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Positive outcomes of success. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-teal-50 dark:bg-teal-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What happens if goals are achieved?</li>
+                  <li>What are the business benefits?</li>
+                  <li>What are the personal rewards?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="example">
+        <h2 className="text-2xl font-bold mb-6">GPCTBA/C&I in Action: Real-World Example</h2>
+
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md my-8">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">SaaS Company Selling Marketing Automation Software</h3>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="bg-gray-100 dark:bg-gray-700">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Component</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Details</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Sales Strategy</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600 dark:text-blue-400">Goals</td>
+                  <td className="px-6 py-4">Increase marketing-qualified leads (MQLs) by 50% this year</td>
+                  <td className="px-6 py-4">Focus on lead generation capabilities and ROI</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600 dark:text-purple-400">Plans</td>
+                  <td className="px-6 py-4">Double content output, run more ads, improve email nurturing</td>
+                  <td className="px-6 py-4">Showcase automation and content management features</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600 dark:text-green-400">Challenges</td>
+                  <td className="px-6 py-4">Small team stretched thin, rudimentary automation, rising ad costs</td>
+                  <td className="px-6 py-4">Highlight efficiency gains and cost optimization</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-600 dark:text-amber-400">Timeline</td>
+                  <td className="px-6 py-4">Need upward trend in MQLs within 6 months</td>
+                  <td className="px-6 py-4">Emphasize quick implementation and time-to-value</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-red-600 dark:text-red-400">Budget</td>
+                  <td className="px-6 py-4">Discretionary funds available, can make case for more</td>
+                  <td className="px-6 py-4">Build ROI case and offer flexible pricing options</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-indigo-600 dark:text-indigo-400">Authority</td>
+                  <td className="px-6 py-4">VP can decide up to $20k/year, needs CFO approval above</td>
+                  <td className="px-6 py-4">Prepare executive briefing and ROI documentation</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-pink-600 dark:text-pink-400">Consequences</td>
+                  <td className="px-6 py-4">Sales pipeline struggles, potential budget cuts, team impact</td>
+                  <td className="px-6 py-4">Reinforce urgency and risk of inaction</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-teal-600 dark:text-teal-400">Implications</td>
+                  <td className="px-6 py-4">30% revenue growth, team expansion, promotion potential</td>
+                  <td className="px-6 py-4">Paint vision of success and career advancement</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <p className="font-semibold text-green-700 dark:text-green-400">Strategic Approach:</p>
+            <div className="text-gray-700 dark:text-gray-300">
+              With comprehensive GPCTBA/C&I qualification, the sales rep can build a targeted strategy. They'll focus on demonstrating how their solution can automate nurturing, free up the team for content creation, and generate the needed MQL lift within the timeframe. They can propose a package within the VP's spending authority or prepare ROI data for CFO approval. The rep will continuously reinforce both the negative consequences of inaction and positive implications of success to maintain urgency and motivation throughout the sales process.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tradeoffs" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Trade-Offs & Considerations</h2>
+        
+        <div className="space-y-4">
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Comprehensive qualification</span> provides deep understanding of prospect needs and motivations</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Buyer-centric approach</span> aligns with modern consultative selling practices</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Complex framework</span> requires significant training and practice to master</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Time-intensive</span> requires longer discovery calls and multiple interactions</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-yellow-600 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Best for complex sales</span> may be overkill for simple, transactional deals</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="when-to-use" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">When to Use GPCTBA/C&I</h2>
+        
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          GPCTBA/C&I is particularly effective in complex sales scenarios where deep understanding of the prospect's needs and motivations is crucial. It works best in consultative selling environments, especially when dealing with inbound leads who may need help articulating their goals and challenges.
+        </div>
+        
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
+          <Image
+            src={metadata.images.scenarios}
+            alt="GPCTBA/C&I application scenarios"
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        
+        <div className="text-gray-700 dark:text-gray-300">
+          Consider using GPCTBA/C&I when you need to build a strong business case, when the sales cycle is longer and more complex, or when you're dealing with high-value opportunities where thorough qualification is worth the investment of time and resources.
+        </div>
+      </div>
+
+      <div id="summary">
+        <h2 className="text-2xl font-bold mb-6">Summary</h2>
+
+        <div className="bg-gradient-to-r from-blue-50 to-white dark:from-blue-900/10 dark:to-gray-800 rounded-xl p-8 my-8 shadow-sm">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h3>
+          
+          <ul className="mt-6 space-y-3">
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>GPCTBA/C&I was developed by HubSpot in the 2010s as part of their inbound sales methodology.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>The framework evaluates eight key criteria: Goals, Plans, Challenges, Timeline, Budget, Authority, and Consequences & Implications.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>GPCTBA/C&I is particularly effective for complex sales cycles and consultative selling approaches.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>The framework requires significant training and practice to master, but provides deep insight into prospect needs.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>When implemented effectively, GPCTBA/C&I helps sales teams build trust and create highly aligned solutions.</span>
+            </li>
+          </ul>
+          
+          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="text-gray-700 dark:text-gray-300">
+              By effectively implementing GPCTBA/C&I qualification, sales teams can develop a deep understanding of their prospects' needs and motivations, leading to more successful sales outcomes and stronger customer relationships.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="other-frameworks" className="mt-12 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Explore Other Qualification Frameworks</h3>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <a href="/resources/frameworks/qualification/bant" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-blue-600 dark:text-blue-400">BANT</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Classic sales qualification framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification/meddic" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-purple-600 dark:text-purple-400">MEDDIC</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Enterprise complex sales framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-indigo-600 dark:text-indigo-400">View All</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Compare all qualification frameworks</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div className="hidden lg:block mt-24">
+      <ContentNavigation sections={sections} />
+    </div>
+  </div>
+
+  <div className="lg:hidden mt-12">
+    <ContentNavigation sections={sections} />
+  </div> 
+</div> 

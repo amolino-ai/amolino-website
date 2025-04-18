@@ -9,6 +9,7 @@ import { Inter, Lexend, JetBrains_Mono } from 'next/font/google'
 import { Container } from '@/components/container'
 import { GradientBackground } from '@/components/gradient'
 import '@/styles/tailwind.css'
+import '@mantine/core/styles.css'
 
 // Font configurations
 const inter = Inter({

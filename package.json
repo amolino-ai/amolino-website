@@ -12,9 +12,12 @@
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.18.1",
+    "@emotion/react": "^11.14.0",
     "@headlessui/react": "^2.1.1",
     "@heroicons/react": "^2.1.4",
     "@hookform/resolvers": "^5.0.1",
+    "@mantine/core": "^7.17.4",
+    "@mantine/hooks": "^7.17.4",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "15.2.4",

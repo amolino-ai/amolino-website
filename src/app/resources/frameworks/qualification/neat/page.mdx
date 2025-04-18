@@ -1,0 +1,354 @@
+import { ContentNavigation } from '@/components/ContentNavigation';
+import { sections } from '../components/sections';
+import Image from 'next/image';
+
+export const metadata = {
+  title: 'NEAT Sales Qualification Framework',
+  description: 'Learn how the NEAT framework helps qualify sales opportunities by assessing Needs, Economic Impact, Access to Authority, and Timeline.',
+  images: {
+    hero: '/images/meddic.png',
+    overview: '/images/meddic.png',
+    components: '/images/meddic.png',
+    scenarios: '/images/meddic.png'
+  }
+};
+
+<div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+    <div className="lg:col-span-3">
+      <div id="overview">
+        # NEAT Framework
+
+        <div className="bg-gradient-to-r from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/10 p-6 rounded-xl mb-10 mt-4">
+          <div className="grid md:grid-cols-4 gap-4 text-center">
+            {['Needs', 'Economic Impact', 'Access to Authority', 'Timeline'].map((item) => (
+              <div key={item} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{item[0]}</div>
+                <div className="mt-2 font-medium text-gray-900 dark:text-white">{item}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="what-is-it" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">What is NEAT?</h2>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          NEAT (Needs, Economic Impact, Access to Authority, Timeline) is a modern sales qualification framework developed in the mid-2010s by The Harris Consulting Group in collaboration with Sales Hacker. It was designed as a response to older methodologies like BANT, focusing on deeper needs and value rather than just surface-level criteria.
+        </div>
+        
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
+          <Image
+            src={metadata.images.overview}
+            alt="NEAT framework overview"
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        
+        <div className="text-gray-700 dark:text-gray-300">
+          The framework is designed to work in a non-linear fashion, serving as a conversational guide rather than a strict sequence of questions. This flexibility allows sales professionals to adapt their approach based on the natural flow of the conversation while ensuring all key areas are covered.
+        </div>
+      </div>
+      
+      <div id="history" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">History & Origin</h2>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          NEAT was developed in the mid-2010s by The Harris Consulting Group in collaboration with Sales Hacker. Richard Harris, a well-known sales trainer, introduced NEAT as a response to what he saw as "older, stale" methodologies like BANT and its variant ANUM.
+        </div>
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          The framework quickly gained popularity through Sales Hacker's community as a more buyer-aligned alternative to BANT. It's now commonly referenced in modern sales organizations, particularly those adopting consultative or value-based selling approaches.
+        </div>
+        <div className="text-gray-700 dark:text-gray-300">
+          NEAT's development was driven by the need for a more modern qualification approach that better suited SaaS and complex sales environments, focusing on deeper needs and value rather than just surface-level criteria.
+        </div>
+      </div>
+
+      <div id="acronym" className="relative mb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl z-0" />
+        <div className="relative z-10 p-8">
+          <h2 className="text-2xl font-bold mb-6 text-center">The NEAT Acronym Explained</h2>
+          
+          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+            <Image
+              src={metadata.images.components}
+              alt="NEAT components visualization"
+              fill
+              className="object-cover rounded-lg"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">N - Needs</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Goes beyond surface "need" to uncover core business needs or pains. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What outcome do you seek?</li>
+                  <li>What problem are you solving?</li>
+                  <li>Why does it matter?</li>
+                  <li>Who is impacted by this problem?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-3">E - Economic Impact</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Replaces budget with broader examination of value and ROI. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What's the financial impact of solving this problem?</li>
+                  <li>How will it affect your bottom line?</li>
+                  <li>What's it worth to you?</li>
+                  <li>What are the opportunity costs?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">A - Access to Authority</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Focuses on how to get to decision-makers. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Who else would be involved in this decision?</li>
+                  <li>How can we loop them in?</li>
+                  <li>Do you have the influence to champion this?</li>
+                  <li>What's the path to the economic buyer?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-amber-600 dark:text-amber-400 mb-3">T - Timeline</h3>
+              <div className="text-gray-700 dark:text-gray-300">
+                Examines the time frame or compelling event. Key questions include:
+              </div>
+              <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-900/20 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Why now and not later?</li>
+                  <li>What's the trigger for this decision?</li>
+                  <li>What's the deadline?</li>
+                  <li>What happens if we miss the timeline?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="example">
+        <h2 className="text-2xl font-bold mb-6">NEAT in Action: Real-World Example</h2>
+
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md my-8">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Cloud Infrastructure Service Sales</h3>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="bg-gray-100 dark:bg-gray-700">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Component</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Details</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Sales Strategy</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600 dark:text-blue-400">Needs</td>
+                  <td className="px-6 py-4">Systems frequently crashing under heavy load, causing downtime</td>
+                  <td className="px-6 py-4">Dig deeper into impact and root causes</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600 dark:text-purple-400">Economic Impact</td>
+                  <td className="px-6 py-4">$50k per hour in lost revenue, $2M annual impact</td>
+                  <td className="px-6 py-4">Build ROI case and quantify value</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600 dark:text-green-400">Access to Authority</td>
+                  <td className="px-6 py-4">DevOps manager as champion, needs CTO and CFO buy-in</td>
+                  <td className="px-6 py-4">Plan demo for CTO, prepare ROI for CFO</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-600 dark:text-amber-400">Timeline</td>
+                  <td className="px-6 py-4">Must solve before Black Friday traffic spikes (4 months)</td>
+                  <td className="px-6 py-4">Accelerate sales process to meet deadline</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <p className="font-semibold text-green-700 dark:text-green-400">Strategic Approach:</p>
+            <div className="text-gray-700 dark:text-gray-300">
+              With comprehensive NEAT qualification, the sales rep has identified a strong need with high economic impact, established a clear path to authority, and confirmed a compelling timeline. This well-qualified opportunity justifies focused pursuit with a clear strategy for engaging all stakeholders and demonstrating value.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tradeoffs" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Trade-Offs & Considerations</h2>
+        
+        <div className="space-y-4">
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Value-driven approach</span> that positions sales as consultative rather than transactional</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Flexible and non-linear</span> approach that adapts to natural conversation flow</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Requires skill</span> to quantify impact and guide ROI discussions</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Potentially longer discovery</span> due to deeper exploration of needs and impact</div>
+            </div>
+          </div>
+          
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-yellow-600 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Non-linear nature</span> requires keeping track of what's been covered and what hasn't</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="when-to-use" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">When to Use NEAT</h2>
+        
+        <div className="text-gray-700 dark:text-gray-300 mb-4">
+          NEAT is ideal for modern B2B sales teams, especially in tech/SaaS, that want a buyer-focused approach but still need a qualifying structure. It works particularly well for teams that prioritize solution selling and ROI discussions.
+        </div>
+        
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
+          <Image
+            src={metadata.images.scenarios}
+            alt="NEAT application scenarios"
+            fill
+            className="object-cover rounded-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        
+        <div className="text-gray-700 dark:text-gray-300">
+          The framework is especially effective for complex sales where building a strong business case and demonstrating clear ROI are crucial. It's also well-suited for teams transitioning from BANT, as it can be seen as a natural evolution of the framework.
+        </div>
+      </div>
+
+      <div id="summary">
+        <h2 className="text-2xl font-bold mb-6">Summary</h2>
+
+        <div className="bg-gradient-to-r from-blue-50 to-white dark:from-blue-900/10 dark:to-gray-800 rounded-xl p-8 my-8 shadow-sm">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h3>
+          
+          <ul className="mt-6 space-y-3">
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>NEAT was developed in the mid-2010s as a modern alternative to BANT, focusing on deeper needs and value.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>The framework evaluates four key criteria: Needs, Economic Impact, Access to Authority, and Timeline.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>NEAT is designed to work in a non-linear fashion, allowing for more natural sales conversations.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>The framework is particularly effective for complex sales where building a strong business case is crucial.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>While requiring more skill to execute effectively, NEAT can significantly improve the quality of deals in your pipeline.</span>
+            </li>
+          </ul>
+          
+          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="text-gray-700 dark:text-gray-300">
+              By effectively implementing NEAT qualification, sales teams can focus on opportunities where there's a real need, clear value, a path to decision-makers, and a compelling timeline. This approach leads to more efficient sales processes and higher conversion rates.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="other-frameworks" className="mt-12 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Explore Other Qualification Frameworks</h3>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <a href="/resources/frameworks/qualification/bant" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-blue-600 dark:text-blue-400">BANT</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Classic sales qualification framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification/meddic" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-purple-600 dark:text-purple-400">MEDDIC</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Enterprise complex sales framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-indigo-600 dark:text-indigo-400">View All</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Compare all qualification frameworks</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div className="hidden lg:block mt-24">
+      <ContentNavigation sections={sections} />
+    </div>
+  </div>
+
+  <div className="lg:hidden mt-12">
+    <ContentNavigation sections={sections} />
+  </div> 
+</div> 
