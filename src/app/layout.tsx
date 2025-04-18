@@ -1,6 +1,5 @@
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
-import { PostHogProvider } from '@/components/PostHogProvider'
 import { type Section } from '@/components/SectionProvider'
 import glob from 'fast-glob'
 import { type Metadata } from 'next'
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
   },
 }
 
-export async function layoutA({ children }: { children: React.ReactNode }) {
+export async function LayoutA({ children }: { children: React.ReactNode }) {
   let pages = await glob('**/*.mdx', { cwd: 'src/app' })
   let allSectionsEntries = (await Promise.all(
     pages.map(async (filename) => [
@@ -46,6 +45,7 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
     ]),
   )) as Array<[string, Array<Section>]>
   let allSections = Object.fromEntries(allSectionsEntries)
+
   return (
     <html 
       lang="en" 
@@ -54,7 +54,6 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
     >
       {/* <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900"> */}
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
-        <PostHogProvider>
           <Providers>
             {/* <Container> */}
               <GradientBackground />
@@ -63,12 +62,11 @@ export async function layoutA({ children }: { children: React.ReactNode }) {
               </div>
             {/* </Container> */}
           </Providers>
-        </PostHogProvider>
       </body>
     </html>
   )
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  return layoutA({ children })
+  return <LayoutA>{children}</LayoutA>
 }

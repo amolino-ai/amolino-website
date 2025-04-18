@@ -1,16 +1,27 @@
 'use client'
 
-import { useEffect } from 'react'
-import { ThemeProvider, useTheme } from 'next-themes'
 import { MantineProvider } from '@mantine/core'
+import { ThemeProvider, useTheme } from 'next-themes'
+import posthog from 'posthog-js'
+import { PostHogProvider as PHProvider } from 'posthog-js/react'
+import { useEffect } from 'react'
 
 function ThemeWatcher() {
   let { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
+    if (process.env.NEXT_PUBLIC_POSTHOG_KEY) {
+      posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
+        api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+        capture_pageview: false, // Disable automatic pageview capture, as we capture manually
+      })
+    }
+  }, [])
+
+  useEffect(() => {
     // Force light theme on initial load
     setTheme('light')
-    
+
     // Comment out or remove the system theme detection
     // let media = window.matchMedia('(prefers-color-scheme: dark)')
     // function onMediaChange() {
@@ -31,11 +42,11 @@ function ThemeWatcher() {
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" disableTransitionOnChange defaultTheme="light" forcedTheme="light">
-      <ThemeWatcher />
-      <MantineProvider>
-        {children}
-      </MantineProvider>
-    </ThemeProvider>
+    <PHProvider client={posthog}>
+      <ThemeProvider attribute="class" disableTransitionOnChange defaultTheme="light" forcedTheme="light">
+        <ThemeWatcher />
+        <MantineProvider>{children}</MantineProvider>
+      </ThemeProvider>
+    </PHProvider>
   )
 }
