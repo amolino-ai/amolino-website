@@ -1,14 +1,13 @@
 import { Providers } from '@/app/providers'
-import { Layout } from '@/components/Layout'
-import { type Section } from '@/components/SectionProvider'
-import glob from 'fast-glob'
-import { type Metadata } from 'next'
-import { Inter, Lexend, JetBrains_Mono } from 'next/font/google'
-
-import { Container } from '@/components/container'
 import { GradientBackground } from '@/components/gradient'
+import { Layout } from '@/components/Layout'
+import { PostHogProvider } from '@/components/PostHogProvider'
+import { type Section } from '@/components/SectionProvider'
 import '@/styles/tailwind.css'
 import '@mantine/core/styles.css'
+import glob from 'fast-glob'
+import { type Metadata } from 'next'
+import { Inter, JetBrains_Mono, Lexend } from 'next/font/google'
 
 // Font configurations
 const inter = Inter({
@@ -47,21 +46,21 @@ export async function LayoutA({ children }: { children: React.ReactNode }) {
   let allSections = Object.fromEntries(allSectionsEntries)
 
   return (
-    <html 
-      lang="en" 
-      className={`h-full ${inter.variable} ${lexend.variable} ${jetbrainsMono.variable}`} 
+    <html
+      lang="en"
+      className={`h-full ${inter.variable} ${lexend.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       {/* <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900"> */}
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
+        <PostHogProvider>
           <Providers>
-            {/* <Container> */}
-              <GradientBackground />
-              <div className="w-full">
-                <Layout allSections={allSections}>{children}</Layout>
-              </div>
-            {/* </Container> */}
+            <GradientBackground />
+            <div className="w-full">
+              <Layout allSections={allSections}>{children}</Layout>
+            </div>
           </Providers>
+        </PostHogProvider>
       </body>
     </html>
   )
