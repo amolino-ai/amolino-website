@@ -11,11 +11,14 @@ export function Hero() {
       <Container className="relative">
         <Navbar />
         <div className="pt-1 pb-24 sm:pt-24 sm:pb-32 md:pt-24 md:pb-48">
+          <p className="text-lg font-medium text-gray-950/75 mb-4">
+            Quarter‑Ends without Pipeline Panic
+          </p>
           <h1 className="font-display text-5xl/[1.1] font-semibold tracking-normal text-balance text-gray-950 drop-shadow-sm sm:text-6xl/[1.05] md:text-6xl/[1.05]">
             The AI Platform for Sales Forecasting, Pipeline Visibility, and Deal Execution.
           </h1>
           <p className="mt-8 max-w-3xl text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Amolino gives sales leaders a real-time command center—spot risk before it snowballs, improve forecast
+            Deal-level telemetry —spot risk before you lose a deal, improve forecast
             accuracy, and guide every rep to close faster.
           </p>
 
