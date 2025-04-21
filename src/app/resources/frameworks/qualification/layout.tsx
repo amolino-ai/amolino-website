@@ -11,8 +11,8 @@ export const metadata = {
 export default function QualificationFrameworksLayout({ children }: { children: React.ReactNode }) {
   const items = [
     { title: 'Home', href: '/' },
-    { title: 'Resources', href: '/resources' },
-    { title: 'Frameworks', href: '/resources/frameworks' },
+    { title: 'Resources', href: '/resources/frameworks/qualification' },
+    { title: 'Frameworks', href: '/resources/frameworks/qualification' },
     { title: 'Qualification', href: '/resources/frameworks/qualification' },
   ].map((item, index) => (
     <Anchor component={Link} href={item.href} key={index}>

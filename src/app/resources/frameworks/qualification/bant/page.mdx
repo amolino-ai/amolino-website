@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Learn how the BANT framework helps qualify sales opportunities by assessing Budget, Authority, Need, and Timeline.',
   images: {
     hero: '/images/meddic.png',
-    overview: '/images/meddic.png',
+    overview: '/images/frameworks/bant.png',
     components: '/images/meddic.png',
     scenarios: '/images/meddic.png'
   }
@@ -53,7 +53,7 @@ export const metadata = {
           BANT is a classic sales qualification framework that helps sales teams evaluate opportunities based on four key criteria: Budget, Authority, Need, and Timeline. Developed by IBM in the 1950s, it provides a systematic approach to determine if a prospect is worth pursuing.
         </div>
         
-        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
+        <div className="max-w-3xl mx-auto w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative" style={{ aspectRatio: '0.75' }}>
           <Image
             src={metadata.images.overview}
             alt="BANT framework overview"
@@ -86,7 +86,7 @@ export const metadata = {
         <div className="relative z-10 p-8">
           <h2 className="text-2xl font-bold mb-6 text-center">The BANT Acronym Explained</h2>
           
-          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+          {/* <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
             <Image
               src={metadata.images.components}
               alt="BANT components visualization"
@@ -94,7 +94,7 @@ export const metadata = {
               className="object-cover rounded-lg"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-          </div>
+          </div> */}
           
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
@@ -277,7 +277,7 @@ export const metadata = {
           BANT works best in scenarios where you need a quick, straightforward way to qualify opportunities. It's particularly effective for transactional sales with shorter sales cycles and when selling established products with clear market positioning.
         </div>
         
-        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
+        {/* <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
           <Image
             src={metadata.images.scenarios}
             alt="BANT application scenarios"
@@ -285,7 +285,7 @@ export const metadata = {
             className="object-cover rounded-lg"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-        </div>
+        </div> */}
         
         <div className="text-gray-700 dark:text-gray-300">
           Consider using BANT when resources are limited and prioritization is crucial, or for initial qualification of a large volume of leads. For more complex sales cycles, you might want to complement BANT with other qualification approaches.

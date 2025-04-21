@@ -7,33 +7,21 @@ export const metadata = {
   description: 'Learn how the MEDDPICC framework helps qualify complex enterprise sales opportunities by assessing Metrics, Economic Buyer, Decision Criteria, Decision Process, Paper Process, Identify Pain, Champion, and Competition.',
   images: {
     hero: '/images/frameworks/meddpicc-hero.jpg',
-    overview: '/images/frameworks/meddpicc-hero.jpg',
+    overview: '/images/frameworks/meddpicc.png',
     components: '/images/frameworks/meddpicc-hero.jpg',
     scenarios: '/images/frameworks/meddpicc-hero.jpg'
   }
+
 };
 
-<div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
+<div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-6">
   <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
     <div className="lg:col-span-3">
-      <div className="relative h-[400px] w-full mb-12 rounded-xl overflow-hidden" style={{ position: 'relative', zIndex: 0 }}>
-        <Image
-          src={metadata.images.hero}
-          alt="MEDDPICC Framework - Comprehensive Enterprise Sales Qualification"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end">
-          <div className="p-8 text-white">
-            <h1 className="text-4xl font-bold mb-4">MEDDPICC Framework</h1>
-            <p className="text-xl text-gray-200">A comprehensive enterprise sales qualification framework for complex deals with multiple stakeholders and procurement processes.</p>
-          </div>
-        </div>
-      </div>
-
+      
       <div id="overview">
         # MEDDPICC Framework
+
+        {metadata.description}
 
         <div className="bg-gradient-to-r from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/10 p-6 rounded-xl mb-10 mt-4">
           <div className="grid md:grid-cols-4 gap-4 text-center">
@@ -53,7 +41,7 @@ export const metadata = {
           MEDDPICC is an extended version of MEDDIC designed for complex enterprise sales. It adds two crucial components to the original framework: Paper Process and Competition. This comprehensive approach helps sales teams navigate high-value deals with multiple stakeholders, procurement processes, and competitive landscapes.
         </div>
         
-        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
+        <div className="max-w-3xl mx-auto h-96 w-72 bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
           <Image
             src={metadata.images.overview}
             alt="MEDDPICC framework overview"
@@ -86,7 +74,7 @@ export const metadata = {
         <div className="relative z-10 p-8">
           <h2 className="text-2xl font-bold mb-6 text-center">The MEDDPICC Acronym Explained</h2>
           
-          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+          {/* <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
             <Image
               src={metadata.images.components}
               alt="MEDDPICC components visualization"
@@ -94,7 +82,7 @@ export const metadata = {
               className="object-cover rounded-lg"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-          </div>
+          </div> */}
           
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">

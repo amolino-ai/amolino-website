@@ -4,7 +4,7 @@ export const sections = [
   { id: 'acronym', title: 'The Acronym Explained' },
   { id: 'example', title: 'Real-world Example' },
   { id: 'tradeoffs', title: 'Trade-offs & Considerations' },
-  { id: 'when-to-use', title: 'When to Use MEDDPICC' },
+  { id: 'when-to-use', title: 'When to Use it?' },
   { id: 'summary', title: 'Summary' },
   { id: 'other-frameworks', title: 'Other Frameworks' },
 ]; 

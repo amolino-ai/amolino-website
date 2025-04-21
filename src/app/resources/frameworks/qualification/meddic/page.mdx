@@ -16,31 +16,17 @@ export const metadata = {
 <div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
   <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
     <div className="lg:col-span-3">
-      {/* <div className="relative h-[400px] w-full mb-12 rounded-xl overflow-hidden" style={{ position: 'relative', zIndex: 0 }}>
-        <Image
-          src={metadata.images.hero}
-          alt="MEDDIC Framework - Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end">
-          <div className="p-8 text-white">
-            <h1 className="text-4xl font-bold mb-4">MEDDIC Framework</h1>
-            <p className="text-xl text-gray-200">A comprehensive sales qualification framework for complex B2B sales focusing on Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, and Champion.</p>
-          </div>
-        </div>
-      </div> */}
+      
 
       <div id="overview">
         # MEDDIC Framework
 
         <div className="bg-gradient-to-r from-purple-100 to-purple-50 dark:from-purple-900/30 dark:to-purple-800/10 p-6 rounded-xl mb-10 mt-4">
-          <div className="grid md:grid-cols-6 gap-4 text-center">
+          <div className="grid md:grid-cols-3 gap-6 text-center">
             {['Metrics', 'Economic Buyer', 'Decision Criteria', 'Decision Process', 'Identify Pain', 'Champion'].map((item) => (
-              <div key={item} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
-                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{item[0]}</div>
-                <div className="mt-2 font-medium text-gray-900 dark:text-white">{item.split(' ')[0]}</div>
+              <div key={item} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm transition-transform hover:scale-105">
+                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">{item[0]}</div>
+                <div className="mt-3 font-medium text-gray-900 dark:text-white">{item}</div>
               </div>
             ))}
           </div>
@@ -86,7 +72,7 @@ export const metadata = {
         <div className="relative z-10 p-8">
           <h2 className="text-2xl font-bold mb-6 text-center">The MEDDIC Acronym Explained</h2>
           
-          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+          {/* <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
             <Image
               src={metadata.images.components}
               alt="MEDDIC components visualization"
@@ -94,7 +80,7 @@ export const metadata = {
               className="object-cover rounded-lg"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-          </div>
+          </div> */}
           
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
@@ -287,7 +273,7 @@ export const metadata = {
           MEDDIC works best in complex B2B sales environments with multiple stakeholders, formal decision processes, and high-value deals. It's particularly effective for enterprise software, professional services, and other solutions requiring significant investment and organizational change.
         </div>
         
-        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
+        {/* <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
           <Image
             src={metadata.images.scenarios}
             alt="MEDDIC application scenarios"
@@ -295,7 +281,7 @@ export const metadata = {
             className="object-cover rounded-lg"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-        </div>
+        </div> */}
         
         <div className="text-gray-700 dark:text-gray-300">
           Consider using MEDDIC when selling high-value solutions that require multiple approvals, have long sales cycles, or involve significant organizational change. The framework's continuous qualification approach helps maintain deal momentum and prevent surprises throughout the sales process.
