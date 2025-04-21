@@ -36,7 +36,7 @@ function PostHogPageView() {
       if (search) {
         url += '?' + search
       }
-      console.log('Capturing pageview:', url)
+      // console.log('Capturing pageview:', url)
       posthog.capture('$pageview', { $current_url: url })
     }
   }, [pathname, searchParams, posthog])

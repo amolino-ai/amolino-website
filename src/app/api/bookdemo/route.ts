@@ -5,7 +5,7 @@ const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/T06GXC2RMBR/B071WKSP
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    console.log('Demo booking request:', body)
+    // console.log('Demo booking request:', body)
     
     // Format the message for Slack
     const message = {
