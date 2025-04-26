@@ -1,5 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
+  // we are not deploying to www. www is 308 redirected to amolino.ai
   siteUrl: process.env.SITE_URL || 'https://amolino.ai',
   generateRobotsTxt: true, // (optional)
   // Add any additional paths that aren't automatically captured
