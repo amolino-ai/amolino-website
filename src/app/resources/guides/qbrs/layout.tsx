@@ -7,8 +7,8 @@ export default function QBRGuideLayout({ children }: { children: React.ReactNode
     <>
       <Navbar />
       <main className="flex-auto">
-        <div className="flex min-h-screen">
-          <main className="flex-1 p-8">{children}</main>
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          {children}
         </div>
       </main>
     </>

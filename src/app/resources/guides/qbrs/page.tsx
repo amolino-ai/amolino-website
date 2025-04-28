@@ -1,4 +1,3 @@
-import { Container } from '@mantine/core'
 import { Prose } from '@/components/Prose'
 import type { Metadata } from 'next'
 import GuideNavigation from './GuideNavigation'
@@ -38,33 +37,31 @@ const sections = [
 
 export default function GuidePage() {
   return (
-    <Container className="mt-16 sm:mt-20">
-      <div className="mx-auto max-w-7xl">
-        <GuideHeader />
+    <div className="mt-16 sm:mt-20">
+      <GuideHeader />
 
-        <div className="mt-16 flex flex-col gap-16 lg:flex-row lg:gap-8">
-          <GuideNavigation sections={sections} />
+      <div className="mt-16 flex flex-col gap-16 lg:flex-row lg:gap-8">
+        <GuideNavigation sections={sections} />
 
-          <div className="prose dark:prose-invert lg:prose-lg max-w-none">
-            <Prose>
-              <div className="space-y-12">
-                <Introduction />
-                <TeamParticipation />
-                <Preparation />
-                <RunningQBR />
-                <PostQBR />
-                <Metrics />
-                <AskingGoodQuestions />
-                <Challenges />
-                <BestPractices />
-                <RevOpsRole />
-                <AdditionalTips />
-                <Summary />
-              </div>
-            </Prose>
-          </div>
+        <div className="prose dark:prose-invert lg:prose-lg max-w-full overflow-hidden">
+          <Prose>
+            <div className="space-y-12">
+              <Introduction />
+              <TeamParticipation />
+              <Preparation />
+              <RunningQBR />
+              <PostQBR />
+              <Metrics />
+              <AskingGoodQuestions />
+              <Challenges />
+              <BestPractices />
+              <RevOpsRole />
+              <AdditionalTips />
+              <Summary />
+            </div>
+          </Prose>
         </div>
       </div>
-    </Container>
+    </div>
   )
 }
