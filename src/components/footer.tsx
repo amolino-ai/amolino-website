@@ -60,7 +60,9 @@ function Sitemap() {
       <div>
         <SitemapHeading>Resources</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/resources/frameworks/qualification">Sales Qualification Frameworks</SitemapLink>
+            <SitemapLink href="/resources/frameworks/qualification">Sales Qualification Frameworks</SitemapLink>
+            <SitemapLink href="/resources/guides/qbrs">QBR Playbook</SitemapLink>
+
         </SitemapLinks>
       </div>
       <div>

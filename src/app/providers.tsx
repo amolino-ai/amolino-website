@@ -1,6 +1,6 @@
 'use client'
 
-import { MantineProvider } from '@mantine/core'
+import { MantineProvider, createTheme } from '@mantine/core'
 import { ThemeProvider, useTheme } from 'next-themes'
 import posthog from 'posthog-js'
 import { PostHogProvider as PHProvider } from 'posthog-js/react'
@@ -54,12 +54,16 @@ function ThemeWatcher() {
 }
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const theme = createTheme({
+    primaryColor: 'blue',
+  })
+
   return (
     <PHProvider client={posthog}>
       <ThemeProvider attribute="class" disableTransitionOnChange defaultTheme="light" forcedTheme="light">
         <ThemeWatcher />
         <PostHogPageView />
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider theme={theme}>{children}</MantineProvider>
       </ThemeProvider>
     </PHProvider>
   )
