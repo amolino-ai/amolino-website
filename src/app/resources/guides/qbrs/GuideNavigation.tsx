@@ -22,7 +22,7 @@ export default function GuideNavigation({ sections }: GuideNavigationProps) {
     <>
       {/* Mobile Menu Button */}
       <button
-        className="lg:hidden w-full text-left px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg mb-4 flex items-center justify-between"
+        className="lg:hidden w-full text-left px-4 py-2 bg-gray-50 rounded-lg mb-4 flex items-center justify-between"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
         <span className="font-medium">Table of Contents</span>

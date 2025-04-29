@@ -43,7 +43,7 @@ export default function GuidePage() {
       <div className="mt-16 flex flex-col gap-16 lg:flex-row lg:gap-8">
         <GuideNavigation sections={sections} />
 
-        <div className="prose dark:prose-invert lg:prose-lg max-w-full overflow-hidden">
+        <div className="prose lg:prose-lg max-w-full overflow-hidden">
           <Prose>
             <div className="space-y-12">
               <Introduction />

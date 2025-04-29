@@ -6,7 +6,7 @@ export default function PostQBR() {
     <section id="post-qbr" className="scroll-mt-20">
       <SectionHeading>Post-QBR Follow-up</SectionHeading>
       <div className="mt-6 py-4">
-        <p className="mb-8 text-lg text-zinc-700 dark:text-zinc-300">
+        <p className="mb-8 text-lg text-zinc-700">
           A QBR only matters if the decisions you just made actually get done. Use the checklist and
           timetable below to convert insights into measurable impact.
         </p>
@@ -14,7 +14,7 @@ export default function PostQBR() {
         <div className="space-y-12">
           {/* 0-24 Hours Section */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               0 – 24 Hours ⏱ — &quot;Golden Day&quot; Deliverables
             </h3>
             <div className="overflow-x-auto">
@@ -62,22 +62,22 @@ export default function PostQBR() {
                 </tbody>
               </Table>
             </div>
-            <p className="mt-4 text-sm text-zinc-700 dark:text-zinc-300">
+            <p className="mt-4 text-sm text-zinc-700">
               Send the package to <strong>all invitees + key absentees</strong> within 24 hours.
             </p>
           </div>
 
           {/* 1-5 Days Section */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               1 – 5 Days 🏃 — Action Kick-Off
             </h3>
             <div className="space-y-6">
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   1. Convert items to work streams
                 </h4>
-                <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+                <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                   <li>
                     Owners break big actions into tasks/epics in the team&apos;s system of record (Asana,
                     Jira, Salesforce Success Plans).
@@ -92,33 +92,33 @@ export default function PostQBR() {
                 </ul>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   2. Resource confirmation
                 </h4>
-                <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+                <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                   <li>
                     Finance & HR approve new headcount, budget shifts, tooling purchases scoped in the QBR.
                   </li>
                 </ul>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   3. Add to OKRs / scorecards
                 </h4>
-                <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+                <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                   <li>
                     Department heads include QBR actions in the next OKR update; RevOps maps them to lead KPI dashboards.
                   </li>
                 </ul>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   4. Kick-off huddles
                 </h4>
-                <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+                <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                   <li>
                     Each team hosts a 15-minute stand-up to brief ICs on new commitments and clarify expectations.
                   </li>
@@ -129,7 +129,7 @@ export default function PostQBR() {
 
           {/* Ongoing Cadence Section */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               Ongoing Cadence
             </h3>
             <div className="overflow-x-auto">
@@ -179,7 +179,7 @@ export default function PostQBR() {
 
           {/* Accountability Dashboard Section */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               Accountability Dashboard
             </h3>
             <div className="overflow-x-auto">
@@ -219,45 +219,45 @@ export default function PostQBR() {
 
           {/* Continuous-Improvement Loop Section */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               Continuous-Improvement Loop
             </h3>
             <div className="space-y-6">
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   1. Process retro (Day 7)
                 </h4>
-                <p className="text-zinc-700 dark:text-zinc-300">
+                <p className="text-zinc-700">
                   30 min meeting with facilitator + 1 rep from each function.
                 </p>
-                <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+                <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                   <li>What worked / what sucked / one change for next time.</li>
                 </ul>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   2. Template refresh
                 </h4>
-                <p className="text-zinc-700 dark:text-zinc-300">
+                <p className="text-zinc-700">
                   Update slide master & data-pull SOP based on retro.
                 </p>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   3. Data-quality sprint
                 </h4>
-                <p className="text-zinc-700 dark:text-zinc-300">
+                <p className="text-zinc-700">
                   If errors surfaced, RevOps schedules a sprint with data owners before the next quarter&apos;s freeze date.
                 </p>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   4. Recognition
                 </h4>
-                <p className="text-zinc-700 dark:text-zinc-300">
+                <p className="text-zinc-700">
                   CRO highlights &quot;Fastest Action Closed&quot; or &quot;Biggest Customer Impact&quot; in the Pulse digest to reinforce accountability culture.
                 </p>
               </div>
@@ -266,7 +266,7 @@ export default function PostQBR() {
 
           {/* Tool Stack Reference Section */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               Tool Stack Reference
             </h3>
             <div className="overflow-x-auto">
@@ -306,7 +306,7 @@ export default function PostQBR() {
 
           {/* Quick-Start Action Tracker Template Section */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               Quick-Start &quot;Action Tracker&quot; Template
             </h3>
             <div className="overflow-x-auto">
@@ -344,17 +344,17 @@ export default function PostQBR() {
                 </tbody>
               </Table>
             </div>
-            <p className="mt-4 text-sm text-zinc-700 dark:text-zinc-300">
+            <p className="mt-4 text-sm text-zinc-700">
               (Colour codes: 🟢 On Track • 🟡 At Risk • 🔴 Off Track • ✅ Done)
             </p>
           </div>
 
           {/* Metrics Palette Section */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               Metrics Palette
             </h3>
-            <p className="text-zinc-700 dark:text-zinc-300">
+            <p className="text-zinc-700">
               Below is a &quot;metrics palette&quot; your RevOps / FP&A team can pull from when building the QBR scorecard.
               Everything is grouped by <strong>owning function</strong>, shows a <strong>quick‐formula</strong>, and flags <strong>why the board cares</strong>.
               Pick ≤ 3-4 headline metrics per team for the live meeting; park the rest in the appendix.

@@ -5,7 +5,7 @@ export default function MetricsTabs() {
     <section id="metrics" className="scroll-mt-20">
     <SectionHeading>Metrics to Track</SectionHeading>
     <div className="mt-6 py-4">
-      <p className="mb-8 text-lg text-zinc-700 dark:text-zinc-300">
+      <p className="mb-8 text-lg text-zinc-700">
         Key metrics to track for each department.
       </p>
     <Tabs defaultValue="sales" variant="outline" className="mt-8 w-full" id="metrics">
@@ -21,7 +21,7 @@ export default function MetricsTabs() {
 
       {/* Sales & Revenue Ops */}
       <TabsPanel value="sales">
-        <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
+        <div className="rounded-lg border border-zinc-200 p-6">
           <div className="overflow-x-auto">
             <Table withColumnBorders withTableBorder highlightOnHover striped>
               <thead>
@@ -80,7 +80,7 @@ export default function MetricsTabs() {
 
       {/* Customer Success */}
       <TabsPanel value="cs">
-        <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
+        <div className="rounded-lg border border-zinc-200 p-6">
           <div className="overflow-x-auto">
             <Table withColumnBorders withTableBorder highlightOnHover striped>
               <thead>
@@ -139,7 +139,7 @@ export default function MetricsTabs() {
 
       {/* Marketing */}
       <TabsPanel value="marketing">
-        <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
+        <div className="rounded-lg border border-zinc-200 p-6">
           <div className="overflow-x-auto">
             <Table withColumnBorders withTableBorder highlightOnHover striped>
               <thead>
@@ -178,7 +178,7 @@ export default function MetricsTabs() {
 
       {/* Product */}
       <TabsPanel value="product">
-        <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
+        <div className="rounded-lg border border-zinc-200 p-6">
           <div className="overflow-x-auto">
             <Table withColumnBorders withTableBorder highlightOnHover striped>
               <thead>
@@ -227,7 +227,7 @@ export default function MetricsTabs() {
 
       {/* Finance */}
       <TabsPanel value="finance">
-        <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
+        <div className="rounded-lg border border-zinc-200 p-6">
           <div className="overflow-x-auto">
             <Table withColumnBorders withTableBorder highlightOnHover striped>
               <thead>
@@ -276,7 +276,7 @@ export default function MetricsTabs() {
 
       {/* Operations */}
       <TabsPanel value="ops">
-        <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
+        <div className="rounded-lg border border-zinc-200 p-6">
           <div className="overflow-x-auto">
             <Table withColumnBorders withTableBorder highlightOnHover striped>
               <thead>
@@ -315,7 +315,7 @@ export default function MetricsTabs() {
 
       {/* HR */}
       <TabsPanel value="hr">
-        <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
+        <div className="rounded-lg border border-zinc-200 p-6">
           <div className="overflow-x-auto">
             <Table withColumnBorders withTableBorder highlightOnHover striped>
               <thead>
@@ -394,7 +394,7 @@ export default function MetricsTabs() {
           </ul>
         </div>
 
-        <p className="text-zinc-700 dark:text-zinc-300">
+        <p className="text-zinc-700">
           With this menu you can assemble a lean, board-ready scorecard that surfaces the health of the business and makes every post-QBR action measurable.
         </p>
       </div>

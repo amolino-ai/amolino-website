@@ -6,7 +6,7 @@ export default function Preparation() {
     <section id="preparation" className="scroll-mt-20">
       <SectionHeading>Preparation for QBRs</SectionHeading>
       <div className="mt-6 py-4">
-        <p className="mb-8 text-lg text-zinc-700 dark:text-zinc-300">
+        <p className="mb-8 text-lg text-zinc-700">
           Well-run QBRs start weeks before anyone joins a Zoom. Use the framework below to make sure every
           team shows up ready to debate insights—not scramble for numbers.
         </p>
@@ -14,7 +14,7 @@ export default function Preparation() {
         <div className="space-y-12">
           {/* 1. Clarify Purpose, Audience & Success Criteria */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               1. Clarify Purpose, Audience & Success Criteria
             </h3>
             <div className="overflow-x-auto">
@@ -54,15 +54,15 @@ export default function Preparation() {
 
           {/* 2. Data & Insight Pipeline */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               2. Data & Insight Pipeline
             </h3>
             <div className="space-y-6">
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   1. Single source of truth
                 </h4>
-                <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+                <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                   <li>
                     Lock which dashboards or reports count as canonical (CRM, finance BI, CS platform).
                   </li>
@@ -73,11 +73,11 @@ export default function Preparation() {
                 </ul>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   2. Data hygiene sweep (T-10 → T-7)
                 </h4>
-                <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+                <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                   <li>
                     RevOps emails each team a &quot;dirty data&quot; report (e.g., open deals past close
                     date, missing ARR fields).
@@ -86,49 +86,49 @@ export default function Preparation() {
                 </ul>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   3. Core data packet (owned by RevOps / FP&A)
                 </h4>
                 <div className="space-y-4">
                   <div>
-                    <h5 className="font-medium text-zinc-900 dark:text-zinc-100">Sales:</h5>
-                    <p className="text-zinc-700 dark:text-zinc-300">
+                    <h5 className="font-medium text-zinc-900">Sales:</h5>
+                    <p className="text-zinc-700">
                       ARR, ACV, win rate, cycle length, pipeline coverage.
                     </p>
                   </div>
                   <div>
-                    <h5 className="font-medium text-zinc-900 dark:text-zinc-100">CS:</h5>
-                    <p className="text-zinc-700 dark:text-zinc-300">
+                    <h5 className="font-medium text-zinc-900">CS:</h5>
+                    <p className="text-zinc-700">
                       NRR, GRR, logo churn, at-risk ARR, NPS themes.
                     </p>
                   </div>
                   <div>
-                    <h5 className="font-medium text-zinc-900 dark:text-zinc-100">Marketing:</h5>
-                    <p className="text-zinc-700 dark:text-zinc-300">
+                    <h5 className="font-medium text-zinc-900">Marketing:</h5>
+                    <p className="text-zinc-700">
                       MQL → SQL conversion, pipeline $ sourced, CAC, CAC payback.
                     </p>
                   </div>
                   <div>
-                    <h5 className="font-medium text-zinc-900 dark:text-zinc-100">Product:</h5>
-                    <p className="text-zinc-700 dark:text-zinc-300">
+                    <h5 className="font-medium text-zinc-900">Product:</h5>
+                    <p className="text-zinc-700">
                       Release velocity, adoption %, uptime, P0 bug count.
                     </p>
                   </div>
                   <div>
-                    <h5 className="font-medium text-zinc-900 dark:text-zinc-100">Finance:</h5>
-                    <p className="text-zinc-700 dark:text-zinc-300">
+                    <h5 className="font-medium text-zinc-900">Finance:</h5>
+                    <p className="text-zinc-700">
                       Cash burn, EBITDA variance, forecast scenarios.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <h4 className="mb-4 text-lg font-medium text-zinc-900">
                   4. Insight synthesis
                 </h4>
-                <p className="text-zinc-700 dark:text-zinc-300">
+                <p className="text-zinc-700">
                   Analysts attach a one-pager for each chart: &quot;So what? / Why? / Now what?&quot;
                 </p>
               </div>
@@ -137,7 +137,7 @@ export default function Preparation() {
 
           {/* 3. Narrative & Slide-building Standards */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               3. Narrative & Slide-building Standards
             </h3>
             <div className="overflow-x-auto">
@@ -191,11 +191,11 @@ export default function Preparation() {
               </Table>
             </div>
 
-            <div className="mt-6 rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-              <h4 className="mb-4 text-lg font-medium text-zinc-900 dark:text-zinc-100">
+            <div className="mt-6 rounded-lg border border-zinc-200 p-6">
+              <h4 className="mb-4 text-lg font-medium text-zinc-900">
                 Design guard-rails
               </h4>
-              <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+              <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                 <li>16:9, dark-on-light, max 3 colours.</li>
                 <li>One big chart per slide; commentary in the notes pane.</li>
                 <li>
@@ -207,7 +207,7 @@ export default function Preparation() {
 
           {/* 4. Stakeholder Engagement Plan */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               4. Stakeholder Engagement Plan
             </h3>
             <div className="overflow-x-auto">
@@ -270,12 +270,12 @@ export default function Preparation() {
 
           {/* 5. Anticipate Questions & Objections */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               5. Anticipate Questions & Objections
             </h3>
             <div className="space-y-4">
-              <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-                <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+              <div className="rounded-lg border border-zinc-200 p-6">
+                <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                   <li>
                     <strong>Financial hawks:</strong> Variance vs. budget? Cash impact?
                   </li>
@@ -286,7 +286,7 @@ export default function Preparation() {
                     <strong>Board members:</strong> How does this quarter shift long-term strategy?
                   </li>
                 </ul>
-                <p className="mt-4 text-zinc-700 dark:text-zinc-300">
+                <p className="mt-4 text-zinc-700">
                   Prep <strong>FAQ flashcards</strong> for each likely hot seat, including backup data
                   slides.
                 </p>
@@ -296,7 +296,7 @@ export default function Preparation() {
 
           {/* 6. Logistics & Tech Check */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               6. Logistics & Tech Check
             </h3>
             <div className="overflow-x-auto">
@@ -341,11 +341,11 @@ export default function Preparation() {
 
           {/* 7. Pre-QBR Countdown */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               7. Pre-QBR Countdown (At-a-Glance)
             </h3>
-            <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-              <pre className="text-sm whitespace-pre-wrap text-zinc-700 dark:text-zinc-300">
+            <div className="rounded-lg border border-zinc-200 p-6">
+              <pre className="text-sm whitespace-pre-wrap text-zinc-700">
                 T-14 Kick-off + metric lock
                 T-10 Data freeze / hygiene fix
                 T-7 Insights drafted
@@ -361,11 +361,11 @@ export default function Preparation() {
 
           {/* 8. Red-Flag Checklist */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               8. &quot;Red-Flag&quot; Checklist
             </h3>
-            <div className="rounded-lg border border-zinc-200 p-6 dark:border-zinc-800">
-              <ul className="list-disc space-y-2 pl-6 text-zinc-700 dark:text-zinc-300">
+            <div className="rounded-lg border border-zinc-200 p-6">
+              <ul className="list-disc space-y-2 pl-6 text-zinc-700">
                 <li>
                   <strong>Slides &gt; 8 per team</strong> ⟶ scope creep.
                 </li>
@@ -385,7 +385,7 @@ export default function Preparation() {
 
           {/* 9. Success Metrics */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+            <h3 className="mb-6 text-2xl font-semibold text-zinc-800">
               9. Success Metrics for the Preparation Process
             </h3>
             <div className="overflow-x-auto">

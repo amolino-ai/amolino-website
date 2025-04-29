@@ -6,11 +6,11 @@ export default function RevOpsRole() {
     <section id="revops-role" className="scroll-mt-20">
       <SectionHeading>RevOps Role</SectionHeading>
       <div className="mt-6 py-4">
-        <p className="text-lg text-zinc-700 dark:text-zinc-300">
+        <p className="text-lg text-zinc-700">
           Revenue Operations is the neutral, data-driven function that turns a QBR from a slide parade into
           an operating decision forum.
         </p>
-        <p className="mt-4 text-lg text-zinc-700 dark:text-zinc-300">
+        <p className="mt-4 text-lg text-zinc-700">
           Think of them as: <strong>architects before the meeting, air-traffic controllers during, and project managers afterward.</strong>
         </p>
 
@@ -231,7 +231,7 @@ export default function RevOpsRole() {
           </ol>
         </div>
 
-        <p className="mt-8 text-lg text-zinc-700 dark:text-zinc-300">
+        <p className="mt-8 text-lg text-zinc-700">
           When RevOps owns these levers, the QBR evolves from quarterly reporting theater into the company&apos;s primary <strong>execution cockpit</strong>—aligning strategy, resources, and front-line reality in a single, high-impact session.
         </p>
       </div>
