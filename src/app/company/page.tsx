@@ -145,7 +145,7 @@ function Team() {
             </div>
             <h3 className="mt-4 text-lg font-semibold">Aseem Asthana</h3>
             <div className="flex items-center gap-2">
-              <p className="text-sm text-gray-600">CEO and Founder</p>
+              <p className="text-sm text-gray-600">CEO and Co-Founder</p>
               <a
                 href="https://www.linkedin.com/in/aseemasthana/"
                 target="_blank"
@@ -170,7 +170,7 @@ function Team() {
             </div>
             <h3 className="mt-4 text-lg font-semibold">Daniele Di Sarli</h3>
             <div className="flex items-center gap-2">
-              <p className="text-sm text-gray-600">Founding CTO</p>
+              <p className="text-sm text-gray-600">CTO and Co-Founder</p>
               <a
                 href="https://www.linkedin.com/in/daniele-ds/"
                 target="_blank"
