@@ -20,7 +20,7 @@ function CallToAction() {
       </p>
       <div className="mt-6">
         <Button className="w-full sm:w-auto" href="#">
-        Start your for free today
+        Start for free today
         </Button>
       </div>
     </div>
