@@ -188,6 +188,7 @@ function Team() {
         </div>
       </div>
       
+      
       <Subheading className="mt-24">Key Executives</Subheading>
       <Heading as="h3" className="mt-2">
         Leading our growth and operations.
