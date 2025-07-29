@@ -187,6 +187,35 @@ function Team() {
           </div>
         </div>
       </div>
+      
+      <Subheading className="mt-24">Key Executives</Subheading>
+      <Heading as="h3" className="mt-2">
+        Leading our growth and operations.
+      </Heading>
+      <hr className="mt-6 border-t border-gray-200" />
+      <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-col items-center text-center">
+          <div className="aspect-square w-32 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+            <img alt="Michael Segheri" src="/photos/michael-segheri.jpg" className="block size-full object-cover" />
+          </div>
+          <h3 className="mt-4 text-lg font-semibold">Michael Segheri</h3>
+          <div className="flex items-center gap-2">
+            <p className="text-sm text-gray-600">Head of Growth</p>
+            <a
+              href="https://www.linkedin.com/in/michaelseghieri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900"
+            >
+              <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+            </a>
+          </div>
+          <p className="mt-2 text-sm text-gray-600">
+            Michael brings extensive revenue and growth expertise, having previously served as CRO at Canto, VP of Commercial Sales at Lean Data, and Director of Sales at Pandora.
+          </p>
+        </div>
+      </div>
+      
       <Subheading className="mt-24">Our Advisors</Subheading>
 
       <Heading as="h3" className="mt-2">
