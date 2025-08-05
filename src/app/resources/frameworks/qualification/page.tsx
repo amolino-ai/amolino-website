@@ -76,20 +76,20 @@ const frameworks: Framework[] = [
 
 export default function QualificationFrameworks() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Container>
         <div className="py-20 md:py-32">
           {/* Header Section */}
           <div className="max-w-3xl mx-auto text-center mb-20">
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 dark:bg-blue-900/30">
-              <span className="text-sm font-medium tracking-wide text-blue-600 dark:text-blue-400">
+            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50">
+              <span className="text-sm font-medium tracking-wide text-blue-600">
                 SALES RESOURCES
               </span>
             </div>
-            <h1 className="mt-4 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h1 className="mt-4 text-5xl font-bold tracking-tight text-gray-900">
               Sales Qualification Frameworks
             </h1>
-            <p className="mt-6 text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="mt-6 text-xl text-gray-600 leading-relaxed">
               Effective qualification is essential for sales success. Explore these proven frameworks 
               to qualify opportunities and focus your efforts on the right prospects.
             </p>
@@ -104,10 +104,10 @@ export default function QualificationFrameworks() {
                 transition={{ duration: 0.2 }}
                 className={`group relative bg-gradient-to-br rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden ${
                   frameworks.indexOf(framework) % 3 === 0
-                    ? 'from-blue-50 to-white dark:from-blue-900/20 dark:to-gray-800'
+                    ? 'from-blue-50 to-white'
                     : frameworks.indexOf(framework) % 3 === 1
-                    ? 'from-purple-50 to-white dark:from-purple-900/20 dark:to-gray-800'
-                    : 'from-green-50 to-white dark:from-green-900/20 dark:to-gray-800'
+                    ? 'from-purple-50 to-white'
+                    : 'from-green-50 to-white'
                 }`}
               >
                 {/* <div className="relative h-48 w-full overflow-hidden">
@@ -122,11 +122,11 @@ export default function QualificationFrameworks() {
                 </div> */}
                 
                 <div className="relative p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {framework.name}
                   </h3>
                   
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">
+                  <p className="text-gray-600 mb-6 line-clamp-3">
                     {framework.description}
                   </p>
                   
@@ -134,7 +134,7 @@ export default function QualificationFrameworks() {
                     {framework.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
+                        className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700"
                       >
                         {tag}
                       </span>
@@ -143,7 +143,7 @@ export default function QualificationFrameworks() {
 
                   <Link 
                     href={`/resources/frameworks/qualification/${framework.id}`}
-                    className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                    className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
                   >
                     Learn more
                     <svg className="ml-2 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
@@ -158,4 +158,4 @@ export default function QualificationFrameworks() {
       </Container>
     </div>
   );
-} 
+}

@@ -1,8 +1,15 @@
 import nextMDX from '@next/mdx'
+import remarkFrontmatter from 'remark-frontmatter'
 
-// Minimal configuration with no plugins
+// Add frontmatter processing to MDX
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [
+      [remarkFrontmatter, ['yaml', 'toml']], // This should strip frontmatter
+    ],
+    rehypePlugins: [],
+  },
 })
 
 /** @type {import('next').NextConfig} */
@@ -27,7 +34,6 @@ const nextConfig = {
       },
     ]
   },
-  // This is required to support PostHog trailing slash API requests
   skipTrailingSlashRedirect: true,
 }
 

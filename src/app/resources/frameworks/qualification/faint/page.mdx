@@ -19,12 +19,12 @@ export const metadata = {
       <div id="overview">
         # FAINT Framework
 
-        <div className="bg-gradient-to-r from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/10 p-6 rounded-xl mb-10 mt-4">
+        <div className="bg-gradient-to-r from-blue-100 to-blue-50 p-6 rounded-xl mb-10 mt-4">
           <div className="grid md:grid-cols-5 gap-4 text-center">
             {['Funds', 'Authority', 'Interest', 'Need', 'Timing'].map((item) => (
-              <div key={item} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{item[0]}</div>
-                <div className="mt-2 font-medium text-gray-900 dark:text-white">{item}</div>
+              <div key={item} className="bg-white p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
+                <div className="text-2xl font-bold text-blue-600">{item[0]}</div>
+                <div className="mt-2 font-medium text-gray-900">{item}</div>
               </div>
             ))}
           </div>
@@ -33,11 +33,11 @@ export const metadata = {
 
       <div id="what-is-it" className="mb-12">
         <h2 className="text-2xl font-bold mb-4">What is FAINT?</h2>
-        <div className="text-gray-700 dark:text-gray-300 mb-4">
+        <div className="text-gray-700 mb-4">
           FAINT is a qualification framework introduced by Mike Schultz, President of RAIN Group, as a response to limitations of BANT. It was created to address scenarios where you need to create the opportunity rather than just find an existing budget, particularly for innovative or early-stage solutions.
         </div>
         
-        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 rounded-lg mb-4 flex items-center justify-center relative">
           <Image
             src={metadata.images.overview}
             alt="FAINT framework overview"
@@ -47,30 +47,30 @@ export const metadata = {
           />
         </div>
         
-        <div className="text-gray-700 dark:text-gray-300">
+        <div className="text-gray-700">
           The framework shifts the focus from requiring a formal budget to assessing broader financial capacity and actively generating interest in solutions that buyers may not have previously considered.
         </div>
       </div>
       
       <div id="history" className="mb-12">
         <h2 className="text-2xl font-bold mb-4">History & Origin</h2>
-        <div className="text-gray-700 dark:text-gray-300 mb-4">
+        <div className="text-gray-700 mb-4">
           FAINT was developed by Mike Schultz of RAIN Group as a response to the limitations of BANT. Schultz observed that strictly using BANT could cause salespeople to dismiss good prospects just because they didn't have a formal budget allocated.
         </div>
-        <div className="text-gray-700 dark:text-gray-300 mb-4">
+        <div className="text-gray-700 mb-4">
           The concept was popularized in a RAIN Group insight article titled "FAINT – The New Definition of a Qualified Prospect," which reframed how to think about a "qualified" lead. The acronym was deliberately chosen to imply that if you rely on BANT's Budget, you might "faint" and miss out, whereas FAINT will wake you up to hidden opportunities.
         </div>
-        <div className="text-gray-700 dark:text-gray-300">
+        <div className="text-gray-700">
           FAINT has been adopted in sales teams that sell new or disruptive products, or those dealing with customers who haven't yet set aside budget but could benefit greatly from the solution.
         </div>
       </div>
 
       <div id="acronym" className="relative mb-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl z-0" />
         <div className="relative z-10 p-8">
           <h2 className="text-2xl font-bold mb-6 text-center">The FAINT Acronym Explained</h2>
           
-          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 rounded-lg mb-8 flex items-center justify-center relative">
             <Image
               src={metadata.images.components}
               alt="FAINT components visualization"
@@ -81,12 +81,12 @@ export const metadata = {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">F - Funds</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-blue-600 mb-3">F - Funds</h3>
+              <div className="text-gray-700">
                 The financial resources or capacity to invest in your solution, even if not formally earmarked in a budget. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+              <div className="mt-3 p-3 bg-blue-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>Does the organization have general financial capacity?</li>
                   <li>What is their revenue or funding situation?</li>
@@ -96,12 +96,12 @@ export const metadata = {
               </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-              <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-3">A - Authority</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-purple-600 mb-3">A - Authority</h3>
+              <div className="text-gray-700">
                 The decision-making power within the organization. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded">
+              <div className="mt-3 p-3 bg-purple-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>Who has decision authority?</li>
                   <li>Who can allocate funds even if not budgeted?</li>
@@ -111,12 +111,12 @@ export const metadata = {
               </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-              <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">I - Interest</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-green-600 mb-3">I - Interest</h3>
+              <div className="text-gray-700">
                 The level of engagement and curiosity from the prospect. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
+              <div className="mt-3 p-3 bg-green-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>Are they asking questions and engaging?</li>
                   <li>Are they requesting more information?</li>
@@ -126,12 +126,12 @@ export const metadata = {
               </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-              <h3 className="text-xl font-bold text-amber-600 dark:text-amber-400 mb-3">N - Need</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-amber-600 mb-3">N - Need</h3>
+              <div className="text-gray-700">
                 The specific problems or pain points to be solved. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-900/20 rounded">
+              <div className="mt-3 p-3 bg-amber-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>What challenges are they facing?</li>
                   <li>How significant is the problem?</li>
@@ -141,12 +141,12 @@ export const metadata = {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all md:col-span-2">
-              <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-3">T - Timing</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all md:col-span-2">
+              <h3 className="text-xl font-bold text-indigo-600 mb-3">T - Timing</h3>
+              <div className="text-gray-700">
                 The expected timeframe or triggers to move forward. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded">
+              <div className="mt-3 p-3 bg-indigo-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>When would they ideally implement a solution?</li>
                   <li>Are there any upcoming events or deadlines?</li>
@@ -162,41 +162,41 @@ export const metadata = {
       <div id="example">
         <h2 className="text-2xl font-bold mb-6">FAINT in Action: Real-World Example</h2>
 
-        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md my-8">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">AI Software Company Selling to Mid-Market</h3>
+        <div className="bg-white p-8 rounded-xl shadow-md my-8">
+          <h3 className="text-xl font-bold text-gray-900 mb-6">AI Software Company Selling to Mid-Market</h3>
           
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
-                <tr className="bg-gray-100 dark:bg-gray-700">
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Component</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Details</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Sales Strategy</th>
+                <tr className="bg-gray-100">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Component</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sales Strategy</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+              <tbody className="divide-y divide-gray-200">
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600 dark:text-blue-400">Funds</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600">Funds</td>
                   <td className="px-6 py-4">$200M revenue company with healthy finances and recent capital raise</td>
                   <td className="px-6 py-4">Confirm financial capacity and ability to invest if value is proven</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600 dark:text-purple-400">Authority</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600">Authority</td>
                   <td className="px-6 py-4">Director of Operations with COO as final decision maker</td>
                   <td className="px-6 py-4">Engage COO in discussions and build executive support</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600 dark:text-green-400">Interest</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600">Interest</td>
                   <td className="px-6 py-4">Initially no plan to buy AI software, but intrigued by competitor case study</td>
                   <td className="px-6 py-4">Share relevant insights and success stories to build interest</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-600 dark:text-amber-400">Need</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-600">Need</td>
                   <td className="px-6 py-4">Manual operations process causing errors and inefficiencies</td>
                   <td className="px-6 py-4">Help articulate pain points and potential efficiency gains</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-indigo-600 dark:text-indigo-400">Timing</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-indigo-600">Timing</td>
                   <td className="px-6 py-4">No initial timeline, but now targeting implementation by year-end</td>
                   <td className="px-6 py-4">Establish clear evaluation and implementation timeline</td>
                 </tr>
@@ -204,9 +204,9 @@ export const metadata = {
             </table>
           </div>
           
-          <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-            <p className="font-semibold text-green-700 dark:text-green-400">Strategic Approach:</p>
-            <div className="text-gray-700 dark:text-gray-300">
+          <div className="mt-8 p-4 bg-green-50 rounded-lg">
+            <p className="font-semibold text-green-700">Strategic Approach:</p>
+            <div className="text-gray-700">
               Using FAINT qualification, the sales rep identified a high-potential opportunity that would have been disqualified by BANT. By focusing on the company's financial capacity, building interest through relevant case studies, and helping articulate the need, they created a buying vision where none previously existed. The engagement of both the Director and COO, along with the establishment of a clear timeline, positioned this as a qualified opportunity despite the lack of initial budget.
             </div>
           </div>
@@ -218,57 +218,57 @@ export const metadata = {
         
         <div className="space-y-4">
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Expands opportunity pool</span> by not disqualifying prospects without formal budgets</div>
+              <div className="text-gray-700"><span className="font-semibold">Expands opportunity pool</span> by not disqualifying prospects without formal budgets</div>
             </div>
           </div>
           
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Ideal for innovative solutions</span> where buyers may not have pre-existing budgets</div>
+              <div className="text-gray-700"><span className="font-semibold">Ideal for innovative solutions</span> where buyers may not have pre-existing budgets</div>
             </div>
           </div>
           
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">More resource intensive</span> as it requires educating and building interest</div>
+              <div className="text-gray-700"><span className="font-semibold">More resource intensive</span> as it requires educating and building interest</div>
             </div>
           </div>
           
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Requires strong consultative skills</span> to uncover latent needs and build interest</div>
+              <div className="text-gray-700"><span className="font-semibold">Requires strong consultative skills</span> to uncover latent needs and build interest</div>
             </div>
           </div>
           
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-yellow-600 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Not ideal for established markets</span> where buyers typically have budgets and clear buying cycles</div>
+              <div className="text-gray-700"><span className="font-semibold">Not ideal for established markets</span> where buyers typically have budgets and clear buying cycles</div>
             </div>
           </div>
         </div>
@@ -277,11 +277,11 @@ export const metadata = {
       <div id="when-to-use" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">When to Use FAINT</h2>
         
-        <div className="text-gray-700 dark:text-gray-300 mb-4">
+        <div className="text-gray-700 mb-4">
           FAINT is particularly effective for selling new, disruptive, or innovative solutions where buyers typically won't have pre-existing budgets. It's ideal for early-stage companies trying to create a market or when selling solutions that address problems buyers may not have previously considered.
         </div>
         
-        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 rounded-lg mb-6 flex items-center justify-center relative">
           <Image
             src={metadata.images.scenarios}
             alt="FAINT application scenarios"
@@ -291,7 +291,7 @@ export const metadata = {
           />
         </div>
         
-        <div className="text-gray-700 dark:text-gray-300">
+        <div className="text-gray-700">
           Consider using FAINT when you need to create opportunities rather than just find them, and when you have the resources and skills to educate buyers and build interest in your solution. It's less appropriate for established markets where buyers typically have clear budgets and buying cycles.
         </div>
       </div>
@@ -299,8 +299,8 @@ export const metadata = {
       <div id="summary">
         <h2 className="text-2xl font-bold mb-6">Summary</h2>
 
-        <div className="bg-gradient-to-r from-blue-50 to-white dark:from-blue-900/10 dark:to-gray-800 rounded-xl p-8 my-8 shadow-sm">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h3>
+        <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl p-8 my-8 shadow-sm">
+          <h3 className="text-xl font-bold text-gray-900">Key Takeaways</h3>
           
           <ul className="mt-6 space-y-3">
             <li className="flex items-start">
@@ -335,29 +335,29 @@ export const metadata = {
             </li>
           </ul>
           
-          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-            <div className="text-gray-700 dark:text-gray-300">
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="text-gray-700">
               By implementing FAINT qualification, sales teams can identify and pursue opportunities that might be missed by more traditional frameworks, particularly in innovative or emerging markets. The key is to balance the expanded opportunity pool with the resources required to effectively educate and engage prospects.
             </div>
           </div>
         </div>
       </div>
 
-      <div id="other-frameworks" className="mt-12 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Explore Other Qualification Frameworks</h3>
+      <div id="other-frameworks" className="mt-12 bg-gray-50 rounded-xl p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4">Explore Other Qualification Frameworks</h3>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <a href="/resources/frameworks/qualification/bant" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
-            <h4 className="font-bold text-blue-600 dark:text-blue-400">BANT</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Classic sales qualification framework</p>
+          <a href="/resources/frameworks/qualification/bant" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-blue-600">BANT</h4>
+            <p className="text-sm text-gray-600 mt-1">Classic sales qualification framework</p>
           </a>
-          <a href="/resources/frameworks/qualification/spiced" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
-            <h4 className="font-bold text-amber-600 dark:text-amber-400">SPICED</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Customer-centric qualification approach</p>
+          <a href="/resources/frameworks/qualification/spiced" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-amber-600">SPICED</h4>
+            <p className="text-sm text-gray-600 mt-1">Customer-centric qualification approach</p>
           </a>
-          <a href="/resources/frameworks/qualification" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
-            <h4 className="font-bold text-indigo-600 dark:text-indigo-400">View All</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Compare all qualification frameworks</p>
+          <a href="/resources/frameworks/qualification" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-indigo-600">View All</h4>
+            <p className="text-sm text-gray-600 mt-1">Compare all qualification frameworks</p>
           </a>
         </div>
       </div>
@@ -371,4 +371,4 @@ export const metadata = {
   <div className="lg:hidden mt-12">
     <ContentNavigation sections={sections} />
   </div> 
-</div> 
+</div>

@@ -7,7 +7,6 @@ import { z } from 'zod'
 import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
-import { Navbar } from '@/components/Navbar'
 
 // Define your form schema with Zod
 const formSchema = z.object({
@@ -64,7 +63,7 @@ export default function DemoPage() {
     <div className="overflow-hidden">
       <div className="relative">
         <Container className="relative">
-          <Navbar />
+        
           <div className="pt-1 pb-24 sm:pt-24 sm:pb-32 md:pt-24 md:pb-48">
             <h1 className="font-display text-4xl/[1.1] font-semibold tracking-normal text-balance text-gray-950 drop-shadow-sm sm:text-5xl/[1.05] md:text-5xl/[1.05]">
               Book a Demo

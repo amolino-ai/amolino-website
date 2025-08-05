@@ -1,6 +1,5 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
-import { Navbar } from '@/components/Navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 
@@ -455,9 +454,6 @@ function Careers() {
 export default function Company() {
   return (
     <main className="overflow-hidden">
-      <Container>
-        <Navbar />
-      </Container>
       <Header />
       <div className="pb-16">
         <Team />

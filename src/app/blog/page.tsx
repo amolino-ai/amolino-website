@@ -1,17 +1,14 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
-import { GradientBackground } from '@/components/gradient'
 import { Link } from '@/components/link'
-import { Navbar } from '@/components/Navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
-import { image } from '@/sanity/image'
 import {
   getCategories,
   getFeaturedPosts,
   getPosts,
   getPostsCount,
-} from '@/sanity/queries'
+} from '@/lib/blog'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
   CheckIcon,
@@ -53,7 +50,7 @@ async function FeaturedPosts() {
               {post.mainImage && (
                 <img
                   alt={post.mainImage.alt || ''}
-                  src={image(post.mainImage).size(1170, 780).url()}
+                  src={post.mainImage.src}
                   className="aspect-3/2 w-full rounded-2xl object-cover"
                 />
               )}
@@ -75,7 +72,7 @@ async function FeaturedPosts() {
                     {post.author.image && (
                       <img
                         alt=""
-                        src={image(post.author.image).size(64, 64).url()}
+                        src={post.author.image}
                         className="aspect-square size-6 rounded-full object-cover"
                       />
                     )}
@@ -175,7 +172,7 @@ async function Posts({ page, category }: { page: number; category?: string }) {
                 {post.author.image && (
                   <img
                     alt=""
-                    src={image(post.author.image).width(64).height(64).url()}
+                    src={post.author.image}
                     className="aspect-square size-6 rounded-full object-cover"
                   />
                 )}
@@ -287,9 +284,7 @@ export default async function Blog(
 
   return (
     <main className="overflow-hidden">
-    
       <Container>
-        <Navbar />
         <Subheading className="mt-16">Blog</Subheading>
         <Heading as="h1" className="mt-2">
           Whats happening at Amolino.

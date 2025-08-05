@@ -19,12 +19,12 @@ export const metadata = {
       <div id="overview">
         # CHAMP Framework
 
-        <div className="bg-gradient-to-r from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/10 p-6 rounded-xl mb-10 mt-4">
+        <div className="bg-gradient-to-r from-blue-100 to-blue-50 p-6 rounded-xl mb-10 mt-4">
           <div className="grid md:grid-cols-4 gap-4 text-center">
             {['Challenges', 'Authority', 'Money', 'Priority'].map((item) => (
-              <div key={item} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{item[0]}</div>
-                <div className="mt-2 font-medium text-gray-900 dark:text-white">{item}</div>
+              <div key={item} className="bg-white p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
+                <div className="text-2xl font-bold text-blue-600">{item[0]}</div>
+                <div className="mt-2 font-medium text-gray-900">{item}</div>
               </div>
             ))}
           </div>
@@ -33,11 +33,11 @@ export const metadata = {
 
       <div id="what-is-it" className="mb-12">
         <h2 className="text-2xl font-bold mb-4">What is CHAMP?</h2>
-        <div className="text-gray-700 dark:text-gray-300 mb-4">
+        <div className="text-gray-700 mb-4">
           CHAMP is a modern sales qualification methodology introduced in 2007 by Zorian Rotenberg, a SaaS sales leader and entrepreneur. The name "CHAMP" cheekily implies every customer should be treated like a champion, and it was created as an alternative to older frameworks like BANT. Rotenberg noticed that BANT's focus on Budget first was backward – in many cases, understanding the customer's challenges should come first.
         </div>
         
-        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative">
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 rounded-lg mb-4 flex items-center justify-center relative">
           <Image
             src={metadata.images.overview}
             alt="CHAMP framework overview"
@@ -47,30 +47,30 @@ export const metadata = {
           />
         </div>
         
-        <div className="text-gray-700 dark:text-gray-300">
+        <div className="text-gray-700">
           Over time, CHAMP has evolved into not just a qualification checklist but a more comprehensive "CHAMP Selling System," including a sales process and metrics, aimed largely at scaling B2B SaaS companies. However, the acronym itself is widely used in discovery to remember key qualification areas.
         </div>
       </div>
       
       <div id="history" className="mb-12">
         <h2 className="text-2xl font-bold mb-4">History & Origin</h2>
-        <div className="text-gray-700 dark:text-gray-300 mb-4">
+        <div className="text-gray-700 mb-4">
           CHAMP was introduced in 2007 by Zorian Rotenberg, a SaaS sales leader and entrepreneur. The framework was created as a response to the limitations of older frameworks like BANT, particularly its seller-centric approach that started with Budget.
         </div>
-        <div className="text-gray-700 dark:text-gray-300 mb-4">
+        <div className="text-gray-700 mb-4">
           Rotenberg's motto for CHAMP is "Make your customer a champion." The framework was specifically designed for the modern SaaS environment, where understanding customer challenges and building value is crucial before discussing budget.
         </div>
-        <div className="text-gray-700 dark:text-gray-300">
+        <div className="text-gray-700">
           While initially focused on qualification, CHAMP has evolved into a comprehensive "CHAMP Selling System" that includes a complete sales process, metrics, and even hiring profiles, making it particularly valuable for scaling B2B SaaS companies.
         </div>
       </div>
 
       <div id="acronym" className="relative mb-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl z-0" />
         <div className="relative z-10 p-8">
           <h2 className="text-2xl font-bold mb-6 text-center">The CHAMP Acronym Explained</h2>
           
-          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-8 flex items-center justify-center relative">
+          <div className="max-w-3xl mx-auto h-72 w-full bg-gray-200 rounded-lg mb-8 flex items-center justify-center relative">
             <Image
               src={metadata.images.components}
               alt="CHAMP components visualization"
@@ -81,12 +81,12 @@ export const metadata = {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 md:gap-10">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">C - Challenges</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-blue-600 mb-3">C - Challenges</h3>
+              <div className="text-gray-700">
                 Identify the prospect's primary challenges or pain points. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+              <div className="mt-3 p-3 bg-blue-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>What problems are they trying to solve?</li>
                   <li>What goals aren't being met?</li>
@@ -96,12 +96,12 @@ export const metadata = {
               </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-              <h3 className="text-xl font-bold text-purple-600 dark:text-purple-400 mb-3">H - Authority</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-purple-600 mb-3">H - Authority</h3>
+              <div className="text-gray-700">
                 Determine who has authority in the decision process. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded">
+              <div className="mt-3 p-3 bg-purple-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>Who will make the final purchase decision?</li>
                   <li>Who are the key influencers and blockers?</li>
@@ -111,12 +111,12 @@ export const metadata = {
               </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-              <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-3">A - Money</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-green-600 mb-3">A - Money</h3>
+              <div className="text-gray-700">
                 Assess financial resources and ROI. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
+              <div className="mt-3 p-3 bg-green-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>What's the potential ROI of solving this challenge?</li>
                   <li>How will they justify the investment?</li>
@@ -126,12 +126,12 @@ export const metadata = {
               </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-              <h3 className="text-xl font-bold text-amber-600 dark:text-amber-400 mb-3">M - Priority</h3>
-              <div className="text-gray-700 dark:text-gray-300">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-amber-600 mb-3">M - Priority</h3>
+              <div className="text-gray-700">
                 Evaluate urgency and implementation timeline. Key questions include:
               </div>
-              <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-900/20 rounded">
+              <div className="mt-3 p-3 bg-amber-50 rounded">
                 <ul className="list-disc pl-4 space-y-1 text-sm">
                   <li>How high is this on their priority list?</li>
                   <li>What's driving the timeline?</li>
@@ -147,36 +147,36 @@ export const metadata = {
       <div id="example">
         <h2 className="text-2xl font-bold mb-6">CHAMP in Action: Real-World Example</h2>
 
-        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md my-8">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">SaaS Company Selling Marketing Automation Software</h3>
+        <div className="bg-white p-8 rounded-xl shadow-md my-8">
+          <h3 className="text-xl font-bold text-gray-900 mb-6">SaaS Company Selling Marketing Automation Software</h3>
           
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
-                <tr className="bg-gray-100 dark:bg-gray-700">
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Component</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Details</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Sales Strategy</th>
+                <tr className="bg-gray-100">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Component</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sales Strategy</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+              <tbody className="divide-y divide-gray-200">
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600 dark:text-blue-400">Challenges</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600">Challenges</td>
                   <td className="px-6 py-4">Manual lead generation processes, ineffective marketing campaigns, missed opportunities</td>
                   <td className="px-6 py-4">Focus on automation benefits and time savings</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600 dark:text-purple-400">Authority</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600">Authority</td>
                   <td className="px-6 py-4">VP of Marketing with approval up to $50k/year<br />CFO approval needed for larger purchases</td>
                   <td className="px-6 py-4">Include CFO in next demonstration and prepare executive briefing</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600 dark:text-green-400">Money</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600">Money</td>
                   <td className="px-6 py-4">No set budget, but ROI can justify investment<br />Potential to increase pipeline by 30%</td>
                   <td className="px-6 py-4">Build ROI case and demonstrate value</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-600 dark:text-amber-400">Priority</td>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-600">Priority</td>
                   <td className="px-6 py-4">Need solution before next quarter's campaigns<br />Top priority for marketing team</td>
                   <td className="px-6 py-4">Accelerate sales process and highlight quick implementation</td>
                 </tr>
@@ -184,9 +184,9 @@ export const metadata = {
             </table>
           </div>
           
-          <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-            <p className="font-semibold text-green-700 dark:text-green-400">Strategic Approach:</p>
-            <div className="text-gray-700 dark:text-gray-300">
+          <div className="mt-8 p-4 bg-green-50 rounded-lg">
+            <p className="font-semibold text-green-700">Strategic Approach:</p>
+            <div className="text-gray-700">
               With comprehensive CHAMP qualification, the sales rep can build a targeted strategy. They'll focus on demonstrating how the solution addresses the urgent need for automation, ensuring both the VP of Marketing and CFO are engaged in the process, building a strong ROI case to justify the investment, and accelerating the sales process to meet the next quarter's deadline.
             </div>
           </div>
@@ -198,57 +198,57 @@ export const metadata = {
         
         <div className="space-y-4">
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Customer-centric approach</span> that builds trust and engagement</div>
+              <div className="text-gray-700"><span className="font-semibold">Customer-centric approach</span> that builds trust and engagement</div>
             </div>
           </div>
           
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Comprehensive system</span> with defined processes and metrics</div>
+              <div className="text-gray-700"><span className="font-semibold">Comprehensive system</span> with defined processes and metrics</div>
             </div>
           </div>
           
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Complex implementation</span> may be challenging for small teams</div>
+              <div className="text-gray-700"><span className="font-semibold">Complex implementation</span> may be challenging for small teams</div>
             </div>
           </div>
           
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Steep learning curve</span> for junior sales reps</div>
+              <div className="text-gray-700"><span className="font-semibold">Steep learning curve</span> for junior sales reps</div>
             </div>
           </div>
           
           <div className="flex">
-            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center mt-0.5">
-              <svg className="h-4 w-4 text-yellow-600 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             </div>
             <div className="ml-3">
-              <div className="text-gray-700 dark:text-gray-300"><span className="font-semibold">Best for scaling</span> established sales organizations</div>
+              <div className="text-gray-700"><span className="font-semibold">Best for scaling</span> established sales organizations</div>
             </div>
           </div>
         </div>
@@ -257,11 +257,11 @@ export const metadata = {
       <div id="when-to-use" className="mb-12">
         <h2 className="text-2xl font-bold mb-6">When to Use CHAMP</h2>
         
-        <div className="text-gray-700 dark:text-gray-300 mb-4">
+        <div className="text-gray-700 mb-4">
           CHAMP works best in modern SaaS environments where understanding customer challenges and building value is crucial. It's particularly effective for B2B sales with complex decision-making processes and when selling solutions that require significant investment justification.
         </div>
         
-        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 dark:bg-gray-700 rounded-lg mb-6 flex items-center justify-center relative">
+        <div className="max-w-3xl mx-auto h-64 w-full bg-gray-200 rounded-lg mb-6 flex items-center justify-center relative">
           <Image
             src={metadata.images.scenarios}
             alt="CHAMP application scenarios"
@@ -271,7 +271,7 @@ export const metadata = {
           />
         </div>
         
-        <div className="text-gray-700 dark:text-gray-300">
+        <div className="text-gray-700">
           Consider using CHAMP when you need a customer-centric approach to qualification, especially in complex sales environments. It's ideal for scaling sales organizations that want to implement a comprehensive system with defined processes and metrics. However, it may be overkill for very early-stage startups or simple sales motions.
         </div>
       </div>
@@ -279,8 +279,8 @@ export const metadata = {
       <div id="summary">
         <h2 className="text-2xl font-bold mb-6">Summary</h2>
 
-        <div className="bg-gradient-to-r from-blue-50 to-white dark:from-blue-900/10 dark:to-gray-800 rounded-xl p-8 my-8 shadow-sm">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h3>
+        <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl p-8 my-8 shadow-sm">
+          <h3 className="text-xl font-bold text-gray-900">Key Takeaways</h3>
           
           <ul className="mt-6 space-y-3">
             <li className="flex items-start">
@@ -315,29 +315,29 @@ export const metadata = {
             </li>
           </ul>
           
-          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-            <div className="text-gray-700 dark:text-gray-300">
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="text-gray-700">
               By effectively implementing CHAMP qualification, sales teams can build stronger customer relationships, focus on value creation, and improve their qualification process. The framework's customer-centric approach aligns well with modern consultative selling practices, making it particularly valuable in complex B2B sales environments.
             </div>
           </div>
         </div>
       </div>
 
-      <div id="other-frameworks" className="mt-12 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Explore Other Qualification Frameworks</h3>
+      <div id="other-frameworks" className="mt-12 bg-gray-50 rounded-xl p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4">Explore Other Qualification Frameworks</h3>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <a href="/resources/frameworks/qualification/bant" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
-            <h4 className="font-bold text-purple-600 dark:text-purple-400">BANT</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Classic sales qualification framework</p>
+          <a href="/resources/frameworks/qualification/bant" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-purple-600">BANT</h4>
+            <p className="text-sm text-gray-600 mt-1">Classic sales qualification framework</p>
           </a>
-          <a href="/resources/frameworks/qualification/meddic" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
-            <h4 className="font-bold text-amber-600 dark:text-amber-400">MEDDIC</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Enterprise complex sales framework</p>
+          <a href="/resources/frameworks/qualification/meddic" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-amber-600">MEDDIC</h4>
+            <p className="text-sm text-gray-600 mt-1">Enterprise complex sales framework</p>
           </a>
-          <a href="/resources/frameworks/qualification" className="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all">
-            <h4 className="font-bold text-indigo-600 dark:text-indigo-400">View All</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Compare all qualification frameworks</p>
+          <a href="/resources/frameworks/qualification" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-indigo-600">View All</h4>
+            <p className="text-sm text-gray-600 mt-1">Compare all qualification frameworks</p>
           </a>
         </div>
       </div>
@@ -351,4 +351,4 @@ export const metadata = {
   <div className="lg:hidden mt-12">
     <ContentNavigation sections={sections} />
   </div> 
-</div> 
+</div>

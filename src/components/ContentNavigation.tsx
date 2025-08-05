@@ -40,7 +40,7 @@ export function ContentNavigation({ sections }: ContentNavigationProps) {
     <div className="relative">
       {/* Mobile Menu Button */}
       <button
-        className="lg:hidden w-full text-left px-4 py-2 bg-gray-50 dark:bg-gray-800 rounded-lg mb-4 flex items-center justify-between"
+        className="lg:hidden w-full text-left px-4 py-2 bg-gray-50 rounded-lg mb-4 flex items-center justify-between"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
         <span className="font-medium">Table of Contents</span>
@@ -67,8 +67,8 @@ export function ContentNavigation({ sections }: ContentNavigationProps) {
           isMobileMenuOpen ? 'block' : 'hidden'
         }`}
       >
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4 lg:p-6">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+        <div className="bg-white rounded-lg shadow-sm p-4 lg:p-6">
+          <h3 className="font-semibold text-gray-900 mb-4">
             On this page
           </h3>
           <ul className="space-y-2">
@@ -78,8 +78,8 @@ export function ContentNavigation({ sections }: ContentNavigationProps) {
                   href={`${pathname}#${section.id}`}
                   className={`block py-1 px-2 rounded-md transition-colors ${
                     activeSection === section.id
-                      ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium'
-                      : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                      ? 'bg-blue-50 text-blue-600 font-medium'
+                      : 'text-gray-600 hover:bg-gray-50'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -92,4 +92,4 @@ export function ContentNavigation({ sections }: ContentNavigationProps) {
       </nav>
     </div>
   );
-} 
+}

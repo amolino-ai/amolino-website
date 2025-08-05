@@ -97,29 +97,25 @@ export default function DealLinearity() {
             label: "Last-Week Bookings",
             value: 41,
             suffix: "%",
-            description: "reduction in last-week-of-quarter bookings within two quarters",
-            dark: true
+            description: "reduction in last-week-of-quarter bookings within two quarters"
           },
           {
             label: "Deal Margins",
             value: 12,
             suffix: "%",
-            description: "improvement in average deal margins through reduced deadline discounting",
-            dark: true
+            description: "improvement in average deal margins through reduced deadline discounting"
           },
           {
             label: "Mid-Quarter Closures",
             value: 3.2,
             suffix: "x",
-            description: "increase in mid-quarter deal closures without changing overall close rates",
-            dark: true
+            description: "increase in mid-quarter deal closures without changing overall close rates"
           },
           {
             label: "Forecast Accuracy",
             value: 28,
             suffix: "%",
-            description: "greater accuracy in monthly forecast calls",
-            dark: true
+            description: "greater accuracy in monthly forecast calls"
           }
         ]}
       />
@@ -133,4 +129,4 @@ export default function DealLinearity() {
       />
     </>
   )
-} 
+}
