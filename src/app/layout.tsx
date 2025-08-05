@@ -3,6 +3,8 @@ import { GradientBackground } from '@/components/gradient'
 import { Layout } from '@/components/Layout'
 import { PostHogProvider } from '@/components/PostHogProvider'
 import { type Section } from '@/components/SectionProvider'
+import { Navbar } from '@/components/Navbar'
+import { Container } from '@/components/container'
 import '@/styles/tailwind.css'
 import '@mantine/core/styles.css'
 import glob from 'fast-glob'
@@ -73,6 +75,9 @@ export async function LayoutA({ children }: { children: React.ReactNode }) {
             {/* <DefaultSeo {...SEO} useAppDir={true} /> */}
             <GradientBackground />
             <div className="w-full">
+              <Container>
+            <Navbar />
+            </Container>
               <Layout allSections={allSections}>{children}</Layout>
             </div>
           </Providers>

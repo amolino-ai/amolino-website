@@ -3,7 +3,6 @@ import { Container } from '@/components/container'
 import { Gradient } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { LogoCloud } from '@/components/logo-cloud'
-import { Navbar } from '@/components/Navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon, MinusIcon } from '@heroicons/react/16/solid'
@@ -461,9 +460,6 @@ export default async function Pricing(
 
   return (
     <main className="overflow-hidden">
-      <Container className="relative">
-        <Navbar />
-      </Container>
       <Header />
       <PricingCards />
       <PricingTable selectedTier={tier} />

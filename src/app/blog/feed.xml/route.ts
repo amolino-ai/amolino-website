@@ -1,5 +1,4 @@
-import { image } from '@/sanity/image'
-import { getPostsForFeed } from '@/sanity/queries'
+import { getPostsForFeed } from '@/lib/blog'
 import { Feed } from 'feed'
 import assert from 'node:assert'
 
@@ -11,8 +10,8 @@ export async function GET(req: Request) {
     description:
       'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
     author: {
-      name: 'Michael Foster',
-      email: 'michael.foster@example.com',
+      name: 'AmolinoAI',
+      email: 'hello@amolino.ai',
     },
     id: siteUrl,
     link: siteUrl,
@@ -43,11 +42,7 @@ export async function GET(req: Request) {
       link: `${siteUrl}/blog/${post.slug}`,
       content: post.excerpt,
       image: post.mainImage
-        ? image(post.mainImage)
-            .size(1200, 800)
-            .format('jpg')
-            .url()
-            .replaceAll('&', '&amp;')
+        ? post.mainImage.src.replaceAll('&', '&amp;')
         : undefined,
       author: post.author?.name ? [{ name: post.author.name }] : [],
       contributor: post.author?.name ? [{ name: post.author.name }] : [],

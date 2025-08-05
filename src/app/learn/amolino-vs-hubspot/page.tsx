@@ -2,7 +2,6 @@ import { Badge } from '@/components/badge'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
 import { Gradient } from '@/components/gradient'
-import { Navbar } from '@/components/Navbar'
 import { Screenshot } from '@/components/screenshot'
 import { Heading, Subheading } from '@/components/text'
 
@@ -153,8 +152,8 @@ function Benefits() {
     <div className="bg-gray-900 py-24 sm:py-32">
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <Subheading dark>Why Choose Amolino?</Subheading>
-          <Heading as="h2" dark>
+          <Subheading>Why Choose Amolino?</Subheading>
+          <Heading as="h2">
             Benefits That Matter
           </Heading>
         </div>
@@ -175,7 +174,7 @@ function BottomCTA() {
     <div className="relative bg-white py-24 sm:py-32">
       <Container>
         <div className="mx-auto max-w-2xl rounded-3xl bg-gray-900 px-8 py-24 text-center sm:px-14">
-          <Heading as="h2" dark className="mx-auto max-w-4xl">
+          <Heading as="h2" className="mx-auto max-w-4xl">
             Ready to Upgrade Your Forecasting?
           </Heading>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -197,9 +196,7 @@ function BottomCTA() {
 export default function AmolinoVsHubspot() {
   return (
     <>
-      <Container className="relative">
-        <Navbar />
-      </Container>
+
       <Hero />
       <Comparisons />
       <Analysis />

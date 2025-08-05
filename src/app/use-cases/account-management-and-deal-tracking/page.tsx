@@ -97,29 +97,25 @@ export default function AccountManagementAndDealTracking() {
             label: "Deal Velocity",
             value: 31,
             suffix: "%",
-            description: "increase through elimination of follow-up gaps",
-            dark: true
+            description: "increase through elimination of follow-up gaps"
           },
           {
             label: "Win Rates",
             value: 26,
             suffix: "%",
-            description: "improvement by avoiding deal-killing oversights",
-            dark: true
+            description: "improvement by avoiding deal-killing oversights"
           },
           {
             label: "Deals Managed",
             value: 2.8,
             suffix: "x",
-            description: "increase in average deals per rep without quality loss",
-            dark: true
+            description: "increase in average deals per rep without quality loss"
           },
           {
             label: "Ramp Time",
             value: 29,
             suffix: "%",
-            description: "reduction in new hire ramp time",
-            dark: true
+            description: "reduction in new hire ramp time"
           }
         ]}
       />
@@ -133,4 +129,4 @@ export default function AccountManagementAndDealTracking() {
       />
     </main>
   )
-} 
+}

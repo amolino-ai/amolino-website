@@ -1,4 +1,3 @@
-import { Navbar } from '@/components/Navbar'
 import { Breadcrumbs, Anchor } from '@mantine/core';
 import Link from 'next/link';
 
@@ -22,7 +21,6 @@ export default function QualificationFrameworksLayout({ children }: { children: 
 
   return (
     <>
-      <Navbar />
       <main className="flex-auto">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12 py-6 relative z-10">
           <Breadcrumbs separator="→" separatorMargin="md">

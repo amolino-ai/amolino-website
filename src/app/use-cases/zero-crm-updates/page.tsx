@@ -97,29 +97,25 @@ export default function CRMAutomation() {
             label: "Data Completeness",
             value: 41,
             suffix: "%",
-            description: "increase in CRM data completeness within 90 days",
-            dark: true
+            description: "increase in CRM data completeness within 90 days"
           },
           {
             label: "Dark Pipeline",
             value: 38,
             suffix: "%",
-            description: "reduction in opportunities not visible until late stages",
-            dark: true
+            description: "reduction in opportunities not visible until late stages"
           },
           {
             label: "Leadership Productivity",
             value: 3.2,
             suffix: "x",
-            description: "improvement in sales leadership productivity through automated insights",
-            dark: true
+            description: "improvement in sales leadership productivity through automated insights"
           },
           {
             label: "Onboarding Speed",
             value: 22,
             suffix: "%",
-            description: "faster onboarding of new sales hires with pre-populated intelligence",
-            dark: true
+            description: "faster onboarding of new sales hires with pre-populated intelligence"
           }
         ]}
       />
@@ -133,4 +129,4 @@ export default function CRMAutomation() {
       />
     </main>
   )
-} 
+}

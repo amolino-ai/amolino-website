@@ -1,8 +1,6 @@
 import { Badge } from '@/components/badge'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/container'
-import { Gradient } from '@/components/gradient'
-import { Navbar } from '@/components/Navbar'
 
 interface HeroProps {
   badgeText: string

@@ -1,6 +1,6 @@
 import glob from 'fast-glob'
 import type { MetadataRoute } from 'next'
-import { getPostsForFeed } from '@/sanity/queries'
+import { getPostsForFeed } from '@/lib/blog'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Get your base URL from environment variable
@@ -27,7 +27,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
   }))
 
-  // Get all blog posts from Sanity
   const posts = await getPostsForFeed()
   const blogUrls = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
