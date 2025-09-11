@@ -8,7 +8,7 @@ import {
   getFeaturedPosts,
   getPosts,
   getPostsCount,
-} from '@/lib/blog'
+} from '@/lib/content'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import {
   CheckIcon,

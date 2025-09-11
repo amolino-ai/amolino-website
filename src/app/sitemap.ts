@@ -1,6 +1,6 @@
 import glob from 'fast-glob'
 import type { MetadataRoute } from 'next'
-import { getPostsForFeed } from '@/lib/blog'
+import { getPostsForFeed } from '@/lib/content'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Get your base URL from environment variable

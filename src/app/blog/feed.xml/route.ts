@@ -1,4 +1,4 @@
-import { getPostsForFeed } from '@/lib/blog'
+import { getPostsForFeed } from '@/lib/content'
 import { Feed } from 'feed'
 import assert from 'node:assert'
 
