@@ -1,6 +1,11 @@
 import nextMDX from '@next/mdx'
 import remarkFrontmatter from 'remark-frontmatter'
 
+// Add bundle analyzer
+const withBundleAnalyzer = (await import('@next/bundle-analyzer')).default({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 // Add frontmatter processing to MDX
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
@@ -37,4 +42,5 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
 }
 
-export default withMDX(nextConfig)
+// Chain the configurations: MDX -> Bundle Analyzer -> Final Config
+export default withBundleAnalyzer(withMDX(nextConfig))

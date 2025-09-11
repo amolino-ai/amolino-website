@@ -1,6 +1,8 @@
+
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Link } from '@/components/link'
+import * as mdxComponents from '@/components/mdx'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { getHelpArticle, getHelpArticleContent, getAllHelpArticles, getHelpArticlesBySection } from '@/lib/content'
 import { 
@@ -232,7 +234,7 @@ export default async function HelpArticlePage({ params }: Props) {
               </header>
               
               <div className="prose prose-lg max-w-none prose-headings:scroll-mt-8">
-                <MDXRemote source={content} />
+                <MDXRemote source={content} components={mdxComponents} />
               </div>
               
               <div className="mt-12 pt-8 border-t border-gray-200">
