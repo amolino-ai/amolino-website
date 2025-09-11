@@ -255,9 +255,7 @@ export default async function HelpArticlePage({ params }: Props) {
         </div>
       </Container>
       
-      <div className="mt-24">
-        <Footer />
-      </div>
+
     </main>
   )
 }

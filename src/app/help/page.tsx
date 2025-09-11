@@ -231,7 +231,6 @@ export default async function HelpCenter(props: {
         <FilteredHelpArticles tag={selectedTag} />
       </Container>
 
-      <Footer />
     </main>
   )
 }
