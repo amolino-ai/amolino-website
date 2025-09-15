@@ -22,6 +22,9 @@ import dayjs from 'dayjs'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
+export const dynamic = 'force-static';
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: 'Blog',
   description:

@@ -9,6 +9,9 @@ import { CheckIcon, ChevronUpDownIcon, DocumentTextIcon, TagIcon } from '@heroic
 import dayjs from 'dayjs'
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-static';
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: 'Help Center',
   description: 'Find guides, tutorials, and documentation to help you get the most out of our platform.',

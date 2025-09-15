@@ -10,6 +10,10 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import styles from '../blog.module.css'
 
+
+export const dynamic = 'force-static';
+export const revalidate = 0; 
+
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const post = await getBlogPost(slug)
@@ -18,6 +22,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   if (!post || !content) {
     notFound()
   }
+
 
   return (
     <main className="overflow-hidden">

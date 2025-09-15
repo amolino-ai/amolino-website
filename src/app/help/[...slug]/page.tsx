@@ -23,6 +23,9 @@ interface Props {
   }>
 }
 
+export const dynamic = 'force-static';
+export const revalidate = 0;
+
 export async function generateStaticParams() {
   const articles = await getAllHelpArticles()
   

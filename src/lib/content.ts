@@ -2,10 +2,12 @@
 import glob from 'fast-glob'
 import { readFile } from 'fs/promises'
 import matter from 'gray-matter'
-import { join, dirname, basename } from 'path'
+import path, { join, dirname, basename } from 'path'
 
-const BLOG_PATH = 'content/blog'
-const HELP_PATH = 'content/help'
+
+const CONTENT_ROOT = path.join(process.cwd(), 'content')
+const BLOG_PATH = path.join(CONTENT_ROOT, 'blog')
+const HELP_PATH = path.join(CONTENT_ROOT, 'help')
 
 
 // Base content interface
@@ -62,18 +64,21 @@ async function getContentFromPath<T extends BaseContent>(
   try {
     const files = await glob(pattern, {
       cwd: contentPath,
+      absolute: true,
+      onlyFiles: true,
     })
 
     const content = await Promise.all(
       files.map(async (file) => {
-        const fullPath = join(process.cwd(), contentPath, file)
+        const fullPath = path.isAbsolute(file) ? file : path.join(contentPath, file)
         
         try {
           const fileContents = await readFile(fullPath, 'utf8')
           const { data } = matter(fileContents)
           
-          // Create slug from file path (remove .mdx and handle nested paths)
-          const slug = file.replace('.mdx', '').replace(/\\/g, '/')
+          // FIXED: Create slug from relative path, not absolute path
+          const relativePath = path.relative(contentPath, fullPath)
+          const slug = relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/')
           
           return transformFn(slug, data, fullPath)
         } catch (error) {
@@ -96,7 +101,7 @@ async function getSingleContent<T extends BaseContent>(
   transformFn: (slug: string, data: any, fullPath: string) => T
 ): Promise<T | null> {
   try {
-    const fullPath = join(process.cwd(), contentPath, `${slug}.mdx`)
+    const fullPath = path.isAbsolute(slug) ? slug : path.join(contentPath, `${slug}.mdx`)
     const fileContents = await readFile(fullPath, 'utf8')
     const { data } = matter(fileContents)
     
@@ -109,7 +114,7 @@ async function getSingleContent<T extends BaseContent>(
 
 async function getMDXContent(contentPath: string, slug: string): Promise<string | null> {
   try {
-    const fullPath = join(process.cwd(), contentPath, `${slug}.mdx`)
+    const fullPath = path.isAbsolute(slug) ? slug : path.join(contentPath, `${slug}.mdx`)
     const fileContents = await readFile(fullPath, 'utf8')
     const { content } = matter(fileContents)
     return content
