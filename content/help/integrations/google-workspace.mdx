@@ -1,0 +1,62 @@
+---
+title: "Google Workspace Integration Guide"
+excerpt: "Learn how to integrate with Google Workspace."
+publishedAt: "2025-09-11"
+lastUpdated: "2025-09-11"
+order: 1
+tags: ["google", "google workspace", "integration", "email", "calendar"]
+---
+
+# Google Workspace Integration
+
+This guide will walk you through setting up the Google Workspace integration with Amolino.
+
+## Prerequisites
+
+You need to be an admin in your Google Workspace and in Amolino.
+
+## Step 1: Add AmolinoAI as a Trusted App
+
+1. Sign in to your Google Admin console at [admin.google.com](https://admin.google.com).
+2. From the Admin console Home page, go to **Security** > **Access and data control** > **API controls** > [**Manage Third-Party App Access**](https://admin.google.com/u/3/ac/owl/list?tab=configuredApps).
+3. Add Amolino as trusted.
+
+<video height="480" controls>
+  <source src="https://amolinopubliccdn.blob.core.windows.net/cdn-data/webapp/google-org-connect-instructions-page1.mp4" type="video/mp4"></source>
+</video>
+
+## Step 2: Allow Domain-Wide Delegation
+
+![Apps & Integrations screen](/images/help/integrations/google-workspace/domainwidedelegation.webp)
+
+1. From the Admin console Home page, go to **Security** > **Access and data control** > **API controls** > [**Manage Domain Wide Delegation**](https://admin.google.com/u/3/ac/owl/domainwidedelegation).
+2. Click on **Add new** and enter the following details.
+
+**Client ID:**
+
+> 110255286194196618640
+
+**Scopes:**
+
+> openid, https://www.googleapis.com/auth/userinfo.email, https://www.googleapis.com/auth/userinfo.profile, https://www.googleapis.com/auth/gmail.modify, https://www.googleapis.com/auth/calendar.readonly, https://www.googleapis.com/auth/admin.directory.user.readonly, https://www.googleapis.com/auth/admin.directory.domain.readonly
+
+
+## Step 3: Go to the Apps & Integrations Page in Amolino
+
+1. Sign in to your Amolino account.
+2. Select your organization and click on the gear icon next to it.
+3. Go to the "[Apps & integrations](https://app.amolino.ai/organization_settings?activeTab=appsIntegrations)" tab.
+
+![Apps & Integrations screen](/images/help/integrations/appsnintegrations.png)
+
+## Step 4: Connect Google Workspace
+
+Find Google Workspace in the list of available integrations towards the bottom of the page (under "Apps").
+Click on "Connect" to start the integration process.
+
+<img src="/images/help/integrations/google-workspace/googlebtn.png" alt="Google Workspace button" width="301"/>
+
+A popup will appear, showing you the same instructions you just completed. Then,
+it will ask you to authorize the connection. Follow the instructions. The popup
+will close automatically at the end of the process, and Google Workspace will be
+connected.
