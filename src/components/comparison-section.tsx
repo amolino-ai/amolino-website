@@ -63,6 +63,4 @@ export function ComparisonSection({
       </div>
     </Container>
   )
-}
-
-export default ComparisonSection 
+} 

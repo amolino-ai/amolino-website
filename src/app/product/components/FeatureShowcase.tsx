@@ -1,9 +1,9 @@
 import { Button } from '@/components/Button'
+import { ComparisonSection } from '@/components/comparison-section'
 import { Container } from '@/components/container'
 import { DecorativeTriangles } from '@/components/decorative-triangles'
 import { Screenshot } from '@/components/screenshot'
 import { Heading } from '@/components/text'
-import ComparisonSection from '@/components/comparison-section'
 
 interface Feature {
   icon: React.ReactNode
