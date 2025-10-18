@@ -1,7 +1,6 @@
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
-import { Link } from '@/components/link'
-import { Heading, Subheading } from '@/components/text'
+import { Container } from '@/components/Container'
+import { Heading, Subheading } from '@/components/Text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import Image from 'next/image'
 

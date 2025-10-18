@@ -1,8 +1,8 @@
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
+import { Container } from '@/components/Container'
 import { Footer } from '@/components/footer'
-import { Link } from '@/components/link'
-import { Heading, Lead, Subheading } from '@/components/text'
+import { Link } from '@/components/Link'
+import { Heading, Lead, Subheading } from '@/components/Text'
 import {
   getCategories,
   getFeaturedPosts,

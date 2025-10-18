@@ -1,9 +1,9 @@
-import { Badge } from '@/components/badge'
+import { Badge } from '@/components/Badge'
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
-import { Gradient } from '@/components/gradient'
-import { Screenshot } from '@/components/screenshot'
-import { Heading, Subheading } from '@/components/text'
+import { Container } from '@/components/Container'
+import { Gradient } from '@/components/Gradient'
+import { Screenshot } from '@/components/Screenshot'
+import { Heading, Subheading } from '@/components/Text'
 
 function ComparisonCard({ title, amolino, hubspot }: { title: string; amolino: string; hubspot: string }) {
   return (

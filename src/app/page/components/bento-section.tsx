@@ -1,8 +1,6 @@
 import { BentoCard } from '@/components/bento-card'
-import { Container } from '@/components/container'
-import { LogoCluster } from '@/components/logo-cluster'
-import { Map } from '@/components/map'
-import { Heading, Subheading } from '@/components/text'
+import { Container } from '@/components/Container'
+import { Heading, Subheading } from '@/components/Text'
 
 export function BentoSection() {
   return (

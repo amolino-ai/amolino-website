@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Container } from '@/components/container'
-import { Heading, Subheading } from '@/components/text'
+import { Container } from '@/components/Container'
+import { Heading, Subheading } from '@/components/Text'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 
 export function BlindSalesSection() {

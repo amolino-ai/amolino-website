@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
-import { Heading, Subheading } from '@/components/text'
+import { Container } from '@/components/Container'
+import { Heading, Subheading } from '@/components/Text'
 import Image from 'next/image'
 import Link from 'next/link'
 interface UseCaseCardProps {

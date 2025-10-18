@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation'
 
 import { Footer } from '@/components/footer'
 import { type Section, SectionProvider } from '@/components/SectionProvider'
-import { Container } from '@mantine/core'
 
 export function Layout({
   children,

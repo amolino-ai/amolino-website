@@ -6,9 +6,9 @@ import { clsx } from 'clsx'
 import { MotionValue, motion, useMotionValueEvent, useScroll, useSpring, type HTMLMotionProps } from 'framer-motion'
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import useMeasure, { type RectReadOnly } from 'react-use-measure'
-import { Container } from './container'
-import { Link } from './link'
-import { Heading, Subheading } from './text'
+import { Container } from '@/components/Container'
+import { Link } from '@/components/Link';
+import { Heading, Subheading } from '@/components/Text';
 
 const testimonials = [
   {

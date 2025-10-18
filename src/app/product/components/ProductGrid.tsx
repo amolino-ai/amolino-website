@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Screenshot } from '@/components/screenshot'
+import { Screenshot } from '@/components/Screenshot'
 
 interface Product {
   name: string

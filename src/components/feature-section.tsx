@@ -1,9 +1,9 @@
 'use client'
 
-import React from 'react'
-import { Container } from '@/components/container'
-import { Screenshot } from '@/components/screenshot'
-import { Heading } from '@/components/text'
+import React from 'react';
+import { Container } from '@/components/Container';
+import { Screenshot } from '@/components/Screenshot';
+import { Heading } from '@/components/Text';
 
 export function FeatureSection() {
   const [activeTab, setActiveTab] = React.useState('revenue');

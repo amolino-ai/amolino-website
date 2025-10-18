@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
-import { GradientBackground } from '@/components/gradient'
-import { Link } from '@/components/link'
+import { GradientBackground } from '@/components/Gradient'
+import { Link } from '@/components/Link'
 import { Logo } from '@/components/Logo'
 import { Checkbox, Field, Input, Label } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/16/solid'

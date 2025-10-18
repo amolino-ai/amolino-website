@@ -1,5 +1,5 @@
-import { Container } from '@/components/container'
-import { Subheading } from './text'
+import { Container } from '@/components/Container'
+import { Subheading } from '@/components/Text';
 
 const logos = [
   {

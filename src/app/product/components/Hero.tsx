@@ -1,7 +1,7 @@
-import { Badge } from '@/components/badge'
+import { Badge } from '@/components/Badge'
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
-import { Screenshot } from '@/components/screenshot'
+import { Container } from '@/components/Container'
+import { Screenshot } from '@/components/Screenshot'
 
 interface HeroProps {
   badgeText: string

@@ -1,5 +1,5 @@
-import { Container } from '@/components/container'
-import { Heading } from '@/components/text'
+import { Container } from '@/components/Container'
+import { Heading } from '@/components/Text'
 import { XMarkIcon, CheckIcon, MinusIcon } from '@heroicons/react/16/solid'
 
 interface ComparisonItem {

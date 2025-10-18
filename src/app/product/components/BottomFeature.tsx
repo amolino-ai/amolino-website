@@ -1,5 +1,5 @@
-import { Container } from '@/components/container'
-import { Screenshot } from '@/components/screenshot'
+import { Container } from '@/components/Container'
+import { Screenshot } from '@/components/Screenshot'
 
 interface BottomFeatureProps {
   title: string

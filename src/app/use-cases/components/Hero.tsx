@@ -1,6 +1,6 @@
-import { Badge } from '@/components/badge'
+import { Badge } from '@/components/Badge'
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
+import { Container } from '@/components/Container'
 
 interface HeroProps {
   badgeText: string

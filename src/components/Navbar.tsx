@@ -10,7 +10,7 @@ import {
 } from '@headlessui/react'
 import { Bars2Icon, ChevronDownIcon } from '@heroicons/react/24/solid'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Link } from './link'
+import { Link } from '@/components/Link';
 import { Logo } from '@/components/Logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 import { useState } from 'react'

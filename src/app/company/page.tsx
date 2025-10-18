@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
-import { Heading, Lead, Subheading } from '@/components/text'
+import { Container } from '@/components/Container'
+import { Heading, Lead, Subheading } from '@/components/Text'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

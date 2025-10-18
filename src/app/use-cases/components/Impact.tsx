@@ -1,5 +1,5 @@
-import { Container } from '@/components/container'
-import { Heading, Subheading } from '@/components/text'
+import { Container } from '@/components/Container'
+import { Heading, Subheading } from '@/components/Text'
 import { StatsCard } from './StatsCard'
 
 interface ImpactProps {

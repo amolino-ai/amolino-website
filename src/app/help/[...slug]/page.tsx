@@ -1,9 +1,9 @@
 
-import { Container } from '@/components/container'
+import { Container } from '@/components/Container'
 import { Footer } from '@/components/footer'
-import { Link } from '@/components/link'
-import * as mdxComponents from '@/components/mdx'
-import { Heading, Lead, Subheading } from '@/components/text'
+import { Link } from '@/components/Link'
+import * as mdxComponents from '@/components/Mdx'
+import { Heading, Lead, Subheading } from '@/components/Text'
 import { getHelpArticle, getHelpArticleContent, getAllHelpArticles, getHelpArticlesBySection } from '@/lib/content'
 import { 
   ChevronRightIcon,

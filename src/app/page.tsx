@@ -1,4 +1,4 @@
-import { Container } from '@/components/container'
+import { Container } from '@/components/Container'
 import { FeatureSection } from '@/components/feature-section'
 import { IntegrationsSection } from '@/components/integrations-section'
 import { LogoCloud } from '@/components/logo-cloud'

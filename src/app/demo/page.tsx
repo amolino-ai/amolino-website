@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import Link from 'next/link'
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
+import { Container } from '@/components/Container'
 
 // Define your form schema with Zod
 const formSchema = z.object({

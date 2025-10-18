@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
-import { Gradient } from '@/components/gradient'
+import { Container } from '@/components/Container'
+import { Gradient } from '@/components/Gradient'
 import { NumbersSection } from './Numbers'
 
 export function Hero() {

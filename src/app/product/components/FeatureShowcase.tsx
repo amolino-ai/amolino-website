@@ -1,8 +1,8 @@
 import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
+import { Container } from '@/components/Container'
 import { DecorativeTriangles } from '@/components/decorative-triangles'
-import { Screenshot } from '@/components/screenshot'
-import { Heading } from '@/components/text'
+import { Screenshot } from '@/components/Screenshot'
+import { Heading } from '@/components/Text'
 import ComparisonSection from '@/components/comparison-section'
 
 interface Feature {
