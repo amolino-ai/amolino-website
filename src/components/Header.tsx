@@ -1,11 +1,11 @@
-import clsx from 'clsx'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import Link from 'next/link'
-import { forwardRef } from 'react'
-import { Button } from '@/components/Button'
-import { Logo } from '@/components/Logo'
-import { MobileNavigation, useIsInsideMobileNavigation, useMobileNavigationStore } from '@/components/MobileNavigation'
-import { MobileSearch, Search } from '@/components/Search'
+import clsx from 'clsx';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
+import { forwardRef } from 'react';
+import { Button } from '@/components/Button';
+import { Logo } from '@/components/Logo';
+import { MobileNavigation, useIsInsideMobileNavigation, useMobileNavigationStore } from '@/components/MobileNavigation';
+import { MobileSearch, Search } from '@/components/Search';
 
 function TopLevelNavItem({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -17,16 +17,16 @@ function TopLevelNavItem({ href, children }: { href: string; children: React.Rea
         {children}
       </Link>
     </li>
-  )
+  );
 }
 
 export const Header = forwardRef<React.ElementRef<'div'>, React.ComponentPropsWithoutRef<typeof motion.div>>(
   function Header({ className, ...props }, ref) {
-    let { isOpen: mobileNavIsOpen } = useMobileNavigationStore()
-    let isInsideMobileNavigation = useIsInsideMobileNavigation()
+    let { isOpen: mobileNavIsOpen } = useMobileNavigationStore();
+    let isInsideMobileNavigation = useIsInsideMobileNavigation();
 
-    let { scrollY } = useScroll()
-    let bgOpacityLight = useTransform(scrollY, [0, 72], [0.5, 0.9])
+    let { scrollY } = useScroll();
+    let bgOpacityLight = useTransform(scrollY, [0, 72], [0.5, 0.9]);
 
     return (
       <motion.div
@@ -76,6 +76,6 @@ export const Header = forwardRef<React.ElementRef<'div'>, React.ComponentPropsWi
           </div>
         </div>
       </motion.div>
-    )
+    );
   },
-)
+);

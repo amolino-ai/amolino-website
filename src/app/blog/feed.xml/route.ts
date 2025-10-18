@@ -1,9 +1,9 @@
-import { getPostsForFeed } from '@/lib/content'
-import { Feed } from 'feed'
-import assert from 'node:assert'
+import { getPostsForFeed } from '@/lib/content';
+import { Feed } from 'feed';
+import assert from 'node:assert';
 
 export async function GET(req: Request) {
-  let siteUrl = new URL(req.url).origin
+  let siteUrl = new URL(req.url).origin;
 
   let feed = new Feed({
     title: 'The Amolino Blog',
@@ -21,19 +21,19 @@ export async function GET(req: Request) {
     feedLinks: {
       rss2: `${siteUrl}/feed.xml`,
     },
-  })
+  });
 
-  let posts = await getPostsForFeed()
+  let posts = await getPostsForFeed();
 
   posts.forEach((post) => {
     try {
-      assert(typeof post.title === 'string')
-      assert(typeof post.slug === 'string')
-      assert(typeof post.excerpt === 'string')
-      assert(typeof post.publishedAt === 'string')
+      assert(typeof post.title === 'string');
+      assert(typeof post.slug === 'string');
+      assert(typeof post.excerpt === 'string');
+      assert(typeof post.publishedAt === 'string');
     } catch (error) {
       //console.log('Post is missing required fields for RSS feed:', post)
-      return
+      return;
     }
 
     feed.addItem({
@@ -47,8 +47,8 @@ export async function GET(req: Request) {
       author: post.author?.name ? [{ name: post.author.name }] : [],
       contributor: post.author?.name ? [{ name: post.author.name }] : [],
       date: new Date(post.publishedAt),
-    })
-  })
+    });
+  });
 
   return new Response(feed.rss2(), {
     status: 200,
@@ -56,5 +56,5 @@ export async function GET(req: Request) {
       'content-type': 'application/xml',
       'cache-control': 's-maxage=31556952',
     },
-  })
+  });
 }

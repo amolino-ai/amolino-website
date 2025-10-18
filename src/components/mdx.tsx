@@ -1,16 +1,16 @@
-import clsx from 'clsx'
-import Link from 'next/link'
-import { Button } from './Button'
-import { Code as code, CodeGroup, Pre as pre } from './Code'
-import { Heading } from './Heading'
+import clsx from 'clsx';
+import Link from 'next/link';
+import { Button } from './Button';
+import { Code as code, CodeGroup, Pre as pre } from './Code';
+import { Heading } from './Heading';
 import { Prose } from './Prose';
 import { LinkedInLink } from './LinkedInLink';
 
 export { LinkedInLink };
 
 // Re-exports
-export const a = Link
-export { Button, code, CodeGroup, pre }
+export const a = Link;
+export { Button, code, CodeGroup, pre };
 
 // Wrapper
 export function wrapper({ children }: { children: React.ReactNode }) {
@@ -21,7 +21,7 @@ export function wrapper({ children }: { children: React.ReactNode }) {
       </Prose>
       <footer className="mt-16 border-t border-gray-200 pt-8">{/* <Feedback /> */}</footer>
     </article>
-  )
+  );
 }
 
 // Heading (h1)
@@ -38,19 +38,19 @@ export const h1 = ({ id, children, ...props }: { id: string; children: React.Rea
       {children}
     </Link> */}
   </h1>
-)
+);
 
 // Heading (h2)
 export const h2 = (props: React.ComponentPropsWithoutRef<typeof Heading>) => (
   <div>
     <Heading level={2} className="mt-10 mb-4 text-3xl" {...props} />
   </div>
-)
+);
 
 // Heading (h3)
 export const h3 = (props: React.ComponentPropsWithoutRef<typeof Heading>) => (
   <Heading level={3} className="mt-4 mb-4 text-2xl" {...props} />
-)
+);
 
 // InfoIcon
 const InfoIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => (
@@ -66,15 +66,15 @@ const InfoIcon = (props: React.ComponentPropsWithoutRef<'svg'>) => (
     />
     <circle cx="8" cy="4" r=".5" fill="currentColor" />
   </svg>
-)
+);
 
 export const strong = (props: React.HTMLAttributes<HTMLSpanElement>) => (
   <span className="font-bold " {...props} />
-)
+);
 
 export const em = (props: React.HTMLAttributes<HTMLSpanElement>) => (
   <span className="italic" {...props} />
-)
+);
 
 // Note
 export const Note = ({ children }: { children: React.ReactNode }) => (
@@ -82,12 +82,12 @@ export const Note = ({ children }: { children: React.ReactNode }) => (
     <InfoIcon className="mt-0.5 flex-none" />
     <div className="prose-sm prose-blue">{children}</div>
   </div>
-)
+);
 
 // Row & Col
 export const Row = ({ children }: { children: React.ReactNode }) => (
   <div className="my-12 grid items-start gap-10 md:grid-cols-2">{children}</div>
-)
+);
 
 export const Col = ({ children, sticky = false }: { children: React.ReactNode; sticky?: boolean }) => (
   <div
@@ -97,14 +97,14 @@ export const Col = ({ children, sticky = false }: { children: React.ReactNode; s
   >
     {children}
   </div>
-)
+);
 
 // Properties & Property
 export const Properties = ({ children }: { children: React.ReactNode }) => (
   <div className="my-10 rounded-xl bg-gray-50 p-6 shadow-lg shadow-gray-200/50">
     <ul className="divide-y divide-gray-200">{children}</ul>
   </div>
-)
+);
 
 export const Property = ({ name, type, children }: { name: string; type?: string; children: React.ReactNode }) => (
   <li className="rounded-lg px-2 py-4 transition-colors duration-200 hover:bg-gray-100">
@@ -118,50 +118,50 @@ export const Property = ({ name, type, children }: { name: string; type?: string
       <dd className="text-sm text-gray-600 sm:col-span-3">{children}</dd>
     </dl>
   </li>
-)
+);
 
 // Basic text elements
 export const p = (props: React.HTMLAttributes<HTMLParagraphElement>) => (
   <p className="my-6 leading-7 text-gray-600" {...props} />
-)
+);
 
 export const blockquote = (props: React.HTMLAttributes<HTMLQuoteElement>) => (
   <blockquote className="my-6 border-l-4 border-gray-200 pl-4 italic text-gray-700" {...props} />
-)
+);
 
 export const hr = (props: React.HTMLAttributes<HTMLHRElement>) => (
   <hr className="my-8 border-t border-gray-200" {...props} />
-)
+);
 
 export const del = (props: React.HTMLAttributes<HTMLModElement>) => (
   <del className="text-gray-500 line-through" {...props} />
-)
+);
 
 // List elements
 export const ul = (props: React.HTMLAttributes<HTMLUListElement>) => (
   <ul className="my-6 list-disc pl-8 text-gray-600" {...props} />
-)
+);
 
 export const ol = (props: React.HTMLAttributes<HTMLOListElement>) => (
   <ol className="my-6 list-decimal pl-8 text-gray-600" {...props} />
-)
+);
 
 export const li = (props: React.HTMLAttributes<HTMLLIElement>) => (
   <li className="my-2" {...props} />
-)
+);
 
 // Additional heading levels
 export const h4 = (props: React.HTMLAttributes<HTMLHeadingElement>) => (
   <h4 className="mt-8 mb-4 text-xl font-semibold text-gray-900" {...props} />
-)
+);
 
 export const h5 = (props: React.HTMLAttributes<HTMLHeadingElement>) => (
   <h5 className="mt-8 mb-4 text-lg font-semibold text-gray-900" {...props} />
-)
+);
 
 export const h6 = (props: React.HTMLAttributes<HTMLHeadingElement>) => (
   <h6 className="mt-8 mb-4 text-base font-semibold text-gray-900" {...props} />
-)
+);
 
 // Image element
 export const img = (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
@@ -170,37 +170,37 @@ export const img = (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
     loading="lazy"
     {...props} 
   />
-)
+);
 
 // Table elements
 export const table = (props: React.TableHTMLAttributes<HTMLTableElement>) => (
   <div className="my-6 overflow-x-auto">
     <table className="min-w-full divide-y divide-gray-200" {...props} />
   </div>
-)
+);
 
 export const thead = (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
   <thead className="bg-gray-50" {...props} />
-)
+);
 
 export const tbody = (props: React.HTMLAttributes<HTMLTableSectionElement>) => (
   <tbody className="divide-y divide-gray-200 bg-white" {...props} />
-)
+);
 
 export const tr = (props: React.HTMLAttributes<HTMLTableRowElement>) => (
   <tr className="transition hover:bg-gray-50" {...props} />
-)
+);
 
 export const th = (props: React.ThHTMLAttributes<HTMLTableCellElement>) => (
   <th 
     className="px-6 py-3 text-left text-sm font-semibold text-gray-900" 
     {...props} 
   />
-)
+);
 
 export const td = (props: React.TdHTMLAttributes<HTMLTableCellElement>) => (
   <td 
     className="whitespace-nowrap px-6 py-4 text-sm text-gray-500" 
     {...props} 
   />
-)
+);

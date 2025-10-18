@@ -9,5 +9,5 @@ export function FeatureCard({ title, children }: FeatureCardProps) {
       <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       <div className="mt-4 text-gray-600">{children}</div>
     </div>
-  )
+  );
 } 

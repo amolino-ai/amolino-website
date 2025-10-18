@@ -1,8 +1,8 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Heading, Subheading } from '@/components/Text'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Heading, Subheading } from '@/components/Text';
+import Image from 'next/image';
+import Link from 'next/link';
 interface UseCaseCardProps {
   title: string
   description: string
@@ -44,8 +44,8 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ title, description, imagePath
         </span>
       </div>
     </Link>
-  )
-}
+  );
+};
 
 export default function UseCasesPage() {
   const useCases = [
@@ -84,7 +84,7 @@ export default function UseCasesPage() {
       imagePath: '/screenshots/dashboard_rep_view_april_2025.jpg',
       href: '/use-cases/deal-linearity',
     },
-  ]
+  ];
 
   return (
     <div className="relative min-h-screen bg-white">
@@ -189,5 +189,5 @@ export default function UseCasesPage() {
         </Container>
       </div>
     </div>
-  )
+  );
 }

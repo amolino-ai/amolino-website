@@ -1,4 +1,4 @@
-import SectionHeading from './SectionHeading'
+import SectionHeading from './SectionHeading';
 
 export default function RunningQBR() {
   return (
@@ -214,5 +214,5 @@ export default function RunningQBR() {
         </div>
       </div>
     </section>
-  )
+  );
 }

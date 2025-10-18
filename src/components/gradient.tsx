@@ -1,4 +1,4 @@
-import { clsx } from 'clsx'
+import { clsx } from 'clsx';
 
 export function Gradient({ className, ...props }: React.ComponentPropsWithoutRef<'div'>) {
   return (
@@ -9,7 +9,7 @@ export function Gradient({ className, ...props }: React.ComponentPropsWithoutRef
         'bg-linear-115 from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] sm:bg-linear-145',
       )}
     />
-  )
+  );
 }
 
 export function GradientBackground() {
@@ -23,5 +23,5 @@ export function GradientBackground() {
         )}
       />
     </div>
-  )
+  );
 }

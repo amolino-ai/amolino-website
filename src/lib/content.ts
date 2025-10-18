@@ -1,13 +1,13 @@
 // lib/content.ts
-import glob from 'fast-glob'
-import { readFile } from 'fs/promises'
-import matter from 'gray-matter'
-import path, { join, dirname, basename } from 'path'
+import glob from 'fast-glob';
+import { readFile } from 'fs/promises';
+import matter from 'gray-matter';
+import path, { join, dirname, basename } from 'path';
 
 
-const CONTENT_ROOT = path.join(process.cwd(), 'content')
-const BLOG_PATH = path.join(CONTENT_ROOT, 'blog')
-const HELP_PATH = path.join(CONTENT_ROOT, 'help')
+const CONTENT_ROOT = path.join(process.cwd(), 'content');
+const BLOG_PATH = path.join(CONTENT_ROOT, 'blog');
+const HELP_PATH = path.join(CONTENT_ROOT, 'help');
 
 
 // Base content interface
@@ -66,32 +66,32 @@ async function getContentFromPath<T extends BaseContent>(
       cwd: contentPath,
       absolute: true,
       onlyFiles: true,
-    })
+    });
 
     const content = await Promise.all(
       files.map(async (file) => {
-        const fullPath = path.isAbsolute(file) ? file : path.join(contentPath, file)
+        const fullPath = path.isAbsolute(file) ? file : path.join(contentPath, file);
         
         try {
-          const fileContents = await readFile(fullPath, 'utf8')
-          const { data } = matter(fileContents)
+          const fileContents = await readFile(fullPath, 'utf8');
+          const { data } = matter(fileContents);
           
           // FIXED: Create slug from relative path, not absolute path
-          const relativePath = path.relative(contentPath, fullPath)
-          const slug = relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/')
+          const relativePath = path.relative(contentPath, fullPath);
+          const slug = relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/');
           
-          return transformFn(slug, data, fullPath)
+          return transformFn(slug, data, fullPath);
         } catch (error) {
-          console.error(`Error reading ${file}:`, error)
-          return null
+          console.error(`Error reading ${file}:`, error);
+          return null;
         }
       })
-    )
+    );
 
-    return content.filter(Boolean) as T[]
+    return content.filter(Boolean) as T[];
   } catch (error) {
-    console.error(`Error reading content from ${contentPath}:`, error)
-    return []
+    console.error(`Error reading content from ${contentPath}:`, error);
+    return [];
   }
 }
 
@@ -101,26 +101,26 @@ async function getSingleContent<T extends BaseContent>(
   transformFn: (slug: string, data: any, fullPath: string) => T
 ): Promise<T | null> {
   try {
-    const fullPath = path.isAbsolute(slug) ? slug : path.join(contentPath, `${slug}.mdx`)
-    const fileContents = await readFile(fullPath, 'utf8')
-    const { data } = matter(fileContents)
+    const fullPath = path.isAbsolute(slug) ? slug : path.join(contentPath, `${slug}.mdx`);
+    const fileContents = await readFile(fullPath, 'utf8');
+    const { data } = matter(fileContents);
     
-    return transformFn(slug, data, fullPath)
+    return transformFn(slug, data, fullPath);
   } catch (error) {
-    console.error(`Error reading content ${slug}:`, error)
-    return null
+    console.error(`Error reading content ${slug}:`, error);
+    return null;
   }
 }
 
 async function getMDXContent(contentPath: string, slug: string): Promise<string | null> {
   try {
-    const fullPath = path.isAbsolute(slug) ? slug : path.join(contentPath, `${slug}.mdx`)
-    const fileContents = await readFile(fullPath, 'utf8')
-    const { content } = matter(fileContents)
-    return content
+    const fullPath = path.isAbsolute(slug) ? slug : path.join(contentPath, `${slug}.mdx`);
+    const fileContents = await readFile(fullPath, 'utf8');
+    const { content } = matter(fileContents);
+    return content;
   } catch (error) {
-    console.error(`Error reading content ${slug}:`, error)
-    return null
+    console.error(`Error reading content ${slug}:`, error);
+    return null;
   }
 }
 
@@ -135,81 +135,81 @@ const transformBlogPost = (slug: string, data: any): BlogPost => ({
   mainImage: data.mainImage || null,
   author: data.author || null,
   categories: data.categories || [],
-})
+});
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  const posts = await getContentFromPath(BLOG_PATH, '*.mdx', transformBlogPost)
-  return posts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+  const posts = await getContentFromPath(BLOG_PATH, '*.mdx', transformBlogPost);
+  return posts.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  return getSingleContent(BLOG_PATH, slug, transformBlogPost)
+  return getSingleContent(BLOG_PATH, slug, transformBlogPost);
 }
 
 export async function getBlogPostContent(slug: string): Promise<string | null> {
-  return getMDXContent(BLOG_PATH, slug)
+  return getMDXContent(BLOG_PATH, slug);
 }
 
 export async function getFeaturedPosts(limit: number = 3): Promise<BlogPost[]> {
-  const allPosts = await getAllBlogPosts()
-  return allPosts.filter((post) => post.isFeatured).slice(0, limit)
+  const allPosts = await getAllBlogPosts();
+  return allPosts.filter((post) => post.isFeatured).slice(0, limit);
 }
 
 export async function getPosts(startIndex: number = 0, endIndex: number = 5, category?: string): Promise<BlogPost[]> {
-  const allPosts = await getAllBlogPosts()
-  let filteredPosts = allPosts
+  const allPosts = await getAllBlogPosts();
+  let filteredPosts = allPosts;
 
   if (category) {
-    filteredPosts = allPosts.filter((post) => post.categories?.some((cat) => cat.slug === category))
+    filteredPosts = allPosts.filter((post) => post.categories?.some((cat) => cat.slug === category));
   }
 
   if (!category) {
-    filteredPosts = filteredPosts.filter((post) => !post.isFeatured)
+    filteredPosts = filteredPosts.filter((post) => !post.isFeatured);
   }
 
-  return filteredPosts.slice(startIndex, endIndex)
+  return filteredPosts.slice(startIndex, endIndex);
 }
 
 export async function getPostsCount(category?: string): Promise<number> {
-  const allPosts = await getAllBlogPosts()
+  const allPosts = await getAllBlogPosts();
 
   if (category) {
-    return allPosts.filter((post) => post.categories?.some((cat) => cat.slug === category)).length
+    return allPosts.filter((post) => post.categories?.some((cat) => cat.slug === category)).length;
   }
 
-  return allPosts.filter((post) => !post.isFeatured).length
+  return allPosts.filter((post) => !post.isFeatured).length;
 }
 
 export async function getCategories(): Promise<BlogCategory[]> {
-  const allPosts = await getAllBlogPosts()
-  const categoryMap = new Map<string, string>()
+  const allPosts = await getAllBlogPosts();
+  const categoryMap = new Map<string, string>();
 
   allPosts.forEach((post) => {
     post.categories?.forEach((category) => {
-      categoryMap.set(category.slug, category.title)
-    })
-  })
+      categoryMap.set(category.slug, category.title);
+    });
+  });
 
   return Array.from(categoryMap.entries())
     .map(([slug, title]) => ({ slug, title }))
-    .sort((a, b) => a.title.localeCompare(b.title))
+    .sort((a, b) => a.title.localeCompare(b.title));
 }
 
 export async function getPostsForFeed(): Promise<BlogPost[]> {
-  const allPosts = await getAllBlogPosts()
+  const allPosts = await getAllBlogPosts();
   return allPosts.sort((a, b) => {
-    if (a.isFeatured && !b.isFeatured) return -1
-    if (!a.isFeatured && b.isFeatured) return 1
-    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-  })
+    if (a.isFeatured && !b.isFeatured) return -1;
+    if (!a.isFeatured && b.isFeatured) return 1;
+    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+  });
 }
 
 
 const transformHelpArticle = (slug: string, data: any): HelpArticle => {
   // Extract section and subsection from slug path
-  const pathParts = slug.split('/')
-  const section = pathParts[0] || ''
-  const subsection = pathParts[1] || undefined
+  const pathParts = slug.split('/');
+  const section = pathParts[0] || '';
+  const subsection = pathParts[1] || undefined;
 
   return {
     slug,
@@ -221,43 +221,43 @@ const transformHelpArticle = (slug: string, data: any): HelpArticle => {
     order: data.order || 0,
     tags: data.tags || [],
     lastUpdated: data.lastUpdated || data.publishedAt || new Date().toISOString(),
-  }
-}
+  };
+};
 
 export async function getAllHelpArticles(): Promise<HelpArticle[]> {
   // Help uses nested structure (**/*.mdx) - supports folder hierarchy
-  const articles = await getContentFromPath(HELP_PATH, '**/*.mdx', transformHelpArticle)
+  const articles = await getContentFromPath(HELP_PATH, '**/*.mdx', transformHelpArticle);
   return articles.sort((a, b) => {
     // Sort by section, then by order, then by title
     if (a.section !== b.section) {
-      return a.section.localeCompare(b.section)
+      return a.section.localeCompare(b.section);
     }
     if (a.order !== b.order) {
-      return (a.order || 0) - (b.order || 0)
+      return (a.order || 0) - (b.order || 0);
     }
-    return a.title.localeCompare(b.title)
-  })
+    return a.title.localeCompare(b.title);
+  });
 }
 
 export async function getHelpArticle(slug: string): Promise<HelpArticle | null> {
-  return getSingleContent(HELP_PATH, slug, transformHelpArticle)
+  return getSingleContent(HELP_PATH, slug, transformHelpArticle);
 }
 
 export async function getHelpArticleContent(slug: string): Promise<string | null> {
-  return getMDXContent(HELP_PATH, slug)
+  return getMDXContent(HELP_PATH, slug);
 }
 
 export async function getHelpSections(): Promise<HelpSection[]> {
-  const allArticles = await getAllHelpArticles()
-  const sectionsMap = new Map<string, HelpArticle[]>()
+  const allArticles = await getAllHelpArticles();
+  const sectionsMap = new Map<string, HelpArticle[]>();
 
   // Group articles by section
   allArticles.forEach((article) => {
     if (!sectionsMap.has(article.section)) {
-      sectionsMap.set(article.section, [])
+      sectionsMap.set(article.section, []);
     }
-    sectionsMap.get(article.section)!.push(article)
-  })
+    sectionsMap.get(article.section)!.push(article);
+  });
 
   // Convert to HelpSection array
   return Array.from(sectionsMap.entries())
@@ -266,32 +266,32 @@ export async function getHelpSections(): Promise<HelpSection[]> {
       slug,
       articles: articles.sort((a, b) => {
         if (a.order !== b.order) {
-          return (a.order || 0) - (b.order || 0)
+          return (a.order || 0) - (b.order || 0);
         }
-        return a.title.localeCompare(b.title)
+        return a.title.localeCompare(b.title);
       })
     }))
-    .sort((a, b) => a.title.localeCompare(b.title))
+    .sort((a, b) => a.title.localeCompare(b.title));
 }
 
 export async function getHelpArticlesBySection(section: string): Promise<HelpArticle[]> {
-  const allArticles = await getAllHelpArticles()
-  return allArticles.filter((article) => article.section === section)
+  const allArticles = await getAllHelpArticles();
+  return allArticles.filter((article) => article.section === section);
 }
 
 export async function getHelpArticlesByTag(tag: string): Promise<HelpArticle[]> {
-  const allArticles = await getAllHelpArticles()
-  return allArticles.filter((article) => article.tags?.includes(tag))
+  const allArticles = await getAllHelpArticles();
+  return allArticles.filter((article) => article.tags?.includes(tag));
 }
 
 // Utility function to get all unique tags from help articles
 export async function getHelpTags(): Promise<string[]> {
-  const allArticles = await getAllHelpArticles()
-  const tagsSet = new Set<string>()
+  const allArticles = await getAllHelpArticles();
+  const tagsSet = new Set<string>();
   
   allArticles.forEach((article) => {
-    article.tags?.forEach((tag) => tagsSet.add(tag))
-  })
+    article.tags?.forEach((tag) => tagsSet.add(tag));
+  });
   
-  return Array.from(tagsSet).sort()
+  return Array.from(tagsSet).sort();
 }

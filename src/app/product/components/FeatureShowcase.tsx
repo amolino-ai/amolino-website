@@ -1,9 +1,9 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { DecorativeTriangles } from '@/components/decorative-triangles'
-import { Screenshot } from '@/components/Screenshot'
-import { Heading } from '@/components/Text'
-import ComparisonSection from '@/components/comparison-section'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { DecorativeTriangles } from '@/components/decorative-triangles';
+import { Screenshot } from '@/components/Screenshot';
+import { Heading } from '@/components/Text';
+import ComparisonSection from '@/components/comparison-section';
 
 interface Feature {
   icon: React.ReactNode
@@ -76,5 +76,5 @@ export default function FeatureShowcase({
         />
       </Container>
     </div>
-  )
+  );
 } 

@@ -1,6 +1,6 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Heading } from '@/components/Text'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Text';
 
 interface BottomCTAProps {
   heading: string
@@ -36,5 +36,5 @@ export function BottomCTA({
         </div>
       </Container>
     </div>
-  )
+  );
 } 

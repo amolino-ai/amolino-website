@@ -1,18 +1,18 @@
-import { defineQuery } from 'next-sanity'
-import { sanityFetch } from './client'
+import { defineQuery } from 'next-sanity';
+import { sanityFetch } from './client';
 
 const TOTAL_POSTS_QUERY = defineQuery(/* groq */ `count(*[
   _type == "post"
   && defined(slug.current)
   && (isFeatured != true || defined($category))
   && select(defined($category) => $category in categories[]->slug.current, true)
-])`)
+])`);
 
 export async function getPostsCount(category?: string) {
   return await sanityFetch({
     query: TOTAL_POSTS_QUERY,
     params: { category: category ?? null },
-  })
+  });
 }
 
 const POSTS_QUERY = defineQuery(/* groq */ `*[
@@ -29,7 +29,7 @@ const POSTS_QUERY = defineQuery(/* groq */ `*[
     name,
     image,
   },
-}`)
+}`);
 
 export async function getPosts(
   startIndex: number,
@@ -43,7 +43,7 @@ export async function getPosts(
       endIndex,
       category: category ?? null,
     },
-  })
+  });
 }
 
 const FEATURED_POSTS_QUERY = defineQuery(/* groq */ `*[
@@ -60,13 +60,13 @@ const FEATURED_POSTS_QUERY = defineQuery(/* groq */ `*[
     name,
     image,
   },
-}`)
+}`);
 
 export async function getFeaturedPosts(quantity: number) {
   return await sanityFetch({
     query: FEATURED_POSTS_QUERY,
     params: { quantity },
-  })
+  });
 }
 
 const FEED_POSTS_QUERY = defineQuery(/* groq */ `*[
@@ -81,12 +81,12 @@ const FEED_POSTS_QUERY = defineQuery(/* groq */ `*[
   author->{
     name,
   },
-}`)
+}`);
 
 export async function getPostsForFeed() {
   return await sanityFetch({
     query: FEED_POSTS_QUERY,
-  })
+  });
 }
 
 const POST_QUERY = defineQuery(/* groq */ `*[
@@ -107,13 +107,13 @@ const POST_QUERY = defineQuery(/* groq */ `*[
     "slug": slug.current,
   }
 }
-`)
+`);
 
 export async function getPost(slug: string) {
   return await sanityFetch({
     query: POST_QUERY,
     params: { slug },
-  })
+  });
 }
 
 const CATEGORIES_QUERY = defineQuery(/* groq */ `*[
@@ -122,10 +122,10 @@ const CATEGORIES_QUERY = defineQuery(/* groq */ `*[
 ]|order(title asc){
   title,
   "slug": slug.current,
-}`)
+}`);
 
 export async function getCategories() {
   return await sanityFetch({
     query: CATEGORIES_QUERY,
-  })
+  });
 }

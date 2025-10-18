@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 function SunIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -9,15 +9,15 @@ function SunIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         d="M10 5.5v-1M13.182 6.818l.707-.707M14.5 10h1M13.182 13.182l.707.707M10 15.5v-1M6.11 13.889l.708-.707M4.5 10h1M6.11 6.111l.708.707"
       />
     </svg>
-  )
+  );
 }
 
 export function ThemeToggle() {
-  let [mounted, setMounted] = useState(false)
+  let [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   return (
     <div
@@ -27,5 +27,5 @@ export function ThemeToggle() {
       <span className="absolute size-12 [@media(pointer:fine)]:hidden" />
       <SunIcon className="h-5 w-5 stroke-zinc-900" />
     </div>
-  )
+  );
 }

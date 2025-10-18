@@ -1,6 +1,6 @@
-import { Badge } from '@/components/Badge'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import { Badge } from '@/components/Badge';
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
 
 interface HeroProps {
   badgeText: string
@@ -41,5 +41,5 @@ export function Hero({
         </div>
       </Container>
     </div>
-  )
+  );
 } 

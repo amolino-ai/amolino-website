@@ -1,8 +1,8 @@
-import { Hero } from '../components/Hero'
-import { Challenge } from '../components/Challenge'
-import { Solution } from '../components/Solution'
-import { Impact } from '../components/Impact'
-import { BottomCTA } from '../components/BottomCTA'
+import { Hero } from '../components/Hero';
+import { Challenge } from '../components/Challenge';
+import { Solution } from '../components/Solution';
+import { Impact } from '../components/Impact';
+import { BottomCTA } from '../components/BottomCTA';
 
 export default function AccountManagementAndDealTracking() {
   return (
@@ -128,5 +128,5 @@ export default function AccountManagementAndDealTracking() {
         secondaryButtonLink="/contact"
       />
     </main>
-  )
+  );
 }

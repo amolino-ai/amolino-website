@@ -1,5 +1,5 @@
-import { Container } from '@/components/Container'
-import { Heading } from '@/components/Text'
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Text';
 
 export function SecuritySection() {
   return (
@@ -57,5 +57,5 @@ export function SecuritySection() {
         </div>
       </Container>
     </div>
-  )
+  );
 } 

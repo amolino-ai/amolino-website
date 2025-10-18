@@ -13,5 +13,5 @@ export function Badge({
     <div className={`inline-flex items-center rounded-full px-3 py-1 text-sm ${backgroundColor}`}>
       <span className={`font-medium ${textColor}`}>{text}</span>
     </div>
-  )
+  );
 } 

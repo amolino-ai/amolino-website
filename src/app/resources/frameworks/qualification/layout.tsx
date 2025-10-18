@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Sales Qualification Frameworks',
   description:
     'Explore proven sales qualification frameworks like BANT, MEDDIC, SPICED, and more to improve your sales process and close more deals.',
-}
+};
 
 export default function QualificationFrameworksLayout({ children }: { children: React.ReactNode }) {
   const items = [
@@ -30,5 +30,5 @@ export default function QualificationFrameworksLayout({ children }: { children: 
         {children}
       </main>
     </>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import SectionHeading from './SectionHeading'
+import SectionHeading from './SectionHeading';
 
 export default function BestPractices() {
   return (
@@ -120,5 +120,5 @@ export default function BestPractices() {
         </p>
       </div>
     </section>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {
   Disclosure,
@@ -7,13 +7,13 @@ import {
   Popover,
   PopoverButton,
   PopoverPanel,
-} from '@headlessui/react'
-import { Bars2Icon, ChevronDownIcon } from '@heroicons/react/24/solid'
-import { motion, AnimatePresence } from 'framer-motion'
+} from '@headlessui/react';
+import { Bars2Icon, ChevronDownIcon } from '@heroicons/react/24/solid';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from '@/components/Link';
-import { Logo } from '@/components/Logo'
-import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
-import { useState } from 'react'
+import { Logo } from '@/components/Logo';
+import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid';
+import { useState } from 'react';
 
 const products = [
   {
@@ -40,7 +40,7 @@ const products = [
     description: 'All customer interactions, contacts, and documents in one place for faster collaboration',
     icon: '/icons/customer-360.svg'
   },
-]
+];
 
 const links = [
   { href: '/pricing', label: 'Pricing' },
@@ -48,14 +48,14 @@ const links = [
   { href: '/blog', label: 'Blog' },
   { href: '/use-cases', label: 'Use Cases' },
   { href: 'https://app.amolino.ai', label: 'Login' },
-]
+];
 
 function ProductDropdown() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   
   const handleLinkClick = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
   
   return (
     <Popover className="relative h-full">
@@ -117,7 +117,7 @@ function ProductDropdown() {
         </div>
       )}
     </Popover>
-  )
+  );
 }
 
 function DesktopNav() {
@@ -137,7 +137,7 @@ function DesktopNav() {
         </div>
       ))}
     </nav>
-  )
+  );
 }
 
 function MobileNavButton() {
@@ -148,7 +148,7 @@ function MobileNavButton() {
     >
       <Bars2Icon className="size-6" />
     </DisclosureButton>
-  )
+  );
 }
 
 function MobileNav() {
@@ -198,7 +198,7 @@ function MobileNav() {
         <div className="absolute inset-x-0 top-2 border-t border-black/5" />
       </div>
     </DisclosurePanel>
-  )
+  );
 }
 
 export function Navbar({ banner }: { banner?: React.ReactNode }) {
@@ -224,5 +224,5 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
       </PlusGrid>
       <MobileNav />
     </Disclosure>
-  )
+  );
 }

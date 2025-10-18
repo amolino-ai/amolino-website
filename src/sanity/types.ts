@@ -19,7 +19,7 @@ export type SanityImagePaletteSwatch = {
   foreground?: string
   population?: number
   title?: string
-}
+};
 
 export type SanityImagePalette = {
   _type: 'sanity.imagePalette'
@@ -30,14 +30,14 @@ export type SanityImagePalette = {
   dominant?: SanityImagePaletteSwatch
   lightMuted?: SanityImagePaletteSwatch
   muted?: SanityImagePaletteSwatch
-}
+};
 
 export type SanityImageDimensions = {
   _type: 'sanity.imageDimensions'
   height?: number
   width?: number
   aspectRatio?: number
-}
+};
 
 export type SanityFileAsset = {
   _id: string
@@ -59,14 +59,14 @@ export type SanityFileAsset = {
   path?: string
   url?: string
   source?: SanityAssetSourceData
-}
+};
 
 export type Geopoint = {
   _type: 'geopoint'
   lat?: number
   lng?: number
   alt?: number
-}
+};
 
 export type Post = {
   _id: string
@@ -142,7 +142,7 @@ export type Post = {
         _key: string
       }
   >
-}
+};
 
 export type Author = {
   _id: string
@@ -163,7 +163,7 @@ export type Author = {
     crop?: SanityImageCrop
     _type: 'image'
   }
-}
+};
 
 export type Category = {
   _id: string
@@ -173,13 +173,13 @@ export type Category = {
   _rev: string
   title?: string
   slug?: Slug
-}
+};
 
 export type Slug = {
   _type: 'slug'
   current?: string
   source?: string
-}
+};
 
 export type BlockContent = Array<
   | {
@@ -218,7 +218,7 @@ export type BlockContent = Array<
       _type: 'image'
       _key: string
     }
->
+>;
 
 export type SanityImageCrop = {
   _type: 'sanity.imageCrop'
@@ -226,7 +226,7 @@ export type SanityImageCrop = {
   bottom?: number
   left?: number
   right?: number
-}
+};
 
 export type SanityImageHotspot = {
   _type: 'sanity.imageHotspot'
@@ -234,7 +234,7 @@ export type SanityImageHotspot = {
   y?: number
   height?: number
   width?: number
-}
+};
 
 export type SanityImageAsset = {
   _id: string
@@ -257,14 +257,14 @@ export type SanityImageAsset = {
   url?: string
   metadata?: SanityImageMetadata
   source?: SanityAssetSourceData
-}
+};
 
 export type SanityAssetSourceData = {
   _type: 'sanity.assetSourceData'
   name?: string
   id?: string
   url?: string
-}
+};
 
 export type SanityImageMetadata = {
   _type: 'sanity.imageMetadata'
@@ -275,7 +275,7 @@ export type SanityImageMetadata = {
   blurHash?: string
   hasAlpha?: boolean
   isOpaque?: boolean
-}
+};
 
 export type AllSanitySchemaTypes =
   | SanityImagePaletteSwatch
@@ -292,12 +292,12 @@ export type AllSanitySchemaTypes =
   | SanityImageHotspot
   | SanityImageAsset
   | SanityAssetSourceData
-  | SanityImageMetadata
-export declare const internalGroqTypeReferenceTo: unique symbol
+  | SanityImageMetadata;
+export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./src/sanity/queries.ts
 // Variable: TOTAL_POSTS_QUERY
 // Query: count(*[  _type == "post"  && defined(slug.current)  && (isFeatured != true || defined($category))  && select(defined($category) => $category in categories[]->slug.current, true)])
-export type TOTAL_POSTS_QUERYResult = number
+export type TOTAL_POSTS_QUERYResult = number;
 // Variable: POSTS_QUERY
 // Query: *[  _type == "post"  && defined(slug.current)  && (isFeatured != true || defined($category))  && select(defined($category) => $category in categories[]->slug.current, true)]|order(publishedAt desc)[$startIndex...$endIndex]{  title,  "slug": slug.current,  publishedAt,  excerpt,  author->{    name,    image,  },}
 export type POSTS_QUERYResult = Array<{
@@ -319,7 +319,7 @@ export type POSTS_QUERYResult = Array<{
       _type: 'image'
     } | null
   } | null
-}>
+}>;
 // Variable: FEATURED_POSTS_QUERY
 // Query: *[  _type == "post"  && isFeatured == true  && defined(slug.current)]|order(publishedAt desc)[0...$quantity]{  title,  "slug": slug.current,  publishedAt,  mainImage,  excerpt,  author->{    name,    image,  },}
 export type FEATURED_POSTS_QUERYResult = Array<{
@@ -353,7 +353,7 @@ export type FEATURED_POSTS_QUERYResult = Array<{
       _type: 'image'
     } | null
   } | null
-}>
+}>;
 // Variable: FEED_POSTS_QUERY
 // Query: *[  _type == "post"  && defined(slug.current)]|order(isFeatured, publishedAt desc){  title,  "slug": slug.current,  publishedAt,  mainImage,  excerpt,  author->{    name,  },}
 export type FEED_POSTS_QUERYResult = Array<{
@@ -376,7 +376,7 @@ export type FEED_POSTS_QUERYResult = Array<{
   author: {
     name: string | null
   } | null
-}>
+}>;
 // Variable: POST_QUERY
 // Query: *[  _type == "post"  && slug.current == $slug][0]{  publishedAt,  title,  mainImage,  excerpt,  body,  author->{    name,    image,  },  categories[]->{    title,    "slug": slug.current,  }}
 export type POST_QUERYResult = {
@@ -451,16 +451,16 @@ export type POST_QUERYResult = {
     title: string | null
     slug: string | null
   }> | null
-} | null
+} | null;
 // Variable: CATEGORIES_QUERY
 // Query: *[  _type == "category"  && count(*[_type == "post" && defined(slug.current) && ^._id in categories[]._ref]) > 0]|order(title asc){  title,  "slug": slug.current,}
 export type CATEGORIES_QUERYResult = Array<{
   title: string | null
   slug: string | null
-}>
+}>;
 
 // Query TypeMap
-import '@sanity/client'
+import '@sanity/client';
 declare module '@sanity/client' {
   interface SanityQueries {
     'count(*[\n  _type == "post"\n  && defined(slug.current)\n  && (isFeatured != true || defined($category))\n  && select(defined($category) => $category in categories[]->slug.current, true)\n])': TOTAL_POSTS_QUERYResult

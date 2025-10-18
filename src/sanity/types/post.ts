@@ -1,7 +1,7 @@
-import { DocumentIcon } from '@heroicons/react/16/solid'
-import { groq } from 'next-sanity'
-import { defineField, defineType } from 'sanity'
-import { apiVersion } from '../env'
+import { DocumentIcon } from '@heroicons/react/16/solid';
+import { groq } from 'next-sanity';
+import { defineField, defineType } from 'sanity';
+import { apiVersion } from '../env';
 
 export const postType = defineType({
   name: 'post',
@@ -38,18 +38,18 @@ export const postType = defineType({
       validation: (Rule) =>
         Rule.custom(async (isFeatured, { getClient }) => {
           if (isFeatured !== true) {
-            return true
+            return true;
           }
 
           let featuredPosts = await getClient({ apiVersion })
             .withConfig({ perspective: 'previewDrafts' })
             .fetch<number>(
               groq`count(*[_type == 'post' && isFeatured == true])`,
-            )
+            );
 
           return featuredPosts > 3
             ? 'Only 3 posts can be featured at a time.'
-            : true
+            : true;
         }),
     }),
     defineField({
@@ -100,7 +100,7 @@ export const postType = defineType({
           .filter(Boolean)
           .join(' | '),
         media,
-      }
+      };
     },
   },
   orderings: [
@@ -113,4 +113,4 @@ export const postType = defineType({
       ],
     },
   ],
-})
+});

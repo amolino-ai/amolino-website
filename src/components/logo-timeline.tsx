@@ -1,5 +1,5 @@
-import { clsx } from 'clsx'
-import { Logo } from './Logo'
+import { clsx } from 'clsx';
+import { Logo } from './Logo';
 
 function Row({ children }: { children: React.ReactNode }) {
   return (
@@ -8,7 +8,7 @@ function Row({ children }: { children: React.ReactNode }) {
       <div className="absolute inset-x-0 bottom-0 h-0.5 bg-linear-to-r from-white/5 from-[2px] to-[2px] bg-[length:12px_100%] group-last:hidden" />
       {children}
     </div>
-  )
+  );
 }
 
 function LogoItem({
@@ -32,7 +32,7 @@ function LogoItem({
       <img alt="" src={src} className="size-4" />
       <span className="text-sm/6 font-medium text-white">{label}</span>
     </div>
-  )
+  );
 }
 
 export function LogoTimeline() {
@@ -126,5 +126,5 @@ export function LogoTimeline() {
         </Row>
       </div>
     </div>
-  )
+  );
 }

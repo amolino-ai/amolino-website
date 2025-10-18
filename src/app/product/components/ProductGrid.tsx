@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Screenshot } from '@/components/Screenshot'
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { Screenshot } from '@/components/Screenshot';
 
 interface Product {
   name: string
@@ -24,12 +24,12 @@ const container = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 },
-}
+};
 
 export default function ProductGrid({ products }: ProductGridProps) {
   return (
@@ -105,5 +105,5 @@ export default function ProductGrid({ products }: ProductGridProps) {
         </motion.div>
       ))}
     </motion.div>
-  )
+  );
 } 

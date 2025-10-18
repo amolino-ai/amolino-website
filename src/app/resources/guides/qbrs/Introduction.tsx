@@ -1,4 +1,4 @@
-import SectionHeading from './SectionHeading'
+import SectionHeading from './SectionHeading';
 
 export default function Introduction() {
   return (
@@ -85,5 +85,5 @@ export default function Introduction() {
         </div>
       </div>
     </section>
-  )
+  );
 }

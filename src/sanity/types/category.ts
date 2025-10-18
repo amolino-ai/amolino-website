@@ -1,5 +1,5 @@
-import { TagIcon } from '@heroicons/react/16/solid'
-import { defineField, defineType } from 'sanity'
+import { TagIcon } from '@heroicons/react/16/solid';
+import { defineField, defineType } from 'sanity';
 
 export const categoryType = defineType({
   name: 'category',
@@ -18,4 +18,4 @@ export const categoryType = defineType({
       },
     }),
   ],
-})
+});

@@ -1,26 +1,26 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/footer'
-import * as mdxComponents from '@/components/Mdx'
-import { getBlogPost, getBlogPostContent } from '@/lib/content'
-import { cn } from '@/lib/utils' // or import clsx from 'clsx'
-import { ChevronLeftIcon } from '@heroicons/react/16/solid'
-import dayjs from 'dayjs'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import { notFound } from 'next/navigation'
-import styles from '../blog.module.css'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/footer';
+import * as mdxComponents from '@/components/Mdx';
+import { getBlogPost, getBlogPostContent } from '@/lib/content';
+import { cn } from '@/lib/utils'; // or import clsx from 'clsx'
+import { ChevronLeftIcon } from '@heroicons/react/16/solid';
+import dayjs from 'dayjs';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import { notFound } from 'next/navigation';
+import styles from '../blog.module.css';
 
 
 export const dynamic = 'force-static';
 export const revalidate = 0; 
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const post = await getBlogPost(slug)
-  const content = await getBlogPostContent(slug)
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
+  const content = await getBlogPostContent(slug);
 
   if (!post || !content) {
-    notFound()
+    notFound();
   }
 
 
@@ -76,5 +76,5 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       </Container>
       <Footer />
     </main>
-  )
+  );
 }

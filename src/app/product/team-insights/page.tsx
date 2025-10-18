@@ -1,6 +1,6 @@
-import BottomFeature from '@/app/product/components/BottomFeature'
-import FeatureShowcase from '@/app/product/components/FeatureShowcase'
-import Hero from '@/app/product/components/Hero'
+import BottomFeature from '@/app/product/components/BottomFeature';
+import FeatureShowcase from '@/app/product/components/FeatureShowcase';
+import Hero from '@/app/product/components/Hero';
 
 const features = [
   {
@@ -43,7 +43,7 @@ const features = [
     title: 'Coaching Opportunities',
     description: 'Identify coaching opportunities and provide targeted guidance to help your team succeed.',
   },
-]
+];
 
 export default function TeamInsights() {
   return (
@@ -98,5 +98,5 @@ export default function TeamInsights() {
         screenshotSrc="/screenshots/dashboard_managers_view_april_2025.jpg"
       />
     </>
-  )
+  );
 }

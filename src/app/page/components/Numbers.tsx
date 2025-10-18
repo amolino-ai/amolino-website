@@ -27,5 +27,5 @@ export function NumbersSection() {
           </div>
         </dl>
       </div>
-    )
+    );
   }

@@ -1,8 +1,8 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Heading, Subheading } from '@/components/Text'
-import { ChevronRightIcon } from '@heroicons/react/16/solid'
-import Image from 'next/image'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Heading, Subheading } from '@/components/Text';
+import { ChevronRightIcon } from '@heroicons/react/16/solid';
+import Image from 'next/image';
 
 interface IntegrationCategoryProps {
   title: 'MEETINGS' | 'EMAIL' | 'MESSAGING' | 'CRM'
@@ -21,15 +21,15 @@ const IntegrationCategory = ({ title, children }: IntegrationCategoryProps) => {
     EMAIL: 'bg-purple-100',
     MESSAGING: 'bg-green-100',
     CRM: 'bg-blue-100',
-  } as const
+  } as const;
 
   return (
     <div className="flex flex-col items-center">
       <div className={`mb-4 rounded-full px-4 py-1 font-medium ${categoryColors[title]}`}>{title}</div>
       <div className="flex flex-wrap justify-center gap-4">{children}</div>
     </div>
-  )
-}
+  );
+};
 
 const IntegrationIcon = ({ name, src, alt }: IntegrationIconProps) => {
   return (
@@ -38,8 +38,8 @@ const IntegrationIcon = ({ name, src, alt }: IntegrationIconProps) => {
         <Image src={src} alt={alt || `${name} logo`} width={40} height={40} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export function IntegrationsSection() {
   return (
@@ -87,5 +87,5 @@ export function IntegrationsSection() {
         </div>
       </Container>
     </div>
-  )
+  );
 }

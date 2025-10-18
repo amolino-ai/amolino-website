@@ -1,6 +1,6 @@
-import { Container } from '@/components/Container'
-import { Heading } from '@/components/Text'
-import { XMarkIcon, CheckIcon, MinusIcon } from '@heroicons/react/16/solid'
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Text';
+import { XMarkIcon, CheckIcon, MinusIcon } from '@heroicons/react/16/solid';
 
 interface ComparisonItem {
   text: string
@@ -62,7 +62,7 @@ export function ComparisonSection({
         </div>
       </div>
     </Container>
-  )
+  );
 }
 
-export default ComparisonSection 
+export default ComparisonSection; 

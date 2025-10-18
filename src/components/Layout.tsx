@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 
-import { Footer } from '@/components/footer'
-import { type Section, SectionProvider } from '@/components/SectionProvider'
+import { Footer } from '@/components/footer';
+import { type Section, SectionProvider } from '@/components/SectionProvider';
 
 export function Layout({
   children,
@@ -12,7 +12,7 @@ export function Layout({
   children: React.ReactNode
   allSections: Record<string, Array<Section>>
 }) {
-  let pathname = usePathname()
+  let pathname = usePathname();
 
   return (
       <SectionProvider sections={allSections[pathname] ?? []}>
@@ -43,5 +43,5 @@ export function Layout({
           </div>
         </div>
       </SectionProvider>
-  )
+  );
 }

@@ -1,18 +1,18 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Gradient } from '@/components/Gradient'
-import { Link } from '@/components/Link'
-import { LogoCloud } from '@/components/logo-cloud'
-import { Heading, Lead, Subheading } from '@/components/Text'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { CheckIcon, ChevronUpDownIcon, MinusIcon } from '@heroicons/react/16/solid'
-import type { Metadata } from 'next'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Gradient } from '@/components/Gradient';
+import { Link } from '@/components/Link';
+import { LogoCloud } from '@/components/logo-cloud';
+import { Heading, Lead, Subheading } from '@/components/Text';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import { CheckIcon, ChevronUpDownIcon, MinusIcon } from '@heroicons/react/16/solid';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
     'Companies all over the world have closed millions of deals with Amolino. Sign up today and start selling smarter.',
-}
+};
 
 const tiers = [
   {
@@ -132,7 +132,7 @@ const tiers = [
       { section: 'Revenue Analytics and Forecasting', name: 'Real-time insights into deals', value: true },
     ],
   },
-]
+];
 
 function Header() {
   return (
@@ -143,7 +143,7 @@ function Header() {
         Amolino. Sign up today and start selling smarter.
       </Lead>
     </Container>
-  )
+  );
 }
 
 function PricingCards() {
@@ -158,7 +158,7 @@ function PricingCards() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
 
 function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
@@ -189,7 +189,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function PricingTable({ selectedTier }: { selectedTier: (typeof tiers)[number] }) {
@@ -298,7 +298,7 @@ function PricingTable({ selectedTier }: { selectedTier: (typeof tiers)[number] }
                   {tiers.map((tier) => {
                     let value = tier.features.find(
                       (feature) => feature.section === section && feature.name === name,
-                    )?.value
+                    )?.value;
 
                     return (
                       <td
@@ -320,7 +320,7 @@ function PricingTable({ selectedTier }: { selectedTier: (typeof tiers)[number] }
                           <div className="text-sm/6">{value}</div>
                         )}
                       </td>
-                    )
+                    );
                   })}
                 </tr>
               ))}
@@ -328,7 +328,7 @@ function PricingTable({ selectedTier }: { selectedTier: (typeof tiers)[number] }
         ))}
       </table>
     </Container>
-  )
+  );
 }
 
 function FeatureItem({ description, disabled = false }: { description: string; disabled?: boolean }) {
@@ -343,7 +343,7 @@ function FeatureItem({ description, disabled = false }: { description: string; d
       {disabled && <span className="sr-only">Not included:</span>}
       {description}
     </li>
-  )
+  );
 }
 
 function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -351,7 +351,7 @@ function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     <svg viewBox="0 0 15 15" aria-hidden="true" {...props}>
       <path clipRule="evenodd" d="M8 0H7v7H0v1h7v7h1V8h7V7H8V0z" />
     </svg>
-  )
+  );
 }
 
 function Testimonial() {
@@ -388,7 +388,7 @@ function Testimonial() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
 
 function FrequentlyAskedQuestions() {
@@ -449,14 +449,14 @@ function FrequentlyAskedQuestions() {
         </div>
       </section>
     </Container>
-  )
+  );
 }
 
 export default async function Pricing(
   props: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }
 ) {
   const searchParams = await props.searchParams;
-  let tier = typeof searchParams.tier === 'string' ? tiers.find(({ slug }) => slug === searchParams.tier)! : tiers[0]
+  let tier = typeof searchParams.tier === 'string' ? tiers.find(({ slug }) => slug === searchParams.tier)! : tiers[0];
 
   return (
     <main className="overflow-hidden">
@@ -467,5 +467,5 @@ export default async function Pricing(
       <FrequentlyAskedQuestions />
       <LogoCloud />
     </main>
-  )
+  );
 }

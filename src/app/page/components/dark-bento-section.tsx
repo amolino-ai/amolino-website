@@ -1,6 +1,6 @@
-import { BentoCard } from '@/components/bento-card'
-import { Container } from '@/components/Container'
-import { Heading, Subheading } from '@/components/Text'
+import { BentoCard } from '@/components/bento-card';
+import { Container } from '@/components/Container';
+import { Heading, Subheading } from '@/components/Text';
 
 export function DarkBentoSection() {
   return (
@@ -64,5 +64,5 @@ export function DarkBentoSection() {
         </div>
       </Container>
     </div>
-  )
+  );
 } 

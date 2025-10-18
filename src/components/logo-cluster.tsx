@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import { clsx } from 'clsx'
-import { motion } from 'framer-motion'
-import { Logo } from './Logo'
+import { clsx } from 'clsx';
+import { motion } from 'framer-motion';
+import { Logo } from './Logo';
 
 function Circle({
   size,
@@ -36,7 +36,7 @@ function Circle({
         'ring-1 ring-blue-500/[8%] ring-inset',
       )}
     />
-  )
+  );
 }
 
 function Circles() {
@@ -48,7 +48,7 @@ function Circles() {
       <Circle size={144} opacity="10%" delay={0} />
       <div className="absolute inset-0 bg-linear-to-t from-white to-35%" />
     </div>
-  )
+  );
 }
 
 function MainLogo() {
@@ -56,7 +56,7 @@ function MainLogo() {
     <div className="absolute top-32 left-44 flex size-16 items-center justify-center rounded-full bg-white ring-1 shadow-sm ring-black/5">
       <Logo className="h-9 fill-black" />
     </div>
-  )
+  );
 }
 
 function LogoImage({
@@ -92,7 +92,7 @@ function LogoImage({
       style={{ left, top } as React.CSSProperties}
       className="absolute size-16 rounded-full bg-white ring-1 shadow-sm ring-black/5"
     />
-  )
+  );
 }
 
 export function LogoCluster() {
@@ -139,5 +139,5 @@ export function LogoCluster() {
         />
       </div>
     </div>
-  )
+  );
 }

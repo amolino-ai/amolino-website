@@ -1,6 +1,6 @@
-import { Container } from '@/components/Container'
-import { Heading, Subheading } from '@/components/Text'
-import { StatsCard } from './StatsCard'
+import { Container } from '@/components/Container';
+import { Heading, Subheading } from '@/components/Text';
+import { StatsCard } from './StatsCard';
 
 interface ImpactProps {
   subheading: string
@@ -36,5 +36,5 @@ export function Impact({ subheading, heading, description, stats }: ImpactProps)
         </dl>
       </Container>
     </div>
-  )
+  );
 } 

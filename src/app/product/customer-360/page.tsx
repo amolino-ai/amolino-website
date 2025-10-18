@@ -1,6 +1,6 @@
-import FeatureShowcase from '@/app/product/components/FeatureShowcase'
-import BottomFeature from '@/app/product/components/BottomFeature'
-import Hero from '@/app/product/components/Hero'
+import FeatureShowcase from '@/app/product/components/FeatureShowcase';
+import BottomFeature from '@/app/product/components/BottomFeature';
+import Hero from '@/app/product/components/Hero';
 
 const features = [
   {
@@ -60,7 +60,7 @@ const features = [
     title: 'Relationship Insights',
     description: 'Understand customer relationships, identify upsell opportunities, and predict customer needs.',
   },
-]
+];
 
 export default function Customer360() {
   return (
@@ -115,5 +115,5 @@ export default function Customer360() {
         screenshotSrc="/screenshots/dashboard_rep_view_april_2025.jpg"
       />
     </>
-  )
+  );
 } 

@@ -1,7 +1,7 @@
-import { Badge } from '@/components/Badge'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Screenshot } from '@/components/Screenshot'
+import { Badge } from '@/components/Badge';
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Screenshot } from '@/components/Screenshot';
 
 interface HeroProps {
   badgeText: string
@@ -31,5 +31,5 @@ export default function Hero({ badgeText, title, description, ctaText, ctaHref, 
         </div>
       </Container>
     </div>
-  )
+  );
 }

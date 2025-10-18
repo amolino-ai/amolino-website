@@ -1,5 +1,5 @@
-import { Button } from '@/components/Button'
-import ProductGrid from './components/ProductGrid'
+import { Button } from '@/components/Button';
+import ProductGrid from './components/ProductGrid';
 
 const products = [
   {
@@ -31,7 +31,7 @@ const products = [
     screenshot: '/screenshots/dashboard_rep_view_april_2025.jpg',
     href: '/product/customer-360',
   },
-]
+];
 
 export default function ProductOverview() {
   return (
@@ -53,5 +53,5 @@ export default function ProductOverview() {
         <ProductGrid products={products} />
       </div>
     </>
-  )
+  );
 }

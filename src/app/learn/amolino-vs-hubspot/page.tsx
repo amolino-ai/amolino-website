@@ -1,9 +1,9 @@
-import { Badge } from '@/components/Badge'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Gradient } from '@/components/Gradient'
-import { Screenshot } from '@/components/Screenshot'
-import { Heading, Subheading } from '@/components/Text'
+import { Badge } from '@/components/Badge';
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Gradient } from '@/components/Gradient';
+import { Screenshot } from '@/components/Screenshot';
+import { Heading, Subheading } from '@/components/Text';
 
 function ComparisonCard({ title, amolino, hubspot }: { title: string; amolino: string; hubspot: string }) {
   return (
@@ -32,7 +32,7 @@ function ComparisonCard({ title, amolino, hubspot }: { title: string; amolino: s
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function FeatureCheck({ children }: { children: React.ReactNode }) {
@@ -47,7 +47,7 @@ function FeatureCheck({ children }: { children: React.ReactNode }) {
       </svg>
       <span className="text-gray-300">{children}</span>
     </li>
-  )
+  );
 }
 
 function Hero() {
@@ -76,7 +76,7 @@ function Hero() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
 
 function Comparisons() {
@@ -106,7 +106,7 @@ function Comparisons() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
 
 function Analysis() {
@@ -144,7 +144,7 @@ function Analysis() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
 
 function Benefits() {
@@ -166,7 +166,7 @@ function Benefits() {
         </ul>
       </Container>
     </div>
-  )
+  );
 }
 
 function BottomCTA() {
@@ -190,7 +190,7 @@ function BottomCTA() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
 
 export default function AmolinoVsHubspot() {
@@ -203,5 +203,5 @@ export default function AmolinoVsHubspot() {
       <Benefits />
       {/* <BottomCTA /> */}
     </>
-  )
+  );
 }

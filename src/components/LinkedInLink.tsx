@@ -1,4 +1,4 @@
-import { clsx } from 'clsx'
+import { clsx } from 'clsx';
 
 interface LinkedInLinkProps {
   /** The name of the person to display */
@@ -36,5 +36,5 @@ export function LinkedInLink({ name, url, className, children }: LinkedInLinkPro
         <span className="font-medium">{name}</span>
       </>
     </a>
-  )
+  );
 }

@@ -1,26 +1,26 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/footer'
-import { Link } from '@/components/Link'
-import { Heading, Lead, Subheading } from '@/components/Text'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/footer';
+import { Link } from '@/components/Link';
+import { Heading, Lead, Subheading } from '@/components/Text';
 import {
   getCategories,
   getFeaturedPosts,
   getPosts,
   getPostsCount,
-} from '@/lib/content'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+} from '@/lib/content';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import {
   CheckIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   ChevronUpDownIcon,
   RssIcon,
-} from '@heroicons/react/16/solid'
-import { clsx } from 'clsx'
-import dayjs from 'dayjs'
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+} from '@heroicons/react/16/solid';
+import { clsx } from 'clsx';
+import dayjs from 'dayjs';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 export const dynamic = 'force-static';
 export const revalidate = 0;
@@ -29,15 +29,15 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
-}
+};
 
-const postsPerPage = 5
+const postsPerPage = 5;
 
 async function FeaturedPosts() {
-  let featuredPosts = await getFeaturedPosts(3)
+  let featuredPosts = await getFeaturedPosts(3);
 
   if (featuredPosts.length === 0) {
-    return
+    return;
   }
 
   return (
@@ -90,14 +90,14 @@ async function FeaturedPosts() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
 
 async function Categories({ selected }: { selected?: string }) {
-  let categories = await getCategories()
+  let categories = await getCategories();
 
   if (categories.length === 0) {
-    return
+    return;
   }
 
   return (
@@ -141,7 +141,7 @@ async function Categories({ selected }: { selected?: string }) {
         RSS Feed
       </Button>
     </div>
-  )
+  );
 }
 
 async function Posts({ page, category }: { page: number; category?: string }) {
@@ -149,14 +149,14 @@ async function Posts({ page, category }: { page: number; category?: string }) {
     (page - 1) * postsPerPage,
     page * postsPerPage,
     category,
-  )
+  );
 
   if (posts.length === 0 && (page > 1 || category)) {
-    notFound()
+    notFound();
   }
 
   if (posts.length === 0) {
-    return <p className="mt-6 text-gray-500">No posts found.</p>
+    return <p className="mt-6 text-gray-500">No posts found.</p>;
   }
 
   return (
@@ -202,7 +202,7 @@ async function Posts({ page, category }: { page: number; category?: string }) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 async function Pagination({
@@ -213,23 +213,23 @@ async function Pagination({
   category?: string
 }) {
   function url(page: number) {
-    let params = new URLSearchParams()
+    let params = new URLSearchParams();
 
-    if (category) params.set('category', category)
-    if (page > 1) params.set('page', page.toString())
+    if (category) params.set('category', category);
+    if (page > 1) params.set('page', page.toString());
 
-    return params.size !== 0 ? `/blog?${params.toString()}` : '/blog'
+    return params.size !== 0 ? `/blog?${params.toString()}` : '/blog';
   }
 
-  let totalPosts = await getPostsCount(category)
-  let hasPreviousPage = page - 1
-  let previousPageUrl = hasPreviousPage ? url(page - 1) : undefined
-  let hasNextPage = page * postsPerPage < totalPosts
-  let nextPageUrl = hasNextPage ? url(page + 1) : undefined
-  let pageCount = Math.ceil(totalPosts / postsPerPage)
+  let totalPosts = await getPostsCount(category);
+  let hasPreviousPage = page - 1;
+  let previousPageUrl = hasPreviousPage ? url(page - 1) : undefined;
+  let hasNextPage = page * postsPerPage < totalPosts;
+  let nextPageUrl = hasNextPage ? url(page + 1) : undefined;
+  let pageCount = Math.ceil(totalPosts / postsPerPage);
 
   if (pageCount < 2) {
-    return
+    return;
   }
 
   return (
@@ -264,7 +264,7 @@ async function Pagination({
         <ChevronRightIcon className="size-4" />
       </Button>
     </div>
-  )
+  );
 }
 
 export default async function Blog(
@@ -278,12 +278,12 @@ export default async function Blog(
       ? typeof searchParams.page === 'string' && parseInt(searchParams.page) > 1
         ? parseInt(searchParams.page)
         : notFound()
-      : 1
+      : 1;
 
   let category =
     typeof searchParams.category === 'string'
       ? searchParams.category
-      : undefined
+      : undefined;
 
   return (
     <main className="overflow-hidden">
@@ -305,5 +305,5 @@ export default async function Blog(
       </Container>
       <Footer />
     </main>
-  )
+  );
 }

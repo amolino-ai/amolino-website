@@ -1,32 +1,32 @@
-import { Providers } from '@/app/providers'
-import { GradientBackground } from '@/components/Gradient'
-import { Layout } from '@/components/Layout'
-import { PostHogProvider } from '@/components/PostHogProvider'
-import { type Section } from '@/components/SectionProvider'
-import { Navbar } from '@/components/Navbar'
-import { Container } from '@/components/Container'
-import '@/styles/tailwind.css'
-import '@mantine/core/styles.css'
-import glob from 'fast-glob'
-import { type Metadata } from 'next'
-import { Inter, JetBrains_Mono, Lexend } from 'next/font/google'
+import { Providers } from '@/app/providers';
+import { GradientBackground } from '@/components/Gradient';
+import { Layout } from '@/components/Layout';
+import { PostHogProvider } from '@/components/PostHogProvider';
+import { type Section } from '@/components/SectionProvider';
+import { Navbar } from '@/components/Navbar';
+import { Container } from '@/components/Container';
+import '@/styles/tailwind.css';
+import '@mantine/core/styles.css';
+import glob from 'fast-glob';
+import { type Metadata } from 'next';
+import { Inter, JetBrains_Mono, Lexend } from 'next/font/google';
 
 // Font configurations
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
-})
+});
 const lexend = Lexend({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-lexend',
-})
+});
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-jetbrains-mono',
-})
+});
 
 // Next.js built-in metadata
 export const metadata: Metadata = {
@@ -49,18 +49,18 @@ export const metadata: Metadata = {
       },
     ],
   },
-}
+};
 
 
 export async function LayoutA({ children }: { children: React.ReactNode }) {
-  let pages = await glob('**/*.mdx', { cwd: 'src/app' })
+  let pages = await glob('**/*.mdx', { cwd: 'src/app' });
   let allSectionsEntries = (await Promise.all(
     pages.map(async (filename) => [
       '/' + filename.replace(/(^|\/)*page\.mdx$/, ''),
       (await import(`./${filename}`)).sections,
     ]),
-  )) as Array<[string, Array<Section>]>
-  let allSections = Object.fromEntries(allSectionsEntries)
+  )) as Array<[string, Array<Section>]>;
+  let allSections = Object.fromEntries(allSectionsEntries);
 
   return (
     <html
@@ -84,9 +84,9 @@ export async function LayoutA({ children }: { children: React.ReactNode }) {
         </PostHogProvider>
       </body>
     </html>
-  )
+  );
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  return <LayoutA>{children}</LayoutA>
+  return <LayoutA>{children}</LayoutA>;
 }

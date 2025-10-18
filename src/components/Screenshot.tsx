@@ -1,4 +1,4 @@
-import { clsx } from 'clsx'
+import { clsx } from 'clsx';
 
 export function Screenshot({
   width,
@@ -26,5 +26,5 @@ export function Screenshot({
         className="h-full rounded-[var(--radius)] ring-1 shadow-2xl ring-black/10"
       />
     </div>
-  )
+  );
 }

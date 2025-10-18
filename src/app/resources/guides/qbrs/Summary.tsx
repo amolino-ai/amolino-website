@@ -1,5 +1,5 @@
-import SectionHeading from './SectionHeading'
-import { Text, Box, Title, List, ListItem, Table } from '@mantine/core'
+import SectionHeading from './SectionHeading';
+import { Text, Box, Title, List, ListItem, Table } from '@mantine/core';
 
 export default function Summary() {
   return (
@@ -103,5 +103,5 @@ export default function Summary() {
         </Box>
       </div>
     </section>
-  )
+  );
 }

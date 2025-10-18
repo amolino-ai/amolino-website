@@ -1,21 +1,21 @@
 
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/footer'
-import { Link } from '@/components/Link'
-import * as mdxComponents from '@/components/Mdx'
-import { Heading, Lead, Subheading } from '@/components/Text'
-import { getHelpArticle, getHelpArticleContent, getAllHelpArticles, getHelpArticlesBySection } from '@/lib/content'
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/footer';
+import { Link } from '@/components/Link';
+import * as mdxComponents from '@/components/Mdx';
+import { Heading, Lead, Subheading } from '@/components/Text';
+import { getHelpArticle, getHelpArticleContent, getAllHelpArticles, getHelpArticlesBySection } from '@/lib/content';
 import { 
   ChevronRightIcon,
   TagIcon,
   ClockIcon,
   ArrowLeftIcon,
-} from '@heroicons/react/16/solid'
-import { clsx } from 'clsx'
-import dayjs from 'dayjs'
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import { MDXRemote } from 'next-mdx-remote/rsc'
+} from '@heroicons/react/16/solid';
+import { clsx } from 'clsx';
+import dayjs from 'dayjs';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 
 interface Props {
   params: Promise<{
@@ -27,28 +27,28 @@ export const dynamic = 'force-static';
 export const revalidate = 0;
 
 export async function generateStaticParams() {
-  const articles = await getAllHelpArticles()
+  const articles = await getAllHelpArticles();
   
   return articles.map((article) => ({
     slug: article.slug.split('/'),
-  }))
+  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const resolvedParams = await params
-  const slug = await resolvedParams.slug.join('/')
-  const article = await getHelpArticle(slug)
+  const resolvedParams = await params;
+  const slug = await resolvedParams.slug.join('/');
+  const article = await getHelpArticle(slug);
   
   if (!article) {
     return {
       title: 'Article Not Found',
-    }
+    };
   }
 
   return {
     title: article.title,
     description: article.excerpt,
-  }
+  };
 }
 
 async function Breadcrumb({ article }: { article: any }) {
@@ -71,18 +71,18 @@ async function Breadcrumb({ article }: { article: any }) {
         </>
       )}
     </nav>
-  )
+  );
 }
 
 async function RelatedArticles({ article }: { article: any }) {
   // Get other articles from the same section
-  const sectionArticles = await getHelpArticlesBySection(article.section)
+  const sectionArticles = await getHelpArticlesBySection(article.section);
   const relatedArticles = sectionArticles
     .filter(a => a.slug !== article.slug)
-    .slice(0, 3)
+    .slice(0, 3);
 
   if (relatedArticles.length === 0) {
-    return null
+    return null;
   }
 
   return (
@@ -121,30 +121,30 @@ async function RelatedArticles({ article }: { article: any }) {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 async function TableOfContents({ content }: { content: string }) {
   // Extract headings from MDX content for table of contents
   // This is a simple regex-based approach - you might want to use a proper MDX parser
-  const headingRegex = /^#{2,3}\s+(.+)$/gm
-  const headings = []
-  let match
+  const headingRegex = /^#{2,3}\s+(.+)$/gm;
+  const headings = [];
+  let match;
 
   while ((match = headingRegex.exec(content)) !== null) {
-    const level = match[0].indexOf(' ') - 1
-    const text = match[1]
-    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    const level = match[0].indexOf(' ') - 1;
+    const text = match[1];
+    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     
     headings.push({
       level,
       text,
       id,
-    })
+    });
   }
 
   if (headings.length === 0) {
-    return null
+    return null;
   }
 
   return (
@@ -169,17 +169,17 @@ async function TableOfContents({ content }: { content: string }) {
         </nav>
       </div>
     </div>
-  )
+  );
 }
 
 export default async function HelpArticlePage({ params }: Props) {
-  const resolvedParams = await params
-  const slug = await resolvedParams.slug.join('/')
-  const article = await getHelpArticle(slug)
-  const content = await getHelpArticleContent(slug)
+  const resolvedParams = await params;
+  const slug = await resolvedParams.slug.join('/');
+  const article = await getHelpArticle(slug);
+  const content = await getHelpArticleContent(slug);
   
   if (!article || !content) {
-    notFound()
+    notFound();
   }
   
   return (
@@ -262,5 +262,5 @@ export default async function HelpArticlePage({ params }: Props) {
       
 
     </main>
-  )
+  );
 }

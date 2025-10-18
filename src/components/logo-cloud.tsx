@@ -1,4 +1,4 @@
-import { Container } from '@/components/Container'
+import { Container } from '@/components/Container';
 import { Subheading } from '@/components/Text';
 
 const logos = [
@@ -26,7 +26,7 @@ const logos = [
     name: 'Papaya In',
     src: '/logos/papayain_logo.webp',
   },
-]
+];
 
 export function LogoCloud() {
   return (
@@ -47,5 +47,5 @@ export function LogoCloud() {
         </div>
       </Container>
     </div>
-  )
+  );
 }

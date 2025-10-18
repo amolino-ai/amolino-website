@@ -1,5 +1,5 @@
-import { ImageIcon } from '@sanity/icons'
-import { defineArrayMember, defineType } from 'sanity'
+import { ImageIcon } from '@sanity/icons';
+import { defineArrayMember, defineType } from 'sanity';
 
 export const blockContentType = defineType({
   title: 'Block Content',
@@ -67,4 +67,4 @@ export const blockContentType = defineType({
       ],
     }),
   ],
-})
+});

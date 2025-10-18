@@ -1,6 +1,6 @@
-import BottomFeature from '@/app/product/components/BottomFeature'
-import FeatureShowcase from '@/app/product/components/FeatureShowcase'
-import Hero from '@/app/product/components/Hero'
+import BottomFeature from '@/app/product/components/BottomFeature';
+import FeatureShowcase from '@/app/product/components/FeatureShowcase';
+import Hero from '@/app/product/components/Hero';
 
 const features = [
   {
@@ -43,7 +43,7 @@ const features = [
     title: 'Proven success paths',
     description: 'Follow data-driven playbooks based on your most successful deals to replicate winning strategies.',
   },
-]
+];
 
 export default function GuidedSelling() {
   return (
@@ -98,5 +98,5 @@ export default function GuidedSelling() {
         screenshotSrc="/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
       />
     </>
-  )
+  );
 }

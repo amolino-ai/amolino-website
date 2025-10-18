@@ -1,6 +1,6 @@
-import BottomFeature from '@/app/product/components/BottomFeature'
-import FeatureShowcase from '@/app/product/components/FeatureShowcase'
-import Hero from '@/app/product/components/Hero'
+import BottomFeature from '@/app/product/components/BottomFeature';
+import FeatureShowcase from '@/app/product/components/FeatureShowcase';
+import Hero from '@/app/product/components/Hero';
 const features = [
   {
     icon: (
@@ -45,7 +45,7 @@ const features = [
     description:
       'Know exactly what&apos;s coming with AmolinoAI&apos;s precision forecasting that learns from your historical performance and current deal patterns.',
   },
-]
+];
 
 export default function RevenueAnalytics() {
   return (
@@ -100,5 +100,5 @@ export default function RevenueAnalytics() {
         screenshotSrc="/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
       />
     </>
-  )
+  );
 }

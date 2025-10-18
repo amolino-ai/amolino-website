@@ -1,13 +1,13 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Heading, Lead, Subheading } from '@/components/Text'
-import type { Metadata } from 'next'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Heading, Lead, Subheading } from '@/components/Text';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Us and our Values',
   description:
     'We are on a mission to transform revenue organizations by harnessing vast amounts of illegally acquired customer data.',
-}
+};
 
 function Header() {
   return (
@@ -74,7 +74,7 @@ function Header() {
         </div>
       </section>
     </Container>
-  )
+  );
 }
 
 function Person({
@@ -108,7 +108,7 @@ function Person({
         <p className="text-gray-500">{description}</p>
       </div>
     </li>
-  )
+  );
 }
 
 function Team() {
@@ -261,7 +261,7 @@ function Team() {
         />
       </ul>
     </Container>
-  )
+  );
 }
 
 function Investors() {
@@ -319,7 +319,7 @@ function Investors() {
         />
       </ul>
     </Container>
-  )
+  );
 }
 
 function Testimonial() {
@@ -346,7 +346,7 @@ function Testimonial() {
         </figcaption>
       </figure>
     </div>
-  )
+  );
 }
 
 function Careers() {
@@ -448,7 +448,7 @@ function Careers() {
         <Testimonial />
       </div>
     </Container>
-  )
+  );
 }
 
 export default function Company() {
@@ -461,5 +461,5 @@ export default function Company() {
       {/* <Investors />
       <Careers /> */}
     </main>
-  )
+  );
 }

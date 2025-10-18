@@ -1,5 +1,5 @@
-import SectionHeading from './SectionHeading'
-import { Tabs, TabsList, TabsTab, TabsPanel } from '@mantine/core'
+import SectionHeading from './SectionHeading';
+import { Tabs, TabsList, TabsTab, TabsPanel } from '@mantine/core';
 
 export default function RevOpsRole() {
   return (
@@ -236,5 +236,5 @@ export default function RevOpsRole() {
         </p>
       </div>
     </section>
-  )
+  );
 }

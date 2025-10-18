@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 function Marker({
   src,
@@ -39,7 +39,7 @@ function Marker({
         className="absolute top-[4px] left-[7px] size-6 rounded-full"
       />
     </motion.div>
-  )
+  );
 }
 
 export function Map() {
@@ -54,5 +54,5 @@ export function Map() {
         <Marker src="/map/5.jpg" top={224} offset={-32} delay={0.8} />
       </div>
     </div>
-  )
+  );
 }

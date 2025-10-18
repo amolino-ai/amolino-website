@@ -1,4 +1,4 @@
-import { clsx } from 'clsx'
+import { clsx } from 'clsx';
 
 export function PlusGrid({
   className = '',
@@ -7,7 +7,7 @@ export function PlusGrid({
   className?: string
   children: React.ReactNode
 }) {
-  return <div className={className}>{children}</div>
+  return <div className={className}>{children}</div>;
 }
 
 export function PlusGridRow({
@@ -35,7 +35,7 @@ export function PlusGridRow({
       </div>
       {children}
     </div>
-  )
+  );
 }
 
 export function PlusGridItem({
@@ -62,7 +62,7 @@ export function PlusGridItem({
       />
       {children}
     </div>
-  )
+  );
 }
 
 export function PlusGridIcon({
@@ -72,10 +72,10 @@ export function PlusGridIcon({
   className?: string
   placement: `${'top' | 'bottom'} ${'right' | 'left'}`
 }) {
-  let [yAxis, xAxis] = placement.split(' ')
+  let [yAxis, xAxis] = placement.split(' ');
 
-  let yClass = yAxis === 'top' ? '-top-2' : '-bottom-2'
-  let xClass = xAxis === 'left' ? '-left-2' : '-right-2'
+  let yClass = yAxis === 'top' ? '-top-2' : '-bottom-2';
+  let xClass = xAxis === 'left' ? '-left-2' : '-right-2';
 
   return (
     <svg
@@ -90,5 +90,5 @@ export function PlusGridIcon({
     >
       <path d="M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z" />
     </svg>
-  )
+  );
 }

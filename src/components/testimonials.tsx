@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import * as Headless from '@headlessui/react'
-import { ArrowLongRightIcon } from '@heroicons/react/20/solid'
-import { clsx } from 'clsx'
-import { MotionValue, motion, useMotionValueEvent, useScroll, useSpring, type HTMLMotionProps } from 'framer-motion'
-import { useCallback, useLayoutEffect, useRef, useState } from 'react'
-import useMeasure, { type RectReadOnly } from 'react-use-measure'
-import { Container } from '@/components/Container'
+import * as Headless from '@headlessui/react';
+import { ArrowLongRightIcon } from '@heroicons/react/20/solid';
+import { clsx } from 'clsx';
+import { MotionValue, motion, useMotionValueEvent, useScroll, useSpring, type HTMLMotionProps } from 'framer-motion';
+import { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import useMeasure, { type RectReadOnly } from 'react-use-measure';
+import { Container } from '@/components/Container';
 import { Link } from '@/components/Link';
 import { Heading, Subheading } from '@/components/Text';
 
@@ -40,7 +40,7 @@ const testimonials = [
       'Amolino cuts through our sales reps optimism and spotty CRM documentation to deliver forecasts we can trust.',
   },
 
-]
+];
 
 function TestimonialCard({
   name,
@@ -58,39 +58,39 @@ function TestimonialCard({
   bounds: RectReadOnly
   scrollX: MotionValue<number>
 } & HTMLMotionProps<'div'>) {
-  let ref = useRef<HTMLDivElement | null>(null)
+  let ref = useRef<HTMLDivElement | null>(null);
 
   let computeOpacity = useCallback(() => {
-    let element = ref.current
-    if (!element || bounds.width === 0) return 1
+    let element = ref.current;
+    if (!element || bounds.width === 0) return 1;
 
-    let rect = element.getBoundingClientRect()
+    let rect = element.getBoundingClientRect();
 
     if (rect.left < bounds.left) {
-      let diff = bounds.left - rect.left
-      let percent = diff / rect.width
-      return Math.max(0.5, 1 - percent)
+      let diff = bounds.left - rect.left;
+      let percent = diff / rect.width;
+      return Math.max(0.5, 1 - percent);
     } else if (rect.right > bounds.right) {
-      let diff = rect.right - bounds.right
-      let percent = diff / rect.width
-      return Math.max(0.5, 1 - percent)
+      let diff = rect.right - bounds.right;
+      let percent = diff / rect.width;
+      return Math.max(0.5, 1 - percent);
     } else {
-      return 1
+      return 1;
     }
-  }, [ref, bounds.width, bounds.left, bounds.right])
+  }, [ref, bounds.width, bounds.left, bounds.right]);
 
   let opacity = useSpring(computeOpacity(), {
     stiffness: 154,
     damping: 23,
-  })
+  });
 
   useLayoutEffect(() => {
-    opacity.set(computeOpacity())
-  }, [computeOpacity, opacity])
+    opacity.set(computeOpacity());
+  }, [computeOpacity, opacity]);
 
   useMotionValueEvent(scrollX, 'change', () => {
-    opacity.set(computeOpacity())
-  })
+    opacity.set(computeOpacity());
+  });
 
   return (
     <motion.div
@@ -126,7 +126,7 @@ function TestimonialCard({
         </figcaption>
       </figure>
     </motion.div>
-  )
+  );
 }
 
 function CallToAction() {
@@ -144,23 +144,23 @@ function CallToAction() {
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
 export function Testimonials() {
-  let scrollRef = useRef<HTMLDivElement | null>(null)
-  let { scrollX } = useScroll({ container: scrollRef })
-  let [setReferenceWindowRef, bounds] = useMeasure()
-  let [activeIndex, setActiveIndex] = useState(0)
+  let scrollRef = useRef<HTMLDivElement | null>(null);
+  let { scrollX } = useScroll({ container: scrollRef });
+  let [setReferenceWindowRef, bounds] = useMeasure();
+  let [activeIndex, setActiveIndex] = useState(0);
 
   useMotionValueEvent(scrollX, 'change', (x) => {
-    setActiveIndex(Math.floor(x / scrollRef.current!.children[0].clientWidth))
-  })
+    setActiveIndex(Math.floor(x / scrollRef.current!.children[0].clientWidth));
+  });
 
   function scrollTo(index: number) {
-    let gap = 32
-    let width = (scrollRef.current!.children[0] as HTMLElement).offsetWidth
-    scrollRef.current!.scrollTo({ left: (width + gap) * index })
+    let gap = 32;
+    let width = (scrollRef.current!.children[0] as HTMLElement).offsetWidth;
+    scrollRef.current!.scrollTo({ left: (width + gap) * index });
   }
 
   return (
@@ -218,5 +218,5 @@ export function Testimonials() {
         </div>
       </Container>
     </div>
-  )
+  );
 }

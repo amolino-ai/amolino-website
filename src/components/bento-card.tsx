@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import { clsx } from 'clsx'
-import { motion } from 'framer-motion'
+import { clsx } from 'clsx';
+import { motion } from 'framer-motion';
 import { Subheading } from '@/components/Text';
 
 export function BentoCard({
@@ -57,5 +57,5 @@ export function BentoCard({
         <p className="mt-2 max-w-[600px] text-sm/6 text-gray-600 group-data-dark:text-gray-400">{description}</p>
       </div>
     </motion.div>
-  )
+  );
 }

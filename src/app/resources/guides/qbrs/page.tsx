@@ -1,24 +1,24 @@
-import { Prose } from '@/components/Prose'
-import type { Metadata } from 'next'
-import GuideNavigation from './GuideNavigation'
-import GuideHeader from './GuideHeader'
-import Introduction from './Introduction'
-import TeamParticipation from './TeamParticipation'
-import Preparation from './Prepration'
-import RunningQBR from './RunningQBR'
-import PostQBR from './PostQBR'
-import Metrics from './Metrics'
-import Challenges from './Challenges'
-import BestPractices from './BestPractices'
-import RevOpsRole from './RevOpsRole'
-import AdditionalTips from './AdditionalTips'
-import Summary from './Summary'
-import AskingGoodQuestions from './AskingGoodQuestions'
+import { Prose } from '@/components/Prose';
+import type { Metadata } from 'next';
+import GuideNavigation from './GuideNavigation';
+import GuideHeader from './GuideHeader';
+import Introduction from './Introduction';
+import TeamParticipation from './TeamParticipation';
+import Preparation from './Prepration';
+import RunningQBR from './RunningQBR';
+import PostQBR from './PostQBR';
+import Metrics from './Metrics';
+import Challenges from './Challenges';
+import BestPractices from './BestPractices';
+import RevOpsRole from './RevOpsRole';
+import AdditionalTips from './AdditionalTips';
+import Summary from './Summary';
+import AskingGoodQuestions from './AskingGoodQuestions';
 
 export const metadata = {
   title: 'Ultimate Guide to Quarterly Business Reviews (QBRs)',
   description: 'A comprehensive guide to preparing, running, and following up on effective Quarterly Business Reviews.',
-}
+};
 
 const sections = [
   { title: 'Introduction', id: 'introduction' },
@@ -33,7 +33,7 @@ const sections = [
   { title: 'RevOps Role', id: 'revops-role' },
   { title: 'Additional Tips', id: 'additional-tips' },
   { title: 'Summary', id: 'summary' },
-]
+];
 
 export default function GuidePage() {
   return (
@@ -63,5 +63,5 @@ export default function GuidePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

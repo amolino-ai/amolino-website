@@ -1,14 +1,14 @@
-'use client'
+'use client';
 
-import { useEffect, useRef, useState } from 'react'
-import { Container } from '@/components/Container'
-import { Heading, Subheading } from '@/components/Text'
-import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react';
+import { Container } from '@/components/Container';
+import { Heading, Subheading } from '@/components/Text';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
 
 export function BlindSalesSection() {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.3 })
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   
   const container = {
     hidden: { opacity: 0 },
@@ -19,12 +19,12 @@ export function BlindSalesSection() {
         delayChildren: 0.3
       }
     }
-  }
+  };
   
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-  }
+  };
   
   const pulseAnimation = {
     scale: [1, 1.1, 1],
@@ -34,7 +34,7 @@ export function BlindSalesSection() {
       repeat: Infinity,
       ease: "easeInOut"
     }
-  }
+  };
   
   const problems = [
     {
@@ -73,7 +73,7 @@ export function BlindSalesSection() {
         </svg>
       )
     }
-  ]
+  ];
 
   return (
     <section ref={sectionRef} className="relative py-20">
@@ -179,5 +179,5 @@ export function BlindSalesSection() {
         </div>
       </Container>
     </section>
-  )
+  );
 } 
