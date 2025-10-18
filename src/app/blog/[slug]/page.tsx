@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { Footer } from '@/components/footer';
+import { Footer } from '@/components/Footer';
 import * as mdxComponents from '@/components/Mdx';
 import { getBlogPost, getBlogPostContent } from '@/lib/content';
 import { cn } from '@/lib/utils'; // or import clsx from 'clsx'

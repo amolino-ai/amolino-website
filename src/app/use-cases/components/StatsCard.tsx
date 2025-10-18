@@ -1,4 +1,4 @@
-import { AnimatedNumber } from '@/components/animated-number';
+import { AnimatedNumber } from '@/components/AnimatedNumber';
 
 interface StatsCardProps {
   label: string

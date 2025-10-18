@@ -1,5 +1,5 @@
 // components/Layout.tsx
-import { LogoCloud } from '@/components/logo-cloud';
+import { LogoCloud } from '@/components/LogoCloud';
 
 interface LayoutProps {
   children: React.ReactNode

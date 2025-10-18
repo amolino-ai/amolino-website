@@ -1,5 +1,5 @@
 import { Subheading } from "@/components/Text";
-import { AnimatedNumber } from "@/components/animated-number";
+import { AnimatedNumber } from "@/components/AnimatedNumber";
 
 export function NumbersSection() {
     return (

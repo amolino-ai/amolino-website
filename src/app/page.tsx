@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container';
-import { FeatureSection } from '@/components/feature-section';
-import { IntegrationsSection } from '@/components/integrations-section';
-import { LogoCloud } from '@/components/logo-cloud';
+import { FeatureSection } from '@/components/FeatureSection';
+import { IntegrationsSection } from '@/components/IntegrationsSection';
+import { LogoCloud } from '@/components/LogoCloud';
 import type { Metadata } from 'next';
 import { BentoSection } from './page/components/bento-section';
 import { DarkBentoSection } from './page/components/dark-bento-section';

@@ -1,4 +1,4 @@
-import { BentoCard } from '@/components/bento-card';
+import { BentoCard } from '@/components/BentoCard';
 import { Container } from '@/components/Container';
 import { Heading, Subheading } from '@/components/Text';
 

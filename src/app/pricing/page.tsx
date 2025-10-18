@@ -2,7 +2,7 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Gradient } from '@/components/Gradient';
 import { Link } from '@/components/Link';
-import { LogoCloud } from '@/components/logo-cloud';
+import { LogoCloud } from '@/components/LogoCloud';
 import { Heading, Lead, Subheading } from '@/components/Text';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon, MinusIcon } from '@heroicons/react/16/solid';

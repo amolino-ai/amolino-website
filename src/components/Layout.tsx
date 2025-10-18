@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 
-import { Footer } from '@/components/footer';
+import { Footer } from '@/components/Footer';
 import { type Section, SectionProvider } from '@/components/SectionProvider';
 
 export function Layout({

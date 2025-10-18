@@ -1,4 +1,4 @@
-import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid';
+import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/PlusGrid';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Gradient } from '@/components/Gradient';
