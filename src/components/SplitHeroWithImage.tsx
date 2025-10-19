@@ -1,11 +1,18 @@
+'use client';
+
 import type { HeroContent } from '@/lib/content';
+import { useState } from 'react';
+import VideoModal from './VideoModal';
 
 interface SplitHeroWithImageProps {
   content: HeroContent;
 }
 
 export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps) {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
+    <>
     <div className="relative isolate overflow-hidden bg-white dark:bg-gray-900">
       <svg
         aria-hidden="true"
@@ -52,9 +59,12 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
             >
               Book a Demo
             </a>
-            <a href={content.ctas.secondaryUrl} className="text-sm/6 font-semibold text-gray-900 dark:text-white">
+            <button
+              onClick={() => setIsVideoOpen(true)}
+              className="text-sm/6 font-semibold text-gray-900 transition-colors hover:text-gray-700 dark:text-white dark:hover:text-gray-300"
+            >
               Watch 2-Min Overview <span aria-hidden="true">→</span>
-            </a>
+            </button>
           </div>
 
           {/* Tertiary CTA */}
@@ -86,5 +96,8 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
         </div>
       </div>
     </div>
+
+    <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} videoUrl={content.ctas.secondaryUrl} />
+    </>
   );
 }
