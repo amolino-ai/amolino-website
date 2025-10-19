@@ -1,0 +1,23 @@
+sectionLabel: "For sales leaders"
+headline: "Sound Familiar?"
+description: "Sales leaders are under pressure to grow efficiently—but legacy tools just analyze what already happened. They don't tell you what to do next."
+ctaText: "See how we help"
+ctaUrl: "#"
+
+problems:
+  - percentage: "62%"
+    statDescription: "Your best rep closes 60% of deals. Your average rep? 25%."
+    problemDescription: "Rep variability is killing your win rate and wasting your headcount investment."
+  - percentage: "$12M → $9M"
+    statDescription: "Quarter-end surprises destroy board confidence"
+    problemDescription: "Your CRM says $12M. Reality? $9M. Deals slip without warning and you can't explain why."
+  - percentage: "18hrs/wk"
+    statDescription: "Reps spend more time in Salesforce than selling"
+    problemDescription: "18 hours/week on admin work means less time actually closing deals."
+
+testimonial:
+  quote: "This product has been really useful in giving sales teams clarity on their pipeline and how they're going to hit their numbers."
+  author:
+    name: "John Davis"
+    title: "VP of Sales at TechCorp"
+    initials: "JD"

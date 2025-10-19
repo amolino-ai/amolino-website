@@ -13,6 +13,10 @@ export type {
   HeroCTAs,
   HeroImage,
   HeroImages,
+  ProblemContent,
+  ProblemStat,
+  Testimonial,
+  TestimonialAuthor,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -42,4 +46,4 @@ export {
 } from './help';
 
 // Page content functions
-export { getHeroContent } from './pages';
+export { getHeroContent, getProblemContent } from './pages';

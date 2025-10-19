@@ -74,3 +74,31 @@ export interface HeroContent {
   ctas: HeroCTAs;
   images: HeroImages;
 }
+
+// Problem section interfaces
+export interface ProblemStat {
+  percentage: string;
+  statDescription: string;
+  problemDescription: string;
+}
+
+export interface TestimonialAuthor {
+  name: string;
+  title: string;
+  initials: string;
+}
+
+export interface Testimonial {
+  quote: string;
+  author: TestimonialAuthor;
+}
+
+export interface ProblemContent {
+  sectionLabel: string;
+  headline: string;
+  description: string;
+  ctaText: string;
+  ctaUrl: string;
+  problems: ProblemStat[];
+  testimonial: Testimonial;
+}
