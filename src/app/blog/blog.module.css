@@ -26,13 +26,13 @@
 .blogBackButton {
   margin-top: 4rem; /* mt-16 */
   padding-top: 2rem; /* pt-8 */
-  border-top: 1px solid rgb(229, 231, 235); /* border-gray-200 */
+  border-top: 1px solid var(--color-neutral-200);
 }
 
 /* Typography styles */
 .blogSubheading {
   font-size: 0.875rem; /* text-sm */
-  color: rgb(75, 85, 99); /* text-gray-600 */
+  color: var(--color-neutral-600);
   font-weight: 500; /* font-medium */
   letter-spacing: 0.05em; /* tracking-wide */
   text-transform: uppercase;
@@ -41,25 +41,25 @@
 .blogTitle {
   font-size: 1.875rem; /* text-3xl */
   font-weight: 700; /* font-bold */
-  color: rgb(17, 24, 39); /* text-gray-900 */
+  color: var(--color-neutral-900);
   font-family: var(--font-lexend), system-ui, sans-serif; /* font-display */
   line-height: 1.2; /* leading-tight */
 }
 
 .blogAuthor {
   font-size: 0.875rem; /* text-sm */
-  color: rgb(55, 65, 81); /* text-gray-700 */
+  color: var(--color-neutral-700);
   font-weight: 500; /* font-medium */
 }
 
 .blogCategory {
   font-size: 0.875rem; /* text-sm */
   font-weight: 500; /* font-medium */
-  color: rgb(107, 114, 128); /* text-gray-500 */
-  background-color: rgb(249, 250, 251); /* bg-gray-50 */
+  color: var(--color-neutral-500);
+  background-color: var(--color-neutral-50);
   padding: 0.25rem 0.75rem; /* py-1 px-3 */
   border-radius: 9999px; /* rounded-full */
-  border: 1px dotted rgb(209, 213, 219); /* border-gray-300 */
+  border: 1px dotted var(--color-neutral-300);
 }
 
 .blogProse {
@@ -67,7 +67,7 @@
   font-size: 1.125rem; /* prose-lg */
   line-height: 1.75;
   max-width: none;
-  color: rgb(55, 65, 81); /* prose-gray */
+  color: var(--color-neutral-700);
 }
 
 .blogProse h1,
@@ -78,7 +78,7 @@
 .blogProse h6 {
   font-family: var(--font-lexend), system-ui, sans-serif; /* prose-headings:font-display */
   font-weight: 600;
-  color: rgb(17, 24, 39);
+  color: var(--color-neutral-900);
 }
 
 .blogProse h1 {
@@ -107,7 +107,7 @@
 }
 
 .blogProse a {
-  color: rgb(37, 99, 235); /* prose-a:text-blue-600 */
+  color: var(--color-primary-600);
   text-decoration: none; /* prose-a:no-underline */
   transition: colors 200ms; /* prose-a:transition-colors prose-a:duration-200 */
 }
@@ -118,7 +118,7 @@
 
 .blogProse strong {
   font-weight: 600;
-  color: rgb(17, 24, 39);
+  color: var(--color-neutral-900);
 }
 
 .blogProse ul,
@@ -132,16 +132,16 @@
 }
 
 .blogProse blockquote {
-  border-left: 4px solid rgb(209, 213, 219);
+  border-left: 4px solid var(--color-neutral-300);
   padding-left: 1rem;
   font-style: italic;
-  color: rgb(75, 85, 99);
+  color: var(--color-neutral-600);
   margin: 1.5rem 0;
 }
 
 .blogProse code {
-  background-color: rgb(243, 244, 246);
-  color: rgb(31, 41, 55);
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-800);
   padding: 0.25rem 0.5rem;
   border-radius: 0.375rem;
   font-size: 0.875rem;

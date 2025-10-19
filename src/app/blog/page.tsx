@@ -41,7 +41,7 @@ async function FeaturedPosts() {
   }
 
   return (
-    <div className="mt-16 bg-linear-to-t from-gray-100 pb-14">
+    <div className="mt-16 bg-linear-to-t from-neutral-100 pb-14">
       <Container>
         <h2 className="text-2xl font-medium tracking-tight">Featured</h2>
         <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -58,7 +58,7 @@ async function FeaturedPosts() {
                 />
               )}
               <div className="flex flex-1 flex-col p-8">
-                <div className="text-sm/5 text-gray-700">
+                <div className="text-sm/5 text-neutral-700">
                   {dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}
                 </div>
                 <div className="mt-2 text-base/7 font-medium">
@@ -67,7 +67,7 @@ async function FeaturedPosts() {
                     {post.title}
                   </Link>
                 </div>
-                <div className="mt-2 flex-1 text-sm/6 text-gray-500">
+                <div className="mt-2 flex-1 text-sm/6 text-neutral-500">
                   {post.excerpt}
                 </div>
                 {post.author && (
@@ -79,7 +79,7 @@ async function FeaturedPosts() {
                         className="aspect-square size-6 rounded-full object-cover"
                       />
                     )}
-                    <div className="text-sm/5 text-gray-700">
+                    <div className="text-sm/5 text-neutral-700">
                       {post.author.name}
                     </div>
                   </div>
@@ -106,17 +106,17 @@ async function Categories({ selected }: { selected?: string }) {
         <MenuButton className="flex items-center justify-between gap-2 font-medium">
           {categories.find(({ slug }) => slug === selected)?.title ||
             'All categories'}
-          <ChevronUpDownIcon className="size-4 fill-gray-900" />
+          <ChevronUpDownIcon className="size-4 fill-neutral-900" />
         </MenuButton>
         <MenuItems
           anchor="bottom start"
-          className="min-w-40 rounded-lg bg-white p-1 ring-1 shadow-lg ring-gray-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
+          className="min-w-40 rounded-lg bg-white p-1 ring-1 shadow-lg ring-neutral-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
         >
           <MenuItem>
             <Link
               href="/blog"
               data-selected={selected === undefined ? true : undefined}
-              className="group grid grid-cols-[1rem_1fr] items-center gap-2 rounded-md px-2 py-1 data-focus:bg-gray-950/5"
+              className="group grid grid-cols-[1rem_1fr] items-center gap-2 rounded-md px-2 py-1 data-focus:bg-neutral-950/5"
             >
               <CheckIcon className="hidden size-4 group-data-selected:block" />
               <p className="col-start-2 text-sm/6">All categories</p>
@@ -127,7 +127,7 @@ async function Categories({ selected }: { selected?: string }) {
               <Link
                 href={`/blog?category=${category.slug}`}
                 data-selected={category.slug === selected ? true : undefined}
-                className="group grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-2 py-1 data-focus:bg-gray-950/5"
+                className="group grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-2 py-1 data-focus:bg-neutral-950/5"
               >
                 <CheckIcon className="hidden size-4 group-data-selected:block" />
                 <p className="col-start-2 text-sm/6">{category.title}</p>
@@ -156,7 +156,7 @@ async function Posts({ page, category }: { page: number; category?: string }) {
   }
 
   if (posts.length === 0) {
-    return <p className="mt-6 text-gray-500">No posts found.</p>;
+    return <p className="mt-6 text-neutral-500">No posts found.</p>;
   }
 
   return (
@@ -164,10 +164,10 @@ async function Posts({ page, category }: { page: number; category?: string }) {
       {posts.map((post) => (
         <div
           key={post.slug}
-          className="relative grid grid-cols-1 border-b border-b-gray-100 py-10 first:border-t first:border-t-gray-200 max-sm:gap-3 sm:grid-cols-3"
+          className="relative grid grid-cols-1 border-b border-b-neutral-100 py-10 first:border-t first:border-t-neutral-200 max-sm:gap-3 sm:grid-cols-3"
         >
           <div>
-            <div className="text-sm/5 max-sm:text-gray-700 sm:font-medium">
+            <div className="text-sm/5 max-sm:text-neutral-700 sm:font-medium">
               {dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}
             </div>
             {post.author && (
@@ -179,7 +179,7 @@ async function Posts({ page, category }: { page: number; category?: string }) {
                     className="aspect-square size-6 rounded-full object-cover"
                   />
                 )}
-                <div className="text-sm/5 text-gray-700">
+                <div className="text-sm/5 text-neutral-700">
                   {post.author.name}
                 </div>
               </div>
@@ -187,7 +187,7 @@ async function Posts({ page, category }: { page: number; category?: string }) {
           </div>
           <div className="sm:col-span-2 sm:max-w-2xl">
             <h2 className="text-sm/5 font-medium">{post.title}</h2>
-            <p className="mt-3 text-sm/6 text-gray-500">{post.excerpt}</p>
+            <p className="mt-3 text-sm/6 text-neutral-500">{post.excerpt}</p>
             <div className="mt-4">
               <Link
                 href={`/blog/${post.slug}`}
@@ -195,7 +195,7 @@ async function Posts({ page, category }: { page: number; category?: string }) {
               >
                 <span className="absolute inset-0" />
                 Read more
-                <ChevronRightIcon className="size-4 fill-gray-400" />
+                <ChevronRightIcon className="size-4 fill-neutral-400" />
               </Link>
             </div>
           </div>
@@ -250,9 +250,9 @@ async function Pagination({
             data-active={i + 1 === page ? true : undefined}
             className={clsx(
               'size-7 rounded-lg text-center text-sm/7 font-medium',
-              'data-hover:bg-gray-100',
+              'data-hover:bg-neutral-100',
               'data-active:ring-1 data-active:shadow-sm data-active:ring-black/10',
-              'data-active:data-hover:bg-gray-50',
+              'data-active:data-hover:bg-neutral-50',
             )}
           >
             {i + 1}
