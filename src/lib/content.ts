@@ -2,6 +2,7 @@
 import glob from 'fast-glob';
 import { readFile } from 'fs/promises';
 import matter from 'gray-matter';
+import yaml from 'js-yaml';
 import path, { join, dirname, basename } from 'path';
 
 
@@ -9,6 +10,60 @@ const CONTENT_ROOT = path.join(process.cwd(), 'content');
 const BLOG_PATH = path.join(CONTENT_ROOT, 'blog');
 const HELP_PATH = path.join(CONTENT_ROOT, 'help');
 
+// Generic YAML loader function
+/**
+ * Load and parse a YAML file from the content directory
+ * @param filePath - Relative path from content/ directory (e.g., 'pages/home/hero.yaml') or absolute path
+ * @returns Parsed YAML content as typed object
+ */
+export async function loadYAML<T>(filePath: string): Promise<T> {
+  try {
+    const fullPath = path.isAbsolute(filePath) ? filePath : path.join(CONTENT_ROOT, filePath);
+    const fileContents = await readFile(fullPath, 'utf8');
+    const parsed = yaml.load(fileContents) as T;
+    return parsed;
+  } catch (error) {
+    console.error(`Error loading YAML file ${filePath}:`, error);
+    throw error;
+  }
+}
+
+// Hero content interfaces
+export interface HeroStat {
+  value: string;
+  description: string;
+}
+
+export interface HeroCTAs {
+  primaryUrl: string;
+  secondaryUrl: string;
+  tertiaryUrl: string;
+}
+
+export interface HeroImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+export interface HeroImages {
+  light: HeroImage;
+  dark: HeroImage;
+}
+
+export interface HeroContent {
+  headline: string;
+  subheadline: string;
+  stats: HeroStat[];
+  ctas: HeroCTAs;
+  images: HeroImages;
+}
+
+// Hero content loader
+export async function getHeroContent(): Promise<HeroContent> {
+  return loadYAML<HeroContent>('pages/home/hero.yaml');
+}
 
 // Base content interface
 export interface BaseContent {

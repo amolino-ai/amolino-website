@@ -2,22 +2,25 @@ import { Container } from '@/components/Container';
 import { FeatureSection } from '@/components/FeatureSection';
 import { IntegrationsSection } from '@/components/IntegrationsSection';
 import { LogoCloud } from '@/components/LogoCloud';
+import SplitHeroWithImage from '@/components/SplitHeroWithImage';
+import { getHeroContent } from '@/lib/content';
 import type { Metadata } from 'next';
 import { BentoSection } from './page/components/bento-section';
 import { DarkBentoSection } from './page/components/dark-bento-section';
-import { Hero } from './page/components/hero';
 import { SecuritySection } from './page/components/security-section';
 
 export const metadata: Metadata = {
   description: 'Amolino helps you sell more by revealing sensitive information about your customers.',
 };
 
-export default function Home() {
+export default async function Home() {
+  const heroContent = await getHeroContent();
+
   return (
     <div className="overflow-hidden">
       {/* Hero section - full width background with contained content */}
-      <Hero />
-      
+      <SplitHeroWithImage content={heroContent} />
+
       <main>
         {/* Logo cloud - contained */}
         <Container className="mt-10">
