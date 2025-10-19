@@ -2,6 +2,7 @@ import { Container } from '@/components/Container';
 import { FeatureSection } from '@/components/FeatureSection';
 import { IntegrationsSection } from '@/components/IntegrationsSection';
 import { LogoCloud } from '@/components/LogoCloud';
+import OutcomeSection from '@/components/OutcomeSection';
 import ProblemSection from '@/components/ProblemSection';
 import SplitHeroWithImage from '@/components/SplitHeroWithImage';
 import { getHeroContent, getProblemContent } from '@/lib/content';
@@ -25,6 +26,9 @@ export default async function Home() {
 
       {/* Problem section - full width with teal gradient background */}
       <ProblemSection content={problemContent} />
+
+      {/* Outcome section - full width */}
+      <OutcomeSection />
 
       <main>
         {/* Logo cloud - contained */}
