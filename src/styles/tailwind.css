@@ -6,43 +6,43 @@
   --radius-4xl: 2rem;
 
   /* Neutral grays - for backgrounds, borders, text */
-  --color-neutral-50: #fafafa;
-  --color-neutral-100: #f4f4f5;
-  --color-neutral-200: #e4e4e7;
-  --color-neutral-300: #d4d4d8;
-  --color-neutral-400: #a1a1aa;
-  --color-neutral-500: #71717a;
+  --color-neutral-50: #f7f7f8;
+  --color-neutral-100: #eeeef0;
+  --color-neutral-200: #dadadd;
+  --color-neutral-300: #b9b9c0;
+  --color-neutral-400: #93949d;
+  --color-neutral-500: #767781;
   --color-neutral-600: #52525b;
-  --color-neutral-700: #3f3f46;
-  --color-neutral-800: #27272a;
-  --color-neutral-900: #18181b;
-  --color-neutral-950: #09090b;
+  --color-neutral-700: #52525b;
+  --color-neutral-800: #434349;
+  --color-neutral-900: #3a3a40;
+  --color-neutral-950: #27272a;
 
   /* Primary - brand color (teal/cyan blue) */
-  --color-primary-50: #ecfaff;
-  --color-primary-100: #d4f3ff;
-  --color-primary-200: #b3ebff;
-  --color-primary-300: #7fdfff;
-  --color-primary-400: #42cbff;
-  --color-primary-500: #0C84BD;
-  --color-primary-600: #0a6fa1;
-  --color-primary-700: #095a85;
-  --color-primary-800: #0b4a6e;
-  --color-primary-900: #0f3f5c;
-  --color-primary-950: #0a293d;
+  --color-primary-50: #f1f9fe;
+  --color-primary-100: #e2f2fc;
+  --color-primary-200: #bde6fa;
+  --color-primary-300: #83d3f6;
+  --color-primary-400: #42bcee;
+  --color-primary-500: #19a5de;
+  --color-primary-600: #0c84bd;
+  --color-primary-700: #0b6a99;
+  --color-primary-800: #0d597f;
+  --color-primary-900: #114b69;
+  --color-primary-950: #0b2f46;
 
   /* Secondary - complementary warm orange */
-  --color-secondary-50: #fff7ed;
-  --color-secondary-100: #ffedd5;
-  --color-secondary-200: #fed7aa;
-  --color-secondary-300: #fdba74;
-  --color-secondary-400: #fb923c;
-  --color-secondary-500: #f97316;
+  --color-secondary-50: #fff3ed;
+  --color-secondary-100: #ffe3d5;
+  --color-secondary-200: #fec7aa;
+  --color-secondary-300: #fda374;
+  --color-secondary-400: #fb7d3c;
+  --color-secondary-500: #f96416;
   --color-secondary-600: #ea580c;
-  --color-secondary-700: #c2410c;
-  --color-secondary-800: #9a3412;
-  --color-secondary-900: #7c2d12;
-  --color-secondary-950: #431407;
+  --color-secondary-700: #c24a0c;
+  --color-secondary-800: #9a4112;
+  --color-secondary-900: #7c3612;
+  --color-secondary-950: #431c07;
 
   /* Tertiary - purple for accents */
   --color-tertiary-50: #faf5ff;

@@ -17,6 +17,9 @@ export type {
   ProblemStat,
   Testimonial,
   TestimonialAuthor,
+  OutcomeContent,
+  OutcomeCard,
+  OutcomeCTA,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -46,4 +49,4 @@ export {
 } from './help';
 
 // Page content functions
-export { getHeroContent, getProblemContent } from './pages';
+export { getHeroContent, getProblemContent, getOutcomeContent } from './pages';
