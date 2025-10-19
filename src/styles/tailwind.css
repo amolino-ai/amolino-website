@@ -46,16 +46,16 @@
 
   /* Tertiary - purple for accents */
   --color-tertiary-50: #faf5ff;
-  --color-tertiary-100: #f3e8ff;
-  --color-tertiary-200: #e9d5ff;
-  --color-tertiary-300: #d8b4fe;
-  --color-tertiary-400: #c084fc;
-  --color-tertiary-500: #a855f7;
+  --color-tertiary-100: #f4e8ff;
+  --color-tertiary-200: #ebd5ff;
+  --color-tertiary-300: #c384fc;
+  --color-tertiary-400: #c384fc;
+  --color-tertiary-500: #aa55f7;
   --color-tertiary-600: #9333ea;
-  --color-tertiary-700: #7e22ce;
-  --color-tertiary-800: #6b21a8;
-  --color-tertiary-900: #581c87;
-  --color-tertiary-950: #3b0764;
+  --color-tertiary-700: #6821a8;
+  --color-tertiary-800: #6821a8;
+  --color-tertiary-900: #541c87;
+  --color-tertiary-950: #380764;
 
   /* Success - semantic UI state */
   --color-success-50: #f0fdf4;
