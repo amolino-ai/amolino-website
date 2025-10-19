@@ -11,7 +11,7 @@ products:
     label: "Data Hygiene"
     title: "Clean Your CRM Automatically"
     description: "Detect duplicates, fix formatting, and standardize fields. Keep Salesforce and HubSpot clean without manual effort."
-    statBadge: "10× cleaner pipeline"
+    statBadge: "10x cleaner pipeline"
     benefits:
       - "Auto-dedupe and merge rules"
       - "Normalize titles, phones, domains"
@@ -19,7 +19,7 @@ products:
       - "Sync-safe updates with logs"
     ctaText: "See Data Hygiene"
     ctaLink: "/solutions/data-hygiene"
-    bgColor: "bg-primary-400"
+    bgColor: "bg-secondary-400"
     textColor: "text-neutral-900"
     illustration: "🧹"
 
@@ -35,8 +35,8 @@ products:
       - "Confidence scoring for each field"
     ctaText: "Explore Enrichment"
     ctaLink: "/solutions/normalize"
-    bgColor: "bg-secondary-400"
-    textColor: "text-neutral-900"
+    bgColor: "bg-tertiary-400"
+    textColor: "text-neutral-50"
     illustration: "🧩"
 
   - id: 3
@@ -51,7 +51,7 @@ products:
       - "Full audit trail for ops"
     ctaText: "See Governance"
     ctaLink: "/solutions/governance"
-    bgColor: "bg-tertiary-400"
+    bgColor: "bg-success-400"
     textColor: "text-neutral-900"
     illustration: "🛡️"
 
@@ -67,6 +67,6 @@ products:
       - "Proof trails for changes"
     ctaText: "Learn How"
     ctaLink: "/solutions/forecast-accurately"
-    bgColor: "bg-success-400"
+    bgColor: "bg-secondary-300"
     textColor: "text-neutral-900"
     illustration: "📊"
