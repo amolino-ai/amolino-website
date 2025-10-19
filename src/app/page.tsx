@@ -5,7 +5,7 @@ import { LogoCloud } from '@/components/LogoCloud';
 import OutcomeSection from '@/components/OutcomeSection';
 import ProblemSection from '@/components/ProblemSection';
 import SplitHeroWithImage from '@/components/SplitHeroWithImage';
-import { getHeroContent, getProblemContent } from '@/lib/content';
+import { getHeroContent, getProblemContent, getOutcomeContent } from '@/lib/content';
 import type { Metadata } from 'next';
 import { BentoSection } from './page/components/bento-section';
 import { DarkBentoSection } from './page/components/dark-bento-section';
@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   const heroContent = await getHeroContent();
   const problemContent = await getProblemContent();
+  const outcomeContent = await getOutcomeContent();
 
   return (
     <div className="overflow-hidden">
@@ -28,7 +29,7 @@ export default async function Home() {
       <ProblemSection content={problemContent} />
 
       {/* Outcome section - full width */}
-      <OutcomeSection />
+      <OutcomeSection content={outcomeContent} />
 
       <main>
         {/* Logo cloud - contained */}

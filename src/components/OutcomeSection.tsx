@@ -1,103 +1,14 @@
 'use client';
 
+import type { OutcomeContent } from '@/lib/content/types';
 import React, { useEffect, useRef } from 'react';
 
-// If you're using Tailwind, keep your existing color tokens.
-// Replace the demo data with your actual cards.
-interface OutcomeCard {
-    id: number;
-    label: string;
-    title: string;
-    description: string;
-    statBadge: string;
-    benefits: string[];
-    ctaText: string;
-    ctaLink: string;
-    bgColor: string;   // e.g. 'bg-primary-400'
-    textColor: string; // e.g. 'text-neutral-900'
-    illustration: string; // emoji or icon
+interface OutcomeSectionProps {
+    content: OutcomeContent;
 }
 
-const products: OutcomeCard[] = [
-    {
-        id: 1,
-        label: 'Data Hygiene',
-        title: 'Clean Your CRM Automatically',
-        description:
-            'Detect duplicates, fix formatting, and standardize fields. Keep Salesforce and HubSpot clean without manual effort.',
-        statBadge: '10× cleaner pipeline',
-        benefits: [
-            'Auto-dedupe and merge rules',
-            'Normalize titles, phones, domains',
-            'Fix incomplete/dirty fields',
-            'Sync-safe updates with logs',
-        ],
-        ctaText: 'See Data Hygiene',
-        ctaLink: '/solutions/data-hygiene',
-        bgColor: 'bg-primary-400',
-        textColor: 'text-neutral-900',
-        illustration: '🧹',
-    },
-    {
-        id: 2,
-        label: 'Standardization',
-        title: 'Enrich & Normalize at Scale',
-        description:
-            'Auto-enrich accounts/contacts and apply your taxonomy—regions, segments, ICP tags—consistently across the org.',
-        statBadge: '95% field coverage',
-        benefits: [
-            'Apply company standards everywhere',
-            'Drop-down safe lists (no free text)',
-            'Auto-fill from verified sources',
-            'Confidence scoring for each field',
-        ],
-        ctaText: 'Explore Enrichment',
-        ctaLink: '/solutions/normalize',
-        bgColor: 'bg-secondary-400',
-        textColor: 'text-neutral-900',
-        illustration: '🧩',
-    },
-    {
-        id: 3,
-        label: 'Ownership',
-        title: 'Route, Deduplicate, Govern',
-        description:
-            'Stop lead ping-pong. Govern territories and ownership with rules your RevOps team can maintain—no code.',
-        statBadge: '–60% reassignment',
-        benefits: [
-            'Territory rules & fallbacks',
-            'Auto-merge lookalike records',
-            'Golden record governance',
-            'Full audit trail for ops',
-        ],
-        ctaText: 'See Governance',
-        ctaLink: '/solutions/governance',
-        bgColor: 'bg-accent-400',
-        textColor: 'text-neutral-900',
-        illustration: '🛡️',
-    },
-    {
-        id: 4,
-        label: 'Forecasting',
-        title: 'Forecast Accurately',
-        description:
-            'AI-powered forecasts you can defend to the board. Know which deals will really close with deal-level proof.',
-        statBadge: '90%+ forecast accuracy',
-        benefits: [
-            'Explainable AI signals',
-            'Deal momentum & risk factors',
-            'Auto-detected slippage',
-            'Proof trails for changes',
-        ],
-        ctaText: 'Learn How',
-        ctaLink: '/solutions/forecast-accurately',
-        bgColor: 'bg-success-400',
-        textColor: 'text-neutral-900',
-        illustration: '📊',
-    },
-];
-
-const OutcomeSection: React.FC = () => {
+const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
+    const { eyebrow, headline, description, cta, products } = content;
     const pinRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -179,24 +90,23 @@ const OutcomeSection: React.FC = () => {
                             <div className="space-y-6 relative z-10">
                                 <div className="border-l-4 border-primary-400 pl-4">
                                     <p className="text-primary-300 text-sm font-bold tracking-widest uppercase mb-4">
-                                        Product Suite
+                                        {eyebrow}
                                     </p>
                                 </div>
 
                                 <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                                    Automate your RevOps data management
+                                    {headline}
                                 </h2>
 
                                 <p className="text-primary-200/90 text-base md:text-lg">
-                                    Standardize, enrich, route, and govern your GTM data across Salesforce and HubSpot—without
-                                    spreadsheets or nightly fire drills.
+                                    {description}
                                 </p>
                             </div>
 
                             {/* CTA */}
                             <div className="mt-10">
                                 <a
-                                    href="/book-demo"
+                                    href={cta.url}
                                     className="group inline-flex items-center gap-3 bg-primary-800/80 hover:bg-primary-700 backdrop-blur-sm px-6 py-4 rounded-2xl transition-all duration-300 border border-primary-600"
                                 >
                                     <div className="w-10 h-10 rounded-full bg-success-500 flex items-center justify-center">
@@ -205,7 +115,7 @@ const OutcomeSection: React.FC = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="text-white font-semibold text-sm">Book a Demo</p>
+                                        <p className="text-white font-semibold text-sm">{cta.text}</p>
                                     </div>
                                     <svg
                                         className="w-5 h-5 text-success-300 group-hover:translate-x-1 transition-transform"
@@ -284,12 +194,12 @@ const OutcomeSection: React.FC = () => {
             {/* ---------- Mobile / Tablet: simple stacked list (no GSAP pin) ---------- */}
             <div className="lg:hidden px-4 py-12 space-y-10">
                 <div className="space-y-4">
-                    <p className="text-primary-300 text-xs font-bold tracking-widest uppercase">Product Suite</p>
+                    <p className="text-primary-300 text-xs font-bold tracking-widest uppercase">{eyebrow}</p>
                     <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-                        Automate your RevOps data management
+                        {headline}
                     </h2>
                     <p className="text-primary-200/90">
-                        Standardize, enrich, route, and govern your GTM data across Salesforce and HubSpot.
+                        {description}
                     </p>
                 </div>
 

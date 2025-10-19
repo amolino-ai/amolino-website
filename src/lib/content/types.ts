@@ -102,3 +102,31 @@ export interface ProblemContent {
   problems: ProblemStat[];
   testimonial: Testimonial;
 }
+
+// Outcome section interfaces
+export interface OutcomeCard {
+  id: number;
+  label: string;
+  title: string;
+  description: string;
+  statBadge: string;
+  benefits: string[];
+  ctaText: string;
+  ctaLink: string;
+  bgColor: string;
+  textColor: string;
+  illustration: string;
+}
+
+export interface OutcomeCTA {
+  text: string;
+  url: string;
+}
+
+export interface OutcomeContent {
+  eyebrow: string;
+  headline: string;
+  description: string;
+  cta: OutcomeCTA;
+  products: OutcomeCard[];
+}
