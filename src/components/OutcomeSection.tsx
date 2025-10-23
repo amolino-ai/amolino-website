@@ -167,9 +167,9 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                             </svg>
                                         </a>
 
-                                        <div className="inline-block px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-xs md:text-sm font-semibold border border-white/30">
+                                        {/* <div className="inline-block px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-xs md:text-sm font-semibold border border-white/30">
                                             {p.statBadge}
-                                        </div>
+                                        </div> */}
 
                                         {/* <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
                                             {p.benefits.map((b, bi) => (
@@ -236,9 +236,9 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                             </svg>
                         </a>
 
-                        <div className="mt-6 inline-block px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-xs font-semibold border border-white/30">
+                        {/* <div className="mt-6 inline-block px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-xs font-semibold border border-white/30">
                             {p.statBadge}
-                        </div>
+                        </div> */}
 
                         {/* <ul className="grid grid-cols-1 gap-2 mt-6">
                             {p.benefits.map((b, i) => (
