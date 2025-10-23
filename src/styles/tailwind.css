@@ -108,6 +108,9 @@
   --color-info-800: #1e40af;
   --color-info-900: #1e3a8a;
   --color-info-950: #172554;
+
+  --color-test-one: #2b3559;
+  --color-test-two: ##5ac5b5;
 }
 
 @keyframes move-x {

@@ -1,13 +1,41 @@
-eyebrow: "Product Suite"
-headline: "Automate your RevOps data management"
-description: "Standardize, enrich, route, and govern your GTM data across Salesforce and HubSpot—without spreadsheets or nightly fire drills."
-
+eyebrow: "Three Outcomes"
+headline: "Transform Your Sales Team"
+description: "Empower your team to win more deals, forecast with confidence, and execute like your top performers—automatically."
 cta:
   text: "Book a Demo"
   url: "/book-demo"
-
 products:
   - id: 1
+    label: "Win More"
+    title: "Win More Deals"
+    description: "Make every rep execute like your best rep. Stop deals from slipping with early risk detection and focus on winnable opportunities."
+    statBadge: "25% increase in win rates"
+    benefits:
+      - "Make every rep execute like your best rep"
+      - "Stop deals from slipping with early risk detection"
+      - "Focus on winnable deals, not lost causes"
+      - "Map buying committees automatically"
+    ctaText: "Learn How"
+    ctaLink: "/solutions/win-more-deals"
+    bgColor: "bg-test-two"
+    textColor: "text-neutral-900"
+    illustration: "🎯"
+  - id: 2
+    label: "Forecast"
+    title: "Forecast Accurately"
+    description: "AI-powered forecasts you can defend to the board. Know which deals will really close this quarter with deal-level proof."
+    statBadge: "90%+ forecast accuracy"
+    benefits:
+      - "AI-powered forecasts you can defend to the board"
+      - "Know which deals will really close this quarter"
+      - "Clean pipeline with automatic stale deal detection"
+      - "Explain forecast changes with deal-level proof"
+    ctaText: "Learn How"
+    ctaLink: "/solutions/forecast-accurately"
+    bgColor: "bg-tertiary-400"
+    textColor: "text-neutral-50"
+    illustration: "📊"
+  - id: 3
     label: "Data Hygiene"
     title: "Clean Your CRM Automatically"
     description: "Detect duplicates, fix formatting, and standardize fields. Keep Salesforce and HubSpot clean without manual effort."
@@ -19,54 +47,6 @@ products:
       - "Sync-safe updates with logs"
     ctaText: "See Data Hygiene"
     ctaLink: "/solutions/data-hygiene"
-    bgColor: "bg-secondary-400"
-    textColor: "text-neutral-900"
-    illustration: "🧹"
-
-  - id: 2
-    label: "Standardization"
-    title: "Enrich & Normalize at Scale"
-    description: "Auto-enrich accounts/contacts and apply your taxonomy—regions, segments, ICP tags—consistently across the org."
-    statBadge: "95% field coverage"
-    benefits:
-      - "Apply company standards everywhere"
-      - "Drop-down safe lists (no free text)"
-      - "Auto-fill from verified sources"
-      - "Confidence scoring for each field"
-    ctaText: "Explore Enrichment"
-    ctaLink: "/solutions/normalize"
-    bgColor: "bg-tertiary-400"
-    textColor: "text-neutral-50"
-    illustration: "🧩"
-
-  - id: 3
-    label: "Ownership"
-    title: "Route, Deduplicate, Govern"
-    description: "Stop lead ping-pong. Govern territories and ownership with rules your RevOps team can maintain—no code."
-    statBadge: "–60% reassignment"
-    benefits:
-      - "Territory rules & fallbacks"
-      - "Auto-merge lookalike records"
-      - "Golden record governance"
-      - "Full audit trail for ops"
-    ctaText: "See Governance"
-    ctaLink: "/solutions/governance"
-    bgColor: "bg-success-400"
-    textColor: "text-neutral-900"
-    illustration: "🛡️"
-
-  - id: 4
-    label: "Forecasting"
-    title: "Forecast Accurately"
-    description: "AI-powered forecasts you can defend to the board. Know which deals will really close with deal-level proof."
-    statBadge: "90%+ forecast accuracy"
-    benefits:
-      - "Explainable AI signals"
-      - "Deal momentum & risk factors"
-      - "Auto-detected slippage"
-      - "Proof trails for changes"
-    ctaText: "Learn How"
-    ctaLink: "/solutions/forecast-accurately"
     bgColor: "bg-secondary-300"
     textColor: "text-neutral-900"
-    illustration: "📊"
+    illustration: "🧹"

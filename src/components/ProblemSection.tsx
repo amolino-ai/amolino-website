@@ -34,9 +34,11 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({ content }) => {
                         <div className="mt-12 bg-tertiary-100 text-neutral-800 p-6 rounded-lg shadow-lg transform -rotate-2 max-w-md">
                             <p className="text-sm leading-relaxed mb-4">&ldquo;{content.testimonial.quote}&rdquo;</p>
                             <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 rounded-full bg-primary-600 flex items-center justify-center text-white font-bold">
-                                    {content.testimonial.author.initials}
-                                </div>
+                                <img
+                                    src={content.testimonial.author.image}
+                                    alt={content.testimonial.author.name}
+                                    className="w-12 h-12 rounded-full object-cover"
+                                />
                                 <div>
                                     <p className="font-semibold text-sm">{content.testimonial.author.name}</p>
                                     <p className="text-xs text-neutral-600">{content.testimonial.author.title}</p>

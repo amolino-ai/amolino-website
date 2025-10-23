@@ -60,7 +60,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
     }, []);
 
     return (
-        <section className="relative bg-primary-900">
+        <section className="relative bg-test-one">
             {/* ---------- Desktop / Large screens: GSAP pinned cross-fade ---------- */}
             <div
                 ref={pinRef}
@@ -171,7 +171,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                             {p.statBadge}
                                         </div>
 
-                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
+                                        {/* <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
                                             {p.benefits.map((b, bi) => (
                                                 <li key={bi} className="flex items-start gap-2">
                                                     <span className="mt-1 text-lg" aria-hidden>
@@ -180,7 +180,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                                     <span className="text-sm md:text-base">{b}</span>
                                                 </li>
                                             ))}
-                                        </ul>
+                                        </ul> */}
 
                                         <div className="mt-8 md:mt-10">
                                             <div className="relative h-48 md:h-56 lg:h-64 bg-white/15 rounded-2xl md:rounded-3xl border border-white/20 flex items-center justify-center">
@@ -236,7 +236,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                             {p.statBadge}
                         </div>
 
-                        <ul className="grid grid-cols-1 gap-2 mt-6">
+                        {/* <ul className="grid grid-cols-1 gap-2 mt-6">
                             {p.benefits.map((b, i) => (
                                 <li key={i} className="flex items-start gap-2">
                                     <span className="mt-1 text-lg" aria-hidden>
@@ -245,7 +245,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                     <span>{b}</span>
                                 </li>
                             ))}
-                        </ul>
+                        </ul> */}
 
                         <div className="mt-6">
                             <div className="relative h-40 sm:h-48 bg-white/15 rounded-2xl border border-white/20 flex items-center justify-center">

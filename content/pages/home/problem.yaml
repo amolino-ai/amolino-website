@@ -1,4 +1,4 @@
-sectionLabel: "For sales leaders"
+sectionLabel: "Challenges faced by B2B sales teams"
 headline: "Sound Familiar?"
 description: "Sales leaders are under pressure to grow efficiently—but legacy tools just analyze what already happened. They don't tell you what to do next."
 ctaText: "See how we help"
@@ -18,6 +18,6 @@ problems:
 testimonial:
   quote: "This product has been really useful in giving sales teams clarity on their pipeline and how they're going to hit their numbers."
   author:
-    name: "John Davis"
-    title: "VP of Sales at TechCorp"
-    initials: "JD"
+    name: "Brian Sathianathan"
+    title: "COO at Iterate.ai"
+    image: "/people/Brian_Sathianathan.png"
