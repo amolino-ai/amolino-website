@@ -183,8 +183,12 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                         </ul> */}
 
                                         <div className="mt-8 md:mt-10">
-                                            <div className="relative h-48 md:h-56 lg:h-64 bg-white/15 rounded-2xl md:rounded-3xl border border-white/20 flex items-center justify-center">
-                                                <div className="text-7xl md:text-8xl opacity-25">{p.illustration}</div>
+                                            <div className="-m-2 rounded-xl bg-white/5 p-2 ring-1 ring-white/10 ring-inset lg:rounded-2xl lg:p-3">
+                                                <img
+                                                    src={p.illustration}
+                                                    alt={p.title}
+                                                    className="h-48 md:h-56 lg:h-64 w-full rounded-lg object-cover shadow-xl ring-1 ring-white/10"
+                                                />
                                             </div>
                                         </div>
                                     </article>
@@ -248,8 +252,12 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                         </ul> */}
 
                         <div className="mt-6">
-                            <div className="relative h-40 sm:h-48 bg-white/15 rounded-2xl border border-white/20 flex items-center justify-center">
-                                <div className="text-7xl opacity-25">{p.illustration}</div>
+                            <div className="-m-2 rounded-xl bg-white/5 p-2 ring-1 ring-white/10 ring-inset">
+                                <img
+                                    src={p.illustration}
+                                    alt={p.title}
+                                    className="h-40 sm:h-48 w-full rounded-lg object-cover shadow-xl ring-1 ring-white/10"
+                                />
                             </div>
                         </div>
                     </article>

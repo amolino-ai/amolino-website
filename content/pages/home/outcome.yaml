@@ -19,7 +19,7 @@ products:
     ctaLink: "/solutions/win-more-deals"
     bgColor: "bg-test-two"
     textColor: "text-neutral-900"
-    illustration: "🎯"
+    illustration: "/screenshots/Compass_temp.png"
   - id: 2
     label: "Forecast"
     title: "Forecast Accurately"
@@ -34,7 +34,7 @@ products:
     ctaLink: "/solutions/forecast-accurately"
     bgColor: "bg-tertiary-400"
     textColor: "text-neutral-50"
-    illustration: "📊"
+    illustration: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
   - id: 3
     label: "Data Hygiene"
     title: "Clean Your CRM Automatically"
@@ -49,4 +49,4 @@ products:
     ctaLink: "/solutions/data-hygiene"
     bgColor: "bg-secondary-300"
     textColor: "text-neutral-900"
-    illustration: "🧹"
+    illustration: "/screenshots/sales_compass_full_view_modified_april_2025.jpg"
