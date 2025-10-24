@@ -7,6 +7,8 @@ import { Heading, Lead, Subheading } from '@/components/Text';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon, MinusIcon } from '@heroicons/react/16/solid';
 import type { Metadata } from 'next';
+import { getPricingPageContent } from '@/lib/content';
+import type { PricingPageContent, PricingTier } from '@/lib/content/types';
 
 export const metadata: Metadata = {
   title: 'Pricing',
@@ -14,139 +16,18 @@ export const metadata: Metadata = {
     'Companies all over the world have closed millions of deals with Amolino. Sign up today and start selling smarter.',
 };
 
-const tiers = [
-  {
-    name: 'Starter' as const,
-    slug: 'starter',
-    description: 'Complete overview of your customers throughout their lifecycle.',
-    priceMonthly: 59,
-    href: '#',
-    highlights: [
-      { description: 'Customer 360' },
-      { description: 'Guided Selling', disabled: true },
-      { description: 'Team insights', disabled: true },
-      { description: 'Revenue Analytics', disabled: true },
-    ],
-    features: [
-      { section: 'Customer 360', name: 'Overall Opportunity Summary', value: true },
-      { section: 'Customer 360', name: 'Number of Opportunities', value: '\u221E' },
-      { section: 'Customer 360', name: 'Automatic Timeline', value: true },
-      { section: 'Customer 360', name: 'Rapid Actions', value: true },
-      { section: 'Customer 360', name: 'Opportunity Contacts Updated', value: true },
-      { section: 'Customer 360', name: 'Ask Amolino', value: true },
-      { section: 'CRM', name: '2-way HubSpot Sync', value: true },
-      { section: 'CRM', name: '2-way SalesForce Sync', value: true },
-      { section: 'Email Integrations', name: 'Google Mail', value: true },
-      { section: 'Email Integrations', name: 'Microsoft 365 Email', value: true },
-      { section: 'Messaging Integrations', name: 'Slack', value: true },
-      { section: 'Messaging Integrations', name: 'Microsoft Teams', value: true },
-      { section: 'Conversational Intelligence', name: 'Google Meet', value: false },
-      { section: 'Conversational Intelligence', name: 'Zoom', value: false },
-      { section: 'Conversational Intelligence', name: 'Microsoft Teams', value: false },
-      { section: 'Conversational Intelligence', name: 'Cisco Webex', value: false },
-      { section: 'Guided Selling', name: 'Sales Playbook Checks', value: false },
-      { section: 'Guided Selling', name: 'Customer Sentiment over email / meetings', value: false },
-      { section: 'Guided Selling', name: 'Opportunity Health', value: false },
-      { section: 'Team Insights', name: 'Sales Performance', value: false },
-      { section: 'Team Insights', name: 'Competitive Overview', value: false },
-      { section: 'Team Insights', name: 'Team Pipeline Overview', value: false },
-      { section: 'Team Insights', name: 'Real-time Coaching', value: false },
-      { section: 'Revenue Analytics and Forecasting', name: 'Real-time insights into deals', value: false },
-    ],
-  },
-  {
-    name: 'Professional' as const,
-    slug: 'growth',
-    description: 'All the extras for your growing team.',
-    priceMonthly: 99,
-    href: '#',
-    highlights: [
-      { description: 'Customer 360' },
-      { description: 'Guided Selling' },
-      { description: 'Team insights', disabled: false },
-      { description: 'Revenue Analytics', disabled: true },
-    ],
-    features: [
-      { section: 'Customer 360', name: 'Overall Opportunity Summary', value: true },
-      { section: 'Customer 360', name: 'Number of Opportunities', value: '\u221E' },
-      { section: 'Customer 360', name: 'Automatic Timeline', value: true },
-      { section: 'Customer 360', name: 'Rapid Actions', value: true },
-      { section: 'Customer 360', name: 'Opportunity Contacts Updated', value: true },
-      { section: 'Customer 360', name: 'Ask Amolino', value: true },
-      { section: 'CRM', name: '2-way HubSpot Sync', value: true },
-      { section: 'CRM', name: '2-way SalesForce Sync', value: true },
-      { section: 'Email Integrations', name: 'Google Mail', value: true },
-      { section: 'Email Integrations', name: 'Microsoft 365 Email', value: true },
-      { section: 'Messaging Integrations', name: 'Slack', value: true },
-      { section: 'Messaging Integrations', name: 'Microsoft Teams', value: true },
-      { section: 'Conversational Intelligence', name: 'Google Meet', value: true },
-      { section: 'Conversational Intelligence', name: 'Zoom', value: true },
-      { section: 'Conversational Intelligence', name: 'Microsoft Teams', value: true },
-      { section: 'Conversational Intelligence', name: 'Cisco Webex', value: true },
-      { section: 'Guided Selling', name: 'Sales Playbook Checks', value: true },
-      { section: 'Guided Selling', name: 'Customer Sentiment over email / meetings', value: true },
-      { section: 'Guided Selling', name: 'Opportunity Health', value: true },
-      { section: 'Team Insights', name: 'Sales Performance', value: true },
-      { section: 'Team Insights', name: 'Competitive Overview', value: true },
-      { section: 'Team Insights', name: 'Team Pipeline Overview', value: true },
-      { section: 'Team Insights', name: 'Real-time Coaching', value: true },
-      { section: 'Revenue Analytics and Forecasting', name: 'Real-time insights into deals', value: false },
-    ],
-  },
-  {
-    name: 'Business' as const,
-    slug: 'business',
-    description: 'Added flexibility to close deals at scale.',
-    priceMonthly: 199,
-    href: '#',
-    highlights: [
-      { description: 'Customer 360' },
-      { description: 'Guided Selling' },
-      { description: 'Team insights', disabled: false },
-      { description: 'Revenue Analytics', disabled: false },
-    ],
-    features: [
-      { section: 'Customer 360', name: 'Overall Opportunity Summary', value: true },
-      { section: 'Customer 360', name: 'Number of Opportunities', value: '\u221E' },
-      { section: 'Customer 360', name: 'Automatic Timeline', value: true },
-      { section: 'Customer 360', name: 'Rapid Actions', value: true },
-      { section: 'Customer 360', name: 'Opportunity Contacts Updated', value: true },
-      { section: 'Customer 360', name: 'Ask Amolino', value: true },
-      { section: 'CRM', name: '2-way HubSpot Sync', value: true },
-      { section: 'CRM', name: '2-way SalesForce Sync', value: true },
-      { section: 'Email Integrations', name: 'Google Mail', value: true },
-      { section: 'Email Integrations', name: 'Microsoft 365 Email', value: true },
-      { section: 'Messaging Integrations', name: 'Slack', value: true },
-      { section: 'Messaging Integrations', name: 'Microsoft Teams', value: true },
-      { section: 'Conversational Intelligence', name: 'Google Meet', value: true },
-      { section: 'Conversational Intelligence', name: 'Zoom', value: true },
-      { section: 'Conversational Intelligence', name: 'Microsoft Teams', value: true },
-      { section: 'Conversational Intelligence', name: 'Cisco Webex', value: true },
-      { section: 'Guided Selling', name: 'Sales Playbook Checks', value: true },
-      { section: 'Guided Selling', name: 'Customer Sentiment over email / meetings', value: true },
-      { section: 'Guided Selling', name: 'Opportunity Health', value: true },
-      { section: 'Team Insights', name: 'Sales Performance', value: true },
-      { section: 'Team Insights', name: 'Competitive Overview', value: true },
-      { section: 'Team Insights', name: 'Team Pipeline Overview', value: true },
-      { section: 'Team Insights', name: 'Real-time Coaching', value: true },
-      { section: 'Revenue Analytics and Forecasting', name: 'Real-time insights into deals', value: true },
-    ],
-  },
-];
-
-function Header() {
+function Header({ content }: { content: PricingPageContent }) {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Pricing that grows with your team size.</Heading>
+      <Heading as="h1">{content.header.heading}</Heading>
       <Lead className="mt-6 max-w-3xl">
-        Smart companies all over the world reduce their sales cycle by 30% and increase their revenue by 20% by using
-        Amolino. Sign up today and start selling smarter.
+        {content.header.lead}
       </Lead>
     </Container>
   );
 }
 
-function PricingCards() {
+function PricingCards({ tiers }: { tiers: PricingTier[] }) {
   return (
     <div className="relative py-24">
       <Gradient className="absolute inset-x-2 top-48 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
@@ -161,7 +42,7 @@ function PricingCards() {
   );
 }
 
-function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
+function PricingCard({ tier }: { tier: PricingTier }) {
   return (
     <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
       <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
@@ -200,7 +81,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   );
 }
 
-function PricingTable({ selectedTier }: { selectedTier: (typeof tiers)[number] }) {
+function PricingTable({ selectedTier, tiers }: { selectedTier: PricingTier; tiers: PricingTier[] }) {
   return (
     <Container className="py-24">
       <table className="w-full text-left">
@@ -399,7 +280,7 @@ function Testimonial() {
   );
 }
 
-function FrequentlyAskedQuestions() {
+function FrequentlyAskedQuestions({ content }: { content: PricingPageContent }) {
   return (
     <Container>
       <section id="faqs" className="scroll-mt-8">
@@ -408,52 +289,14 @@ function FrequentlyAskedQuestions() {
           Your questions answered.
         </Heading>
         <div className="mx-auto mt-16 mb-32 max-w-xl space-y-12">
-          <dl>
-            <dt className="text-sm font-semibold">What&apos;s included in the free trial?</dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              All customers get 21 days of free access to the Professional plan. This allows you to experience our
-              complete suite of AI-powered sales tools, including guided selling, revenue analytics, and team insights.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">Can I upgrade or downgrade my plan later?</dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, you can change your plan at any time. When upgrading, you&apos;ll be prorated for the remainder of
-              your billing cycle. When downgrading, the change will take effect at the start of your next billing cycle.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">How quickly can I see results?</dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Most of our customers start seeing value withing the first days. After the initial integration with email
-              you&apos;ll start seeing data in your AmolinoAI dashboard. Many of our customers report that they see data
-              that they never knew existing because it was never collected and updated in the CRM before.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold">What kind of support do you offer?</dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              All plans include email support. Professional and Business plans include 24/7 call center support.
-              Business plan customers also get a dedicated account manager for personalized assistance and strategic
-              guidance.
-            </dd>
-          </dl>
-          {/* <dl>
-            <dt className="text-sm font-semibold">How does the competitor analysis feature work?</dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              Our AI-powered competitor analysis provides insights into market positioning, pricing strategies, and
-              competitive advantages. The Professional plan includes 5 analyses per month, while the Business plan
-              offers unlimited analyses to help you stay ahead of the competition.
-            </dd>
-          </dl> */}
-          {/* <dl>
-            <dt className="text-sm font-semibold">What integrations are available?</dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
-              We integrate with major CRM platforms, sales tools, and data providers. The Professional and Business
-              plans include access to our full suite of integrations, including AmolinoAI capabilities. Starter plan
-              includes basic integrations with select platforms.
-            </dd>
-          </dl> */}
+          {content.faqs.map((faq, index) => (
+            <dl key={index}>
+              <dt className="text-sm font-semibold">{faq.question}</dt>
+              <dd className="mt-4 text-sm/6 text-gray-600">
+                {faq.answer}
+              </dd>
+            </dl>
+          ))}
         </div>
       </section>
     </Container>
@@ -464,15 +307,19 @@ export default async function Pricing(
   props: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }
 ) {
   const searchParams = await props.searchParams;
-  let tier = typeof searchParams.tier === 'string' ? tiers.find(({ slug }) => slug === searchParams.tier)! : tiers[0];
+  const content = await getPricingPageContent();
+
+  let tier = typeof searchParams.tier === 'string'
+    ? content.tiers.find(({ slug }) => slug === searchParams.tier)!
+    : content.tiers[0];
 
   return (
     <main className="overflow-hidden">
-      <Header />
-      <PricingCards />
-      <PricingTable selectedTier={tier} />
+      <Header content={content} />
+      <PricingCards tiers={content.tiers} />
+      <PricingTable selectedTier={tier} tiers={content.tiers} />
       {/* <Testimonial /> */}
-      <FrequentlyAskedQuestions />
+      <FrequentlyAskedQuestions content={content} />
       <LogoCloud />
     </main>
   );

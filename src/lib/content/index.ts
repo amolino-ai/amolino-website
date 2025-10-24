@@ -34,6 +34,13 @@ export type {
   IntegrationsSectionContent,
   IntegrationCategory,
   Integration,
+  PricingPageContent,
+  PricingTier,
+  PricingFeature,
+  PricingHighlight,
+  PricingHeader,
+  PricingTestimonial,
+  PricingFAQ,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -74,4 +81,5 @@ export {
   getSecuritySectionContent,
   getFeatureSectionContent,
   getIntegrationsSectionContent,
+  getPricingPageContent,
 } from './pages';

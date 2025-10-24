@@ -236,3 +236,48 @@ export interface IntegrationsSectionContent {
     primaryUrl: string;
   };
 }
+
+// Pricing page interfaces
+export interface PricingHighlight {
+  description: string;
+  disabled?: boolean;
+}
+
+export interface PricingFeature {
+  section: string;
+  name: string;
+  value: boolean | string;
+}
+
+export interface PricingTier {
+  name: string;
+  slug: string;
+  description: string;
+  priceMonthly: number;
+  href: string;
+  highlights: PricingHighlight[];
+  features: PricingFeature[];
+}
+
+export interface PricingHeader {
+  heading: string;
+  lead: string;
+}
+
+export interface PricingTestimonial {
+  quote: string;
+  image: string;
+  authorRole: string;
+}
+
+export interface PricingFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface PricingPageContent {
+  header: PricingHeader;
+  tiers: PricingTier[];
+  testimonial?: PricingTestimonial;
+  faqs: PricingFAQ[];
+}

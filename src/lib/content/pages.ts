@@ -10,6 +10,7 @@ import type {
   SecuritySectionContent,
   FeatureSectionContent,
   IntegrationsSectionContent,
+  PricingPageContent,
 } from './types';
 
 /**
@@ -80,4 +81,11 @@ export async function getFeatureSectionContent(): Promise<FeatureSectionContent>
  */
 export async function getIntegrationsSectionContent(): Promise<IntegrationsSectionContent> {
   return loadYAML<IntegrationsSectionContent>('pages/home/integrations.yaml');
+}
+
+/**
+ * Get pricing page content
+ */
+export async function getPricingPageContent(): Promise<PricingPageContent> {
+  return loadYAML<PricingPageContent>('pages/pricing.yaml');
 }
