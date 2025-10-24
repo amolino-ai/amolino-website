@@ -1,0 +1,44 @@
+introText: "Quarterly Business Reviews should be more than status meetings—they are the operating rhythm that turns strategy into revenue. When you run them well, QBRs concentrate the entire organization's intelligence into three hours of candid discussion, rapid decision-making, and crystal-clear accountability."
+
+principlesHeading: "Five Principles to Remember"
+
+principles:
+  - title: "1. Start with the \"Why.\""
+    description: "Anchor every chart, slide, and comment to the quarter's strategic objectives. If the conversation drifts from revenue growth, retention, efficiency, or whatever goals you set, steer it back."
+
+  - title: "2. Tell a Data-backed Story."
+    bulletPoints:
+      - "Show four-quarter trends, not single-point snapshots."
+      - "Use one slide to preview the \"movie trailer\" (goals vs actuals, wins, gaps, decisions needed)."
+      - "Translate each metric into business impact: \"+1 pt NRR = +$250k ARR next quarter.\""
+
+  - title: "3. Make It Action-Oriented."
+    description: "Every section ends with a \"So What / Now What\": an owner, a deadline, and a success metric logged live in the action tracker."
+
+  - title: "4. Drive Cross-Functional Alignment."
+    description: "Pull Sales, CS, Marketing, Product, Finance, Ops, and People into the same room (or Zoom) with one source of truth. Misalignment is exposed—and resolved—before it hurts the next quarter."
+
+  - title: "5. Close the Loop Relentlessly."
+    bulletPoints:
+      - "Send the recap package within 24 hours."
+      - "Review the action board weekly."
+      - "Grade yourself at the next QBR on percent of actions completed. Continuous improvement turns QBRs from rituals into growth engines."
+
+comparisonHeading: "What \"Great\" Looks Like"
+
+comparison:
+  - aspect: "Preparation"
+    good: "Slides complete"
+    great: "Slides + insights + FAQ flashcards + data dictionary locked 10 days early"
+
+  - aspect: "Meeting"
+    good: "Agenda followed"
+    great: "Timebox upheld + executive flex block + live scenario modeling"
+
+  - aspect: "Follow-Up"
+    good: "Action list emailed"
+    great: "Actions in Asana with Slack digest; 90% closed by next QBR"
+
+  - aspect: "Culture"
+    good: "Leaders report"
+    great: "Leaders debate, decide, and own outcomes in front of their teams"

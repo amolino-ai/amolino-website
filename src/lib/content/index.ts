@@ -61,6 +61,13 @@ export type {
   ProductShowcase,
   ProductBottomFeature,
   ProductBottomFeaturePoint,
+  QBRIntroduction,
+  QBRBestPractices,
+  QBRBestPracticeRow,
+  QBRCROImperative,
+  QBRSummary,
+  QBRSummaryPrinciple,
+  QBRComparisonRow,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -105,4 +112,7 @@ export {
   getFooterContent,
   getUseCaseContent,
   getProductContent,
+  getQBRIntroduction,
+  getQBRBestPractices,
+  getQBRSummary,
 } from './pages';

@@ -14,6 +14,9 @@ import type {
   FooterContent,
   UseCasePageContent,
   ProductPageContent,
+  QBRIntroduction,
+  QBRBestPractices,
+  QBRSummary,
 } from './types';
 
 /**
@@ -112,4 +115,25 @@ export async function getUseCaseContent(slug: string): Promise<UseCasePageConten
  */
 export async function getProductContent(slug: string): Promise<ProductPageContent> {
   return loadYAML<ProductPageContent>(`pages/product/${slug}.yaml`);
+}
+
+/**
+ * Get QBR guide introduction content
+ */
+export async function getQBRIntroduction(): Promise<QBRIntroduction> {
+  return loadYAML<QBRIntroduction>('pages/qbr-guide/introduction.yaml');
+}
+
+/**
+ * Get QBR guide best practices content
+ */
+export async function getQBRBestPractices(): Promise<QBRBestPractices> {
+  return loadYAML<QBRBestPractices>('pages/qbr-guide/best-practices.yaml');
+}
+
+/**
+ * Get QBR guide summary content
+ */
+export async function getQBRSummary(): Promise<QBRSummary> {
+  return loadYAML<QBRSummary>('pages/qbr-guide/summary.yaml');
 }

@@ -426,3 +426,51 @@ export interface ProductPageContent {
   showcase: ProductShowcase;
   bottomFeature: ProductBottomFeature;
 }
+
+// QBR Guide content interfaces
+export interface QBRIntroduction {
+  introParagraph: string;
+  benefits: string[];
+  closingParagraph: string;
+}
+
+export interface QBRBestPracticeRow {
+  pillar: string;
+  whatGreatLooksLike: string;
+  quickTactics: string;
+}
+
+export interface QBRCROImperative {
+  imperative: string;
+  howToNail: string;
+}
+
+export interface QBRBestPractices {
+  introText: string;
+  bestPractices: QBRBestPracticeRow[];
+  croSection: {
+    heading: string;
+    imperatives: QBRCROImperative[];
+  };
+  closingText: string;
+}
+
+export interface QBRSummaryPrinciple {
+  title: string;
+  description: string;
+  bulletPoints?: string[];
+}
+
+export interface QBRComparisonRow {
+  aspect: string;
+  good: string;
+  great: string;
+}
+
+export interface QBRSummary {
+  introText: string;
+  principlesHeading: string;
+  principles: QBRSummaryPrinciple[];
+  comparisonHeading: string;
+  comparison: QBRComparisonRow[];
+}
