@@ -2,8 +2,13 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Gradient } from '@/components/Gradient';
 import { NumbersSection } from './Numbers';
+import type { NumbersContent } from '@/lib/content/types';
 
-export function Hero() {
+interface HeroProps {
+  numbersContent: NumbersContent;
+}
+
+export function Hero({ numbersContent }: HeroProps) {
   return (
     <div className="relative">
       <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
@@ -26,7 +31,7 @@ export function Hero() {
           </div>
 
           <div className="mt-12">
-            <NumbersSection />
+            <NumbersSection content={numbersContent} />
           </div>
           {/* <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="https://app.amolino.ai">Get started</Button>

@@ -4,36 +4,20 @@ import React from 'react';
 import { Container } from '@/components/Container';
 import { Screenshot } from '@/components/Screenshot';
 import { Heading } from '@/components/Text';
+import type { FeatureSectionContent } from '@/lib/content/types';
 
-export function FeatureSection() {
-  const [activeTab, setActiveTab] = React.useState('revenue');
+interface FeatureSectionProps {
+  content: FeatureSectionContent;
+}
 
-  const tabs = [
-    {
-      id: 'execution',
-      title: 'Win More. Faster',
-      src: '/screenshots/dashboard_revenue_forecast_april2025.jpg',
-      description: 'Make Every Rep a Top Performer with AI-Driven Sales Guidance.'
-    },
-    {
-      id: 'forecast',
-      title: 'Forecast Confidently',
-      src: '/screenshots/dashboard_managers_view_april_2025.jpg',
-      description: 'Quarterly Forecasting. Accurate. Real-time.',
-    },
-    {
-      id: 'grunt-work',
-      title: 'Eliminate Grunt-work',
-      src: '/screenshots/dashboard_rep_view_april_2025.jpg',
-      description: 'Update the CRM Automatically. No Lifting a Finger.',
-    }
-  ];
+export function FeatureSection({ content }: FeatureSectionProps) {
+  const [activeTab, setActiveTab] = React.useState(content.tabs[0]?.id || 'revenue');
 
   return (
     <div className="overflow-hidden">
       <Container className="pb-24">
         <div className="flex justify-center space-x-4 mb-8">
-          {tabs.map((tab) => (
+          {content.tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
@@ -48,12 +32,12 @@ export function FeatureSection() {
           ))}
         </div>
         <Heading as="h2" className="max-w-3xl mx-auto text-center">
-          {tabs.find(tab => tab.id === activeTab)?.description}
+          {content.tabs.find(tab => tab.id === activeTab)?.description}
         </Heading>
-        <Screenshot 
+        <Screenshot
           width={1216}
           height={768}
-          src={tabs.find(tab => tab.id === activeTab)?.src || ''}
+          src={content.tabs.find(tab => tab.id === activeTab)?.src || ''}
           className="mt-16 h-[36rem] sm:h-auto sm:w-[76rem] mx-auto bg-gray-100 rounded-2xl shadow-2xl"
         />
       </Container>

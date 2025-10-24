@@ -20,6 +20,20 @@ export type {
   OutcomeContent,
   OutcomeCard,
   OutcomeCTA,
+  NumbersContent,
+  NumberStat,
+  BentoSectionContent,
+  DarkBentoSectionContent,
+  BentoCard,
+  BlindSalesSectionContent,
+  BlindSalesProblem,
+  SecuritySectionContent,
+  SecurityFeature,
+  FeatureSectionContent,
+  FeatureTab,
+  IntegrationsSectionContent,
+  IntegrationCategory,
+  Integration,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -49,4 +63,15 @@ export {
 } from './help';
 
 // Page content functions
-export { getHeroContent, getProblemContent, getOutcomeContent } from './pages';
+export {
+  getHeroContent,
+  getProblemContent,
+  getOutcomeContent,
+  getNumbersContent,
+  getBentoSectionContent,
+  getDarkBentoSectionContent,
+  getBlindSalesSectionContent,
+  getSecuritySectionContent,
+  getFeatureSectionContent,
+  getIntegrationsSectionContent,
+} from './pages';

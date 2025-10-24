@@ -130,3 +130,109 @@ export interface OutcomeContent {
   cta: OutcomeCTA;
   products: OutcomeCard[];
 }
+
+// Numbers section interfaces
+export interface NumberStat {
+  label: string;
+  value: number;
+  suffix?: string;
+  decimals?: number;
+}
+
+export interface NumbersContent {
+  title: string;
+  stats: NumberStat[];
+}
+
+// Bento section interfaces
+export interface BentoCard {
+  eyebrow: string;
+  title: string;
+  description: string;
+  graphic: {
+    type: 'image' | 'background';
+    src: string;
+    size?: string;
+    position?: string;
+  };
+  fade?: Array<'top' | 'bottom' | 'left' | 'right'>;
+  className?: string;
+}
+
+export interface BentoSectionContent {
+  subheading: string;
+  heading: string;
+  description: string;
+  cards: BentoCard[];
+}
+
+// Dark Bento section interfaces (same structure as Bento but with dark prop)
+export interface DarkBentoSectionContent {
+  subheading: string;
+  heading: string;
+  description: string;
+  cards: BentoCard[];
+}
+
+// Blind sales section interfaces
+export interface BlindSalesProblem {
+  title: string;
+  description: string;
+  iconPath: string;
+}
+
+export interface BlindSalesSectionContent {
+  mainHeading: string;
+  subheading: string;
+  problems: BlindSalesProblem[];
+  solutionHeading: string;
+  solutionDescription: string;
+}
+
+// Security section interfaces
+export interface SecurityFeature {
+  title: string;
+  description: string;
+}
+
+export interface SecuritySectionContent {
+  heading: string;
+  description: string;
+  features: SecurityFeature[];
+}
+
+// Feature section interfaces
+export interface FeatureTab {
+  id: string;
+  title: string;
+  description: string;
+  src: string;
+}
+
+export interface FeatureSectionContent {
+  tabs: FeatureTab[];
+}
+
+// Integrations section interfaces
+export interface Integration {
+  name: string;
+  src: string;
+  alt?: string;
+}
+
+export interface IntegrationCategory {
+  title: 'MEETINGS' | 'EMAIL' | 'MESSAGING' | 'CRM';
+  integrations: Integration[];
+}
+
+export interface IntegrationsSectionContent {
+  subheading: string;
+  heading: string;
+  description: string;
+  tagline: string;
+  categories: IntegrationCategory[];
+  cta: {
+    primaryText: string;
+    primaryUrl: string;
+  };
+}
