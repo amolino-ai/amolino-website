@@ -12,6 +12,7 @@ import type {
   IntegrationsSectionContent,
   PricingPageContent,
   FooterContent,
+  UseCasePageContent,
 } from './types';
 
 /**
@@ -96,4 +97,11 @@ export async function getPricingPageContent(): Promise<PricingPageContent> {
  */
 export async function getFooterContent(): Promise<FooterContent> {
   return loadYAML<FooterContent>('global/footer.yaml');
+}
+
+/**
+ * Get use case page content
+ */
+export async function getUseCaseContent(slug: string): Promise<UseCasePageContent> {
+  return loadYAML<UseCasePageContent>(`pages/use-cases/${slug}.yaml`);
 }

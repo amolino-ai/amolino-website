@@ -46,6 +46,15 @@ export type {
   FooterLink,
   FooterCTA,
   FooterSocial,
+  UseCasePageContent,
+  UseCaseHero,
+  UseCaseChallenge,
+  UseCaseStat,
+  UseCaseFeature,
+  UseCaseSolution,
+  UseCaseSolutionFeature,
+  UseCaseImpact,
+  UseCaseBottomCTA,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -88,4 +97,5 @@ export {
   getIntegrationsSectionContent,
   getPricingPageContent,
   getFooterContent,
+  getUseCaseContent,
 } from './pages';

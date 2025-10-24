@@ -314,3 +314,71 @@ export interface FooterContent {
   socials: FooterSocial[];
   copyright: string;
 }
+
+// Use Case Page content interfaces
+export interface UseCaseHero {
+  badgeText: string;
+  badgeBgColor: string;
+  badgeTextColor: string;
+  title: string;
+  description: string;
+  primaryButtonText: string;
+  primaryButtonLink: string;
+  secondaryButtonText: string;
+  secondaryButtonLink: string;
+}
+
+export interface UseCaseStat {
+  label: string;
+  value: number;
+  suffix: string;
+  description: string;
+}
+
+export interface UseCaseFeature {
+  title: string;
+  children: string;
+}
+
+export interface UseCaseChallenge {
+  subheading: string;
+  heading: string;
+  description: string;
+  stats: UseCaseStat[];
+  features: UseCaseFeature[];
+}
+
+export interface UseCaseSolutionFeature {
+  title: string;
+  items: string[];
+}
+
+export interface UseCaseSolution {
+  subheading: string;
+  heading: string;
+  features: UseCaseSolutionFeature[];
+}
+
+export interface UseCaseImpact {
+  subheading: string;
+  heading: string;
+  description: string;
+  stats: UseCaseStat[];
+}
+
+export interface UseCaseBottomCTA {
+  heading: string;
+  description: string;
+  primaryButtonText: string;
+  primaryButtonLink: string;
+  secondaryButtonText: string;
+  secondaryButtonLink: string;
+}
+
+export interface UseCasePageContent {
+  hero: UseCaseHero;
+  challenge: UseCaseChallenge;
+  solution: UseCaseSolution;
+  impact: UseCaseImpact;
+  bottomCta: UseCaseBottomCTA;
+}
