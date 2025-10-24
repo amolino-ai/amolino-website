@@ -382,3 +382,47 @@ export interface UseCasePageContent {
   impact: UseCaseImpact;
   bottomCta: UseCaseBottomCTA;
 }
+
+// Product Page content interfaces
+export interface ProductHero {
+  badgeText: string;
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaHref: string;
+  screenshotSrc: string;
+}
+
+export interface ProductFeature {
+  iconPath: string;
+  title: string;
+  description: string;
+}
+
+export interface ProductShowcase {
+  title: string;
+  features: ProductFeature[];
+  screenshotSrc: string;
+  comparisonTitle: string;
+  comparisonSubtitle: string;
+  traditionalPoints: string[];
+  aiPoweredPoints: string[];
+}
+
+export interface ProductBottomFeaturePoint {
+  title: string;
+  description: string;
+}
+
+export interface ProductBottomFeature {
+  title: string;
+  subtitle: string;
+  points: ProductBottomFeaturePoint[];
+  screenshotSrc: string;
+}
+
+export interface ProductPageContent {
+  hero: ProductHero;
+  showcase: ProductShowcase;
+  bottomFeature: ProductBottomFeature;
+}

@@ -55,6 +55,12 @@ export type {
   UseCaseSolutionFeature,
   UseCaseImpact,
   UseCaseBottomCTA,
+  ProductPageContent,
+  ProductHero,
+  ProductFeature,
+  ProductShowcase,
+  ProductBottomFeature,
+  ProductBottomFeaturePoint,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -98,4 +104,5 @@ export {
   getPricingPageContent,
   getFooterContent,
   getUseCaseContent,
+  getProductContent,
 } from './pages';
