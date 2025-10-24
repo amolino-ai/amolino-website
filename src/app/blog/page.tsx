@@ -8,6 +8,7 @@ import {
   getFeaturedPosts,
   getPosts,
   getPostsCount,
+  getFooterContent,
 } from '@/lib/content';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import {
@@ -285,6 +286,8 @@ export default async function Blog(
       ? searchParams.category
       : undefined;
 
+  const footerContent = await getFooterContent();
+
   return (
     <main className="overflow-hidden">
       <Container>
@@ -303,7 +306,7 @@ export default async function Blog(
         <Posts page={page} category={category} />
         <Pagination page={page} category={category} />
       </Container>
-      <Footer />
+      <Footer content={footerContent} />
     </main>
   );
 }

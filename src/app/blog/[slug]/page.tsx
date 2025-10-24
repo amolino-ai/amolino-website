@@ -2,7 +2,7 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Footer } from '@/components/Footer';
 import * as mdxComponents from '@/components/Mdx';
-import { getBlogPost, getBlogPostContent } from '@/lib/content';
+import { getBlogPost, getBlogPostContent, getFooterContent } from '@/lib/content';
 import { cn } from '@/lib/utils'; // or import clsx from 'clsx'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid';
 import dayjs from 'dayjs';
@@ -12,12 +12,13 @@ import styles from '../blog.module.css';
 
 
 export const dynamic = 'force-static';
-export const revalidate = 0; 
+export const revalidate = 0;
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = await getBlogPost(slug);
   const content = await getBlogPostContent(slug);
+  const footerContent = await getFooterContent();
 
   if (!post || !content) {
     notFound();
@@ -74,7 +75,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         </div>
       </Container>
-      <Footer />
+      <Footer content={footerContent} />
     </main>
   );
 }

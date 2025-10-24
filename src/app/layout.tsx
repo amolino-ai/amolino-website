@@ -5,6 +5,7 @@ import { PostHogProvider } from '@/components/PostHogProvider';
 import { type Section } from '@/components/SectionProvider';
 import { Navbar } from '@/components/Navbar';
 import { Container } from '@/components/Container';
+import { getFooterContent } from '@/lib/content';
 import '@/styles/tailwind.css';
 import '@mantine/core/styles.css';
 import glob from 'fast-glob';
@@ -61,6 +62,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     ]),
   )) as Array<[string, Array<Section>]>;
   let allSections = Object.fromEntries(allSectionsEntries);
+  const footerContent = await getFooterContent();
 
   return (
     <html
@@ -78,7 +80,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <Container>
             <Navbar />
             </Container>
-              <Layout allSections={allSections}>{children}</Layout>
+              <Layout allSections={allSections} footerContent={footerContent}>{children}</Layout>
             </div>
           </Providers>
         </PostHogProvider>

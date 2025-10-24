@@ -1,0 +1,55 @@
+cta:
+  subheading: "Get started"
+  heading: "Give your team an unfair advantage."
+  description: "Eliminate pipeline surprises, end of quarter scrambles, and empower your sales team to close more deals."
+  buttonText: "Start for free today"
+  buttonHref: "#"
+
+sections:
+  - heading: "Learn"
+    links:
+      - label: "AmolinoAI vs HubSpot"
+        href: "/learn/amolino-vs-hubspot"
+
+  - heading: "Resources"
+    links:
+      - label: "Sales Qualification Frameworks"
+        href: "/resources/frameworks/qualification"
+      - label: "QBR Playbook"
+        href: "/resources/guides/qbrs"
+
+  - heading: "Company"
+    links:
+      - label: "Pricing"
+        href: "/pricing"
+      - label: "Blog"
+        href: "/blog"
+      - label: "About Us"
+        href: "/company"
+
+  - heading: "Use Cases"
+    links:
+      - label: "Pipeline Visibility"
+        href: "/use-cases/pipeline-visibility"
+      - label: "Revenue Forecasting"
+        href: "/use-cases/revenue-forecasting"
+      - label: "CRM Automation with zero updates, and Data Hygiene"
+        href: "/use-cases/zero-crm-updates"
+      - label: "Account Management and Deal Tracking"
+        href: "/use-cases/account-management-and-deal-tracking"
+      - label: "Revenue Linearity"
+        href: "/use-cases/revenue-linearity"
+
+  - heading: "Company"
+    links:
+      - label: "Terms of service"
+        href: "/company/terms"
+      - label: "Privacy policy"
+        href: "/company/privacy"
+
+socials:
+  - platform: "linkedin"
+    href: "https://www.linkedin.com/company/amolinoai/"
+    ariaLabel: "Visit us on LinkedIn"
+
+copyright: "AmolinoAI Inc."

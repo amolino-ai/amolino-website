@@ -5,22 +5,23 @@ import { Gradient } from '@/components/Gradient';
 import { Link } from '@/components/Link';
 import { Logo } from '@/components/Logo';
 import { Subheading } from '@/components/Text';
+import type { FooterContent } from '@/lib/content/types';
 
-function CallToAction() {
+function CallToAction({ content }: { content: FooterContent }) {
   return (
     <div className="relative pt-20 pb-16 text-center sm:py-24">
       <hgroup>
-        <Subheading>Get started</Subheading>
+        <Subheading>{content.cta.subheading}</Subheading>
         <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-        Give your team an unfair advantage.
+          {content.cta.heading}
         </p>
       </hgroup>
       <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        Eliminate pipeline surprises, end of quarter scrambles, and empower your sales team to close more deals.
+        {content.cta.description}
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="#">
-        Start for free today
+        <Button className="w-full sm:w-auto" href={content.cta.buttonHref}>
+          {content.cta.buttonText}
         </Button>
       </div>
     </div>
@@ -46,52 +47,21 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
   );
 }
 
-function Sitemap() {
+function Sitemap({ content }: { content: FooterContent }) {
   return (
     <>
-      <div>
-        <SitemapHeading>Learn</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/learn/amolino-vs-hubspot">AmolinoAI vs HubSpot</SitemapLink>
-          {/* <SitemapLink href="#">Analysis</SitemapLink>
-          <SitemapLink href="#">API</SitemapLink> */}
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Resources</SitemapHeading>
-        <SitemapLinks>
-            <SitemapLink href="/resources/frameworks/qualification">Sales Qualification Frameworks</SitemapLink>
-            <SitemapLink href="/resources/guides/qbrs">QBR Playbook</SitemapLink>
-
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Company</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing</SitemapLink>
-          <SitemapLink href="/blog">Blog</SitemapLink>
-          <SitemapLink href="/company">About Us</SitemapLink>
-          {/* <SitemapLink href="/help">Help center</SitemapLink> */}
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Use Cases</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/use-cases/pipeline-visibility">Pipeline Visibility</SitemapLink>
-          <SitemapLink href="/use-cases/revenue-forecasting">Revenue Forecasting</SitemapLink>
-          <SitemapLink href="/use-cases/zero-crm-updates">CRM Automation with zero updates, and Data Hygiene</SitemapLink>
-          <SitemapLink href="/use-cases/account-management-and-deal-tracking">Account Management and Deal Tracking</SitemapLink>
-          <SitemapLink href="/use-cases/revenue-linearity">Revenue Linearity</SitemapLink>
-        </SitemapLinks>
-      </div>
-      
-      <div>
-        <SitemapHeading>Company</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/company/terms">Terms of service</SitemapLink>
-          <SitemapLink href="/company/privacy">Privacy policy</SitemapLink>
-        </SitemapLinks>
-      </div>
+      {content.sections.map((section, index) => (
+        <div key={index}>
+          <SitemapHeading>{section.heading}</SitemapHeading>
+          <SitemapLinks>
+            {section.links.map((link, linkIndex) => (
+              <SitemapLink key={linkIndex} href={link.href}>
+                {link.label}
+              </SitemapLink>
+            ))}
+          </SitemapLinks>
+        </div>
+      ))}
     </>
   );
 }
@@ -124,52 +94,56 @@ function SocialIconLinkedIn(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
-function SocialLinks() {
+function SocialLinks({ content }: { content: FooterContent }) {
+  const getSocialIcon = (platform: string) => {
+    switch (platform) {
+      case 'linkedin':
+        return <SocialIconLinkedIn className="size-4" />;
+      case 'facebook':
+        return <SocialIconFacebook className="size-4" />;
+      case 'twitter':
+        return <SocialIconX className="size-4" />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <>
-      {/* <Link
-        href="https://facebook.com"
-        target="_blank"
-        aria-label="Visit us on Facebook"
-        className="text-gray-950 data-hover:text-gray-950/75"
-      >
-        <SocialIconFacebook className="size-4" />
-      </Link> */}
-      {/* <Link
-        href="https://x.com"
-        target="_blank"
-        aria-label="Visit us on X"
-        className="text-gray-950 data-hover:text-gray-950/75"
-      >
-        <SocialIconX className="size-4" />
-      </Link> */}
-      <Link
-        href="https://www.linkedin.com/company/amolinoai/"
-        target="_blank"
-        aria-label="Visit us on LinkedIn"
-        className="text-gray-950 data-hover:text-gray-950/75"
-      >
-        <SocialIconLinkedIn className="size-4" />
-      </Link>
+      {content.socials.map((social, index) => (
+        <Link
+          key={index}
+          href={social.href}
+          target="_blank"
+          aria-label={social.ariaLabel}
+          className="text-gray-950 data-hover:text-gray-950/75"
+        >
+          {getSocialIcon(social.platform)}
+        </Link>
+      ))}
     </>
   );
 }
 
-function Copyright() {
+function Copyright({ content }: { content: FooterContent }) {
   return (
     <div className="text-sm/6 text-gray-950">
-      &copy; {new Date().getFullYear()} AmolinoAI Inc.
+      &copy; {new Date().getFullYear()} {content.copyright}
     </div>
   );
 }
 
-export function Footer() {
+interface FooterProps {
+  content: FooterContent;
+}
+
+export function Footer({ content }: FooterProps) {
   return (
     <footer>
       <Gradient className="relative">
         <div className="absolute inset-2 rounded-4xl bg-white/80" />
         <Container>
-          <CallToAction />
+          <CallToAction content={content} />
           <PlusGrid className="pb-16">
             <PlusGridRow>
               <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
@@ -179,19 +153,19 @@ export function Footer() {
                   </PlusGridItem>
                 </div>
                 <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-                  <Sitemap />
+                  <Sitemap content={content} />
                 </div>
               </div>
             </PlusGridRow>
             <PlusGridRow className="flex justify-between">
               <div>
                 <PlusGridItem className="py-3">
-                  <Copyright />
+                  <Copyright content={content} />
                 </PlusGridItem>
               </div>
               <div className="flex">
                 <PlusGridItem className="flex items-center gap-8 py-3">
-                  <SocialLinks />
+                  <SocialLinks content={content} />
                 </PlusGridItem>
               </div>
             </PlusGridRow>

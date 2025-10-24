@@ -41,6 +41,11 @@ export type {
   PricingHeader,
   PricingTestimonial,
   PricingFAQ,
+  FooterContent,
+  FooterSection,
+  FooterLink,
+  FooterCTA,
+  FooterSocial,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -82,4 +87,5 @@ export {
   getFeatureSectionContent,
   getIntegrationsSectionContent,
   getPricingPageContent,
+  getFooterContent,
 } from './pages';

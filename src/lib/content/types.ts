@@ -86,6 +86,7 @@ export interface TestimonialAuthor {
   name: string;
   title: string;
   initials: string;
+  image?: string;
 }
 
 export interface Testimonial {
@@ -280,4 +281,36 @@ export interface PricingPageContent {
   tiers: PricingTier[];
   testimonial?: PricingTestimonial;
   faqs: PricingFAQ[];
+}
+
+// Footer interfaces
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+export interface FooterSection {
+  heading: string;
+  links: FooterLink[];
+}
+
+export interface FooterCTA {
+  subheading: string;
+  heading: string;
+  description: string;
+  buttonText: string;
+  buttonHref: string;
+}
+
+export interface FooterSocial {
+  platform: 'linkedin' | 'facebook' | 'twitter';
+  href: string;
+  ariaLabel: string;
+}
+
+export interface FooterContent {
+  cta: FooterCTA;
+  sections: FooterSection[];
+  socials: FooterSocial[];
+  copyright: string;
 }

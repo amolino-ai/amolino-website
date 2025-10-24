@@ -11,6 +11,7 @@ import type {
   FeatureSectionContent,
   IntegrationsSectionContent,
   PricingPageContent,
+  FooterContent,
 } from './types';
 
 /**
@@ -88,4 +89,11 @@ export async function getIntegrationsSectionContent(): Promise<IntegrationsSecti
  */
 export async function getPricingPageContent(): Promise<PricingPageContent> {
   return loadYAML<PricingPageContent>('pages/pricing.yaml');
+}
+
+/**
+ * Get footer content
+ */
+export async function getFooterContent(): Promise<FooterContent> {
+  return loadYAML<FooterContent>('global/footer.yaml');
 }
