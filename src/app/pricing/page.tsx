@@ -186,6 +186,14 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
               ))}
             </ul>
           </div>
+          <div className="mt-8">
+            <h3 className="text-sm/6 font-medium text-gray-950">Accelerate your sales with:</h3>
+            <ul className="mt-3 space-y-3">
+              {tier.highlights.map((props, featureIndex) => (
+                <FeatureItem key={featureIndex} {...props} />
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

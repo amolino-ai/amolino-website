@@ -10,22 +10,22 @@ export function FeatureSection() {
 
   const tabs = [
     {
-      id: 'revenue',
-      title: 'Revenue Analytics',
+      id: 'execution',
+      title: 'Win More. Faster',
       src: '/screenshots/dashboard_revenue_forecast_april2025.jpg',
-      description: 'From Pipeline Surprises to Pipeline Clarity.'
+      description: 'Make Every Rep a Top Performer with AI-Driven Sales Guidance.'
     },
     {
-      id: 'manager',
-      title: 'Team Insights',
+      id: 'forecast',
+      title: 'Forecast Confidently',
       src: '/screenshots/dashboard_managers_view_april_2025.jpg',
-      description: 'Empower Your Sales Leaders with Real-Time Insights.'
+      description: 'Quarterly Forecasting. Accurate. Real-time.',
     },
     {
-      id: 'guided',
-      title: 'Guided Selling',
+      id: 'grunt-work',
+      title: 'Eliminate Grunt-work',
       src: '/screenshots/dashboard_rep_view_april_2025.jpg',
-      description: 'AI-Powered Sales Guidance for Every Deal.'
+      description: 'Update the CRM Automatically. No Lifting a Finger.',
     }
   ];
 

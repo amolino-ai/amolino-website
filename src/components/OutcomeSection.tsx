@@ -104,7 +104,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                             </div>
 
                             {/* CTA */}
-                            <div className="mt-10">
+                            {/* <div className="mt-10">
                                 <a
                                     href={cta.url}
                                     className="group inline-flex items-center gap-3 bg-primary-800/80 hover:bg-primary-700 backdrop-blur-sm px-6 py-4 rounded-2xl transition-all duration-300 border border-primary-600"
@@ -126,7 +126,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
