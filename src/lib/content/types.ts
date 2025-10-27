@@ -496,3 +496,153 @@ export interface QBRSummary {
   comparisonHeading: string;
   comparison: QBRComparisonRow[];
 }
+
+// Benefit Group content interfaces
+export interface BenefitGroupHero {
+  title: string;
+  subtitle: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundGradient: string;
+}
+
+export interface BenefitGroupProblemCard {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface BenefitGroupProblems {
+  title: string;
+  subtitle: string;
+  cards: BenefitGroupProblemCard[];
+}
+
+export interface BenefitGroupStat {
+  value: string;
+  label: string;
+  description: string;
+  bgColor: string;
+}
+
+export interface BenefitGroupStats {
+  title: string;
+  subtitle: string;
+  metrics: BenefitGroupStat[];
+}
+
+export interface BenefitGroupFeature {
+  name: string;
+  category: string;
+  benefit: string;
+  description: string;
+  details: string;
+  icon: string;
+  image: string;
+}
+
+export interface BenefitGroupFeatures {
+  title: string;
+  subtitle: string;
+  layout: 'showcase' | 'horizontal' | 'balanced';
+  items: BenefitGroupFeature[];
+}
+
+export interface BenefitGroupWorkflowStep {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface BenefitGroupTestimonial {
+  quote: string;
+  author: string;
+  role: string;
+  avatar: string;
+}
+
+export interface BenefitGroupHowItWorks {
+  title: string;
+  subtitle: string;
+  steps: BenefitGroupWorkflowStep[];
+  testimonial?: BenefitGroupTestimonial;
+}
+
+export interface BenefitGroupComparisonColumn {
+  label: string;
+}
+
+export interface BenefitGroupComparisonRow {
+  capability: string;
+  traditional: string;
+  solution: string;
+}
+
+export interface BenefitGroupComparison {
+  title: string;
+  columns: BenefitGroupComparisonColumn[];
+  rows: BenefitGroupComparisonRow[];
+}
+
+export interface BenefitGroupWhoItsForCard {
+  title: string;
+  description: string;
+}
+
+export interface BenefitGroupWhoItsFor {
+  title: string;
+  subtitle: string;
+  cards: BenefitGroupWhoItsForCard[];
+}
+
+export interface BenefitGroupCTAButton {
+  text: string;
+  link: string;
+}
+
+export interface BenefitGroupCTA {
+  title: string;
+  description: string;
+  backgroundGradient: string;
+  primaryButton: BenefitGroupCTAButton;
+  secondaryButton: BenefitGroupCTAButton;
+}
+
+export interface BenefitGroupContent {
+  hero: BenefitGroupHero;
+  problems: BenefitGroupProblems;
+  stats: BenefitGroupStats;
+  features: BenefitGroupFeatures;
+  howItWorks: BenefitGroupHowItWorks;
+  comparison: BenefitGroupComparison;
+  whoItsFor: BenefitGroupWhoItsFor;
+  cta: BenefitGroupCTA;
+}
+
+// ============================================================================
+// Bento Grid Types
+// ============================================================================
+
+/**
+ * Individual item for Bento grid layouts.
+ * Used across all three bento layout variants.
+ */
+export interface BentoItem {
+  title: string;
+  description: string;
+  category?: string; // Optional, used in some layouts for top label
+  image: string;
+}
+
+/**
+ * Props for the Bento wrapper component.
+ * The wrapper selects which layout to render based on the layout prop.
+ */
+export interface BentoProps {
+  layout: 'three-column' | 'two-row' | 'two-row-three-column';
+  title: string;
+  subtitle: string;
+  tagline: string;
+  items: BentoItem[];
+}

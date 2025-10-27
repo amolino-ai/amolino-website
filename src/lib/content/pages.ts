@@ -19,6 +19,7 @@ import type {
   QBRSummary,
   NavbarProductsContent,
   NavbarLinksContent,
+  BenefitGroupContent,
 } from './types';
 
 /**
@@ -152,4 +153,11 @@ export async function getNavbarProducts(): Promise<NavbarProductsContent> {
  */
 export async function getNavbarLinks(): Promise<NavbarLinksContent> {
   return loadYAML<NavbarLinksContent>('navbar/links.yaml');
+}
+
+/**
+ * Get benefit group content
+ */
+export async function getBenefitGroupContent(slug: string): Promise<BenefitGroupContent> {
+  return loadYAML<BenefitGroupContent>(`pages/benefit-groups/${slug}.yaml`);
 }

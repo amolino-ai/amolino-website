@@ -72,6 +72,26 @@ export type {
   QBRSummary,
   QBRSummaryPrinciple,
   QBRComparisonRow,
+  BenefitGroupContent,
+  BenefitGroupHero,
+  BenefitGroupProblems,
+  BenefitGroupProblemCard,
+  BenefitGroupStats,
+  BenefitGroupStat,
+  BenefitGroupFeatures,
+  BenefitGroupFeature,
+  BenefitGroupHowItWorks,
+  BenefitGroupWorkflowStep,
+  BenefitGroupTestimonial,
+  BenefitGroupComparison,
+  BenefitGroupComparisonColumn,
+  BenefitGroupComparisonRow,
+  BenefitGroupWhoItsFor,
+  BenefitGroupWhoItsForCard,
+  BenefitGroupCTA,
+  BenefitGroupCTAButton,
+  BentoItem,
+  BentoProps,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -121,4 +141,5 @@ export {
   getQBRSummary,
   getNavbarProducts,
   getNavbarLinks,
+  getBenefitGroupContent,
 } from './pages';
