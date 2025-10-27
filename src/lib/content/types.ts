@@ -291,6 +291,17 @@ export interface NavbarProduct {
   icon: string;
 }
 
+export interface NavbarFeature {
+  name: string;
+  description: string;
+}
+
+export interface NavbarBenefit {
+  name: string;
+  href: string;
+  features: NavbarFeature[];
+}
+
 export interface NavbarLink {
   href: string;
   label: string;
@@ -298,7 +309,8 @@ export interface NavbarLink {
 
 export interface NavbarProductsContent {
   allProducts: NavbarProduct;
-  products: NavbarProduct[];
+  products?: NavbarProduct[]; // Keep for backward compatibility
+  benefits?: NavbarBenefit[];
 }
 
 export interface NavbarLinksContent {

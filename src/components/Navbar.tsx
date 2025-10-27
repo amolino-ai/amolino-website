@@ -10,21 +10,21 @@ import { motion } from 'framer-motion';
 import { Link } from '@/components/Link';
 import { Logo } from '@/components/Logo';
 import { PlusGrid, PlusGridItem, PlusGridRow } from './PlusGrid';
-import type { NavbarProduct, NavbarLink } from '@/lib/content/types';
+import type { NavbarProduct, NavbarBenefit, NavbarLink } from '@/lib/content/types';
 import { DesktopDropdown } from './Navbar/DesktopDropdown';
 import { MobileDropdown } from './Navbar/MobileDropdown';
 
 interface DesktopNavProps {
   allProducts: NavbarProduct;
-  products: NavbarProduct[];
+  benefits: NavbarBenefit[];
   links: NavbarLink[];
 }
 
-function DesktopNav({ allProducts, products, links }: DesktopNavProps) {
+function DesktopNav({ allProducts, benefits, links }: DesktopNavProps) {
   return (
     <nav className="relative hidden lg:flex z-30">
       <div className="flex items-center">
-        <DesktopDropdown allProducts={allProducts} products={products} />
+        <DesktopDropdown allProducts={allProducts} benefits={benefits} />
       </div>
       {links.map(({ href, label }) => (
         <div key={href} className="flex items-center">
@@ -52,15 +52,15 @@ function MobileNavButton() {
 }
 
 interface MobileNavProps {
-  products: NavbarProduct[];
+  benefits: NavbarBenefit[];
   links: NavbarLink[];
 }
 
-function MobileNav({ products, links }: MobileNavProps) {
+function MobileNav({ benefits, links }: MobileNavProps) {
   return (
     <DisclosurePanel className="lg:hidden">
       <div className="flex flex-col gap-6 py-4">
-        <MobileDropdown products={products} />
+        <MobileDropdown benefits={benefits} />
         {links.map(({ href, label }: NavbarLink, linkIndex: number) => (
           <motion.div
             initial={{ opacity: 0, rotateX: -90 }}
@@ -68,7 +68,7 @@ function MobileNav({ products, links }: MobileNavProps) {
             transition={{
               duration: 0.15,
               ease: 'easeInOut',
-              rotateX: { duration: 0.3, delay: (linkIndex + products.length) * 0.1 },
+              rotateX: { duration: 0.3, delay: (linkIndex + benefits.length) * 0.1 },
             }}
             key={href}
           >
@@ -89,11 +89,11 @@ function MobileNav({ products, links }: MobileNavProps) {
 interface NavbarProps {
   banner?: React.ReactNode;
   allProducts: NavbarProduct;
-  products: NavbarProduct[];
+  benefits: NavbarBenefit[];
   links: NavbarLink[];
 }
 
-export function Navbar({ banner, allProducts, products, links }: NavbarProps) {
+export function Navbar({ banner, allProducts, benefits, links }: NavbarProps) {
   return (
     <Disclosure as="header" className="pt-12 sm:pt-16 relative z-50">
       <PlusGrid>
@@ -110,11 +110,11 @@ export function Navbar({ banner, allProducts, products, links }: NavbarProps) {
               </div>
             )}
           </div>
-          <DesktopNav allProducts={allProducts} products={products} links={links} />
+          <DesktopNav allProducts={allProducts} benefits={benefits} links={links} />
           <MobileNavButton />
         </PlusGridRow>
       </PlusGrid>
-      <MobileNav products={products} links={links} />
+      <MobileNav benefits={benefits} links={links} />
     </Disclosure>
   );
 }

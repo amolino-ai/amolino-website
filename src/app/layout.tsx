@@ -82,7 +82,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <Container>
             <Navbar
               allProducts={navbarProducts.allProducts}
-              products={navbarProducts.products}
+              benefits={navbarProducts.benefits || []}
               links={navbarLinks.links}
             />
             </Container>

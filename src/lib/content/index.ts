@@ -42,6 +42,8 @@ export type {
   PricingTestimonial,
   PricingFAQ,
   NavbarProduct,
+  NavbarFeature,
+  NavbarBenefit,
   NavbarLink,
   NavbarProductsContent,
   NavbarLinksContent,

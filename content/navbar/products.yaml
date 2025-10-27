@@ -4,23 +4,27 @@ allProducts:
   description: "View our complete product suite"
   icon: "/icons/all-products.svg"
 
-products:
-  - name: "AI Revenue Forecasting"
-    href: "/product/revenue-analytics"
-    description: "Track pipeline, forecasts, and sales velocity. Make data-driven decisions to meet revenue goals"
-    icon: "/icons/revenue-analytics.svg"
+benefits:
+  - name: "Make Every Rep Your Best Rep"
+    href: "/benefit-groups/make-every-rep-your-best-rep"
+    features:
+      - name: "AI Sales Compass"
+        description: "Proactive guidance at every stage"
+      - name: "Zero-Effort CRM Updates"
+        description: "Never chase data entry again"
 
-  - name: "Guided Selling"
-    href: "/product/guided-selling"
-    description: "AI-driven insights on deal health, customer sentiment, and next steps and competition"
-    icon: "/icons/guided-selling.svg"
+  - name: "Explainable AI Forecast"
+    href: "/benefit-groups/explainable-ai-forecast"
+    features:
+      - name: "Pipeline Monitor"
+        description: "Early risk detection"
+      - name: "Deal Health (Risk Radar)"
+        description: "Proactive risk alerts"
 
-  - name: "Team Insights"
-    href: "/product/team-insights"
-    description: "Monitor team performance, and identify find coaching needs, for better sales outcomes"
-    icon: "/icons/team-insights.svg"
-
-  - name: "Customer 360"
-    href: "/product/customer-360"
-    description: "All customer interactions, contacts, and documents in one place for faster collaboration"
-    icon: "/icons/customer-360.svg"
+  - name: "Prevent Deal Slippage"
+    href: "/benefit-groups/prevent-deal-slippage"
+    features:
+      - name: "Deal Health (Risk Radar)"
+        description: "Real-time health scoring"
+      - name: "Pipeline Monitor"
+        description: "Daily at-risk deal monitoring"
