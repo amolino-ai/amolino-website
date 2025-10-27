@@ -283,6 +283,28 @@ export interface PricingPageContent {
   faqs: PricingFAQ[];
 }
 
+// Navbar interfaces
+export interface NavbarProduct {
+  name: string;
+  href: string;
+  description: string;
+  icon: string;
+}
+
+export interface NavbarLink {
+  href: string;
+  label: string;
+}
+
+export interface NavbarProductsContent {
+  allProducts: NavbarProduct;
+  products: NavbarProduct[];
+}
+
+export interface NavbarLinksContent {
+  links: NavbarLink[];
+}
+
 // Footer interfaces
 export interface FooterLink {
   label: string;

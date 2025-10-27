@@ -14,49 +14,20 @@ import { Link } from '@/components/Link';
 import { Logo } from '@/components/Logo';
 import { PlusGrid, PlusGridItem, PlusGridRow } from './PlusGrid';
 import { useState } from 'react';
+import type { NavbarProduct, NavbarLink } from '@/lib/content/types';
 
-const products = [
-  {
-    name: 'AI Revenue Forecasting',
-    href: '/product/revenue-analytics',
-    description: 'Track pipeline, forecasts, and sales velocity. Make data-driven decisions to meet revenue goals',
-    icon: '/icons/revenue-analytics.svg'
-  },
-  {
-    name: 'Guided Selling',
-    href: '/product/guided-selling',
-    description: 'AI-driven insights on deal health, customer sentiment, and next steps and competition',
-    icon: '/icons/guided-selling.svg'
-  },
-  {
-    name: 'Team Insights',
-    href: '/product/team-insights',
-    description: 'Monitor team performance, and identify find coaching needs, for better sales outcomes',
-    icon: '/icons/team-insights.svg'
-  },
-  {
-    name: 'Customer 360',
-    href: '/product/customer-360',
-    description: 'All customer interactions, contacts, and documents in one place for faster collaboration',
-    icon: '/icons/customer-360.svg'
-  },
-];
+interface ProductDropdownProps {
+  allProducts: NavbarProduct;
+  products: NavbarProduct[];
+}
 
-const links = [
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/company', label: 'Company' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/use-cases', label: 'Use Cases' },
-  { href: 'https://app.amolino.ai', label: 'Login' },
-];
-
-function ProductDropdown() {
+function ProductDropdown({ allProducts, products }: ProductDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const handleLinkClick = () => {
     setIsOpen(false);
   };
-  
+
   return (
     <Popover className="relative h-full">
       {({ open }) => (
@@ -86,14 +57,14 @@ function ProductDropdown() {
                   className="relative grid gap-2"
                 >
                   <Link
-                    href="/product"
+                    href={allProducts.href}
                     onClick={handleLinkClick}
                     className="relative flex items-start gap-3 rounded-xl p-4 text-gray-950 transition-colors hover:bg-gray-50 border-b border-gray-100"
                   >
-                    <img src="/icons/all-products.svg" alt="" className="h-6 w-6 text-pink-600" />
+                    <img src={allProducts.icon} alt="" className="h-6 w-6 text-pink-600" />
                     <div className="flex flex-col gap-1">
-                      <span className="text-base font-semibold">All Products</span>
-                      <span className="text-sm text-gray-600">View our complete product suite</span>
+                      <span className="text-base font-semibold">{allProducts.name}</span>
+                      <span className="text-sm text-gray-600">{allProducts.description}</span>
                     </div>
                   </Link>
                   {products.map((product) => (
@@ -120,11 +91,17 @@ function ProductDropdown() {
   );
 }
 
-function DesktopNav() {
+interface DesktopNavProps {
+  allProducts: NavbarProduct;
+  products: NavbarProduct[];
+  links: NavbarLink[];
+}
+
+function DesktopNav({ allProducts, products, links }: DesktopNavProps) {
   return (
     <nav className="relative hidden lg:flex z-30">
       <div className="flex items-center">
-        <ProductDropdown />
+        <ProductDropdown allProducts={allProducts} products={products} />
       </div>
       {links.map(({ href, label }) => (
         <div key={href} className="flex items-center">
@@ -151,7 +128,12 @@ function MobileNavButton() {
   );
 }
 
-function MobileNav() {
+interface MobileNavProps {
+  products: NavbarProduct[];
+  links: NavbarLink[];
+}
+
+function MobileNav({ products, links }: MobileNavProps) {
   return (
     <DisclosurePanel className="lg:hidden">
       <div className="flex flex-col gap-6 py-4">
@@ -201,7 +183,14 @@ function MobileNav() {
   );
 }
 
-export function Navbar({ banner }: { banner?: React.ReactNode }) {
+interface NavbarProps {
+  banner?: React.ReactNode;
+  allProducts: NavbarProduct;
+  products: NavbarProduct[];
+  links: NavbarLink[];
+}
+
+export function Navbar({ banner, allProducts, products, links }: NavbarProps) {
   return (
     <Disclosure as="header" className="pt-12 sm:pt-16 relative z-50">
       <PlusGrid>
@@ -218,11 +207,11 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
               </div>
             )}
           </div>
-          <DesktopNav />
+          <DesktopNav allProducts={allProducts} products={products} links={links} />
           <MobileNavButton />
         </PlusGridRow>
       </PlusGrid>
-      <MobileNav />
+      <MobileNav products={products} links={links} />
     </Disclosure>
   );
 }

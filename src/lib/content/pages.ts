@@ -17,6 +17,8 @@ import type {
   QBRIntroduction,
   QBRBestPractices,
   QBRSummary,
+  NavbarProductsContent,
+  NavbarLinksContent,
 } from './types';
 
 /**
@@ -136,4 +138,18 @@ export async function getQBRBestPractices(): Promise<QBRBestPractices> {
  */
 export async function getQBRSummary(): Promise<QBRSummary> {
   return loadYAML<QBRSummary>('pages/qbr-guide/summary.yaml');
+}
+
+/**
+ * Get navbar products content
+ */
+export async function getNavbarProducts(): Promise<NavbarProductsContent> {
+  return loadYAML<NavbarProductsContent>('navbar/products.yaml');
+}
+
+/**
+ * Get navbar links content
+ */
+export async function getNavbarLinks(): Promise<NavbarLinksContent> {
+  return loadYAML<NavbarLinksContent>('navbar/links.yaml');
 }

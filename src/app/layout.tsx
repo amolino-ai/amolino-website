@@ -5,7 +5,7 @@ import { PostHogProvider } from '@/components/PostHogProvider';
 import { type Section } from '@/components/SectionProvider';
 import { Navbar } from '@/components/Navbar';
 import { Container } from '@/components/Container';
-import { getFooterContent } from '@/lib/content';
+import { getFooterContent, getNavbarProducts, getNavbarLinks } from '@/lib/content';
 import '@/styles/tailwind.css';
 import '@mantine/core/styles.css';
 import glob from 'fast-glob';
@@ -63,6 +63,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   )) as Array<[string, Array<Section>]>;
   let allSections = Object.fromEntries(allSectionsEntries);
   const footerContent = await getFooterContent();
+  const navbarProducts = await getNavbarProducts();
+  const navbarLinks = await getNavbarLinks();
 
   return (
     <html
@@ -78,7 +80,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <GradientBackground />
             <div className="w-full">
               <Container>
-            <Navbar />
+            <Navbar
+              allProducts={navbarProducts.allProducts}
+              products={navbarProducts.products}
+              links={navbarLinks.links}
+            />
             </Container>
               <Layout allSections={allSections} footerContent={footerContent}>{children}</Layout>
             </div>

@@ -41,6 +41,10 @@ export type {
   PricingHeader,
   PricingTestimonial,
   PricingFAQ,
+  NavbarProduct,
+  NavbarLink,
+  NavbarProductsContent,
+  NavbarLinksContent,
   FooterContent,
   FooterSection,
   FooterLink,
@@ -115,4 +119,6 @@ export {
   getQBRIntroduction,
   getQBRBestPractices,
   getQBRSummary,
+  getNavbarProducts,
+  getNavbarLinks,
 } from './pages';
