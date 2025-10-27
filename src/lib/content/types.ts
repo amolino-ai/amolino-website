@@ -552,6 +552,7 @@ export interface BenefitGroupFeature {
   details: string;
   icon: string;
   image: string;
+  link?: string; // Optional link to product feature page
 }
 
 export interface BenefitGroupFeatures {
@@ -645,6 +646,7 @@ export interface BentoItem {
   description: string;
   category?: string; // Optional, used in some layouts for top label
   image: string;
+  href?: string; // Optional link to navigate when clicking the card
 }
 
 /**

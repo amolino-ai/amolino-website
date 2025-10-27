@@ -13,6 +13,7 @@ export function BenefitFeatures({ title, subtitle, layout, items }: BenefitGroup
     description: feature.description,
     category: feature.category,
     image: feature.image,
+    href: feature.link,
   }));
 
   // Map layout names

@@ -1,0 +1,48 @@
+hero:
+  badgeText: "Slippage Alerts"
+  title: "Stop deals from slipping before they leave the quarter."
+  description: "Slippage Alerts uses AI to predict which deals are at risk of slipping and alerts you in time to take corrective action."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+
+showcase:
+  title: "Predict and Prevent Deal Slippage."
+  features:
+    - iconPath: "M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+      title: "Predictive Alerts"
+      description: "AI predicts slippage risk days or weeks in advance based on deal signals."
+    - iconPath: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+      title: "Time-Sensitive Warnings"
+      description: "Get escalating alerts as close dates approach for at-risk deals."
+    - iconPath: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      title: "Intervention Recommendations"
+      description: "Receive specific actions to take to prevent predicted slippage."
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  comparisonTitle: "Slippage Alerts vs End-of-Quarter Surprises"
+  comparisonSubtitle: "Eliminate forecast surprises with early slippage prediction and prevention."
+  traditionalPoints:
+    - "Discover slippage on close date"
+    - "No advance warning of at-risk deals"
+    - "Reactive scrambling at quarter-end"
+    - "Missed revenue targets from slipped deals"
+    - "No systematic slippage prevention"
+  aiPoweredPoints:
+    - "Predict slippage weeks in advance"
+    - "Early warnings with time to act"
+    - "Proactive deal rescue before quarter-end"
+    - "Protected revenue with prevented slippage"
+    - "AI-powered slippage prevention system"
+    - "Reduced forecast volatility"
+
+bottomFeature:
+  title: "Protect Your Quarter."
+  subtitle: "Prevent slippage"
+  points:
+    - title: "Early Warning"
+      description: "Get alerted to slippage risk with time to intervene"
+    - title: "Risk Scoring"
+      description: "Understand slippage likelihood for every deal"
+    - title: "Action Plans"
+      description: "Follow AI recommendations to keep deals on track"
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"

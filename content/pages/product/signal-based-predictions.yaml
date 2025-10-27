@@ -1,0 +1,48 @@
+hero:
+  badgeText: "Signal-Based Predictions"
+  title: "Predict outcomes based on real deal signals."
+  description: "Signal-Based Predictions analyzes hundreds of deal signals to predict win probability, close dates, and revenue outcomes with precision."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshotSrc: "/screenshots/pipeline_radar_heatmap_march2025.png"
+
+showcase:
+  title: "Data-Driven Deal Predictions."
+  features:
+    - iconPath: "M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.79M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+      title: "Multi-Signal Analysis"
+      description: "Analyze engagement, activity, stakeholder involvement, and dozens of other signals."
+    - iconPath: "M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      title: "Pattern Recognition"
+      description: "Identify patterns from historical deals to predict outcomes with high accuracy."
+    - iconPath: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+      title: "Early Warning System"
+      description: "Detect negative signals early to intervene before deals go off track."
+  screenshotSrc: "/screenshots/pipeline_radar_heatmap_march2025.png"
+  comparisonTitle: "Signal-Based Predictions vs Stage-Based Forecasting"
+  comparisonSubtitle: "Move beyond simple stage percentages with sophisticated signal analysis."
+  traditionalPoints:
+    - "Static stage-based probabilities"
+    - "No visibility into deal health"
+    - "Reactive approach to at-risk deals"
+    - "Limited predictive accuracy"
+    - "Subjective rep assessments"
+  aiPoweredPoints:
+    - "Dynamic signal-based probabilities"
+    - "Real-time deal health scoring"
+    - "Proactive risk detection and alerts"
+    - "90%+ predictive accuracy"
+    - "Objective AI-powered analysis"
+    - "Hundreds of signals analyzed automatically"
+
+bottomFeature:
+  title: "Predict with Precision."
+  subtitle: "Know what's coming"
+  points:
+    - title: "Win Probability"
+      description: "Get accurate win probability scores for every opportunity"
+    - title: "Close Date Prediction"
+      description: "Predict realistic close dates based on deal velocity"
+    - title: "Revenue Forecasting"
+      description: "Forecast revenue with confidence using signal intelligence"
+  screenshotSrc: "/screenshots/pipeline_radar_heatmap_march2025.png"

@@ -46,7 +46,7 @@ export default async function Home() {
       <SplitHeroWithImage content={heroContent} />
 
       {/* Hero with Numbers section */}
-      <Hero numbersContent={numbersContent} />
+       {/*<Hero numbersContent={numbersContent} /> */}
 
       {/* Problem section - full width with teal gradient background */}
       <ProblemSection content={problemContent} />

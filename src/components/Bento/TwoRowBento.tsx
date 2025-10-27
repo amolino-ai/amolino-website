@@ -1,3 +1,4 @@
+import { Link } from '@/components/Link';
 import type { BentoItem } from '@/lib/content/types';
 
 export interface TwoRowBentoProps {
@@ -39,33 +40,48 @@ export function TwoRowBento({ title, subtitle, tagline, items }: TwoRowBentoProp
               ? 'lg:rounded-bl-4xl'
               : 'max-lg:rounded-b-4xl lg:rounded-br-4xl';
 
+            const content = (
+              <>
+                <img
+                  alt={item.title}
+                  src={item.image}
+                  className={`h-80 object-cover ${isFirst || isFourth ? 'object-left' : ''} dark:hidden`}
+                />
+                <img
+                  alt={item.title}
+                  src={item.image}
+                  className={`h-80 object-cover ${isFirst || isFourth ? 'object-left' : ''} not-dark:hidden`}
+                />
+                <div className="p-10">
+                  {item.category && (
+                    <h3 className="text-sm/4 font-semibold text-gray-500 dark:text-gray-400">
+                      {item.category}
+                    </h3>
+                  )}
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-900 dark:text-white">
+                    {item.title}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">
+                    {item.description}
+                  </p>
+                </div>
+              </>
+            );
+
             return (
               <div key={item.title} className={`flex p-px ${colSpan}`}>
-                <div className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass} dark:bg-gray-800 dark:shadow-none dark:outline-white/15`}>
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    className={`h-80 object-cover ${isFirst || isFourth ? 'object-left' : ''} dark:hidden`}
-                  />
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    className={`h-80 object-cover ${isFirst || isFourth ? 'object-left' : ''} not-dark:hidden`}
-                  />
-                  <div className="p-10">
-                    {item.category && (
-                      <h3 className="text-sm/4 font-semibold text-gray-500 dark:text-gray-400">
-                        {item.category}
-                      </h3>
-                    )}
-                    <p className="mt-2 text-lg font-medium tracking-tight text-gray-900 dark:text-white">
-                      {item.title}
-                    </p>
-                    <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">
-                      {item.description}
-                    </p>
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass} dark:bg-gray-800 dark:shadow-none dark:outline-white/15 transition-transform hover:scale-[1.02]`}
+                  >
+                    {content}
+                  </Link>
+                ) : (
+                  <div className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass} dark:bg-gray-800 dark:shadow-none dark:outline-white/15`}>
+                    {content}
                   </div>
-                </div>
+                )}
               </div>
             );
           })}

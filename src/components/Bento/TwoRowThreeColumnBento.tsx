@@ -1,3 +1,4 @@
+import { Link } from '@/components/Link';
 import type { BentoItem } from '@/lib/content/types';
 
 export interface TwoRowThreeColumnBentoProps {
@@ -37,34 +38,49 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
             else if (index === 3) roundedClass = 'lg:rounded-bl-4xl';
             else if (index === 5) roundedClass = 'max-lg:rounded-b-4xl lg:rounded-br-4xl';
 
+            const content = (
+              <>
+                <img
+                  alt={item.title}
+                  src={item.image}
+                  className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'lg:object-right' : ''} dark:hidden`}
+                />
+                <img
+                  alt={item.title}
+                  src={item.image}
+                  className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'not-dark:hidden lg:object-right' : 'not-dark:hidden'} not-dark:hidden`}
+                />
+                <div className="p-10 pt-4">
+                  {item.category && (
+                    <h3 className="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">
+                      {item.category}
+                    </h3>
+                  )}
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">
+                    {item.title}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">
+                    {item.description}
+                  </p>
+                </div>
+              </>
+            );
+
             return (
               <div key={item.title} className={`relative ${colSpan}`}>
                 <div className={`absolute inset-0 rounded-lg bg-white ${roundedClass} dark:bg-gray-800`} />
-                <div className={`relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${roundedClass.replace('4xl', '[calc(2rem+1px)]')}`}>
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'lg:object-right' : ''} dark:hidden`}
-                  />
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'not-dark:hidden lg:object-right' : 'not-dark:hidden'} not-dark:hidden`}
-                  />
-                  <div className="p-10 pt-4">
-                    {item.category && (
-                      <h3 className="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">
-                        {item.category}
-                      </h3>
-                    )}
-                    <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">
-                      {item.title}
-                    </p>
-                    <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">
-                      {item.description}
-                    </p>
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className={`relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${roundedClass.replace('4xl', '[calc(2rem+1px)]')} transition-transform hover:scale-[1.02]`}
+                  >
+                    {content}
+                  </Link>
+                ) : (
+                  <div className={`relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${roundedClass.replace('4xl', '[calc(2rem+1px)]')}`}>
+                    {content}
                   </div>
-                </div>
+                )}
                 <div className={`pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 ${roundedClass} dark:outline-white/15`} />
               </div>
             );

@@ -1,0 +1,48 @@
+hero:
+  badgeText: "Next Best Action"
+  title: "Always know the right next step for every deal."
+  description: "Next Best Action uses AI to prioritize and recommend the most impactful actions to move your deals forward and hit your targets."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+
+showcase:
+  title: "Prioritized Action Recommendations."
+  features:
+    - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+      title: "AI-Powered Prioritization"
+      description: "Get intelligent prioritization of actions based on deal health, stage, and potential impact."
+    - iconPath: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      title: "Contextual Recommendations"
+      description: "Receive personalized action recommendations tailored to each deal's unique context."
+    - iconPath: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+      title: "Time-Sensitive Alerts"
+      description: "Get alerted to time-sensitive actions that prevent deal slippage and missed opportunities."
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  comparisonTitle: "AI Next Best Action vs Manual Prioritization"
+  comparisonSubtitle: "Focus on high-impact activities with AI-powered action recommendations and prioritization."
+  traditionalPoints:
+    - "Unclear which deals need attention"
+    - "Manual prioritization based on gut feel"
+    - "Reactive firefighting and missed deadlines"
+    - "Overwhelming task lists without priorities"
+    - "Inconsistent follow-up across deals"
+  aiPoweredPoints:
+    - "Clear visibility into critical deal actions"
+    - "Data-driven action prioritization"
+    - "Proactive recommendations before issues arise"
+    - "Focused task lists with impact scores"
+    - "Consistent, timely follow-up on all deals"
+    - "Automated action tracking and completion"
+
+bottomFeature:
+  title: "Optimize Sales Productivity."
+  subtitle: "Focus on what matters"
+  points:
+    - title: "Impact-Driven Focus"
+      description: "Spend time on actions that move the needle"
+    - title: "Prevent Deal Stalls"
+      description: "Stay ahead of critical deadlines and milestones"
+    - title: "Maximize Win Rates"
+      description: "Execute the right actions at the right time"
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"

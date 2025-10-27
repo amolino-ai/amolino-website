@@ -1,3 +1,4 @@
+import { Link } from '@/components/Link';
 import type { BentoItem } from '@/lib/content/types';
 
 export interface ThreeColumnBentoProps {
@@ -30,25 +31,50 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
           {/* Showcase Item - Tall left column */}
           <div className="relative lg:row-span-2">
             <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-4xl dark:bg-gray-800" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-              <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center dark:text-white">
-                  {showcaseItem.title}
-                </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center dark:text-gray-400">
-                  {showcaseItem.description}
-                </p>
-              </div>
-              <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl dark:shadow-none dark:outline dark:outline-white/20">
-                  <img
-                    alt={showcaseItem.title}
-                    src={showcaseItem.image}
-                    className="size-full object-cover object-top"
-                  />
+            {showcaseItem.href ? (
+              <Link
+                href={showcaseItem.href}
+                className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)] transition-transform hover:scale-[1.02]"
+              >
+                <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center dark:text-white">
+                    {showcaseItem.title}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center dark:text-gray-400">
+                    {showcaseItem.description}
+                  </p>
+                </div>
+                <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                  <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl dark:shadow-none dark:outline dark:outline-white/20">
+                    <img
+                      alt={showcaseItem.title}
+                      src={showcaseItem.image}
+                      className="size-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center dark:text-white">
+                    {showcaseItem.title}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center dark:text-gray-400">
+                    {showcaseItem.description}
+                  </p>
+                </div>
+                <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                  <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl dark:shadow-none dark:outline dark:outline-white/20">
+                    <img
+                      alt={showcaseItem.title}
+                      src={showcaseItem.image}
+                      className="size-full object-cover object-top"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
             <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 lg:rounded-l-4xl dark:outline-white/15" />
           </div>
 
@@ -62,34 +88,49 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
               ? 'max-lg:rounded-b-4xl lg:rounded-r-4xl'
               : '';
 
+            const content = (
+              <>
+                <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center dark:text-white">
+                    {item.title}
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center dark:text-gray-400">
+                    {item.description}
+                  </p>
+                </div>
+                <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+                  <img
+                    alt={item.title}
+                    src={item.image}
+                    className="w-full max-lg:max-w-xs dark:hidden"
+                  />
+                  <img
+                    alt={item.title}
+                    src={item.image}
+                    className="w-full not-dark:hidden max-lg:max-w-xs"
+                  />
+                </div>
+              </>
+            );
+
             return (
               <div
                 key={item.title}
                 className={`relative ${isLast ? 'lg:row-span-2' : 'max-lg:row-start-1'}`}
               >
                 <div className={`absolute inset-px rounded-lg bg-white ${roundedClass} dark:bg-gray-800`} />
-                <div className={`relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${roundedClass.replace('4xl', '[calc(2rem+1px)]')}`}>
-                  <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                    <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center dark:text-white">
-                      {item.title}
-                    </p>
-                    <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center dark:text-gray-400">
-                      {item.description}
-                    </p>
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className={`relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${roundedClass.replace('4xl', '[calc(2rem+1px)]')} transition-transform hover:scale-[1.02]`}
+                  >
+                    {content}
+                  </Link>
+                ) : (
+                  <div className={`relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${roundedClass.replace('4xl', '[calc(2rem+1px)]')}`}>
+                    {content}
                   </div>
-                  <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      className="w-full max-lg:max-w-xs dark:hidden"
-                    />
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      className="w-full not-dark:hidden max-lg:max-w-xs"
-                    />
-                  </div>
-                </div>
+                )}
                 <div className={`pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-black/5 ${roundedClass} dark:outline-white/15`} />
               </div>
             );

@@ -1,0 +1,48 @@
+hero:
+  badgeText: "Predictive Models"
+  title: "Machine learning models trained on your unique data."
+  description: "Predictive Models learns from your historical deals, win patterns, and sales motions to deliver increasingly accurate predictions tailored to your business."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshotSrc: "/screenshots/pipeline_radar_heatmap_march2025.png"
+
+showcase:
+  title: "Custom ML Models for Your Business."
+  features:
+    - iconPath: "M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
+      title: "Continuous Learning"
+      description: "Models improve over time by learning from new deals and outcomes."
+    - iconPath: "M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+      title: "Customized Predictions"
+      description: "Models trained on your data, your deals, and your unique sales environment."
+    - iconPath: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+      title: "Performance Tracking"
+      description: "Monitor model performance and accuracy with built-in analytics."
+  screenshotSrc: "/screenshots/pipeline_radar_heatmap_march2025.png"
+  comparisonTitle: "Custom Predictive Models vs Generic Forecasting"
+  comparisonSubtitle: "Get predictions tailored to your business with machine learning models trained on your data."
+  traditionalPoints:
+    - "One-size-fits-all forecast formulas"
+    - "Static probability percentages"
+    - "No learning from your deal patterns"
+    - "Generic industry benchmarks"
+    - "Manual model adjustments"
+  aiPoweredPoints:
+    - "Custom models for your business"
+    - "Dynamic probabilities based on signals"
+    - "Continuous learning from your outcomes"
+    - "Predictions based on your win patterns"
+    - "Automatic model optimization"
+    - "Increasingly accurate over time"
+
+bottomFeature:
+  title: "Predictions That Get Smarter."
+  subtitle: "AI tailored to you"
+  points:
+    - title: "Your Data"
+      description: "Models trained exclusively on your historical performance"
+    - title: "Your Patterns"
+      description: "Learn what drives wins and losses in your environment"
+    - title: "Your Accuracy"
+      description: "Continuously improving predictions unique to your business"
+  screenshotSrc: "/screenshots/pipeline_radar_heatmap_march2025.png"
