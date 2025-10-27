@@ -16,15 +16,12 @@ interface BenefitGroupPageProps {
 /**
  * Generate static params for all benefit group pages.
  * This enables SSG (Static Site Generation) at build time.
- *
- * NOTE: Uncomment additional slugs once their YAML files are created in
- * content/pages/benefit-groups/
  */
 export function generateStaticParams() {
   return [
     { slug: 'make-every-rep-your-best-rep' },
-    // { slug: 'explainable-ai-forecast' },
-    // { slug: 'prevent-deal-slippage' },
+    { slug: 'explainable-ai-forecast' },
+    { slug: 'prevent-deal-slippage' },
   ];
 }
 
