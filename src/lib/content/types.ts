@@ -208,6 +208,7 @@ export interface FeatureTab {
   title: string;
   description: string;
   src: string;
+  learnMoreLink?: string; // Optional link to benefit group page for "Learn more" CTA
 }
 
 export interface FeatureSectionContent {
