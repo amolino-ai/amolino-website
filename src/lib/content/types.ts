@@ -457,7 +457,15 @@ export interface ProductBottomFeature {
   screenshotSrc: string;
 }
 
+export interface ProductPageOptions {
+  useCase: string;
+  featureName: string;
+  showInNavbar: boolean;
+  navbarDescription: string;
+}
+
 export interface ProductPageContent {
+  options: ProductPageOptions;
   hero: ProductHero;
   showcase: ProductShowcase;
   bottomFeature: ProductBottomFeature;

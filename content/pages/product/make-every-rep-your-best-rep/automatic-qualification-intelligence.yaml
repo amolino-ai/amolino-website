@@ -1,3 +1,9 @@
+options:
+  useCase: "Consistent Sales Execution"
+  featureName: "Automatic Qualification Intelligence"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Qualification"
   title: "Automatically qualify every opportunity."

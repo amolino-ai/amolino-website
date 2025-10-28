@@ -1,3 +1,9 @@
+options:
+  useCase: "Stop Chasing Un-Winnable Deals"
+  featureName: "Conversion Optimization"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Conversion Optimization"
   title: "Improve conversion rates at every pipeline stage."

@@ -1,3 +1,9 @@
+options:
+  useCase: "Increase Selling Capacity"
+  featureName: "Activity Intelligence"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Activity Intelligence"
   title: "Turn sales activities into predictive insights."

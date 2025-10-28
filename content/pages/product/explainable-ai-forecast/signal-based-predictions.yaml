@@ -1,3 +1,9 @@
+options:
+  useCase: "Forecasts You Can Defend"
+  featureName: "Signal-Based Predictions"
+  showInNavbar: true
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Signal-Based Predictions"
   title: "Predict outcomes based on real deal signals."

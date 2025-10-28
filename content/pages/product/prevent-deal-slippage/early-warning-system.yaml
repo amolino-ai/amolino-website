@@ -1,3 +1,9 @@
+options:
+  useCase: "Stop Deals from Slipping"
+  featureName: "Early Warning System"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Early Warning System"
   title: "Detect problems before they become deal killers."

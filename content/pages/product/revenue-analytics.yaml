@@ -1,3 +1,9 @@
+options:
+  useCase: "Forecasts You Can Defend"
+  featureName: "Revenue Analytics"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "AI-Powered Revenue Analytics"
   title: "From Pipeline Surprises to Pipeline Clarity."

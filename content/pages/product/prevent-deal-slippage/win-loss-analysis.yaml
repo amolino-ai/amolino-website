@@ -1,3 +1,9 @@
+options:
+  useCase: "Understand Competitive Threats"
+  featureName: "Win/Loss Analysis"
+  showInNavbar: true
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Insights"
   title: "Learn from every win and loss."

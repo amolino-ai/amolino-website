@@ -1,3 +1,9 @@
+options:
+  useCase: "Increase Selling Capacity"
+  featureName: "Account Intelligence"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Account Intelligence"
   title: "Deep insights into every account opportunity."

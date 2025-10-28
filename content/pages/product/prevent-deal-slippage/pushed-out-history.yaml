@@ -1,3 +1,9 @@
+options:
+  useCase: "Stop Deals from Slipping"
+  featureName: "Pushed Out History"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Risk Management"
   title: "Stop deals from slipping quarter after quarter."

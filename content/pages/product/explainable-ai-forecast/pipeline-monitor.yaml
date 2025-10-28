@@ -1,3 +1,9 @@
+options:
+  useCase: "Monitor Pipeline Health"
+  featureName: "Pipeline Monitor"
+  showInNavbar: true
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Pipeline Monitor"
   title: "Real-time pipeline surveillance that never sleeps."

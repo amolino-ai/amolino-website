@@ -1,3 +1,9 @@
+options:
+  useCase: "Increase Selling Capacity"
+  featureName: "Channel Partner Intelligence"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Partnerships"
   title: "Unlock revenue from your channel partners."

@@ -1,3 +1,9 @@
+options:
+  useCase: "Enable Managers for Better Coaching"
+  featureName: "Team Insights"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Team Insights"
   title: "Empower your sales team with actionable insights."

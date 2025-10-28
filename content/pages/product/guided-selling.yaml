@@ -1,3 +1,9 @@
+options:
+  useCase: "Consistent Sales Execution"
+  featureName: "Guided Selling"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Guided Selling"
   title: "Proactive selling insights to close complex deals faster."

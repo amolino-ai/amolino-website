@@ -1,3 +1,9 @@
+options:
+  useCase: "Increase Selling Capacity"
+  featureName: "AI Email Assist"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "AI Email Assist"
   title: "Write compelling emails that drive responses."

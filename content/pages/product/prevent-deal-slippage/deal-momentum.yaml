@@ -1,3 +1,9 @@
+options:
+  useCase: "Stop Deals from Slipping"
+  featureName: "Deal Momentum"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Deal Momentum"
   title: "Track deal velocity to predict close timing."

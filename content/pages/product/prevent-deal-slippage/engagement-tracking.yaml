@@ -1,3 +1,9 @@
+options:
+  useCase: "Stop Deals from Slipping"
+  featureName: "Engagement Tracking"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Engagement Tracking"
   title: "Monitor buyer engagement to predict deal outcomes."

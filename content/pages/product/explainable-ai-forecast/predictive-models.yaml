@@ -1,3 +1,9 @@
+options:
+  useCase: "Forecasts You Can Defend"
+  featureName: "Predictive Models"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Predictive Models"
   title: "Machine learning models trained on your unique data."

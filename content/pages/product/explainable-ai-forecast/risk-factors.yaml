@@ -1,3 +1,9 @@
+options:
+  useCase: "Monitor Pipeline Health"
+  featureName: "Risk Factors"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Risk Factors"
   title: "Identify and mitigate forecast risks before they impact revenue."

@@ -1,3 +1,9 @@
+options:
+  useCase: "Stop Deals from Slipping"
+  featureName: "Slippage Alerts"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Slippage Alerts"
   title: "Stop deals from slipping before they leave the quarter."

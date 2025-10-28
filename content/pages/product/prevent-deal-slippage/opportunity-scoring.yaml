@@ -1,3 +1,9 @@
+options:
+  useCase: "Stop Chasing Un-Winnable Deals"
+  featureName: "Opportunity Scoring"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Opportunity Scoring"
   title: "Prioritize deals with AI-powered opportunity scores."

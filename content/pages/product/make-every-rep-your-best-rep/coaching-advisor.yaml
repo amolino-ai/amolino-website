@@ -1,3 +1,9 @@
+options:
+  useCase: "Enable Managers for Better Coaching"
+  featureName: "Coaching Advisor"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Coaching Advisor"
   title: "Scale your best coaching practices with AI."

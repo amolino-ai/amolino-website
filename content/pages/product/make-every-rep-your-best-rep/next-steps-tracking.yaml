@@ -1,3 +1,9 @@
+options:
+  useCase: "Consistent Sales Execution"
+  featureName: "Next Steps Tracking"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Next Best Action"
   title: "Always know the right next step for every deal."

@@ -1,3 +1,9 @@
+options:
+  useCase: "Increase Selling Capacity"
+  featureName: "Meeting Insights"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Meeting Insights"
   title: "Turn every meeting into actionable intelligence."

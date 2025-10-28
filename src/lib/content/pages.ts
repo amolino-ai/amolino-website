@@ -1,4 +1,5 @@
 import { loadYAML } from './loaders';
+import { buildNavbarProductsFromContent } from './navbar-generator';
 import type {
   HeroContent,
   ProblemContent,
@@ -115,9 +116,13 @@ export async function getUseCaseContent(slug: string): Promise<UseCasePageConten
 
 /**
  * Get product page content
+ * Supports both nested (benefit/slug) and flat (slug) paths
  */
-export async function getProductContent(slug: string): Promise<ProductPageContent> {
-  return loadYAML<ProductPageContent>(`pages/product/${slug}.yaml`);
+export async function getProductContent(benefitOrSlug: string, slug?: string): Promise<ProductPageContent> {
+  const path = slug
+    ? `pages/product/${benefitOrSlug}/${slug}.yaml`  // nested path (new structure)
+    : `pages/product/${benefitOrSlug}.yaml`;          // root path (legacy/root-level products)
+  return loadYAML<ProductPageContent>(path);
 }
 
 /**
@@ -143,9 +148,10 @@ export async function getQBRSummary(): Promise<QBRSummary> {
 
 /**
  * Get navbar products content
+ * Dynamically builds navbar from product files at build time
  */
 export async function getNavbarProducts(): Promise<NavbarProductsContent> {
-  return loadYAML<NavbarProductsContent>('navbar/products.yaml');
+  return buildNavbarProductsFromContent();
 }
 
 /**

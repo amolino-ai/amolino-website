@@ -2,25 +2,19 @@ import FeatureShowcase from '@/app/product/components/FeatureShowcase';
 import BottomFeature from '@/app/product/components/BottomFeature';
 import Hero from '@/app/product/components/Hero';
 import { getProductContent } from '@/lib/content';
-
-// Define all feature slugs for this pillar
-const FEATURE_SLUGS = [
-  'ai-sales-compass',
-  'coaching-advisor',
-  'account-intelligence',
-  'stakeholder-mapping',
-  'ai-email-assist',
-  'deal-strategy',
-  'meeting-insights',
-  'next-best-action',
-] as const;
+import fs from 'fs';
+import path from 'path';
 
 /**
  * Generate static params for all features in "Make Every Rep Your Best Rep" pillar
+ * Dynamically scans the benefit folder for all YAML files
  */
 export async function generateStaticParams() {
-  return FEATURE_SLUGS.map((slug) => ({
-    slug,
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'product', 'make-every-rep-your-best-rep');
+  const files = fs.readdirSync(benefitDir).filter(f => f.endsWith('.yaml'));
+
+  return files.map((file) => ({
+    slug: file.replace('.yaml', ''),
   }));
 }
 
@@ -35,7 +29,7 @@ interface ProductPageProps {
  */
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const content = await getProductContent(slug);
+  const content = await getProductContent('make-every-rep-your-best-rep', slug);
 
   // Convert iconPath strings to React elements
   const features = content.showcase.features.map((feature) => ({

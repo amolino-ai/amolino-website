@@ -1,3 +1,9 @@
+options:
+  useCase: "Forecasts You Can Defend"
+  featureName: "AI Forecast"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "AI Forecast"
   title: "Forecasts you can trust, backed by AI intelligence."

@@ -1,3 +1,9 @@
+options:
+  useCase: "Consistent Sales Execution"
+  featureName: "Deal Strategy"
+  showInNavbar: false
+  navbarDescription: "tbd"
+
 hero:
   badgeText: "Deal Strategy"
   title: "Win complex deals with AI-powered strategies."
