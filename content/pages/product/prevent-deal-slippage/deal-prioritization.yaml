@@ -1,0 +1,54 @@
+options:
+  useCase: "Stop Chasing Un-Winnable Deals"
+  featureName: "Deal Prioritization"
+  showInNavbar: true
+  navbarDescription: "Get AI-powered deal rankings based on value, probability, urgency, and strategic fit to focus on what matters most."
+
+hero:
+  badgeText: "Deal Prioritization"
+  title: "Always work on the right deals at the right time."
+  description: "AI automatically prioritizes your pipeline based on deal value, win probability, urgency, health, and strategic fit, ensuring you always focus your time and energy on the opportunities that matter most."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+
+showcase:
+  title: "Intelligent, Dynamic Deal Prioritization."
+  features:
+    - iconPath: "M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+      title: "Smart Ranking"
+      description: "AI automatically ranks deals based on multiple factors including value, win probability, deal health, momentum, and time to close."
+    - iconPath: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+      title: "Urgency Detection"
+      description: "Identify deals that need immediate attention based on close dates, health deterioration, or competitive threats."
+    - iconPath: "M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+      title: "Customizable Criteria"
+      description: "Adjust prioritization factors to match your sales strategy, whether focusing on quick wins, strategic deals, or at-risk opportunities."
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  comparisonTitle: "AI Deal Prioritization vs Gut-Feel Management"
+  comparisonSubtitle: "Maximize productivity and revenue with data-driven deal prioritization."
+  traditionalPoints:
+    - "Prioritize by gut feel or loudest customer"
+    - "Focus on largest deals only"
+    - "Miss urgent issues until too late"
+    - "Inconsistent prioritization across team"
+    - "No systematic approach to allocation"
+  aiPoweredPoints:
+    - "Data-driven, objective prioritization"
+    - "Balance size, probability, and urgency"
+    - "Proactive identification of urgent needs"
+    - "Consistent methodology across organization"
+    - "Optimized time allocation for maximum ROI"
+    - "Dynamic reprioritization as deals evolve"
+
+bottomFeature:
+  title: "Maximize Your Impact."
+  subtitle: "Work smarter, not harder"
+  points:
+    - title: "Clear Focus"
+      description: "Always know which deals to work on next with confidence"
+    - title: "Balanced Pipeline"
+      description: "Optimize across short-term revenue and long-term strategic value"
+    - title: "Team Alignment"
+      description: "Ensure everyone focuses on the right opportunities"
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
