@@ -159,5 +159,5 @@ export async function getNavbarLinks(): Promise<NavbarLinksContent> {
  * Get benefit group content
  */
 export async function getBenefitGroupContent(slug: string): Promise<BenefitGroupContent> {
-  return loadYAML<BenefitGroupContent>(`pages/benefit-groups/${slug}.yaml`);
+  return loadYAML<BenefitGroupContent>(`pages/benefits/${slug}.yaml`);
 }
