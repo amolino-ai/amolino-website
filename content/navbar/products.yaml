@@ -5,7 +5,7 @@ allProducts:
   icon: "/icons/all-products.svg"
 
 benefits:
-  - name: "Make every rep your, Best Rep"
+  - name: "Make Every Rep Your Best Rep"
     href: "/benefit-groups/make-every-rep-your-best-rep"
     features:
       - name: "AI Sales Compass"
