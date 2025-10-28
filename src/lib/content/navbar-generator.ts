@@ -47,6 +47,7 @@ export async function buildNavbarProductsFromContent(): Promise<NavbarProductsCo
     const slugs = scanYamlFiles(benefitDir);
 
     const features: NavbarFeature[] = [];
+    const totalFeatureCount = slugs.length; // Total count of all features in this benefit
 
     // Load each feature and check if it should be shown in navbar
     for (const slug of slugs) {
@@ -71,6 +72,7 @@ export async function buildNavbarProductsFromContent(): Promise<NavbarProductsCo
         name: BENEFIT_NAMES[benefitSlug],
         href: BENEFIT_HREFS[benefitSlug],
         features,
+        totalFeatureCount,
       });
     }
   }

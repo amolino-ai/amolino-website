@@ -116,7 +116,7 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
                           onClick={handleLinkClick}
                           className="text-sm font-medium text-indigo-600 hover:text-indigo-700 transition-colors mt-auto"
                         >
-                          All features →
+                          All {benefit.totalFeatureCount} features →
                         </Link>
                       </div>
                     ))}

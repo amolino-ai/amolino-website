@@ -302,6 +302,7 @@ export interface NavbarBenefit {
   name: string;
   href: string;
   features: NavbarFeature[];
+  totalFeatureCount: number;
 }
 
 export interface NavbarLink {
