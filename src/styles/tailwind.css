@@ -121,3 +121,8 @@
     transform: translateX(var(--move-x-to));
   }
 }
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}

@@ -4,6 +4,7 @@ import React from 'react';
 import { Container } from '@/components/Container';
 import { Screenshot } from '@/components/Screenshot';
 import { Heading } from '@/components/Text';
+import { Button } from '@/components/Button';
 import type { FeatureSectionContent } from '@/lib/content/types';
 
 interface FeatureSectionProps {
@@ -12,6 +13,7 @@ interface FeatureSectionProps {
 
 export function FeatureSection({ content }: FeatureSectionProps) {
   const [activeTab, setActiveTab] = React.useState(content.tabs[0]?.id || 'revenue');
+  const currentTab = content.tabs.find(tab => tab.id === activeTab);
 
   return (
     <div className="overflow-hidden">
@@ -32,14 +34,26 @@ export function FeatureSection({ content }: FeatureSectionProps) {
           ))}
         </div>
         <Heading as="h2" className="max-w-3xl mx-auto text-center">
-          {content.tabs.find(tab => tab.id === activeTab)?.description}
+          {currentTab?.description}
         </Heading>
         <Screenshot
           width={1216}
           height={768}
-          src={content.tabs.find(tab => tab.id === activeTab)?.src || ''}
+          src={currentTab?.src || ''}
           className="mt-16 h-[36rem] sm:h-auto sm:w-[76rem] mx-auto bg-gray-100 rounded-2xl shadow-2xl"
         />
+
+        {/* CTA Buttons */}
+        <div className="flex justify-center gap-4 mt-12">
+          <Button href="#">
+            Book a call
+          </Button>
+          {currentTab?.learnMoreLink && (
+            <Button href={currentTab.learnMoreLink} variant="outline">
+              Learn more
+            </Button>
+          )}
+        </div>
       </Container>
     </div>
   );
