@@ -1,0 +1,48 @@
+hero:
+  badgeText: "Risk Management"
+  title: "Stop deals from slipping quarter after quarter."
+  description: "Pushed Out History tracks deals that repeatedly slip past their close dates, helping you identify patterns, understand root causes, and prevent future slippage."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+
+showcase:
+  title: "Learn from Slippage Patterns."
+  features:
+    - iconPath: "M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
+      title: "Slippage Timeline"
+      description: "Visualize every time a deal has been pushed out and understand the pattern."
+    - iconPath: "M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+      title: "Root Cause Analysis"
+      description: "Identify why deals slip and what signals preceded each push."
+    - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+      title: "Slippage Alerts"
+      description: "Get early warnings when deals show signs of pushing to next quarter."
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  comparisonTitle: "Pushed Out History vs Traditional Deal Tracking"
+  comparisonSubtitle: "Turn slippage history into actionable intelligence."
+  traditionalPoints:
+    - "No visibility into slippage patterns"
+    - "Lost context when deals push"
+    - "Unable to learn from past slips"
+    - "Repeated mistakes quarter after quarter"
+    - "No early warning signals"
+  aiPoweredPoints:
+    - "Complete slippage history for every deal"
+    - "Full context preserved across pushes"
+    - "Learn from historical patterns"
+    - "Prevent recurring slippage causes"
+    - "Predictive alerts before deals slip"
+    - "AI-powered slippage prevention"
+
+bottomFeature:
+  title: "Prevent Chronic Slippage."
+  subtitle: "Stop the push cycle"
+  points:
+    - title: "Historical Tracking"
+      description: "View complete push history and understand slippage patterns"
+    - title: "Pattern Recognition"
+      description: "Identify common reasons deals slip in your organization"
+    - title: "Proactive Alerts"
+      description: "Get notified before deals push based on historical signals"
+  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
