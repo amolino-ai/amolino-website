@@ -4,7 +4,6 @@ import { BenefitFeatures } from '../components/BenefitFeatures';
 import { ProcessWorkflow } from '@/components/ProcessWorkflow';
 import { ComparisonTable } from '@/components/ComparisonTable';
 import { WhoItsFor } from '../components/WhoItsFor';
-import { FinalCTA } from '../components/FinalCTA';
 import { getBenefitGroupContent } from '@/lib/content';
 
 interface BenefitGroupPageProps {
@@ -45,7 +44,6 @@ export default async function BenefitGroupPage({ params }: BenefitGroupPageProps
       <ProcessWorkflow {...content.howItWorks} />
       <ComparisonTable {...content.comparison} />
       <WhoItsFor {...content.whoItsFor} />
-      <FinalCTA {...content.cta} />
     </main>
   );
 }
