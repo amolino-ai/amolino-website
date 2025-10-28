@@ -569,7 +569,7 @@ export interface BenefitGroupFeature {
 export interface BenefitGroupFeatures {
   title: string;
   subtitle: string;
-  layout: 'showcase' | 'horizontal' | 'balanced';
+  layout: 'three-column' | 'two-row' | 'two-row-three-column';
   items: BenefitGroupFeature[];
 }
 

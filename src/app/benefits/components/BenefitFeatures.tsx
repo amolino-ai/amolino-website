@@ -16,16 +16,9 @@ export function BenefitFeatures({ title, subtitle, layout, items }: BenefitGroup
     href: feature.link,
   }));
 
-  // Map layout names
-  const bentoLayout = layout === 'showcase'
-    ? 'three-column'
-    : layout === 'horizontal'
-    ? 'two-row'
-    : 'two-row-three-column';
-
   return (
     <Bento
-      layout={bentoLayout}
+      layout={layout}
       title={title}
       subtitle={subtitle}
       tagline="Features"

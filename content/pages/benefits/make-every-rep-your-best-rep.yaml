@@ -44,7 +44,7 @@ stats:
 features:
   title: "How We Scale Your A-Players"
   subtitle: "Built specifically for teams that need consistent execution across every rep, every deal, every time"
-  layout: "showcasethree-column"
+  layout: "two-row-three-column"
   items:
     - name: "AI Sales Compass"
       category: "Guidance"
