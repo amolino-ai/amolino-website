@@ -1,6 +1,6 @@
 options:
   useCase: "Increase Selling Capacity"
-  featureName: "Buyer Engagement Analytics"
+  featureName: "Engagement Intelligence"
   showInNavbar: false
   navbarDescription: "Track multi-channel buyer engagement automatically, measure interest levels, and predict deal outcomes with comprehensive engagement intelligence."
 

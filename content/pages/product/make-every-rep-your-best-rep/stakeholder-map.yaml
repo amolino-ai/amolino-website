@@ -1,6 +1,6 @@
 options:
   useCase: "Map the Buying Committee"
-  featureName: "Stakeholder Mapping"
+  featureName: "Stakeholder Map"
   showInNavbar: true
   navbarDescription: "Automatically identify stakeholders, map relationships and influence, and get personalized engagement strategies for every decision maker."
 

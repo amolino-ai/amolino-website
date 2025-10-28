@@ -1,6 +1,6 @@
 options:
   useCase: "Stop Chasing Un-Winnable Deals"
-  featureName: "AI Opportunity Qualification"
+  featureName: "Automatic Opportunity Qualification"
   showInNavbar: false
   navbarDescription: "Automatically qualify opportunities with AI-powered scoring based on fit, intent, and win probability to focus on the right deals."
 

@@ -1,6 +1,6 @@
 options:
   useCase: "Consistent Sales Execution"
-  featureName: "AI Sales Guidance"
+  featureName: "Proactive Sales Guidance"
   showInNavbar: true
   navbarDescription: "Get real-time, contextual AI guidance for every deal with personalized recommendations, best practices, and next best actions."
 

@@ -1,6 +1,6 @@
 options:
   useCase: "Consistent Sales Execution"
-  featureName: "Next Steps"
+  featureName: "Next Steps Tracking"
   showInNavbar: false
   navbarDescription: "Get AI-prioritized action recommendations for every deal based on impact, urgency, and win probability to focus on what matters."
 
