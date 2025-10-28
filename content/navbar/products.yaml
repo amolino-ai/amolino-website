@@ -8,23 +8,29 @@ benefits:
   - name: "Make Every Rep Your Best Rep"
     href: "/benefits/make-every-rep-your-best-rep"
     features:
-      - name: "AI Sales Compass"
-        description: "Proactive guidance at every stage"
+      - name: "Proactive Sales Guidance"
+        description: "Turn by turn guidance for each rep, based on how your best reps move deals forward"
+        href: "/product/make-every-rep-your-best-rep/proactive-sales-guidance"
       - name: "Zero-Effort CRM Updates"
         description: "Never chase data entry again"
+        href: "/product/make-every-rep-your-best-rep/zero-effort-crm-updates"
 
   - name: "Explainable AI Forecast"
     href: "/benefits/explainable-ai-forecast"
     features:
       - name: "Pipeline Monitor"
         description: "Early risk detection"
+        href: "/product/explainable-ai-forecast/pipeline-monitor"
       - name: "Deal Health (Risk Radar)"
         description: "Proactive risk alerts"
+        href: "/product/explainable-ai-forecast/deal-health-risk-radar"
 
   - name: "Prevent Deal Slippage"
     href: "/benefits/prevent-deal-slippage"
     features:
       - name: "Deal Health (Risk Radar)"
         description: "Real-time health scoring"
+        href: "/product/prevent-deal-slippage/deal-health-risk-radar"
       - name: "Pipeline Monitor"
         description: "Daily at-risk deal monitoring"
+        href: "/product/prevent-deal-slippage/pipeline-monitor"

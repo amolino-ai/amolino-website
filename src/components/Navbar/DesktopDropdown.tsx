@@ -89,10 +89,24 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
                         {/* Core Features */}
                         <div className="space-y-3 mb-4">
                           {benefit.features.map((feature, index) => (
-                            <div key={index} className="text-sm">
-                              <div className="font-medium text-gray-900">{feature.name}</div>
-                              <div className="text-gray-600">{feature.description}</div>
-                            </div>
+                            feature.href ? (
+                              <Link
+                                key={index}
+                                href={feature.href}
+                                onClick={handleLinkClick}
+                                className="block text-sm rounded-lg p-2 -mx-2 hover:bg-gray-50 transition-colors"
+                              >
+                                <div className="font-medium text-gray-900 hover:text-indigo-600 transition-colors">
+                                  {feature.name}
+                                </div>
+                                <div className="text-gray-600">{feature.description}</div>
+                              </Link>
+                            ) : (
+                              <div key={index} className="text-sm">
+                                <div className="font-medium text-gray-900">{feature.name}</div>
+                                <div className="text-gray-600">{feature.description}</div>
+                              </div>
+                            )
                           ))}
                         </div>
 

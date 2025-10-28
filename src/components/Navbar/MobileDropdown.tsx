@@ -12,6 +12,9 @@ export interface MobileDropdownProps {
   benefits: NavbarBenefit[];
 }
 
+// This determines whether to show features for each benefit in the mobile version
+const SHOW_FEATURES = true;
+
 /**
  * A mobile dropdown component for the navbar that displays benefit names.
  * Shows simplified list of benefit group links with staggered animations on mount.
@@ -21,7 +24,7 @@ export interface MobileDropdownProps {
  */
 export function MobileDropdown({ benefits }: MobileDropdownProps) {
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       <div className="font-medium text-gray-950">Product</div>
       {benefits.map((benefit: NavbarBenefit, index: number) => (
         <motion.div
@@ -36,8 +39,33 @@ export function MobileDropdown({ benefits }: MobileDropdownProps) {
           className="pl-4"
         >
           <Link href={benefit.href}>
-            <div className="text-base font-medium text-gray-950">{benefit.name}</div>
+            <div className="text-base font-medium text-gray-950 mb-2">{benefit.name}</div>
           </Link>
+          {SHOW_FEATURES && benefit.features && benefit.features.length > 0 && (
+            <div className="space-y-2 ml-2">
+              {benefit.features.map((feature, featureIndex) => {
+                return (
+                  feature.href ? (
+                    <Link
+                      key={featureIndex}
+                      href={feature.href}
+                      className="block text-sm rounded-lg p-2 -mx-2 hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="font-medium text-gray-900 hover:text-indigo-600 transition-colors">
+                        {feature.name}
+                      </div>
+                      <div className="text-gray-600 text-xs">{feature.description}</div>
+                    </Link>
+                  ) : (
+                    <div key={featureIndex} className="text-sm">
+                      <div className="font-medium text-gray-900">{feature.name}</div>
+                      <div className="text-gray-600 text-xs">{feature.description}</div>
+                    </div>
+                  )
+                );
+              })}
+            </div>
+          )}
         </motion.div>
       ))}
     </div>

@@ -295,6 +295,7 @@ export interface NavbarProduct {
 export interface NavbarFeature {
   name: string;
   description: string;
+  href?: string;
 }
 
 export interface NavbarBenefit {
