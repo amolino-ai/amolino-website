@@ -20,9 +20,7 @@ import {
 import type { Metadata } from 'next';
 import { BentoSection } from './page/components/bento-section';
 import { DarkBentoSection } from './page/components/dark-bento-section';
-import { BlindSalesSection } from './page/components/blind-sales-section';
 import { SecuritySection } from './page/components/security-section';
-import { Hero } from './page/components/Hero';
 
 export const metadata: Metadata = {
   description: 'Amolino helps you sell more by revealing sensitive information about your customers.',
@@ -35,7 +33,6 @@ export default async function Home() {
   const numbersContent = await getNumbersContent();
   const bentoSectionContent = await getBentoSectionContent();
   const darkBentoSectionContent = await getDarkBentoSectionContent();
-  const blindSalesSectionContent = await getBlindSalesSectionContent();
   const securitySectionContent = await getSecuritySectionContent();
   const featureSectionContent = await getFeatureSectionContent();
   const integrationsSectionContent = await getIntegrationsSectionContent();
@@ -54,8 +51,6 @@ export default async function Home() {
       {/* Outcome section - full width */}
       <OutcomeSection content={outcomeContent} />
 
-      {/* Blind sales section */}
-      <BlindSalesSection content={blindSalesSectionContent} />
 
       <main>
         {/* Logo cloud - contained */}
@@ -64,13 +59,13 @@ export default async function Home() {
         </Container>
 
         {/* Feature section - full width background with contained content */}
-        <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
-          <FeatureSection content={featureSectionContent} />
-          <BentoSection content={bentoSectionContent} />
-        </div>
+        {/* <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
+          <FeatureSection content={featureSectionContent} /> */}
+          {/* <BentoSection content={bentoSectionContent} /> */}
+        {/* </div> */}
 
         {/* Dark bento section - likely full width */}
-        <DarkBentoSection content={darkBentoSectionContent} />
+        {/* <DarkBentoSection content={darkBentoSectionContent} /> */}
 
         {/* Integrations section - likely full width */}
         <IntegrationsSection content={integrationsSectionContent} />
