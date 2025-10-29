@@ -1,4 +1,5 @@
 import { Link } from '@/components/Link';
+import { Screenshot } from '@/components/Screenshot';
 import type { BentoItem } from '@/lib/content/types';
 
 export interface TwoRowThreeColumnBentoProps {
@@ -41,16 +42,15 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
 
             const content = (
               <>
-                <img
-                  alt={item.title}
-                  src={item.image}
-                  className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'object-left lg:object-right' : ''} dark:hidden`}
-                />
-                <img
-                  alt={item.title}
-                  src={item.image}
-                  className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'lg:object-right' : ''} not-dark:hidden`}
-                />
+                <div className="h-80 overflow-hidden">
+                  <Screenshot
+                    width={item.screenshot.width}
+                    height={item.screenshot.height}
+                    src={item.screenshot.src}
+                    fillContainer={item.screenshot.fillContainer ?? true}
+                    className="h-full w-full"
+                  />
+                </div>
                 <div className="p-10 pt-4">
                   {item.category && (
                     <h3 className="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">
@@ -63,6 +63,11 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">
                     {item.description}
                   </p>
+                  {item.ctaText && (
+                    <p className="mt-3 text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                      {item.ctaText} →
+                    </p>
+                  )}
                 </div>
               </>
             );

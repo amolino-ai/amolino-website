@@ -12,8 +12,9 @@ export function BenefitFeatures({ title, subtitle, layout, items }: BenefitGroup
     title: feature.name,
     description: feature.description,
     category: feature.category,
-    image: feature.image,
+    screenshot: feature.screenshot,
     href: feature.link,
+    ctaText: feature.ctaText,
   }));
 
   return (

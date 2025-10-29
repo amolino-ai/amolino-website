@@ -1,4 +1,5 @@
 import { Link } from '@/components/Link';
+import { Screenshot } from '@/components/Screenshot';
 import type { BentoItem } from '@/lib/content/types';
 
 export interface ThreeColumnBentoProps {
@@ -43,13 +44,20 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center dark:text-gray-400">
                     {showcaseItem.description}
                   </p>
+                  {showcaseItem.ctaText && (
+                    <p className="mt-3 text-sm font-medium text-indigo-600 max-lg:text-center dark:text-indigo-400">
+                      {showcaseItem.ctaText} →
+                    </p>
+                  )}
                 </div>
                 <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                  <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl dark:shadow-none dark:outline dark:outline-white/20">
-                    <img
-                      alt={showcaseItem.title}
-                      src={showcaseItem.image}
-                      className="size-full object-cover object-top"
+                  <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-neutral-900/10 bg-gray-900 shadow-2xl dark:border-white/10 dark:shadow-none">
+                    <Screenshot
+                      width={showcaseItem.screenshot.width}
+                      height={showcaseItem.screenshot.height}
+                      src={showcaseItem.screenshot.src}
+                      fillContainer={showcaseItem.screenshot.fillContainer ?? true}
+                      className="size-full"
                     />
                   </div>
                 </div>
@@ -63,13 +71,20 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center dark:text-gray-400">
                     {showcaseItem.description}
                   </p>
+                  {showcaseItem.ctaText && (
+                    <p className="mt-3 text-sm font-medium text-indigo-600 max-lg:text-center dark:text-indigo-400">
+                      {showcaseItem.ctaText} →
+                    </p>
+                  )}
                 </div>
                 <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                  <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl dark:shadow-none dark:outline dark:outline-white/20">
-                    <img
-                      alt={showcaseItem.title}
-                      src={showcaseItem.image}
-                      className="size-full object-cover object-top"
+                  <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-neutral-900/10 bg-gray-900 shadow-2xl dark:border-white/10 dark:shadow-none">
+                    <Screenshot
+                      width={showcaseItem.screenshot.width}
+                      height={showcaseItem.screenshot.height}
+                      src={showcaseItem.screenshot.src}
+                      fillContainer={showcaseItem.screenshot.fillContainer ?? true}
+                      className="size-full"
                     />
                   </div>
                 </div>
@@ -109,17 +124,19 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center dark:text-gray-400">
                     {item.description}
                   </p>
+                  {item.ctaText && (
+                    <p className="mt-3 text-sm font-medium text-indigo-600 max-lg:text-center dark:text-indigo-400">
+                      {item.ctaText} →
+                    </p>
+                  )}
                 </div>
                 <div className={`flex flex-1 items-center ${isMiddle ? 'max-lg:py-6 lg:pb-2' : 'justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2'}`}>
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    className={`${isMiddle ? 'h-[min(152px,40cqw)] object-cover' : 'w-full max-lg:max-w-xs'} dark:hidden`}
-                  />
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    className={`${isMiddle ? 'h-[min(152px,40cqw)] object-cover' : 'w-full max-lg:max-w-xs'} not-dark:hidden`}
+                  <Screenshot
+                    width={item.screenshot.width}
+                    height={item.screenshot.height}
+                    src={item.screenshot.src}
+                    fillContainer={item.screenshot.fillContainer}
+                    className={`${isMiddle ? 'h-[min(152px,40cqw)]' : 'w-full max-lg:max-w-xs'}`}
                   />
                 </div>
               </>

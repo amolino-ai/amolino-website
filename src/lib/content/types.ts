@@ -577,8 +577,9 @@ export interface BenefitGroupFeature {
   description: string;
   details: string;
   icon: string;
-  image: string;
+  screenshot: BentoScreenshot;
   link?: string; // Optional link to product feature page
+  ctaText?: string; // Optional CTA text for the card
 }
 
 export interface BenefitGroupFeatures {
@@ -664,6 +665,16 @@ export interface BenefitGroupContent {
 // ============================================================================
 
 /**
+ * Screenshot configuration for Bento grid items.
+ */
+export interface BentoScreenshot {
+  src: string;
+  width: number;
+  height: number;
+  fillContainer?: boolean;
+}
+
+/**
  * Individual item for Bento grid layouts.
  * Used across all three bento layout variants.
  */
@@ -671,8 +682,9 @@ export interface BentoItem {
   title: string;
   description: string;
   category?: string; // Optional, used in some layouts for top label
-  image: string;
+  screenshot: BentoScreenshot;
   href?: string; // Optional link to navigate when clicking the card
+  ctaText?: string; // Optional CTA text for buttons or links
 }
 
 /**
