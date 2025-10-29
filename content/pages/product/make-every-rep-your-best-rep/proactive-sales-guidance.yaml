@@ -2,18 +2,20 @@ options:
   useCase: "Consistent Sales Execution"
   featureName: "Proactive Sales Guidance"
   showInNavbar: true
-  navbarDescription: "Get real-time, contextual AI guidance for every deal with personalized recommendations, best practices, and next best actions."
+  navbarDescription: |
+    AI guidance for every deal based on your best reps' winning patterns.
 
 hero:
-  badgeText: "AI Guidance"
-  title: "Navigate every deal with AI-powered guidance."
-  description: "Get real-time, contextual guidance tailored to each deal's unique situation. AI analyzes deal stage, stakeholders, engagement, and historical patterns to recommend the best actions, strategies, and tactics to win."
+  badgeText: "Make Every Rep Your Best Rep"
+  title: "Turn by turn guidance for each deal."
+  # description: "AI analyzes deal stage, stakeholders, engagement, and historical patterns, to recommend the best actions, strategies, and tactics to win."
+  description: "Amolino provides detailed steps to move each deal forward based on how your best reps close deals. Custom recommendation based on your companies' unique sales process and historical win patterns."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
     src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
-    width: 1216
-    height: 768
+    width: 648
+    height: 296
 
 showcase:
   title: "Smart Guidance for Every Deal Stage."
@@ -29,8 +31,8 @@ showcase:
       description: "Receive clear, prioritized next steps ranked by impact to keep deals progressing, prevent stalls, and accelerate time to close."
   screenshot:
     src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
-    width: 1216
-    height: 768
+    width: 648
+    height: 296
   comparisonTitle: "AI Sales Guidance vs Traditional Sales Playbooks"
   comparisonSubtitle: "Transform sales execution with intelligent, adaptive guidance that evolves with every deal."
   traditionalPoints:

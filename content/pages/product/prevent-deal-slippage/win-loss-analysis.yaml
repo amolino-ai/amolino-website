@@ -1,7 +1,7 @@
 options:
   useCase: "Understand Competitive Threats"
   featureName: "Win/Loss Analysis"
-  showInNavbar: true
+  showInNavbar: false
   navbarDescription: "Learn from every win and loss with AI-powered outcome analysis and insights."
 
 hero:

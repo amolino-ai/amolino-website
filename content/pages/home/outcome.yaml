@@ -11,42 +11,51 @@ products:
     description: "Make every rep execute like your best rep. Stop deals from slipping with early risk detection and focus on winnable opportunities."
     statBadge: "25% increase in win rates"
     benefits:
-      - "Make every rep execute like your best rep"
-      - "Stop deals from slipping with early risk detection"
-      - "Focus on winnable deals, not lost causes"
-      - "Map buying committees automatically"
-    ctaText: "25% increase in win rates"
+      - "Proactive Sales Guidance"
+      - "Zero-effort CRM updates"
+      - "Stakeholder Map"
+      - "Automatic Qualification Intelligence"
+    ctaText: "Increase my win rate by 25%"
     ctaLink: "benefits/make-every-rep-your-best-rep"
     bgColor: "bg-test-two"
     textColor: "text-neutral-900"
-    illustration: "/screenshots/Compass_temp.png"
+    screenshot:
+      src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
+      width: 648
+      height: 296
   - id: 2
     label: "Forecast"
     title: "Forecast Accurately"
     description: "AI-powered forecasts you can defend to the board. Know which deals will really close this quarter with deal-level proof."
     statBadge: "90%+ forecast accuracy"
     benefits:
-      - "AI-powered forecasts you can defend to the board"
-      - "Know which deals will really close this quarter"
-      - "Clean pipeline with automatic stale deal detection"
-      - "Explain forecast changes with deal-level proof"
-    ctaText: "90%+ forecast accuracy"
+      - "Explainable AI-forecast"
+      - "Signal-based Prediction"
+      - "Pipeline Len"
+      - "Pipeline Monitor"
+    ctaText: "Improve my forecast accuracy to 99%"
     ctaLink: "/benefits/explainable-ai-forecast"
     bgColor: "bg-tertiary-400"
     textColor: "text-neutral-50"
-    illustration: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+    screenshot:
+      src: "/screenshots/explainable-ai-forecast/dashboard_revenue_forecast_accuracy.png"
+      width: 456
+      height: 301
   - id: 3
-    label: "Data Hygiene"
-    title: "Clean Your CRM Automatically"
-    description: "Detect duplicates, fix formatting, and standardize fields. Keep Salesforce and HubSpot clean without manual effort."
+    label: "Stop Deals from Slipping"
+    title: "Stop quarter-end surprises"
+    description: "Keep your pipeline clean and deals on track with AI-driven data hygiene and proactive risk alerts."
     statBadge: "10x cleaner pipeline"
     benefits:
-      - "Auto-dedupe and merge rules"
-      - "Normalize titles, phones, domains"
-      - "Fix incomplete/dirty fields"
-      - "Sync-safe updates with logs"
-    ctaText: "10x cleaner pipeline"
+      - "Deal Health"
+      - "Deal Prioritization"
+      - "Pushed-out History"
+      - "Competitive Tracking"
+    ctaText: "Know before a deal slips"
     ctaLink: "/benefits/prevent-deal-slippage"
     bgColor: "bg-secondary-300"
     textColor: "text-neutral-900"
-    illustration: "/screenshots/sales_compass_full_view_modified_april_2025.jpg"
+    screenshot:
+      src: "/screenshots/preventable-deal-slippage/pushed_opportunities_on_dashboard.png"
+      width: 1077
+      height: 709
