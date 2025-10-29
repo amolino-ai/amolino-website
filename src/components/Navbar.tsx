@@ -100,7 +100,7 @@ export function Navbar({ banner, allProducts, benefits, links }: NavbarProps) {
         <PlusGridRow className="relative flex justify-between">
           <div className="relative flex gap-6">
             <PlusGridItem className="py-3">
-              <Link href="/" title="Home">
+              <Link href="/" title="Amolino Home">
                 <Logo className="h-9" />
               </Link>
             </PlusGridItem>
