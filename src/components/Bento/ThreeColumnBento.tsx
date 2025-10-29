@@ -81,7 +81,19 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
           {/* Regular Items */}
           {regularItems.map((item, index) => {
             const isFirst = index === 0;
+            const isMiddle = index === 1;
             const isLast = index === regularItems.length - 1;
+
+            // Grid positioning classes
+            let gridClass = '';
+            if (isFirst) {
+              gridClass = 'max-lg:row-start-1';
+            } else if (isMiddle) {
+              gridClass = 'max-lg:row-start-3 lg:col-start-2 lg:row-start-2';
+            } else if (isLast) {
+              gridClass = 'lg:row-span-2';
+            }
+
             const roundedClass = isFirst
               ? 'max-lg:rounded-t-4xl'
               : isLast
@@ -98,16 +110,16 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                     {item.description}
                   </p>
                 </div>
-                <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+                <div className={`flex flex-1 items-center ${isMiddle ? 'max-lg:py-6 lg:pb-2' : 'justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2'}`}>
                   <img
                     alt={item.title}
                     src={item.image}
-                    className="w-full max-lg:max-w-xs dark:hidden"
+                    className={`${isMiddle ? 'h-[min(152px,40cqw)] object-cover' : 'w-full max-lg:max-w-xs'} dark:hidden`}
                   />
                   <img
                     alt={item.title}
                     src={item.image}
-                    className="w-full not-dark:hidden max-lg:max-w-xs"
+                    className={`${isMiddle ? 'h-[min(152px,40cqw)] object-cover' : 'w-full max-lg:max-w-xs'} not-dark:hidden`}
                   />
                 </div>
               </>
@@ -116,7 +128,7 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
             return (
               <div
                 key={item.title}
-                className={`relative ${isLast ? 'lg:row-span-2' : 'max-lg:row-start-1'}`}
+                className={`relative ${gridClass}`}
               >
                 <div className={`absolute inset-px rounded-lg bg-white ${roundedClass} dark:bg-gray-800`} />
                 {item.href ? (

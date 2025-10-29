@@ -10,12 +10,12 @@ export interface TwoRowThreeColumnBentoProps {
 
 /**
  * Two-row three-column bento grid layout with balanced distribution.
- * Expects 6 items: First row has 2 items (3 cols each), second row has 3 items (2 cols each).
+ * Expects 5 items: First row has 2 items (3 cols each), second row has 3 items (2 cols each).
  * Mobile: Single column with all items stacking vertically.
  */
 export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoRowThreeColumnBentoProps) {
   // Display up to 5 items for this layout
-  const displayItems = items.slice(0, 6);
+  const displayItems = items.slice(0, 5);
 
   return (
     <div className="bg-white py-24 sm:py-32 dark:bg-gray-900">
@@ -27,28 +27,29 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
           {displayItems.map((item, index) => {
             // Determine column span and rounding based on position
-            const isLeft = index === 0 || index === 3;
-            const isRight = index === 1 || index === 5;
+            // First row (0-1): col-span-3 each, Second row (2-4): col-span-2 each
+            const colSpan = index <= 1 ? 'lg:col-span-3' : 'lg:col-span-2';
 
-            const colSpan = isLeft || isRight ? 'lg:col-span-3' : 'lg:col-span-2';
+            const isLeft = index === 0 || index === 2;
+            const isRight = index === 1 || index === 4;
 
             let roundedClass = '';
             if (index === 0) roundedClass = 'max-lg:rounded-t-4xl lg:rounded-tl-4xl';
             else if (index === 1) roundedClass = 'lg:rounded-tr-4xl';
-            else if (index === 3) roundedClass = 'lg:rounded-bl-4xl';
-            else if (index === 5) roundedClass = 'max-lg:rounded-b-4xl lg:rounded-br-4xl';
+            else if (index === 2) roundedClass = 'lg:rounded-bl-4xl';
+            else if (index === 4) roundedClass = 'max-lg:rounded-b-4xl lg:rounded-br-4xl';
 
             const content = (
               <>
                 <img
                   alt={item.title}
                   src={item.image}
-                  className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'lg:object-right' : ''} dark:hidden`}
+                  className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'object-left lg:object-right' : ''} dark:hidden`}
                 />
                 <img
                   alt={item.title}
                   src={item.image}
-                  className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'not-dark:hidden lg:object-right' : 'not-dark:hidden'} not-dark:hidden`}
+                  className={`h-80 object-cover ${isLeft ? 'object-left' : isRight ? 'lg:object-right' : ''} not-dark:hidden`}
                 />
                 <div className="p-10 pt-4">
                   {item.category && (
