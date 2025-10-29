@@ -10,7 +10,10 @@ hero:
   description: "Pushed Out History tracks deals that repeatedly slip past their close dates, helping you identify slippage patterns, understand root causes, and prevent future push-outs before they happen."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Learn from Slippage Patterns."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
       title: "Slippage Prediction"
       description: "Get early warnings when deals show historical signals associated with slippage, giving you time to prevent the push."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "Pushed Out History vs Traditional Deal Tracking"
   comparisonSubtitle: "Transform slippage history into actionable intelligence and prevention strategies."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Identify common reasons deals slip and address root causes systematically"
     - title: "Proactive Prevention"
       description: "Get notified before deals push based on historical slippage signals"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

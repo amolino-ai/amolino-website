@@ -10,7 +10,10 @@ hero:
   description: "Guided selling uses AI to analyze customer interactions and recommend specific actions."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "AI-Powered Guided Selling."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
       title: "Proven success paths"
       description: "Follow data-driven playbooks based on your most successful deals to replicate winning strategies."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI-Powered Guided Selling vs Traditional Sales Process"
   comparisonSubtitle: "Transform your sales process with AI-powered guidance and predictive insights."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Track and optimize interactions with decision makers"
     - title: "Success Metrics"
       description: "Measure and improve your sales process effectiveness"
-  screenshotSrc: "/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
+  screenshot:
+    src: "/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
+    width: 1216
+    height: 768

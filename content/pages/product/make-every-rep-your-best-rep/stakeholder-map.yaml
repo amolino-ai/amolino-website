@@ -10,7 +10,10 @@ hero:
   description: "AI automatically identifies all stakeholders from emails, meetings, and CRM data, maps relationships and influence patterns, and provides personalized engagement strategies to navigate complex buying committees and win deals."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Navigate Complex Buying Committees."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"
       title: "Personalized Engagement Strategies"
       description: "Get customized engagement strategies for each stakeholder based on their role, influence level, engagement history, and decision-making authority."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI Stakeholder Mapping vs Manual Relationship Tracking"
   comparisonSubtitle: "Navigate complex buying committees with comprehensive, automated stakeholder intelligence."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Understand who influences whom in the decision process and navigate politics effectively"
     - title: "Engagement Planning"
       description: "Create targeted, personalized engagement strategies for each stakeholder to maximize influence"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

@@ -9,10 +9,15 @@ interface HeroProps {
   description: string
   ctaText: string
   ctaHref: string
-  screenshotSrc: string
+  screenshot: {
+    src: string
+    width: number
+    height: number
+    fillContainer?: boolean
+  }
 }
 
-export default function Hero({ badgeText, title, description, ctaText, ctaHref, screenshotSrc }: HeroProps) {
+export default function Hero({ badgeText, title, description, ctaText, ctaHref, screenshot }: HeroProps) {
   return (
     <div className="relative h-full overflow-hidden bg-white pt-16 pb-32">
       <Container>
@@ -26,7 +31,13 @@ export default function Hero({ badgeText, title, description, ctaText, ctaHref, 
             </div>
           </div>
           <div className="relative mt-16 lg:mt-0 lg:w-1/2">
-            <Screenshot width={1216} height={768} src={screenshotSrc} className="rounded-2xl shadow-2xl" />
+            <Screenshot
+              width={screenshot.width}
+              height={screenshot.height}
+              src={screenshot.src}
+              fillContainer={screenshot.fillContainer}
+              className="rounded-2xl shadow-2xl"
+            />
           </div>
         </div>
       </Container>

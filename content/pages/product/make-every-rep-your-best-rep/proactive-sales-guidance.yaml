@@ -10,7 +10,10 @@ hero:
   description: "Get real-time, contextual guidance tailored to each deal's unique situation. AI analyzes deal stage, stakeholders, engagement, and historical patterns to recommend the best actions, strategies, and tactics to win."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Smart Guidance for Every Deal Stage."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
       title: "Prioritized Next Actions"
       description: "Receive clear, prioritized next steps ranked by impact to keep deals progressing, prevent stalls, and accelerate time to close."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
+    width: 1216
+    height: 768
   comparisonTitle: "AI Sales Guidance vs Traditional Sales Playbooks"
   comparisonSubtitle: "Transform sales execution with intelligent, adaptive guidance that evolves with every deal."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Learn from successful deals and automatically replicate what works across your pipeline"
     - title: "Strategic Insights"
       description: "Understand deal dynamics deeply and optimize your approach for maximum win probability"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

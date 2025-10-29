@@ -8,14 +8,19 @@ interface BottomFeatureProps {
     title: string
     description: string
   }[]
-  screenshotSrc: string
+  screenshot: {
+    src: string
+    width: number
+    height: number
+    fillContainer?: boolean
+  }
 }
 
 export default function BottomFeature({
   title,
   subtitle,
   points,
-  screenshotSrc,
+  screenshot,
 }: BottomFeatureProps) {
   return (
     <div className="bg-white py-32">
@@ -38,9 +43,10 @@ export default function BottomFeature({
           </div>
           <div className="mt-16 lg:mt-0 lg:w-1/2">
             <Screenshot
-              width={1216}
-              height={768}
-              src={screenshotSrc}
+              width={screenshot.width}
+              height={screenshot.height}
+              src={screenshot.src}
+              fillContainer={screenshot.fillContainer}
               className="rounded-2xl shadow-2xl"
             />
           </div>

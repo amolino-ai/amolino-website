@@ -5,11 +5,13 @@ export function Screenshot({
   height,
   src,
   className,
+  fillContainer = false,
 }: {
   width: number
   height: number
   src: string
   className?: string
+  fillContainer?: boolean
 }) {
   return (
     <div
@@ -23,7 +25,10 @@ export function Screenshot({
       <img
         alt=""
         src={src}
-        className="h-full rounded-[var(--radius)] ring-1 shadow-2xl ring-black/10"
+        className={clsx(
+          'h-full rounded-[var(--radius)] ring-1 shadow-2xl ring-black/10',
+          fillContainer && 'object-cover'
+        )}
       />
     </div>
   );

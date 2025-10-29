@@ -94,6 +94,13 @@ export type {
   BenefitGroupCTAButton,
   BentoItem,
   BentoProps,
+  ComparisonPageContent,
+  ComparisonHero,
+  ComparisonItem,
+  ComparisonSection,
+  ComparisonScenario,
+  ComparisonAnalysis,
+  ComparisonBenefits,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -144,4 +151,5 @@ export {
   getNavbarProducts,
   getNavbarLinks,
   getBenefitGroupContent,
+  getComparisonPageContent,
 } from './pages';

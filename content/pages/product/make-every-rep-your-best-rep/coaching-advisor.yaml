@@ -10,7 +10,10 @@ hero:
   description: "AI Coaching Advisor analyzes rep performance, identifies skill gaps and coaching opportunities, and provides data-driven insights to help managers develop every team member into a top performer."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_managers_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Data-Driven Coaching at Scale."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
       title: "Skill Development Tracking"
       description: "Monitor skill progression, track coaching effectiveness over time, and measure the impact of your development initiatives on rep performance."
-  screenshotSrc: "/screenshots/dashboard_managers_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI Coaching Advisor vs Traditional Sales Coaching"
   comparisonSubtitle: "Empower managers to coach every rep effectively with data-driven insights and personalized guidance."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Monitor progress continuously and measure coaching effectiveness with clear metrics"
     - title: "Best Practice Sharing"
       description: "Identify and replicate winning behaviors across your entire sales organization"
-  screenshotSrc: "/screenshots/dashboard_managers_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
+    width: 1216
+    height: 768

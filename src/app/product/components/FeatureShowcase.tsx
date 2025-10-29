@@ -14,7 +14,12 @@ interface Feature {
 interface FeatureShowcaseProps {
   title: string
   features: Feature[]
-  screenshotSrc: string
+  screenshot: {
+    src: string
+    width: number
+    height: number
+    fillContainer?: boolean
+  }
   comparisonTitle: string
   comparisonSubtitle: string
   traditionalPoints: string[]
@@ -24,7 +29,7 @@ interface FeatureShowcaseProps {
 export default function FeatureShowcase({
   title,
   features,
-  screenshotSrc,
+  screenshot,
   comparisonTitle,
   comparisonSubtitle,
   traditionalPoints,
@@ -58,9 +63,10 @@ export default function FeatureShowcase({
           <div className="mt-16">
             <div className="relative mx-auto max-w-6xl overflow-hidden rounded-2xl">
               <Screenshot
-                width={1216}
-                height={768}
-                src={screenshotSrc}
+                width={screenshot.width}
+                height={screenshot.height}
+                src={screenshot.src}
+                fillContainer={screenshot.fillContainer}
                 className="w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-pink-100/50 to-transparent pointer-events-none" />

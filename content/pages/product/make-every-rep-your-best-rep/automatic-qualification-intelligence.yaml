@@ -10,7 +10,10 @@ hero:
   description: "AI analyzes every opportunity against your ideal customer profile, buying signals, and historical win patterns to instantly score qualification, ensuring your team focuses on high-value, winnable deals."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Smart Qualification at Scale."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
       title: "Real-Time Qualification Updates"
       description: "Qualification scores update automatically as new signals emerge, engagement changes, or deal dynamics shift, keeping priorities always current."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI Opportunity Qualification vs Manual Qualification"
   comparisonSubtitle: "Scale your qualification process with consistent, data-driven intelligence."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Apply uniform qualification criteria across your entire team automatically"
     - title: "Priority Focus"
       description: "Identify and pursue the most promising, well-qualified opportunities first"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

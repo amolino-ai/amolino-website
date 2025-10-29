@@ -37,8 +37,8 @@ export function FeatureSection({ content }: FeatureSectionProps) {
           {currentTab?.description}
         </Heading>
         <Screenshot
-          width={1216}
-          height={768}
+          width={currentTab?.width || 1216}
+          height={currentTab?.height || 768}
           src={currentTab?.src || ''}
           className="mt-16 h-[36rem] sm:h-auto sm:w-[76rem] mx-auto bg-gray-100 rounded-2xl shadow-2xl"
         />

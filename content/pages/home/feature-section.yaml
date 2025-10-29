@@ -3,16 +3,22 @@ tabs:
     title: "Win More. Faster"
     description: "Make Every Rep a Top Performer with AI-Driven Sales Guidance."
     src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+    width: 1216
+    height: 768
     learnMoreLink: "/benefits/make-every-rep-your-best-rep"
 
   - id: "forecast"
     title: "Forecast Confidently"
     description: "Quarterly Forecasting. Accurate. Real-time."
     src: "/screenshots/dashboard_managers_view_april_2025.jpg"
+    width: 1216
+    height: 768
     learnMoreLink: "/benefits/explainable-ai-forecast"
 
   - id: "grunt-work"
     title: "Eliminate Grunt-work"
     description: "Update the CRM Automatically. No Lifting a Finger."
     src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
     learnMoreLink: "/benefits/make-every-rep-your-best-rep"

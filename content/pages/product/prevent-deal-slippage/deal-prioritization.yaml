@@ -10,7 +10,10 @@ hero:
   description: "AI automatically prioritizes your pipeline based on deal value, win probability, urgency, health, and strategic fit, ensuring you always focus your time and energy on the opportunities that matter most."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Intelligent, Dynamic Deal Prioritization."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
       title: "Customizable Criteria"
       description: "Adjust prioritization factors to match your sales strategy, whether focusing on quick wins, strategic deals, or at-risk opportunities."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI Deal Prioritization vs Gut-Feel Management"
   comparisonSubtitle: "Maximize productivity and revenue with data-driven deal prioritization."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Optimize across short-term revenue and long-term strategic value"
     - title: "Team Alignment"
       description: "Ensure everyone focuses on the right opportunities"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

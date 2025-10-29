@@ -10,7 +10,10 @@ hero:
   description: "Automatically capture and log all deal activities, intelligently update fields and stages, and maintain perfect CRM hygiene without any manual effort from your sales team, freeing them to focus on selling."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Effortless CRM Hygiene."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
       title: "Real-Time Sync"
       description: "Keep your CRM always current with instant, bi-directional syncing that ensures data accuracy across all systems in real-time."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "Automatic CRM Enrichment vs Manual CRM Updates"
   comparisonSubtitle: "Free your team from CRM data entry and administrative work to focus on selling."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "AI automatically updates deal stages and key fields based on activity signals and patterns"
     - title: "Perfect Data Quality"
       description: "Maintain complete, accurate, up-to-date CRM records automatically without rep effort"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

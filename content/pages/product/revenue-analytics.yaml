@@ -10,7 +10,10 @@ hero:
   description: "AI-powered revenue analytics transforms chaotic pipeline data into actionable intelligence. By automatically analyzing customer interactions, engagement patterns, and historical deal flows, Amolino provides unprecedented visibility into deal health, risk factors, and revenue projections—eliminating surprises and giving sales leaders complete confidence in their pipeline and forecast accuracy."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "AI-Powered Revenue Analytics."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
       title: "Forecast with confidence"
       description: "Know exactly what's coming with AmolinoAI's precision forecasting that learns from your historical performance and current deal patterns."
-  screenshotSrc: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI-Powered Revenue Analytics"
   comparisonSubtitle: "Transform your revenue forecasting with AI-powered insights and predictive analytics."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Get AI-powered realistic projections of likely closings"
     - title: "Worst Case Scenario"
       description: "Understand your floor if only the most solid deals close"
-  screenshotSrc: "/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
+  screenshot:
+    src: "/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
+    width: 1216
+    height: 768

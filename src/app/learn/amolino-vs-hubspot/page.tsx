@@ -4,8 +4,10 @@ import { Container } from '@/components/Container';
 import { Gradient } from '@/components/Gradient';
 import { Screenshot } from '@/components/Screenshot';
 import { Heading, Subheading } from '@/components/Text';
+import { getComparisonPageContent } from '@/lib/content';
+import type { ComparisonItem } from '@/lib/content/types';
 
-function ComparisonCard({ title, amolino, hubspot }: { title: string; amolino: string; hubspot: string }) {
+function ComparisonCard({ title, amolino, hubspot }: ComparisonItem) {
   return (
     <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-950/5">
       <div className="border-b border-gray-100 p-6">
@@ -50,28 +52,21 @@ function FeatureCheck({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Hero() {
+function Hero({ badge, title, subtitle, description }: { badge: string; title: string; subtitle: string; description: string }) {
   return (
     <div className="relative isolate overflow-hidden">
       <Gradient className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" />
       <Container className="py-24 sm:py-32">
         <div className="mx-auto text-center">
-          <Badge text="Comparison" backgroundColor="bg-pink-50" textColor="text-pink-700" />
+          <Badge text={badge} backgroundColor="bg-pink-50" textColor="text-pink-700" />
           <h1 className="mx-auto mt-6 max-w-5xl pb-12 text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Amolino Outperforms HubSpot in Revenue Forecasting
+            {title}
           </h1>
         </div>
         <div className="mx-auto max-w-2xl text-center">
-          <h2> Forecasting without estimates, gut checks or endless meetings</h2>
+          <h2>{subtitle}</h2>
           <p className="mt-6 text-left text-base/relaxed text-gray-600">
-            Forecasting with HubSpot has several limitations that can hinder its effectiveness. The process relies
-            heavily on manual inputs, where account executives (AEs) assign probabilities to deals based on their
-            subjective judgment rather than real-time data or advanced analytics. This gut-based approach often leads to
-            inconsistencies, as each AE may interpret probabilities differently, requiring extensive meetings to align
-            on definitions and expectations. Additionally, the lack of real-time updates means forecasts can quickly
-            become outdated, especially in fast-moving sales environments. These challenges are compounded by the
-            time-consuming nature of maintaining accurate data and configuring probabilities, which detracts from more
-            strategic sales activities.
+            {description}
           </p>
         </div>
       </Container>
@@ -79,66 +74,48 @@ function Hero() {
   );
 }
 
-function Comparisons() {
+function Comparisons({ title, heading, items }: { title: string; heading: string; items: ComparisonItem[] }) {
   return (
     <div className="bg-gray-50 py-24 sm:py-32">
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <Subheading>Head-to-Head Comparison</Subheading>
-          <Heading as="h2">How We Compare</Heading>
+          <Subheading>{title}</Subheading>
+          <Heading as="h2">{heading}</Heading>
         </div>
         <div className="mt-16 space-y-8">
-          <ComparisonCard
-            title="Real-Time Accuracy vs. Manual Estimates"
-            amolino="Dynamic dashboard provides real-time insights into your sales pipeline, analyzing hundreds of data points—such as historical performance, buyer behavior, and best practices—to deliver precise, up-to-the-minute forecasts."
-            hubspot="Depends on manual deal stages and probability weightings. Sales reps update deal information and assign probabilities, which can lead to outdated or biased estimates, often resulting in overly optimistic projections."
-          />
-          <ComparisonCard
-            title="AI-Driven Insights vs. Gut Feelings"
-            amolino="Our AI-powered assistant uses machine learning to analyze your pipeline, offering realistic projections based on patterns and trends. It processes vast datasets to eliminate bias and provide objective, tailored predictions—all with one-click simplicity."
-            hubspot="Leans on predefined probabilities tied to deal stages, which don't adapt to individual deal nuances. Category-based forecasting requires manual classification by reps, introducing inconsistency and gut-driven decisions."
-          />
-          <ComparisonCard
-            title="Proactive Recommendations vs. Reactive Tracking"
-            amolino="Goes beyond prediction—it tells you how to improve your forecast. Our platform identifies at-risk deals, suggests strategies to boost pipeline velocity, and provides actionable steps to hit your targets."
-            hubspot="Forecasting tracks progress but stops there. It offers no guidance on improving outcomes, leaving you to react to numbers rather than shape them."
-          />
+          {items.map((item, index) => (
+            <ComparisonCard key={index} {...item} />
+          ))}
         </div>
       </Container>
     </div>
   );
 }
 
-function Analysis() {
+function Analysis({ title, heading, description, scenarios, screenshot }: { title: string; heading: string; description: string; scenarios: { title: string; description: string }[]; screenshot: { src: string; width: number; height: number } }) {
   return (
     <div className="py-24 sm:py-32">
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <Subheading>Pipeline Analysis</Subheading>
-          <Heading as="h2">Comprehensive Pipeline Analysis</Heading>
+          <Subheading>{title}</Subheading>
+          <Heading as="h2">{heading}</Heading>
           <p className="mt-6 text-lg text-gray-600">
-            Amolino&apos;s three-lens forecast gives you a complete view of your quarter:
+            {description}
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          <div className="rounded-2xl bg-pink-50 p-8">
-            <h3 className="text-xl font-semibold text-pink-900">Best Case Scenario</h3>
-            <p className="mt-2 text-pink-700">Your ceiling across all qualified deals.</p>
-          </div>
-          <div className="rounded-2xl bg-pink-50 p-8">
-            <h3 className="text-xl font-semibold text-pink-900">Predicted Outcome</h3>
-            <p className="mt-2 text-pink-700">AI-driven projections of likely closings.</p>
-          </div>
-          <div className="rounded-2xl bg-pink-50 p-8">
-            <h3 className="text-xl font-semibold text-pink-900">Worst Case Scenario</h3>
-            <p className="mt-2 text-pink-700">Your floor if only sure bets close.</p>
-          </div>
+          {scenarios.map((scenario, index) => (
+            <div key={index} className="rounded-2xl bg-pink-50 p-8">
+              <h3 className="text-xl font-semibold text-pink-900">{scenario.title}</h3>
+              <p className="mt-2 text-pink-700">{scenario.description}</p>
+            </div>
+          ))}
         </div>
         <div className="mt-16">
           <Screenshot
-            width={1216}
-            height={768}
-            src="/screenshots/pipeline_radar_forecast_analysis_march2025.png"
+            width={screenshot.width}
+            height={screenshot.height}
+            src={screenshot.src}
             className="rounded-2xl shadow-2xl"
           />
         </div>
@@ -147,22 +124,20 @@ function Analysis() {
   );
 }
 
-function Benefits() {
+function Benefits({ title, heading, items }: { title: string; heading: string; items: string[] }) {
   return (
     <div className="bg-gray-900 py-24 sm:py-32">
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <Subheading>Why Choose Amolino?</Subheading>
+          <Subheading>{title}</Subheading>
           <Heading as="h2">
-            Benefits That Matter
+            {heading}
           </Heading>
         </div>
         <ul className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <FeatureCheck>Eliminate Surprises: End quarters with no unexpected misses</FeatureCheck>
-          <FeatureCheck>Boost Accountability: Track team performance with clear metrics</FeatureCheck>
-          <FeatureCheck>Optimize Deals: Increase opportunity sizes with data-backed trends</FeatureCheck>
-          <FeatureCheck>Protect Revenue: Spot slipping deals early with AI alerts</FeatureCheck>
-          <FeatureCheck>Save Time: Automate analysis that takes hours manually</FeatureCheck>
+          {items.map((item, index) => (
+            <FeatureCheck key={index}>{item}</FeatureCheck>
+          ))}
         </ul>
       </Container>
     </div>
@@ -193,14 +168,15 @@ function BottomCTA() {
   );
 }
 
-export default function AmolinoVsHubspot() {
+export default async function AmolinoVsHubspot() {
+  const content = await getComparisonPageContent('amolino-vs-hubspot');
+
   return (
     <>
-
-      <Hero />
-      <Comparisons />
-      <Analysis />
-      <Benefits />
+      <Hero {...content.hero} />
+      <Comparisons {...content.comparisons} />
+      <Analysis {...content.analysis} />
+      <Benefits {...content.benefits} />
       {/* <BottomCTA /> */}
     </>
   );

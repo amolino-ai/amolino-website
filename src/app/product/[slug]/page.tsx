@@ -61,7 +61,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <FeatureShowcase
         title={content.showcase.title}
         features={features}
-        screenshotSrc={content.showcase.screenshotSrc}
+        screenshot={content.showcase.screenshot}
         comparisonTitle={content.showcase.comparisonTitle}
         comparisonSubtitle={content.showcase.comparisonSubtitle}
         traditionalPoints={content.showcase.traditionalPoints}

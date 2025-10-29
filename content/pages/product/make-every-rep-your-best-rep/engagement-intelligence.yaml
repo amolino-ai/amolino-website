@@ -10,7 +10,10 @@ hero:
   description: "Automatically track and analyze all buyer interactions across email, meetings, calls, and other touchpoints to measure true engagement levels, identify champions, detect disengagement early, and predict deal success with data-driven confidence."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Comprehensive Engagement Intelligence."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
       title: "Stakeholder Engagement Analysis"
       description: "Measure individual stakeholder engagement levels to identify champions, blockers, and detractors, and track buying committee dynamics across the deal lifecycle."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "Buyer Engagement Analytics vs Activity Logging"
   comparisonSubtitle: "Go beyond activity counts with intelligent engagement analysis and predictive insights."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Identify and track your most engaged champions and monitor their influence on the deal"
     - title: "Risk Detection"
       description: "Spot declining engagement before deals go cold and take corrective action in time"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

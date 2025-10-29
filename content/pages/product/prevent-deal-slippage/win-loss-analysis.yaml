@@ -10,7 +10,10 @@ hero:
   description: "Win/Loss Analysis automatically analyzes deal outcomes to understand why deals close or slip away, revealing patterns and insights that improve your sales strategy and systematically increase win rates."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Turn Outcomes into Actionable Insights."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
       title: "Competitive Intelligence"
       description: "Understand when and why you win or lose against specific competitors, with insights on positioning and differentiation."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI Win/Loss Analysis vs Traditional Post-Mortems"
   comparisonSubtitle: "Get continuous, actionable intelligence from every deal outcome automatically."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Identify common loss reasons and address them proactively in future deals"
     - title: "Competitive Edge"
       description: "Learn how to position effectively and win more deals against key competitors"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

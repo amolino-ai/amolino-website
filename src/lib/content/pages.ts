@@ -21,6 +21,7 @@ import type {
   NavbarProductsContent,
   NavbarLinksContent,
   BenefitGroupContent,
+  ComparisonPageContent,
 } from './types';
 
 /**
@@ -166,4 +167,11 @@ export async function getNavbarLinks(): Promise<NavbarLinksContent> {
  */
 export async function getBenefitGroupContent(slug: string): Promise<BenefitGroupContent> {
   return loadYAML<BenefitGroupContent>(`pages/benefits/${slug}.yaml`);
+}
+
+/**
+ * Get comparison page content (e.g., Amolino vs HubSpot)
+ */
+export async function getComparisonPageContent(slug: string): Promise<ComparisonPageContent> {
+  return loadYAML<ComparisonPageContent>(`pages/learn/${slug}.yaml`);
 }

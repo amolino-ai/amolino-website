@@ -10,7 +10,10 @@ hero:
   description: "Your pipeline stage says '90% likely to close.' But engagement is dropping. The champion hasn't responded in weeks. A competitor entered the mix. That deal isn't 90%. AmolinoAI calculates precise deal probability based on engagement patterns, timeline changes, stakeholder activity, and competitive signals—giving you accurate predictions you can actually trust."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/opportunities_health_risk.jpg"
+  screenshot:
+    src: "/screenshots/opportunities_health_risk.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Probability Based on Reality, Not Pipeline Stage."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
       title: "See what's driving probability"
       description: "Understand exactly which signals are helping or hurting each deal's likelihood to close."
-  screenshotSrc: "/screenshots/opportunities_health_risk.jpg"
+  screenshot:
+    src: "/screenshots/opportunities_health_risk.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "Deal Probability Prediction"
   comparisonSubtitle: "From static pipeline stages to dynamic signal-based probability."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Know immediately when deal probability changes based on customer behavior"
     - title: "85% Forecast Confidence"
       description: "Forecast accurately when probability reflects true deal likelihood to close"
-  screenshotSrc: "/screenshots/opportunities_health_risk.jpg"
+  screenshot:
+    src: "/screenshots/opportunities_health_risk.jpg"
+    width: 1216
+    height: 768

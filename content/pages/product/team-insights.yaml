@@ -10,7 +10,10 @@ hero:
   description: "Get real-time visibility into team performance, identify coaching opportunities, and drive consistent results across your sales organization."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_managers_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "AI-Powered Team Insights."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
       title: "Coaching Opportunities"
       description: "Identify coaching opportunities and provide targeted guidance to help your team succeed."
-  screenshotSrc: "/screenshots/dashboard_managers_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI-Powered Team Insights vs Traditional Management"
   comparisonSubtitle: "Transform your team management with AI-powered insights and predictive analytics."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Access personalized coaching recommendations for each team member"
     - title: "Success Analytics"
       description: "Identify patterns in successful sales approaches"
-  screenshotSrc: "/screenshots/dashboard_managers_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
+    width: 1216
+    height: 768

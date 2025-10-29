@@ -13,7 +13,7 @@ export interface MobileDropdownProps {
 }
 
 // This determines whether to show features for each benefit in the mobile version
-const SHOW_FEATURES = true;
+const SHOW_FEATURES = false;
 
 /**
  * A mobile dropdown component for the navbar that displays benefit names.

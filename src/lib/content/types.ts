@@ -208,6 +208,8 @@ export interface FeatureTab {
   title: string;
   description: string;
   src: string;
+  width: number;
+  height: number;
   learnMoreLink?: string; // Optional link to benefit group page for "Learn more" CTA
 }
 
@@ -421,13 +423,20 @@ export interface UseCasePageContent {
 }
 
 // Product Page content interfaces
+export interface ProductScreenshot {
+  src: string;
+  width: number;
+  height: number;
+  fillContainer?: boolean;
+}
+
 export interface ProductHero {
   badgeText: string;
   title: string;
   description: string;
   ctaText: string;
   ctaHref: string;
-  screenshotSrc: string;
+  screenshot: ProductScreenshot;
 }
 
 export interface ProductFeature {
@@ -439,7 +448,7 @@ export interface ProductFeature {
 export interface ProductShowcase {
   title: string;
   features: ProductFeature[];
-  screenshotSrc: string;
+  screenshot: ProductScreenshot;
   comparisonTitle: string;
   comparisonSubtitle: string;
   traditionalPoints: string[];
@@ -455,7 +464,7 @@ export interface ProductBottomFeature {
   title: string;
   subtitle: string;
   points: ProductBottomFeaturePoint[];
-  screenshotSrc: string;
+  screenshot: ProductScreenshot;
 }
 
 export interface ProductPageOptions {
@@ -670,4 +679,53 @@ export interface BentoProps {
   subtitle: string;
   tagline: string;
   items: BentoItem[];
+}
+
+// ============================================================================
+// Comparison Page Types (e.g., Amolino vs HubSpot)
+// ============================================================================
+
+export interface ComparisonHero {
+  badge: string;
+  title: string;
+  subtitle: string;
+  description: string;
+}
+
+export interface ComparisonItem {
+  title: string;
+  amolino: string;
+  hubspot: string;
+}
+
+export interface ComparisonSection {
+  title: string;
+  heading: string;
+  items: ComparisonItem[];
+}
+
+export interface ComparisonScenario {
+  title: string;
+  description: string;
+}
+
+export interface ComparisonAnalysis {
+  title: string;
+  heading: string;
+  description: string;
+  scenarios: ComparisonScenario[];
+  screenshot: ProductScreenshot;
+}
+
+export interface ComparisonBenefits {
+  title: string;
+  heading: string;
+  items: string[];
+}
+
+export interface ComparisonPageContent {
+  hero: ComparisonHero;
+  comparisons: ComparisonSection;
+  analysis: ComparisonAnalysis;
+  benefits: ComparisonBenefits;
 }

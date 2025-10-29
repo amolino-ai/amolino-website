@@ -9,6 +9,8 @@ interface Product {
   description: string
   features: string[]
   screenshot: string
+  screenshotWidth?: number
+  screenshotHeight?: number
   href: string
 }
 
@@ -94,8 +96,8 @@ export default function ProductGrid({ products }: ProductGridProps) {
             <div className="mt-8 lg:mt-0 lg:w-1/2">
               <div className="relative overflow-hidden rounded-xl">
                 <Screenshot
-                  width={800}
-                  height={600}
+                  width={product.screenshotWidth || 800}
+                  height={product.screenshotHeight || 600}
                   src={product.screenshot}
                   className="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
                 />

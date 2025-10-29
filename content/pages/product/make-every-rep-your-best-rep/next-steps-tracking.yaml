@@ -10,7 +10,10 @@ hero:
   description: "AI analyzes every deal's health, stage, momentum, and context to automatically prioritize and recommend the most impactful next actions that will move your opportunities forward and maximize win rates."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Prioritized Action Recommendations."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
       title: "Time-Sensitive Action Alerts"
       description: "Get alerted to urgent, time-sensitive actions that prevent deal slippage, missed opportunities, and lost momentum before it's too late."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI Next Best Action vs Manual Task Management"
   comparisonSubtitle: "Focus on high-impact activities with AI-powered action recommendations and intelligent prioritization."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Stay ahead of critical deadlines, milestones, and momentum-killing delays"
     - title: "Maximize Win Rates"
       description: "Execute the right actions at precisely the right time to optimize deal outcomes"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

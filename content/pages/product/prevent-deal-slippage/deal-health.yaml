@@ -10,7 +10,10 @@ hero:
   description: "Deal Health continuously analyzes dozens of deal signals—from engagement patterns to stakeholder activity—to assess health, identify emerging risks, and provide early warnings before deals go off track."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
 
 showcase:
   title: "Continuous Deal Health Intelligence."
@@ -24,7 +27,10 @@ showcase:
     - iconPath: "M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
       title: "Proactive Alerts"
       description: "Receive timely alerts when deal health deteriorates so you can intervene with corrective actions before it's too late to recover."
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
   comparisonTitle: "AI Deal Health vs Manual Deal Reviews"
   comparisonSubtitle: "Prevent deal slippage with continuous, objective health monitoring powered by AI."
   traditionalPoints:
@@ -51,4 +57,7 @@ bottomFeature:
       description: "Track deal health over time to spot deterioration early and act quickly"
     - title: "Rescue Playbooks"
       description: "Get AI-recommended actions to improve deal health and get back on track"
-  screenshotSrc: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
