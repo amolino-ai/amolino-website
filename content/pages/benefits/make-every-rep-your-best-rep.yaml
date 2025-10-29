@@ -8,7 +8,7 @@ hero:
 
 problems:
   title: "Make Every Rep Your Best Rep"
-  subtitle: "Clone your top performers' playbook with AI"
+  subtitle: "Replicate your top performers' playbook with AI"
   cards:
     - icon: "🎯"
       title: "Your Top 20% Know the Playbook"
@@ -44,48 +44,61 @@ stats:
 features:
   title: "How We Scale Your A-Players"
   subtitle: "Built specifically for teams that need consistent execution across every rep, every deal, every time"
-  layout: "two-row-three-column"
+  layout: "three-column"
   items:
-    - name: "AI Sales Compass"
+    - name: "Proactive Sales Guidance"
       category: "Guidance"
       benefit: "Proactive guidance at every stage"
       description: "Guides reps through each deal stage with recommended actions based on what your top sellers actually do. No more guessing—your entire team follows the winning playbook."
       details: "Real-time recommendations • Stage-specific actions • Based on closed-won patterns"
       icon: "🧭"
-      image: "/screenshots/ai-sales-compass.png"
-      link: "/product/make-every-rep-your-best-rep/ai-sales-compass"
-    - name: "Coaching Advisor"
+      screenshot:
+        src: "/screenshots/make-every-rep-your-best-rep/opportunities_health_recommendations.png"
+        width: 352
+        height: 616
+        fillContainer: false
+      link: "/product/make-every-rep-your-best-rep/proactive-sales-guidance"
+      ctaText: "See Proactive Sales Guidance"
+    - name: "Automatic Qualification Intelligence"
       category: "Development"
       benefit: "Scale your best coaching practices"
-      description: "Identify coaching opportunities and develop every rep into a top performer with data-driven insights and personalized coaching plans."
+      description: "Automatically scores every opportunity against your ideal qualification criteria, so reps know exactly where to focus. Coaching advisor surfaces personalized coaching tips based on gaps in qualification."
       details: "Performance analytics • Personalized coaching • Skill development tracking"
       icon: "📚"
-      image: "/screenshots/dashboard_managers_view_april_2025.jpg"
+      screenshot:
+        src: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+        width: 1104
+        height: 160
+        fillContainer: false
       link: "/product/make-every-rep-your-best-rep/coaching-advisor"
-    - name: "Account Intelligence"
+      ctaText: "See Coaching Advisor"
+    - name: "Channel Partner Intelligence"
       category: "Intelligence"
       benefit: "Deep insights into every account"
-      description: "Aggregate and analyze all account data to surface insights, identify expansion opportunities, and prioritize high-value accounts."
+      description: "Understand co-sell, marketplace and channel sales headwinds and taildinds completely"
       details: "Account health scoring • Expansion detection • Historical analysis"
       icon: "🏢"
-      image: "/screenshots/dashboard_rep_view_april_2025.jpg"
-      link: "/product/make-every-rep-your-best-rep/account-intelligence"
-    - name: "Deal Health"
+      screenshot:
+        src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+        width: 728
+        height: 160
+        fillContainer: false
+      link: "/product/make-every-rep-your-best-rep/channel-partner-intelligence"
+      ctaText: "See Channel Partner Intelligence"
+    - name: "Stakeholder Map"
       category: "Insights"
       benefit: "Surface issues before they kill deals"
-      description: "Scores every opportunity based on engagement, stakeholder coverage, competitive position, and timeline. Stop deals from slipping by catching warning signs early."
+      description: "Understand who is in the buying committee, their influence, sentiment, and engagement level—automatically mapped and updated in real-time."
       details: "Risk alerts • Engagement tracking • Competitive monitoring • Timeline analysis"
       icon: "🚨"
-      image: "/screenshots/dashboard_rep_view_april_2025.jpg"
+      screenshot:
+        src: "/screenshots/make-every-rep-your-best-rep/opp_details_people.png"
+        width: 1148
+        height: 316
+        fillContainer: true
       link: "/product/prevent-deal-slippage/deal-health"
-    - name: "Stakeholder Mapping"
-      category: "Relationships"
-      benefit: "Cover the entire buying committee"
-      description: "Maps all contacts with their roles, influence levels, engagement history, and sentiment. No more single-threaded deals—your team knows exactly who matters."
-      details: "Org chart mapping • Influence scoring • Sentiment analysis • Engagement tracking"
-      icon: "👥"
-      image: "/screenshots/dashboard_rep_view_april_2025.jpg"
-      link: "/product/make-every-rep-your-best-rep/stakeholder-mapping"
+      ctaText: "See Stakeholder Map"
+
 
 
 howItWorks:
