@@ -2,6 +2,7 @@
 
 import type { OutcomeContent } from '@/lib/content/types';
 import React, { useEffect, useRef } from 'react';
+import { Screenshot } from '@/components/Screenshot';
 
 interface OutcomeSectionProps {
     content: OutcomeContent;
@@ -183,13 +184,12 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                         </ul> */}
 
                                         <div className="mt-8 md:mt-10">
-                                            <div className="-m-2 rounded-xl bg-white/5 p-2 ring-1 ring-white/10 ring-inset lg:rounded-2xl lg:p-3">
-                                                <img
-                                                    src={p.illustration}
-                                                    alt={p.title}
-                                                    className="h-48 md:h-56 lg:h-64 w-full rounded-lg object-cover shadow-xl ring-1 ring-white/10"
-                                                />
-                                            </div>
+                                            <Screenshot
+                                                src={p.screenshot.src}
+                                                width={p.screenshot.width}
+                                                height={p.screenshot.height}
+                                                className="mx-auto max-w-full"
+                                            />
                                         </div>
                                     </article>
                                 </div>
@@ -252,13 +252,12 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                         </ul> */}
 
                         <div className="mt-6">
-                            <div className="-m-2 rounded-xl bg-white/5 p-2 ring-1 ring-white/10 ring-inset">
-                                <img
-                                    src={p.illustration}
-                                    alt={p.title}
-                                    className="h-40 sm:h-48 w-full rounded-lg object-cover shadow-xl ring-1 ring-white/10"
-                                />
-                            </div>
+                            <Screenshot
+                                src={p.screenshot.src}
+                                width={p.screenshot.width}
+                                height={p.screenshot.height}
+                                className="mx-auto max-w-full"
+                            />
                         </div>
                     </article>
                 ))}
