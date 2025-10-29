@@ -172,16 +172,25 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                             {p.statBadge}
                                         </div> */}
 
-                                        {/* <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
                                             {p.benefits.map((b, bi) => (
-                                                <li key={bi} className="flex items-start gap-2">
-                                                    <span className="mt-1 text-lg" aria-hidden>
-                                                        ✅
-                                                    </span>
-                                                    <span className="text-sm md:text-base">{b}</span>
+                                                <li key={bi} className="flex items-start gap-3">
+                                                    <svg
+                                                        className="w-5 h-5 mt-0.5 flex-shrink-0"
+                                                        fill="currentColor"
+                                                        viewBox="0 0 20 20"
+                                                        aria-hidden="true"
+                                                    >
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                                            clipRule="evenodd"
+                                                        />
+                                                    </svg>
+                                                    <span className="text-sm md:text-base leading-relaxed">{b}</span>
                                                 </li>
                                             ))}
-                                        </ul> */}
+                                        </ul>
 
                                         <div className="mt-8 md:mt-10">
                                             <Screenshot
@@ -240,16 +249,25 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                             {p.statBadge}
                         </div> */}
 
-                        {/* <ul className="grid grid-cols-1 gap-2 mt-6">
+                        <ul className="grid grid-cols-1 gap-3 mt-6">
                             {p.benefits.map((b, i) => (
-                                <li key={i} className="flex items-start gap-2">
-                                    <span className="mt-1 text-lg" aria-hidden>
-                                        ✅
-                                    </span>
-                                    <span>{b}</span>
+                                <li key={i} className="flex items-start gap-3">
+                                    <svg
+                                        className="w-5 h-5 mt-0.5 flex-shrink-0"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                    <span className="text-sm leading-relaxed">{b}</span>
                                 </li>
                             ))}
-                        </ul> */}
+                        </ul>
 
                         <div className="mt-6">
                             <Screenshot
