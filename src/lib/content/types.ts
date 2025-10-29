@@ -105,6 +105,12 @@ export interface ProblemContent {
 }
 
 // Outcome section interfaces
+export interface OutcomeScreenshot {
+  src: string;
+  width: number;
+  height: number;
+}
+
 export interface OutcomeCard {
   id: number;
   label: string;
@@ -116,7 +122,7 @@ export interface OutcomeCard {
   ctaLink: string;
   bgColor: string;
   textColor: string;
-  illustration: string;
+  screenshot: OutcomeScreenshot;
 }
 
 export interface OutcomeCTA {
