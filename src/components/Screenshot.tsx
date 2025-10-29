@@ -26,7 +26,7 @@ export function Screenshot({
         alt=""
         src={src}
         className={clsx(
-          'h-full rounded-[var(--radius)] ring-1 shadow-2xl ring-black/10',
+          'h-full w-full rounded-[var(--radius)] ring-1 shadow-2xl ring-black/10',
           fillContainer && 'object-cover'
         )}
       />
