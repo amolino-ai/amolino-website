@@ -79,9 +79,9 @@ export async function buildNavbarProductsFromContent(): Promise<NavbarProductsCo
 
   return {
     allProducts: {
-      name: 'All Products',
+      name: 'All features',
       href: '/product',
-      description: 'View our complete product suite',
+      description: 'See everything Amolino has to offer',
       icon: '/icons/all-products.svg',
     },
     benefits,
