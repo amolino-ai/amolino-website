@@ -38,7 +38,6 @@ export default async function BenefitGroupPage({ params }: BenefitGroupPageProps
   return (
     <main>
       <BenefitHero hero={content.hero} problems={content.problems} />
-
       <BenefitFeatures {...content.features} />
       <StatsShowcase {...content.stats} />
       <ProcessWorkflow {...content.howItWorks} />
