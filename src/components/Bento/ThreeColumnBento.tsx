@@ -56,8 +56,8 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                       width={showcaseItem.screenshot.width}
                       height={showcaseItem.screenshot.height}
                       src={showcaseItem.screenshot.src}
-                      fillContainer={showcaseItem.screenshot.fillContainer ?? true}
-                      className="size-full"
+                      cover={true}
+                      className="size-full object-top"
                     />
                   </div>
                 </div>
@@ -83,8 +83,8 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                       width={showcaseItem.screenshot.width}
                       height={showcaseItem.screenshot.height}
                       src={showcaseItem.screenshot.src}
-                      fillContainer={showcaseItem.screenshot.fillContainer ?? true}
-                      className="size-full"
+                      cover={true}
+                      className="size-full object-top"
                     />
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                     width={item.screenshot.width}
                     height={item.screenshot.height}
                     src={item.screenshot.src}
-                    fillContainer={item.screenshot.fillContainer}
+                    cover={isMiddle}
                     className={`${isMiddle ? 'h-[min(152px,40cqw)]' : 'w-full max-lg:max-w-xs'}`}
                   />
                 </div>

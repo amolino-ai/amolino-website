@@ -42,15 +42,13 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
 
             const content = (
               <>
-                <div className="h-80 overflow-hidden">
-                  <Screenshot
-                    width={item.screenshot.width}
-                    height={item.screenshot.height}
-                    src={item.screenshot.src}
-                    fillContainer={item.screenshot.fillContainer ?? true}
-                    className="h-full w-full"
-                  />
-                </div>
+                <Screenshot
+                  width={item.screenshot.width}
+                  height={item.screenshot.height}
+                  src={item.screenshot.src}
+                  cover={true}
+                  className="h-80 w-full object-left"
+                />
                 <div className="p-10 pt-4">
                   {item.category && (
                     <h3 className="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">

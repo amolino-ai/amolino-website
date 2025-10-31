@@ -43,15 +43,13 @@ export function TwoRowBento({ title, subtitle, tagline, items }: TwoRowBentoProp
 
             const content = (
               <>
-                <div className="h-80 overflow-hidden">
-                  <Screenshot
-                    width={item.screenshot.width}
-                    height={item.screenshot.height}
-                    src={item.screenshot.src}
-                    fillContainer={item.screenshot.fillContainer ?? true}
-                    className="h-full w-full"
-                  />
-                </div>
+                <Screenshot
+                  width={item.screenshot.width}
+                  height={item.screenshot.height}
+                  src={item.screenshot.src}
+                  cover={true}
+                  className="h-80 w-full object-left"
+                />
                 <div className="p-10">
                   {item.category && (
                     <h3 className="text-sm/4 font-semibold text-gray-500 dark:text-gray-400">
