@@ -18,8 +18,8 @@ export function ComparisonTable({ title, columns, rows }: BenefitGroupComparison
           <div className="overflow-hidden rounded-xl bg-white shadow-sm outline outline-black/5 dark:bg-gray-800 dark:outline-white/15">
             {/* Header Row */}
             <div className="grid grid-cols-3 bg-indigo-600 text-white font-bold">
-              {columns.map((column) => (
-                <div key={column.label} className="px-6 py-4">
+              {columns.map((column, index) => (
+                <div key={column.label} className={`px-6 py-4 ${index > 0 ? 'text-center' : ''}`}>
                   {column.label}
                 </div>
               ))}
