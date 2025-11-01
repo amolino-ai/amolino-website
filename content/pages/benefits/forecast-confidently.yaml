@@ -73,7 +73,7 @@ features:
         width: 1553
         height: 835
         fillContainer: false
-      link: "/product/prevent-deal-slippage/pipeline-monitor"
+      link: "/product/forecast-confidently/pipeline-monitor"
     - name: "Pipeline Lens"
       category: "Visibility"
       benefit: "Complete pipeline insight"
