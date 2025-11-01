@@ -1,5 +1,6 @@
 import { loadYAML } from './loaders';
 import { buildNavbarProductsFromContent } from './navbar-generator';
+import { generateFooterBenefitSections } from './footer-generator';
 import type {
   HeroContent,
   ProblemContent,
@@ -103,9 +104,16 @@ export async function getPricingPageContent(): Promise<PricingPageContent> {
 
 /**
  * Get footer content
+ * Merges static footer content with dynamically-generated benefit sections
  */
 export async function getFooterContent(): Promise<FooterContent> {
-  return loadYAML<FooterContent>('global/footer.yaml');
+  const staticContent = await loadYAML<FooterContent>('global/footer.yaml');
+  const benefitSections = await generateFooterBenefitSections();
+
+  return {
+    ...staticContent,
+    sections: [...staticContent.sections, ...benefitSections],
+  };
 }
 
 /**
