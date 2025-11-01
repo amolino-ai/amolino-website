@@ -10,7 +10,7 @@ import path from 'path';
  * Dynamically scans the benefit folder for all YAML files
  */
 export async function generateStaticParams() {
-  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'product', 'explainable-ai-forecast');
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'product', 'forecast-confidently');
   const files = fs.readdirSync(benefitDir).filter(f => f.endsWith('.yaml'));
 
   return files.map((file) => ({
@@ -29,7 +29,7 @@ interface ProductPageProps {
  */
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const content = await getProductContent('explainable-ai-forecast', slug);
+  const content = await getProductContent('forecast-confidently', slug);
 
   // Convert iconPath strings to React elements
   const features = content.showcase.features.map((feature) => ({

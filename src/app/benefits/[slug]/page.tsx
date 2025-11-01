@@ -19,7 +19,7 @@ interface BenefitGroupPageProps {
 export function generateStaticParams() {
   return [
     { slug: 'make-every-rep-your-best-rep' },
-    { slug: 'explainable-ai-forecast' },
+    { slug: 'forecast-confidently' },
     { slug: 'prevent-deal-slippage' },
   ];
 }
@@ -28,7 +28,7 @@ export function generateStaticParams() {
  * Dynamic benefit group page.
  * Displays content for various benefit groups like:
  * - make-every-rep-your-best-rep
- * - explainable-ai-forecast
+ * - forecast-confidently
  * - prevent-deal-slippage
  */
 export default async function BenefitGroupPage({ params }: BenefitGroupPageProps) {

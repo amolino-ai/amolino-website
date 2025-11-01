@@ -34,58 +34,22 @@ stats:
       label: "Forecast Transparency"
 
 features:
-  title: "All Features That Enable Forecast Confidence"
+  title: "Forecast with Confidence, Not Hope"
   subtitle: "Beyond accurate predictions, AmolinoAI provides a complete toolkit to understand, defend, and improve your forecast accuracy over time"
-  layout: "two-row-three-column"
+  layout: "two-row"
   items:
-    - name: "AI Forecast"
+    - name: "Explainable AI Forecast"
       category: "Intelligence"
       benefit: "Accurate, explainable forecasts"
       description: "Analyze pipeline data, deal signals, and historical patterns to deliver accurate, explainable revenue forecasts you can defend."
       details: "AI-powered predictions • Full transparency • Confidence scoring"
       icon: "🔍"
       screenshot:
-        src: "/screenshots/pipeline_radar_heatmap_march2025.png"
-        width: 1216
-        height: 768
-        fillContainer: true
-      link: "/product/explainable-ai-forecast/ai-forecast"
-    - name: "Pipeline Monitor"
-      category: "Monitoring"
-      benefit: "Early risk detection"
-      description: "Highlights deals at risk of slipping based on engagement drops, timeline changes, and competitive threats before they impact your number."
-      details: "Risk alerts • Engagement tracking • Competitive monitoring • Timeline analysis"
-      icon: "📊"
-      screenshot:
-        src: "/screenshots/pipeline_radar_heatmap_march2025.png"
-        width: 1216
-        height: 768
-        fillContainer: true
-      link: "/product/prevent-deal-slippage/pipeline-monitor"
-    - name: "Risk Factors"
-      category: "Analytics"
-      benefit: "Identify and mitigate risks"
-      description: "Automatically detect forecast risks, quantify their impact, and get actionable recommendations to address them before they derail your quarter."
-      details: "Automatic risk detection • Impact quantification • Mitigation recommendations"
-      icon: "📜"
-      screenshot:
-        src: "/screenshots/pipeline_radar_heatmap_march2025.png"
-        width: 1216
-        height: 768
-        fillContainer: true
-      link: "/product/explainable-ai-forecast/risk-factors"
-    - name: "Pipeline Analytics"
-      category: "Visibility"
-      benefit: "Complete pipeline insight"
-      description: "Deep pipeline insights that drive revenue performance with comprehensive analysis of pipeline health, trends, and opportunities."
-      details: "Health metrics • Trend analysis • Performance benchmarking"
-      icon: "📈"
-      screenshot:
-        src: "/screenshots/pipeline_radar_heatmap_march2025.png"
-        width: 1216
-        height: 768
-        fillContainer: true
-      link: "/product/explainable-ai-forecast/pipeline-analytics"
+        src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+        width: 1244
+        height: 2123
+        fillContainer: false
+      link: "/product/forecast-confidently/ai-forecast"
     - name: "Signal-Based Predictions"
       category: "Activity"
       benefit: "Predict outcomes from signals"
@@ -93,23 +57,37 @@ features:
       details: "Multi-signal analysis • Pattern recognition • Early warning system"
       icon: "💬"
       screenshot:
-        src: "/screenshots/pipeline_radar_heatmap_march2025.png"
-        width: 1216
-        height: 768
+        src: "/screenshots/forecast-confidently/signal-based-predictions.png"
+        width: 1886
+        height: 6984
         fillContainer: true
-      link: "/product/explainable-ai-forecast/signal-based-predictions"
-    - name: "Forecast Transparency"
-      category: "Risk Management"
-      benefit: "Complete forecast visibility"
-      description: "Break down every forecast component, showing exactly which deals contribute, why, and with what confidence level."
-      details: "Deal-level breakdown • Factor explanation • Confidence indicators"
-      icon: "🎯"
+      link: "/product/forecast-confidently/signal-based-predictions"
+    - name: "Pipeline Monitor"
+      category: "Monitoring"
+      benefit: "Early risk detection"
+      description: "Highlights deals at risk of slipping based on engagement drops, timeline changes, and competitive threats before they impact your number."
+      details: "Risk alerts • Engagement tracking • Competitive monitoring • Timeline analysis"
+      icon: "📊"
       screenshot:
-        src: "/screenshots/pipeline_radar_heatmap_march2025.png"
+        src: "/screenshots/forecast-confidently/pipeline-monitor.png"
+        width: 1553
+        height: 835
+        fillContainer: false
+      link: "/product/prevent-deal-slippage/pipeline-monitor"
+    - name: "Pipeline Lens"
+      category: "Visibility"
+      benefit: "Complete pipeline insight"
+      description: "Deep pipeline insights that drive revenue performance with comprehensive analysis of pipeline health, trends, and opportunities."
+      details: "Health metrics • Trend analysis • Performance benchmarking"
+      icon: "📈"
+      screenshot:
+        src: "/screenshots/forecast-confidently/explainable_ai-pipeline-monitor.png"
         width: 1216
         height: 768
         fillContainer: true
-      link: "/product/explainable-ai-forecast/forecast-transparency"
+      link: "/product/forecast-confidently/pipeline-lens"
+
+
 
 howItWorks:
   title: "How Explainable AI Forecasting Works"
@@ -125,11 +103,10 @@ howItWorks:
       description: "Walk into QBRs with forecasts you can actually explain. See best-case, likely, and worst-case scenarios. Identify at-risk deals weeks before they slip. Make data-driven decisions backed by the insights that matter."
       icon: "server"
   testimonial:
-    quote: "AmolinoAI transformed our forecasting from guesswork to science. We now hit our number consistently and can defend every prediction with clear, explainable data."
-    author: "Sarah Mitchell"
-    role: "VP of Sales"
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-
+    quote: "This product has been really useful in giving sales teams clarity on their pipeline and how they're going to hit their numbers."
+    author: "Brian Sathianathan"
+    role: "COO at Iterate.ai"
+    avatar: "/people/Brian_Sathianathan.png"
 comparison:
   title: "Traditional Forecasting vs. Explainable AI"
   columns:

@@ -8,7 +8,7 @@ import type { NavbarProductsContent, NavbarBenefit, NavbarFeature, ProductPageCo
  */
 const BENEFIT_NAMES: Record<string, string> = {
   'make-every-rep-your-best-rep': 'Make Every Rep Your Best Rep',
-  'explainable-ai-forecast': 'Explainable AI Forecast',
+  'forecast-confidently': 'Forecast Confidently',
   'prevent-deal-slippage': 'Prevent Deal Slippage',
 };
 
@@ -17,7 +17,7 @@ const BENEFIT_NAMES: Record<string, string> = {
  */
 const BENEFIT_HREFS: Record<string, string> = {
   'make-every-rep-your-best-rep': '/benefits/make-every-rep-your-best-rep',
-  'explainable-ai-forecast': '/benefits/explainable-ai-forecast',
+  'forecast-confidently': '/benefits/forecast-confidently',
   'prevent-deal-slippage': '/benefits/prevent-deal-slippage',
 };
 

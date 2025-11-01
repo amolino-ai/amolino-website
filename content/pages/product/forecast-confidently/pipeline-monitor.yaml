@@ -2,8 +2,8 @@ options:
   useCase: "Monitor Pipeline Health"
   featureName: "Pipeline Monitor"
   showInNavbar: true
-  navbarDescription: "Get alerts when deals show risk signals before they slip off your forecast with continuous pipeline monitoring."
-
+  navbarDescription: |
+    Get alerts on at-risk deals before they slip with continuous monitoring.
 hero:
   badgeText: "AI-Powered Deal Risk Detection"
   title: "Get Alerts Before Deals Slip Off Your Forecast."

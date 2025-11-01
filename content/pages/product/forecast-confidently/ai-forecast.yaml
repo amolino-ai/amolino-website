@@ -2,8 +2,8 @@ options:
   useCase: "Forecasts You Can Defend"
   featureName: "Explainable AI-Forecast"
   showInNavbar: true
-  navbarDescription: "Generate accurate quarterly forecasts with complete transparency into every prediction and the signals that drive it."
-
+  navbarDescription: |
+    Accurate forecasts with full transparency into every prediction.
 hero:
   badgeText: "AI-Powered Revenue Forecasting"
   title: "Defend Every Forecast with Confidence."

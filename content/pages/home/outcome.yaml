@@ -34,11 +34,11 @@ products:
       - "Pipeline Len"
       - "Pipeline Monitor"
     ctaText: "Improve my forecast accuracy to 99%"
-    ctaLink: "/benefits/explainable-ai-forecast"
+    ctaLink: "/benefits/forecast-confidently"
     bgColor: "bg-tertiary-400"
     textColor: "text-neutral-50"
     screenshot:
-      src: "/screenshots/explainable-ai-forecast/dashboard_revenue_forecast_accuracy.png"
+      src: "/screenshots/forecast-confidently/dashboard_revenue_forecast_accuracy.png"
       width: 456
       height: 301
   - id: 3
