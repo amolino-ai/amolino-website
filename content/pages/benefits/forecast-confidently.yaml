@@ -46,10 +46,10 @@ features:
       icon: "🔍"
       screenshot:
         src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
-        width: 1244
-        height: 2123
+        width: 1077
+        height: 590
         fillContainer: false
-      link: "/product/forecast-confidently/ai-forecast"
+      link: "/product/forecast-confidently/explainable-ai-forecast"
     - name: "Signal-Based Predictions"
       category: "Activity"
       benefit: "Predict outcomes from signals"
@@ -81,10 +81,10 @@ features:
       details: "Health metrics • Trend analysis • Performance benchmarking"
       icon: "📈"
       screenshot:
-        src: "/screenshots/forecast-confidently/explainable_ai-pipeline-monitor.png"
+        src: "/screenshots/forecast-confidently/pipeline-lens.png"
         width: 1216
         height: 768
-        fillContainer: true
+        fillContainer: false
       link: "/product/forecast-confidently/pipeline-lens"
 
 

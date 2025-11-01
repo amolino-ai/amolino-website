@@ -11,9 +11,10 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/pushed-out-history.png"
+    width: 400
+    height: 597
+    fillContainer: false
 
 showcase:
   title: "Learn from Slippage Patterns."
@@ -28,9 +29,10 @@ showcase:
       title: "Slippage Prediction"
       description: "Get early warnings when deals show historical signals associated with slippage, giving you time to prevent the push."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/pushed-out-history.png"
+    width: 400
+    height: 597
+    fillContainer: false
   comparisonTitle: "Pushed Out History vs Traditional Deal Tracking"
   comparisonSubtitle: "Transform slippage history into actionable intelligence and prevention strategies."
   traditionalPoints:
@@ -58,6 +60,7 @@ bottomFeature:
     - title: "Proactive Prevention"
       description: "Get notified before deals push based on historical slippage signals"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/pushed-out-history.png"
+    width: 400
+    height: 597
+    fillContainer: false

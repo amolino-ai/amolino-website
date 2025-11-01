@@ -11,9 +11,10 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/win-loss-analysis.png"
+    width: 613
+    height: 764
+    fillContainer: true
 
 showcase:
   title: "Turn Outcomes into Actionable Insights."
@@ -28,9 +29,9 @@ showcase:
       title: "Competitive Intelligence"
       description: "Understand when and why you win or lose against specific competitors, with insights on positioning and differentiation."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/win-loss-analysis.png"
+    width: 613
+    height: 764
   comparisonTitle: "AI Win/Loss Analysis vs Traditional Post-Mortems"
   comparisonSubtitle: "Get continuous, actionable intelligence from every deal outcome automatically."
   traditionalPoints:
@@ -58,6 +59,6 @@ bottomFeature:
     - title: "Competitive Edge"
       description: "Learn how to position effectively and win more deals against key competitors"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/win-loss-analysis.png"
+    width: 613
+    height: 764

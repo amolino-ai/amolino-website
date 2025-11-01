@@ -2,8 +2,8 @@ options:
   useCase: "Map the Buying Committee"
   featureName: "Stakeholder Map"
   showInNavbar: true
-  navbarDescription: "Automatically identify stakeholders, map relationships and influence, and get personalized engagement strategies for every decision maker."
-
+  navbarDescription: |
+    AI identifies stakeholders, maps influence, and engagement strategies.
 hero:
   badgeText: "Stakeholder Intelligence"
   title: "Understand and influence every decision maker."

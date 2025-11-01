@@ -38,78 +38,65 @@ features:
   subtitle: "Beyond risk detection, AmolinoAI provides a complete toolkit to understand deal health, prioritize interventions, and prevent slippage systematically"
   layout: "two-row-three-column"
   items:
-    - name: "Engagement Tracking"
+    - name: "Deal Risk Radar"
       category: "Activity"
       benefit: "Spot quiet deals early"
-      description: "Tracks all sales activities and customer responses to show which deals have active engagement and which are going quiet—the first sign of slippage risk."
-      details: "Activity monitoring • Response tracking • Engagement scoring • Silence alerts"
+      description: "Continuously monitor qualification, engagement, competitors and more, to identify deals that are going quiet before they slip out of your forecast."
       icon: "💬"
       screenshot:
-        src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-        width: 1216
-        height: 768
-        fillContainer: true
-      link: "/product/prevent-deal-slippage/engagement-tracking"
-    - name: "Slippage Alerts"
+        src: "/screenshots/prevent-deal-slippage/deal-risk-radar-horizontal.png"
+        width: 1056
+        height: 270
+        fillContainer: false
+      link: "/product/prevent-deal-slippage/deal-risk-radar"
+    - name: "Pushed-out History"
       category: "Prevention"
       benefit: "Stop deals from slipping"
-      description: "AI predicts which deals are at risk of slipping and alerts you in time to take corrective action before they leave the quarter."
+      description: "Analyze historical patterns of pushed-out deals to identify common risk factors and implement strategies to keep deals on track."
       details: "Predictive alerts • Time-sensitive warnings • Intervention recommendations"
       icon: "🚨"
       screenshot:
-        src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-        width: 1216
-        height: 768
+        src: "/screenshots/prevent-deal-slippage/pushed-out-history.png"
+        width: 400
+        height: 597
         fillContainer: true
-      link: "/product/prevent-deal-slippage/slippage-alerts"
-    - name: "Deal Momentum"
-      category: "Intelligence"
-      benefit: "Track deal velocity"
-      description: "Analyze deal progression speed and activity patterns to predict realistic close dates and identify stalled deals."
-      details: "Velocity tracking • Stall detection • Close date prediction"
-      icon: "🏁"
-      screenshot:
-        src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-        width: 1216
-        height: 768
-        fillContainer: true
-      link: "/product/prevent-deal-slippage/deal-momentum"
-    - name: "Early Warning System"
-      category: "Monitoring"
-      benefit: "Detect problems early"
-      description: "Continuously monitor for concerning signals and alert you to potential issues while there's still time to act."
-      details: "Multi-signal monitoring • Early risk detection • Actionable alerts"
-      icon: "➡️"
-      screenshot:
-        src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-        width: 1216
-        height: 768
-        fillContainer: true
-      link: "/product/prevent-deal-slippage/early-warning-system"
-    - name: "Opportunity Scoring"
+      link: "/product/prevent-deal-slippage/pushed-out-history"
+    - name: "Win/Loss Analysis"
       category: "Analytics"
       benefit: "Prioritize with AI"
-      description: "Evaluate every deal across multiple dimensions to help you focus on the highest-value, highest-probability opportunities."
+      description: "Understand all the competitors that are present and which ones are most likely to win against you, so you can prioritize deal interventions effectively."
       details: "Multi-factor scoring • Prioritization rankings • Dynamic rescoring"
       icon: "📜"
       screenshot:
-        src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+        src: "/screenshots/prevent-deal-slippage/win-loss-analysis.png"
+        width: 613
+        height: 764
+        fillContainer: true
+      link: "/product/prevent-deal-slippage/win-loss-analysis"
+    - name: "Deal Prioritization"
+      category: "Monitoring"
+      benefit: "Detect problems early"
+      description: "Helps sales reps focus on the deals that need attention first by prioritizing at-risk and high value opportunities based on impact and urgency."
+      details: "Multi-signal monitoring • Early risk detection • Actionable alerts"
+      icon: "➡️"
+      screenshot:
+        src: "/screenshots/prevent-deal-slippage/deal-prioritization.png"
         width: 1216
         height: 768
         fillContainer: true
-      link: "/product/prevent-deal-slippage/opportunity-scoring"
-    - name: "Activity Intelligence"
+      link: "/product/prevent-deal-slippage/deal-prioritization"
+    - name: "Competitive Tracking"
       category: "Optimization"
       benefit: "Optimize activities"
-      description: "Analyze all sales activities to identify patterns, predict outcomes, and recommend the most effective actions."
+      description: "Gain insights into competitive threats and how they impact deal health, so you can tailor your sales strategies to win more deals."
       details: "Activity pattern analysis • Outcome correlation • Best practice identification"
       icon: "🔄"
       screenshot:
-        src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-        width: 1216
-        height: 768
+        src: "/screenshots/prevent-deal-slippage/competitive-tracking-stacked.png"
+        width: 570
+        height: 571
         fillContainer: true
-      link: "/product/prevent-deal-slippage/activity-intelligence"
+      link: "/product/prevent-deal-slippage/competitive-tracking"
 
 howItWorks:
   title: "How Deal Protection Works"
@@ -125,11 +112,10 @@ howItWorks:
       description: "Receive specific, actionable recommendations for each at-risk deal—who to engage, what objections to address, which stakeholders to involve. Save deals before they're lost. No more end-of-quarter surprises. Just proactive protection of your pipeline."
       icon: "server"
   testimonial:
-    quote: "We used to lose deals we should have won because we spotted problems too late. With AmolinoAI, we see risks 3 weeks earlier and our win rates have increased by 25%."
-    author: "Marcus Johnson"
-    role: "CRO"
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-
+    quote: "This product has been really useful in giving sales teams clarity on their pipeline and how they're going to hit their numbers."
+    author: "Brian Sathianathan"
+    role: "COO at Iterate.ai"
+    avatar: "/people/Brian_Sathianathan.png"
 comparison:
   title: "Reactive vs. Proactive Deal Protection"
   columns:

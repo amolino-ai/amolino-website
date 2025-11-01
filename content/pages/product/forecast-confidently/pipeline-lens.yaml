@@ -5,13 +5,13 @@ options:
   navbarDescription: "Identify opportunities that need updating, closing, or removal to keep your pipeline clean and forecast-ready."
 
 hero:
-  badgeText: "AI-Powered Pipeline Hygiene"
-  title: "Clean Your Pipeline Automatically—No Manual Reviews Required."
+  badgeText: "Pipeline Lens"
+  title: "Clean Your Pipeline Automatically — No Manual Reviews Required."
   description: "Your pipeline is full of dead deals, stalled opportunities, and incorrectly staged deals that pollute your forecast. Manual pipeline reviews take hours and still miss problems. AmolinoAI automatically identifies opportunities that need updating, closing, or removing from the pipeline—so your forecast reflects reality, not wishful thinking."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/opportunities_listing_pipeline.jpg"
+    src: "/screenshots/forecast-confidently/pipeline-lens.png"
     width: 1216
     height: 768
 
@@ -28,7 +28,7 @@ showcase:
       title: "Recommend removals"
       description: "Get recommendations for deals that should be closed-lost or removed from the pipeline."
   screenshot:
-    src: "/screenshots/opportunities_listing_pipeline.jpg"
+    src: "/screenshots/forecast-confidently/pipeline-lens.png"
     width: 1216
     height: 768
   comparisonTitle: "Pipeline Management"
@@ -58,6 +58,6 @@ bottomFeature:
     - title: "30% More Accurate Forecast"
       description: "Forecast with confidence when your pipeline reflects actual opportunities"
   screenshot:
-    src: "/screenshots/opportunities_listing_pipeline.jpg"
+    src: "/screenshots/forecast-confidently/pipeline-lens.png"
     width: 1216
     height: 768

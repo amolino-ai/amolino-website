@@ -14,17 +14,17 @@ problems:
       title: "Your Top 20% Know the Playbook"
       description: "They update CRM religiously. They qualify ruthlessly. They engage every stakeholder. They sense when deals are slipping and act immediately. They know which actions to take at each deal stage."
     - icon: "🤷"
-      title: "Your Middle 60% Wing It"
+      title: "Your Middle 60% Are Flying Blind"
       description: "They forget to update CRM. They chase unqualified deals. They miss key stakeholders. They let deals go quiet without noticing. They don't know what good looks like at each stage."
     - icon: "💰"
       title: "The Cost: Millions in Lost Revenue"
-      description: "If your middle performers executed like your top performers, your team would close 30-50% more revenue—with the same headcount, same product, same leads."
+      description: "If your middle performers executed like your top performers, your team would close 50% more revenue—with the same headcount, same product, same leads."
 
 stats:
   title: "The Outcome: Predictable A-Player Performance"
   subtitle: "When every rep executes like your best rep, everything changes"
   metrics:
-    - value: "30-50%"
+    - value: "50%"
       label: "Revenue Increase"
       description: "Middle performers close at top performer rates"
       bgColor: "bg-gray-50"
@@ -70,8 +70,8 @@ features:
         width: 1104
         height: 160
         fillContainer: false
-      link: "/product/make-every-rep-your-best-rep/coaching-advisor"
-      ctaText: "See Coaching Advisor"
+      link: "/product/make-every-rep-your-best-rep/automatic-qualification-intelligence"
+      ctaText: "See Automatic Qualification Intelligence"
     - name: "Channel Partner Intelligence"
       category: "Intelligence"
       benefit: "Deep insights into every account"
@@ -82,7 +82,7 @@ features:
         src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
         width: 728
         height: 160
-        fillContainer: false
+        fillContainer: true
       link: "/product/make-every-rep-your-best-rep/channel-partner-intelligence"
       ctaText: "See Channel Partner Intelligence"
     - name: "Stakeholder Map"
@@ -96,7 +96,7 @@ features:
         width: 1148
         height: 316
         fillContainer: true
-      link: "/product/prevent-deal-slippage/deal-health"
+      link: "/product/make-every-rep-your-best-rep/stakeholder-map"
       ctaText: "See Stakeholder Map"
 
 
@@ -115,10 +115,10 @@ howItWorks:
       description: "All the manual work disappears. CRM updates itself from emails and calls. Qualification criteria fill in automatically. Deal health gets scored continuously. Next steps get tracked and flagged. Reps spend 100% of their time actually selling—not on admin work."
       icon: "server"
   testimonial:
-    quote: "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique."
-    author: "Brenna Goyette"
-    role: "@brenna"
-    avatar: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    quote: "This product has been really useful in giving sales teams clarity on their pipeline and how they're going to hit their numbers."
+    author: "Brian Sathianathan"
+    role: "COO at Iterate.ai"
+    avatar: "/people/Brian_Sathianathan.png"
 
 comparison:
   title: "Traditional Sales Enablement vs. Scaling Your A-Players"

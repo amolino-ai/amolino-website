@@ -1,19 +1,19 @@
 options:
-  useCase: "Forecasts You Can Defend"
+  useCase: "Explainable AI-Forecast"
   featureName: "Explainable AI-Forecast"
   showInNavbar: true
   navbarDescription: |
     Accurate forecasts with full transparency into every prediction.
 hero:
-  badgeText: "AI-Powered Revenue Forecasting"
+  badgeText: "Explainable AI-Forecast"
   title: "Defend Every Forecast with Confidence."
   description: "Stop defending forecasts based on gut feelings and spreadsheet guesswork. AmolinoAI analyzes every signal—engagement patterns, stakeholder activity, timeline changes, and competitive threats—to generate accurate revenue predictions you can actually explain. No more black-box forecasts. Just transparent, data-driven projections backed by the insights that matter."
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+    width: 1077
+    height: 590
 
 showcase:
   title: "Forecast with Transparency, Not Hope."
@@ -28,9 +28,9 @@ showcase:
       title: "Plan for best, worst, and likely outcomes"
       description: "See your ceiling, floor, and most probable revenue scenarios so you can make informed decisions and set realistic expectations."
   screenshot:
-    src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+    width: 1077
+    height: 590
   comparisonTitle: "AI-Powered Forecasting"
   comparisonSubtitle: "Transform unreliable forecasts into defendable predictions with explainable AI."
   traditionalPoints:
@@ -59,6 +59,6 @@ bottomFeature:
     - title: "80% Less Forecast Prep"
       description: "Spend minutes, not days, preparing forecasts when AI does the analysis for you"
   screenshot:
-    src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+    width: 1077
+    height: 590

@@ -2,8 +2,8 @@ options:
   useCase: "Stop Chasing Un-Winnable Deals"
   featureName: "Deal Prioritization"
   showInNavbar: true
-  navbarDescription: "Get AI-powered deal rankings based on value, probability, urgency, and strategic fit to focus on what matters most."
-
+  navbarDescription: |
+    AI ranks deals by value, probability, urgency, and fit to focus your team.
 hero:
   badgeText: "Deal Prioritization"
   title: "Always work on the right deals at the right time."
@@ -11,9 +11,10 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/prevent-deal-slippage/deal-prioritization.png"
     width: 1216
     height: 768
+    fillContainer: true
 
 showcase:
   title: "Intelligent, Dynamic Deal Prioritization."
@@ -28,9 +29,10 @@ showcase:
       title: "Customizable Criteria"
       description: "Adjust prioritization factors to match your sales strategy, whether focusing on quick wins, strategic deals, or at-risk opportunities."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/prevent-deal-slippage/deal-prioritization.png"
     width: 1216
     height: 768
+    fillContainer: true
   comparisonTitle: "AI Deal Prioritization vs Gut-Feel Management"
   comparisonSubtitle: "Maximize productivity and revenue with data-driven deal prioritization."
   traditionalPoints:
@@ -58,6 +60,7 @@ bottomFeature:
     - title: "Team Alignment"
       description: "Ensure everyone focuses on the right opportunities"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/prevent-deal-slippage/deal-prioritization.png"
     width: 1216
     height: 768
+    fillContainer: true
