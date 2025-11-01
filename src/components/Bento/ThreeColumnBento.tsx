@@ -57,7 +57,8 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                       height={showcaseItem.screenshot.height}
                       src={showcaseItem.screenshot.src}
                       cover={true}
-                      className="size-full object-top"
+                      objectPosition="top"
+                      className="size-full"
                     />
                   </div>
                 </div>
@@ -84,7 +85,8 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                       height={showcaseItem.screenshot.height}
                       src={showcaseItem.screenshot.src}
                       cover={true}
-                      className="size-full object-top"
+                      objectPosition="top"
+                      className="size-full"
                     />
                   </div>
                 </div>
@@ -130,13 +132,14 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
                     </p>
                   )}
                 </div>
-                <div className={`flex flex-1 items-center ${isMiddle ? 'max-lg:py-6 lg:pb-2' : 'justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2'}`}>
+                {/* Note: Original has separate light/dark mode images which aren't supported here */}
+                <div className={`${isMiddle ? '@container flex flex-1 items-center max-lg:py-6 lg:pb-2' : 'flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2'}`}>
                   <Screenshot
                     width={item.screenshot.width}
                     height={item.screenshot.height}
                     src={item.screenshot.src}
                     cover={isMiddle}
-                    className={`${isMiddle ? 'h-[min(152px,40cqw)]' : 'w-full max-lg:max-w-xs'}`}
+                    className={isMiddle ? 'h-[min(152px,40cqw)]' : 'w-full max-lg:max-w-xs'}
                   />
                 </div>
               </>

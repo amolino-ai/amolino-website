@@ -48,7 +48,8 @@ export function TwoRowBento({ title, subtitle, tagline, items }: TwoRowBentoProp
                   height={item.screenshot.height}
                   src={item.screenshot.src}
                   cover={true}
-                  className="h-80 w-full object-left"
+                  objectPosition="left"
+                  className="h-80"
                 />
                 <div className="p-10">
                   {item.category && (

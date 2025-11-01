@@ -19,20 +19,20 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
   const displayItems = items.slice(0, 5);
 
   return (
-    <div className="bg-white py-24 sm:py-32 dark:bg-gray-900">
+    <div className="bg-gray-50 py-24 sm:py-32 dark:bg-gray-900">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">{tagline}</h2>
-        <p className="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-gray-950 sm:text-5xl dark:text-white">
+        <p className="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
           {title}
         </p>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
           {displayItems.map((item, index) => {
-            // Determine column span and rounding based on position
+            // Determine column span based on position
             // First row (0-1): col-span-3 each, Second row (2-4): col-span-2 each
             const colSpan = index <= 1 ? 'lg:col-span-3' : 'lg:col-span-2';
-
-            const isLeft = index === 0 || index === 2;
-            const isRight = index === 1 || index === 4;
+            
+            // Wider items (col-span-3) should have object-left
+            const shouldHaveObjectLeft = index <= 1;
 
             let roundedClass = '';
             if (index === 0) roundedClass = 'max-lg:rounded-t-4xl lg:rounded-tl-4xl';
@@ -47,15 +47,16 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
                   height={item.screenshot.height}
                   src={item.screenshot.src}
                   cover={true}
-                  className="h-80 w-full object-left"
+                  objectPosition={shouldHaveObjectLeft ? 'left' : 'center'}
+                  className="h-80"
                 />
-                <div className="p-10 pt-4">
+                <div className="p-10">
                   {item.category && (
-                    <h3 className="text-sm/4 font-semibold text-indigo-600 dark:text-indigo-400">
+                    <h3 className="text-sm/4 font-semibold text-gray-500 dark:text-gray-400">
                       {item.category}
                     </h3>
                   )}
-                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 dark:text-white">
+                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-900 dark:text-white">
                     {item.title}
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">
@@ -71,21 +72,19 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
             );
 
             return (
-              <div key={item.title} className={`relative ${colSpan}`}>
-                <div className={`absolute inset-0 rounded-lg bg-white ${roundedClass} dark:bg-gray-800`} />
+              <div key={item.title} className={`flex p-px ${colSpan}`}>
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className={`relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${roundedClass.replace('4xl', '[calc(2rem+1px)]')} transition-transform hover:scale-[1.02]`}
+                    className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass} dark:bg-gray-800 dark:shadow-none dark:outline-white/15 transition-transform hover:scale-[1.02]`}
                   >
                     {content}
                   </Link>
                 ) : (
-                  <div className={`relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${roundedClass.replace('4xl', '[calc(2rem+1px)]')}`}>
+                  <div className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass} dark:bg-gray-800 dark:shadow-none dark:outline-white/15`}>
                     {content}
                   </div>
                 )}
-                <div className={`pointer-events-none absolute inset-0 rounded-lg shadow-sm outline outline-black/5 ${roundedClass} dark:outline-white/15`} />
               </div>
             );
           })}

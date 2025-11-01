@@ -7,6 +7,7 @@ export function Screenshot({
   className,
   fillContainer = false,
   cover = false,
+  objectPosition = 'center',
 }: {
   width: number
   height: number
@@ -14,6 +15,7 @@ export function Screenshot({
   className?: string
   fillContainer?: boolean
   cover?: boolean
+  objectPosition?: 'center' | 'left' | 'right' | 'top' | 'bottom'
 }) {
   return (
     <div
@@ -30,7 +32,12 @@ export function Screenshot({
         src={src}
         className={clsx(
           'h-full w-full rounded-[var(--radius)] ring-1 shadow-2xl ring-black/10',
-          (fillContainer || cover) && 'object-cover'
+          (fillContainer || cover) && 'object-cover',
+          objectPosition === 'left' && 'object-left',
+          objectPosition === 'right' && 'object-right',
+          objectPosition === 'top' && 'object-top',
+          objectPosition === 'bottom' && 'object-bottom',
+          objectPosition === 'center' && 'object-center',
         )}
       />
     </div>
