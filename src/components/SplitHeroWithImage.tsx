@@ -2,7 +2,7 @@
 
 import type { HeroContent } from '@/lib/content';
 import { useState } from 'react';
-import VideoModal from './VideoModal';
+import VideoModal from '@/components/VideoModal';
 import { AnimatedNumber } from '@/components/AnimatedNumber';
 
 interface SplitHeroWithImageProps {
