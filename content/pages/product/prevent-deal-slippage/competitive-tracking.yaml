@@ -11,9 +11,10 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/competitive-tracking-stacked.png"
+    width: 570
+    height: 571
+    fillContainer: true
 
 showcase:
   title: "Data-Driven Competitive Intelligence."
@@ -28,9 +29,10 @@ showcase:
       title: "Competitive Insights"
       description: "Get AI-powered insights into competitor strategies, positioning, pricing patterns, and tactics based on your deal history."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/competitive-tracking-stacked.png"
+    width: 570
+    height: 571
+    fillContainer: true
   comparisonTitle: "AI Competitive Intelligence vs Manual Tracking"
   comparisonSubtitle: "Build winning competitive strategies with comprehensive, data-driven intelligence."
   traditionalPoints:
@@ -58,6 +60,7 @@ bottomFeature:
     - title: "Competitive Alerts"
       description: "Get notified when key competitors enter high-value deals"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/prevent-deal-slippage/competitive-tracking-stacked.png"
+    width: 570
+    height: 571
+    fillContainer: true

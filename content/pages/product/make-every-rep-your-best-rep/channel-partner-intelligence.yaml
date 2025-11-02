@@ -11,9 +11,10 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+    width: 728
+    height: 160
+    fillContainer: true
 
 showcase:
   title: "Maximize Channel Revenue."
@@ -28,9 +29,10 @@ showcase:
       title: "Partner Enablement Insights"
       description: "Identify partners who need support, opportunities for joint selling, and areas where enablement will drive the most channel impact."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+    width: 728
+    height: 160
+    fillContainer: true
   comparisonTitle: "Channel Partner Intelligence vs Traditional Partner Management"
   comparisonSubtitle: "Transform your partner ecosystem with comprehensive, data-driven channel intelligence."
   traditionalPoints:
@@ -58,6 +60,7 @@ bottomFeature:
     - title: "Co-Selling Coordination"
       description: "Coordinate joint selling activities and maximize collaboration with strategic partners"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+    width: 728
+    height: 160
+    fillContainer: true

@@ -11,9 +11,9 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/opportunities_health_risk.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/signal-based-predictions.horizontal.png"
+    width: 955
+    height: 394
 
 showcase:
   title: "Probability Based on Reality, Not Pipeline Stage."
@@ -28,9 +28,9 @@ showcase:
       title: "See what's driving probability"
       description: "Understand exactly which signals are helping or hurting each deal's likelihood to close."
   screenshot:
-    src: "/screenshots/opportunities_health_risk.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/signal-based-predictions.horizontal.png"
+    width: 955
+    height: 394
   comparisonTitle: "Deal Probability Prediction"
   comparisonSubtitle: "From static pipeline stages to dynamic signal-based probability."
   traditionalPoints:
@@ -58,6 +58,6 @@ bottomFeature:
     - title: "85% Forecast Confidence"
       description: "Forecast accurately when probability reflects true deal likelihood to close"
   screenshot:
-    src: "/screenshots/opportunities_health_risk.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/signal-based-predictions.horizontal.png"
+    width: 955
+    height: 394

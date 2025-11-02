@@ -56,6 +56,6 @@ products:
     bgColor: "bg-secondary-300"
     textColor: "text-neutral-900"
     screenshot:
-      src: "/screenshots/preventable-deal-slippage/pushed_opportunities_on_dashboard.png"
+      src: "/screenshots/prevent-deal-slippage/pushed_opportunities_on_dashboard.png"
       width: 1077
       height: 709

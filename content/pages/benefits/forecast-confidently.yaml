@@ -70,8 +70,8 @@ features:
       icon: "📊"
       screenshot:
         src: "/screenshots/forecast-confidently/pipeline-monitor.png"
-        width: 1553
-        height: 835
+        width: 1104
+        height: 581
         fillContainer: false
       link: "/product/forecast-confidently/pipeline-monitor"
     - name: "Pipeline Lens"

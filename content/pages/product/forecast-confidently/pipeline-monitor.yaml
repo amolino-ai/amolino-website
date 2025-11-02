@@ -11,9 +11,11 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_pipeline_at_risk.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/pipeline-monitor.png"
+    width: 1104
+    height: 581
+    fillContainer: false
+
 
 showcase:
   title: "Continuous Risk Monitoring Across Your Pipeline."
@@ -28,9 +30,10 @@ showcase:
       title: "Competitive threat detection"
       description: "Identify when competitors enter deals so you can respond before losing opportunities."
   screenshot:
-    src: "/screenshots/dashboard_pipeline_at_risk.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/pipeline-monitor.png"
+    width: 1104
+    height: 581
+    fillContainer: false
   comparisonTitle: "Pipeline Risk Management"
   comparisonSubtitle: "From reactive surprises to proactive risk detection."
   traditionalPoints:
@@ -58,6 +61,7 @@ bottomFeature:
     - title: "25% Better Forecast Accuracy"
       description: "Forecast with confidence when you know which deals are truly at risk"
   screenshot:
-    src: "/screenshots/dashboard_pipeline_at_risk.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/forecast-confidently/pipeline-monitor.png"
+    width: 1104
+    height: 581
+    fillContainer: false

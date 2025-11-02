@@ -11,9 +11,10 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+    width: 1104
+    height: 160
+    fillContainer: false
 
 showcase:
   title: "Smart Qualification at Scale."
@@ -28,9 +29,10 @@ showcase:
       title: "Real-Time Qualification Updates"
       description: "Qualification scores update automatically as new signals emerge, engagement changes, or deal dynamics shift, keeping priorities always current."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+    width: 1104
+    height: 160
+    fillContainer: false
   comparisonTitle: "AI Opportunity Qualification vs Manual Qualification"
   comparisonSubtitle: "Scale your qualification process with consistent, data-driven intelligence."
   traditionalPoints:
@@ -58,6 +60,7 @@ bottomFeature:
     - title: "Priority Focus"
       description: "Identify and pursue the most promising, well-qualified opportunities first"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+    width: 1104
+    height: 160
+    fillContainer: false
