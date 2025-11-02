@@ -11,9 +11,9 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/team-insights.png"
+    width: 1578
+    height: 710
 
 showcase:
   title: "AI-Powered Team Insights."
@@ -28,9 +28,9 @@ showcase:
       title: "Coaching Opportunities"
       description: "Identify coaching opportunities and provide targeted guidance to help your team succeed."
   screenshot:
-    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/team-insights.png"
+    width: 1578
+    height: 710
   comparisonTitle: "AI-Powered Team Insights vs Traditional Management"
   comparisonSubtitle: "Transform your team management with AI-powered insights and predictive analytics."
   traditionalPoints:
@@ -58,6 +58,6 @@ bottomFeature:
     - title: "Success Analytics"
       description: "Identify patterns in successful sales approaches"
   screenshot:
-    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/team-insights.png"
+    width: 1578
+    height: 710

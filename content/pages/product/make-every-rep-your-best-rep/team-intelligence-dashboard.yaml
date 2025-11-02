@@ -15,9 +15,9 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/team-insights.png"
+    width: 1578
+    height: 710
 
 showcase:
   title: "Data-Driven Team Management."
@@ -32,9 +32,9 @@ showcase:
       title: "Team Trends & Forecasting"
       description: "Identify trends in team performance, forecast outcomes, and spot potential issues before they impact revenue with predictive analytics."
   screenshot:
-    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/team-insights.png"
+    width: 1578
+    height: 710
   comparisonTitle: "Team Performance Analytics vs Spreadsheet Reporting"
   comparisonSubtitle: "Manage your team with real-time intelligence instead of outdated reports and manual analysis."
   traditionalPoints:
@@ -62,6 +62,6 @@ bottomFeature:
     - title: "Data-Driven Decisions"
       description: "Make informed decisions about resource allocation, territories, and strategy with comprehensive analytics"
   screenshot:
-    src: "/screenshots/dashboard_managers_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/team-insights.png"
+    width: 1578
+    height: 710

@@ -15,9 +15,9 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/conversational-analytics.png"
+    width: 2769
+    height: 2700
 
 showcase:
   title: "Intelligence from Every Conversation."
@@ -32,9 +32,9 @@ showcase:
       title: "Winning Pattern Detection"
       description: "Identify conversation patterns, phrases, and approaches that correlate with won deals and replicate them across your team for consistent success."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/conversational-analytics.png"
+    width: 2769
+    height: 2700
   comparisonTitle: "Conversational Intelligence vs Manual Call Reviews"
   comparisonSubtitle: "Scale conversation analysis and coaching with AI-powered insights from every interaction."
   traditionalPoints:
@@ -62,6 +62,6 @@ bottomFeature:
     - title: "Best Practice Sharing"
       description: "Surface and replicate winning conversation strategies across your entire team"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/conversational-analytics.png"
+    width: 2769
+    height: 2700

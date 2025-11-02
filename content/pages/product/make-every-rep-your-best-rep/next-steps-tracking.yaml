@@ -15,9 +15,9 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/next-steps-tracking.png"
+    width: 1347
+    height: 1434
 
 showcase:
   title: "Prioritized Action Recommendations."
@@ -32,9 +32,9 @@ showcase:
       title: "Time-Sensitive Action Alerts"
       description: "Get alerted to urgent, time-sensitive actions that prevent deal slippage, missed opportunities, and lost momentum before it's too late."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/next-steps-tracking.png"
+    width: 1347
+    height: 1434
   comparisonTitle: "AI Next Best Action vs Manual Task Management"
   comparisonSubtitle: "Focus on high-impact activities with AI-powered action recommendations and intelligent prioritization."
   traditionalPoints:
@@ -62,6 +62,6 @@ bottomFeature:
     - title: "Maximize Win Rates"
       description: "Execute the right actions at precisely the right time to optimize deal outcomes"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
-    width: 1216
-    height: 768
+    src: "/screenshots/make-every-rep-your-best-rep/next-steps-tracking.png"
+    width: 1347
+    height: 1434
