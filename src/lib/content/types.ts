@@ -537,6 +537,7 @@ export interface QBRSummary {
 
 // Benefit Group content interfaces
 export interface BenefitGroupHero {
+  badgeText?: string;
   title: string;
   subtitle: string;
   description: string;

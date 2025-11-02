@@ -1,4 +1,5 @@
 hero:
+  badgeText: "Forecast Confidently"
   title: "Defend Every Forecast with Confidence"
   subtitle: "AI-Powered Revenue Forecasting"
   description: "Stop defending forecasts based on gut feelings and spreadsheet guesswork. AmolinoAI analyzes every signal—engagement patterns, stakeholder activity, timeline changes, and competitive threats—to generate accurate revenue predictions you can actually explain. No more black-box forecasts. Just transparent, data-driven projections backed by the insights that matter."
