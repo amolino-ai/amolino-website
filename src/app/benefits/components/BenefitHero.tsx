@@ -18,14 +18,11 @@ interface BenefitHeroProps {
 // ${hero.backgroundGradient}
 export function BenefitHero({ hero, problems }: BenefitHeroProps) {
   return (
-    <div className={`relative isolate overflow-hidden bg-gradient-to-br  py-24 sm:py-32`}>
+    <div className={`relative isolate overflow-hidden bg-gradient-to-br  py-12 sm:py-24`}>
       <GradientBackground variant="subtle" />
-
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
-
         {/* Problems Section */}
-        <div className="mt-20">
+        <div className="mt-6">
           <div className="mx-auto max-w-2xl lg:mx-0">
 
             {hero.badgeText && (
