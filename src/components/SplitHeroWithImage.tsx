@@ -42,26 +42,26 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
             {content.subheadline}
           </p>
 
-          {/* Supporting Stats */}
-          <div className="mt-10 grid grid-cols-3 gap-8 sm:gap-6">
-            {content.stats.map((stat, index) => {
-              // Parse the value string (e.g., "10x", "90%", "50+") to extract number and suffix
-              const match = stat.value.match(/^(\d+(?:\.\d+)?)(.*)$/);
-              const value = match ? parseFloat(match[1]) : 0;
-              const suffix = match ? match[2] : '';
-              const decimals = value % 1 !== 0 ? 1 : 0;
+            {/* Supporting Stats */}
+            <div className="mt-10 grid grid-cols-3 gap-8 sm:gap-6">
+              {content.stats.map((stat, index) => {
+                // Parse the value string (e.g., "10x", "90%", "50+") to extract number and suffix
+                const match = stat.value.match(/^(\d+(?:\.\d+)?)(.*)$/);
+                const value = match ? parseFloat(match[1]) : 0;
+                const suffix = match ? match[2] : '';
+                const decimals = value % 1 !== 0 ? 1 : 0;
 
-              return (
-                <div key={index}>
-                  <div className="text-4xl font-bold text-neutral-900 dark:text-white">
-                    <AnimatedNumber start={0} end={value} decimals={decimals} />
-                    {suffix}
+                return (
+                  <div key={index}>
+                    <div className="text-4xl font-bold text-neutral-900 dark:text-white">
+                      <AnimatedNumber start={0} end={value} decimals={decimals} />
+                      {suffix}
+                    </div>
+                    <div className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{stat.description}</div>
                   </div>
-                  <div className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{stat.description}</div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-x-6">
