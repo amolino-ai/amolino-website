@@ -10,8 +10,8 @@ stats:
     description: "forecast accuracy"
 
 ctas:
-  primaryUrl: "#"
-  secondaryUrl: "https://youtu.be/14f-50LWJy8"
+  primaryUrl: "/demo"
+  secondaryUrl: "https://www.youtube.com/watch?v=14f-50LWJy8"
   tertiaryUrl: "#integrations"
 
 images:
