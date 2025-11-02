@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL;
 
 export async function POST(request: Request) {
   try {
@@ -16,6 +16,10 @@ export async function POST(request: Request) {
 *Phone:* ${body.phone}
 *Message:* ${body.message || 'No message provided'}`
     };
+
+    if (!SLACK_WEBHOOK_URL) {
+      throw new Error('SLACK_WEBHOOK_URL is not configured');
+    }
 
     // Send to Slack
     const slackResponse = await fetch(SLACK_WEBHOOK_URL, {
