@@ -1,3 +1,7 @@
+metadata:
+  title: "Pipeline Lens | AI-Powered Pipeline Hygiene - AmolinoAI"
+  description: "Keep your sales pipeline clean and forecast-ready with Pipeline Lens. Automatically identify stale deals, stage inaccuracies, and removal recommendations to ensure your pipeline reflects reality."
+  image: "/screenshots/forecast-confidently/pipeline-lens.png"
 options:
   useCase: "Clean Up the Pipeline"
   featureName: "Pipeline Lens"

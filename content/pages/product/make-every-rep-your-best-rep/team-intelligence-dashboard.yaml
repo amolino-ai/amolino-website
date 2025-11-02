@@ -1,3 +1,7 @@
+metadata:
+  title: "Team Performance Analytics | AI-Powered Sales Management Dashboard - AmolinoAI"
+  description: "Monitor team performance in real-time with comprehensive dashboards that surface insights, trends, and coaching opportunities across your organization."
+  image: "/screenshots/dashboard_managers_view_april_2025.jpg"
 options:
   useCase: "Enable Managers for Better Coaching"
   featureName: "Team Performance Analytics"

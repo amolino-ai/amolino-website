@@ -1,3 +1,8 @@
+metadata:
+  title: "Customer 360 - Complete Customer Relationship Intelligence"
+  description: "Get a comprehensive view of customer relationships, track engagement, and identify growth opportunities. Understand customer needs with complete customer intelligence."
+  image: "/screenshots/dashboard_rep_view_april_2025.jpg"
+
 options:
   useCase: "Increase Selling Capacity"
   featureName: "Customer 360"

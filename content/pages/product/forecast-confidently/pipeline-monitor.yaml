@@ -1,3 +1,7 @@
+metadata:
+  title: "Pipeline Monitor | AI-Powered Deal Risk Detection - AmolinoAI"
+  description: "Get alerts on at-risk deals before they slip with AmolinoAI's Pipeline Monitor. Continuously monitor your sales pipeline for warning signs and proactively manage deal risks to protect your forecast."
+  image: "/screenshots/forecast-confidently/pipeline-monitor.png"
 options:
   useCase: "Monitor Pipeline Health"
   featureName: "Pipeline Monitor"

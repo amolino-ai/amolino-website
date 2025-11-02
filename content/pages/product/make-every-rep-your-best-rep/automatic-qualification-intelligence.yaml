@@ -1,3 +1,7 @@
+metadata:
+  title: "Automatic Opportunity Qualification | AI-Powered Deal Qualification - AmolinoAI"
+  description: "Automatically qualify opportunities with AI-powered scoring based on fit, intent, and win probability to focus on the right deals."
+  image: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
 options:
   useCase: "Stop Chasing Un-Winnable Deals"
   featureName: "Automatic Opportunity Qualification"

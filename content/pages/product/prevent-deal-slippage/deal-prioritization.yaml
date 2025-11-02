@@ -1,3 +1,7 @@
+metadata:
+  title: "Deal Prioritization | AI-Powered Sales Pipeline Management - AmolinoAI"
+  description: "Focus your sales team on the right deals at the right time with AmolinoAI's Deal Prioritization. AI ranks opportunities by value, probability, urgency, and fit to maximize your revenue potential."
+  image: "/screenshots/prevent-deal-slippage/deal-prioritization.png"
 options:
   useCase: "Stop Chasing Un-Winnable Deals"
   featureName: "Deal Prioritization"

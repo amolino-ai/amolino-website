@@ -1,3 +1,7 @@
+metadata:
+  title: "Coaching Advisor | AI-Powered Sales Coaching - AmolinoAI"
+  description: "Scale effective coaching with AI-powered insights that identify coaching opportunities and provide personalized development plans for every rep."
+  image: "/screenshots/make-every-rep-your-best-rep/opportunities_health_recommendations.png"
 options:
   useCase: "Enable Managers for Better Coaching"
   featureName: "Coaching Advisor"

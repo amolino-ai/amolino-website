@@ -1,3 +1,7 @@
+metadata:
+  title: "Win/Loss Analysis | AI-Powered Competitive Intelligence - AmolinoAI"
+  description: "Learn from every win and loss with AmolinoAI's Win/Loss Analysis. Automatically analyze deal outcomes to understand why deals close or slip away, revealing patterns and insights that improve your sales strategy and increase win rates."
+  image: "/screenshots/prevent-deal-slippage/win-loss-analysis.png"
 options:
   useCase: "Understand Competitive Threats"
   featureName: "Win/Loss Analysis"

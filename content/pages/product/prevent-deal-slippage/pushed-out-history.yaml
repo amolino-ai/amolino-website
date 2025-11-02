@@ -1,3 +1,7 @@
+metadata:
+  title: "Pushed Out History | AI-Powered Deal Slippage Prevention - AmolinoAI"
+  description: "Prevent chronic deal slippage with AmolinoAI's Pushed Out History. Track and learn from deal slippage patterns to identify root causes and stop deals from pushing quarter after quarter."
+  image: "/screenshots/prevent-deal-slippage/pushed-out-history.png"
 options:
   useCase: "Stop Chasing Un-Winnable Deals"
   featureName: "Pushed Out History"
