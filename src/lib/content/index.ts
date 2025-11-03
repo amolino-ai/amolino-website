@@ -145,6 +145,8 @@ export {
   getFooterContent,
   getUseCaseContent,
   getProductContent,
+  getProductsByBenefit,
+  getAllProductsGroupedByBenefit,
   getQBRIntroduction,
   getQBRBestPractices,
   getQBRSummary,

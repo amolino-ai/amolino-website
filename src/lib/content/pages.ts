@@ -1,6 +1,8 @@
 import { loadYAML } from './loaders';
 import { buildNavbarProductsFromContent } from './navbar-generator';
 import { generateFooterBenefitSections } from './footer-generator';
+import fs from 'fs';
+import path from 'path';
 import type {
   HeroContent,
   ProblemContent,
@@ -128,10 +130,66 @@ export async function getUseCaseContent(slug: string): Promise<UseCasePageConten
  * Supports both nested (benefit/slug) and flat (slug) paths
  */
 export async function getProductContent(benefitOrSlug: string, slug?: string): Promise<ProductPageContent> {
-  const path = slug
+  const filePath = slug
     ? `pages/product/${benefitOrSlug}/${slug}.yaml`  // nested path (new structure)
     : `pages/product/${benefitOrSlug}.yaml`;          // root path (legacy/root-level products)
-  return loadYAML<ProductPageContent>(path);
+  return loadYAML<ProductPageContent>(filePath);
+}
+
+/**
+ * Get all products for a specific benefit pillar
+ */
+export async function getProductsByBenefit(benefit: string): Promise<Array<ProductPageContent & { slug: string }>> {
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'product', benefit);
+
+  // Check if directory exists
+  if (!fs.existsSync(benefitDir)) {
+    return [];
+  }
+
+  const files = fs.readdirSync(benefitDir).filter(f => f.endsWith('.yaml'));
+
+  const products = await Promise.all(
+    files.map(async (file) => {
+      const slug = file.replace('.yaml', '');
+      const content = await getProductContent(benefit, slug);
+      return {
+        ...content,
+        slug,
+      };
+    })
+  );
+
+  return products;
+}
+
+/**
+ * Get all products grouped by benefit pillar
+ */
+export async function getAllProductsGroupedByBenefit() {
+  const benefits = [
+    'make-every-rep-your-best-rep',
+    'forecast-confidently',
+    'prevent-deal-slippage',
+  ];
+
+  const groupedProducts = await Promise.all(
+    benefits.map(async (benefit) => {
+      const products = await getProductsByBenefit(benefit);
+      const benefitContent = await getBenefitGroupContent(benefit);
+
+      return {
+        benefit,
+        benefitTitle: benefitContent.hero.title,
+        benefitSubtitle: benefitContent.hero.subtitle,
+        benefitDescription: benefitContent.hero.description,
+        badgeText: benefitContent.hero.badgeText,
+        products,
+      };
+    })
+  );
+
+  return groupedProducts;
 }
 
 /**
