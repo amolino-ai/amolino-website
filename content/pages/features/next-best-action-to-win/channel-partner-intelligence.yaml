@@ -1,7 +1,7 @@
 metadata:
   title: "Channel Partner Intelligence | AI-Powered Partner Analytics - AmolinoAI"
   description: "Unlock revenue from your channel partners with AI-powered partner analytics. Track partner-sourced deals, measure partner performance, and maximize channel revenue with comprehensive partner intelligence."
-  image: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+  image: "/screenshots/next-best-action-to-win/opp_details_channel_partner.png"
 options:
   useCase: "Increase Selling Capacity"
   featureName: "Channel Partner Analytics"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+    src: "/screenshots/next-best-action-to-win/opp_details_channel_partner.png"
     width: 728
     height: 160
     fillContainer: true
@@ -33,7 +33,7 @@ showcase:
       title: "Partner Enablement Insights"
       description: "Identify partners who need support, opportunities for joint selling, and areas where enablement will drive the most channel impact."
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+    src: "/screenshots/next-best-action-to-win/opp_details_channel_partner.png"
     width: 728
     height: 160
     fillContainer: true
@@ -64,7 +64,7 @@ bottomFeature:
     - title: "Co-Selling Coordination"
       description: "Coordinate joint selling activities and maximize collaboration with strategic partners"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+    src: "/screenshots/next-best-action-to-win/opp_details_channel_partner.png"
     width: 728
     height: 160
     fillContainer: true

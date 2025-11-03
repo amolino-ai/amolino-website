@@ -22,8 +22,8 @@ interface BenefitGroupPageProps {
  */
 export function generateStaticParams() {
   return [
-    { slug: 'make-every-rep-your-best-rep' },
-    { slug: 'forecast-confidently' },
+    { slug: 'next-best-action-to-win' },
+    { slug: 'accurate-forecasting' },
     { slug: 'prevent-deal-slippage' },
   ];
 }
@@ -63,8 +63,8 @@ export async function generateMetadata({ params }: BenefitGroupPageProps): Promi
 /**
  * Dynamic benefit group page.
  * Displays content for various benefit groups like:
- * - make-every-rep-your-best-rep
- * - forecast-confidently
+ * - next-best-action-to-win
+ * - accurate-forecasting
  * - prevent-deal-slippage
  */
 export default async function BenefitGroupPage({ params }: BenefitGroupPageProps) {

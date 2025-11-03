@@ -16,11 +16,11 @@ products:
       - "Stakeholder Maps"
       - "Automatic Qualification Intelligence"
     ctaText: "Increase my win rate by 25%"
-    ctaLink: "benefits/make-every-rep-your-best-rep"
+    ctaLink: "benefits/next-best-action-to-win"
     bgColor: "bg-test-two"
     textColor: "text-neutral-900"
     screenshot:
-      src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
+      src: "/screenshots/next-best-action-to-win/proactive-sales-guidance-health-recommendations.png"
       width: 648
       height: 296
   - id: 2
@@ -34,11 +34,11 @@ products:
       - "Pipeline Lens"
       - "Pipeline Monitor"
     ctaText: "Improve my forecast accuracy to 99%"
-    ctaLink: "/benefits/forecast-confidently"
+    ctaLink: "/benefits/accurate-forecasting"
     bgColor: "bg-tertiary-400"
     textColor: "text-neutral-50"
     screenshot:
-      src: "/screenshots/forecast-confidently/dashboard_revenue_forecast_accuracy.png"
+      src: "/screenshots/accurate-forecasting/dashboard_revenue_forecast_accuracy.png"
       width: 456
       height: 301
   - id: 3

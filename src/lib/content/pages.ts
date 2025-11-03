@@ -168,8 +168,8 @@ export async function getProductsByBenefit(benefit: string): Promise<Array<Produ
  */
 export async function getAllProductsGroupedByBenefit() {
   const benefits = [
-    'make-every-rep-your-best-rep',
-    'forecast-confidently',
+    'next-best-action-to-win',
+    'accurate-forecasting',
     'prevent-deal-slippage',
   ];
 

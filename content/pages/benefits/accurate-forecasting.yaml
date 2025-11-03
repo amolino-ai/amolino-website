@@ -1,7 +1,7 @@
 metadata:
   title: "Forecast with Confidence | AI-Powered Revenue Forecasting - AmolinoAI"
   description: "Get 95%+ accurate revenue forecasts with explainable AI. Track every signal, predict outcomes, and defend your numbers with confidence. Transform forecasting from guesswork to certainty."
-  image: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+  image: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
 
 hero:
   badgeText: "Forecast Confidently"
@@ -17,7 +17,7 @@ featureHero:
   heading: "Forecasts You Can Trust and Explain"
   description: "Built for revenue leaders who need to defend their numbers. Our AI analyzes hundreds of signals across your pipeline to deliver forecasts that are not only accurate but fully explainable—so you always know the 'why' behind every prediction."
   image:
-    src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+    src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
     alt: "AI-powered revenue forecasting dashboard showing explainable predictions with signal analysis and scenario planning"
     width: 3231
     height: 1770
@@ -70,11 +70,11 @@ features:
       details: "AI-powered predictions • Full transparency • Confidence scoring"
       icon: "🔍"
       screenshot:
-        src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+        src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
         width: 1077
         height: 590
         fillContainer: false
-      link: "/features/forecast-confidently/explainable-ai-forecast"
+      link: "/features/accurate-forecasting/explainable-ai-forecast"
     - name: "Signal-Based Predictions"
       category: "Activity"
       benefit: "Predict outcomes from signals"
@@ -82,11 +82,11 @@ features:
       details: "Multi-signal analysis • Pattern recognition • Early warning system"
       icon: "💬"
       screenshot:
-        src: "/screenshots/forecast-confidently/signal-based-predictions.png"
+        src: "/screenshots/accurate-forecasting/signal-based-predictions.png"
         width: 1886
         height: 6984
         fillContainer: true
-      link: "/features/forecast-confidently/signal-based-predictions"
+      link: "/features/accurate-forecasting/signal-based-predictions"
     - name: "Pipeline Monitor"
       category: "Monitoring"
       benefit: "Early risk detection"
@@ -94,11 +94,11 @@ features:
       details: "Risk alerts • Engagement tracking • Competitive monitoring • Timeline analysis"
       icon: "📊"
       screenshot:
-        src: "/screenshots/forecast-confidently/pipeline-monitor.png"
+        src: "/screenshots/accurate-forecasting/pipeline-monitor.png"
         width: 1104
         height: 581
         fillContainer: false
-      link: "/features/forecast-confidently/pipeline-monitor"
+      link: "/features/accurate-forecasting/pipeline-monitor"
     - name: "Pipeline Lens"
       category: "Visibility"
       benefit: "Complete pipeline insight"
@@ -106,11 +106,11 @@ features:
       details: "Health metrics • Trend analysis • Performance benchmarking"
       icon: "📈"
       screenshot:
-        src: "/screenshots/forecast-confidently/pipeline-lens.png"
+        src: "/screenshots/accurate-forecasting/pipeline-lens.png"
         width: 1216
         height: 768
         fillContainer: false
-      link: "/features/forecast-confidently/pipeline-lens"
+      link: "/features/accurate-forecasting/pipeline-lens"
 
 
 

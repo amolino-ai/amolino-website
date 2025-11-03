@@ -1,7 +1,7 @@
 metadata:
   title: "Automatic Opportunity Qualification | AI-Powered Deal Qualification - AmolinoAI"
   description: "Automatically qualify opportunities with AI-powered scoring based on fit, intent, and win probability to focus on the right deals."
-  image: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+  image: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
 options:
   useCase: "Stop Chasing Un-Winnable Deals"
   featureName: "Automatic Opportunity Qualification"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+    src: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
     width: 1104
     height: 160
     fillContainer: false
@@ -33,7 +33,7 @@ showcase:
       title: "Real-Time Qualification Updates"
       description: "Qualification scores update automatically as new signals emerge, engagement changes, or deal dynamics shift, keeping priorities always current."
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+    src: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
     width: 1104
     height: 160
     fillContainer: false
@@ -64,7 +64,7 @@ bottomFeature:
     - title: "Priority Focus"
       description: "Identify and pursue the most promising, well-qualified opportunities first"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+    src: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
     width: 1104
     height: 160
     fillContainer: false

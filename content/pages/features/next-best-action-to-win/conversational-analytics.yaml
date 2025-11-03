@@ -1,7 +1,7 @@
 metadata:
   title: "Conversational Analytics | AI-Powered Sales Conversation Insights - AmolinoAI"
   description: "Turn every sales conversation into actionable insights with AI-powered conversational analytics. Automatically analyze calls and meetings to extract key topics, track talk patterns, identify coaching opportunities, and surface winning strategies."
-  image: "/screenshots/make-every-rep-your-best-rep/dashboard_rep_view_april_2025.jpg"
+  image: "/screenshots/next-best-action-to-win/dashboard_rep_view_april_2025.jpg"
 options:
   useCase: "Increase Selling Capacity"
   featureName: "Conversational Intelligence"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/conversational-analytics.png"
+    src: "/screenshots/next-best-action-to-win/conversational-analytics.png"
     width: 2769
     height: 2700
 
@@ -32,7 +32,7 @@ showcase:
       title: "Winning Pattern Detection"
       description: "Identify conversation patterns, phrases, and approaches that correlate with won deals and replicate them across your team for consistent success."
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/conversational-analytics.png"
+    src: "/screenshots/next-best-action-to-win/conversational-analytics.png"
     width: 2769
     height: 2700
   comparisonTitle: "Conversational Intelligence vs Manual Call Reviews"
@@ -62,6 +62,6 @@ bottomFeature:
     - title: "Best Practice Sharing"
       description: "Surface and replicate winning conversation strategies across your entire team"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/conversational-analytics.png"
+    src: "/screenshots/next-best-action-to-win/conversational-analytics.png"
     width: 2769
     height: 2700

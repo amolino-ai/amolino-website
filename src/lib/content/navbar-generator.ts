@@ -7,8 +7,8 @@ import type { NavbarProductsContent, NavbarBenefit, NavbarFeature, ProductPageCo
  * Benefit slug to display name mapping
  */
 const BENEFIT_NAMES: Record<string, string> = {
-  'make-every-rep-your-best-rep': 'Make Every Rep Your Best Rep',
-  'forecast-confidently': 'Forecast Confidently',
+  'next-best-action-to-win': 'Next Best Action to Win',
+  'accurate-forecasting': 'Accurate Forecasting',
   'prevent-deal-slippage': 'Prevent Deal Slippage',
 };
 
@@ -16,8 +16,8 @@ const BENEFIT_NAMES: Record<string, string> = {
  * Benefit slug to href mapping
  */
 const BENEFIT_HREFS: Record<string, string> = {
-  'make-every-rep-your-best-rep': '/benefits/make-every-rep-your-best-rep',
-  'forecast-confidently': '/benefits/forecast-confidently',
+  'next-best-action-to-win': '/benefits/next-best-action-to-win',
+  'accurate-forecasting': '/benefits/accurate-forecasting',
   'prevent-deal-slippage': '/benefits/prevent-deal-slippage',
 };
 

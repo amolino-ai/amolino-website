@@ -1,7 +1,7 @@
 metadata:
   title: "Signal-based Predictions | AI-Powered Deal Probability - AmolinoAI"
   description: "Calculate precise deal probability using engagement patterns, timeline changes, stakeholder activity, and competitive signals with AmolinoAI's Signal-based Predictions."
-  image: "/screenshots/forecast-confidently/signal-based-predictions.horizontal.png"
+  image: "/screenshots/accurate-forecasting/signal-based-predictions.horizontal.png"
 options:
   useCase: "Forecasts You Can Defend"
   featureName: "Signal-based Predictions"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/forecast-confidently/signal-based-predictions.horizontal.png"
+    src: "/screenshots/accurate-forecasting/signal-based-predictions.horizontal.png"
     width: 955
     height: 394
 
@@ -32,7 +32,7 @@ showcase:
       title: "See what's driving probability"
       description: "Understand exactly which signals are helping or hurting each deal's likelihood to close."
   screenshot:
-    src: "/screenshots/forecast-confidently/signal-based-predictions.horizontal.png"
+    src: "/screenshots/accurate-forecasting/signal-based-predictions.horizontal.png"
     width: 955
     height: 394
   comparisonTitle: "Deal Probability Prediction"
@@ -62,6 +62,6 @@ bottomFeature:
     - title: "85% Forecast Confidence"
       description: "Forecast accurately when probability reflects true deal likelihood to close"
   screenshot:
-    src: "/screenshots/forecast-confidently/signal-based-predictions.horizontal.png"
+    src: "/screenshots/accurate-forecasting/signal-based-predictions.horizontal.png"
     width: 955
     height: 394

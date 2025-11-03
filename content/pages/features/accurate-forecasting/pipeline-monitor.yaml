@@ -1,7 +1,7 @@
 metadata:
   title: "Pipeline Monitor | AI-Powered Deal Risk Detection - AmolinoAI"
   description: "Get alerts on at-risk deals before they slip with AmolinoAI's Pipeline Monitor. Continuously monitor your sales pipeline for warning signs and proactively manage deal risks to protect your forecast."
-  image: "/screenshots/forecast-confidently/pipeline-monitor.png"
+  image: "/screenshots/accurate-forecasting/pipeline-monitor.png"
 options:
   useCase: "Monitor Pipeline Health"
   featureName: "Pipeline Monitor"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/forecast-confidently/pipeline-monitor.png"
+    src: "/screenshots/accurate-forecasting/pipeline-monitor.png"
     width: 1104
     height: 581
     fillContainer: false
@@ -34,7 +34,7 @@ showcase:
       title: "Competitive threat detection"
       description: "Identify when competitors enter deals so you can respond before losing opportunities."
   screenshot:
-    src: "/screenshots/forecast-confidently/pipeline-monitor.png"
+    src: "/screenshots/accurate-forecasting/pipeline-monitor.png"
     width: 1104
     height: 581
     fillContainer: false
@@ -65,7 +65,7 @@ bottomFeature:
     - title: "25% Better Forecast Accuracy"
       description: "Forecast with confidence when you know which deals are truly at risk"
   screenshot:
-    src: "/screenshots/forecast-confidently/pipeline-monitor.png"
+    src: "/screenshots/accurate-forecasting/pipeline-monitor.png"
     width: 1104
     height: 581
     fillContainer: false

@@ -1,7 +1,7 @@
 metadata:
   title: "Explainable AI-Forecast | Transparent AI-Powered Sales Forecasting - AmolinoAI"
   description: "Generate accurate, explainable sales forecasts with AmolinoAI's Explainable AI-Forecast. Understand the signals behind every prediction and defend your revenue projections with confidence."
-  image: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+  image: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
 options:
   useCase: "Explainable AI-Forecast"
   featureName: "Explainable AI-Forecast"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+    src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
     width: 1077
     height: 590
 
@@ -32,7 +32,7 @@ showcase:
       title: "Plan for best, worst, and likely outcomes"
       description: "See your ceiling, floor, and most probable revenue scenarios so you can make informed decisions and set realistic expectations."
   screenshot:
-    src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+    src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
     width: 1077
     height: 590
   comparisonTitle: "AI-Powered Forecasting"
@@ -63,6 +63,6 @@ bottomFeature:
     - title: "80% Less Forecast Prep"
       description: "Spend minutes, not days, preparing forecasts when AI does the analysis for you"
   screenshot:
-    src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+    src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
     width: 1077
     height: 590

@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 const BENEFIT_SLUGS = [
-  'make-every-rep-your-best-rep',
-  'forecast-confidently',
+  'next-best-action-to-win',
+  'accurate-forecasting',
   'prevent-deal-slippage',
 ];
 

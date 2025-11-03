@@ -9,11 +9,11 @@ import path from 'path';
 import type { Metadata } from 'next';
 
 /**
- * Generate static params for all features in "Explainable AI Forecast" pillar
+ * Generate static params for all features in "Next Best Action to Win" pillar
  * Dynamically scans the benefit folder for all YAML files
  */
 export async function generateStaticParams() {
-  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', 'forecast-confidently');
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', 'next-best-action-to-win');
   const files = fs.readdirSync(benefitDir).filter(f => f.endsWith('.yaml'));
 
   return files.map((file) => ({
@@ -33,7 +33,7 @@ interface ProductPageProps {
  */
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const content = await getProductContent('forecast-confidently', slug);
+  const content = await getProductContent('next-best-action-to-win', slug);
 
   // Use metadata from YAML if available, otherwise fall back to hero content
   const title = content.metadata?.title || content.hero.title;
@@ -59,17 +59,17 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 }
 
 /**
- * Dynamic product feature page component for Explainable AI Forecast pillar
+ * Dynamic product feature page component for Next Best Action to Win pillar
  */
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const content = await getProductContent('forecast-confidently', slug);
-  const benefitContent = await getBenefitGroupContent('forecast-confidently');
+  const content = await getProductContent('next-best-action-to-win', slug);
+  const benefitContent = await getBenefitGroupContent('next-best-action-to-win');
 
   const breadcrumbItems = [
     { label: 'Features', href: '/features' },
-    { label: benefitContent.hero.badgeText || benefitContent.hero.title, href: '/benefits/forecast-confidently' },
-    { label: content.options.featureName },
+    { label: benefitContent.hero.badgeText || benefitContent.hero.title, href: '/benefits/next-best-action-to-win' },
+    { label: content.hero.title },
   ];
 
   // Convert iconPath strings to React elements

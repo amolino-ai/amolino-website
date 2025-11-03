@@ -5,7 +5,7 @@ tabs:
     src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
     width: 1216
     height: 768
-    learnMoreLink: "/benefits/make-every-rep-your-best-rep"
+    learnMoreLink: "/benefits/next-best-action-to-win"
 
   - id: "forecast"
     title: "Forecast Confidently"
@@ -13,7 +13,7 @@ tabs:
     src: "/screenshots/dashboard_managers_view_april_2025.jpg"
     width: 1216
     height: 768
-    learnMoreLink: "/benefits/forecast-confidently"
+    learnMoreLink: "/benefits/accurate-forecasting"
 
   - id: "grunt-work"
     title: "Eliminate Grunt-work"
@@ -21,4 +21,4 @@ tabs:
     src: "/screenshots/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
-    learnMoreLink: "/benefits/make-every-rep-your-best-rep"
+    learnMoreLink: "/benefits/next-best-action-to-win"

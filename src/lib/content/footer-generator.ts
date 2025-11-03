@@ -7,8 +7,8 @@ import type { FooterSection, ProductPageContent } from './types';
  * Benefit slug to display name mapping
  */
 const BENEFIT_NAMES: Record<string, string> = {
-  'make-every-rep-your-best-rep': 'Make Every Rep Your Best Rep',
-  'forecast-confidently': 'Forecast Confidently',
+  'next-best-action-to-win': 'Next Best Action to Win',
+  'accurate-forecasting': 'Accurate Forecasting',
   'prevent-deal-slippage': 'Prevent Deal Slippage',
 };
 

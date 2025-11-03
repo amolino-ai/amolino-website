@@ -9,11 +9,11 @@ import path from 'path';
 import type { Metadata } from 'next';
 
 /**
- * Generate static params for all features in "Make Every Rep Your Best Rep" pillar
+ * Generate static params for all features in "Accurate Forecasting" pillar
  * Dynamically scans the benefit folder for all YAML files
  */
 export async function generateStaticParams() {
-  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', 'make-every-rep-your-best-rep');
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', 'accurate-forecasting');
   const files = fs.readdirSync(benefitDir).filter(f => f.endsWith('.yaml'));
 
   return files.map((file) => ({
@@ -33,7 +33,7 @@ interface ProductPageProps {
  */
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const content = await getProductContent('make-every-rep-your-best-rep', slug);
+  const content = await getProductContent('accurate-forecasting', slug);
 
   // Use metadata from YAML if available, otherwise fall back to hero content
   const title = content.metadata?.title || content.hero.title;
@@ -59,17 +59,17 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 }
 
 /**
- * Dynamic product feature page component for Make Every Rep Your Best Rep pillar
+ * Dynamic product feature page component for Accurate Forecasting pillar
  */
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const content = await getProductContent('make-every-rep-your-best-rep', slug);
-  const benefitContent = await getBenefitGroupContent('make-every-rep-your-best-rep');
+  const content = await getProductContent('accurate-forecasting', slug);
+  const benefitContent = await getBenefitGroupContent('accurate-forecasting');
 
   const breadcrumbItems = [
     { label: 'Features', href: '/features' },
-    { label: benefitContent.hero.badgeText || benefitContent.hero.title, href: '/benefits/make-every-rep-your-best-rep' },
-    { label: content.hero.title },
+    { label: benefitContent.hero.badgeText || benefitContent.hero.title, href: '/benefits/accurate-forecasting' },
+    { label: content.options.featureName },
   ];
 
   // Convert iconPath strings to React elements

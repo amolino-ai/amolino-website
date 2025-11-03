@@ -1,7 +1,7 @@
 metadata:
   title: "aaMap the Buying Committee | AI-Powered Stakeholder Mapping - AmolinoAI"
   description: "Understand and influence every decision maker with AI-powered stakeholder mapping. Automatically identify stakeholders, map relationships, and get personalized engagement strategies to win complex deals."
-  image: "/screenshots/make-every-rep-your-best-rep/opp_details_people.png"
+  image: "/screenshots/next-best-action-to-win/opp_details_people.png"
 options:
   useCase: "Map the Buying Committee"
   featureName: "Stakeholder Map"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opp_details_people.png"
+    src: "/screenshots/next-best-action-to-win/opp_details_people.png"
     width: 1148
     height: 316
     fillContainer: true
@@ -33,7 +33,7 @@ showcase:
       title: "Personalized Engagement Strategies"
       description: "Get customized engagement strategies for each stakeholder based on their role, influence level, engagement history, and decision-making authority."
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opp_details_people.png"
+    src: "/screenshots/next-best-action-to-win/opp_details_people.png"
     width: 1148
     height: 316
     fillContainer: true
@@ -64,7 +64,7 @@ bottomFeature:
     - title: "Engagement Planning"
       description: "Create targeted, personalized engagement strategies for each stakeholder to maximize influence"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/opp_details_people.png"
+    src: "/screenshots/next-best-action-to-win/opp_details_people.png"
     width: 1148
     height: 316
     fillContainer: true

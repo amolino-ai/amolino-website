@@ -13,7 +13,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
+    src: "/screenshots/next-best-action-to-win/proactive-sales-guidance-health-recommendations.png"
     width: 648
     height: 296
 
@@ -30,7 +30,7 @@ showcase:
       title: "Prioritized Next Actions"
       description: "Receive clear, prioritized next steps ranked by impact to keep deals progressing, prevent stalls, and accelerate time to close."
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
+    src: "/screenshots/next-best-action-to-win/proactive-sales-guidance-health-recommendations.png"
     width: 648
     height: 296
   comparisonTitle: "AI Sales Guidance vs Traditional Sales Playbooks"
@@ -60,6 +60,6 @@ bottomFeature:
     - title: "Strategic Insights"
       description: "Understand deal dynamics deeply and optimize your approach for maximum win probability"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/proactive-sales-guidance-health-recommendations.png"
+    src: "/screenshots/next-best-action-to-win/proactive-sales-guidance-health-recommendations.png"
     width: 648
     height: 296

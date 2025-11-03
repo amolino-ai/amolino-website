@@ -1,7 +1,7 @@
 metadata:
   title: "Next Steps Tracking | AI-Powered Sales Action Recommendations - AmolinoAI"
   description: "Get AI-prioritized action recommendations for every deal based on impact, urgency, and win probability to focus on what matters."
-  image: "/screenshots/make-every-rep-your-best-rep/dashboard_rep_view_april_2025.jpg"
+  image: "/screenshots/next-best-action-to-win/dashboard_rep_view_april_2025.jpg"
 options:
   useCase: "Consistent Sales Execution"
   featureName: "Next Steps Tracking"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/next-steps-tracking.png"
+    src: "/screenshots/next-best-action-to-win/next-steps-tracking.png"
     width: 1347
     height: 1434
 
@@ -32,7 +32,7 @@ showcase:
       title: "Time-Sensitive Action Alerts"
       description: "Get alerted to urgent, time-sensitive actions that prevent deal slippage, missed opportunities, and lost momentum before it's too late."
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/next-steps-tracking.png"
+    src: "/screenshots/next-best-action-to-win/next-steps-tracking.png"
     width: 1347
     height: 1434
   comparisonTitle: "AI Next Best Action vs Manual Task Management"
@@ -62,6 +62,6 @@ bottomFeature:
     - title: "Maximize Win Rates"
       description: "Execute the right actions at precisely the right time to optimize deal outcomes"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/next-steps-tracking.png"
+    src: "/screenshots/next-best-action-to-win/next-steps-tracking.png"
     width: 1347
     height: 1434

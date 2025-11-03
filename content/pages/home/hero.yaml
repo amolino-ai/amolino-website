@@ -17,12 +17,12 @@ ctas:
 
 images:
   light:
-    src: "/screenshots/make-every-rep-your-best-rep/opportunity_compass_complete.png"
+    src: "/screenshots/next-best-action-to-win/opportunity_compass_complete.png"
     alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
     width: 1168
     height: 840
   dark:
-    src: "/screenshots/make-every-rep-your-best-rep/opportunity_compass_complete.png"
+    src: "/screenshots/next-best-action-to-win/opportunity_compass_complete.png"
     alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
     width: 1168
     height: 840

@@ -1,7 +1,7 @@
 metadata:
   title: "Coaching Advisor | AI-Powered Sales Coaching - AmolinoAI"
   description: "Scale effective coaching with AI-powered insights that identify coaching opportunities and provide personalized development plans for every rep."
-  image: "/screenshots/make-every-rep-your-best-rep/opportunities_health_recommendations.png"
+  image: "/screenshots/next-best-action-to-win/opportunities_health_recommendations.png"
 options:
   useCase: "Enable Managers for Better Coaching"
   featureName: "Coaching Advisor"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/coaching-advisor.png"
+    src: "/screenshots/next-best-action-to-win/coaching-advisor.png"
     width: 2760
     height: 2289
 
@@ -32,7 +32,7 @@ showcase:
       title: "Skill Development Tracking"
       description: "Monitor skill progression, track coaching effectiveness over time, and measure the impact of your development initiatives on rep performance."
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/coaching-advisor.png"
+    src: "/screenshots/next-best-action-to-win/coaching-advisor.png"
     width: 2760
     height: 2289
   comparisonTitle: "AI Coaching Advisor vs Traditional Sales Coaching"
@@ -62,6 +62,6 @@ bottomFeature:
     - title: "Best Practice Sharing"
       description: "Identify and replicate winning behaviors across your entire sales organization"
   screenshot:
-    src: "/screenshots/make-every-rep-your-best-rep/coaching-advisor.png"
+    src: "/screenshots/next-best-action-to-win/coaching-advisor.png"
     width: 2760
     height: 2289

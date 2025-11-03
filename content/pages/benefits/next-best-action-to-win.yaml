@@ -1,7 +1,7 @@
 metadata:
   title: "Make Every Rep Your Best Rep | Scale Top Performer Playbooks with AI - AmolinoAI"
   description: "Clone your top performers' playbook with AI. Enable every rep to execute with precision, consistency, and insight—automatically guided by what actually works."
-  image: "/screenshots/make-every-rep-your-best-rep/opportunities_health_recommendations.png"
+  image: "/screenshots/next-best-action-to-win/opportunities_health_recommendations.png"
 hero:
   badgeText: "Make Every Rep Your Best Rep"
   title: "Make Every Rep Your Best Rep"
@@ -16,7 +16,7 @@ featureHero:
   heading: "Transform Every Rep Into a Top Performer"
   description: "We've obsessed over every detail to bring you the most powerful AI-driven sales guidance platform. See how our intelligent system learns from your best performers and scales their success across your entire team."
   image:
-    src: "/screenshots/make-every-rep-your-best-rep/opportunities_health_recommendations.png"
+    src: "/screenshots/next-best-action-to-win/opportunities_health_recommendations.png"
     alt: "AI-powered sales guidance dashboard showing opportunity health scores and personalized recommendations"
     width: 1062
     height: 1854
@@ -77,11 +77,11 @@ features:
       details: "Real-time recommendations • Stage-specific actions • Based on closed-won patterns"
       icon: "🧭"
       screenshot:
-        src: "/screenshots/make-every-rep-your-best-rep/opportunities_health_recommendations.png"
+        src: "/screenshots/next-best-action-to-win/opportunities_health_recommendations.png"
         width: 352
         height: 616
         fillContainer: false
-      link: "/features/make-every-rep-your-best-rep/proactive-sales-guidance"
+      link: "/features/next-best-action-to-win/proactive-sales-guidance"
       ctaText: "See Proactive Sales Guidance"
     - name: "Automatic Qualification Intelligence"
       category: "Development"
@@ -90,11 +90,11 @@ features:
       details: "Performance analytics • Personalized coaching • Skill development tracking"
       icon: "📚"
       screenshot:
-        src: "/screenshots/make-every-rep-your-best-rep/opportunity_details_meddic.png"
+        src: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
         width: 1104
         height: 160
         fillContainer: false
-      link: "/features/make-every-rep-your-best-rep/automatic-qualification-intelligence"
+      link: "/features/next-best-action-to-win/automatic-qualification-intelligence"
       ctaText: "See Automatic Qualification Intelligence"
     - name: "Channel Partner Intelligence"
       category: "Intelligence"
@@ -103,11 +103,11 @@ features:
       details: "Account health scoring • Expansion detection • Historical analysis"
       icon: "🏢"
       screenshot:
-        src: "/screenshots/make-every-rep-your-best-rep/opp_details_channel_partner.png"
+        src: "/screenshots/next-best-action-to-win/opp_details_channel_partner.png"
         width: 728
         height: 160
         fillContainer: true
-      link: "/features/make-every-rep-your-best-rep/channel-partner-intelligence"
+      link: "/features/next-best-action-to-win/channel-partner-intelligence"
       ctaText: "See Channel Partner Intelligence"
     - name: "Stakeholder Map"
       category: "Insights"
@@ -116,11 +116,11 @@ features:
       details: "Risk alerts • Engagement tracking • Competitive monitoring • Timeline analysis"
       icon: "🚨"
       screenshot:
-        src: "/screenshots/make-every-rep-your-best-rep/opp_details_people.png"
+        src: "/screenshots/next-best-action-to-win/opp_details_people.png"
         width: 1148
         height: 316
         fillContainer: true
-      link: "/features/make-every-rep-your-best-rep/stakeholder-map"
+      link: "/features/next-best-action-to-win/stakeholder-map"
       ctaText: "See Stakeholder Map"
 
 
