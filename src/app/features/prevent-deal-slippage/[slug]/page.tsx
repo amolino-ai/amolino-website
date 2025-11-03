@@ -80,7 +80,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const breadcrumbItems = [
     { label: 'Features', href: '/features' },
-    { label: benefitContent.hero.badgeText, href: '/benefits/prevent-deal-slippage' },
+    { label: benefitContent.hero.badgeText || benefitContent.hero.title, href: '/benefits/prevent-deal-slippage' },
     { label: content.hero.title },
   ];
 

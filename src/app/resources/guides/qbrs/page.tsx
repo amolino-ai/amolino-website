@@ -1,4 +1,6 @@
 import { Prose } from '@/components/Prose';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { Container } from '@/components/Container';
 import type { Metadata } from 'next';
 import GuideNavigation from './GuideNavigation';
 import GuideHeader from './GuideHeader';
@@ -36,8 +38,17 @@ const sections = [
 ];
 
 export default function GuidePage() {
+  const breadcrumbItems = [
+    { label: 'Resources', href: '/resources' },
+    { label: 'Guides', href: '/resources/guides' },
+    { label: 'QBR Guide' },
+  ];
+
   return (
     <div className="mt-16 sm:mt-20">
+      <Container>
+        <Breadcrumb items={breadcrumbItems} className="py-4" />
+      </Container>
       <GuideHeader />
 
       <div className="mt-16 flex flex-col gap-16 lg:flex-row lg:gap-8">

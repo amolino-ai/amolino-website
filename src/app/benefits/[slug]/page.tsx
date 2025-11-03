@@ -72,7 +72,7 @@ export default async function BenefitGroupPage({ params }: BenefitGroupPageProps
 
   const breadcrumbItems = [
     { label: 'Benefits', href: '/benefits' },
-    { label: content.hero.badgeText },
+    { label: content.hero.badgeText || content.hero.title },
   ];
 
   return (

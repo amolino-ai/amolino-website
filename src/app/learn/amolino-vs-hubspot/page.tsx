@@ -1,6 +1,7 @@
 import { Badge } from '@/components/Badge';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import { Gradient } from '@/components/Gradient';
 import { Screenshot } from '@/components/Screenshot';
 import { Heading, Subheading } from '@/components/Text';
@@ -171,8 +172,16 @@ function BottomCTA() {
 export default async function AmolinoVsHubspot() {
   const content = await getComparisonPageContent('amolino-vs-hubspot');
 
+  const breadcrumbItems = [
+    { label: 'Learn', href: '/learn' },
+    { label: 'Amolino vs HubSpot' },
+  ];
+
   return (
     <>
+      <Container>
+        <Breadcrumb items={breadcrumbItems} className="py-4" />
+      </Container>
       <Hero {...content.hero} />
       <Comparisons {...content.comparisons} />
       <Analysis {...content.analysis} />
