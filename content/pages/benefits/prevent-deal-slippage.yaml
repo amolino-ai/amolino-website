@@ -11,6 +11,25 @@ hero:
   ctaLink: "https://app.amolino.ai"
   backgroundGradient: "from-red-600 to-orange-600"
 
+featureHero:
+  badgeText: "Proactive Deal Protection"
+  heading: "Save Deals Before They Slip Away"
+  description: "Designed to protect your pipeline and your forecast. Our AI continuously monitors every deal for risk signals—from engagement patterns to competitive threats—giving you the early warnings and actionable insights you need to intervene before it's too late."
+  image:
+    src: "/screenshots/prevent-deal-slippage/pushed_opportunities_on_dashboard.png"
+    alt: "AI-powered deal risk radar showing health scores, early warning alerts, and recommended actions to prevent slippage"
+    width: 3231
+    height: 2127
+  features:
+    - name: "Early Warning Alerts"
+      description: "Get notified the moment deals show warning signs—engagement drops, timeline pushes, or stakeholder gaps. Catch risks weeks before they impact your forecast."
+    - name: "Multi-Signal Risk Detection"
+      description: "Monitor engagement, stakeholder coverage, competitive activity, and timeline changes to identify at-risk deals with precision."
+    - name: "Actionable Recommendations"
+      description: "Don't just see the risk—get specific, AI-powered recommendations on exactly what to do to save each at-risk deal."
+    - name: "Continuous Monitoring"
+      description: "24/7 deal health tracking ensures nothing slips through the cracks. Your AI safety net that never sleeps."
+
 problems:
   title: "Protect Your Pipeline Proactively"
   subtitle: "Stop losing winnable deals with proactive risk detection and intervention"

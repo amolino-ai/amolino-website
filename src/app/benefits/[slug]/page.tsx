@@ -1,4 +1,5 @@
 import { BenefitHero } from '../components/BenefitHero';
+import { FeatureHero } from '../components/FeatureHero';
 import { StatsShowcase } from '@/components/StatsShowcase';
 import { BenefitFeatures } from '../components/BenefitFeatures';
 import { ProcessWorkflow } from '@/components/ProcessWorkflow';
@@ -80,6 +81,7 @@ export default async function BenefitGroupPage({ params }: BenefitGroupPageProps
       <Container>
         <Breadcrumb items={breadcrumbItems} className="py-4" />
       </Container>
+      {content.featureHero && <FeatureHero {...content.featureHero} />}
       <BenefitHero hero={content.hero} problems={content.problems} />
       <BenefitFeatures {...content.features} />
       <StatsShowcase {...content.stats} />

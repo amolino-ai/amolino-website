@@ -1,5 +1,13 @@
 import { clsx } from 'clsx';
 
+/**
+ * Screenshot component spacing constants.
+ * The decorative shadow/ring extends outside the component bounds by this amount.
+ * When using Screenshot in a constrained container, add padding equal to this value
+ * to prevent overflow.
+ */
+export const SCREENSHOT_PADDING = 2; // spacing units (0.5rem = 8px in Tailwind)
+
 export function Screenshot({
   width,
   height,

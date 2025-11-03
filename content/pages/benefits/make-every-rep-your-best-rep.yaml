@@ -11,6 +11,25 @@ hero:
   ctaLink: "#features"
   backgroundGradient: "from-black to-black-600"
 
+featureHero:
+  badgeText: "AI-Powered Sales Excellence"
+  heading: "Transform Every Rep Into a Top Performer"
+  description: "We've obsessed over every detail to bring you the most powerful AI-driven sales guidance platform. See how our intelligent system learns from your best performers and scales their success across your entire team."
+  image:
+    src: "/screenshots/make-every-rep-your-best-rep/opportunities_health_recommendations.png"
+    alt: "AI-powered sales guidance dashboard showing opportunity health scores and personalized recommendations"
+    width: 1062
+    height: 1854
+  features:
+    - name: "AI-Powered Guidance"
+      description: "Real-time coaching based on proven playbooks from your top performers, delivered exactly when your reps need it."
+    - name: "Automatic Deal Tracking"
+      description: "Every interaction captured and analyzed automatically, so your team focuses on selling instead of data entry."
+    - name: "Intelligent Insights"
+      description: "Surface the actions that matter most at each stage, keeping deals moving forward with precision."
+    - name: "Scalable Excellence"
+      description: "Clone your best practices across the entire team, ensuring consistent execution from every rep, every time."
+
 problems:
   title: "Make Every Rep Your Best Rep"
   subtitle: "Replicate your top performers' playbook with AI"

@@ -663,9 +663,26 @@ export interface BenefitGroupMetadata {
   image?: string;
 }
 
+export interface BenefitGroupFeatureHero {
+  badgeText?: string;
+  heading: string;
+  description: string;
+  image: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+  features: Array<{
+    name: string;
+    description: string;
+  }>;
+}
+
 export interface BenefitGroupContent {
   metadata?: BenefitGroupMetadata;
   hero: BenefitGroupHero;
+  featureHero?: BenefitGroupFeatureHero;
   problems: BenefitGroupProblems;
   stats: BenefitGroupStats;
   features: BenefitGroupFeatures;

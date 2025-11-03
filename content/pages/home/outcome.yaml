@@ -7,13 +7,13 @@ cta:
 products:
   - id: 1
     label: "Win More"
-    title: "Win More Deals"
+    title: "Focus on the Right Deals and know How to Win Them"
     description: "Make every rep execute like your best rep. Stop deals from slipping with early risk detection and focus on winnable opportunities."
     statBadge: "25% increase in win rates"
     benefits:
       - "Proactive Sales Guidance"
       - "Zero-effort CRM updates"
-      - "Stakeholder Map"
+      - "Stakeholder Maps"
       - "Automatic Qualification Intelligence"
     ctaText: "Increase my win rate by 25%"
     ctaLink: "benefits/make-every-rep-your-best-rep"
@@ -25,13 +25,13 @@ products:
       height: 296
   - id: 2
     label: "Forecast"
-    title: "Forecast Accurately"
+    title: "Forecast Confidently"
     description: "AI-powered forecasts you can defend to the board. Know which deals will really close this quarter with deal-level proof."
     statBadge: "90%+ forecast accuracy"
     benefits:
       - "Explainable AI-forecast"
       - "Signal-based Prediction"
-      - "Pipeline Len"
+      - "Pipeline Lens"
       - "Pipeline Monitor"
     ctaText: "Improve my forecast accuracy to 99%"
     ctaLink: "/benefits/forecast-confidently"

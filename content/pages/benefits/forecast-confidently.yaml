@@ -12,6 +12,25 @@ hero:
   ctaLink: "https://app.amolino.ai"
   backgroundGradient: "from-blue-600 to-cyan-600"
 
+featureHero:
+  badgeText: "Explainable AI Forecasting"
+  heading: "Forecasts You Can Trust and Explain"
+  description: "Built for revenue leaders who need to defend their numbers. Our AI analyzes hundreds of signals across your pipeline to deliver forecasts that are not only accurate but fully explainable—so you always know the 'why' behind every prediction."
+  image:
+    src: "/screenshots/forecast-confidently/dashboard-revenue_analysis-forecast-widget.png"
+    alt: "AI-powered revenue forecasting dashboard showing explainable predictions with signal analysis and scenario planning"
+    width: 3231
+    height: 1770
+  features:
+    - name: "Explainable Predictions"
+      description: "Every forecast comes with the signals that drive it—engagement trends, timeline shifts, and deal health factors. No black boxes."
+    - name: "Multi-Signal Analysis"
+      description: "Track hundreds of data points across deals, stakeholders, and activities to predict outcomes with 95%+ accuracy."
+    - name: "Scenario Planning"
+      description: "See your best case, worst case, and most likely revenue scenarios to plan with confidence and set realistic expectations."
+    - name: "Real-Time Updates"
+      description: "Forecasts update automatically as deals progress, so you always have the latest view of your revenue pipeline."
+
 problems:
   title: "Forecast with Transparency, Not Hope"
   subtitle: "Transform unreliable forecasts into defendable predictions with explainable AI"
