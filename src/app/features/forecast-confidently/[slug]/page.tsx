@@ -68,8 +68,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const breadcrumbItems = [
     { label: 'Features', href: '/features' },
-    { label: benefitContent.hero.title, href: '/benefits/forecast-confidently' },
-    { label: content.hero.title },
+    { label: benefitContent.hero.badgeText, href: '/benefits/forecast-confidently' },
+    { label: content.options.featureName },
   ];
 
   // Convert iconPath strings to React elements

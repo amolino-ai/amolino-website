@@ -68,7 +68,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const breadcrumbItems = [
     { label: 'Features', href: '/features' },
-    { label: benefitContent.hero.title, href: '/benefits/make-every-rep-your-best-rep' },
+    { label: benefitContent.hero.badgeText, href: '/benefits/make-every-rep-your-best-rep' },
     { label: content.hero.title },
   ];
 
