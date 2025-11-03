@@ -11,10 +11,32 @@ interface BreadcrumbProps {
   className?: string;
 }
 
+/**
+ * Truncate text in the middle with ellipsis
+ * Shows beginning and end of text with "..." in the middle
+ */
+function MiddleTruncate({ text, maxLength = 40 }: { text: string; maxLength?: number }) {
+  if (text.length <= maxLength) {
+    return <>{text}</>;
+  }
+
+  const charsToShow = maxLength - 3; // Account for "..."
+  const frontChars = Math.ceil(charsToShow / 2);
+  const backChars = Math.floor(charsToShow / 2);
+
+  return (
+    <>
+      {text.substring(0, frontChars)}
+      <span className="select-none">...</span>
+      {text.substring(text.length - backChars)}
+    </>
+  );
+}
+
 export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
   return (
     <nav aria-label="Breadcrumb" className={`${className}`}>
-      <ol className="flex items-center space-x-1 text-sm text-gray-600">
+      <ol className="flex flex-col items-start space-y-1 text-sm text-gray-600 sm:flex-row sm:items-center sm:space-x-1 sm:space-y-0">
         {/* Home Icon */}
         <li>
           <Link
@@ -37,13 +59,13 @@ export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="ml-1 truncate font-medium text-gray-600 transition-colors hover:text-gray-900 max-w-[120px] sm:max-w-[200px] md:max-w-none"
+                  className="ml-1 font-medium text-gray-600 transition-colors hover:text-gray-900 block max-w-[calc(100vw-3rem)] overflow-hidden sm:max-w-none"
                 >
-                  {item.label}
+                  <MiddleTruncate text={item.label} maxLength={40} />
                 </Link>
               ) : (
-                <span className="ml-1 truncate font-medium text-gray-900 max-w-[120px] sm:max-w-[200px] md:max-w-none" aria-current="page">
-                  {item.label}
+                <span className="ml-1 font-medium text-gray-900 block max-w-[calc(100vw-3rem)] overflow-hidden sm:max-w-none" aria-current="page">
+                  <MiddleTruncate text={item.label} maxLength={40} />
                 </span>
               )}
             </li>
