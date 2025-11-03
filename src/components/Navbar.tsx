@@ -54,13 +54,14 @@ function MobileNavButton() {
 interface MobileNavProps {
   benefits: NavbarBenefit[];
   links: NavbarLink[];
+  close: () => void;
 }
 
-function MobileNav({ benefits, links }: MobileNavProps) {
+function MobileNav({ benefits, links, close }: MobileNavProps) {
   return (
     <DisclosurePanel className="lg:hidden">
       <div className="flex flex-col gap-6 py-4">
-        <MobileDropdown benefits={benefits} />
+        <MobileDropdown benefits={benefits} close={close} />
         {links.map(({ href, label }: NavbarLink, linkIndex: number) => (
           <motion.div
             initial={{ opacity: 0, rotateX: -90 }}
@@ -72,7 +73,11 @@ function MobileNav({ benefits, links }: MobileNavProps) {
             }}
             key={href}
           >
-            <Link href={href} className="text-base font-medium text-gray-950">
+            <Link
+              href={href}
+              className="text-base font-medium text-gray-950"
+              onClick={close}
+            >
               {label}
             </Link>
           </motion.div>
@@ -96,25 +101,29 @@ interface NavbarProps {
 export function Navbar({ banner, allProducts, benefits, links }: NavbarProps) {
   return (
     <Disclosure as="header" className="pt-12 sm:pt-16 relative z-50">
-      <PlusGrid>
-        <PlusGridRow className="relative flex justify-between">
-          <div className="relative flex gap-6">
-            <PlusGridItem className="py-3">
-              <Link href="/" title="Amolino Home">
-                <Logo className="h-9" />
-              </Link>
-            </PlusGridItem>
-            {banner && (
-              <div className="relative hidden items-center py-3 lg:flex">
-                {banner}
+      {({ close }) => (
+        <>
+          <PlusGrid>
+            <PlusGridRow className="relative flex justify-between">
+              <div className="relative flex gap-6">
+                <PlusGridItem className="py-3">
+                  <Link href="/" title="Amolino Home">
+                    <Logo className="h-9" />
+                  </Link>
+                </PlusGridItem>
+                {banner && (
+                  <div className="relative hidden items-center py-3 lg:flex">
+                    {banner}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <DesktopNav allProducts={allProducts} benefits={benefits} links={links} />
-          <MobileNavButton />
-        </PlusGridRow>
-      </PlusGrid>
-      <MobileNav benefits={benefits} links={links} />
+              <DesktopNav allProducts={allProducts} benefits={benefits} links={links} />
+              <MobileNavButton />
+            </PlusGridRow>
+          </PlusGrid>
+          <MobileNav benefits={benefits} links={links} close={close} />
+        </>
+      )}
     </Disclosure>
   );
 }

@@ -10,6 +10,8 @@ import type { NavbarBenefit } from '@/lib/content/types';
 export interface MobileDropdownProps {
   /** Array of benefit groups to display */
   benefits: NavbarBenefit[];
+  /** Function to close the mobile menu */
+  close: () => void;
 }
 
 // This determines whether to show features for each benefit in the mobile version
@@ -22,10 +24,12 @@ const SHOW_FEATURES = false;
  * @param props - The component props
  * @returns A styled list of benefit links with animations
  */
-export function MobileDropdown({ benefits }: MobileDropdownProps) {
+export function MobileDropdown({ benefits, close }: MobileDropdownProps) {
   return (
     <div className="space-y-4">
-      <div className="font-medium text-gray-950"><Link href="/features">All Products</Link></div>
+      <div className="font-medium text-gray-950">
+        <Link href="/features" onClick={close}>All Products</Link>
+      </div>
       {benefits.map((benefit: NavbarBenefit, index: number) => (
         <motion.div
           initial={{ opacity: 0, rotateX: -90 }}
@@ -38,7 +42,7 @@ export function MobileDropdown({ benefits }: MobileDropdownProps) {
           key={benefit.href}
           className="pl-4"
         >
-          <Link href={benefit.href}>
+          <Link href={benefit.href} onClick={close}>
             <div className="text-base font-medium text-gray-950 mb-2">{benefit.name}</div>
           </Link>
           {SHOW_FEATURES && benefit.features && benefit.features.length > 0 && (
@@ -50,6 +54,7 @@ export function MobileDropdown({ benefits }: MobileDropdownProps) {
                       key={featureIndex}
                       href={feature.href}
                       className="block text-sm rounded-lg p-2 -mx-2 hover:bg-gray-50 transition-colors"
+                      onClick={close}
                     >
                       <div className="font-medium text-gray-900 hover:text-indigo-600 transition-colors">
                         {feature.name}
