@@ -68,7 +68,10 @@ export default function FeatureShowcase({
                 src={screenshot.src}
                 fillContainer={screenshot.fillContainer}
                 className="w-full"
+                tilt={false}
               />
+
+
               <div className="absolute inset-0 bg-gradient-to-t from-pink-100/50 to-transparent pointer-events-none" />
             </div>
           </div>

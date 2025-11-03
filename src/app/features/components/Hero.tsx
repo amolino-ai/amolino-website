@@ -31,13 +31,16 @@ export default function Hero({ badgeText, title, description, ctaText, ctaHref, 
             </div>
           </div>
           <div className="relative mt-16 lg:mt-0 lg:w-1/2">
-            <Screenshot
-              width={screenshot.width}
-              height={screenshot.height}
-              src={screenshot.src}
-              fillContainer={screenshot.fillContainer}
-              className="rounded-2xl shadow-2xl"
-            />
+
+                <Screenshot
+                width={screenshot.width}
+                height={screenshot.height}
+                src={screenshot.src}
+                fillContainer={screenshot.fillContainer}
+                className="w-full"
+                tilt={false}
+              />
+           
           </div>
         </div>
       </Container>
