@@ -29,28 +29,33 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
 });
 
+
+const WEBSITE_URL = process.env.WEBSITE_URL || 'https://amolino.ai';
+const TITLE_SUFFIX = process.env.TITLE_SUFFIX || ' | AmolinoAI | Transform Pipeline Visibility, Forecast Accuracy & Deal Execution';
+
 // Next.js built-in metadata
 export const metadata: Metadata = {
   title: {
-    template: '%s - Amolino | Transform Pipeline Visibility, Forecast Accuracy & Deal Execution',
-    default: 'Amolino | Transform Pipeline Visibility, Forecast Accuracy & Deal Execution',
+    template: `%s${TITLE_SUFFIX}`,
+    default: `AmolinoAI | ${TITLE_SUFFIX}`,
   },
   description: 'Transform your pipeline visibility, forecast accuracy, and deal execution with Amolino.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://amolino.com/',
+    url: WEBSITE_URL,
     siteName: 'AmolinoAI',
     images: [
       {
-        url: 'https://amolino.ai/screenshots/Dashboard%20-%20Sales%20Rep%20-%20Feb%202025.png',
-        width: 940,
-        height: 767,
+        url: 'https://amolino.ai/screenshots/opportunity-details-compass.png',
+        width: 1440,
+        height: 900,
         alt: 'AmolinoAI Dashboard',
       },
     ],
   },
 };
+
 
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

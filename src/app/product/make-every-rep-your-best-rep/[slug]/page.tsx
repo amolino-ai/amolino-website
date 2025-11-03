@@ -4,6 +4,7 @@ import Hero from '@/app/product/components/Hero';
 import { getProductContent } from '@/lib/content';
 import fs from 'fs';
 import path from 'path';
+import type { Metadata } from 'next';
 
 /**
  * Generate static params for all features in "Make Every Rep Your Best Rep" pillar
@@ -22,6 +23,37 @@ interface ProductPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+/**
+ * Generate metadata for SEO optimization.
+ * Uses content from YAML files to populate title, description, and OpenGraph tags.
+ */
+export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const content = await getProductContent('make-every-rep-your-best-rep', slug);
+
+  // Use metadata from YAML if available, otherwise fall back to hero content
+  const title = content.metadata?.title || content.hero.title;
+  const description = content.metadata?.description || content.hero.description;
+  const image = content.metadata?.image;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      ...(image && { images: [{ url: image }] }),
+    },
+    // twitter: {
+    //   card: 'summary_large_card',
+    //   title,
+    //   description,
+    //   ...(image && { images: [image] }),
+    // },
+  };
 }
 
 /**

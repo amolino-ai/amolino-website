@@ -5,6 +5,7 @@ import { ProcessWorkflow } from '@/components/ProcessWorkflow';
 import { ComparisonTable } from '@/components/ComparisonTable';
 import { WhoItsFor } from '../components/WhoItsFor';
 import { getBenefitGroupContent } from '@/lib/content';
+import type { Metadata } from 'next';
 
 interface BenefitGroupPageProps {
   params: Promise<{
@@ -22,6 +23,38 @@ export function generateStaticParams() {
     { slug: 'forecast-confidently' },
     { slug: 'prevent-deal-slippage' },
   ];
+}
+
+/**
+ * Generate metadata for SEO optimization.
+ * Uses content from YAML files to populate title, description, and OpenGraph tags.
+ */
+export async function generateMetadata({ params }: BenefitGroupPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const content = await getBenefitGroupContent(slug);
+
+  // Use metadata from YAML if available, otherwise fall back to hero content
+  // Note: TITLE_SUFFIX is already applied by root layout's title template
+  const title = content.metadata?.title || content.hero.title;
+  const description = content.metadata?.description || content.hero.subtitle;
+  const image = content.metadata?.image;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      ...(image && { images: [{ url: image }] }),
+    },
+    // twitter: {
+    //   card: 'summary_large_card',
+    //   title,
+    //   description,
+    //   ...(image && { images: [image] }),
+    // },
+  };
 }
 
 /**

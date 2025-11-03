@@ -480,7 +480,14 @@ export interface ProductPageOptions {
   navbarDescription: string;
 }
 
+export interface ProductPageMetadata {
+  title: string;
+  description: string;
+  image?: string;
+}
+
 export interface ProductPageContent {
+  metadata?: ProductPageMetadata;
   options: ProductPageOptions;
   hero: ProductHero;
   showcase: ProductShowcase;
@@ -650,7 +657,14 @@ export interface BenefitGroupCTA {
   secondaryButton: BenefitGroupCTAButton;
 }
 
+export interface BenefitGroupMetadata {
+  title: string;
+  description: string;
+  image?: string;
+}
+
 export interface BenefitGroupContent {
+  metadata?: BenefitGroupMetadata;
   hero: BenefitGroupHero;
   problems: BenefitGroupProblems;
   stats: BenefitGroupStats;
