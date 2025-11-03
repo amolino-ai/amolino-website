@@ -3,7 +3,7 @@
 
 const LogoHeight = 32;
 const LogoWidth = 155;
-const LOGO_TAGLINE = 'Agentic Deal Execution Platform';
+const LOGO_TAGLINE = 'AI-Powered Deal Guidance Platform';
 
 /**
  * Logo component displaying the Amolino logo and tagline.
