@@ -2,9 +2,16 @@ import FeatureShowcase from '@/app/features/components/FeatureShowcase';
 import BottomFeature from '@/app/features/components/BottomFeature';
 import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { Container } from '@/components/Container';
 
 export default async function Customer360() {
   const content = await getProductContent('customer-360');
+
+  const breadcrumbItems = [
+    { label: 'Features', href: '/features' },
+    { label: content.hero.title },
+  ];
 
   // Convert iconPath strings to React elements
   const features = content.showcase.features.map((feature) => ({
@@ -28,6 +35,9 @@ export default async function Customer360() {
 
   return (
     <>
+      <Container>
+        <Breadcrumb items={breadcrumbItems} className="py-4" />
+      </Container>
       <Hero {...content.hero} />
       <FeatureShowcase
         title={content.showcase.title}

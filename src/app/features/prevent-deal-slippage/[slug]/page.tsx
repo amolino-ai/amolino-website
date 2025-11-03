@@ -1,7 +1,9 @@
 import FeatureShowcase from '@/app/features/components/FeatureShowcase';
 import BottomFeature from '@/app/features/components/BottomFeature';
 import Hero from '@/app/features/components/Hero';
-import { getProductContent } from '@/lib/content';
+import { getProductContent, getBenefitGroupContent } from '@/lib/content';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { Container } from '@/components/Container';
 import fs from 'fs';
 import path from 'path';
 import type { Metadata } from 'next';
@@ -74,6 +76,13 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
   const content = await getProductContent('prevent-deal-slippage', slug);
+  const benefitContent = await getBenefitGroupContent('prevent-deal-slippage');
+
+  const breadcrumbItems = [
+    { label: 'Features', href: '/features' },
+    { label: benefitContent.hero.title, href: '/benefits/prevent-deal-slippage' },
+    { label: content.hero.title },
+  ];
 
   // Convert iconPath strings to React elements
   const features = content.showcase.features.map((feature) => ({
@@ -97,6 +106,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   return (
     <>
+      <Container>
+        <Breadcrumb items={breadcrumbItems} className="py-4" />
+      </Container>
       <Hero {...content.hero} />
       <FeatureShowcase
         title={content.showcase.title}

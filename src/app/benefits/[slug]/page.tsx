@@ -5,6 +5,8 @@ import { ProcessWorkflow } from '@/components/ProcessWorkflow';
 import { ComparisonTable } from '@/components/ComparisonTable';
 import { WhoItsFor } from '../components/WhoItsFor';
 import { getBenefitGroupContent } from '@/lib/content';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { Container } from '@/components/Container';
 import type { Metadata } from 'next';
 
 interface BenefitGroupPageProps {
@@ -68,8 +70,16 @@ export default async function BenefitGroupPage({ params }: BenefitGroupPageProps
   const { slug } = await params;
   const content = await getBenefitGroupContent(slug);
 
+  const breadcrumbItems = [
+    { label: 'Benefits', href: '/benefits' },
+    { label: content.hero.title },
+  ];
+
   return (
     <main>
+      <Container>
+        <Breadcrumb items={breadcrumbItems} className="py-4" />
+      </Container>
       <BenefitHero hero={content.hero} problems={content.problems} />
       <BenefitFeatures {...content.features} />
       <StatsShowcase {...content.stats} />
