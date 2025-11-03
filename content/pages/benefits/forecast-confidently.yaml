@@ -55,7 +55,7 @@ features:
         width: 1077
         height: 590
         fillContainer: false
-      link: "/product/forecast-confidently/explainable-ai-forecast"
+      link: "/features/forecast-confidently/explainable-ai-forecast"
     - name: "Signal-Based Predictions"
       category: "Activity"
       benefit: "Predict outcomes from signals"
@@ -67,7 +67,7 @@ features:
         width: 1886
         height: 6984
         fillContainer: true
-      link: "/product/forecast-confidently/signal-based-predictions"
+      link: "/features/forecast-confidently/signal-based-predictions"
     - name: "Pipeline Monitor"
       category: "Monitoring"
       benefit: "Early risk detection"
@@ -79,7 +79,7 @@ features:
         width: 1104
         height: 581
         fillContainer: false
-      link: "/product/forecast-confidently/pipeline-monitor"
+      link: "/features/forecast-confidently/pipeline-monitor"
     - name: "Pipeline Lens"
       category: "Visibility"
       benefit: "Complete pipeline insight"
@@ -91,7 +91,7 @@ features:
         width: 1216
         height: 768
         fillContainer: false
-      link: "/product/forecast-confidently/pipeline-lens"
+      link: "/features/forecast-confidently/pipeline-lens"
 
 
 

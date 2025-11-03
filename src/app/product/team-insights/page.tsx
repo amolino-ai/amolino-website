@@ -1,6 +1,6 @@
-import BottomFeature from '@/app/product/components/BottomFeature';
-import FeatureShowcase from '@/app/product/components/FeatureShowcase';
-import Hero from '@/app/product/components/Hero';
+import BottomFeature from '@/app/features/components/BottomFeature';
+import FeatureShowcase from '@/app/features/components/FeatureShowcase';
+import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
 
 export default async function TeamInsights() {

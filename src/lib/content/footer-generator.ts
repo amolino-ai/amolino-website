@@ -29,7 +29,7 @@ function scanYamlFiles(dir: string): string[] {
  * Scans all product files and generates footer sections with ALL products
  */
 export async function generateFooterBenefitSections(): Promise<FooterSection[]> {
-  const contentDir = path.join(process.cwd(), 'content', 'pages', 'product');
+  const contentDir = path.join(process.cwd(), 'content', 'pages', 'features');
   const sections: FooterSection[] = [];
 
   // Scan each benefit folder
@@ -42,12 +42,12 @@ export async function generateFooterBenefitSections(): Promise<FooterSection[]> 
     // Load each feature and include ALL products in the footer
     for (const slug of slugs) {
       try {
-        const content = await loadYAML<ProductPageContent>(`pages/product/${benefitSlug}/${slug}.yaml`);
+        const content = await loadYAML<ProductPageContent>(`pages/features/${benefitSlug}/${slug}.yaml`);
 
         // Include all products in footer (no filtering)
         links.push({
           label: content.options.featureName,
-          href: `/product/${benefitSlug}/${slug}`,
+          href: `/features/${benefitSlug}/${slug}`,
         });
       } catch (error) {
         console.warn(`Failed to load product file: ${benefitSlug}/${slug}.yaml`, error);

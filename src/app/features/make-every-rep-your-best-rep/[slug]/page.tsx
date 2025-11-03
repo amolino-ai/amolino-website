@@ -1,6 +1,6 @@
-import FeatureShowcase from '@/app/product/components/FeatureShowcase';
-import BottomFeature from '@/app/product/components/BottomFeature';
-import Hero from '@/app/product/components/Hero';
+import FeatureShowcase from '@/app/features/components/FeatureShowcase';
+import BottomFeature from '@/app/features/components/BottomFeature';
+import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
 import fs from 'fs';
 import path from 'path';
@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
  * Dynamically scans the benefit folder for all YAML files
  */
 export async function generateStaticParams() {
-  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'product', 'make-every-rep-your-best-rep');
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', 'make-every-rep-your-best-rep');
   const files = fs.readdirSync(benefitDir).filter(f => f.endsWith('.yaml'));
 
   return files.map((file) => ({

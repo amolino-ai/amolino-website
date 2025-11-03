@@ -131,8 +131,8 @@ export async function getUseCaseContent(slug: string): Promise<UseCasePageConten
  */
 export async function getProductContent(benefitOrSlug: string, slug?: string): Promise<ProductPageContent> {
   const filePath = slug
-    ? `pages/product/${benefitOrSlug}/${slug}.yaml`  // nested path (new structure)
-    : `pages/product/${benefitOrSlug}.yaml`;          // root path (legacy/root-level products)
+    ? `pages/features/${benefitOrSlug}/${slug}.yaml`  // nested path (new structure)
+    : `pages/features/${benefitOrSlug}.yaml`;          // root path (legacy/root-level products)
   return loadYAML<ProductPageContent>(filePath);
 }
 

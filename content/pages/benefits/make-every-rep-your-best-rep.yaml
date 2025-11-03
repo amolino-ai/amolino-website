@@ -62,7 +62,7 @@ features:
         width: 352
         height: 616
         fillContainer: false
-      link: "/product/make-every-rep-your-best-rep/proactive-sales-guidance"
+      link: "/features/make-every-rep-your-best-rep/proactive-sales-guidance"
       ctaText: "See Proactive Sales Guidance"
     - name: "Automatic Qualification Intelligence"
       category: "Development"
@@ -75,7 +75,7 @@ features:
         width: 1104
         height: 160
         fillContainer: false
-      link: "/product/make-every-rep-your-best-rep/automatic-qualification-intelligence"
+      link: "/features/make-every-rep-your-best-rep/automatic-qualification-intelligence"
       ctaText: "See Automatic Qualification Intelligence"
     - name: "Channel Partner Intelligence"
       category: "Intelligence"
@@ -88,7 +88,7 @@ features:
         width: 728
         height: 160
         fillContainer: true
-      link: "/product/make-every-rep-your-best-rep/channel-partner-intelligence"
+      link: "/features/make-every-rep-your-best-rep/channel-partner-intelligence"
       ctaText: "See Channel Partner Intelligence"
     - name: "Stakeholder Map"
       category: "Insights"
@@ -101,7 +101,7 @@ features:
         width: 1148
         height: 316
         fillContainer: true
-      link: "/product/make-every-rep-your-best-rep/stakeholder-map"
+      link: "/features/make-every-rep-your-best-rep/stakeholder-map"
       ctaText: "See Stakeholder Map"
 
 

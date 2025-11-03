@@ -25,7 +25,7 @@ const SHOW_FEATURES = false;
 export function MobileDropdown({ benefits }: MobileDropdownProps) {
   return (
     <div className="space-y-4">
-      <div className="font-medium text-gray-950">Product</div>
+      <div className="font-medium text-gray-950"><Link href="/features">All Products</Link></div>
       {benefits.map((benefit: NavbarBenefit, index: number) => (
         <motion.div
           initial={{ opacity: 0, rotateX: -90 }}

@@ -38,7 +38,7 @@ function scanYamlFiles(dir: string): string[] {
  * Scans all product files, filters by showInNavbar, and generates the navbar structure
  */
 export async function buildNavbarProductsFromContent(): Promise<NavbarProductsContent> {
-  const contentDir = path.join(process.cwd(), 'content', 'pages', 'product');
+  const contentDir = path.join(process.cwd(), 'content', 'pages', 'features');
   const benefits: NavbarBenefit[] = [];
 
   // Scan each benefit folder
@@ -52,13 +52,13 @@ export async function buildNavbarProductsFromContent(): Promise<NavbarProductsCo
     // Load each feature and check if it should be shown in navbar
     for (const slug of slugs) {
       try {
-        const content = await loadYAML<ProductPageContent>(`pages/product/${benefitSlug}/${slug}.yaml`);
+        const content = await loadYAML<ProductPageContent>(`pages/features/${benefitSlug}/${slug}.yaml`);
 
         if (content.options?.showInNavbar) {
           features.push({
             name: content.options.featureName,
             description: content.options.navbarDescription,
-            href: `/product/${benefitSlug}/${slug}`,
+            href: `/features/${benefitSlug}/${slug}`,
           });
         }
       } catch (error) {
@@ -80,7 +80,7 @@ export async function buildNavbarProductsFromContent(): Promise<NavbarProductsCo
   return {
     allProducts: {
       name: 'All features',
-      href: '/product',
+      href: '/features',
       description: 'See everything Amolino has to offer',
       icon: '/icons/all-products.svg',
     },

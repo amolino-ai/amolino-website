@@ -1,18 +1,17 @@
-import FeatureShowcase from '@/app/product/components/FeatureShowcase';
-import BottomFeature from '@/app/product/components/BottomFeature';
-import Hero from '@/app/product/components/Hero';
+import FeatureShowcase from '@/app/features/components/FeatureShowcase';
+import BottomFeature from '@/app/features/components/BottomFeature';
+import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
 import fs from 'fs';
 import path from 'path';
 import type { Metadata } from 'next';
 
-
 /**
- * Generate static params for all features in "Prevent Deal Slippage" pillar
+ * Generate static params for all features in "Explainable AI Forecast" pillar
  * Dynamically scans the benefit folder for all YAML files
  */
 export async function generateStaticParams() {
-  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'product', 'prevent-deal-slippage');
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', 'forecast-confidently');
   const files = fs.readdirSync(benefitDir).filter(f => f.endsWith('.yaml'));
 
   return files.map((file) => ({
@@ -26,28 +25,18 @@ interface ProductPageProps {
   }>;
 }
 
-  /**
+/**
  * Generate metadata for SEO optimization.
  * Uses content from YAML files to populate title, description, and OpenGraph tags.
  */
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const content = await getProductContent('prevent-deal-slippage', slug);
+  const content = await getProductContent('forecast-confidently', slug);
 
   // Use metadata from YAML if available, otherwise fall back to hero content
-  // Note: TITLE_SUFFIX is already applied by root layout's title template
   const title = content.metadata?.title || content.hero.title;
   const description = content.metadata?.description || content.hero.description;
   const image = content.metadata?.image;
-
-  // Debug logging
-  console.log('Product metadata debug:', {
-    slug,
-    hasMetadata: !!content.metadata,
-    metadataTitle: content.metadata?.title,
-    heroTitle: content.hero.title,
-    finalTitle: title,
-  });
 
   return {
     title,
@@ -67,13 +56,12 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   };
 }
 
-
 /**
- * Dynamic product feature page component for Prevent Deal Slippage pillar
+ * Dynamic product feature page component for Explainable AI Forecast pillar
  */
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const content = await getProductContent('prevent-deal-slippage', slug);
+  const content = await getProductContent('forecast-confidently', slug);
 
   // Convert iconPath strings to React elements
   const features = content.showcase.features.map((feature) => ({

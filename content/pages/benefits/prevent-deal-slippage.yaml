@@ -53,7 +53,7 @@ features:
         width: 1056
         height: 270
         fillContainer: false
-      link: "/product/prevent-deal-slippage/deal-risk-radar"
+      link: "/features/prevent-deal-slippage/deal-risk-radar"
     - name: "Pushed-out History"
       category: "Prevention"
       benefit: "Stop deals from slipping"
@@ -65,7 +65,7 @@ features:
         width: 400
         height: 597
         fillContainer: true
-      link: "/product/prevent-deal-slippage/pushed-out-history"
+      link: "/features/prevent-deal-slippage/pushed-out-history"
     - name: "Win/Loss Analysis"
       category: "Analytics"
       benefit: "Prioritize with AI"
@@ -77,7 +77,7 @@ features:
         width: 613
         height: 764
         fillContainer: true
-      link: "/product/prevent-deal-slippage/win-loss-analysis"
+      link: "/features/prevent-deal-slippage/win-loss-analysis"
     - name: "Deal Prioritization"
       category: "Monitoring"
       benefit: "Detect problems early"
@@ -89,7 +89,7 @@ features:
         width: 1216
         height: 768
         fillContainer: true
-      link: "/product/prevent-deal-slippage/deal-prioritization"
+      link: "/features/prevent-deal-slippage/deal-prioritization"
     - name: "Competitive Tracking"
       category: "Optimization"
       benefit: "Optimize activities"
@@ -101,7 +101,7 @@ features:
         width: 570
         height: 571
         fillContainer: true
-      link: "/product/prevent-deal-slippage/competitive-tracking"
+      link: "/features/prevent-deal-slippage/competitive-tracking"
 
 howItWorks:
   title: "How Deal Protection Works"
