@@ -15,20 +15,31 @@ interface BreadcrumbProps {
  * Truncate text in the middle with ellipsis
  * Shows beginning and end of text with "..." in the middle
  */
-function MiddleTruncate({ text, maxLength = 40 }: { text: string; maxLength?: number }) {
-  if (text.length <= maxLength) {
+function MiddleTruncate({ text, maxLengthMobile = 40 }: { text: string; maxLengthMobile?: number }) {
+  // For mobile: truncate if needed
+  const shouldTruncate = text.length > maxLengthMobile;
+
+  if (!shouldTruncate) {
     return <>{text}</>;
   }
 
-  const charsToShow = maxLength - 3; // Account for "..."
+  const charsToShow = maxLengthMobile - 3; // Account for "..."
   const frontChars = Math.ceil(charsToShow / 2);
   const backChars = Math.floor(charsToShow / 2);
 
-  return (
+  const truncatedText = (
     <>
       {text.substring(0, frontChars)}
       <span className="select-none">...</span>
       {text.substring(text.length - backChars)}
+    </>
+  );
+
+  return (
+    <>
+      {/* Show truncated on mobile, full text on desktop */}
+      <span className="sm:hidden">{truncatedText}</span>
+      <span className="hidden sm:inline">{text}</span>
     </>
   );
 }
@@ -61,11 +72,11 @@ export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
                   href={item.href}
                   className="ml-1 font-medium text-gray-600 transition-colors hover:text-gray-900 block max-w-[calc(100vw-3rem)] overflow-hidden sm:max-w-none"
                 >
-                  <MiddleTruncate text={item.label} maxLength={40} />
+                  <MiddleTruncate text={item.label} maxLengthMobile={40} />
                 </Link>
               ) : (
                 <span className="ml-1 font-medium text-gray-900 block max-w-[calc(100vw-3rem)] overflow-hidden sm:max-w-none" aria-current="page">
-                  <MiddleTruncate text={item.label} maxLength={40} />
+                  <MiddleTruncate text={item.label} maxLengthMobile={40} />
                 </span>
               )}
             </li>
