@@ -3,7 +3,6 @@ metadata:
   description: "Unlock revenue from your channel partners with AI-powered partner analytics. Track partner-sourced deals, measure partner performance, and maximize channel revenue with comprehensive partner intelligence."
   image: "/screenshots/next-best-action-to-win/opp_details_channel_partner.png"
 options:
-  useCase: "Increase Selling Capacity"
   featureName: "Channel Partner Analytics"
   showInNavbar: false
   navbarDescription: "Track partner-sourced deals, measure partner performance, and maximize channel revenue with comprehensive partner intelligence."

@@ -3,7 +3,6 @@ metadata:
   description: "Keep your sales pipeline clean and forecast-ready with Pipeline Lens. Automatically identify stale deals, stage inaccuracies, and removal recommendations to ensure your pipeline reflects reality."
   image: "/screenshots/accurate-forecasting/pipeline-lens.png"
 options:
-  useCase: "Clean Up the Pipeline"
   featureName: "Pipeline Lens"
   showInNavbar: false
   navbarDescription: "Identify opportunities that need updating, closing, or removal to keep your pipeline clean and forecast-ready."

@@ -3,7 +3,6 @@ metadata:
   description: "Calculate precise deal probability using engagement patterns, timeline changes, stakeholder activity, and competitive signals with AmolinoAI's Signal-based Predictions."
   image: "/screenshots/accurate-forecasting/signal-based-predictions.horizontal.png"
 options:
-  useCase: "Forecasts You Can Defend"
   featureName: "Signal-based Predictions"
   showInNavbar: false
   navbarDescription: "Calculate precise deal probability using engagement patterns, timeline changes, stakeholder activity, and competitive signals."

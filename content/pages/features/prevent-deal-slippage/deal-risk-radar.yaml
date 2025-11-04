@@ -3,7 +3,6 @@ metadata:
   description: "Prevent deal slippage with AmolinoAI's Deal Health. Monitor deal health in real-time, identify emerging risks, and receive early warnings to keep every deal on track."
   image: "/screenshots/prevent-deal-slippage/deal-risk-radar-horizontal.png" 
 options:
-  useCase: "Stop Deals from Slipping by Surfacing Issues Early"
   featureName: "Deal Health"
   showInNavbar: true
   navbarDescription: "Real-time deal health monitoring with early warning alerts to prevent slippage."

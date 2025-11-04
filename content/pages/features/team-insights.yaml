@@ -1,5 +1,4 @@
 options:
-  useCase: "Enable Managers for Better Coaching"
   featureName: "Team Insights"
   showInNavbar: false
   navbarDescription: "tbd"

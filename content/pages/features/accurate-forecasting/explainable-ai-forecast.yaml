@@ -3,7 +3,6 @@ metadata:
   description: "Generate accurate, explainable sales forecasts with AmolinoAI's Explainable AI-Forecast. Understand the signals behind every prediction and defend your revenue projections with confidence."
   image: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
 options:
-  useCase: "Explainable AI-Forecast"
   featureName: "Explainable AI-Forecast"
   showInNavbar: true
   navbarDescription: |

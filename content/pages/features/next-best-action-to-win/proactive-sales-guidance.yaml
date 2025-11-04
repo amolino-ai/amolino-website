@@ -1,5 +1,4 @@
 options:
-  useCase: "Consistent Sales Execution"
   featureName: "Proactive Sales Guidance"
   showInNavbar: true
   navbarDescription: |

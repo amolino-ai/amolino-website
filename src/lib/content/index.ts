@@ -90,8 +90,6 @@ export type {
   BenefitGroupComparisonRow,
   BenefitGroupWhoItsFor,
   BenefitGroupWhoItsForCard,
-  BenefitGroupCTA,
-  BenefitGroupCTAButton,
   BentoItem,
   BentoProps,
   ComparisonPageContent,

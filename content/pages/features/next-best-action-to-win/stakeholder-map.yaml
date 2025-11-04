@@ -3,7 +3,6 @@ metadata:
   description: "Understand and influence every decision maker with AI-powered stakeholder mapping. Automatically identify stakeholders, map relationships, and get personalized engagement strategies to win complex deals."
   image: "/screenshots/next-best-action-to-win/opp_details_people.png"
 options:
-  useCase: "Map the Buying Committee"
   featureName: "Stakeholder Map"
   showInNavbar: true
   navbarDescription: |

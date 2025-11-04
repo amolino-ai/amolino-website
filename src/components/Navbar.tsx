@@ -20,6 +20,35 @@ interface DesktopNavProps {
   links: NavbarLink[];
 }
 
+/*
+ * The main navigation for website. 
+  Summary Table
+
+  | Scenario              | Width Check | Height Check | File:Line                              |
+  |-----------------------|-------------|--------------|----------------------------------------|
+  | Mobile                | < 1024px    | N/A          | Navbar.tsx (Tailwind lg breakpoint) |
+  | Small Desktop - Tall  | 1024-1366px | ≥ 950px*     | DesktopDropdown.tsx            |
+  | Small Desktop - Short | 1024-1366px | < 950px*     | DesktopDropdown.tsx             |
+  | Large Desktop         | ≥ 1366px    | N/A          | DesktopDropdown.tsx                |
+
+  Effective height: viewportHeight - 150px ≥ 800px = viewportHeight ≥ 950px
+
+  ---
+  Key Variables to Adjust
+
+  If you want to change these thresholds:
+
+  1. Mobile breakpoint (1024px): Change Tailwind's lg breakpoint in tailwind.config.js OR change the classes in Navbar.tsx
+  2. Vertical/Horizontal width (1366px): Change line 53 in DesktopDropdown.tsx:53
+            const shouldUseVertical = viewportWidth >= 1024 && viewportWidth < 1366;
+
+  3. Height threshold (800px): Change estimatedMinHeight on line 66 in DesktopDropdown.tsx:66
+          const estimatedMinHeight = 800;
+  4. Navbar spacing (150px): Change navbarAndSpacing on line 67 in DesktopDropdown.tsx:67
+          const navbarAndSpacing = 150; // Navbar height + margin
+
+  */
+
 function DesktopNav({ allProducts, benefits, links }: DesktopNavProps) {
   return (
     <nav className="relative hidden lg:flex z-30">

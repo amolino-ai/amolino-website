@@ -4,7 +4,6 @@ metadata:
   image: "/screenshots/dashboard_rep_view_april_2025.jpg"
 
 options:
-  useCase: "Increase Selling Capacity"
   featureName: "Customer 360"
   showInNavbar: false
   navbarDescription: "tbd"

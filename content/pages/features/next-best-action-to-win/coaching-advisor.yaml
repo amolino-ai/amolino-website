@@ -3,7 +3,6 @@ metadata:
   description: "Scale effective coaching with AI-powered insights that identify coaching opportunities and provide personalized development plans for every rep."
   image: "/screenshots/next-best-action-to-win/opportunities_health_recommendations.png"
 options:
-  useCase: "Enable Managers for Better Coaching"
   featureName: "Coaching Advisor"
   showInNavbar: false
   navbarDescription: "Scale effective coaching with AI-powered insights that identify coaching opportunities and provide personalized development plans for every rep."

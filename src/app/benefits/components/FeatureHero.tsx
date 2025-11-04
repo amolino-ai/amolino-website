@@ -35,7 +35,7 @@ export function FeatureHero({ badgeText, heading, description, image, features }
               width={image.width}
               height={image.height}
               cover={true}
-              tilt={true}
+              tilt={false}
               className="h-full w-full"
             />
           </div>

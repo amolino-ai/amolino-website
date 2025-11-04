@@ -178,14 +178,3 @@ whoItsFor:
       description: "You can't rely on rep intuition to spot at-risk deals. You need a systematic way to identify and prioritize interventions."
     - title: "Want Higher Win Rates"
       description: "You know the easiest way to hit your number is to stop losing deals. Every saved deal is pure incremental revenue."
-
-cta:
-  title: "Stop Losing Deals You Should Win"
-  description: "See how AI-powered deal protection can give you 3 weeks advance notice of risks and save 40% of deals that would have slipped."
-  backgroundGradient: "from-red-600 to-orange-600"
-  primaryButton:
-    text: "Try AmolinoAI"
-    link: "https://app.amolino.ai"
-  secondaryButton:
-    text: "See It In Action"
-    link: "#features"

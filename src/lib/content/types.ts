@@ -474,7 +474,6 @@ export interface ProductBottomFeature {
 }
 
 export interface ProductPageOptions {
-  useCase: string;
   featureName: string;
   showInNavbar: boolean;
   navbarDescription: string;
@@ -568,8 +567,6 @@ export interface BenefitGroupProblems {
 export interface BenefitGroupStat {
   value: string;
   label: string;
-  description: string;
-  bgColor: string;
 }
 
 export interface BenefitGroupStats {
@@ -644,19 +641,6 @@ export interface BenefitGroupWhoItsFor {
   cards: BenefitGroupWhoItsForCard[];
 }
 
-export interface BenefitGroupCTAButton {
-  text: string;
-  link: string;
-}
-
-export interface BenefitGroupCTA {
-  title: string;
-  description: string;
-  backgroundGradient: string;
-  primaryButton: BenefitGroupCTAButton;
-  secondaryButton: BenefitGroupCTAButton;
-}
-
 export interface BenefitGroupMetadata {
   title: string;
   description: string;
@@ -689,7 +673,6 @@ export interface BenefitGroupContent {
   howItWorks: BenefitGroupHowItWorks;
   comparison: BenefitGroupComparison;
   whoItsFor: BenefitGroupWhoItsFor;
-  cta: BenefitGroupCTA;
 }
 
 // ============================================================================

@@ -3,7 +3,6 @@ metadata:
   description: "Get AI-prioritized action recommendations for every deal based on impact, urgency, and win probability to focus on what matters."
   image: "/screenshots/next-best-action-to-win/dashboard_rep_view_april_2025.jpg"
 options:
-  useCase: "Consistent Sales Execution"
   featureName: "Next Steps Tracking"
   showInNavbar: false
   navbarDescription: "Get AI-prioritized action recommendations for every deal based on impact, urgency, and win probability to focus on what matters."

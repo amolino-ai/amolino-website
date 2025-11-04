@@ -3,7 +3,6 @@ metadata:
   description: "Win more deals against your competitors with AmolinoAI's Competitive Tracking. Track competitor involvement, analyze win/loss patterns, and develop data-driven strategies to outmaneuver the competition."
   image: "/screenshots/prevent-deal-slippage/competitive-tracking-stacked.png"
 options:
-  useCase: "Understand Competitive Threats"
   featureName: "Competitive Intelligence"
   showInNavbar: false
   navbarDescription: "Track competitor presence in deals, analyze win/loss patterns by competitor, and develop data-driven competitive strategies."

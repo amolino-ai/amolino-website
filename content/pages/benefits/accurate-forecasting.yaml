@@ -7,7 +7,10 @@ hero:
   badgeText: "Forecast Confidently"
   title: "Defend Every Forecast with Confidence"
   subtitle: "AI-Powered Revenue Forecasting"
-  description: "Stop defending forecasts based on gut feelings and spreadsheet guesswork. AmolinoAI analyzes every signal—engagement patterns, stakeholder activity, timeline changes, and competitive threats—to generate accurate revenue predictions you can actually explain. No more black-box forecasts. Just transparent, data-driven projections backed by the insights that matter."
+  description: |
+    Defend your forecast with confidence. Amolino uses AI totracks hundreds of pipeline
+    signals to predict revenue with 95% accuracy—showing the engagement patterns,
+    stakeholder signals, and timeline shifts behind every prediction.
   ctaText: "Try AmolinoAI"
   ctaLink: "https://app.amolino.ai"
   backgroundGradient: "from-blue-600 to-cyan-600"
@@ -15,21 +18,34 @@ hero:
 featureHero:
   badgeText: "Explainable AI Forecasting"
   heading: "Forecasts You Can Trust and Explain"
-  description: "Built for revenue leaders who need to defend their numbers. Our AI analyzes hundreds of signals across your pipeline to deliver forecasts that are not only accurate but fully explainable—so you always know the 'why' behind every prediction."
+  description: |
+    Defend your forecast with confidence. Amolino uses AI totracks hundreds of pipeline
+    signals to predict revenue with 95% accuracy—showing the engagement patterns,
+    stakeholder signals, and timeline shifts behind every prediction.
   image:
     src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
     alt: "AI-powered revenue forecasting dashboard showing explainable predictions with signal analysis and scenario planning"
     width: 3231
     height: 1770
   features:
-    - name: "Explainable Predictions"
-      description: "Every forecast comes with the signals that drive it—engagement trends, timeline shifts, and deal health factors. No black boxes."
-    - name: "Multi-Signal Analysis"
-      description: "Track hundreds of data points across deals, stakeholders, and activities to predict outcomes with 95%+ accuracy."
+    - name: "Understand, explain, and defend"
+      description: |
+        Get accurate quarterly revenue forecasts that actually make sense.
+        Every prediction is backed by clear explanations of the signals that drive it. No black boxes.
+    - name: "Deal-level predictions"
+      description: |
+        Amolino provides a quarterly forecast and breaks it down by
+        individual deals—so you can see exactly which deals are
+        likely to close and which are at risk. 
     - name: "Scenario Planning"
-      description: "See your best case, worst case, and most likely revenue scenarios to plan with confidence and set realistic expectations."
-    - name: "Real-Time Updates"
-      description: "Forecasts update automatically as deals progress, so you always have the latest view of your revenue pipeline."
+      description: |
+        View best-case, worst-case, and most-likely revenue scenarios, to plan with
+        confidence and set realistic expectations.
+    - name: "Real-time updates"
+      description: |
+        Forecasts update automatically as deals progress. They always include
+        the latest signals and insights without you having to run reports in
+        SalesForce or HubSpot or munge spreadsheets.
 
 problems:
   title: "Forecast with Transparency, Not Hope"
@@ -170,14 +186,3 @@ whoItsFor:
       description: "You don't trust black-box predictions. You want to see exactly what signals drive your forecast and why deals are likely to close—or slip."
     - title: "Need Early Warning of Risks"
       description: "You're done being surprised by deals that slip. You want to spot forecast risks weeks before they impact your quarter."
-
-cta:
-  title: "Transform Your Forecast from Guesswork to Certainty"
-  description: "See how explainable AI can give you 95%+ forecast accuracy with complete transparency into every prediction."
-  backgroundGradient: "from-blue-600 to-cyan-600"
-  primaryButton:
-    text: "Try AmolinoAI"
-    link: "https://app.amolino.ai"
-  secondaryButton:
-    text: "See It In Action"
-    link: "#features"

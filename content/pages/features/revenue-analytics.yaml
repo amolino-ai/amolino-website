@@ -1,5 +1,4 @@
 options:
-  useCase: "Forecasts You Can Defend"
   featureName: "Revenue Analytics"
   showInNavbar: false
   navbarDescription: "tbd"

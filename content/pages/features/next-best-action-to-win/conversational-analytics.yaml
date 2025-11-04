@@ -3,7 +3,6 @@ metadata:
   description: "Turn every sales conversation into actionable insights with AI-powered conversational analytics. Automatically analyze calls and meetings to extract key topics, track talk patterns, identify coaching opportunities, and surface winning strategies."
   image: "/screenshots/next-best-action-to-win/dashboard_rep_view_april_2025.jpg"
 options:
-  useCase: "Increase Selling Capacity"
   featureName: "Conversational Intelligence"
   showInNavbar: false
   navbarDescription: "Analyze sales conversations automatically to extract insights, track talk patterns, identify coaching opportunities, and improve rep effectiveness."

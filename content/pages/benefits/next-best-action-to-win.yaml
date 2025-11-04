@@ -50,20 +50,12 @@ stats:
   metrics:
     - value: "50%"
       label: "Revenue Increase"
-      description: "Middle performers close at top performer rates"
-      bgColor: "bg-gray-50"
     - value: "60%"
       label: "Faster Ramp Time"
-      description: "New reps guided by best practices from day one"
-      bgColor: "bg-gray-900"
     - value: "Zero"
       label: "Manual CRM Work"
-      description: "Reps focus on selling, not data entry"
-      bgColor: "bg-indigo-600"
     - value: "100%"
       label: "Deal Visibility"
-      description: "Every opportunity tracked and analyzed automatically"
-      bgColor: "bg-gray-50"
 
 features:
   title: "How We Scale Your A-Players"
@@ -185,14 +177,3 @@ whoItsFor:
       description: "Your deals are too complex for reps to freestyle. You need a repeatable process that actually gets followed."
     - title: "Want to Coach, Not Police"
       description: "You'd rather spend time developing talent than chasing forecast updates and deal hygiene."
-
-cta:
-  title: "Turn Your Top 20% Into Your Entire Team"
-  description: "See how AI can scale your best practices across every rep, every deal, every time."
-  backgroundGradient: "from-purple-600 to-indigo-600"
-  primaryButton:
-    text: "Schedule a Demo"
-    link: "/demo"
-  secondaryButton:
-    text: "See It In Action"
-    link: "#features"
