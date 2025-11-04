@@ -1,4 +1,4 @@
-import { Table, Text, Title, Box, List, ListItem } from '@mantine/core'
+import { Table, Text, Title, Box, List, ListItem } from '@mantine/core';
 
 export default function AskingGoodQuestions() {
   return (
@@ -145,5 +145,5 @@ export default function AskingGoodQuestions() {
         </Text>
       </Box>
     </div>
-  )
+  );
 } 

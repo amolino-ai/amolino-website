@@ -1,32 +1,40 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
-import { Footer } from '@/components/footer'
-import * as mdxComponents from '@/components/mdx'
-import { getBlogPost, getBlogPostContent } from '@/lib/content'
-import { cn } from '@/lib/utils' // or import clsx from 'clsx'
-import { ChevronLeftIcon } from '@heroicons/react/16/solid'
-import dayjs from 'dayjs'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import { notFound } from 'next/navigation'
-import styles from '../blog.module.css'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Footer } from '@/components/Footer';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import * as mdxComponents from '@/components/Mdx';
+import { getBlogPost, getBlogPostContent, getFooterContent } from '@/lib/content';
+import { cn } from '@/lib/utils'; // or import clsx from 'clsx'
+import { ChevronLeftIcon } from '@heroicons/react/16/solid';
+import dayjs from 'dayjs';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import { notFound } from 'next/navigation';
+import styles from '../blog.module.css';
 
 
 export const dynamic = 'force-static';
-export const revalidate = 0; 
+export const revalidate = 0;
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const post = await getBlogPost(slug)
-  const content = await getBlogPostContent(slug)
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
+  const content = await getBlogPostContent(slug);
+  const footerContent = await getFooterContent();
 
   if (!post || !content) {
-    notFound()
+    notFound();
   }
 
+
+  const breadcrumbItems = [
+    { label: 'Blog', href: '/blog' },
+    { label: post.title },
+  ];
 
   return (
     <main className="overflow-hidden">
       <Container className="relative">
+        <Breadcrumb items={breadcrumbItems} className="py-4" />
         <div className={cn(styles.blogContent, 'pb-24')}>
           <div className={styles.blogHeader}>
             <p className={cn(styles.blogSubheading, 'mt-16')}>{dayjs(post.publishedAt).format('dddd, MMMM D, YYYY')}</p>
@@ -74,7 +82,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         </div>
       </Container>
-      <Footer />
+      <Footer content={footerContent} />
     </main>
-  )
+  );
 }

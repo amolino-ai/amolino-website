@@ -1,13 +1,12 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
-import { Footer } from '@/components/footer'
-import { Link } from '@/components/link'
-import { Heading, Lead, Subheading } from '@/components/text'
-import { getHelpSections, getHelpTags } from '@/lib/content'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { CheckIcon, ChevronUpDownIcon, DocumentTextIcon, TagIcon } from '@heroicons/react/16/solid'
-import dayjs from 'dayjs'
-import type { Metadata } from 'next'
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Link } from '@/components/Link';
+import { Heading, Lead, Subheading } from '@/components/Text';
+import { getHelpSections, getHelpTags } from '@/lib/content';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import { CheckIcon, ChevronUpDownIcon, DocumentTextIcon, TagIcon } from '@heroicons/react/16/solid';
+import dayjs from 'dayjs';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
 export const revalidate = 0;
@@ -15,13 +14,13 @@ export const revalidate = 0;
 export const metadata: Metadata = {
   title: 'Help Center',
   description: 'Find guides, tutorials, and documentation to help you get the most out of our platform.',
-}
+};
 
 async function HelpSections() {
-  const sections = await getHelpSections()
+  const sections = await getHelpSections();
 
   if (sections.length === 0) {
-    return <p className="mt-6 text-gray-500">No help articles found.</p>
+    return <p className="mt-6 text-gray-500">No help articles found.</p>;
   }
 
   return (
@@ -74,14 +73,14 @@ async function HelpSections() {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 async function HelpFilters({ selectedTag }: { selectedTag?: string }) {
-  const tags = await getHelpTags()
+  const tags = await getHelpTags();
 
   if (tags.length === 0) {
-    return null
+    return null;
   }
 
   return (
@@ -126,17 +125,17 @@ async function HelpFilters({ selectedTag }: { selectedTag?: string }) {
         </Button>
       </div>
     </div>
-  )
+  );
 }
 
 async function FilteredHelpArticles({ tag }: { tag?: string }) {
   if (!tag) {
-    return <HelpSections />
+    return <HelpSections />;
   }
 
   // If we have a tag filter, we'll need to import and use getHelpArticlesByTag
-  const { getHelpArticlesByTag } = await import('@/lib/content')
-  const articles = await getHelpArticlesByTag(tag)
+  const { getHelpArticlesByTag } = await import('@/lib/content');
+  const articles = await getHelpArticlesByTag(tag);
 
   if (articles.length === 0) {
     return (
@@ -150,7 +149,7 @@ async function FilteredHelpArticles({ tag }: { tag?: string }) {
           Browse all topics
         </Button>
       </div>
-    )
+    );
   }
 
   return (
@@ -206,15 +205,15 @@ async function FilteredHelpArticles({ tag }: { tag?: string }) {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default async function HelpCenter(props: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-  const searchParams = await props.searchParams
+  const searchParams = await props.searchParams;
 
-  const selectedTag = typeof searchParams.tag === 'string' ? searchParams.tag : undefined
+  const selectedTag = typeof searchParams.tag === 'string' ? searchParams.tag : undefined;
 
   return (
     <main className="overflow-hidden">
@@ -235,5 +234,5 @@ export default async function HelpCenter(props: {
       </Container>
 
     </main>
-  )
+  );
 }

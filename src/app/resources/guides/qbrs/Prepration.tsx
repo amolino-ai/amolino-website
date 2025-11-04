@@ -1,5 +1,5 @@
-import SectionHeading from './SectionHeading'
-import { Table } from '@mantine/core'
+import SectionHeading from './SectionHeading';
+import { Table } from '@mantine/core';
 
 export default function Preparation() {
   return (
@@ -425,5 +425,5 @@ export default function Preparation() {
         </div>
       </div>
     </section>
-  )
+  );
 }

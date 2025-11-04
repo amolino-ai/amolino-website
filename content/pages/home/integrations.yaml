@@ -1,0 +1,39 @@
+subheading: "Integrations"
+heading: "AmolinoAI plays well with your sales stack"
+description: "Integrate with emails, slack/teams, meetings to extract BANT, competition, objection handling, opportunity timelines, contacts, sentiment analysis. AmolinoAI can update SalesForce or Hubspot automatically"
+tagline: "No new behavior required. No extra data entry."
+
+categories:
+  - title: "MEETINGS"
+    integrations:
+      - name: "Teams"
+        src: "/icons/ms_teams_logo.jpeg"
+      - name: "Zoom"
+        src: "/icons/zoom.png"
+      - name: "Google Calendar"
+        src: "/icons/google_meet.png"
+
+  - title: "EMAIL"
+    integrations:
+      - name: "Gmail"
+        src: "/icons/gmail.png"
+      - name: "Outlook"
+        src: "/icons/microsoft.png"
+
+  - title: "MESSAGING"
+    integrations:
+      - name: "Slack"
+        src: "/icons/slack_logo.png"
+      - name: "Teams"
+        src: "/icons/ms_teams_logo.jpeg"
+
+  - title: "CRM"
+    integrations:
+      - name: "Salesforce"
+        src: "/icons/salesforce.png"
+      - name: "HubSpot"
+        src: "/icons/hubspot.png"
+
+cta:
+  primaryText: "Use for Free"
+  primaryUrl: "https://app.amolino.ai"

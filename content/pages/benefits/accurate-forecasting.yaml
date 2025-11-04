@@ -1,0 +1,188 @@
+metadata:
+  title: "Forecast with Confidence | AI-Powered Revenue Forecasting - AmolinoAI"
+  description: "Get 95%+ accurate revenue forecasts with explainable AI. Track every signal, predict outcomes, and defend your numbers with confidence. Transform forecasting from guesswork to certainty."
+  image: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
+
+hero:
+  badgeText: "Forecast Confidently"
+  title: "Defend Every Forecast with Confidence"
+  subtitle: "AI-Powered Revenue Forecasting"
+  description: |
+    Defend your forecast with confidence. Amolino uses AI totracks hundreds of pipeline
+    signals to predict revenue with 95% accuracy—showing the engagement patterns,
+    stakeholder signals, and timeline shifts behind every prediction.
+  ctaText: "Try AmolinoAI"
+  ctaLink: "https://app.amolino.ai"
+  backgroundGradient: "from-blue-600 to-cyan-600"
+
+featureHero:
+  badgeText: "Explainable AI Forecasting"
+  heading: "Forecasts You Can Trust and Explain"
+  description: |
+    Defend your forecast with confidence. Amolino uses AI totracks hundreds of pipeline
+    signals to predict revenue with 95% accuracy—showing the engagement patterns,
+    stakeholder signals, and timeline shifts behind every prediction.
+  image:
+    src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
+    alt: "AI-powered revenue forecasting dashboard showing explainable predictions with signal analysis and scenario planning"
+    width: 3231
+    height: 1770
+  features:
+    - name: "Understand, explain, and defend"
+      description: |
+        Get accurate quarterly revenue forecasts that actually make sense.
+        Every prediction is backed by clear explanations of the signals that drive it. No black boxes.
+    - name: "Deal-level predictions"
+      description: |
+        Amolino provides a quarterly forecast and breaks it down by
+        individual deals—so you can see exactly which deals are
+        likely to close and which are at risk. 
+    - name: "Scenario Planning"
+      description: |
+        View best-case, worst-case, and most-likely revenue scenarios, to plan with
+        confidence and set realistic expectations.
+    - name: "Real-time updates"
+      description: |
+        Forecasts update automatically as deals progress. They always include
+        the latest signals and insights without you having to run reports in
+        SalesForce or HubSpot or munge spreadsheets.
+
+problems:
+  title: "Forecast with Transparency, Not Hope"
+  subtitle: "Transform unreliable forecasts into defendable predictions with explainable AI"
+  cards:
+    - icon: "🎯"
+      title: "AI-Powered Precision"
+      description: "Get quarterly forecasts that show exactly why each deal is likely to close—or slip. Every prediction comes with the signals that drive it. Predictions you can trust and explain."
+    - icon: "⚡"
+      title: "Signal-Based Intelligence"
+      description: "Track engagement drops, timeline shifts, and stakeholder changes that impact your forecast—before they surprise you in the QBR. Real-time visibility into what's changing."
+    - icon: "🔀"
+      title: "Scenario Planning"
+      description: "See your ceiling, floor, and most probable revenue scenarios so you can make informed decisions and set realistic expectations. Plan for best, worst, and likely outcomes."
+
+stats:
+  title: "Forecasts Sales Leaders Can Actually Defend"
+  subtitle: "Real results from explainable forecasting"
+  metrics:
+    - value: "95%"
+      label: "Forecast Accuracy"
+    - value: "4 Weeks"
+      label: "Earlier Warning"
+    - value: "80%"
+      label: "Less Forecast Prep"
+    - value: "100%"
+      label: "Forecast Transparency"
+
+features:
+  title: "Forecast with Confidence, Not Hope"
+  subtitle: "Beyond accurate predictions, AmolinoAI provides a complete toolkit to understand, defend, and improve your forecast accuracy over time"
+  layout: "two-row"
+  items:
+    - name: "Explainable AI Forecast"
+      category: "Intelligence"
+      benefit: "Accurate, explainable forecasts"
+      description: "Analyze pipeline data, deal signals, and historical patterns to deliver accurate, explainable revenue forecasts you can defend."
+      details: "AI-powered predictions • Full transparency • Confidence scoring"
+      icon: "🔍"
+      screenshot:
+        src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
+        width: 1077
+        height: 590
+        fillContainer: false
+      link: "/features/accurate-forecasting/explainable-ai-forecast"
+    - name: "Signal-Based Predictions"
+      category: "Activity"
+      benefit: "Predict outcomes from signals"
+      description: "Analyze hundreds of deal signals to predict win probability, close dates, and revenue outcomes with precision."
+      details: "Multi-signal analysis • Pattern recognition • Early warning system"
+      icon: "💬"
+      screenshot:
+        src: "/screenshots/accurate-forecasting/signal-based-predictions.png"
+        width: 1886
+        height: 6984
+        fillContainer: true
+      link: "/features/accurate-forecasting/signal-based-predictions"
+    - name: "Pipeline Monitor"
+      category: "Monitoring"
+      benefit: "Early risk detection"
+      description: "Highlights deals at risk of slipping based on engagement drops, timeline changes, and competitive threats before they impact your number."
+      details: "Risk alerts • Engagement tracking • Competitive monitoring • Timeline analysis"
+      icon: "📊"
+      screenshot:
+        src: "/screenshots/accurate-forecasting/pipeline-monitor.png"
+        width: 1104
+        height: 581
+        fillContainer: false
+      link: "/features/accurate-forecasting/pipeline-monitor"
+    - name: "Pipeline Lens"
+      category: "Visibility"
+      benefit: "Complete pipeline insight"
+      description: "Deep pipeline insights that drive revenue performance with comprehensive analysis of pipeline health, trends, and opportunities."
+      details: "Health metrics • Trend analysis • Performance benchmarking"
+      icon: "📈"
+      screenshot:
+        src: "/screenshots/accurate-forecasting/pipeline-lens.png"
+        width: 1216
+        height: 768
+        fillContainer: false
+      link: "/features/accurate-forecasting/pipeline-lens"
+
+
+
+howItWorks:
+  title: "How Explainable AI Forecasting Works"
+  subtitle: "From black-box predictions to transparent, defendable forecasts"
+  steps:
+    - title: "AI Analyzes Every Signal"
+      description: "AmolinoAI continuously monitors engagement patterns, timeline changes, stakeholder activity, and competitive signals across your entire pipeline. It identifies which deals are tracking to close and which show warning signs—giving you real-time visibility into forecast health."
+      icon: "cloud"
+    - title: "Generate Transparent Predictions"
+      description: "Get quarterly revenue forecasts with 95%+ accuracy, backed by clear explanations. Every prediction shows the specific signals that drive it—engagement trends, stakeholder coverage, timeline momentum, and risk factors. No black box. Just data you can defend."
+      icon: "lock"
+    - title: "Defend with Confidence"
+      description: "Walk into QBRs with forecasts you can actually explain. See best-case, likely, and worst-case scenarios. Identify at-risk deals weeks before they slip. Make data-driven decisions backed by the insights that matter."
+      icon: "server"
+  testimonial:
+    quote: "This product has been really useful in giving sales teams clarity on their pipeline and how they're going to hit their numbers."
+    author: "Brian Sathianathan"
+    role: "COO at Iterate.ai"
+    avatar: "/people/Brian_Sathianathan.png"
+comparison:
+  title: "Traditional Forecasting vs. Explainable AI"
+  columns:
+    - label: "Capability"
+    - label: "Traditional Forecasting"
+    - label: "Explainable AI"
+  rows:
+    - capability: "Forecast accuracy"
+      traditional: "60-70% accurate"
+      solution: "95%+ accurate"
+    - capability: "Explanation of predictions"
+      traditional: "✗ Black box"
+      solution: "✓ Fully transparent"
+    - capability: "Early warning of risks"
+      traditional: "✗ Reactive"
+      solution: "✓ 4 weeks advance notice"
+    - capability: "Scenario planning"
+      traditional: "Manual analysis"
+      solution: "✓ Automatic best/worst/likely"
+    - capability: "Signal-based insights"
+      traditional: "Limited visibility"
+      solution: "✓ Every signal tracked"
+    - capability: "Forecast prep time"
+      traditional: "Days of work"
+      solution: "Minutes with AI"
+
+whoItsFor:
+  title: "Built For Sales Leaders Who Need Forecast Certainty"
+  subtitle: "This isn't for everyone. It's for leaders who:"
+  cards:
+    - title: "Need to Defend Their Forecasts"
+      description: "You're tired of walking into QBRs with gut-feel predictions. You want forecasts backed by clear, explainable data you can defend with confidence."
+    - title: "Want to Hit Their Number Consistently"
+      description: "You know accurate forecasting is the foundation of predictable revenue. You need precision, not guesswork."
+    - title: "Value Transparency Over Mystery"
+      description: "You don't trust black-box predictions. You want to see exactly what signals drive your forecast and why deals are likely to close—or slip."
+    - title: "Need Early Warning of Risks"
+      description: "You're done being surprised by deals that slip. You want to spot forecast risks weeks before they impact your quarter."

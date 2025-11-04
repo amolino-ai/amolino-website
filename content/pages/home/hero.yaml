@@ -1,0 +1,28 @@
+headline: "Focus on the right deals and win them"
+subheadline: |
+  Amolino analyzes data across all your systems to find what consistently moves deals forward—then tells
+  every rep exactly what to do next.
+stats:
+  - value: "25%"
+    description: "increase in win rates"
+  - value: "10%"
+    description: "reduction in sales cycle time"
+  - value: "90%+"
+    description: "forecast accuracy"
+
+ctas:
+  primaryUrl: "/demo"
+  secondaryUrl: "https://www.youtube.com/watch?v=14f-50LWJy8"
+  tertiaryUrl: "#integrations"
+
+images:
+  light:
+    src: "/screenshots/next-best-action-to-win/opportunity_compass_complete.png"
+    alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+    width: 1168
+    height: 840
+  dark:
+    src: "/screenshots/next-best-action-to-win/opportunity_compass_complete.png"
+    alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+    width: 1168
+    height: 840

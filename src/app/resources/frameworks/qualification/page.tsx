@@ -1,10 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { Container } from '@/components/container';
-import { Heading, Subheading } from '@/components/text';
+import { Container } from '@/components/Container';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 interface Framework {
   id: string;

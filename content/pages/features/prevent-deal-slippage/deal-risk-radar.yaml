@@ -1,0 +1,69 @@
+metadata:
+  title: "Deal Health | AI-Powered Deal Risk Monitoring - AmolinoAI"
+  description: "Prevent deal slippage with AmolinoAI's Deal Health. Monitor deal health in real-time, identify emerging risks, and receive early warnings to keep every deal on track."
+  image: "/screenshots/prevent-deal-slippage/deal-risk-radar-horizontal.png" 
+options:
+  featureName: "Deal Health"
+  showInNavbar: true
+  navbarDescription: "Real-time deal health monitoring with early warning alerts to prevent slippage."
+
+hero:
+  badgeText: "Deal Health"
+  title: "Monitor deal health in real-time to prevent slippage."
+  description: "Deal Health continuously analyzes dozens of deal signals—from engagement patterns to stakeholder activity—to assess health, identify emerging risks, and provide early warnings before deals go off track."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshot:
+    src: "/screenshots/prevent-deal-slippage/deal-risk-radar-horizontal.png"
+    width: 1056
+    height: 270
+    fillContainer: false
+
+showcase:
+  title: "Continuous Deal Health Intelligence."
+  features:
+    - iconPath: "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+      title: "Health Scoring"
+      description: "Get real-time health scores for every deal based on comprehensive analysis of engagement levels, activity patterns, momentum, and dozens of other signals."
+    - iconPath: "M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+      title: "Risk Detection"
+      description: "Automatically identify warning signs like decreased stakeholder engagement, stalled progress, missing information, or weakening champion support."
+    - iconPath: "M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+      title: "Proactive Alerts"
+      description: "Receive timely alerts when deal health deteriorates so you can intervene with corrective actions before it's too late to recover."
+  screenshot:
+    src: "/screenshots/prevent-deal-slippage/deal-risk-radar-horizontal.png"
+    width: 1056
+    height: 270
+    fillContainer: false
+  comparisonTitle: "AI Deal Health vs Manual Deal Reviews"
+  comparisonSubtitle: "Prevent deal slippage with continuous, objective health monitoring powered by AI."
+  traditionalPoints:
+    - "Periodic manual deal reviews (weekly or monthly)"
+    - "Discover issues only after deals have already slipped"
+    - "Subjective, inconsistent health assessments"
+    - "No systematic early warning system"
+    - "Limited visibility into subtle deal risks"
+  aiPoweredPoints:
+    - "Real-time, continuous health monitoring 24/7"
+    - "Early warning days or weeks before deals slip"
+    - "Objective, consistent AI health scoring"
+    - "Proactive, intelligent risk alerts"
+    - "Complete visibility into all deal dynamics"
+    - "Automated health trend tracking over time"
+
+bottomFeature:
+  title: "Keep Every Deal on Track."
+  subtitle: "Prevent slippage proactively"
+  points:
+    - title: "Early Intervention"
+      description: "Address emerging issues before they escalate into deal-killing problems"
+    - title: "Health Trends"
+      description: "Track deal health over time to spot deterioration early and act quickly"
+    - title: "Rescue Playbooks"
+      description: "Get AI-recommended actions to improve deal health and get back on track"
+  screenshot:
+    src: "/screenshots/prevent-deal-slippage/deal-risk-radar-horizontal.png"
+    width: 1056
+    height: 270
+    fillContainer: false

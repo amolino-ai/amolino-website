@@ -1,16 +1,16 @@
-import { Button } from '@/components/Button'
-import { GradientBackground } from '@/components/gradient'
-import { Link } from '@/components/link'
-import { Logo } from '@/components/Logo'
-import { Checkbox, Field, Input, Label } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/16/solid'
-import { clsx } from 'clsx'
-import type { Metadata } from 'next'
+import { Button } from '@/components/Button';
+import { GradientBackground } from '@/components/Gradient';
+import { Link } from '@/components/Link';
+import { Logo } from '@/components/Logo';
+import { Checkbox, Field, Input, Label } from '@headlessui/react';
+import { CheckIcon } from '@heroicons/react/16/solid';
+import { clsx } from 'clsx';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Login',
   description: 'Sign in to your account to continue.',
-}
+};
 
 export default function Login() {
   return (
@@ -88,5 +88,5 @@ export default function Login() {
         </div>
       </div>
     </main>
-  )
+  );
 }

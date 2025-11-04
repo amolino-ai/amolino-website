@@ -1,0 +1,66 @@
+metadata:
+  title: "Pipeline Lens | AI-Powered Pipeline Hygiene - AmolinoAI"
+  description: "Keep your sales pipeline clean and forecast-ready with Pipeline Lens. Automatically identify stale deals, stage inaccuracies, and removal recommendations to ensure your pipeline reflects reality."
+  image: "/screenshots/accurate-forecasting/pipeline-lens.png"
+options:
+  featureName: "Pipeline Lens"
+  showInNavbar: false
+  navbarDescription: "Identify opportunities that need updating, closing, or removal to keep your pipeline clean and forecast-ready."
+
+hero:
+  badgeText: "Pipeline Lens"
+  title: "Clean Your Pipeline Automatically — No Manual Reviews Required."
+  description: "Your pipeline is full of dead deals, stalled opportunities, and incorrectly staged deals that pollute your forecast. Manual pipeline reviews take hours and still miss problems. AmolinoAI automatically identifies opportunities that need updating, closing, or removing from the pipeline—so your forecast reflects reality, not wishful thinking."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshot:
+    src: "/screenshots/accurate-forecasting/pipeline-lens.png"
+    width: 1216
+    height: 768
+
+showcase:
+  title: "Pipeline Hygiene That Happens Automatically."
+  features:
+    - iconPath: "M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"
+      title: "Identify stale opportunities"
+      description: "Automatically flag deals with no activity, no engagement, or no forward momentum."
+    - iconPath: "M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+      title: "Stage accuracy analysis"
+      description: "Identify deals in the wrong stage based on their actual engagement and progression."
+    - iconPath: "M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+      title: "Recommend removals"
+      description: "Get recommendations for deals that should be closed-lost or removed from the pipeline."
+  screenshot:
+    src: "/screenshots/accurate-forecasting/pipeline-lens.png"
+    width: 1216
+    height: 768
+  comparisonTitle: "Pipeline Management"
+  comparisonSubtitle: "From manual cleanup to automatic pipeline hygiene."
+  traditionalPoints:
+    - "Manual pipeline reviews take hours"
+    - "Dead deals pollute the forecast"
+    - "Stale opportunities never get closed"
+    - "Pipeline stages inaccurate"
+    - "Can't trust pipeline numbers"
+  aiPoweredPoints:
+    - "Automatic identification of pipeline issues"
+    - "Clean pipeline that reflects reality"
+    - "Stale deals flagged for action"
+    - "AI-verified stage accuracy"
+    - "Pipeline you can forecast from"
+    - "Continuous hygiene monitoring"
+
+bottomFeature:
+  title: "Trust Your Pipeline Again."
+  subtitle: "Better forecasts from cleaner pipelines"
+  points:
+    - title: "90% Cleaner Pipeline"
+      description: "Remove dead weight automatically when AI identifies stale and unwinnable deals"
+    - title: "5 Hours Saved Per Week"
+      description: "Stop manual pipeline reviews when AI does the hygiene work continuously"
+    - title: "30% More Accurate Forecast"
+      description: "Forecast with confidence when your pipeline reflects actual opportunities"
+  screenshot:
+    src: "/screenshots/accurate-forecasting/pipeline-lens.png"
+    width: 1216
+    height: 768

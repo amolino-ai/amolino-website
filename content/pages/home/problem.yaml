@@ -1,0 +1,23 @@
+sectionLabel: "Challenges faced by B2B sales teams"
+headline: "Inconsistent Sales Execution?"
+description: "Lack of standardized processes and unpredictable rep performance are costing you deals and revenue."
+ctaText: "See how we help"
+ctaUrl: "#"
+
+problems:
+  - percentage: "62%"
+    statDescription: "Your best rep closes 60% of deals. Your average rep? 25%."
+    problemDescription: "Rep variability is killing your win rate and wasting your headcount investment."
+  - percentage: "$12M → $9M"
+    statDescription: "Quarter-end surprises destroy board confidence"
+    problemDescription: "Your CRM says $12M. Reality? $9M. Deals slip without warning and you can't explain why."
+  - percentage: "80% Quota Attainment"
+    statDescription: "You reach only 80% of forecasted revenue."
+    problemDescription: "Explaining target misses to the board is exhausting and erodes trust."
+
+testimonial:
+  quote: "This product has been really useful in giving sales teams clarity on their pipeline and how they're going to hit their numbers."
+  author:
+    name: "Brian Sathianathan"
+    title: "COO at Iterate.ai"
+    image: "/people/Brian_Sathianathan.png"

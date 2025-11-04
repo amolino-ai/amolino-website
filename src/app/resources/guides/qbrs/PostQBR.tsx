@@ -1,5 +1,5 @@
-import SectionHeading from './SectionHeading'
-import { Table } from '@mantine/core'
+import SectionHeading from './SectionHeading';
+import { Table } from '@mantine/core';
 
 export default function PostQBR() {
   return (
@@ -363,5 +363,5 @@ export default function PostQBR() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,130 +1,59 @@
-'use client'
+'use client';
 
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverPanel,
-} from '@headlessui/react'
-import { Bars2Icon, ChevronDownIcon } from '@heroicons/react/24/solid'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Link } from './link'
-import { Logo } from '@/components/Logo'
-import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
-import { useState } from 'react'
+} from '@headlessui/react';
+import { Bars2Icon } from '@heroicons/react/24/solid';
+import { motion } from 'framer-motion';
+import { Link } from '@/components/Link';
+import { Logo } from '@/components/Logo';
+import { PlusGrid, PlusGridItem, PlusGridRow } from './PlusGrid';
+import type { NavbarProduct, NavbarBenefit, NavbarLink } from '@/lib/content/types';
+import { DesktopDropdown } from './Navbar/DesktopDropdown';
+import { MobileDropdown } from './Navbar/MobileDropdown';
 
-const products = [
-  {
-    name: 'AI Revenue Forecasting',
-    href: '/product/revenue-analytics',
-    description: 'Track pipeline, forecasts, and sales velocity. Make data-driven decisions to meet revenue goals',
-    icon: '/icons/revenue-analytics.svg'
-  },
-  {
-    name: 'Guided Selling',
-    href: '/product/guided-selling',
-    description: 'AI-driven insights on deal health, customer sentiment, and next steps and competition',
-    icon: '/icons/guided-selling.svg'
-  },
-  {
-    name: 'Team Insights',
-    href: '/product/team-insights',
-    description: 'Monitor team performance, and identify find coaching needs, for better sales outcomes',
-    icon: '/icons/team-insights.svg'
-  },
-  {
-    name: 'Customer 360',
-    href: '/product/customer-360',
-    description: 'All customer interactions, contacts, and documents in one place for faster collaboration',
-    icon: '/icons/customer-360.svg'
-  },
-]
-
-const links = [
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/company', label: 'Company' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/use-cases', label: 'Use Cases' },
-  { href: 'https://app.amolino.ai', label: 'Login' },
-]
-
-function ProductDropdown() {
-  const [isOpen, setIsOpen] = useState(false)
-  
-  const handleLinkClick = () => {
-    setIsOpen(false)
-  }
-  
-  return (
-    <Popover className="relative h-full">
-      {({ open }) => (
-        <div
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-          className="h-full"
-        >
-          <PopoverButton 
-            className="flex items-center gap-1 px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/[2.5%] outline-none h-full"
-          >
-            Product
-            <ChevronDownIcon className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
-          </PopoverButton>
-
-          <AnimatePresence>
-            {isOpen && (
-              <PopoverPanel 
-                static
-                className="absolute left-0 z-50 mt-1 w-screen max-w-sm rounded-2xl bg-white p-2 shadow-lg ring-1 ring-gray-950/5"
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.2 }}
-                  className="relative grid gap-2"
-                >
-                  <Link
-                    href="/product"
-                    onClick={handleLinkClick}
-                    className="relative flex items-start gap-3 rounded-xl p-4 text-gray-950 transition-colors hover:bg-gray-50 border-b border-gray-100"
-                  >
-                    <img src="/icons/all-products.svg" alt="" className="h-6 w-6 text-pink-600" />
-                    <div className="flex flex-col gap-1">
-                      <span className="text-base font-semibold">All Products</span>
-                      <span className="text-sm text-gray-600">View our complete product suite</span>
-                    </div>
-                  </Link>
-                  {products.map((product) => (
-                    <Link
-                      key={product.href}
-                      href={product.href}
-                      onClick={handleLinkClick}
-                      className="relative flex items-start gap-3 rounded-xl p-4 text-gray-950 transition-colors hover:bg-gray-50"
-                    >
-                      <img src={product.icon} alt="" className="h-6 w-6 text-pink-600" />
-                      <div className="flex flex-col gap-1">
-                        <span className="text-base font-semibold">{product.name}</span>
-                        <span className="text-sm text-gray-600">{product.description}</span>
-                      </div>
-                    </Link>
-                  ))}
-                </motion.div>
-              </PopoverPanel>
-            )}
-          </AnimatePresence>
-        </div>
-      )}
-    </Popover>
-  )
+interface DesktopNavProps {
+  allProducts: NavbarProduct;
+  benefits: NavbarBenefit[];
+  links: NavbarLink[];
 }
 
-function DesktopNav() {
+/*
+ * The main navigation for website. 
+  Summary Table
+
+  | Scenario              | Width Check | Height Check | File:Line                              |
+  |-----------------------|-------------|--------------|----------------------------------------|
+  | Mobile                | < 1024px    | N/A          | Navbar.tsx (Tailwind lg breakpoint) |
+  | Small Desktop - Tall  | 1024-1366px | ≥ 950px*     | DesktopDropdown.tsx            |
+  | Small Desktop - Short | 1024-1366px | < 950px*     | DesktopDropdown.tsx             |
+  | Large Desktop         | ≥ 1366px    | N/A          | DesktopDropdown.tsx                |
+
+  Effective height: viewportHeight - 150px ≥ 800px = viewportHeight ≥ 950px
+
+  ---
+  Key Variables to Adjust
+
+  If you want to change these thresholds:
+
+  1. Mobile breakpoint (1024px): Change Tailwind's lg breakpoint in tailwind.config.js OR change the classes in Navbar.tsx
+  2. Vertical/Horizontal width (1366px): Change line 53 in DesktopDropdown.tsx:53
+            const shouldUseVertical = viewportWidth >= 1024 && viewportWidth < 1366;
+
+  3. Height threshold (800px): Change estimatedMinHeight on line 66 in DesktopDropdown.tsx:66
+          const estimatedMinHeight = 800;
+  4. Navbar spacing (150px): Change navbarAndSpacing on line 67 in DesktopDropdown.tsx:67
+          const navbarAndSpacing = 150; // Navbar height + margin
+
+  */
+
+function DesktopNav({ allProducts, benefits, links }: DesktopNavProps) {
   return (
     <nav className="relative hidden lg:flex z-30">
       <div className="flex items-center">
-        <ProductDropdown />
+        <DesktopDropdown allProducts={allProducts} benefits={benefits} />
       </div>
       {links.map(({ href, label }) => (
         <div key={href} className="flex items-center">
@@ -137,7 +66,7 @@ function DesktopNav() {
         </div>
       ))}
     </nav>
-  )
+  );
 }
 
 function MobileNavButton() {
@@ -148,46 +77,36 @@ function MobileNavButton() {
     >
       <Bars2Icon className="size-6" />
     </DisclosureButton>
-  )
+  );
 }
 
-function MobileNav() {
+interface MobileNavProps {
+  benefits: NavbarBenefit[];
+  links: NavbarLink[];
+  close: () => void;
+}
+
+function MobileNav({ benefits, links, close }: MobileNavProps) {
   return (
     <DisclosurePanel className="lg:hidden">
       <div className="flex flex-col gap-6 py-4">
-        <div className="space-y-3">
-          <div className="font-medium text-gray-950">Product</div>
-          {products.map((product, index) => (
-            <motion.div
-              initial={{ opacity: 0, rotateX: -90 }}
-              animate={{ opacity: 1, rotateX: 0 }}
-              transition={{
-                duration: 0.15,
-                ease: 'easeInOut',
-                rotateX: { duration: 0.3, delay: index * 0.1 },
-              }}
-              key={product.href}
-              className="pl-4"
-            >
-              <Link href={product.href}>
-                <div className="text-base font-medium text-gray-950">{product.name}</div>
-                <div className="text-sm text-gray-600">{product.description}</div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-        {links.map(({ href, label }, linkIndex) => (
+        <MobileDropdown benefits={benefits} close={close} />
+        {links.map(({ href, label }: NavbarLink, linkIndex: number) => (
           <motion.div
             initial={{ opacity: 0, rotateX: -90 }}
             animate={{ opacity: 1, rotateX: 0 }}
             transition={{
               duration: 0.15,
               ease: 'easeInOut',
-              rotateX: { duration: 0.3, delay: (linkIndex + products.length) * 0.1 },
+              rotateX: { duration: 0.3, delay: (linkIndex + benefits.length) * 0.1 },
             }}
             key={href}
           >
-            <Link href={href} className="text-base font-medium text-gray-950">
+            <Link
+              href={href}
+              className="text-base font-medium text-gray-950"
+              onClick={close}
+            >
               {label}
             </Link>
           </motion.div>
@@ -198,31 +117,42 @@ function MobileNav() {
         <div className="absolute inset-x-0 top-2 border-t border-black/5" />
       </div>
     </DisclosurePanel>
-  )
+  );
 }
 
-export function Navbar({ banner }: { banner?: React.ReactNode }) {
+interface NavbarProps {
+  banner?: React.ReactNode;
+  allProducts: NavbarProduct;
+  benefits: NavbarBenefit[];
+  links: NavbarLink[];
+}
+
+export function Navbar({ banner, allProducts, benefits, links }: NavbarProps) {
   return (
     <Disclosure as="header" className="pt-12 sm:pt-16 relative z-50">
-      <PlusGrid>
-        <PlusGridRow className="relative flex justify-between">
-          <div className="relative flex gap-6">
-            <PlusGridItem className="py-3">
-              <Link href="/" title="Home">
-                <Logo className="h-9" />
-              </Link>
-            </PlusGridItem>
-            {banner && (
-              <div className="relative hidden items-center py-3 lg:flex">
-                {banner}
+      {({ close }) => (
+        <>
+          <PlusGrid>
+            <PlusGridRow className="relative flex justify-between">
+              <div className="relative flex gap-6">
+                <PlusGridItem className="py-3">
+                  <Link href="/" title="Amolino Home">
+                    <Logo className="h-9" />
+                  </Link>
+                </PlusGridItem>
+                {banner && (
+                  <div className="relative hidden items-center py-3 lg:flex">
+                    {banner}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <DesktopNav />
-          <MobileNavButton />
-        </PlusGridRow>
-      </PlusGrid>
-      <MobileNav />
+              <DesktopNav allProducts={allProducts} benefits={benefits} links={links} />
+              <MobileNavButton />
+            </PlusGridRow>
+          </PlusGrid>
+          <MobileNav benefits={benefits} links={links} close={close} />
+        </>
+      )}
     </Disclosure>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { UserIcon } from '@heroicons/react/16/solid'
-import { defineField, defineType } from 'sanity'
+import { UserIcon } from '@heroicons/react/16/solid';
+import { defineField, defineType } from 'sanity';
 
 export const authorType = defineType({
   name: 'author',
@@ -33,4 +33,4 @@ export const authorType = defineType({
       media: 'image',
     },
   },
-})
+});

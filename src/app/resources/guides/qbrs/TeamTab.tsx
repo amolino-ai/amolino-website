@@ -1,18 +1,18 @@
-'use client'
+'use client';
 
-import { Tabs, TabsList, TabsPanel, TabsTab } from '@mantine/core'
-import { useState } from 'react'
-import type { ReactNode } from 'react'
+import { Tabs, TabsList, TabsPanel, TabsTab } from '@mantine/core';
+import { useState } from 'react';
+import type { ReactNode } from 'react';
 
 export default function TeamTabs() {
 
 
 
-    const [activeTab, setActiveTab] = useState('sales')
+    const [activeTab, setActiveTab] = useState('sales');
 
   // Custom tab component to handle the active styling
   const CustomTab = ({ value, children }: { value: string; children: ReactNode }) => {
-    const isActive = activeTab === value
+    const isActive = activeTab === value;
     
     return (
       <TabsTab 
@@ -26,8 +26,8 @@ export default function TeamTabs() {
       >
         {children}
       </TabsTab>
-    )
-  }
+    );
+  };
   return (
     <Tabs 
       value={activeTab} 
@@ -298,5 +298,5 @@ export default function TeamTabs() {
         </div>
       </TabsPanel>
     </Tabs>
-  )
+  );
 }

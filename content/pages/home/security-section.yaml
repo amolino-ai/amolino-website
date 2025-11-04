@@ -1,0 +1,21 @@
+heading: "Security and Privacy"
+description: "At AmolinoAI, we understand that security and privacy are fundamental to your organization and to earning your trust. We have worked with the world's leading organizations to ensure that we follows industry-standard security and privacy policies."
+
+features:
+  - title: "Google Certified Security"
+    description: "Google has verified that we are a CASA 2 certified vendor that follows industry-best security policies"
+
+  - title: "Microsoft Cloud Partner"
+    description: "AmolinoAI is a Microsoft approved cloud provider"
+
+  - title: "CASA 2 Accredited"
+    description: "AmolinoAI has obtained CASA 2 certification. CASA 2 is provided after independent third-party security auditor"
+
+  - title: "Encryption In Transit"
+    description: "Your data is protected during transit by strong encryption (TLS 1.2)"
+
+  - title: "Encryption At Rest"
+    description: "Your data is encrypted at rest with strong AES-265 bit encryption"
+
+  - title: "GDPR / CCPA Compliant"
+    description: "We are fully compliant with European GDPR and California CCPA"

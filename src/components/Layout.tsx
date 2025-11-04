@@ -1,19 +1,21 @@
-'use client'
+'use client';
 
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 
-import { Footer } from '@/components/footer'
-import { type Section, SectionProvider } from '@/components/SectionProvider'
-import { Container } from '@mantine/core'
+import { Footer } from '@/components/Footer';
+import { type Section, SectionProvider } from '@/components/SectionProvider';
+import { type FooterContent } from '@/lib/content';
 
 export function Layout({
   children,
   allSections,
+  footerContent,
 }: {
   children: React.ReactNode
   allSections: Record<string, Array<Section>>
+  footerContent: FooterContent
 }) {
-  let pathname = usePathname()
+  let pathname = usePathname();
 
   return (
       <SectionProvider sections={allSections[pathname] ?? []}>
@@ -40,9 +42,9 @@ export function Layout({
           {/* We have removed the pt-14 from the following class MDX Layout */}
           <div className="relative flex h-full flex-col px-4 sm:px-6 lg:px-8">
             <main className="flex-auto">{children}</main>
-            <Footer />
+            <Footer content={footerContent} />
           </div>
         </div>
       </SectionProvider>
-  )
+  );
 }

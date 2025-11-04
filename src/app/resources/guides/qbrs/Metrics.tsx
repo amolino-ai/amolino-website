@@ -1,5 +1,5 @@
-import { Tabs, TabsList, TabsPanel, TabsTab, Table } from '@mantine/core'
-import SectionHeading from './SectionHeading'
+import { Tabs, TabsList, TabsPanel, TabsTab, Table } from '@mantine/core';
+import SectionHeading from './SectionHeading';
 export default function MetricsTabs() {
   return (
     <section id="metrics" className="scroll-mt-20">
@@ -400,5 +400,5 @@ export default function MetricsTabs() {
       </div>
     </div>
     </section>
-  )
+  );
 }

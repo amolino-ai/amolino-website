@@ -1,6 +1,6 @@
-import { Container } from '@/components/container'
-import { Heading, Subheading } from '@/components/text'
-import { StatsCard } from './StatsCard'
+import { Container } from '@/components/Container';
+import { Heading, Subheading } from '@/components/Text';
+import { StatsCard } from './StatsCard';
 
 interface FeatureCardProps {
   title: string
@@ -26,7 +26,7 @@ function FeatureCard({ title, children }: FeatureCardProps) {
       <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       <div className="mt-4 text-gray-600">{children}</div>
     </div>
-  )
+  );
 }
 
 export function Challenge({ subheading, heading, description, stats, features }: ChallengeProps) {
@@ -50,5 +50,5 @@ export function Challenge({ subheading, heading, description, stats, features }:
         </div>
       </Container>
     </div>
-  )
+  );
 } 

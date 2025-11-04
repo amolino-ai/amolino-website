@@ -1,0 +1,66 @@
+metadata:
+  title: "Coaching Advisor | AI-Powered Sales Coaching - AmolinoAI"
+  description: "Scale effective coaching with AI-powered insights that identify coaching opportunities and provide personalized development plans for every rep."
+  image: "/screenshots/next-best-action-to-win/opportunities_health_recommendations.png"
+options:
+  featureName: "Coaching Advisor"
+  showInNavbar: false
+  navbarDescription: "Scale effective coaching with AI-powered insights that identify coaching opportunities and provide personalized development plans for every rep."
+
+hero:
+  badgeText: "Coaching Intelligence"
+  title: "Scale your best coaching practices with AI."
+  description: "AI Coaching Advisor analyzes rep performance, identifies skill gaps and coaching opportunities, and provides data-driven insights to help managers develop every team member into a top performer."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshot:
+    src: "/screenshots/next-best-action-to-win/coaching-advisor.png"
+    width: 2760
+    height: 2289
+
+showcase:
+  title: "Data-Driven Coaching at Scale."
+  features:
+    - iconPath: "M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+      title: "Rep Performance Analytics"
+      description: "Identify individual strengths, weaknesses, skill gaps, and coaching opportunities for every team member with comprehensive performance analytics."
+    - iconPath: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+      title: "Personalized Coaching Plans"
+      description: "Get tailored, actionable coaching recommendations for each rep based on their individual behavior patterns, deal outcomes, and development areas."
+    - iconPath: "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
+      title: "Skill Development Tracking"
+      description: "Monitor skill progression, track coaching effectiveness over time, and measure the impact of your development initiatives on rep performance."
+  screenshot:
+    src: "/screenshots/next-best-action-to-win/coaching-advisor.png"
+    width: 2760
+    height: 2289
+  comparisonTitle: "AI Coaching Advisor vs Traditional Sales Coaching"
+  comparisonSubtitle: "Empower managers to coach every rep effectively with data-driven insights and personalized guidance."
+  traditionalPoints:
+    - "Coaching based on gut feel and anecdotes"
+    - "Limited visibility into actual rep performance"
+    - "Generic one-size-fits-all coaching advice"
+    - "Reactive coaching only after poor performance"
+    - "No way to measure coaching effectiveness"
+  aiPoweredPoints:
+    - "Data-driven, objective coaching recommendations"
+    - "Complete visibility into rep activities and outcomes"
+    - "Personalized coaching tailored to each rep's needs"
+    - "Proactive coaching to prevent performance issues"
+    - "Track coaching impact and skill development progress"
+    - "Scale best coaching practices across the entire team"
+
+bottomFeature:
+  title: "Develop Top Performers."
+  subtitle: "Elevate your entire team"
+  points:
+    - title: "Targeted Coaching"
+      description: "Focus on the highest-impact development areas for each individual rep"
+    - title: "Performance Tracking"
+      description: "Monitor progress continuously and measure coaching effectiveness with clear metrics"
+    - title: "Best Practice Sharing"
+      description: "Identify and replicate winning behaviors across your entire sales organization"
+  screenshot:
+    src: "/screenshots/next-best-action-to-win/coaching-advisor.png"
+    width: 2760
+    height: 2289

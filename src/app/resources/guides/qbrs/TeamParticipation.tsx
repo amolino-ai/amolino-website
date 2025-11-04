@@ -1,5 +1,5 @@
-import SectionHeading from './SectionHeading'
-import TeamTabs from './TeamTab'
+import SectionHeading from './SectionHeading';
+import TeamTabs from './TeamTab';
 
 export default function TeamParticipation() {
   return (
@@ -14,5 +14,5 @@ export default function TeamParticipation() {
         <TeamTabs />
       </div>
     </section>
-  )
+  );
 }

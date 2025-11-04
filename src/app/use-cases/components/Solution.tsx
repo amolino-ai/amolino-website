@@ -1,5 +1,5 @@
-import { Container } from '@/components/container'
-import { Heading, Subheading } from '@/components/text'
+import { Container } from '@/components/Container';
+import { Heading, Subheading } from '@/components/Text';
 
 interface FeatureListProps {
   title: string
@@ -31,7 +31,7 @@ function FeatureList({ title, items }: FeatureListProps) {
         ))}
       </ul>
     </div>
-  )
+  );
 }
 
 export function Solution({ subheading, heading, features }: SolutionProps) {
@@ -49,5 +49,5 @@ export function Solution({ subheading, heading, features }: SolutionProps) {
         </div>
       </Container>
     </div>
-  )
+  );
 } 

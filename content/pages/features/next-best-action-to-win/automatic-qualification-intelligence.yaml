@@ -1,0 +1,69 @@
+metadata:
+  title: "Automatic Opportunity Qualification | AI-Powered Deal Qualification - AmolinoAI"
+  description: "Automatically qualify opportunities with AI-powered scoring based on fit, intent, and win probability to focus on the right deals."
+  image: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
+options:
+  featureName: "Automatic Opportunity Qualification"
+  showInNavbar: false
+  navbarDescription: "Automatically qualify opportunities with AI-powered scoring based on fit, intent, and win probability to focus on the right deals."
+
+hero:
+  badgeText: "Qualification"
+  title: "Automatically qualify every opportunity with AI."
+  description: "AI analyzes every opportunity against your ideal customer profile, buying signals, and historical win patterns to instantly score qualification, ensuring your team focuses on high-value, winnable deals."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshot:
+    src: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
+    width: 1104
+    height: 160
+    fillContainer: false
+
+showcase:
+  title: "Smart Qualification at Scale."
+  features:
+    - iconPath: "M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
+      title: "AI-Powered Qualification Scoring"
+      description: "Automatically score and rank every opportunity based on ideal customer fit, buying intent signals, and likelihood to close using sophisticated AI models."
+    - iconPath: "M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+      title: "Consistent Qualification Standards"
+      description: "Apply standardized qualification frameworks like BANT, MEDDIC, or custom criteria consistently across your entire sales organization."
+    - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+      title: "Real-Time Qualification Updates"
+      description: "Qualification scores update automatically as new signals emerge, engagement changes, or deal dynamics shift, keeping priorities always current."
+  screenshot:
+    src: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
+    width: 1104
+    height: 160
+    fillContainer: false
+  comparisonTitle: "AI Opportunity Qualification vs Manual Qualification"
+  comparisonSubtitle: "Scale your qualification process with consistent, data-driven intelligence."
+  traditionalPoints:
+    - "Manual BANT/MEDDIC qualification by reps"
+    - "Inconsistent scoring across team members"
+    - "Time-consuming opportunity assessment"
+    - "Subjective, biased qualification criteria"
+    - "Delayed updates as deals evolve"
+  aiPoweredPoints:
+    - "Automated, instant qualification for all opportunities"
+    - "Standardized scoring methodology organization-wide"
+    - "Instant qualification at scale with zero effort"
+    - "Objective, signal-based qualification criteria"
+    - "Real-time updates as signals change"
+    - "Continuous learning from won and lost deals"
+
+bottomFeature:
+  title: "Focus on High-Value Opportunities."
+  subtitle: "Maximize pipeline efficiency"
+  points:
+    - title: "Automated Scoring"
+      description: "Let AI handle qualification so reps can focus on selling activities"
+    - title: "Consistent Standards"
+      description: "Apply uniform qualification criteria across your entire team automatically"
+    - title: "Priority Focus"
+      description: "Identify and pursue the most promising, well-qualified opportunities first"
+  screenshot:
+    src: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
+    width: 1104
+    height: 160
+    fillContainer: false

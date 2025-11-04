@@ -1,0 +1,66 @@
+metadata:
+  title: "Zero-effort CRM Updates | AI-Powered CRM Automation - AmolinoAI"
+  description: "Eliminate manual CRM updates with automatic activity capture, intelligent field updates, and real-time sync to keep data perfect."
+  image: "/screenshots/next-best-action-to-win/dashboard_rep_view_april_2025.jpg"
+options:
+  featureName: "Zero-effort CRM Updates"
+  showInNavbar: false
+  navbarDescription: "Eliminate manual CRM updates with automatic activity capture, intelligent field updates, and real-time sync to keep data perfect."
+
+hero:
+  badgeText: "CRM Automation"
+  title: "Never manually update your CRM again."
+  description: "Automatically capture and log all deal activities, intelligently update fields and stages, and maintain perfect CRM hygiene without any manual effort from your sales team, freeing them to focus on selling."
+  ctaText: "Try AmolinoAI"
+  ctaHref: "https://app.amolino.ai"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
+
+showcase:
+  title: "Effortless CRM Hygiene."
+  features:
+    - iconPath: "M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
+      title: "Automatic Activity Capture"
+      description: "Automatically capture and log all emails, calls, meetings, and notes without any manual logging effort from reps, ensuring complete activity history."
+    - iconPath: "M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+      title: "Smart Field Updates"
+      description: "AI automatically updates deal stages, close dates, and key fields based on activity patterns, engagement signals, and deal progression indicators."
+    - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+      title: "Real-Time Sync"
+      description: "Keep your CRM always current with instant, bi-directional syncing that ensures data accuracy across all systems in real-time."
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768
+  comparisonTitle: "Automatic CRM Enrichment vs Manual CRM Updates"
+  comparisonSubtitle: "Free your team from CRM data entry and administrative work to focus on selling."
+  traditionalPoints:
+    - "Manual logging of every interaction"
+    - "Hours wasted weekly on CRM admin tasks"
+    - "Incomplete or missing activity data"
+    - "Delayed updates and stale, inaccurate records"
+    - "Low rep adoption due to update friction"
+  aiPoweredPoints:
+    - "Automatic capture of all interactions"
+    - "Zero time spent on manual data entry"
+    - "Complete, comprehensive activity records"
+    - "Real-time updates as activities occur"
+    - "100% rep adoption with zero effort required"
+    - "AI-powered intelligent field enrichment"
+
+bottomFeature:
+  title: "Reclaim Your Team's Time."
+  subtitle: "More selling, less admin"
+  points:
+    - title: "Zero-Effort Logging"
+      description: "Automatically capture every email, call, and meeting without any manual logging effort"
+    - title: "Intelligent Updates"
+      description: "AI automatically updates deal stages and key fields based on activity signals and patterns"
+    - title: "Perfect Data Quality"
+      description: "Maintain complete, accurate, up-to-date CRM records automatically without rep effort"
+  screenshot:
+    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    width: 1216
+    height: 768

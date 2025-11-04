@@ -13,5 +13,5 @@ export default function GuideHeader() {
         how to transform your QBRs from status meetings into powerful strategic tools.
       </p>
     </header>
-  )
+  );
 }

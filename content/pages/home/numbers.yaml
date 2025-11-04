@@ -1,0 +1,13 @@
+title: "The Numbers"
+
+stats:
+  - label: "Increase in Pipeline"
+    value: 20
+    suffix: "%"
+  - label: "Hours Saved Each Day"
+    value: 2
+    suffix: " hours"
+    decimals: 1
+  - label: "Increase in Forecast Accuracy"
+    value: 90
+    suffix: "%"

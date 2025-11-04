@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import { useSectionStore } from '@/components/SectionProvider'
-import { cn } from '@/lib/utils'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useSectionStore } from '@/components/SectionProvider';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 interface GuideNavigationProps {
   sections: {
@@ -14,9 +14,9 @@ interface GuideNavigationProps {
 }
 
 export default function GuideNavigation({ sections }: GuideNavigationProps) {
-  const pathname = usePathname()
-  const visibleSections = useSectionStore((state) => state.visibleSections)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname();
+  const visibleSections = useSectionStore((state) => state.visibleSections);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <>
@@ -65,5 +65,5 @@ export default function GuideNavigation({ sections }: GuideNavigationProps) {
         </div>
       </nav>
     </>
-  )
+  );
 } 

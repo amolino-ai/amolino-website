@@ -1,4 +1,4 @@
-import SectionHeading from './SectionHeading'
+import SectionHeading from './SectionHeading';
 
 export default function AdditionalTips() {
   return (
@@ -134,5 +134,5 @@ export default function AdditionalTips() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -4,6 +4,113 @@
   --font-sans: Switzer, system-ui, sans-serif;
 
   --radius-4xl: 2rem;
+
+  /* Neutral grays - for backgrounds, borders, text */
+  --color-neutral-50: #f7f7f8;
+  --color-neutral-100: #eeeef0;
+  --color-neutral-200: #dadadd;
+  --color-neutral-300: #b9b9c0;
+  --color-neutral-400: #93949d;
+  --color-neutral-500: #767781;
+  --color-neutral-600: #52525b;
+  --color-neutral-700: #52525b;
+  --color-neutral-800: #434349;
+  --color-neutral-900: #3a3a40;
+  --color-neutral-950: #27272a;
+
+  /* Primary - brand color (teal/cyan blue) */
+  --color-primary-50: #f1f9fe;
+  --color-primary-100: #e2f2fc;
+  --color-primary-200: #bde6fa;
+  --color-primary-300: #83d3f6;
+  --color-primary-400: #42bcee;
+  --color-primary-500: #19a5de;
+  --color-primary-600: #0c84bd;
+  --color-primary-700: #0b6a99;
+  --color-primary-800: #0d597f;
+  --color-primary-900: #114b69;
+  --color-primary-950: #0b2f46;
+
+  /* Secondary - complementary warm orange */
+  --color-secondary-50: #fff3ed;
+  --color-secondary-100: #ffe3d5;
+  --color-secondary-200: #fec7aa;
+  --color-secondary-300: #fda374;
+  --color-secondary-400: #fb7d3c;
+  --color-secondary-500: #f96416;
+  --color-secondary-600: #ea580c;
+  --color-secondary-700: #c24a0c;
+  --color-secondary-800: #9a4112;
+  --color-secondary-900: #7c3612;
+  --color-secondary-950: #431c07;
+
+  /* Tertiary - purple for accents */
+  --color-tertiary-50: #faf5ff;
+  --color-tertiary-100: #f4e8ff;
+  --color-tertiary-200: #ebd5ff;
+  --color-tertiary-300: #c384fc;
+  --color-tertiary-400: #c384fc;
+  --color-tertiary-500: #aa55f7;
+  --color-tertiary-600: #9333ea;
+  --color-tertiary-700: #6821a8;
+  --color-tertiary-800: #6821a8;
+  --color-tertiary-900: #541c87;
+  --color-tertiary-950: #380764;
+
+  /* Success - semantic UI state */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+  --color-success-950: #052e16;
+
+  /* Warning - semantic UI state */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+  --color-warning-950: #451a03;
+
+  /* Error - semantic UI state */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  --color-error-950: #450a0a;
+
+  /* Info - semantic UI state */
+  --color-info-50: #eff6ff;
+  --color-info-100: #dbeafe;
+  --color-info-200: #bfdbfe;
+  --color-info-300: #93c5fd;
+  --color-info-400: #60a5fa;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+  --color-info-800: #1e40af;
+  --color-info-900: #1e3a8a;
+  --color-info-950: #172554;
+
+  --color-test-one: #2b3559;
+  --color-test-two: ##5ac5b5;
 }
 
 @keyframes move-x {
@@ -13,4 +120,9 @@
   100% {
     transform: translateX(var(--move-x-to));
   }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }

@@ -1,12 +1,12 @@
-'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import Link from 'next/link'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/container'
+'use client';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import Link from 'next/link';
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
 
 // Define your form schema with Zod
 const formSchema = z.object({
@@ -15,14 +15,14 @@ const formSchema = z.object({
   company: z.string().optional(),
   phoneNumber: z.string().optional(),
   message: z.string().optional()
-})
+});
 
 // TypeScript type derived from schema
-type FormValues = z.infer<typeof formSchema>
+type FormValues = z.infer<typeof formSchema>;
 
 export default function DemoPage() {
-  const router = useRouter()
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
     register,
@@ -37,10 +37,10 @@ export default function DemoPage() {
       phoneNumber: '',
       message: ''
     }
-  })
+  });
 
   const onSubmit = async (data: FormValues) => {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     try {
       const response = await fetch('/api/bookdemo', {
         method: 'POST',
@@ -48,16 +48,16 @@ export default function DemoPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      })
+      });
       if (response.ok) {
-        router.push('/')
+        router.push('/');
       }
     } catch (error) {
-      console.error('Error submitting form:', error)
+      console.error('Error submitting form:', error);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <div className="overflow-hidden">
@@ -163,5 +163,5 @@ export default function DemoPage() {
         </Container>
       </div>
     </div>
-  )
+  );
 }

@@ -1,0 +1,45 @@
+hero:
+  badge: "Comparison"
+  title: "Amolino Outperforms HubSpot in Revenue Forecasting"
+  subtitle: "Forecasting without estimates, gut checks or endless meetings"
+  description: "Forecasting with HubSpot has several limitations that can hinder its effectiveness. The process relies heavily on manual inputs, where account executives (AEs) assign probabilities to deals based on their subjective judgment rather than real-time data or advanced analytics. This gut-based approach often leads to inconsistencies, as each AE may interpret probabilities differently, requiring extensive meetings to align on definitions and expectations. Additionally, the lack of real-time updates means forecasts can quickly become outdated, especially in fast-moving sales environments. These challenges are compounded by the time-consuming nature of maintaining accurate data and configuring probabilities, which detracts from more strategic sales activities."
+
+comparisons:
+  title: "Head-to-Head Comparison"
+  heading: "How We Compare"
+  items:
+    - title: "Real-Time Accuracy vs. Manual Estimates"
+      amolino: "Dynamic dashboard provides real-time insights into your sales pipeline, analyzing hundreds of data points—such as historical performance, buyer behavior, and best practices—to deliver precise, up-to-the-minute forecasts."
+      hubspot: "Depends on manual deal stages and probability weightings. Sales reps update deal information and assign probabilities, which can lead to outdated or biased estimates, often resulting in overly optimistic projections."
+    - title: "AI-Driven Insights vs. Gut Feelings"
+      amolino: "Our AI-powered assistant uses machine learning to analyze your pipeline, offering realistic projections based on patterns and trends. It processes vast datasets to eliminate bias and provide objective, tailored predictions—all with one-click simplicity."
+      hubspot: "Leans on predefined probabilities tied to deal stages, which don't adapt to individual deal nuances. Category-based forecasting requires manual classification by reps, introducing inconsistency and gut-driven decisions."
+    - title: "Proactive Recommendations vs. Reactive Tracking"
+      amolino: "Goes beyond prediction—it tells you how to improve your forecast. Our platform identifies at-risk deals, suggests strategies to boost pipeline velocity, and provides actionable steps to hit your targets."
+      hubspot: "Forecasting tracks progress but stops there. It offers no guidance on improving outcomes, leaving you to react to numbers rather than shape them."
+
+analysis:
+  title: "Pipeline Analysis"
+  heading: "Comprehensive Pipeline Analysis"
+  description: "Amolino's three-lens forecast gives you a complete view of your quarter:"
+  scenarios:
+    - title: "Best Case Scenario"
+      description: "Your ceiling across all qualified deals."
+    - title: "Predicted Outcome"
+      description: "AI-driven projections of likely closings."
+    - title: "Worst Case Scenario"
+      description: "Your floor if only sure bets close."
+  screenshot:
+    src: "/screenshots/pipeline_radar_forecast_analysis_march2025.png"
+    width: 1216
+    height: 768
+
+benefits:
+  title: "Why Choose Amolino?"
+  heading: "Benefits That Matter"
+  items:
+    - "Eliminate Surprises: End quarters with no unexpected misses"
+    - "Boost Accountability: Track team performance with clear metrics"
+    - "Optimize Deals: Increase opportunity sizes with data-backed trends"
+    - "Protect Revenue: Spot slipping deals early with AI alerts"
+    - "Save Time: Automate analysis that takes hours manually"
