@@ -211,75 +211,75 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
             {/* ---------- Mobile / Tablet: simple stacked list (no GSAP pin) ---------- */}
             <div className="lg:hidden py-12 space-y-10">
                 <div className="max-w-7xl mx-auto px-6">
-                <div className="space-y-4">
-                    <p className="text-primary-300 text-xs font-bold tracking-widest uppercase">{eyebrow}</p>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-                        {headline}
-                    </h2>
-                    <p className="text-primary-200/90">
-                        {description}
-                    </p>
-                </div>
+                    <div className="space-y-4">
+                        <p className="text-primary-300 text-xs font-bold tracking-widest uppercase">{eyebrow}</p>
+                        <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                            {headline}
+                        </h2>
+                        <p className="text-primary-200/90">
+                            {description}
+                        </p>
+                    </div>
 
-                {products.map((p) => (
-                    <article
-                        key={p.id}
-                        className={`rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/15 ${p.bgColor} ${p.textColor}`}
-                        style={p.id === 1 ? {
-                            backgroundColor: '#d3dcdd',
-                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fb7d3c' fill-opacity='0.11'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-                        } : undefined}
-                    >
-                        <div className="border-l-4 border-current pl-4 mb-4">
-                            <p className="text-xs font-bold tracking-widest uppercase opacity-80">{p.label}</p>
-                        </div>
-                        <h3 className="text-2xl sm:text-3xl font-bold">{p.title}</h3>
-                        <p className="mt-3 opacity-90">{p.description}</p>
-
-                        <a
-                            href={p.ctaLink}
-                            className="mt-6 inline-flex items-center gap-3 bg-neutral-900 text-white px-5 py-3 rounded-full font-semibold hover:gap-4 transition-all duration-300"
+                    {products.map((p) => (
+                        <article
+                            key={p.id}
+                            className={`rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/15 ${p.bgColor} ${p.textColor}`}
+                            style={p.id === 1 ? {
+                                backgroundColor: '#d3dcdd',
+                                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fb7d3c' fill-opacity='0.11'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+                            } : undefined}
                         >
-                            {p.ctaText}
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
+                            <div className="border-l-4 border-current pl-4 mb-4">
+                                <p className="text-xs font-bold tracking-widest uppercase opacity-80">{p.label}</p>
+                            </div>
+                            <h3 className="text-2xl sm:text-3xl font-bold">{p.title}</h3>
+                            <p className="mt-3 opacity-90">{p.description}</p>
 
-                        {/* <div className="mt-6 inline-block px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-xs font-semibold border border-white/30">
+                            <a
+                                href={p.ctaLink}
+                                className="mt-6 inline-flex items-center gap-3 bg-neutral-900 text-white px-5 py-3 rounded-full font-semibold hover:gap-4 transition-all duration-300"
+                            >
+                                {p.ctaText}
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+
+                            {/* <div className="mt-6 inline-block px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-xs font-semibold border border-white/30">
                             {p.statBadge}
                         </div> */}
 
-                        <ul className="grid grid-cols-1 gap-3 mt-6">
-                            {p.benefits.map((b, i) => (
-                                <li key={i} className="flex items-start gap-3">
-                                    <svg
-                                        className="w-5 h-5 mt-0.5 flex-shrink-0"
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
-                                        aria-hidden="true"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                            clipRule="evenodd"
-                                        />
-                                    </svg>
-                                    <span className="text-sm leading-relaxed">{b}</span>
-                                </li>
-                            ))}
-                        </ul>
+                            <ul className="grid grid-cols-1 gap-3 mt-6">
+                                {p.benefits.map((b, i) => (
+                                    <li key={i} className="flex items-start gap-3">
+                                        <svg
+                                            className="w-5 h-5 mt-0.5 flex-shrink-0"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                        <span className="text-sm leading-relaxed">{b}</span>
+                                    </li>
+                                ))}
+                            </ul>
 
-                        <div className="mt-6">
-                            <Screenshot
-                                src={p.screenshot.src}
-                                width={p.screenshot.width}
-                                height={p.screenshot.height}
-                                className="mx-auto max-w-full"
-                            />
-                        </div>
-                    </article>
-                ))}
+                            <div className="mt-6">
+                                <Screenshot
+                                    src={p.screenshot.src}
+                                    width={p.screenshot.width}
+                                    height={p.screenshot.height}
+                                    className="mx-auto max-w-full"
+                                />
+                            </div>
+                        </article>
+                    ))}
                 </div>
             </div>
         </section>
