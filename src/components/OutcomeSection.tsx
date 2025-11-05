@@ -141,7 +141,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                     className="absolute inset-x-0 top-8 bottom-8 flex items-center justify-center"
                                 >
                                     <article
-                                        className={`w-full max-h-[85vh] overflow-y-auto rounded-[2rem] md:rounded-[3rem] p-4 md:p-6 xl:p-8 shadow-2xl
+                                        className={`w-full max-h-[90vh] overflow-y-auto rounded-[2rem] md:rounded-[3rem] p-4 md:p-6 xl:p-8 shadow-2xl
                                 border border-white/20 backdrop-blur-sm ${p.bgColor} ${p.textColor}`}
                                         style={p.id === 1 ? {
                                             backgroundColor: '#d3dcdd',
