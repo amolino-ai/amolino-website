@@ -61,13 +61,13 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
     }, []);
 
     return (
-        <section className="relative bg-test-one">
+        <section className="relative isolate overflow-hidden bg-test-one">
             {/* ---------- Desktop / Large screens: GSAP pinned cross-fade ---------- */}
             <div
                 ref={pinRef}
                 className="hidden lg:block h-[100dvh]" // the pinned container is exactly one viewport tall
             >
-                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 h-full">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 h-full">
                     {/* Left — fixed copy while pinned */}
                     <div className="flex items-center justify-center p-8 xl:p-16">
                         <div className="relative z-10 max-w-lg">
@@ -209,7 +209,8 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
             </div>
 
             {/* ---------- Mobile / Tablet: simple stacked list (no GSAP pin) ---------- */}
-            <div className="lg:hidden px-4 py-12 space-y-10">
+            <div className="lg:hidden py-12 space-y-10">
+                <div className="max-w-7xl mx-auto px-6">
                 <div className="space-y-4">
                     <p className="text-primary-300 text-xs font-bold tracking-widest uppercase">{eyebrow}</p>
                     <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
@@ -279,6 +280,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                         </div>
                     </article>
                 ))}
+                </div>
             </div>
         </section>
     );
