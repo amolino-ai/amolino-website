@@ -10,7 +10,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
 
@@ -27,7 +27,7 @@ showcase:
       title: "Proven success paths"
       description: "Follow data-driven playbooks based on your most successful deals to replicate winning strategies."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
   comparisonTitle: "AI-Powered Guided Selling vs Traditional Sales Process"
@@ -57,6 +57,6 @@ bottomFeature:
     - title: "Success Metrics"
       description: "Measure and improve your sales process effectiveness"
   screenshot:
-    src: "/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
+    src: "/screenshots/older/pipeline_radar_pushed_opportunities_march2025.png"
     width: 1216
     height: 768

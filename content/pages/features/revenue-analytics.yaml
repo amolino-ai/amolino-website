@@ -10,7 +10,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+    src: "/screenshots/older/dashboard_revenue_forecast_april2025.jpg"
     width: 1216
     height: 768
 
@@ -27,7 +27,7 @@ showcase:
       title: "Forecast with confidence"
       description: "Know exactly what's coming with AmolinoAI's precision forecasting that learns from your historical performance and current deal patterns."
   screenshot:
-    src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+    src: "/screenshots/older/dashboard_revenue_forecast_april2025.jpg"
     width: 1216
     height: 768
   comparisonTitle: "AI-Powered Revenue Analytics"
@@ -57,6 +57,6 @@ bottomFeature:
     - title: "Worst Case Scenario"
       description: "Understand your floor if only the most solid deals close"
   screenshot:
-    src: "/screenshots/pipeline_radar_pushed_opportunities_march2025.png"
+    src: "/screenshots/older/pipeline_radar_pushed_opportunities_march2025.png"
     width: 1216
     height: 768
