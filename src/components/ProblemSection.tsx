@@ -19,7 +19,7 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({ content }) => {
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Left Column - Main Headline */}
                     <div className="space-y-8">
-                        <h2 className="text-4xl md:text-5xl font-serif leading-tight">{content.headline}</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold leading-tight">{content.headline}</h2>
 
                         <p className="text-lg text-primary-100 leading-relaxed">{content.description}</p>
 

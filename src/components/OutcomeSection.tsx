@@ -27,7 +27,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                 if (!cards.length) return;
 
                 // Stack cards in the same space; show only the first initially
-                gsap.set(cards, { position: 'absolute', inset: 0 });
+                // Position is handled by CSS classes (absolute positioning with margins)
                 gsap.set(cards.slice(1), { autoAlpha: 0 }); // hide all but first
 
                 // Pinned section: stays at top, scroll distance = (cards.length - 1) * container height
@@ -138,32 +138,32 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                 <div
                                     key={p.id}
                                     data-card
-                                    className="absolute inset-0 flex items-center justify-center"
+                                    className="absolute inset-x-0 top-8 bottom-8 flex items-center justify-center"
                                 >
                                     <article
-                                        className={`w-full rounded-[2rem] md:rounded-[3rem] p-6 md:p-10 xl:p-12 shadow-2xl
+                                        className={`w-full max-h-[85vh] overflow-y-auto rounded-[2rem] md:rounded-[3rem] p-4 md:p-6 xl:p-8 shadow-2xl
                                 border border-white/20 backdrop-blur-sm ${p.bgColor} ${p.textColor}`}
                                         style={p.id === 1 ? {
                                             backgroundColor: '#d3dcdd',
                                             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fb7d3c' fill-opacity='0.11'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
                                         } : undefined}
                                     >
-                                        <header className="mb-6 md:mb-8">
-                                            <div className="border-l-4 border-current pl-4 mb-4">
-                                                <p className="text-xs md:text-sm font-bold tracking-widest uppercase opacity-80">
+                                        <header className="mb-4 md:mb-5">
+                                            <div className="border-l-4 border-current pl-4 mb-3">
+                                                <p className="text-xs font-bold tracking-widest uppercase opacity-80">
                                                     {p.label}
                                                 </p>
                                             </div>
-                                            <h3 className="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight">{p.title}</h3>
-                                            <p className="text-base md:text-lg mt-4 opacity-90">{p.description}</p>
+                                            <h3 className="text-2xl md:text-3xl xl:text-4xl font-bold leading-tight">{p.title}</h3>
+                                            <p className="text-sm md:text-base mt-3 opacity-90">{p.description}</p>
                                         </header>
 
                                         <a
                                             href={p.ctaLink}
-                                            className="inline-flex items-center gap-3 bg-neutral-900 text-white px-5 py-3 rounded-full font-semibold hover:gap-4 transition-all duration-300 mb-8"
+                                            className="inline-flex items-center gap-3 bg-neutral-900 text-white px-4 py-2 rounded-full font-semibold hover:gap-4 transition-all duration-300 mb-4 text-sm"
                                         >
                                             {p.ctaText}
-                                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                             </svg>
                                         </a>
@@ -172,11 +172,11 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                             {p.statBadge}
                                         </div> */}
 
-                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
                                             {p.benefits.map((b, bi) => (
-                                                <li key={bi} className="flex items-start gap-3">
+                                                <li key={bi} className="flex items-start gap-2">
                                                     <svg
-                                                        className="w-5 h-5 mt-0.5 flex-shrink-0"
+                                                        className="w-4 h-4 mt-0.5 flex-shrink-0"
                                                         fill="currentColor"
                                                         viewBox="0 0 20 20"
                                                         aria-hidden="true"
@@ -187,12 +187,12 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                                             clipRule="evenodd"
                                                         />
                                                     </svg>
-                                                    <span className="text-sm md:text-base leading-relaxed">{b}</span>
+                                                    <span className="text-xs md:text-sm leading-relaxed">{b}</span>
                                                 </li>
                                             ))}
                                         </ul>
 
-                                        <div className="mt-8 md:mt-10">
+                                        <div className="mt-4 md:mt-6">
                                             <Screenshot
                                                 src={p.screenshot.src}
                                                 width={p.screenshot.width}

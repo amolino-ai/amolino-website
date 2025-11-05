@@ -41,19 +41,19 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
         }
       `}</style>
 
-      <div className="relative isolate overflow-hidden bg-black">
+      <div className="relative isolate overflow-hidden bg-white dark:bg-neutral-900">
         {/* Content Container */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-16 pb-12 sm:pt-24 sm:pb-16 lg:px-8 lg:pt-32 lg:pb-20">
           {/* Centered Text Content */}
           <div className="mx-auto max-w-6xl text-center">
             <h1
-              className="animate-fade-up text-balance text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-7xl"
+              className="animate-fade-up text-balance text-5xl font-medium tracking-tight text-neutral-900 dark:text-white sm:text-6xl lg:text-7xl"
               style={{ '--animation-delay': '100ms' } as React.CSSProperties}
             >
               {content.headline}
             </h1>
             <p
-              className="animate-fade-up mx-auto mt-6 max-w-3xl text-pretty text-lg text-neutral-400 sm:text-xl/8"
+              className="animate-fade-up mx-auto mt-6 max-w-3xl text-pretty text-lg text-neutral-500 dark:text-neutral-400 sm:text-xl/8"
               style={{ '--animation-delay': '300ms' } as React.CSSProperties}
             >
               {content.subheadline}
@@ -66,13 +66,13 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
             >
               <a
                 href={content.ctas.primaryUrl}
-                className="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2.5 text-sm font-medium text-black shadow-sm transition-colors hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-primary-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-500 dark:hover:bg-primary-400"
               >
                 Book a Demo
               </a>
               <button
                 onClick={() => setIsVideoOpen(true)}
-                className="inline-flex items-center text-sm font-medium text-white transition-colors hover:text-neutral-300"
+                className="inline-flex items-center text-sm font-medium text-neutral-900 transition-colors hover:text-neutral-700 dark:text-white dark:hover:text-neutral-300"
               >
                 Watch 2-Min Overview <span aria-hidden="true" className="ml-1">→</span>
               </button>
@@ -93,7 +93,9 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
           </div>
         </div>
 
-        {/* Image Container - Edge to edge with 3D tilt and pinned layout */}
+        {/* Image Container - Edge to edge with 3D tilt and pinned layout
+          Don't change the overflow visible
+        */}
         <div
           className="animate-fade-up relative -mt-2 sm:-mt-2 lg:-mt-2 z-0 overflow-visible"
           style={{ '--animation-delay': '900ms' } as React.CSSProperties}
@@ -103,7 +105,7 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
             <div
               className="relative origin-left bg-white/5 p-2 shadow-2xl ring-1 ring-white/10 lg:p-4 overflow-visible"
               style={{
-                perspective: '1600px',
+                perspective: '1500px',
                 transformStyle: 'preserve-3d',
                 maxWidth: 'none',
                 width: '110vw',
@@ -139,7 +141,7 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
             </div>
 
             {/* Ambient glow effect */}
-            <div className="pointer-events-none absolute inset-x-0 -bottom-8 -z-10 h-48 bg-gradient-to-t from-black via-black/80 to-transparent blur-3xl" />
+            <div className="pointer-events-none absolute inset-x-0 -bottom-8 -z-10 h-48 bg-gradient-to-t from-white via-white/80 to-transparent blur-3xl" />
           </div>
         </div>
 
@@ -159,11 +161,11 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
 
                 return (
                   <div key={index} className="mx-auto max-w-xs">
-                    <div className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                    <div className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl">
                       <AnimatedNumber start={0} end={value} decimals={decimals} />
                       {suffix}
                     </div>
-                    <div className="mt-3 text-sm font-medium text-neutral-400">
+                    <div className="mt-3 text-sm font-medium text-neutral-600 dark:text-neutral-400">
                       {stat.description}
                     </div>
                   </div>
