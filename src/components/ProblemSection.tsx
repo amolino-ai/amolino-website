@@ -7,8 +7,8 @@ interface ProblemSectionProps {
 
 const ProblemSection: React.FC<ProblemSectionProps> = ({ content }) => {
     return (
-        <section className="bg-gradient-to-br from-primary-800 to-primary-900 text-white py-20 px-6">
-            <div className="max-w-7xl mx-auto">
+        <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary-800 to-primary-900 text-white">
+            <div className="max-w-7xl mx-auto px-6 py-20">
                 {/* Section Label */}
                 <div className="mb-8">
                     <span className="inline-block px-4 py-2 rounded-full border border-primary-400/30 text-primary-200 text-sm font-medium">
@@ -19,7 +19,7 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({ content }) => {
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Left Column - Main Headline */}
                     <div className="space-y-8">
-                        <h2 className="text-4xl md:text-5xl font-serif leading-tight">{content.headline}</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold leading-tight">{content.headline}</h2>
 
                         <p className="text-lg text-primary-100 leading-relaxed">{content.description}</p>
 

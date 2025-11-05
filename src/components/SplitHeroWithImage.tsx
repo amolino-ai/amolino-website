@@ -9,107 +9,206 @@ interface SplitHeroWithImageProps {
   content: HeroContent;
 }
 
+/*
+ * loads either a mobile image or desktop image. We do transforms on teh desktop image but not
+  * on the mobile image.
+  * On the desktop image we have a 3D tilt effect with some perspective.
+  * Also, the image is revleaved as the browser is increased in widdth. We want to set the image to 
+  * 1.2x the width of the browser. but that is done based on the initial width of the browser when the component
+  * is loaded. 
+  * The key line of code that does that is 
+  * className="hidden lg:block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform w-[1200px] xl:w-[1536px] 2xl:w-[1843px]"
+  * Here the width is set based on the breakpoints.
+  1200px for large screens (1024px and up)
+  1536px for extra large screens (1280px and up)
+  1843px for 2x extra large screens (1536px and up)
+
+  This is designed to be 1.2x the width of the screen at those breakpoints.
+
+ */
+
 export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <>
-    <div className="relative isolate overflow-hidden bg-white dark:bg-neutral-900">
-      <svg
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-neutral-200 dark:stroke-white/10"
-      >
-        <defs>
-          <pattern
-            x="50%"
-            y={-1}
-            id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
-            width={200}
-            height={200}
-            patternUnits="userSpaceOnUse"
-          >
-            <path d="M.5 200V.5H200" fill="none" />
-          </pattern>
-        </defs>
-        <rect fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" width="100%" height="100%" strokeWidth={0} />
-      </svg>
-      <div className="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:shrink-0 lg:pt-8">
-          <h1 className="mt-10 text-5xl font-semibold tracking-tight text-pretty text-neutral-900 sm:text-7xl dark:text-white">
-            {content.headline}
-          </h1>
-          <p className="mt-8 text-lg font-medium text-pretty text-neutral-500 sm:text-xl/8 dark:text-neutral-400">
-            {content.subheadline}
-          </p>
+      <style jsx>{`
+        @keyframes fade-up {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-            {/* Supporting Stats */}
-            <div className="mt-10 grid grid-cols-3 gap-8 sm:gap-6">
+        .animate-fade-up {
+          opacity: 0;
+          animation: fade-up 0.6s ease-out forwards;
+          animation-delay: var(--animation-delay, 0ms);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .animate-fade-up {
+            animation: none;
+            opacity: 1;
+            transform: none;
+          }
+        }
+      `}</style>
+
+      <div className="relative isolate overflow-hidden bg-white">
+        {/* Content Container */}
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-16 pb-12 sm:pt-24 sm:pb-16 lg:px-8 lg:pt-32 lg:pb-20">
+          {/* Centered Text Content */}
+          <div className="mx-auto max-w-6xl text-center">
+            <h1
+              className="animate-fade-up text-balance text-5xl font-medium tracking-tight text-neutral-900 sm:text-6xl lg:text-7xl"
+              style={{ '--animation-delay': '100ms' } as React.CSSProperties}
+            >
+              {content.headline}
+            </h1>
+            <p
+              className="animate-fade-up mx-auto mt-6 max-w-3xl text-pretty text-lg text-neutral-500 sm:text-xl/8"
+              style={{ '--animation-delay': '300ms' } as React.CSSProperties}
+            >
+              {content.subheadline}
+            </p>
+
+            {/* CTAs */}
+            <div
+              className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-4"
+              style={{ '--animation-delay': '500ms' } as React.CSSProperties}
+            >
+              <a
+                href={content.ctas.primaryUrl}
+                className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-primary-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+              >
+                Book a Demo
+              </a>
+              <button
+                onClick={() => setIsVideoOpen(true)}
+                className="inline-flex items-center text-sm font-medium text-neutral-900 transition-colors hover:text-neutral-700"
+              >
+                Watch 2-Min Overview <span aria-hidden="true" className="ml-1">→</span>
+              </button>
+            </div>
+
+            {/* Tertiary CTA */}
+            {/* <div
+              className="animate-fade-up mt-6"
+              style={{ '--animation-delay': '700ms' } as React.CSSProperties}
+            >
+              <a
+                href={content.ctas.tertiaryUrl}
+                className="text-sm font-medium text-neutral-400 hover:text-white"
+              >
+                See how it works <span aria-hidden="true">↓</span>
+              </a>
+            </div> */}
+          </div>
+        </div>
+
+        {/* Image Container - Edge to edge with 3D tilt and pinned layout
+          Don't change the overflow visible
+        */}
+        <div
+          className="animate-fade-up relative -mt-2 sm:-mt-2 lg:-mt-2 z-0 overflow-visible"
+          style={{ '--animation-delay': '900ms' } as React.CSSProperties}
+        >
+          <div className="relative">
+            {/* Image Frame with 3D perspective */}
+            <div
+              className="relative origin-left bg-white/5 p-2 shadow-2xl ring-1 ring-white/10 lg:p-4 overflow-visible"
+              style={{
+                perspective: '1500px',
+                transformStyle: 'preserve-3d',
+                maxWidth: 'none',
+                width: '110vw',
+              }}
+            >
+              {/* Desktop image - hidden on mobile */}
+              <img
+                alt={content.images.desktop.dark.alt}
+                src={content.images.desktop.dark.src}
+                width={content.images.desktop.dark.width}
+                height={content.images.desktop.dark.height}
+                className="hidden lg:block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform w-[1200px] xl:w-[1536px] 2xl:w-[1843px]"
+                style={{
+                  transform: 'rotateY(-9deg) rotateX(3deg) rotateZ(-1.2deg) translateZ(0)',
+                  transformOrigin: 'left center',
+                  filter: 'drop-shadow(0 50px 120px rgba(0,0,0,0.55))',
+
+                  /* Fade to black at bottom 20–30% */
+                  WebkitMaskImage:
+                    'linear-gradient(to bottom, black 75%, rgba(0,0,0,0) 100%)',
+                  maskImage:
+                    'linear-gradient(to bottom, black 75%, rgba(0,0,0,0) 100%)',
+
+                  /* optional to soften right edge too */
+                  // WebkitMaskComposite: 'source-in',
+                  // maskComposite: 'intersect',
+                }}
+                loading="eager"
+                decoding="async"
+              />
+
+              {/* Mobile image - hidden on desktop */}
+              <img
+                alt={content.images.mobile.dark.alt}
+                src={content.images.mobile.dark.src}
+                width={content.images.mobile.dark.width}
+                height={content.images.mobile.dark.height}
+                className="block lg:hidden w-full h-auto"
+                loading="eager"
+                decoding="async"
+              />
+
+            </div>
+
+            {/* Ambient glow effect */}
+            <div className="pointer-events-none absolute inset-x-0 -bottom-8 -z-10 h-48 bg-gradient-to-t from-white via-white/80 to-transparent blur-3xl" />
+          </div>
+        </div>
+
+        {/* Supporting Stats Container */}
+        <div className="mx-auto max-w-7xl px-6 pb-12 sm:pb-16 lg:px-8 lg:pb-20">
+          {/* Supporting Stats */}
+          <div
+            className="animate-fade-up mx-auto mt-16 max-w-4xl sm:mt-20 lg:mt-24"
+            style={{ '--animation-delay': '1100ms' } as React.CSSProperties}
+          >
+            <div className="grid grid-cols-1 gap-8 text-center sm:grid-cols-3 sm:gap-6">
               {content.stats.map((stat, index) => {
-                // Parse the value string (e.g., "10x", "90%", "50+") to extract number and suffix
                 const match = stat.value.match(/^(\d+(?:\.\d+)?)(.*)$/);
                 const value = match ? parseFloat(match[1]) : 0;
                 const suffix = match ? match[2] : '';
                 const decimals = value % 1 !== 0 ? 1 : 0;
 
                 return (
-                  <div key={index}>
-                    <div className="text-4xl font-bold text-neutral-900 dark:text-white">
+                  <div key={index} className="mx-auto max-w-xs">
+                    <div className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
                       <AnimatedNumber start={0} end={value} decimals={decimals} />
                       {suffix}
                     </div>
-                    <div className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{stat.description}</div>
+                    <div className="mt-3 text-sm font-medium text-neutral-600">
+                      {stat.description}
+                    </div>
                   </div>
                 );
               })}
             </div>
-
-          {/* CTAs */}
-          <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-x-6">
-            <a
-              href={content.ctas.primaryUrl}
-              className="rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-primary-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-500 dark:hover:bg-primary-400 dark:focus-visible:outline-primary-500"
-            >
-              Book a Demo
-            </a>
-            <button
-              onClick={() => setIsVideoOpen(true)}
-              className="text-sm/6 font-semibold text-neutral-900 transition-colors hover:text-neutral-700 dark:text-white dark:hover:text-neutral-300"
-            >
-              Watch 2-Min Overview <span aria-hidden="true">→</span>
-            </button>
-          </div>
-
-          {/* Tertiary CTA */}
-          <div className="mt-6">
-            <a href={content.ctas.tertiaryUrl} className="text-sm/6 font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white">
-              See how it works <span aria-hidden="true">↓</span>
-            </a>
-          </div>
-        </div>
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            <div className="-m-2 rounded-xl bg-neutral-900/5 p-2 ring-1 ring-neutral-900/10 ring-inset lg:-m-4 lg:rounded-2xl lg:p-4 dark:bg-white/2.5 dark:ring-white/10">
-              <img
-                alt={content.images.light.alt}
-                src={content.images.light.src}
-                width={content.images.light.width}
-                height={content.images.light.height}
-                className="w-304 rounded-md bg-neutral-50 shadow-xl ring-1 ring-neutral-900/10 dark:hidden"
-              />
-              <img
-                alt={content.images.dark.alt}
-                src={content.images.dark.src}
-                width={content.images.dark.width}
-                height={content.images.dark.height}
-                className="w-304 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 not-dark:hidden"
-              />
-            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} videoUrl={content.ctas.secondaryUrl} />
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoUrl={content.ctas.secondaryUrl}
+      />
     </>
   );
 }

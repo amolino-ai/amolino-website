@@ -11,6 +11,7 @@ import '@mantine/core/styles.css';
 import glob from 'fast-glob';
 import { type Metadata } from 'next';
 import { Inter, JetBrains_Mono, Lexend } from 'next/font/google';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Font configurations
 const inter = Inter({

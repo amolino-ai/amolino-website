@@ -38,18 +38,26 @@ export default async function Home() {
   const integrationsSectionContent = await getIntegrationsSectionContent();
 
   return (
-    <div className="overflow-hidden">
+    <>
       {/* Hero section - full width background with contained content */}
-      <SplitHeroWithImage content={heroContent} />
+      <div className="-mx-4 sm:-mx-6 lg:-mx-8">
+        <SplitHeroWithImage content={heroContent} />
+      </div>
 
       {/* Hero with Numbers section */}
        {/*<Hero numbersContent={numbersContent} /> */}
 
       {/* Problem section - full width with teal gradient background */}
-      <ProblemSection content={problemContent} />
+      <div className="-mx-4 sm:-mx-6 lg:-mx-8 overflow-hidden">
+        <ProblemSection content={problemContent} />
+      </div>
 
       {/* Outcome section - full width */}
-      <OutcomeSection content={outcomeContent} />
+      <div className="-mx-4 sm:-mx-6 lg:-mx-8 overflow-hidden">
+        <OutcomeSection content={outcomeContent} />
+      </div>
+
+      <div className="overflow-hidden">
 
 
       <main>
@@ -73,6 +81,7 @@ export default async function Home() {
 
       {/* Security section - likely full width */}
       <SecuritySection content={securitySectionContent} />
-    </div>
+      </div>
+    </>
   );
 }

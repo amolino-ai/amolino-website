@@ -1,4 +1,4 @@
-headline: "Focus on the right deals and win them"
+headline: "Focus on the right deals and know how to win them"
 subheadline: |
   Amolino analyzes data across all your systems to find what consistently moves deals forward—then tells
   every rep exactly what to do next.
@@ -16,13 +16,25 @@ ctas:
   tertiaryUrl: "#integrations"
 
 images:
-  light:
-    src: "/screenshots/next-best-action-to-win/opportunity_compass_complete.png"
-    alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
-    width: 1168
-    height: 840
-  dark:
-    src: "/screenshots/next-best-action-to-win/opportunity_compass_complete.png"
-    alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
-    width: 1168
-    height: 840
+  desktop:
+    light:
+      src: "/screenshots/homepage/amolino-next-best-actions.png"
+      alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+      width: 960
+      height: 540
+    dark:
+      src: "/screenshots/homepage/amolino-next-best-actions.png"
+      alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+      width: 960
+      height: 540
+  mobile:
+    light:
+      src: "/screenshots/homepage/amolino-next-best-actions-mobile.png"
+      alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+      width: 352
+      height: 508
+    dark:
+      src: "/screenshots/homepage/amolino-next-best-actions-mobile.png"
+      alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+      width: 352
+      height: 508
