@@ -9,6 +9,24 @@ interface SplitHeroWithImageProps {
   content: HeroContent;
 }
 
+/*
+ * loads either a mobile image or desktop image. We do transforms on teh desktop image but not
+  * on the mobile image.
+  * On the desktop image we have a 3D tilt effect with some perspective.
+  * Also, the image is revleaved as the browser is increased in widdth. We want to set the image to 
+  * 1.2x the width of the browser. but that is done based on the initial width of the browser when the component
+  * is loaded. 
+  * The key line of code that does that is 
+  * className="hidden lg:block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform w-[1200px] xl:w-[1536px] 2xl:w-[1843px]"
+  * Here the width is set based on the breakpoints.
+  1200px for large screens (1024px and up)
+  1536px for extra large screens (1280px and up)
+  1843px for 2x extra large screens (1536px and up)
+
+  This is designed to be 1.2x the width of the screen at those breakpoints.
+
+ */
+
 export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
@@ -117,9 +135,8 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                 src={content.images.desktop.dark.src}
                 width={content.images.desktop.dark.width}
                 height={content.images.desktop.dark.height}
-                className="hidden lg:block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform"
+                className="hidden lg:block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform w-[1200px] xl:w-[1536px] 2xl:w-[1843px]"
                 style={{
-                  width: '1200px',
                   transform: 'rotateY(-9deg) rotateX(3deg) rotateZ(-1.2deg) translateZ(0)',
                   transformOrigin: 'left center',
                   filter: 'drop-shadow(0 50px 120px rgba(0,0,0,0.55))',
