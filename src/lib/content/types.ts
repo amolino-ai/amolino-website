@@ -63,8 +63,14 @@ export interface HeroImage {
 }
 
 export interface HeroImages {
-  light: HeroImage;
-  dark: HeroImage;
+  desktop: {
+    light: HeroImage;
+    dark: HeroImage;
+  };
+  mobile: {
+    light: HeroImage;
+    dark: HeroImage;
+  };
 }
 
 export interface HeroContent {

@@ -111,15 +111,15 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                 width: '110vw',
               }}
             >
-              {/* Dark mode image with 3D tilt and mask */}
+              {/* Desktop image - hidden on mobile */}
               <img
-                alt={content.images.dark.alt}
-                src={content.images.dark.src}
-                width={content.images.dark.width}
-                height={content.images.dark.height}
-                className="block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform"
+                alt={content.images.desktop.dark.alt}
+                src={content.images.desktop.dark.src}
+                width={content.images.desktop.dark.width}
+                height={content.images.desktop.dark.height}
+                className="hidden lg:block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform"
                 style={{
-                  width: '1800px',
+                  width: '1200px',
                   transform: 'rotateY(-9deg) rotateX(3deg) rotateZ(-1.2deg) translateZ(0)',
                   transformOrigin: 'left center',
                   filter: 'drop-shadow(0 50px 120px rgba(0,0,0,0.55))',
@@ -134,6 +134,17 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                   // WebkitMaskComposite: 'source-in',
                   // maskComposite: 'intersect',
                 }}
+                loading="eager"
+                decoding="async"
+              />
+
+              {/* Mobile image - hidden on desktop */}
+              <img
+                alt={content.images.mobile.dark.alt}
+                src={content.images.mobile.dark.src}
+                width={content.images.mobile.dark.width}
+                height={content.images.mobile.dark.height}
+                className="block lg:hidden w-full h-auto"
                 loading="eager"
                 decoding="async"
               />

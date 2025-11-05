@@ -16,13 +16,25 @@ ctas:
   tertiaryUrl: "#integrations"
 
 images:
-  light:
-    src: "/screenshots/homepage/amolino-next-best-actions.png"
-    alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
-    width: 1168
-    height: 840
-  dark:
-    src: "/screenshots/homepage/amolino-next-best-actions.png"
-    alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
-    width: 1168
-    height: 840
+  desktop:
+    light:
+      src: "/screenshots/homepage/amolino-next-best-actions.png"
+      alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+      width: 960
+      height: 540
+    dark:
+      src: "/screenshots/homepage/amolino-next-best-actions.png"
+      alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+      width: 960
+      height: 540
+  mobile:
+    light:
+      src: "/screenshots/homepage/amolino-next-best-actions-mobile.png"
+      alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+      width: 352
+      height: 508
+    dark:
+      src: "/screenshots/homepage/amolino-next-best-actions-mobile.png"
+      alt: "Amolino Opportunity detailas provides AI-driven guidance to help sales reps close more deals"
+      width: 352
+      height: 508
