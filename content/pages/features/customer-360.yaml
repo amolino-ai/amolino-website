@@ -1,7 +1,7 @@
 metadata:
   title: "Customer 360 - Complete Customer Relationship Intelligence"
   description: "Get a comprehensive view of customer relationships, track engagement, and identify growth opportunities. Understand customer needs with complete customer intelligence."
-  image: "/screenshots/dashboard_rep_view_april_2025.jpg"
+  image: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
 
 options:
   featureName: "Customer 360"
@@ -15,7 +15,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
 
@@ -32,7 +32,7 @@ showcase:
       title: "Relationship Insights"
       description: "Understand customer relationships, identify upsell opportunities, and predict customer needs."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
   comparisonTitle: "AI-Powered Customer 360 vs Traditional CRM"
@@ -62,6 +62,6 @@ bottomFeature:
     - title: "Growth Opportunities"
       description: "Identify and capitalize on upsell opportunities"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768

@@ -8,7 +8,7 @@ cards:
     description: "Continuously monitors all pipeline opportunities using AI, detecting subtle warning signs and engagement patterns that indicate deals in danger—allowing sales leaders to intervene before opportunities derail."
     graphic:
       type: "background"
-      src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+      src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
       size: "1800px_1125px"
       position: "left_-915px_top_-400px"
     fade: ["bottom"]
@@ -19,7 +19,7 @@ cards:
     description: "Automatically identifies opportunities that have been pushed from previous quarters and flags deals showing warning signs of potential pushes, eliminating costly surprises and enabling proactive management."
     graphic:
       type: "background"
-      src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+      src: "/screenshots/older/dashboard_revenue_forecast_april2025.jpg"
       size: "1100px_650px"
       position: "left_-375px_top_-400px"
     fade: ["bottom"]
@@ -30,7 +30,7 @@ cards:
     description: "Provides continuous, AI-powered assessment of your progress toward targets, incorporating pipeline quality, historical performance, and deal-specific signals to deliver accurate attainment predictions."
     graphic:
       type: "background"
-      src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+      src: "/screenshots/older/dashboard_revenue_forecast_april2025.jpg"
       size: "1100px_650px"
       position: "left_-80px_top_-0px"
     fade: ["right"]
@@ -41,7 +41,7 @@ cards:
     description: "Analyzes the four key components of sales velocity—deal value, win rate, sales cycle length, and opportunity count—identifying specific bottlenecks and prescribing targeted interventions to accelerate revenue."
     graphic:
       type: "background"
-      src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+      src: "/screenshots/older/dashboard_revenue_forecast_april2025.jpg"
       size: "1100px_650px"
       position: "left_-75px_top_-435px"
     fade: ["right"]
@@ -52,7 +52,7 @@ cards:
     description: "Delivers scientifically calculated best-case, worst-case, and most likely forecast scenarios based on deal-specific signals and historical patterns, replacing gut feel with statistical confidence."
     graphic:
       type: "background"
-      src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+      src: "/screenshots/older/dashboard_revenue_forecast_april2025.jpg"
       size: "1100px_650px"
       position: "left_-590px_top_-35px"
     fade: ["bottom"]

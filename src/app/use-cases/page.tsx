@@ -60,7 +60,7 @@ export default function UseCasesPage() {
       title: 'Revenue Forecasting',
       description:
         'Replace gut instinct with scientific certainty in your sales forecasts using AI-powered modeling and activity-based validation that delivers forecasts you can stake your reputation on.',
-      imagePath: '/screenshots/dashboard_revenue_forecast_april2025.jpg',
+      imagePath: '/screenshots/older/dashboard_revenue_forecast_april2025.jpg',
       href: '/use-cases/revenue-forecasting',
     },
     {
@@ -81,7 +81,7 @@ export default function UseCasesPage() {
       title: 'Deal Linearity',
       description:
         'Eliminate the end-of-quarter scramble with linearity intelligence that creates predictable, achievable paths to your number without the margin-eroding pressure of quarter-end loading.',
-      imagePath: '/screenshots/dashboard_rep_view_april_2025.jpg',
+      imagePath: '/screenshots/older/dashboard_rep_view_april_2025.jpg',
       href: '/use-cases/deal-linearity',
     },
   ];

@@ -14,7 +14,7 @@ hero:
   ctaText: "Try AmolinoAI"
   ctaHref: "https://app.amolino.ai"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
 
@@ -31,7 +31,7 @@ showcase:
       title: "Real-Time Sync"
       description: "Keep your CRM always current with instant, bi-directional syncing that ensures data accuracy across all systems in real-time."
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
   comparisonTitle: "Automatic CRM Enrichment vs Manual CRM Updates"
@@ -61,6 +61,6 @@ bottomFeature:
     - title: "Perfect Data Quality"
       description: "Maintain complete, accurate, up-to-date CRM records automatically without rep effort"
   screenshot:
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768

@@ -2,7 +2,7 @@ tabs:
   - id: "execution"
     title: "Win More. Faster"
     description: "Make Every Rep a Top Performer with AI-Driven Sales Guidance."
-    src: "/screenshots/dashboard_revenue_forecast_april2025.jpg"
+    src: "/screenshots/older/dashboard_revenue_forecast_april2025.jpg"
     width: 1216
     height: 768
     learnMoreLink: "/benefits/next-best-action-to-win"
@@ -18,7 +18,7 @@ tabs:
   - id: "grunt-work"
     title: "Eliminate Grunt-work"
     description: "Update the CRM Automatically. No Lifting a Finger."
-    src: "/screenshots/dashboard_rep_view_april_2025.jpg"
+    src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
     learnMoreLink: "/benefits/next-best-action-to-win"
