@@ -147,7 +147,7 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                   block h-auto max-w-none ring-1 ring-white/10 will-change-transform
                   w-[1000px] lg:w-[2000px] xl:w-[2000px] 2xl:w-[2000px] 
                   [transform-origin:left_center]
-                  [transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(20px)_translateY(120px)]
+                  [transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(40px)_translateY(40px)]
                   sm:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(120px)]
                   md:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(160px)]
                   lg:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(200px)]
