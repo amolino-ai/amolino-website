@@ -33,14 +33,14 @@ export function GradientBackground({ variant = 'default' }: GradientBackgroundPr
       </div>
     );
   }
-
+  
   return (
-    <div className="relative mx-auto max-w-7xl">
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       <div
         className={clsx(
           'absolute -top-44 right-0 md:-right-60 h-60 w-[36rem] transform-gpu',
           'bg-linear-115 from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff]',
-          'z-0 rotate-[-10deg] rounded-full blur-3xl',
+          'rotate-[-10deg] rounded-full blur-3xl',
         )}
       />
     </div>
