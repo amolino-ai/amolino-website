@@ -19,9 +19,9 @@ interface SplitHeroWithImageProps {
   * The key line of code that does that is 
   * className="hidden lg:block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform w-[1200px] xl:w-[1536px] 2xl:w-[1843px]"
   * Here the width is set based on the breakpoints.
-  1200px for large screens (1024px and up)
+<  1200px for large screens (1024px and up)
   1536px for extra large screens (1280px and up)
-  1843px for 2x extra large screens (1536px and up)
+  1843px for 2x extra large screens (1536px and up)>
 
   This is designed to be 1.2x the width of the screen at those breakpoints.
 
@@ -59,9 +59,9 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
         }
       `}</style>
 
-      <div className="relative isolate overflow-hidden bg-white">
+      <div className="relative isolate overflow-hidden  bg-white">
         {/* Content Container */}
-        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-16 pb-12 sm:pt-24 sm:pb-16 lg:px-8 lg:pt-32 lg:pb-20">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pt-8 pb-12 sm:pt-12 sm:pb-16 lg:px-8 lg:pt-24 lg:pb-20">
           {/* Centered Text Content */}
           <div className="mx-auto max-w-6xl text-center">
             <h1
@@ -79,7 +79,7 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
 
             {/* CTAs */}
             <div
-              className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-4"
+              className="animate-fade-up mt-4 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-x-4"
               style={{ '--animation-delay': '500ms' } as React.CSSProperties}
             >
               <a
@@ -114,49 +114,65 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
         {/* Image Container - Edge to edge with 3D tilt and pinned layout
           Don't change the overflow visible
         */}
-        <div
-          className="animate-fade-up relative -mt-2 sm:-mt-2 lg:-mt-2 z-0 overflow-visible"
-          style={{ '--animation-delay': '900ms' } as React.CSSProperties}
-        >
-          <div className="relative">
-            {/* Image Frame with 3D perspective */}
-            <div
-              className="relative origin-left bg-white/5 p-2 shadow-2xl ring-1 ring-white/10 lg:p-4 overflow-visible"
-              style={{
-                perspective: '1500px',
-                transformStyle: 'preserve-3d',
-                maxWidth: 'none',
-                width: '110vw',
-              }}
-            >
-              {/* Desktop image - hidden on mobile */}
-              <img
-                alt={content.images.desktop.dark.alt}
-                src={content.images.desktop.dark.src}
-                width={content.images.desktop.dark.width}
-                height={content.images.desktop.dark.height}
-                className="hidden lg:block h-auto max-w-none bg-neutral-900 ring-1 ring-white/10 will-change-transform w-[1200px] xl:w-[1536px] 2xl:w-[1843px]"
+        <div className="overflow-x-clip ">
+          <div
+            className={`animate-fade-up relative sm:-mt-[20px] lg:-mt-[80px] z-10 overflow-visible`}
+            style={{ '--animation-delay': '900ms' } as React.CSSProperties}
+          >
+            <div className="relative">
+              {/* Image Frame with 3D perspective */}
+              <div
+                className={`relative origin-left bg-white/5   ring-1
+                ring-white/10 p-0 lg:p-2
+                overflow-visible 
+                `}
                 style={{
-                  transform: 'rotateY(-9deg) rotateX(3deg) rotateZ(-1.2deg) translateZ(0)',
-                  transformOrigin: 'left center',
-                  filter: 'drop-shadow(0 50px 120px rgba(0,0,0,0.55))',
-
-                  /* Fade to black at bottom 20–30% */
-                  WebkitMaskImage:
-                    'linear-gradient(to bottom, black 75%, rgba(0,0,0,0) 100%)',
-                  maskImage:
-                    'linear-gradient(to bottom, black 75%, rgba(0,0,0,0) 100%)',
-
-                  /* optional to soften right edge too */
-                  // WebkitMaskComposite: 'source-in',
-                  // maskComposite: 'intersect',
+                  perspective: '4000px',
+                  perspectiveOrigin: '55% 50%', // optional: bias vanishing point slightly left
+                  transformStyle: 'preserve-3d',
+                  maxWidth: 'none',
+                  width: '110vw'
                 }}
-                loading="eager"
-                decoding="async"
-              />
+              >
 
-              {/* Mobile image - hidden on desktop */}
-              <img
+                {/* w-[4000px] lg:w-[4000px] xl:w-[5096px] 2xl:w-[4096px] */}
+                {/* scale-[0.4] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.8] */}
+                {/* Desktop image - hidden on mobile */}
+                <img
+                  alt={content.images.desktop.dark.alt}
+                  src={content.images.desktop.dark.src}
+                  width={content.images.desktop.dark.width}
+                  height={content.images.desktop.dark.height}
+                  className={`
+                  block h-auto max-w-none ring-1 ring-white/10 will-change-transform
+                  w-[1000px] lg:w-[2000px] xl:w-[2000px] 2xl:w-[2000px] 
+                  [transform-origin:left_center]
+                  [transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(40px)_translateY(40px)]
+                  sm:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(120px)]
+                  md:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(160px)]
+                  lg:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(200px)]
+                  xl:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(50px)_translateY(200px)]
+                  2xl:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(50px)_translateY(250px)]
+            `}
+
+                  style={{
+                    /* Flip the Y rotation */
+                    // transform: 'rotateY(11deg) rotateX(25deg) rotateZ(-15deg) translateZ(-10px)  ',
+                    // transformOrigin: 'left center',
+                    //filter: 'drop-shadow(0 42px 110px rgba(0,0,0,0.45))',
+                    // when we comment out the following mask, the imgage floats above the div below which is a nice effect
+                    WebkitMaskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
+                    maskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
+                    WebkitMaskRepeat: 'no-repeat',
+                    maskRepeat: 'no-repeat',
+                  }}
+                  loading="eager"
+                  decoding="async"
+                />
+
+
+                {/* Mobile image - hidden on desktop */}
+                {/* <img
                 alt={content.images.mobile.dark.alt}
                 src={content.images.mobile.dark.src}
                 width={content.images.mobile.dark.width}
@@ -164,42 +180,48 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                 className="block lg:hidden w-full h-auto"
                 loading="eager"
                 decoding="async"
-              />
+              /> */}
 
+              </div>
+
+              {/* Ambient glow effect */}
+              {/* <div className="pointer-events-none absolute inset-x-0 -bottom-8 -z-10 h-48 bg-gradient-to-t from-white via-white/80 to-transparent blur-3xl" /> */}
             </div>
-
-            {/* Ambient glow effect */}
-            <div className="pointer-events-none absolute inset-x-0 -bottom-8 -z-10 h-48 bg-gradient-to-t from-white via-white/80 to-transparent blur-3xl" />
           </div>
         </div>
 
         {/* Supporting Stats Container */}
-        <div className="mx-auto max-w-7xl px-6 pb-12 sm:pb-16 lg:px-8 lg:pb-20">
-          {/* Supporting Stats */}
-          <div
-            className="animate-fade-up mx-auto mt-16 max-w-4xl sm:mt-20 lg:mt-24"
-            style={{ '--animation-delay': '1100ms' } as React.CSSProperties}
-          >
-            <div className="grid grid-cols-1 gap-8 text-center sm:grid-cols-3 sm:gap-6">
-              {content.stats.map((stat, index) => {
-                const match = stat.value.match(/^(\d+(?:\.\d+)?)(.*)$/);
-                const value = match ? parseFloat(match[1]) : 0;
-                const suffix = match ? match[2] : '';
-                const decimals = value % 1 !== 0 ? 1 : 0;
 
-                return (
-                  <div key={index} className="mx-auto max-w-xs">
-                    <div className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
-                      <AnimatedNumber start={0} end={value} decimals={decimals} />
-                      {suffix}
+        {/* This givs a full-bleed background */}
+        <div className="w-full bg-zinc-100">
+          <div className="mx-auto max-w-7xl px-6 pb-12 sm:pb-16 lg:px-8 lg:pb-20 flex items-center justify-center">
+            {/* Supporting Stats */}
+            <div
+              className=" mx-auto max-w-4xl"
+            // style={{ '--animation-delay': '1100ms' } as React.CSSProperties}
+            >
+              <div className="grid grid-cols-3 gap-6 text-center sm:grid-cols-3 sm:gap-6 mt-28 md:mt-32 xl:mt-20 2xl:mt-24">
+                {content.stats.map((stat, index) => {
+                  const match = stat.value.match(/^(\d+(?:\.\d+)?)(.*)$/);
+                  const value = match ? parseFloat(match[1]) : 0;
+                  const suffix = match ? match[2] : '';
+                  const decimals = value % 1 !== 0 ? 1 : 0;
+
+                  return (
+                    <div key={index} className="mx-auto max-w-xs">
+                      <div className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+                        <AnimatedNumber start={0} end={value} decimals={decimals} />
+                        {suffix}
+                      </div>
+                      <div className="mt-3 text-sm font-medium text-neutral-600">
+                        {stat.description}
+                      </div>
                     </div>
-                    <div className="mt-3 text-sm font-medium text-neutral-600">
-                      {stat.description}
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
+
           </div>
         </div>
       </div>
