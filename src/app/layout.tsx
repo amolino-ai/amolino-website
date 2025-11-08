@@ -12,6 +12,8 @@ import glob from 'fast-glob';
 import { type Metadata } from 'next';
 import { Inter, JetBrains_Mono, Lexend } from 'next/font/google';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
+
 
 // Font configurations
 const inter = Inter({
@@ -96,6 +98,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
           </Providers>
         </PostHogProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Container } from '@/components/Container';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: 'Sales Qualification Frameworks',
@@ -22,6 +23,8 @@ export default function QualificationFrameworksLayout({ children }: { children: 
           <Breadcrumb items={breadcrumbItems} className="py-4" />
         </Container>
         {children}
+        <SpeedInsights />
+        <Analytics />
       </main>
     </>
   );
