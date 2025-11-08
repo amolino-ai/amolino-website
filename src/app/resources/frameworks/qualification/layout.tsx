@@ -22,6 +22,7 @@ export default function QualificationFrameworksLayout({ children }: { children: 
           <Breadcrumb items={breadcrumbItems} className="py-4" />
         </Container>
         {children}
+        <SpeedInsights />
       </main>
     </>
   );

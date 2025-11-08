@@ -96,6 +96,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
           </Providers>
         </PostHogProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
