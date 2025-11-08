@@ -47,6 +47,7 @@ export interface HelpSection {
 export interface HeroStat {
   value: string;
   description: string;
+  url: string;
 }
 
 export interface HeroCTAs {
