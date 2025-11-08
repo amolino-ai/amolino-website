@@ -5,10 +5,13 @@ subheadline: |
 stats:
   - value: "25%"
     description: "increase in win rates"
+    url: "/benefits/next-best-action-to-win"
   - value: "10%"
     description: "reduction in sales cycle time"
+    url: "/benefits/prevent-deal-slippage"
   - value: "90%+"
     description: "forecast accuracy"
+    url: "/benefits/accurate-forecasting"
 
 ctas:
   primaryUrl: "/demo"

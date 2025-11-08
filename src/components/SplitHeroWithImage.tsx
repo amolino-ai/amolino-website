@@ -2,6 +2,7 @@
 
 import type { HeroContent } from '@/lib/content';
 import { useState } from 'react';
+import Link from 'next/link';
 import VideoModal from '@/components/VideoModal';
 import { AnimatedNumber } from '@/components/AnimatedNumber';
 
@@ -145,7 +146,7 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                   height={content.images.desktop.dark.height}
                   className={`
                   block h-auto max-w-none ring-1 ring-white/10 will-change-transform
-                  w-[1000px] lg:w-[2000px] xl:w-[2000px] 2xl:w-[2000px] 
+                  w-[750px] lg:w-[2000px] xl:w-[2000px] 2xl:w-[2000px] 
                   [transform-origin:left_center]
                   [transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(40px)_translateY(40px)]
                   sm:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(120px)]
@@ -161,10 +162,10 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                     // transformOrigin: 'left center',
                     //filter: 'drop-shadow(0 42px 110px rgba(0,0,0,0.45))',
                     // when we comment out the following mask, the imgage floats above the div below which is a nice effect
-                    WebkitMaskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
-                    maskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
-                    WebkitMaskRepeat: 'no-repeat',
-                    maskRepeat: 'no-repeat',
+                    // WebkitMaskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
+                    // maskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
+                    // WebkitMaskRepeat: 'no-repeat',
+                    // maskRepeat: 'no-repeat',
                   }}
                   loading="eager"
                   decoding="async"
@@ -192,15 +193,18 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
 
         {/* Supporting Stats Container */}
 
-        {/* This givs a full-bleed background */}
-        <div className="w-full bg-zinc-100">
+        {/* This gives a full-bleed background */}
+        <div className="w-full bg-zinc-900">
           <div className="mx-auto max-w-7xl px-6 pb-12 sm:pb-16 lg:px-8 lg:pb-20 flex items-center justify-center">
             {/* Supporting Stats */}
             <div
               className=" mx-auto max-w-4xl"
-            // style={{ '--animation-delay': '1100ms' } as React.CSSProperties}
+              style={{ '--animation-delay': '1100ms' } as React.CSSProperties}
             >
-              <div className="grid grid-cols-3 gap-6 text-center sm:grid-cols-3 sm:gap-6 mt-28 md:mt-32 xl:mt-20 2xl:mt-24">
+              <div className={`
+                grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center mt-12
+                sm:mt-28  md:mt-32 xl:mt-20 2xl:mt-24
+              `}>
                 {content.stats.map((stat, index) => {
                   const match = stat.value.match(/^(\d+(?:\.\d+)?)(.*)$/);
                   const value = match ? parseFloat(match[1]) : 0;
@@ -208,15 +212,38 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                   const decimals = value % 1 !== 0 ? 1 : 0;
 
                   return (
-                    <div key={index} className="mx-auto max-w-xs">
-                      <div className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+                    <Link
+                      key={index}
+                      href={stat.url}
+                      className={`
+                        group mx-auto max-w-xs w-full
+                        rounded-xl px-6 py-8 sm:px-4 sm:py-6
+                        transition-all duration-300 ease-out
+
+                        // /* Mobile: subtle border and shadow for affordance */
+                        border border-zinc-800 shadow-lg shadow-black/5
+
+                        /* Desktop hover: raised card effect */
+                        lg:hover:bg-zinc-800 lg:hover:border-zinc-700
+                        lg:hover:shadow-xl lg:hover:shadow-black/20
+                        lg:hover:-translate-y-1
+
+                        /* Active/pressed state */
+                        active:scale-[0.98]
+
+                        /* Focus visible for keyboard navigation */
+                        focus-visible:outline-2 focus-visible:outline-offset-2
+                        focus-visible:outline-primary-500
+                      `}
+                    >
+                      <div className="text-4xl font-bold tracking-tight text-white sm:text-5xl transition-colors lg:group-hover:text-primary-400">
                         <AnimatedNumber start={0} end={value} decimals={decimals} />
                         {suffix}
                       </div>
-                      <div className="mt-3 text-sm font-medium text-neutral-600">
+                      <div className="mt-3 text-sm font-semibold tracking-tight text-neutral-400 transition-colors lg:group-hover:text-neutral-300">
                         {stat.description}
                       </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
