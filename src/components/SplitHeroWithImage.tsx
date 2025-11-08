@@ -194,15 +194,15 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
         {/* Supporting Stats Container */}
 
         {/* This gives a full-bleed background */}
-        <div className="w-full bg-zinc-900">
-          <div className="mx-auto max-w-7xl px-6 pb-12 sm:pb-16 lg:px-8 lg:pb-20 flex items-center justify-center">
+        <div className="w-full bg-black">
+          <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20 flex items-center justify-center">
             {/* Supporting Stats */}
             <div
-              className=" mx-auto max-w-4xl"
+              className="mx-auto w-full max-w-4xl"
               style={{ '--animation-delay': '1100ms' } as React.CSSProperties}
             >
               <div className={`
-                grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center mt-12
+                grid grid-cols-3 gap-2 sm:gap-6 text-center mt-12
                 sm:mt-28  md:mt-32 xl:mt-20 2xl:mt-24
               `}>
                 {content.stats.map((stat, index) => {
@@ -216,12 +216,15 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                       key={index}
                       href={stat.url}
                       className={`
-                        group mx-auto max-w-xs w-full
-                        rounded-xl px-6 py-8 sm:px-4 sm:py-6
+                        group w-full
+                        rounded-lg sm:rounded-xl px-2 py-6 sm:px-4 sm:py-6
                         transition-all duration-300 ease-out
+                        relative z-20
 
-                        // /* Mobile: subtle border and shadow for affordance */
+                        /* Mobile: subtle border and shadow for affordance */
                         border border-zinc-800 shadow-lg shadow-black/5
+
+                        bg-zinc-800/50
 
                         /* Desktop hover: raised card effect */
                         lg:hover:bg-zinc-800 lg:hover:border-zinc-700
@@ -236,11 +239,11 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                         focus-visible:outline-primary-500
                       `}
                     >
-                      <div className="text-4xl font-bold tracking-tight text-white sm:text-5xl transition-colors lg:group-hover:text-primary-400">
+                      <div className="text-2xl sm:text-4xl font-bold tracking-tight text-white lg:text-5xl transition-colors lg:group-hover:text-primary-400">
                         <AnimatedNumber start={0} end={value} decimals={decimals} />
                         {suffix}
                       </div>
-                      <div className="mt-3 text-sm font-semibold tracking-tight text-neutral-400 transition-colors lg:group-hover:text-neutral-300">
+                      <div className="mt-2 sm:mt-3 text-xs sm:text-sm font-semibold tracking-tight text-neutral-400 transition-colors lg:group-hover:text-neutral-300">
                         {stat.description}
                       </div>
                     </Link>
