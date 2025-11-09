@@ -4,13 +4,13 @@ subheadline: |
   every rep exactly what to do next.
 stats:
   - value: "25%"
-    description: "increase in win rates"
+    description: "Increase in win rates"
     url: "/benefits/next-best-action-to-win"
   - value: "10%"
-    description: "reduction in sales cycle time"
+    description: "Reduction in sales cycle time"
     url: "/benefits/prevent-deal-slippage"
   - value: "90%+"
-    description: "forecast accuracy"
+    description: "Forecast accuracy"
     url: "/benefits/accurate-forecasting"
 
 ctas:

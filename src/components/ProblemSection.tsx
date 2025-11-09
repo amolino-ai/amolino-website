@@ -1,5 +1,7 @@
 import React from 'react';
 import type { ProblemContent } from '@/lib/content';
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface ProblemSectionProps {
     content: ProblemContent;
@@ -23,21 +25,23 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({ content }) => {
 
                         <p className="text-lg text-primary-100 leading-relaxed">{content.description}</p>
 
-                        <button className="inline-flex items-center px-6 py-3 rounded-full border-2 border-white/30 hover:bg-white/10 transition-colors text-white font-medium">
+                        <Link href={content.ctaUrl} className="inline-flex items-center px-6 py-3 rounded-full border-2 border-white/30 hover:bg-white/10 transition-colors text-white font-medium">
                             {content.ctaText}
                             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
-                        </button>
+                        </Link>
 
                         {/* Testimonial Card */}
                         <div className="mt-12 bg-tertiary-100 text-neutral-800 p-6 rounded-lg shadow-lg transform -rotate-2 max-w-md">
                             <p className="text-sm leading-relaxed mb-4">&ldquo;{content.testimonial.quote}&rdquo;</p>
                             <div className="flex items-center gap-3">
-                                <img
-                                    src={content.testimonial.author.image}
+                                <Image
+                                    src={content.testimonial.author.image.src}
                                     alt={content.testimonial.author.name}
                                     className="w-12 h-12 rounded-full object-cover"
+                                    width={content.testimonial.author.image.width}
+                                    height={content.testimonial.author.image.height}
                                 />
                                 <div>
                                     <p className="font-semibold text-sm">{content.testimonial.author.name}</p>

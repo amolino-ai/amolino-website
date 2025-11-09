@@ -89,11 +89,20 @@ export interface ProblemStat {
   problemDescription: string;
 }
 
+
+// Generic image interface. We should start replacing existing ad-hoc image definitions with this.
+export interface Image {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
 export interface TestimonialAuthor {
   name: string;
   title: string;
   initials: string;
-  image?: string;
+  image: Image;
 }
 
 export interface Testimonial {
@@ -118,13 +127,18 @@ export interface OutcomeScreenshot {
   height: number;
 }
 
+export interface OutcomeCardFeatures {
+  title: string;
+  cta: string;
+}
+
 export interface OutcomeCard {
   id: number;
   label: string;
   title: string;
   description: string;
   statBadge: string;
-  benefits: string[];
+  benefits: OutcomeCardFeatures[];
   ctaText: string;
   ctaLink: string;
   bgColor: string;
