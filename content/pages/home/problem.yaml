@@ -1,8 +1,8 @@
 sectionLabel: "Challenges faced by B2B sales teams"
 headline: "Inconsistent Sales Execution?"
 description: "Lack of standardized processes and unpredictable rep performance are costing you deals and revenue."
-ctaText: "See how we help"
-ctaUrl: "#"
+ctaText: "Try AmolinoAI"
+ctaUrl: "https://app.amolino.ai"
 
 problems:
   - percentage: "62%"
@@ -20,4 +20,8 @@ testimonial:
   author:
     name: "Brian Sathianathan"
     title: "COO at Iterate.ai"
-    image: "/people/Brian_Sathianathan.png"
+    image:
+      src: "/people/Brian_Sathianathan.png"
+      width: 825
+      height: 826
+      alt: "Brian Sathianathan talks about how AmolinoAI improved their sales forecasting accuracy."
