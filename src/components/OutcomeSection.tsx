@@ -3,6 +3,7 @@
 import type { OutcomeContent } from '@/lib/content/types';
 import React, { useEffect, useRef } from 'react';
 import { Screenshot } from '@/components/Screenshot';
+import Link from 'next/link';
 
 interface OutcomeSectionProps {
     content: OutcomeContent;
@@ -142,7 +143,9 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                 >
                                     <article
                                         className={`w-full max-h-[90vh] overflow-y-auto rounded-[2rem] md:rounded-[3rem] p-4 md:p-6 xl:p-8 shadow-2xl
-                                border border-white/20 backdrop-blur-sm ${p.bgColor} ${p.textColor}`}
+                                                    border border-white/20 backdrop-blur-sm
+                                                    ${p.bgColor} ${p.textColor}
+                                                `}
                                         style={p.id === 1 ? {
                                             backgroundColor: '#d3dcdd',
                                             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fb7d3c' fill-opacity='0.11'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
@@ -174,20 +177,22 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
 
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
                                             {p.benefits.map((b, bi) => (
-                                                <li key={bi} className="flex items-start gap-2">
-                                                    <svg
-                                                        className="w-4 h-4 mt-0.5 flex-shrink-0"
-                                                        fill="currentColor"
-                                                        viewBox="0 0 20 20"
-                                                        aria-hidden="true"
-                                                    >
-                                                        <path
-                                                            fillRule="evenodd"
-                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                                            clipRule="evenodd"
-                                                        />
-                                                    </svg>
-                                                    <span className="text-xs md:text-sm leading-relaxed">{b}</span>
+                                                <li key={bi}>
+                                                    <Link href={b.cta} className="group hover:underline inline-flex items-center gap-2">
+                                                        <svg
+                                                            className="w-4 h-4 flex-shrink-0 translate-y-[0.05em] transition-colors group-hover:text-primary-400"
+                                                            fill="currentColor"
+                                                            viewBox="0 0 20 20"
+                                                            aria-hidden="true"
+                                                        >
+                                                            <path
+                                                                fillRule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                                                clipRule="evenodd"
+                                                            />
+                                                        </svg>
+                                                        <span className="text-xs md:text-sm leading-relaxed">{b.title}</span>
+                                                    </Link>
                                                 </li>
                                             ))}
                                         </ul>
@@ -198,6 +203,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                                 width={p.screenshot.width}
                                                 height={p.screenshot.height}
                                                 className="mx-auto max-w-full"
+
                                             />
                                         </div>
                                     </article>
@@ -252,9 +258,9 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
 
                             <ul className="grid grid-cols-1 gap-3 mt-6">
                                 {p.benefits.map((b, i) => (
-                                    <li key={i} className="flex items-start gap-3">
+                                    <li key={i} className="group inline-flex items-center gap-3 hover:text-primary-400 cursor-pointer transition-colors">
                                         <svg
-                                            className="w-5 h-5 mt-0.5 flex-shrink-0"
+                                            className="w-5 h-5 flex-shrink-0 translate-y-[0.05em] transition-colors"
                                             fill="currentColor"
                                             viewBox="0 0 20 20"
                                             aria-hidden="true"
@@ -265,7 +271,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                        <span className="text-sm leading-relaxed">{b}</span>
+                                        <span className="text-sm leading-relaxed">{b.title}</span>
                                     </li>
                                 ))}
                             </ul>
