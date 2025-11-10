@@ -116,28 +116,34 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
           Don't change the overflow visible
         */}
         <div className="overflow-x-clip ">
-          <div
-            className={`animate-fade-up relative sm:-mt-[20px] lg:-mt-[80px] z-10 overflow-visible`}
-            style={{ '--animation-delay': '900ms' } as React.CSSProperties}
-          >
-            <div className="relative">
-              {/* Image Frame with 3D perspective */}
-              <div
-                className={`relative origin-left bg-white/5   ring-1
-                ring-white/10 p-0 lg:p-2
-                overflow-visible 
-                `}
-                style={{
-                  perspective: '4000px',
-                  perspectiveOrigin: '55% 50%', // optional: bias vanishing point slightly left
-                  transformStyle: 'preserve-3d',
-                  maxWidth: 'none',
-                  width: '110vw'
-                }}
-              >
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div
+              className={`animate-fade-up relative sm:-mt-[20px] lg:-mt-[80px] z-10 overflow-visible`}
+              style={{ '--animation-delay': '900ms' } as React.CSSProperties}
+            >
+              <div className="relative flex justify-center">
+                {/* Image Frame with 3D perspective */}
+                <div
+                  className={`relative origin-left bg-white/5   ring-1
+                  ring-white/10 p-0 lg:p-2
+                  overflow-visible
+                  `}
+                  style={{
+                    perspective: '4000px',
+                    perspectiveOrigin: '55% 50%', // optional: bias vanishing point slightly left
+                    transformStyle: 'preserve-3d',
+                  }}
+                >
+                  {/* Gradient overlay for fade effect */}
+                  <div
+                    className="absolute inset-0 pointer-events-none z-10"
+                    style={{
+                      background: 'linear-gradient(to bottom, transparent 0%, transparent 25%, rgba(255, 255, 255, 0.9) 100%)',
+                    }}
+                  />
 
                 {/* w-[4000px] lg:w-[4000px] xl:w-[5096px] 2xl:w-[4096px] */}
-                {/* scale-[0.4] lg:scale-[0.6] xl:scale-[0.7] 2xl:scale-[0.8] */}
+                 
                 {/* Desktop image - hidden on mobile */}
                 <img
                   alt={content.images.desktop.dark.alt}
@@ -148,12 +154,13 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                   block h-auto max-w-none ring-1 ring-white/10 will-change-transform
                   w-[750px] lg:w-[2000px] xl:w-[2000px] 2xl:w-[2000px] 
                   [transform-origin:left_center]
-                  [transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(40px)_translateY(40px)]
-                  sm:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(120px)]
-                  md:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(160px)]
-                  lg:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(10px)_translateY(200px)]
-                  xl:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(50px)_translateY(200px)]
-                  2xl:[transform:rotateY(11deg)_rotateX(25deg)_rotateZ(-15deg)_translateZ(-10px)_translateX(50px)_translateY(250px)]
+                  [transform:rotateY(12deg)_rotateX(40deg)_rotateZ(-12deg)_translateZ(-10px)_translateX(150px)_translateY(50px)]
+                  sm:[transform:rotateY(12deg)_rotateX(40deg)_rotateZ(-12deg)_translateZ(-10px)_translateX(100px)_translateY(25px)]
+                  md:[transform:rotateY(12deg)_rotateX(40deg)_rotateZ(-12deg)_translateZ(-10px)_translateX(50px)_translateY(25px)]
+                  lg:[transform:rotateY(12deg)_rotateX(40deg)_rotateZ(-12deg)_translateZ(-10px)_translateX(500px)_translateY(100px)]
+                  xl:[transform:rotateY(12deg)_rotateX(40deg)_rotateZ(-12deg)_translateZ(-10px)_translateX(400px)_translateY(100px)]
+                  2xl:[transform:rotateY(12deg)_rotateX(40deg)_rotateZ(-12deg)_translateZ(-10px)_translateX(400px)_translateY(100px)]
+                  scale-[1.2] sm:scale-[1.2] md:scale-[1.2] lg:scale-[1.0] xl:scale-[1.0] 2xl:scale-[0.8] 
             `}
 
                   style={{
@@ -166,6 +173,10 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                     // maskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
                     // WebkitMaskRepeat: 'no-repeat',
                     // maskRepeat: 'no-repeat',
+                    WebkitMaskImage: 'linear-gradient(to right, white 0%, white 30%, transparent 70%, transparent 100%)',
+                    maskImage: 'linear-gradient(to right, white 0%, white 30%, transparent 70%, transparent 100%)',
+                    WebkitMaskRepeat: 'no-repeat',
+                    maskRepeat: 'no-repeat',
                   }}
                   loading="eager"
                   decoding="async"
@@ -187,6 +198,7 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
 
               {/* Ambient glow effect */}
               {/* <div className="pointer-events-none absolute inset-x-0 -bottom-8 -z-10 h-48 bg-gradient-to-t from-white via-white/80 to-transparent blur-3xl" /> */}
+              </div>
             </div>
           </div>
         </div>
@@ -194,7 +206,7 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
         {/* Supporting Stats Container */}
 
         {/* This gives a full-bleed background */}
-        <div className="w-full bg-black">
+        <div className="w-full bg-white">
           <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20 flex items-center justify-center">
             {/* Supporting Stats */}
             <div
@@ -202,8 +214,7 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
               style={{ '--animation-delay': '1100ms' } as React.CSSProperties}
             >
               <div className={`
-                grid grid-cols-3 gap-2 sm:gap-6 text-center mt-12
-                sm:mt-28  md:mt-32 xl:mt-20 2xl:mt-24
+                grid grid-cols-3 gap-2 sm:gap-6 text-center 
               `}>
                 {content.stats.map((stat, index) => {
                   const match = stat.value.match(/^(\d+(?:\.\d+)?)(.*)$/);
@@ -222,13 +233,13 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                         relative z-20
 
                         /* Mobile: subtle border and shadow for affordance */
-                        border border-zinc-800 shadow-lg shadow-black/5
+                        border border-neutral-200 shadow-lg shadow-neutral-900/5
 
-                        bg-zinc-800/50
+                        bg-neutral-50/50
 
                         /* Desktop hover: raised card effect */
-                        lg:hover:bg-zinc-800 lg:hover:border-zinc-700
-                        lg:hover:shadow-xl lg:hover:shadow-black/20
+                        lg:hover:bg-neutral-100 lg:hover:border-neutral-300
+                        lg:hover:shadow-xl lg:hover:shadow-neutral-900/10
                         lg:hover:-translate-y-1
 
                         /* Active/pressed state */
@@ -239,11 +250,11 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                         focus-visible:outline-primary-500
                       `}
                     >
-                      <div className="text-2xl sm:text-4xl font-bold tracking-tight text-white lg:text-5xl transition-colors lg:group-hover:text-primary-400">
+                      <div className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 lg:text-5xl transition-colors lg:group-hover:text-primary-600">
                         <AnimatedNumber start={0} end={value} decimals={decimals} />
                         {suffix}
                       </div>
-                      <div className="mt-2 sm:mt-3 text-xs sm:text-sm font-semibold tracking-tight text-neutral-400 transition-colors lg:group-hover:text-neutral-300">
+                      <div className="mt-2 sm:mt-3 text-xs sm:text-sm font-semibold tracking-tight text-neutral-600 transition-colors lg:group-hover:text-neutral-700">
                         {stat.description}
                       </div>
                     </Link>
