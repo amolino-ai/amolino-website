@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import VideoModal from '@/components/VideoModal';
 import { AnimatedNumber } from '@/components/AnimatedNumber';
+import { Eyebrow } from '@/components/Eyebrow';
 
 interface SplitHeroWithImageProps {
   content: HeroContent;
@@ -65,17 +66,33 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-8 pb-12 sm:pt-12 sm:pb-16 lg:px-8 lg:pt-24 lg:pb-20">
           {/* Centered Text Content */}
           <div className="mx-auto max-w-6xl text-center">
+            <Eyebrow text={content.options.eyebrow} variant="callout" />
             <h1
-              className="animate-fade-up text-balance text-5xl font-medium tracking-tight text-neutral-900 sm:text-6xl lg:text-7xl"
-              style={{ '--animation-delay': '100ms' } as React.CSSProperties}
+              className={`text-balance font-medium  mt-4
+              text-neutral-900 text-5xl sm:text-6xl lg:text-7xl leading-tight tracking-tight
+            `}
             >
-              {content.headline}
+              <span
+                className="animate-fade-up inline-block font-light"
+                style={{ '--animation-delay': '50ms' } as React.CSSProperties}
+              >
+                <span>{content.options.headline.line1}</span>
+              </span>
+              <br />
+              <span
+                className="animate-fade-up inline-block font-light"
+                style={{ '--animation-delay': '75ms' } as React.CSSProperties}
+              >
+                <span >{content.options.headline.line2}</span>
+              </span>
             </h1>
             <p
-              className="animate-fade-up mx-auto mt-6 max-w-3xl text-pretty text-lg text-neutral-500 sm:text-xl/8"
-              style={{ '--animation-delay': '300ms' } as React.CSSProperties}
+              className={`
+                animate-fade-up mx-auto mt-8 max-w-3xl text-pretty text-lg text-neutral-900 sm:text-xl/8"
+              style={{ '--animation-delay': '600ms' } as React.CSSProperties}
+            `}
             >
-              {content.subheadline}
+              {content.options.subheadline}
             </p>
 
             {/* CTAs */}
@@ -142,15 +159,15 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                     }}
                   />
 
-                {/* w-[4000px] lg:w-[4000px] xl:w-[5096px] 2xl:w-[4096px] */}
-                 
-                {/* Desktop image - hidden on mobile */}
-                <img
-                  alt={content.images.desktop.dark.alt}
-                  src={content.images.desktop.dark.src}
-                  width={content.images.desktop.dark.width}
-                  height={content.images.desktop.dark.height}
-                  className={`
+                  {/* w-[4000px] lg:w-[4000px] xl:w-[5096px] 2xl:w-[4096px] */}
+
+                  {/* Desktop image - hidden on mobile */}
+                  <img
+                    alt={content.images.desktop.dark.alt}
+                    src={content.images.desktop.dark.src}
+                    width={content.images.desktop.dark.width}
+                    height={content.images.desktop.dark.height}
+                    className={`
                   block h-auto max-w-none ring-1 ring-white/10 will-change-transform
                   w-[750px] lg:w-[2000px] xl:w-[2000px] 2xl:w-[2000px] 
                   [transform-origin:left_center]
@@ -163,28 +180,28 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                   scale-[1.2] sm:scale-[1.2] md:scale-[1.2] lg:scale-[1.0] xl:scale-[1.0] 2xl:scale-[0.8] 
             `}
 
-                  style={{
-                    /* Flip the Y rotation */
-                    // transform: 'rotateY(11deg) rotateX(25deg) rotateZ(-15deg) translateZ(-10px)  ',
-                    // transformOrigin: 'left center',
-                    //filter: 'drop-shadow(0 42px 110px rgba(0,0,0,0.45))',
-                    // when we comment out the following mask, the imgage floats above the div below which is a nice effect
-                    // WebkitMaskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
-                    // maskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
-                    // WebkitMaskRepeat: 'no-repeat',
-                    // maskRepeat: 'no-repeat',
-                    WebkitMaskImage: 'linear-gradient(to right, white 0%, white 30%, transparent 70%, transparent 100%)',
-                    maskImage: 'linear-gradient(to right, white 0%, white 30%, transparent 70%, transparent 100%)',
-                    WebkitMaskRepeat: 'no-repeat',
-                    maskRepeat: 'no-repeat',
-                  }}
-                  loading="eager"
-                  decoding="async"
-                />
+                    style={{
+                      /* Flip the Y rotation */
+                      // transform: 'rotateY(11deg) rotateX(25deg) rotateZ(-15deg) translateZ(-10px)  ',
+                      // transformOrigin: 'left center',
+                      //filter: 'drop-shadow(0 42px 110px rgba(0,0,0,0.45))',
+                      // when we comment out the following mask, the imgage floats above the div below which is a nice effect
+                      // WebkitMaskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
+                      // maskImage: 'linear-gradient(to bottom, white 90%, transparent 100%)',
+                      // WebkitMaskRepeat: 'no-repeat',
+                      // maskRepeat: 'no-repeat',
+                      WebkitMaskImage: 'linear-gradient(to right, white 0%, white 30%, transparent 70%, transparent 100%)',
+                      maskImage: 'linear-gradient(to right, white 0%, white 30%, transparent 70%, transparent 100%)',
+                      WebkitMaskRepeat: 'no-repeat',
+                      maskRepeat: 'no-repeat',
+                    }}
+                    loading="eager"
+                    decoding="async"
+                  />
 
 
-                {/* Mobile image - hidden on desktop */}
-                {/* <img
+                  {/* Mobile image - hidden on desktop */}
+                  {/* <img
                 alt={content.images.mobile.dark.alt}
                 src={content.images.mobile.dark.src}
                 width={content.images.mobile.dark.width}
@@ -194,10 +211,10 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
                 decoding="async"
               /> */}
 
-              </div>
+                </div>
 
-              {/* Ambient glow effect */}
-              {/* <div className="pointer-events-none absolute inset-x-0 -bottom-8 -z-10 h-48 bg-gradient-to-t from-white via-white/80 to-transparent blur-3xl" /> */}
+                {/* Ambient glow effect */}
+                {/* <div className="pointer-events-none absolute inset-x-0 -bottom-8 -z-10 h-48 bg-gradient-to-t from-white via-white/80 to-transparent blur-3xl" /> */}
               </div>
             </div>
           </div>

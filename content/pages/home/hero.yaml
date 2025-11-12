@@ -1,7 +1,11 @@
-headline: "Focus on the right deals and know how to win them"
-subheadline: |
-  Amolino analyzes data across all your systems to find what consistently moves deals forward—then tells
-  every rep exactly what to do next.
+options:
+  headline:
+    line1: "AI that learns from every deal to"
+    line2: "win more & close faster"
+  subheadline: |
+    By studying how your team executes and where deals derail, Amolino delivers next-best actions to every rep,
+    early risk warnings to managers, and predictable forecasts to leadership.
+  eyebrow: "For B2B Sales Teams"
 stats:
   - value: "25%"
     description: "Increase in win rates"

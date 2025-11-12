@@ -74,9 +74,17 @@ export interface HeroImages {
   };
 }
 
-export interface HeroContent {
-  headline: string;
+export interface HeroOptions {
+  eyebrow: string;
+  headline: {
+    line1: string;
+    line2: string;
+  };
   subheadline: string;
+}
+
+export interface HeroContent {
+  options: HeroOptions;
   stats: HeroStat[];
   ctas: HeroCTAs;
   images: HeroImages;
