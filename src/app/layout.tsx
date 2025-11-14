@@ -74,6 +74,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const footerContent = await getFooterContent();
   const navbarProducts = await getNavbarProducts();
   const navbarLinks = await getNavbarLinks();
+  const rb2bId = process.env.RB2B_ID;
+
+  if (!rb2bId) {
+    console.error('RB2B_ID environment variable is not defined');
+  }
 
   return (
     <html
@@ -82,13 +87,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       suppressHydrationWarning
     >
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
-        <Script
-          id="reb2b-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("9NMMZHPQGVNW");`,
-          }}
-        />
+        {rb2bId && (
+          <Script
+            id="reb2b-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("${rb2bId}");`,
+            }}
+          />
+        )}
         <PostHogProvider>
           <Providers>
             {/* Add DefaultSeo component here */}
