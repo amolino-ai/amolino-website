@@ -10,11 +10,11 @@ import type { Metadata } from 'next';
 
 
 /**
- * Generate static params for all features in "Prevent Deal Slippage" pillar
+ * Generate static params for all features in "Close Deals Faster" pillar
  * Dynamically scans the benefit folder for all YAML files
  */
 export async function generateStaticParams() {
-  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', 'prevent-deal-slippage');
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', 'close-deals-faster');
   const files = fs.readdirSync(benefitDir).filter(f => f.endsWith('.yaml'));
 
   return files.map((file) => ({
@@ -34,7 +34,7 @@ interface ProductPageProps {
  */
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const content = await getProductContent('prevent-deal-slippage', slug);
+  const content = await getProductContent('close-deals-faster', slug);
 
   // Use metadata from YAML if available, otherwise fall back to hero content
   // Note: TITLE_SUFFIX is already applied by root layout's title template
@@ -71,16 +71,16 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 
 /**
- * Dynamic product feature page component for Prevent Deal Slippage pillar
+ * Dynamic product feature page component for Close Deals Faster pillar
  */
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const content = await getProductContent('prevent-deal-slippage', slug);
-  const benefitContent = await getBenefitGroupContent('prevent-deal-slippage');
+  const content = await getProductContent('close-deals-faster', slug);
+  const benefitContent = await getBenefitGroupContent('close-deals-faster');
 
   const breadcrumbItems = [
     { label: 'Features', href: '/features' },
-    { label: benefitContent.hero.badgeText || benefitContent.hero.title, href: '/benefits/prevent-deal-slippage' },
+    { label: benefitContent.hero.badgeText || benefitContent.hero.title, href: '/benefits/close-deals-faster' },
     { label: content.options.featureName },
   ];
 

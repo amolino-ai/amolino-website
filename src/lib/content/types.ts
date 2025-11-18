@@ -791,3 +791,78 @@ export interface ComparisonPageContent {
   analysis: ComparisonAnalysis;
   benefits: ComparisonBenefits;
 }
+
+// Security page types
+export interface SecurityHero {
+  badge: string;
+  heading: string;
+  description: string;
+}
+
+export interface SecurityCertification {
+  title: string;
+  description: string;
+}
+
+export interface SecurityCertifications {
+  heading: string;
+  subheading: string;
+  certifications: SecurityCertification[];
+}
+
+export interface SecurityItem {
+  title: string;
+  description: string;
+}
+
+export interface SecurityDataProtection {
+  heading: string;
+  subheading: string;
+  encryption: {
+    title: string;
+    items: SecurityItem[];
+  };
+  dataResidency: {
+    title: string;
+    items: SecurityItem[];
+  };
+}
+
+export interface SecurityAccessControls {
+  heading: string;
+  subheading: string;
+  controls: SecurityItem[];
+}
+
+export interface SecurityInfrastructure {
+  heading: string;
+  subheading: string;
+  azure: {
+    title: string;
+    description: string;
+    features: string[];
+  };
+  networkSecurity: {
+    title: string;
+    items: SecurityItem[];
+  };
+}
+
+export interface SecurityPractices {
+  heading: string;
+  subheading: string;
+  practices: SecurityItem[];
+}
+
+export interface SecurityCTA {
+  text: string;
+  url: string;
+  variant: 'primary' | 'outline';
+}
+
+export interface SecurityContact {
+  heading: string;
+  description: string;
+  disclaimer: string;
+  ctas: SecurityCTA[];
+}
