@@ -1,16 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { loadYAML } from './loaders';
+import { getNavigationConfig, getFeatureHref } from './navigation';
 import type { FooterSection, ProductPageContent } from './types';
-
-/**
- * Benefit slug to display name mapping
- */
-const BENEFIT_NAMES: Record<string, string> = {
-  'next-best-action-to-win': 'Next Best Action to Win',
-  'accurate-forecasting': 'Accurate Forecasting',
-  'prevent-deal-slippage': 'Prevent Deal Slippage',
-};
 
 /**
  * Scan a directory for YAML files and return their slugs
@@ -32,8 +24,12 @@ export async function generateFooterBenefitSections(): Promise<FooterSection[]> 
   const contentDir = path.join(process.cwd(), 'content', 'pages', 'features');
   const sections: FooterSection[] = [];
 
+  // Load navigation config to get benefit slugs and names
+  const navConfig = await getNavigationConfig();
+
   // Scan each benefit folder
-  for (const benefitSlug of Object.keys(BENEFIT_NAMES)) {
+  for (const benefit of navConfig.benefits) {
+    const benefitSlug = benefit.slug;
     const benefitDir = path.join(contentDir, benefitSlug);
     const slugs = scanYamlFiles(benefitDir);
 
@@ -47,7 +43,7 @@ export async function generateFooterBenefitSections(): Promise<FooterSection[]> 
         // Include all products in footer (no filtering)
         links.push({
           label: content.options.featureName,
-          href: `/features/${benefitSlug}/${slug}`,
+          href: getFeatureHref(benefitSlug, slug),
         });
       } catch (error) {
         console.warn(`Failed to load product file: ${benefitSlug}/${slug}.yaml`, error);
@@ -57,7 +53,7 @@ export async function generateFooterBenefitSections(): Promise<FooterSection[]> 
     // Only add benefit section if it has products to show
     if (links.length > 0) {
       sections.push({
-        heading: BENEFIT_NAMES[benefitSlug],
+        heading: benefit.displayName,
         links,
       });
     }

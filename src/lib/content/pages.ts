@@ -1,6 +1,7 @@
 import { loadYAML } from './loaders';
 import { buildNavbarProductsFromContent } from './navbar-generator';
 import { generateFooterBenefitSections } from './footer-generator';
+import { getBenefitSlugs } from './navigation';
 import fs from 'fs';
 import path from 'path';
 import type {
@@ -25,6 +26,13 @@ import type {
   NavbarLinksContent,
   BenefitGroupContent,
   ComparisonPageContent,
+  SecurityHero,
+  SecurityCertifications,
+  SecurityDataProtection,
+  SecurityAccessControls,
+  SecurityInfrastructure,
+  SecurityPractices,
+  SecurityContact,
 } from './types';
 
 /**
@@ -167,11 +175,7 @@ export async function getProductsByBenefit(benefit: string): Promise<Array<Produ
  * Get all products grouped by benefit pillar
  */
 export async function getAllProductsGroupedByBenefit() {
-  const benefits = [
-    'next-best-action-to-win',
-    'accurate-forecasting',
-    'prevent-deal-slippage',
-  ];
+  const benefits = await getBenefitSlugs();
 
   const groupedProducts = await Promise.all(
     benefits.map(async (benefit) => {
@@ -240,4 +244,35 @@ export async function getBenefitGroupContent(slug: string): Promise<BenefitGroup
  */
 export async function getComparisonPageContent(slug: string): Promise<ComparisonPageContent> {
   return loadYAML<ComparisonPageContent>(`pages/learn/${slug}.yaml`);
+}
+
+/**
+ * Get security page content
+ */
+export async function getSecurityHero(): Promise<SecurityHero> {
+  return loadYAML<SecurityHero>('pages/security/hero.yaml');
+}
+
+export async function getSecurityCertifications(): Promise<SecurityCertifications> {
+  return loadYAML<SecurityCertifications>('pages/security/certifications.yaml');
+}
+
+export async function getSecurityDataProtection(): Promise<SecurityDataProtection> {
+  return loadYAML<SecurityDataProtection>('pages/security/data-protection.yaml');
+}
+
+export async function getSecurityAccessControls(): Promise<SecurityAccessControls> {
+  return loadYAML<SecurityAccessControls>('pages/security/access-controls.yaml');
+}
+
+export async function getSecurityInfrastructure(): Promise<SecurityInfrastructure> {
+  return loadYAML<SecurityInfrastructure>('pages/security/infrastructure.yaml');
+}
+
+export async function getSecurityPractices(): Promise<SecurityPractices> {
+  return loadYAML<SecurityPractices>('pages/security/practices.yaml');
+}
+
+export async function getSecurityContact(): Promise<SecurityContact> {
+  return loadYAML<SecurityContact>('pages/security/contact.yaml');
 }

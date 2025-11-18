@@ -1,25 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { loadYAML } from './loaders';
+import { getNavigationConfig, getBenefitHref, getFeatureHref } from './navigation';
 import type { NavbarProductsContent, NavbarBenefit, NavbarFeature, ProductPageContent } from './types';
-
-/**
- * Benefit slug to display name mapping
- */
-const BENEFIT_NAMES: Record<string, string> = {
-  'next-best-action-to-win': 'Next Best Action to Win',
-  'accurate-forecasting': 'Accurate Forecasting',
-  'prevent-deal-slippage': 'Prevent Deal Slippage',
-};
-
-/**
- * Benefit slug to href mapping
- */
-const BENEFIT_HREFS: Record<string, string> = {
-  'next-best-action-to-win': '/benefits/next-best-action-to-win',
-  'accurate-forecasting': '/benefits/accurate-forecasting',
-  'prevent-deal-slippage': '/benefits/prevent-deal-slippage',
-};
 
 /**
  * Scan a directory for YAML files and return their slugs
@@ -41,8 +24,12 @@ export async function buildNavbarProductsFromContent(): Promise<NavbarProductsCo
   const contentDir = path.join(process.cwd(), 'content', 'pages', 'features');
   const benefits: NavbarBenefit[] = [];
 
+  // Load navigation config to get benefit slugs and names
+  const navConfig = await getNavigationConfig();
+
   // Scan each benefit folder
-  for (const benefitSlug of Object.keys(BENEFIT_NAMES)) {
+  for (const benefit of navConfig.benefits) {
+    const benefitSlug = benefit.slug;
     const benefitDir = path.join(contentDir, benefitSlug);
     const slugs = scanYamlFiles(benefitDir);
 
@@ -58,7 +45,7 @@ export async function buildNavbarProductsFromContent(): Promise<NavbarProductsCo
           features.push({
             name: content.options.featureName,
             description: content.options.navbarDescription,
-            href: `/features/${benefitSlug}/${slug}`,
+            href: getFeatureHref(benefitSlug, slug),
           });
         }
       } catch (error) {
@@ -69,8 +56,8 @@ export async function buildNavbarProductsFromContent(): Promise<NavbarProductsCo
     // Only add benefit if it has features to show
     if (features.length > 0) {
       benefits.push({
-        name: BENEFIT_NAMES[benefitSlug],
-        href: BENEFIT_HREFS[benefitSlug],
+        name: benefit.displayName,
+        href: getBenefitHref(benefitSlug),
         features,
         totalFeatureCount,
       });

@@ -1,0 +1,26 @@
+heading: "Infrastructure Security"
+subheading: "Built on trusted cloud infrastructure"
+
+azure:
+  title: "Microsoft Azure Partnership"
+  description: "Amolino is a verified Microsoft partner, and our infrastructure runs on Microsoft Azure's enterprise-grade cloud platform. This partnership ensures that we meet Microsoft's stringent security and compliance standards."
+  features:
+    - "ISO 27001, ISO 27017, and ISO 27018 certified infrastructure"
+    - "99.99% uptime SLA with geographic redundancy"
+    - "Physical security controls at Azure data centers"
+    - "Automated backup and disaster recovery"
+
+networkSecurity:
+  title: "Network Security"
+  items:
+    - title: "DDoS Protection"
+      description: "Advanced DDoS mitigation protects against distributed denial-of-service attacks, ensuring service availability."
+
+    - title: "Web Application Firewall"
+      description: "Protects against common web vulnerabilities including SQL injection, XSS, and CSRF attacks."
+
+    - title: "Network Segmentation"
+      description: "Isolated network zones with strict firewall rules limit the blast radius of potential security incidents."
+
+    - title: "Intrusion Detection"
+      description: "24/7 monitoring and automated alerting detect and respond to suspicious network activity in real-time."

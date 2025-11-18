@@ -99,6 +99,16 @@ export type {
   ComparisonScenario,
   ComparisonAnalysis,
   ComparisonBenefits,
+  SecurityHero,
+  SecurityCertifications,
+  SecurityCertification,
+  SecurityDataProtection,
+  SecurityAccessControls,
+  SecurityInfrastructure,
+  SecurityPractices,
+  SecurityContact,
+  SecurityCTA,
+  SecurityItem,
 } from './types';
 
 // Loader utilities (exported for advanced use cases)
@@ -152,4 +162,11 @@ export {
   getNavbarLinks,
   getBenefitGroupContent,
   getComparisonPageContent,
+  getSecurityHero,
+  getSecurityCertifications,
+  getSecurityDataProtection,
+  getSecurityAccessControls,
+  getSecurityInfrastructure,
+  getSecurityPractices,
+  getSecurityContact,
 } from './pages';
