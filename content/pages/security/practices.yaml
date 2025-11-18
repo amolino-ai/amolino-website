@@ -1,0 +1,18 @@
+heading: "Security Practices"
+subheading: "Continuous monitoring and improvement"
+
+practices:
+  - title: "Regular Security Audits"
+    description: "We conduct regular internal security audits and engage third-party security firms to perform penetration testing and vulnerability assessments. All findings are remediated according to industry best practices."
+
+  - title: "Vulnerability Management"
+    description: "Our security team continuously monitors for new vulnerabilities and applies security patches promptly. We maintain a vulnerability disclosure program and respond to security researchers' findings within 24 hours."
+
+  - title: "Employee Security Training"
+    description: "All Amolino employees undergo security awareness training and are required to follow our security policies. We conduct regular phishing simulations and security exercises to maintain high security awareness."
+
+  - title: "Incident Response"
+    description: "We maintain a comprehensive incident response plan with 24/7 on-call security personnel. In the unlikely event of a security incident, we will notify affected customers within 72 hours and work transparently to resolve the issue."
+
+  - title: "Secure Development Lifecycle"
+    description: "Security is integrated into every phase of our development process. We perform code reviews, static analysis, and security testing before deploying any code to production. All code changes require approval from senior engineers."

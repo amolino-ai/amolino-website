@@ -1,0 +1,20 @@
+heading: "Data Protection"
+subheading: "Enterprise-grade encryption and security"
+
+encryption:
+  title: "Encryption"
+  items:
+    - title: "In Transit"
+      description: "All data transmitted between your systems and Amolino is encrypted using TLS 1.3, the latest and most secure version of Transport Layer Security. This ensures that your data cannot be intercepted or read by unauthorized parties during transmission."
+
+    - title: "At Rest"
+      description: "All data stored in our databases is encrypted using AES-256 encryption, the same standard used by governments and financial institutions worldwide. This includes all customer data, credentials, and system backups."
+
+dataResidency:
+  title: "Data Residency & Sovereignty"
+  items:
+    - title: "Infrastructure Location"
+      description: "Our infrastructure is hosted on Microsoft Azure in secure, tier-4 data centers. We offer data residency options to ensure your data remains in your preferred geographic region, helping you meet local compliance requirements."
+
+    - title: "Data Isolation"
+      description: "Each customer's data is logically isolated using industry-standard multi-tenant architecture with strict access controls. Your data is never mixed with other customers' data, and complete data segregation is maintained at all times."

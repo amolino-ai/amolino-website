@@ -1,0 +1,11 @@
+heading: "Certifications & Compliance"
+subheading: "Industry-recognized security standards"
+certifications:
+  - title: "CASA Tier 2 Certified"
+    description: "Independently verified by Google to meet Cloud Application Security Assessment standards for enterprise applications. This certification demonstrates our commitment to maintaining the highest security standards."
+
+  - title: "SOC 2 Type II"
+    description: "We are working towards SOC 2 Type II compliance, demonstrating our commitment to maintaining strict information security policies and procedures. Contact us for more details on our certification timeline."
+
+  - title: "GDPR & CCPA Compliant"
+    description: "Built from the ground up to comply with global data privacy regulations including European GDPR and California CCPA. We provide comprehensive data processing agreements and support data subject requests."
