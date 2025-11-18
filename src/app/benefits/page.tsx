@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { getBenefitGroupContent } from '@/lib/content';
+import { getBenefitSlugs } from '@/lib/content/navigation';
 import { BenefitCard } from './components/BenefitCard';
 import type { Metadata } from 'next';
 
@@ -9,16 +10,13 @@ export const metadata: Metadata = {
   description: 'Discover how AmolinoAI helps you make every rep your best rep, forecast confidently, and prevent deal slippage with AI-powered sales intelligence.',
 };
 
-const BENEFIT_SLUGS = [
-  'next-best-action-to-win',
-  'accurate-forecasting',
-  'prevent-deal-slippage',
-];
-
 export default async function BenefitsOverview() {
+  // Fetch all benefit slugs from navigation config
+  const benefitSlugs = await getBenefitSlugs();
+
   // Fetch all benefit group contents
   const benefits = await Promise.all(
-    BENEFIT_SLUGS.map(async (slug) => {
+    benefitSlugs.map(async (slug) => {
       const content = await getBenefitGroupContent(slug);
       return {
         slug,

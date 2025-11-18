@@ -6,6 +6,7 @@ import { ProcessWorkflow } from '@/components/ProcessWorkflow';
 import { ComparisonTable } from '@/components/ComparisonTable';
 import { WhoItsFor } from '../components/WhoItsFor';
 import { getBenefitGroupContent } from '@/lib/content';
+import { getBenefitSlugs } from '@/lib/content/navigation';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Container } from '@/components/Container';
 import type { Metadata } from 'next';
@@ -20,12 +21,9 @@ interface BenefitGroupPageProps {
  * Generate static params for all benefit group pages.
  * This enables SSG (Static Site Generation) at build time.
  */
-export function generateStaticParams() {
-  return [
-    { slug: 'next-best-action-to-win' },
-    { slug: 'accurate-forecasting' },
-    { slug: 'prevent-deal-slippage' },
-  ];
+export async function generateStaticParams() {
+  const slugs = await getBenefitSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 /**

@@ -15,7 +15,7 @@ const withMDX = nextMDX({
     ],
     rehypePlugins: [],
   },
-})
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -37,6 +37,32 @@ const nextConfig = {
       {
         source: '/ingest/decide',
         destination: 'https://us.i.posthog.com/decide',
+      },
+    ]
+  },
+  async redirects() {
+    return [
+      // Benefit slug redirects
+      {
+        source: '/benefits/next-best-action-to-win',
+        destination: '/benefits/win-more-deals',
+        permanent: true,
+      },
+      {
+        source: '/benefits/prevent-deal-slippage',
+        destination: '/benefits/close-deals-faster',
+        permanent: true,
+      },
+      // Feature slug redirects
+      {
+        source: '/features/next-best-action-to-win/:slug*',
+        destination: '/features/win-more-deals/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/features/prevent-deal-slippage/:slug*',
+        destination: '/features/close-deals-faster/:slug*',
+        permanent: true,
       },
     ]
   },

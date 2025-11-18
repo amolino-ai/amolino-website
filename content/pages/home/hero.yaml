@@ -9,10 +9,10 @@ options:
 stats:
   - value: "25%"
     description: "Increase in win rates"
-    url: "/benefits/next-best-action-to-win"
+    url: "/benefits/win-more-deals"
   - value: "10%"
     description: "Reduction in sales cycle time"
-    url: "/benefits/prevent-deal-slippage"
+    url: "/benefits/close-deals-faster"
   - value: "90%+"
     description: "Forecast accuracy"
     url: "/benefits/accurate-forecasting"
