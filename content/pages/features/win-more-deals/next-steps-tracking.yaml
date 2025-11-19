@@ -1,35 +1,48 @@
 metadata:
-  title: "Next Steps Tracking | AI-Powered Sales Action Recommendations - AmolinoAI"
-  description: "Get AI-prioritized action recommendations for every deal based on impact, urgency, and win probability to focus on what matters."
+  title: "Next Steps Tracking | AI-Powered Sales Action Recommendations | Amolino"
+  description: |
+    Get AI-prioritized action recommendations for every deal based on impact, urgency, and win probability
+    to focus on what matters.
   image: "/screenshots/next-best-action-to-win/dashboard_rep_view_april_2025.jpg"
+
 options:
   featureName: "Next Steps Tracking"
   showInNavbar: false
-  navbarDescription: "Get AI-prioritized action recommendations for every deal based on impact, urgency, and win probability to focus on what matters."
+  navbarDescription: |
+    Get AI-prioritized action recommendations for every deal based on impact, urgency, and win probability
+    to focus on what matters.
 
 hero:
   badgeText: "Next Best Action"
-  title: "Always know the right next step for every deal."
-  description: "AI analyzes every deal's health, stage, momentum, and context to automatically prioritize and recommend the most impactful next actions that will move your opportunities forward and maximize win rates."
-  ctaText: "Try AmolinoAI"
-  ctaHref: "https://app.amolino.ai"
+  title: "Always Know the Right Next Step for Every Deal"
+  description: |
+    AI analyzes every deal's health, stage, momentum, and context to automatically prioritize and recommend
+    the most impactful next actions that will move your opportunities forward and maximize win rates.
+  ctaText: "Book a Demo"
+  ctaHref: "/book-demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/next-steps-tracking.png"
     width: 1347
     height: 1434
 
 showcase:
-  title: "Prioritized Action Recommendations."
+  title: "Prioritized Action Recommendations"
   features:
     - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-      title: "AI-Powered Action Prioritization"
-      description: "Get intelligent prioritization of all next actions based on deal health, stage progression, potential impact, and time-to-close optimization."
+      title: "AI-powered action prioritization"
+      description: |
+        Get intelligent prioritization of all next actions based on deal health, stage progression, potential impact,
+        and time-to-close optimization.
     - iconPath: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-      title: "Contextual Action Recommendations"
-      description: "Receive personalized action recommendations tailored to each deal's unique context, stakeholder dynamics, and historical success patterns."
+      title: "Contextual action recommendations"
+      description: |
+        Receive personalized action recommendations tailored to each deal's unique context, stakeholder dynamics,
+        and historical success patterns.
     - iconPath: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-      title: "Time-Sensitive Action Alerts"
-      description: "Get alerted to urgent, time-sensitive actions that prevent deal slippage, missed opportunities, and lost momentum before it's too late."
+      title: "Time-sensitive action alerts"
+      description: |
+        Get alerted to urgent, time-sensitive actions that prevent deal slippage, missed opportunities, and lost
+        momentum before it's too late.
   screenshot:
     src: "/screenshots/next-best-action-to-win/next-steps-tracking.png"
     width: 1347
@@ -51,7 +64,7 @@ showcase:
     - "Automated action tracking and completion monitoring"
 
 bottomFeature:
-  title: "Optimize Sales Productivity."
+  title: "Optimize Sales Productivity"
   subtitle: "Focus on what matters most"
   points:
     - title: "Impact-Driven Focus"
