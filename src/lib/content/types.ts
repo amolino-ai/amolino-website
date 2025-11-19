@@ -321,6 +321,18 @@ export interface PricingPageContent {
   faqs: PricingFAQ[];
 }
 
+// Features Overview Page
+export interface FeaturesOverviewHero {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaUrl: string;
+}
+
+export interface FeaturesOverviewContent {
+  hero: FeaturesOverviewHero;
+}
+
 // Navbar interfaces
 export interface NavbarProduct {
   name: string;

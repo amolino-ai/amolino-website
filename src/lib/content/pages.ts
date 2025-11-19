@@ -14,6 +14,7 @@ import type {
   BlindSalesSectionContent,
   SecuritySectionContent,
   FeatureSectionContent,
+  FeaturesOverviewContent,
   IntegrationsSectionContent,
   PricingPageContent,
   FooterContent,
@@ -96,6 +97,13 @@ export async function getSecuritySectionContent(): Promise<SecuritySectionConten
  */
 export async function getFeatureSectionContent(): Promise<FeatureSectionContent> {
   return loadYAML<FeatureSectionContent>('pages/home/feature-section.yaml');
+}
+
+/**
+ * Get features overview page content
+ */
+export async function getFeaturesOverviewContent(): Promise<FeaturesOverviewContent> {
+  return loadYAML<FeaturesOverviewContent>('pages/features/overview.yaml');
 }
 
 /**

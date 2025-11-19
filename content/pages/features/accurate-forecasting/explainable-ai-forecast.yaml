@@ -1,35 +1,49 @@
 metadata:
-  title: "Explainable AI-Forecast | Transparent AI-Powered Sales Forecasting - AmolinoAI"
-  description: "Generate accurate, explainable sales forecasts with AmolinoAI's Explainable AI-Forecast. Understand the signals behind every prediction and defend your revenue projections with confidence."
+  title: "Explainable AI Forecast | Transparent Sales Forecasting | Amolino"
+  description: |
+    Generate accurate, explainable sales forecasts with Amolino's AI that learns from every deal.
+    Understand the signals behind every prediction and defend your revenue projections with confidence.
   image: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
+
 options:
-  featureName: "Explainable AI-Forecast"
+  featureName: "Explainable AI Forecast"
   showInNavbar: true
   navbarDescription: |
     Accurate forecasts with full transparency into every prediction.
+
 hero:
-  badgeText: "Explainable AI-Forecast"
-  title: "Defend Every Forecast with Confidence."
-  description: "Stop defending forecasts based on gut feelings and spreadsheet guesswork. AmolinoAI analyzes every signal—engagement patterns, stakeholder activity, timeline changes, and competitive threats—to generate accurate revenue predictions you can actually explain. No more black-box forecasts. Just transparent, data-driven projections backed by the insights that matter."
-  ctaText: "Try AmolinoAI"
-  ctaHref: "https://app.amolino.ai"
+  badgeText: "Explainable AI Forecast"
+  title: "Defend Every Forecast with Confidence"
+  description: |
+    Stop defending forecasts based on gut feelings and spreadsheet guesswork. Amolino analyzes every signal
+    (engagement patterns, stakeholder activity, timeline changes, and competitive threats) to generate accurate
+    revenue predictions you can actually explain. No more black-box forecasts. Just transparent, data-driven
+    projections backed by the insights that matter.
+  ctaText: "Book a Demo"
+  ctaHref: "/book-demo"
   screenshot:
     src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
     width: 1077
     height: 590
 
 showcase:
-  title: "Forecast with Transparency, Not Hope."
+  title: "Forecast with Transparency, Not Hope"
   features:
     - iconPath: "M15 10.5a3 3 0 11-6 0 3 3 0 016 0z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
       title: "Predictions you can trust and explain"
-      description: "Get quarterly forecasts that show exactly why each deal is likely to close—or slip. Every prediction comes with the signals that drive it."
+      description: |
+        Get quarterly forecasts that show exactly why each deal is likely to close or slip.
+        Every prediction comes with the signals that drive it.
     - iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
       title: "Real-time visibility into what's changing"
-      description: "Track engagement drops, timeline shifts, and stakeholder changes that impact your forecast—before they surprise you in the QBR."
+      description: |
+        Track engagement drops, timeline shifts, and stakeholder changes that impact your forecast before
+        they surprise you in the QBR.
     - iconPath: "M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"
       title: "Plan for best, worst, and likely outcomes"
-      description: "See your ceiling, floor, and most probable revenue scenarios so you can make informed decisions and set realistic expectations."
+      description: |
+        See your ceiling, floor, and most probable revenue scenarios so you can make informed decisions
+        and set realistic expectations.
   screenshot:
     src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
     width: 1077
@@ -48,15 +62,16 @@ showcase:
     - "Data-driven forecasting with clear signals"
     - "Real-time deal health insights"
     - "Proactive risk identification"
-    - "Consistent 95%+ forecast accuracy"
+    - "Consistent 90%+ forecast accuracy"
     - "Every prediction explained with supporting data"
 
 bottomFeature:
-  title: "Forecasts Sales Leaders Can Actually Defend."
+  title: "Forecasts That Sales Leaders Can Actually Understand & Defend"
   subtitle: "Real results from explainable forecasting"
   points:
-    - title: "95% Forecast Accuracy"
-      description: "Hit your number consistently when AI analyzes every signal and predicts outcomes with precision"
+    - title: "90% Forecast Accuracy"
+      description: |
+        Hit your number consistently when AI learns from every deal and predicts outcomes with precision
     - title: "4 Weeks Earlier Warning"
       description: "Spot deal risks and forecast changes a month before they impact your quarter"
     - title: "80% Less Forecast Prep"
