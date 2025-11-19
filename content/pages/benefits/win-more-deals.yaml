@@ -1,12 +1,17 @@
 metadata:
-  title: "Make Every Rep Your Best Rep | Scale Top Performer Playbooks with AI - AmolinoAI"
-  description: "Clone your top performers' playbook with AI. Enable every rep to execute with precision, consistency, and insight—automatically guided by what actually works."
+  title: "Make Every Rep Your Best Rep | Scale Top Performer Playbooks with AI | Amolino"
+  description: |
+    Clone your top performers' playbook with AI. Enable every rep to execute with precision, consistency, and insight
+    automatically guided by what actually works.
   image: "/screenshots/next-best-action-to-win/opportunities_health_recommendations.png"
+
 hero:
   badgeText: "Make Every Rep Your Best Rep"
   title: "Make Every Rep Your Best Rep"
   subtitle: "Clone your top performers' playbook with AI"
-  description: "Your A-players know exactly what to do in every deal situation. Now your entire team can execute with the same precision, consistency, and insight—automatically guided by what actually works."
+  description: |
+    Your A-players know exactly what to do in every deal situation. Now your entire team can execute with the same
+    precision, consistency, and insight automatically guided by what actually works.
   ctaText: "See How It Works"
   ctaLink: "#features"
   backgroundGradient: "from-black to-black-600"
@@ -14,21 +19,27 @@ hero:
 featureHero:
   badgeText: "AI-Powered Sales Excellence"
   heading: "Transform Every Rep Into a Top Performer"
-  description: "We've obsessed over every detail to bring you the most powerful AI-driven sales guidance platform. See how our intelligent system learns from your best performers and scales their success across your entire team."
+  description: |
+    We've obsessed over every detail to bring you the most powerful AI-driven sales guidance platform. See how our
+    intelligent system learns from your best performers and scales their success across your entire team.
   image:
     src: "/screenshots/next-best-action-to-win/opportunities_health_recommendations.png"
     alt: "AI-powered sales guidance dashboard showing opportunity health scores and personalized recommendations"
     width: 1062
     height: 1854
   features:
-    - name: "AI-Powered Guidance"
-      description: "Real-time coaching based on proven playbooks from your top performers, delivered exactly when your reps need it."
-    - name: "Automatic Deal Tracking"
-      description: "Every interaction captured and analyzed automatically, so your team focuses on selling instead of data entry."
-    - name: "Intelligent Insights"
-      description: "Surface the actions that matter most at each stage, keeping deals moving forward with precision."
-    - name: "Scalable Excellence"
-      description: "Clone your best practices across the entire team, ensuring consistent execution from every rep, every time."
+    - name: "AI-powered guidance"
+      description: |
+        Real-time coaching based on proven playbooks from your top performers, delivered exactly when your reps need it.
+    - name: "Automatic deal tracking"
+      description: |
+        Every interaction captured and analyzed automatically, so your team focuses on selling instead of data entry.
+    - name: "Intelligent insights"
+      description: |
+        Surface the actions that matter most at each stage, keeping deals moving forward with precision.
+    - name: "Scalable excellence"
+      description: |
+        Clone your best practices across the entire team, ensuring consistent execution from every rep, every time.
 
 problems:
   title: "Make Every Rep Your Best Rep"
@@ -36,13 +47,19 @@ problems:
   cards:
     - icon: "🎯"
       title: "Your Top 20% Know the Playbook"
-      description: "They update CRM religiously. They qualify ruthlessly. They engage every stakeholder. They sense when deals are slipping and act immediately. They know which actions to take at each deal stage."
+      description: |
+        They update CRM religiously. They qualify ruthlessly. They engage every stakeholder. They sense when deals
+        are slipping and act immediately. They know which actions to take at each deal stage.
     - icon: "🤷"
       title: "Your Middle 60% Are Flying Blind"
-      description: "They forget to update CRM. They chase unqualified deals. They miss key stakeholders. They let deals go quiet without noticing. They don't know what good looks like at each stage."
+      description: |
+        They forget to update CRM. They chase unqualified deals. They miss key stakeholders. They let deals go
+        quiet without noticing. They don't know what good looks like at each stage.
     - icon: "💰"
       title: "The Cost: Millions in Lost Revenue"
-      description: "If your middle performers executed like your top performers, your team would close 50% more revenue—with the same headcount, same product, same leads."
+      description: |
+        If your middle performers executed like your top performers, your team would close 50% more revenue with
+        the same headcount, same product, same leads.
 
 stats:
   title: "The Outcome: Predictable A-Player Performance"
@@ -65,7 +82,7 @@ features:
     - name: "Proactive Sales Guidance"
       category: "Guidance"
       benefit: "Proactive guidance at every stage"
-      description: "Guides reps through each deal stage with recommended actions based on what your top sellers actually do. No more guessing—your entire team follows the winning playbook."
+      description: "Guides reps through each deal stage with recommended actions based on what your top sellers actually do. No more guessing. Your entire team follows the winning playbook."
       details: "Real-time recommendations • Stage-specific actions • Based on closed-won patterns"
       icon: "🧭"
       screenshot:
@@ -91,7 +108,7 @@ features:
     - name: "Channel Partner Intelligence"
       category: "Intelligence"
       benefit: "Deep insights into every account"
-      description: "Understand co-sell, marketplace and channel sales headwinds and taildinds completely"
+      description: "Understand co-sell, marketplace and channel sales headwinds and tailwinds completely."
       details: "Account health scoring • Expansion detection • Historical analysis"
       icon: "🏢"
       screenshot:
@@ -104,7 +121,7 @@ features:
     - name: "Stakeholder Map"
       category: "Insights"
       benefit: "Surface issues before they kill deals"
-      description: "Understand who is in the buying committee, their influence, sentiment, and engagement level—automatically mapped and updated in real-time."
+      description: "Understand who is in the buying committee, their influence, sentiment, and engagement level automatically mapped and updated in real-time."
       details: "Risk alerts • Engagement tracking • Competitive monitoring • Timeline analysis"
       icon: "🚨"
       screenshot:
@@ -115,20 +132,27 @@ features:
       link: "/features/next-best-action-to-win/stakeholder-map"
       ctaText: "See Stakeholder Map"
 
-
-
 howItWorks:
   title: "How It Actually Works"
   subtitle: "From tribal knowledge to systematic execution in three steps"
   steps:
     - title: "AI Learns Your Top Performers' Playbook"
-      description: "We analyze closed-won deals from your best reps to identify the specific actions, timing, and patterns that lead to success. What qualification questions do they ask? When do they engage executives? How do they handle objections? The AI extracts these winning behaviors automatically."
+      description: |
+        We analyze closed-won deals from your best reps to identify the specific actions, timing, and patterns that
+        lead to success. What qualification questions do they ask? When do they engage executives? How do they handle
+        objections? The AI extracts these winning behaviors automatically.
       icon: "cloud"
     - title: "Real-Time Guidance for Every Rep"
-      description: "As reps work their deals, they get proactive recommendations based on the winning playbook. 'Your top performers engage IT stakeholders at this stage.' 'Similar deals that closed had executive alignment by now.' 'This competitor was mentioned—here's how we've won against them.' The guidance is contextual, timely, and specific."
+      description: |
+        As reps work their deals, they get proactive recommendations based on the winning playbook. 'Your top performers
+        engage IT stakeholders at this stage.' 'Similar deals that closed had executive alignment by now.' 'This competitor
+        was mentioned. Here's how we've won against them.' The guidance is contextual, timely, and specific.
       icon: "lock"
     - title: "Automatic Execution & Tracking"
-      description: "All the manual work disappears. CRM updates itself from emails and calls. Qualification criteria fill in automatically. Deal health gets scored continuously. Next steps get tracked and flagged. Reps spend 100% of their time actually selling—not on admin work."
+      description: |
+        All the manual work disappears. CRM updates itself from emails and calls. Qualification criteria fill in automatically.
+        Deal health gets scored continuously. Next steps get tracked and flagged. Reps spend 100% of their time actually
+        selling, not on admin work.
       icon: "server"
   testimonial:
     quote: "This product has been really useful in giving sales teams clarity on their pipeline and how they're going to hit their numbers."
@@ -141,7 +165,7 @@ comparison:
   columns:
     - label: "Capability"
     - label: "Traditional Tools"
-    - label: "AI Sales Compass"
+    - label: "Amolino"
   rows:
     - capability: "Proactive deal guidance"
       traditional: "✗"
@@ -170,7 +194,7 @@ whoItsFor:
   subtitle: "This isn't for everyone. It's for leaders who:"
   cards:
     - title: "Have A-Players Worth Cloning"
-      description: "You have top performers whose approach you'd love to bottle and distribute. You know what good looks like—you just can't scale it."
+      description: "You have top performers whose approach you'd love to bottle and distribute. You know what good looks like. You just can't scale it."
     - title: "Are Tired of CRM Theater"
       description: "You're sick of begging reps to update Salesforce. You want the data without the burden."
     - title: "Need Consistent Execution"

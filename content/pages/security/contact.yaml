@@ -1,0 +1,11 @@
+heading: "Questions about security?"
+description: "Our security team is here to help. Whether you need a security questionnaire filled out, want to discuss our compliance certifications, or have specific security requirements, we're ready to answer your questions."
+disclaimer: "For security vulnerabilities, please email security@amolino.ai with details. We take all reports seriously and respond within 24 hours."
+
+ctas:
+  - text: "Schedule a Security Review"
+    url: "/demo"
+    variant: "primary"
+  - text: "Email Security Team"
+    url: "mailto:security@amolino.ai"
+    variant: "outline"

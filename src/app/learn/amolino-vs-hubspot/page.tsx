@@ -2,7 +2,6 @@ import { Badge } from '@/components/Badge';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Breadcrumb } from '@/components/Breadcrumb';
-import { Gradient } from '@/components/Gradient';
 import { Screenshot } from '@/components/Screenshot';
 import { Heading, Subheading } from '@/components/Text';
 import { getComparisonPageContent } from '@/lib/content';
@@ -56,7 +55,6 @@ function FeatureCheck({ children }: { children: React.ReactNode }) {
 function Hero({ badge, title, subtitle, description }: { badge: string; title: string; subtitle: string; description: string }) {
   return (
     <div className="relative isolate overflow-hidden">
-      <Gradient className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" />
       <Container className="py-24 sm:py-32">
         <div className="mx-auto text-center">
           <Badge text={badge} backgroundColor="bg-pink-50" textColor="text-pink-700" />

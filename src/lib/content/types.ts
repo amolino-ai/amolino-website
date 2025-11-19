@@ -74,9 +74,17 @@ export interface HeroImages {
   };
 }
 
-export interface HeroContent {
-  headline: string;
+export interface HeroOptions {
+  eyebrow: string;
+  headline: {
+    line1: string;
+    line2: string;
+  };
   subheadline: string;
+}
+
+export interface HeroContent {
+  options: HeroOptions;
   stats: HeroStat[];
   ctas: HeroCTAs;
   images: HeroImages;
@@ -311,6 +319,18 @@ export interface PricingPageContent {
   tiers: PricingTier[];
   testimonial?: PricingTestimonial;
   faqs: PricingFAQ[];
+}
+
+// Features Overview Page
+export interface FeaturesOverviewHero {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaUrl: string;
+}
+
+export interface FeaturesOverviewContent {
+  hero: FeaturesOverviewHero;
 }
 
 // Navbar interfaces
@@ -782,4 +802,79 @@ export interface ComparisonPageContent {
   comparisons: ComparisonSection;
   analysis: ComparisonAnalysis;
   benefits: ComparisonBenefits;
+}
+
+// Security page types
+export interface SecurityHero {
+  badge: string;
+  heading: string;
+  description: string;
+}
+
+export interface SecurityCertification {
+  title: string;
+  description: string;
+}
+
+export interface SecurityCertifications {
+  heading: string;
+  subheading: string;
+  certifications: SecurityCertification[];
+}
+
+export interface SecurityItem {
+  title: string;
+  description: string;
+}
+
+export interface SecurityDataProtection {
+  heading: string;
+  subheading: string;
+  encryption: {
+    title: string;
+    items: SecurityItem[];
+  };
+  dataResidency: {
+    title: string;
+    items: SecurityItem[];
+  };
+}
+
+export interface SecurityAccessControls {
+  heading: string;
+  subheading: string;
+  controls: SecurityItem[];
+}
+
+export interface SecurityInfrastructure {
+  heading: string;
+  subheading: string;
+  azure: {
+    title: string;
+    description: string;
+    features: string[];
+  };
+  networkSecurity: {
+    title: string;
+    items: SecurityItem[];
+  };
+}
+
+export interface SecurityPractices {
+  heading: string;
+  subheading: string;
+  practices: SecurityItem[];
+}
+
+export interface SecurityCTA {
+  text: string;
+  url: string;
+  variant: 'primary' | 'outline';
+}
+
+export interface SecurityContact {
+  heading: string;
+  description: string;
+  disclaimer: string;
+  ctas: SecurityCTA[];
 }

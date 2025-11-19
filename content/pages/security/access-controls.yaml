@@ -1,0 +1,15 @@
+heading: "Access & Authentication"
+subheading: "Granular control over your data"
+
+controls:
+  - title: "Role-Based Access Control (RBAC)"
+    description: "Define granular permissions for every team member. Control who can view, edit, or delete data at the user, team, and organization level. Our flexible permission system ensures that users only have access to the data they need to do their jobs."
+
+  - title: "Single Sign-On (SSO)"
+    description: "Integrate Amolino with your existing identity provider using SAML 2.0 or OAuth 2.0. Support for Okta, Azure AD, Google Workspace, and other major identity platforms ensures seamless and secure authentication for your team."
+
+  - title: "Multi-Factor Authentication (MFA)"
+    description: "Require additional verification beyond passwords. Support for authenticator apps, SMS, and hardware tokens provides an extra layer of security to protect against unauthorized access."
+
+  - title: "Session Management"
+    description: "Automatic session timeouts, secure session tokens, and the ability to revoke access instantly ensure that your data remains protected even if credentials are compromised."

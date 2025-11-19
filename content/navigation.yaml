@@ -1,0 +1,39 @@
+# Centralized navigation configuration for benefits and features
+# This file defines the benefit groups, their slugs, and associated features
+# Used by navbar, footer, routing, and content loaders
+
+benefits:
+  - slug: win-more-deals
+    oldSlug: next-best-action-to-win
+    displayName: Win More Deals
+    description: Empower your team with AI-driven insights to close more deals
+    features:
+      - proactive-sales-guidance
+      - automatic-qualification-intelligence
+      - channel-partner-intelligence
+      - coaching-advisor
+      - conversational-analytics
+      - next-steps-tracking
+      - stakeholder-map
+      - team-intelligence-dashboard
+      - zero-effort-crm-updates
+
+  - slug: accurate-forecasting
+    displayName: Accurate Forecasting
+    description: Get precise, explainable forecasts powered by AI
+    features:
+      - explainable-ai-forecast
+      - pipeline-lens
+      - pipeline-monitor
+      - signal-based-predictions
+
+  - slug: close-deals-faster
+    oldSlug: prevent-deal-slippage
+    displayName: Close Deals Faster
+    description: Identify and mitigate risks before deals slip
+    features:
+      - deal-prioritization
+      - competitive-tracking
+      - deal-risk-radar
+      - pushed-out-history
+      - win-loss-analysis
