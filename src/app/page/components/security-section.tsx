@@ -1,4 +1,4 @@
-import { Backgrounds } from '@/components/Backgrounds';
+// import { Backgrounds } from '@/components/Backgrounds';
 import { Container } from '@/components/Container';
 import { Heading } from '@/components/Text';
 import type { SecuritySectionContent } from '@/lib/content/types';
@@ -61,7 +61,7 @@ const DefaultIcon = (
 export function SecuritySection({ content }: SecuritySectionProps) {
   return (
     <div className="relative py-24 sm:py-32 bg-gradient-to-b from-white to-gray-50">
-      <Backgrounds variant="pattern-medium" />
+      {/* <Backgrounds variant="pattern-medium" /> */}
 
       <Container className="relative">
         {/* Header */}

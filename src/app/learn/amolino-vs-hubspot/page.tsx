@@ -1,5 +1,4 @@
 import { Badge } from '@/components/Badge';
-import { Backgrounds } from '@/components/Backgrounds';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Breadcrumb } from '@/components/Breadcrumb';
@@ -56,7 +55,6 @@ function FeatureCheck({ children }: { children: React.ReactNode }) {
 function Hero({ badge, title, subtitle, description }: { badge: string; title: string; subtitle: string; description: string }) {
   return (
     <div className="relative isolate overflow-hidden">
-      <Backgrounds variant="gradient-vibrant" className="overflow-hidden blur-3xl" />
       <Container className="py-24 sm:py-32">
         <div className="mx-auto text-center">
           <Badge text={badge} backgroundColor="bg-pink-50" textColor="text-pink-700" />

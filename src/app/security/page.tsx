@@ -1,4 +1,4 @@
-import { Backgrounds } from '@/components/Backgrounds';
+// import { Backgrounds } from '@/components/Backgrounds';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Heading, Lead, Subheading } from '@/components/Text';
@@ -244,7 +244,7 @@ async function ContactSection() {
   return (
     <Container className="mt-32 mb-24">
       <div className="relative rounded-3xl p-12 lg:p-16">
-        <Backgrounds variant="gradient-blue-purple" asChild={false} className="rounded-3xl" />
+        {/* <Backgrounds variant="gradient-blue-purple" asChild={false} className="rounded-3xl" /> */}
         <div className="relative mx-auto max-w-2xl text-center">
           <Heading as="h2">{content.heading}</Heading>
           <p className="mt-6 text-lg text-gray-600">{content.description}</p>
