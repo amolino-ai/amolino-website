@@ -3,7 +3,7 @@
 
 const LogoHeight = 32;
 const LogoWidth = 155;
-const LOGO_TAGLINE = 'AI-Powered Deal Guidance Platform';
+const LOGO_TAGLINE = 'Proactive Deal Guidance for B2B Sales Teams';
 
 /**
  * Logo component displaying the Amolino logo and tagline.

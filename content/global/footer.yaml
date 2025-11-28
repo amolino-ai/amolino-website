@@ -17,6 +17,8 @@ sections:
         href: "/resources/frameworks/qualification"
       - label: "QBR Playbook"
         href: "/resources/guides/qbrs"
+      - label: "B2B Sales Forecast Accuracy Guide"
+        href: "/resources/b2b-sales-forecast-accuracy-guide"
 
   - heading: "Company"
     links:
