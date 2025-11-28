@@ -1,5 +1,6 @@
-import nextMDX from '@next/mdx'
-import remarkFrontmatter from 'remark-frontmatter'
+import nextMDX from '@next/mdx';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkGfm from 'remark-gfm';
 
 // Add bundle analyzer
 const withBundleAnalyzer = (await import('@next/bundle-analyzer')).default({
@@ -11,7 +12,8 @@ const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [
-      [remarkFrontmatter, ['yaml', 'toml']], // This should strip frontmatter
+      [remarkFrontmatter, ['yaml', 'toml']], 
+      remarkGfm, // Add this for table support
     ],
     rehypePlugins: [],
   },
@@ -38,11 +40,10 @@ const nextConfig = {
         source: '/ingest/decide',
         destination: 'https://us.i.posthog.com/decide',
       },
-    ]
+    ];
   },
   async redirects() {
     return [
-      // Benefit slug redirects
       {
         source: '/benefits/next-best-action-to-win',
         destination: '/benefits/win-more-deals',
@@ -53,7 +54,6 @@ const nextConfig = {
         destination: '/benefits/close-deals-faster',
         permanent: true,
       },
-      // Feature slug redirects
       {
         source: '/features/next-best-action-to-win/:slug*',
         destination: '/features/win-more-deals/:slug*',
@@ -64,10 +64,9 @@ const nextConfig = {
         destination: '/features/close-deals-faster/:slug*',
         permanent: true,
       },
-    ]
+    ];
   },
   skipTrailingSlashRedirect: true,
-}
+};
 
-// Chain the configurations: MDX -> Bundle Analyzer -> Final Config
-export default withBundleAnalyzer(withMDX(nextConfig))
+export default withBundleAnalyzer(withMDX(nextConfig));

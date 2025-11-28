@@ -165,17 +165,17 @@ export const h6 = (props: React.HTMLAttributes<HTMLHeadingElement>) => (
 
 // Image element
 export const img = (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
-  <img 
-    className="my-8 rounded-lg shadow-lg" 
+  <img
+    className="my-8 rounded-lg shadow-lg"
     loading="lazy"
-    {...props} 
+    {...props}
   />
 );
 
 // Table elements
 export const table = (props: React.TableHTMLAttributes<HTMLTableElement>) => (
-  <div className="my-6 overflow-x-auto">
-    <table className="min-w-full divide-y divide-gray-200" {...props} />
+  <div className="my-8 overflow-x-auto">
+    <table className="min-w-full divide-y divide-gray-200 table-auto" {...props} />
   </div>
 );
 
@@ -199,8 +199,8 @@ export const th = (props: React.ThHTMLAttributes<HTMLTableCellElement>) => (
 );
 
 export const td = (props: React.TdHTMLAttributes<HTMLTableCellElement>) => (
-  <td 
-    className="whitespace-nowrap px-6 py-4 text-sm text-gray-500" 
-    {...props} 
+  <td
+    className="px-6 py-4 text-sm text-gray-500"
+    {...props}
   />
 );
