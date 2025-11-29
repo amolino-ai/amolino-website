@@ -1,5 +1,6 @@
 import { ContentNavigation } from '@/components/ContentNavigation';
 import { Prose } from '@/components/Prose';
+import { Screenshot } from '@/components/Screenshot';
 
 export const metadata = {
   title: 'How to Fix Sales Forecast Accuracy in B2B Sales',
@@ -8,9 +9,9 @@ export const metadata = {
     title: 'The Physics of Pipeline Erosion',
     description: 'Why revenue forecasts fail and what CROs can do about it',
     images: [{
-      url: '/images/resources/pipeline-erosion/hero.avif',
-      width: 1200,
-      height: 630,
+      url: '/resources/b2b-sales-forecast-accuracy-guide/Amolino_Forecast_Uncertainity_Probability_Distribution.png',
+      width: 1408,
+      height: 768,
     }],
     type: 'article',
   },
@@ -36,10 +37,13 @@ export const sections = [
 
 # Why Revenue Forecasts Fail: The Complete Guide to Pipeline Erosion and Forecast Accuracy for B2B Sales Leaders
 
+
+
 <div id="introduction" className="scroll-mt-20">
 
-It's the first week of Q3. The forecast call shows $4.8 million in pipeline for the quarter, with $3.2 million in commit. Leadership likes what they see.
 
+It's the first week of Q3. The forecast call shows $4.8 million in pipeline for the quarter, with $3.2 million in commit. Leadership likes what they see.
+          
 By week six, two deals have slipped their close dates to 'end of quarter'—still technically in the number, but now back-loaded. One $280K opportunity went dark after the champion changed roles. The commit holds at $2.9 million, but the deals underneath it have quietly reshuffled.
 
 With two weeks left, procurement enters the picture on your largest deal and opens a competitive RFP. Another deal, verbally committed for months, reveals that legal review hasn't actually started. A third compresses from $380K to $260K to 'get it done before quarter-end.' The forecast drops to $2.4 million, and the team scrambles to find pipeline that can close in fourteen days.
@@ -127,6 +131,16 @@ The insight that should be both troubling and encouraging is this: erosion follo
 From a mathematical perspective, a forecast is an expected value calculation across a portfolio of uncertain events. If you have ten deals, each with a 70% win probability and $100K value, the expected value of that portfolio is $700K. But here's what matters: the actual outcome will almost never be exactly $700K. It will be $600K or $800K or $500K, depending on which specific deals close. That variance around the expected value is not noise—it's signal.
 
 In forecasting, we care deeply about two properties: the mean (are we centered on the right number?) and the variance (how wide is the range of likely outcomes?). Most organizations obsess over the mean while ignoring variance entirely. They forecast $3.2 million and celebrate when they hit $3.1 million, without acknowledging that the true uncertainty band was $2.4 million to $3.8 million. When you ignore variance, you can't properly staff, you can't set realistic expectations with the board, and you can't distinguish between good execution and good luck.
+
+<Screenshot
+  src="/resources/b2b-sales-forecast-accuracy-guide/Amolino_Forecast_Uncertainity_Probability_Distribution.png"
+  width={1408}
+  height={768}
+  alt="A probability distribution graph showing forecast uncertainty."
+  cover={true}
+  tilt={false}
+/>
+
 
 **A critical distinction**: Expected value is powerful for long-term capacity planning and understanding portfolio health across multiple quarters. But for quarterly execution and the 'commit' forecast, expected value can be misleading. You cannot close 47% of a deal. In the current quarter, deals are binary—they either close or they don't. A commit forecast built purely on probabilistic weighting might show $3 million in expected value, but if you only have four deals that are genuinely above 80% confidence, and they total $2.2 million, then $2.2 million is your real ceiling. **Use expected value for planning the portfolio; use high-confidence binary thinking for calling the quarter.**
 
