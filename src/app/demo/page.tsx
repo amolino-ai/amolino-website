@@ -82,7 +82,7 @@ export default function DemoPage() {
               Book a Demo
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 max-w-xl mx-auto">
-              See how Amolino helps sales teams win more deals. Fill out the form below and we'll schedule a personalized demo.
+              See how Amolino helps sales teams win more deals. Fill out the form below and we&apos;ll schedule a personalized demo.
             </p>
           </div>
 
@@ -184,7 +184,7 @@ export default function DemoPage() {
                         id="message"
                         {...register('message')}
                         rows={4}
-                        placeholder="Share any specific challenges or questions you'd like us to address during the demo..."
+                        placeholder="Share any specific challenges or questions you&apos;d like us to address during the demo..."
                         className="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 resize-none transition-shadow"
                       />
                     </div>
