@@ -12,6 +12,8 @@ export interface BlogPost extends BaseContent {
   mainImage?: {
     src: string;
     alt: string;
+    width: number;
+    height: number;
   };
   author?: {
     name: string;
