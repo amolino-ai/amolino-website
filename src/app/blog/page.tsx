@@ -19,6 +19,7 @@ import {
   RssIcon,
 } from '@heroicons/react/16/solid';
 import { clsx } from 'clsx';
+import Image from 'next/image';
 import dayjs from 'dayjs';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -52,10 +53,12 @@ async function FeaturedPosts() {
               className="relative flex flex-col rounded-3xl bg-white p-2 ring-1 shadow-md shadow-black/5 ring-black/5"
             >
               {post.mainImage && (
-                <img
+                <Image
                   alt={post.mainImage.alt || ''}
                   src={post.mainImage.src}
                   className="aspect-3/2 w-full rounded-2xl object-cover"
+                  width={post.mainImage.width}
+                  height={post.mainImage.height}
                 />
               )}
               <div className="flex flex-1 flex-col p-8">
