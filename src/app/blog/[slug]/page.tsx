@@ -10,7 +10,7 @@ import dayjs from 'dayjs';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import styles from '../blog.module.css';
-
+import Image from 'next/image';
 
 export const dynamic = 'force-static';
 export const revalidate = 0;
@@ -63,10 +63,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
 
           {post.mainImage && (
-            <img
-              alt={post.mainImage.alt || ''}
+            <Image
+              alt={post.mainImage.alt}
               src={post.mainImage.src}
-              className="mt-10 mb-12 aspect-3/2 w-full rounded-2xl object-cover shadow-xl"
+              width={post.mainImage.width}
+              height={post.mainImage.height}
+              className="mt-10  rounded-2xl object-cover shadow-xl"
             />
           )}
 
