@@ -1,5 +1,5 @@
 import { Container } from '@/components/Container';
-import { Heading, Subheading } from '@/components/Text';
+import { SectionHeader } from '@/components/headings/SectionHeader';
 import { StatsCard } from './StatsCard';
 
 interface ImpactProps {
@@ -22,13 +22,7 @@ export function Impact({ subheading, heading, description, stats }: ImpactProps)
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
       </div>
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <Subheading dark>{subheading}</Subheading>
-          <Heading as="h2" dark>
-            {heading}
-          </Heading>
-          <p className="mt-6 text-lg text-gray-300">{description}</p>
-        </div>
+        <SectionHeader subheading={subheading} heading={heading} description={description} dark />
         <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <StatsCard key={index} {...stat} dark={true} />

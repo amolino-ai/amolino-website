@@ -1,5 +1,5 @@
 import { Container } from '@/components/Container';
-import { Heading, Subheading } from '@/components/Text';
+import { SectionHeader } from '@/components/headings/SectionHeader';
 
 interface FeatureListProps {
   title: string
@@ -38,10 +38,7 @@ export function Solution({ subheading, heading, features }: SolutionProps) {
   return (
     <div className="py-24 sm:py-32">
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <Subheading>{subheading}</Subheading>
-          <Heading as="h2">{heading}</Heading>
-        </div>
+        <SectionHeader subheading={subheading} heading={heading} />
         <div className="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-3">
           {features.map((feature, index) => (
             <FeatureList key={index} {...feature} />

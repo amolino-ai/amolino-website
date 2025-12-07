@@ -1,6 +1,4 @@
-import { Badge } from '@/components/Badge';
-import { Button } from '@/components/Button';
-import { Container } from '@/components/Container';
+import { Hero as BaseHero } from '@/components/Hero';
 
 interface HeroProps {
   badgeText: string
@@ -26,20 +24,22 @@ export function Hero({
   secondaryButtonLink,
 }: HeroProps) {
   return (
-    <div className="relative">
-      <Container className="relative py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl text-center">
-          <Badge text={badgeText} backgroundColor={badgeBgColor} textColor={badgeTextColor} />
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{title}</h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">{description}</p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button href={primaryButtonLink}>{primaryButtonText}</Button>
-            <Button className="bg-amber-100" href={secondaryButtonLink} variant="secondary">
-              <div>{secondaryButtonText}</div>
-            </Button>
-          </div>
-        </div>
-      </Container>
-    </div>
+    <BaseHero
+      layout="centered"
+      badgeText={badgeText}
+      badgeBgColor={badgeBgColor}
+      badgeTextColor={badgeTextColor}
+      title={title}
+      description={description}
+      primaryButton={{
+        text: primaryButtonText,
+        href: primaryButtonLink,
+      }}
+      secondaryButton={{
+        text: secondaryButtonText,
+        href: secondaryButtonLink,
+        className: 'bg-amber-100',
+      }}
+    />
   );
 } 

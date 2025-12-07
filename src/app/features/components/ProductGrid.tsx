@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Button } from '@/components/Button';
 import { Screenshot } from '@/components/Screenshot';
 
 interface Product {
@@ -72,25 +72,9 @@ export default function ProductGrid({ products }: ProductGridProps) {
                 ))}
               </ul>
               <div className="mt-8">
-                <Link
-                  href={product.href}
-                  className="inline-flex items-center text-pink-600 hover:text-pink-700"
-                >
+                <Button href={product.href} variant="text" arrow="right">
                   Learn more
-                  <svg
-                    className="ml-2 h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                    />
-                  </svg>
-                </Link>
+                </Button>
               </div>
             </div>
             <div className="mt-8 lg:mt-0 lg:w-1/2">
