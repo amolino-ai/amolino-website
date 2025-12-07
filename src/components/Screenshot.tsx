@@ -1,4 +1,5 @@
 import { clsx } from 'clsx';
+import Image from 'next/image';
 
 /**
  * Screenshot component spacing constants.
@@ -13,7 +14,9 @@ export function Screenshot({
   height,
   src,
   className,
+  alt = '',
   fillContainer = false,
+  
   cover = false,
   objectPosition = 'center',
   tilt = false,
@@ -22,6 +25,7 @@ export function Screenshot({
   height: number
   src: string
   className?: string
+  alt?: string
   fillContainer?: boolean
   cover?: boolean
   objectPosition?: 'center' | 'left' | 'right' | 'top' | 'bottom'
@@ -48,9 +52,11 @@ export function Screenshot({
         )}
       >
         <div className="absolute -inset-[var(--padding)] rounded-[calc(var(--radius)+var(--padding))] ring-1 shadow-xs ring-black/5 [--padding:--spacing(2)]" />
-        <img
-          alt=""
+        <Image
+          alt={alt}
           src={src}
+          width={width}
+          height={height}
           className={clsx(
             'h-full w-full rounded-[var(--radius)] ring-1 shadow-2xl ring-black/10',
             (fillContainer || cover) && 'object-cover',
@@ -60,6 +66,7 @@ export function Screenshot({
             objectPosition === 'bottom' && 'object-bottom',
             objectPosition === 'center' && 'object-center',
           )}
+          loading="lazy"
         />
       </div>
     </div>

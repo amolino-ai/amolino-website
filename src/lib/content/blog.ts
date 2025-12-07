@@ -1,15 +1,15 @@
 import { BLOG_PATH, getContentFromPath, getMDXContent, getSingleContent } from './loaders';
-import type { BlogCategory, BlogPost } from './types';
+import type { BlogCategory, BlogPost, FrontmatterData } from './types';
 
-const transformBlogPost = (slug: string, data: any): BlogPost => ({
+const transformBlogPost = (slug: string, data: FrontmatterData): BlogPost => ({
   slug,
   title: data.title || '',
   excerpt: data.excerpt || '',
   publishedAt: data.publishedAt || new Date().toISOString(),
   isFeatured: data.isFeatured || false,
-  mainImage: data.mainImage || null,
-  author: data.author || null,
-  categories: data.categories || [],
+  mainImage: (data.mainImage as BlogPost['mainImage']) || undefined,
+  author: (data.author as BlogPost['author']) || undefined,
+  categories: (data.categories as BlogPost['categories']) || [],
 });
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {

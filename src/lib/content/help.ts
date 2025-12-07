@@ -1,7 +1,7 @@
 import { getContentFromPath, getMDXContent, getSingleContent, HELP_PATH } from './loaders';
-import type { HelpArticle, HelpSection } from './types';
+import type { HelpArticle, HelpSection, FrontmatterData } from './types';
 
-const transformHelpArticle = (slug: string, data: any): HelpArticle => {
+const transformHelpArticle = (slug: string, data: FrontmatterData): HelpArticle => {
   // Extract section and subsection from slug path
   const pathParts = slug.split('/');
   const section = pathParts[0] || '';
