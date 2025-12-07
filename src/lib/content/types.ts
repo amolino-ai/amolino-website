@@ -1,3 +1,18 @@
+// Frontmatter data from gray-matter parsing
+export interface FrontmatterData {
+  title: string;
+  excerpt?: string;
+  publishedAt?: string;
+  author?: string;
+  section?: string;
+  subsection?: string;
+  tags?: string[];
+  isFeatured?: boolean;
+  order?: number;
+  lastUpdated?: string;
+  [key: string]: unknown; // Allow additional fields
+}
+
 // Base content interface
 export interface BaseContent {
   slug: string;

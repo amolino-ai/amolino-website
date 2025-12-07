@@ -1,5 +1,6 @@
 import { Container } from '@/components/Container';
 import { Subheading } from '@/components/Text';
+import Image from 'next/image';
 
 const logos = [
   {
@@ -39,7 +40,7 @@ export function LogoCloud() {
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-2 items-center gap-x-8 gap-y-10 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
             {logos.map((logo) => (
               <div key={logo.name} className="flex h-32 flex-col items-center justify-center">
-                <img alt={logo.name} src={logo.src} className="mb-3 h-12 w-auto object-contain" />
+                <Image alt={logo.name} src={logo.src} width={200} height={48} className="mb-3 h-12 w-auto object-contain" loading="lazy" />
                 <span className="text-center text-lg text-bold text-gray-600">{logo.name}</span>
               </div>
             ))}

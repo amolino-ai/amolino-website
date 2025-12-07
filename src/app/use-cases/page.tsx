@@ -2,7 +2,7 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Heading, Subheading } from '@/components/Text';
 import Image from 'next/image';
-import Link from 'next/link';
+
 interface UseCaseCardProps {
   title: string
   description: string
@@ -12,38 +12,27 @@ interface UseCaseCardProps {
 
 const UseCaseCard: React.FC<UseCaseCardProps> = ({ title, description, imagePath, href }) => {
   return (
-    <Link
-      href={href}
-      className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md"
-    >
+    <div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
       <div className="mb-6 overflow-hidden rounded-lg bg-gray-100">
         <div className="relative aspect-video w-full">
           <Image
             src={imagePath}
             alt={title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover"
           />
         </div>
       </div>
-      <h3 className="mb-2 text-xl font-semibold text-gray-900 group-hover:text-blue-600">
+      <h3 className="mb-2 text-xl font-semibold text-gray-900">
         {title}
       </h3>
       <p className="mb-4 flex-grow text-gray-600">{description}</p>
       <div className="mt-auto">
-        <span className="inline-flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-500">
+        <Button href={href} variant="text" arrow="right">
           Learn more
-          <svg
-            className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </span>
+        </Button>
       </div>
-    </Link>
+    </div>
   );
 };
 

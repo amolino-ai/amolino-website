@@ -1,6 +1,6 @@
 import { Badge } from '@/components/Badge';
+import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import Link from 'next/link';
 import { ProductFeatureCard } from './ProductFeatureCard';
 import type { ProductPageContent } from '@/lib/content/types';
 
@@ -47,12 +47,9 @@ export function BenefitSection({
             {benefitDescription}
           </p>
           <div className="mt-6">
-            <Link
-              href={`/benefits/${benefit}`}
-              className="text-sm font-medium text-primary-600 hover:text-primary-700"
-            >
-              Learn more about {benefitTitle} →
-            </Link>
+            <Button href={`/benefits/${benefit}`} variant="text" arrow="right">
+              Learn more about {benefitTitle}
+            </Button>
           </div>
         </div>
 

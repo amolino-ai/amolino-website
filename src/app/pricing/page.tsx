@@ -6,6 +6,7 @@ import { LogoCloud } from '@/components/LogoCloud';
 import { Heading, Lead, Subheading } from '@/components/Text';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon, MinusIcon } from '@heroicons/react/16/solid';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getPricingPageContent } from '@/lib/content';
 import type { PricingPageContent, PricingTier } from '@/lib/content/types';
@@ -251,8 +252,8 @@ function Testimonial() {
           <div className="-mt-96 lg:-mt-52">
             <div className="-m-2 rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:max-w-xs">
               <div className="rounded-4xl p-2 shadow-md shadow-black/5">
-                <div className="overflow-hidden rounded-3xl shadow-2xl outline-1 -outline-offset-1 outline-black/10">
-                  <img alt="" src="/testimonials/tina-yards.jpg" className="aspect-3/4 w-full object-cover" />
+                <div className="relative aspect-3/4 overflow-hidden rounded-3xl shadow-2xl outline-1 -outline-offset-1 outline-black/10">
+                  <Image alt="" src="/testimonials/tina-yards.jpg" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" />
                 </div>
               </div>
             </div>

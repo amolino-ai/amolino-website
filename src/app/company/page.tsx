@@ -1,6 +1,10 @@
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Heading, Lead, Subheading } from '@/components/Text';
+import { LinkedInIcon } from '@/components/icons/LinkedInIcon';
+import { RemingtonSchwartzLogo } from '@/components/icons/investors/RemingtonSchwartzLogo';
+import { DeccelLogo } from '@/components/icons/investors/DeccelLogo';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -37,8 +41,8 @@ function Header() {
             execution optimized—transforming not just how companies sell, but how they grow.
           </p>
         </div>
-        <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-          <img alt="" src="/photos/amolino_team_photo.jpg" className="block size-full bg-white object-contain" />
+        <div className="relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+          <Image alt="Amolino team photo" src="/photos/amolino_team_photo.jpg" fill className="object-contain" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" />
         </div>
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
           <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
@@ -90,7 +94,7 @@ function Person({
 }) {
   return (
     <li className="flex items-center gap-4">
-      <img alt="" src={img} className="size-16 rounded-full" />
+      <Image alt="" src={img} width={64} height={64} className="size-16 rounded-full" loading="lazy" />
       <div className="text-sm/6">
         <div className="flex items-center gap-2">
           <h3 className="font-medium">{name}</h3>
@@ -101,7 +105,7 @@ function Person({
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900"
             >
-              <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+              <LinkedInIcon className="h-4 w-4" />
             </a>
           )}
         </div>
@@ -139,8 +143,8 @@ function Team() {
         </div> */}
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
           <div className="flex flex-col items-center text-center">
-            <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <img alt="Aseem Asthana" src="/photos/aseem_asthana_photo.jpg" className="block size-full object-cover" />
+            <div className="relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+              <Image alt="Aseem Asthana" src="/photos/aseem_asthana_photo.jpg" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" />
             </div>
             <h3 className="mt-4 text-lg font-semibold">Aseem Asthana</h3>
             <div className="flex items-center gap-2">
@@ -151,7 +155,7 @@ function Team() {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900"
               >
-                <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+                <LinkedInIcon className="h-4 w-4" />
               </a>
             </div>
             <p className="mt-2 text-sm text-gray-600">
@@ -160,11 +164,14 @@ function Team() {
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <img
+            <div className="relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+              <Image
                 alt="Daniele Di Sarli"
                 src="/photos/daniele_di_sarli_photo.jpg"
-                className="block size-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading="lazy"
               />
             </div>
             <h3 className="mt-4 text-lg font-semibold">Daniele Di Sarli</h3>
@@ -176,7 +183,7 @@ function Team() {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-gray-900"
               >
-                <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+                <LinkedInIcon className="h-4 w-4" />
               </a>
             </div>
             <p className="mt-2 text-sm text-gray-600">
@@ -195,8 +202,8 @@ function Team() {
       <hr className="mt-6 border-t border-gray-200" />
       <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
         <div className="flex flex-col items-center text-center">
-          <div className="aspect-square w-32 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-            <img alt="Michael Segheri" src="/photos/michael-segheri.jpg" className="block size-full object-cover" />
+          <div className="relative aspect-square w-32 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+            <Image alt="Michael Segheri" src="/photos/michael-segheri.jpg" fill className="object-cover" sizes="128px" loading="lazy" />
           </div>
           <h3 className="mt-4 text-lg font-semibold">Michael Segheri</h3>
           <div className="flex items-center gap-2">
@@ -207,7 +214,7 @@ function Team() {
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900"
             >
-              <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+              <LinkedInIcon className="h-4 w-4" />
             </a>
           </div>
           <p className="mt-2 text-sm text-gray-600">
@@ -281,7 +288,7 @@ function Investors() {
       <hr className="mt-6 border-t border-gray-200" />
       <ul role="list" className="mx-auto mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
         <li>
-          <img alt="Remington Schwartz" src="/investors/remington-schwartz.svg" className="h-14" />
+          <RemingtonSchwartzLogo className="h-14" />
           <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
             Remington Schwartz has been a driving force in the tech industry, backing bold entrepreneurs who explore
             grey areas in financial and privacy law. Their deep industry expertise and extensive political lobbying
@@ -289,7 +296,7 @@ function Investors() {
           </p>
         </li>
         <li>
-          <img alt="Deccel" src="/investors/deccel.svg" className="h-14" />
+          <DeccelLogo className="h-14" />
           <p className="mt-6 max-w-lg text-sm/6 text-gray-500">
             Deccel has been at the forefront of innovation, investing in pioneering companies across various sectors,
             including technology, consumer goods, and healthcare. Their philosophy of &apos;plausible deniability&apos;
@@ -325,7 +332,7 @@ function Investors() {
 function Testimonial() {
   return (
     <div className="relative flex aspect-square flex-col justify-end overflow-hidden rounded-3xl sm:aspect-5/4 lg:aspect-3/4">
-      <img alt="" src="/testimonials/veronica-winton.jpg" className="absolute inset-0 object-cover" />
+      <Image alt="" src="/testimonials/veronica-winton.jpg" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" />
       <div
         aria-hidden="true"
         className="absolute inset-0 rounded-3xl bg-linear-to-t from-black from-10% to-75% ring-1 ring-gray-950/10 ring-inset lg:from-25%"

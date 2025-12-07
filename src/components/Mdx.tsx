@@ -1,8 +1,9 @@
 import clsx from 'clsx';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from './Button';
 import { Code as code, CodeGroup, Pre as pre } from './Code';
-import { Heading } from './Heading';
+import { DocsHeading } from './headings/DocsHeading';
 import { Prose } from './Prose';
 import { LinkedInLink } from './LinkedInLink';
 
@@ -41,15 +42,15 @@ export const h1 = ({ id, children, ...props }: { id: string; children: React.Rea
 );
 
 // Heading (h2)
-export const h2 = (props: React.ComponentPropsWithoutRef<typeof Heading>) => (
+export const h2 = (props: React.ComponentPropsWithoutRef<typeof DocsHeading>) => (
   <div>
-    <Heading level={2} className="mt-10 mb-4 text-3xl" {...props} />
+    <DocsHeading level={2} className="mt-10 mb-4 text-3xl" {...props} />
   </div>
 );
 
 // Heading (h3)
-export const h3 = (props: React.ComponentPropsWithoutRef<typeof Heading>) => (
-  <Heading level={3} className="mt-4 mb-4 text-2xl" {...props} />
+export const h3 = (props: React.ComponentPropsWithoutRef<typeof DocsHeading>) => (
+  <DocsHeading level={3} className="mt-4 mb-4 text-2xl" {...props} />
 );
 
 // InfoIcon
@@ -164,13 +165,47 @@ export const h6 = (props: React.HTMLAttributes<HTMLHeadingElement>) => (
 );
 
 // Image element
-export const img = (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
-  <img
-    className="my-8 rounded-lg shadow-lg"
-    loading="lazy"
-    {...props}
-  />
-);
+export const img = ({
+  src,
+  alt,
+  width,
+  height,
+  ...props
+}: React.ImgHTMLAttributes<HTMLImageElement> & {
+  width?: number | string;
+  height?: number | string;
+}) => {
+  // Convert string dimensions to numbers
+  const w = typeof width === 'string' ? parseInt(width, 10) : width;
+  const h = typeof height === 'string' ? parseInt(height, 10) : height;
+
+  if (!src) return null;
+
+  // Use Image component if dimensions are available
+  if (w && h && !isNaN(w) && !isNaN(h)) {
+    return (
+      <Image
+        src={src}
+        alt={alt || ''}
+        width={w}
+        height={h}
+        className="my-8 rounded-lg shadow-lg"
+        loading="lazy"
+      />
+    );
+  }
+
+  // Fallback to img tag for edge cases
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="my-8 rounded-lg shadow-lg"
+      loading="lazy"
+      {...props}
+    />
+  );
+};
 
 // Table elements
 export const table = (props: React.TableHTMLAttributes<HTMLTableElement>) => (

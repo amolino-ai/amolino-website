@@ -7,9 +7,9 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { memo, useEffect, useRef } from 'react';
 
-export function AnimatedNumber({
+export const AnimatedNumber = memo(function AnimatedNumber({
   start,
   end,
   decimals = 0,
@@ -30,4 +30,4 @@ export function AnimatedNumber({
   }, [start, end, isInView, value]);
 
   return <motion.span ref={ref}>{display}</motion.span>;
-}
+});

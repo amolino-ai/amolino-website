@@ -77,10 +77,13 @@ async function FeaturedPosts() {
                 {post.author && (
                   <div className="mt-6 flex items-center gap-3">
                     {post.author.image && (
-                      <img
+                      <Image
                         alt=""
                         src={post.author.image}
+                        width={24}
+                        height={24}
                         className="aspect-square size-6 rounded-full object-cover"
+                        loading="lazy"
                       />
                     )}
                     <div className="text-sm/5 text-neutral-700">
@@ -177,10 +180,13 @@ async function Posts({ page, category }: { page: number; category?: string }) {
             {post.author && (
               <div className="mt-2.5 flex items-center gap-3">
                 {post.author.image && (
-                  <img
+                  <Image
                     alt=""
                     src={post.author.image}
+                    width={24}
+                    height={24}
                     className="aspect-square size-6 rounded-full object-cover"
+                    loading="lazy"
                   />
                 )}
                 <div className="text-sm/5 text-neutral-700">
@@ -193,14 +199,10 @@ async function Posts({ page, category }: { page: number; category?: string }) {
             <h2 className="text-sm/5 font-medium">{post.title}</h2>
             <p className="mt-3 text-sm/6 text-neutral-500">{post.excerpt}</p>
             <div className="mt-4">
-              <Link
-                href={`/blog/${post.slug}`}
-                className="flex items-center gap-1 text-sm/5 font-medium"
-              >
+              <Button href={`/blog/${post.slug}`} variant="text" arrow="right">
                 <span className="absolute inset-0" />
                 Read more
-                <ChevronRightIcon className="size-4 fill-neutral-400" />
-              </Link>
+              </Button>
             </div>
           </div>
         </div>

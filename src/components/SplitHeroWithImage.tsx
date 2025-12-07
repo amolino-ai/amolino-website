@@ -3,9 +3,10 @@
 import type { HeroContent } from '@/lib/content';
 import { useState } from 'react';
 import Link from 'next/link';
-import VideoModal from '@/components/VideoModal';
 import { AnimatedNumber } from '@/components/AnimatedNumber';
+import { Button } from '@/components/Button';
 import { Eyebrow } from '@/components/Eyebrow';
+import VideoModal from '@/components/VideoModal';
 
 interface SplitHeroWithImageProps {
   content: HeroContent;
@@ -106,12 +107,13 @@ export default function SplitHeroWithImage({ content }: SplitHeroWithImageProps)
               >
                 Book a Demo
               </a>
-              <button
+              <Button
                 onClick={() => setIsVideoOpen(true)}
-                className="inline-flex items-center text-sm font-medium text-neutral-900 transition-colors hover:text-neutral-700"
+                variant="text"
+                arrow="right"
               >
-                Watch 2-Min Overview <span aria-hidden="true" className="ml-1">→</span>
-              </button>
+                Watch 2-Min Overview
+              </Button>
             </div>
 
             {/* Tertiary CTA */}

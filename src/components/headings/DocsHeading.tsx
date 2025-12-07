@@ -8,6 +8,33 @@ import { useSectionStore } from '@/components/SectionProvider';
 import { Tag } from '@/components/Tag';
 import { remToPx } from '@/lib/remToPx';
 
+/**
+ * DocsHeading – documentation-specific heading component with anchor links.
+ *
+ * @remarks
+ * Use this for headings in documentation pages that need automatic table of contents integration.
+ * Renders an h2 or h3 with an optional anchor link that appears on hover.
+ * Automatically registers with the section store for scroll tracking and navigation.
+ *
+ * This component is client-side only and tracks viewport visibility for active section highlighting.
+ *
+ * @example Basic h2 heading
+ * ```tsx
+ * <DocsHeading level={2} id="introduction">
+ *   Introduction
+ * </DocsHeading>
+ * ```
+ *
+ * @example With tag and label
+ * ```tsx
+ * <DocsHeading level={2} id="api" tag="v2" label="Experimental">
+ *   API Reference
+ * </DocsHeading>
+ * ```
+ *
+ * @see {@link Tag}
+ */
+
 function AnchorIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
@@ -66,7 +93,7 @@ function Anchor({
   );
 }
 
-export function Heading<Level extends 2 | 3>({
+export function DocsHeading<Level extends 2 | 3>({
   children,
   tag,
   label,

@@ -5,6 +5,7 @@ import { Link } from '@/components/Link';
 import * as mdxComponents from '@/components/Mdx';
 import { Heading, Lead, Subheading } from '@/components/Text';
 import { getHelpArticle, getHelpArticleContent, getAllHelpArticles, getHelpArticlesBySection } from '@/lib/content';
+import type { HelpArticle } from '@/lib/content/types';
 import { 
   ChevronRightIcon,
   TagIcon,
@@ -51,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-async function Breadcrumb({ article }: { article: any }) {
+async function Breadcrumb({ article }: { article: HelpArticle }) {
   return (
     <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8">
       <Link href="/help" className="hover:text-gray-900 transition-colors">
@@ -74,7 +75,7 @@ async function Breadcrumb({ article }: { article: any }) {
   );
 }
 
-async function RelatedArticles({ article }: { article: any }) {
+async function RelatedArticles({ article }: { article: HelpArticle }) {
   // Get other articles from the same section
   const sectionArticles = await getHelpArticlesBySection(article.section);
   const relatedArticles = sectionArticles

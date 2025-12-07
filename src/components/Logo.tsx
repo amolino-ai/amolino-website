@@ -1,6 +1,3 @@
-'use client';
-
-
 const LogoHeight = 32;
 const LogoWidth = 155;
 const LOGO_TAGLINE = 'Proactive Deal Guidance for B2B Sales Teams';

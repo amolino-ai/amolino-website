@@ -1,9 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { Badge } from '@/components/Badge';
-import { ArrowRightIcon } from '@heroicons/react/20/solid';
+import { Button } from '@/components/Button';
 
 interface BenefitCardProps {
   slug: string;
@@ -32,10 +31,7 @@ export function BenefitCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Link
-        href={`/benefits/${slug}`}
-        className="group block h-full rounded-2xl bg-white p-8 shadow-md ring-1 ring-gray-900/5 transition-all hover:shadow-xl hover:ring-gray-900/10"
-      >
+      <div className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-md ring-1 ring-gray-900/5 transition-all hover:shadow-xl hover:ring-gray-900/10">
         {/* Badge */}
         {badgeText && (
           <div className="mb-6">
@@ -44,7 +40,7 @@ export function BenefitCard({
         )}
 
         {/* Title */}
-        <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+        <h3 className="text-2xl font-semibold text-gray-900">
           {title}
         </h3>
 
@@ -70,11 +66,12 @@ export function BenefitCard({
         )}
 
         {/* Call to Action */}
-        <div className="mt-8 flex items-center text-sm font-medium text-primary-600 group-hover:text-primary-700">
-          Learn more
-          <ArrowRightIcon className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
+        <div className="mt-8">
+          <Button href={`/benefits/${slug}`} variant="text" arrow="right">
+            Learn more
+          </Button>
         </div>
-      </Link>
+      </div>
     </motion.div>
   );
 }

@@ -19,7 +19,6 @@ import {
 } from '@/lib/content';
 import type { Metadata } from 'next';
 import { BentoSection } from './page/components/bento-section';
-import { DarkBentoSection } from './page/components/dark-bento-section';
 import { SecuritySection } from './page/components/security-section';
 
 export const metadata: Metadata = {
@@ -30,11 +29,7 @@ export default async function Home() {
   const heroContent = await getHeroContent();
   const problemContent = await getProblemContent();
   const outcomeContent = await getOutcomeContent();
-  const numbersContent = await getNumbersContent();
-  const bentoSectionContent = await getBentoSectionContent();
-  const darkBentoSectionContent = await getDarkBentoSectionContent();
   const securitySectionContent = await getSecuritySectionContent();
-  const featureSectionContent = await getFeatureSectionContent();
   const integrationsSectionContent = await getIntegrationsSectionContent();
 
   return (
@@ -72,8 +67,7 @@ export default async function Home() {
           {/* <BentoSection content={bentoSectionContent} /> */}
         {/* </div> */}
 
-        {/* Dark bento section - likely full width */}
-        {/* <DarkBentoSection content={darkBentoSectionContent} /> */}
+        {/* Dark bento section - use dark prop: <BentoSection content={darkBentoSectionContent} dark /> */}
 
         {/* Integrations section - likely full width */}
         <IntegrationsSection content={integrationsSectionContent} />

@@ -1,6 +1,7 @@
 import { Container } from '@/components/Container';
-import { Heading, Subheading } from '@/components/Text';
+import { SectionHeader } from '@/components/headings/SectionHeader';
 import { StatsCard } from './StatsCard';
+import { FeatureCard } from './FeatureCard';
 
 interface FeatureCardProps {
   title: string
@@ -20,24 +21,11 @@ interface ChallengeProps {
   features: FeatureCardProps[]
 }
 
-function FeatureCard({ title, children }: FeatureCardProps) {
-  return (
-    <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-950/5">
-      <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-      <div className="mt-4 text-gray-600">{children}</div>
-    </div>
-  );
-}
-
 export function Challenge({ subheading, heading, description, stats, features }: ChallengeProps) {
   return (
     <div className="relative bg-gray-50 py-24 sm:py-32">
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <Subheading>{subheading}</Subheading>
-          <Heading as="h2">{heading}</Heading>
-          <p className="mt-6 text-lg leading-8 text-gray-600">{description}</p>
-        </div>
+        <SectionHeader subheading={subheading} heading={heading} description={description} />
         <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
           {stats.map((stat, index) => (
             <StatsCard key={index} {...stat} />

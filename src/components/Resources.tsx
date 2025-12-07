@@ -9,7 +9,7 @@ import {
 } from 'framer-motion';
 
 import { GridPattern } from '@/components/GridPattern';
-import { Heading } from '@/components/Heading';
+import { DocsHeading } from '@/components/headings/DocsHeading';
 import { ChatBubbleIcon } from '@/components/icons/ChatBubbleIcon';
 import { EnvelopeIcon } from '@/components/icons/EnvelopeIcon';
 import { UserIcon } from '@/components/icons/UserIcon';
@@ -173,9 +173,9 @@ function Resource({ resource }: { resource: Resource }) {
 export function Resources() {
   return (
     <div className="my-16 xl:max-w-none">
-      <Heading level={2} id="resources">
+      <DocsHeading level={2} id="resources">
         Resources
-      </Heading>
+      </DocsHeading>
       <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 sm:grid-cols-2 xl:grid-cols-4">
         {resources.map((resource) => (
           <Resource key={resource.href} resource={resource} />

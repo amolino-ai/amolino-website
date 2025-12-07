@@ -45,7 +45,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {post.author && (
               <div className="flex items-center gap-3">
                 {post.author.image && (
-                  <img alt="" src={post.author.image} className="aspect-square size-8 rounded-full object-cover" />
+                  <Image alt="" src={post.author.image} width={32} height={32} className="aspect-square size-8 rounded-full object-cover" loading="lazy" />
                 )}
                 <div className={styles.blogAuthor}>{post.author.name}</div>
               </div>

@@ -3,7 +3,7 @@ import { readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import yaml from 'js-yaml';
 import path from 'path';
-import type { BaseContent } from './types';
+import type { BaseContent, FrontmatterData } from './types';
 
 export const CONTENT_ROOT = path.join(process.cwd(), 'content');
 export const BLOG_PATH = path.join(CONTENT_ROOT, 'blog');
@@ -32,7 +32,7 @@ export async function loadYAML<T>(filePath: string): Promise<T> {
 export async function getContentFromPath<T extends BaseContent>(
   contentPath: string,
   pattern: string = '**/*.mdx',
-  transformFn: (slug: string, data: any, fullPath: string) => T,
+  transformFn: (slug: string, data: FrontmatterData, fullPath: string) => T,
 ): Promise<T[]> {
   try {
     const files = await glob(pattern, {
@@ -53,7 +53,7 @@ export async function getContentFromPath<T extends BaseContent>(
           const relativePath = path.relative(contentPath, fullPath);
           const slug = relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/');
 
-          return transformFn(slug, data, fullPath);
+          return transformFn(slug, data as FrontmatterData, fullPath);
         } catch (error) {
           console.error(`Error reading ${file}:`, error);
           return null;
@@ -74,14 +74,14 @@ export async function getContentFromPath<T extends BaseContent>(
 export async function getSingleContent<T extends BaseContent>(
   contentPath: string,
   slug: string,
-  transformFn: (slug: string, data: any, fullPath: string) => T,
+  transformFn: (slug: string, data: FrontmatterData, fullPath: string) => T,
 ): Promise<T | null> {
   try {
     const fullPath = path.isAbsolute(slug) ? slug : path.join(contentPath, `${slug}.mdx`);
     const fileContents = await readFile(fullPath, 'utf8');
     const { data } = matter(fileContents);
 
-    return transformFn(slug, data, fullPath);
+    return transformFn(slug, data as FrontmatterData, fullPath);
   } catch (error) {
     console.error(`Error reading content ${slug}:`, error);
     return null;
