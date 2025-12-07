@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { BenefitGroupStats } from '@/lib/content/types';
 
 /**
@@ -8,16 +9,28 @@ import type { BenefitGroupStats } from '@/lib/content/types';
 export function StatsShowcase({ title, subtitle, metrics }: BenefitGroupStats) {
   return (
     <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32 dark:bg-gray-900">
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80&blend=111827&blend-mode=screen&sat=-100&exp=15"
-        className="absolute inset-0 -z-10 size-full object-cover opacity-10 dark:hidden"
-      />
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80&blend=111827&blend-mode=multiply&sat=-100&exp=15"
-        className="absolute inset-0 -z-10 size-full object-cover not-dark:hidden"
-      />
+      <div className="absolute inset-0 -z-10 dark:hidden">
+        <Image
+          alt=""
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80&blend=111827&blend-mode=screen&sat=-100&exp=15"
+          fill
+          className="object-cover opacity-10"
+          sizes="100vw"
+          loading="lazy"
+          quality={80}
+        />
+      </div>
+      <div className="absolute inset-0 -z-10 not-dark:hidden">
+        <Image
+          alt=""
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80&blend=111827&blend-mode=multiply&sat=-100&exp=15"
+          fill
+          className="object-cover"
+          sizes="100vw"
+          loading="lazy"
+          quality={80}
+        />
+      </div>
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div
           aria-hidden="true"

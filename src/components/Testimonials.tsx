@@ -1,13 +1,13 @@
 'use client';
 
 import * as Headless from '@headlessui/react';
-import { ArrowLongRightIcon } from '@heroicons/react/20/solid';
 import { clsx } from 'clsx';
 import { MotionValue, motion, useMotionValueEvent, useScroll, useSpring, type HTMLMotionProps } from 'framer-motion';
 import { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import useMeasure, { type RectReadOnly } from 'react-use-measure';
+import Image from 'next/image';
+import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { Link } from '@/components/Link';
 import { Heading, Subheading } from '@/components/Text';
 
 const testimonials = [
@@ -99,7 +99,7 @@ function TestimonialCard({
       {...props}
       className="relative flex aspect-9/16 w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-96"
     >
-      <img alt="" src={img} className="absolute inset-x-0 top-0 aspect-square w-full object-cover" />
+      <Image alt="" src={img} fill className="object-cover" sizes="(max-width: 640px) 288px, 384px" loading="lazy" />
       <div
         aria-hidden="true"
         className="absolute inset-0 rounded-3xl bg-linear-to-t from-black from-[calc(7/16*100%)] ring-1 ring-gray-950/10 ring-inset sm:from-25%"
@@ -138,10 +138,9 @@ function CallToAction() {
         margin erosion, and resource whiplash. Start your journey to revenue predictability today.
       </p>
       <div className="mt-2">
-        <Link href="#" className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600">
+        <Button href="#" variant="text" arrow="right">
           Get started
-          <ArrowLongRightIcon className="size-5" />
-        </Link>
+        </Button>
       </div>
     </div>
   );
