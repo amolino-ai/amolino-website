@@ -1,6 +1,4 @@
 import nextMDX from '@next/mdx';
-import remarkFrontmatter from 'remark-frontmatter';
-import remarkGfm from 'remark-gfm';
 
 // Add bundle analyzer
 const withBundleAnalyzer = (await import('@next/bundle-analyzer')).default({
@@ -8,12 +6,14 @@ const withBundleAnalyzer = (await import('@next/bundle-analyzer')).default({
 })
 
 // Add frontmatter processing to MDX
+// In Next.js 16, plugins must be passed as strings for Turbopack compatibility
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [
-      [remarkFrontmatter, ['yaml', 'toml']], 
-      remarkGfm, // Add this for table support
+      ['remark-frontmatter', ['yaml', 'toml']],
+      'remark-gfm', // Add this for table support
+      'remark-images',
     ],
     rehypePlugins: [],
   },
