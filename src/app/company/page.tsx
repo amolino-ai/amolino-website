@@ -41,7 +41,7 @@ function Header() {
             execution optimized—transforming not just how companies sell, but how they grow.
           </p>
         </div>
-        <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+        <div className="relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
           <Image alt="Amolino team photo" src="/photos/amolino_team_photo.jpg" fill className="object-contain" sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" />
         </div>
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
@@ -143,7 +143,7 @@ function Team() {
         </div> */}
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
           <div className="flex flex-col items-center text-center">
-            <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+            <div className="relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <Image alt="Aseem Asthana" src="/photos/aseem_asthana_photo.jpg" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" loading="lazy" />
             </div>
             <h3 className="mt-4 text-lg font-semibold">Aseem Asthana</h3>
@@ -164,7 +164,7 @@ function Team() {
             </p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+            <div className="relative aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
               <Image
                 alt="Daniele Di Sarli"
                 src="/photos/daniele_di_sarli_photo.jpg"
@@ -202,7 +202,7 @@ function Team() {
       <hr className="mt-6 border-t border-gray-200" />
       <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
         <div className="flex flex-col items-center text-center">
-          <div className="aspect-square w-32 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+          <div className="relative aspect-square w-32 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
             <Image alt="Michael Segheri" src="/photos/michael-segheri.jpg" fill className="object-cover" sizes="128px" loading="lazy" />
           </div>
           <h3 className="mt-4 text-lg font-semibold">Michael Segheri</h3>
