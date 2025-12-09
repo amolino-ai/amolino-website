@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  forwardRef,
   Fragment,
   Suspense,
   useCallback,
@@ -267,21 +266,25 @@ function SearchResults({
   );
 }
 
-const SearchInput = forwardRef<
-  React.ElementRef<'input'>,
-  {
-    autocomplete: Autocomplete
-    autocompleteState: AutocompleteState<Result> | EmptyObject
-    onClose: () => void
-  }
->(function SearchInput({ autocomplete, autocompleteState, onClose }, inputRef) {
+// React 19: ref can be passed as a regular prop
+function SearchInput({
+  autocomplete,
+  autocompleteState,
+  onClose,
+  ref,
+}: {
+  autocomplete: Autocomplete
+  autocompleteState: AutocompleteState<Result> | EmptyObject
+  onClose: () => void
+  ref?: React.Ref<HTMLInputElement>
+}) {
   let inputProps = autocomplete.getInputProps({ inputElement: null });
 
   return (
     <div className="group relative flex h-12">
       <SearchIcon className="pointer-events-none absolute top-0 left-3 h-full w-5 stroke-zinc-500" />
       <input
-        ref={inputRef}
+        ref={ref}
         data-autofocus
         className={clsx(
           'flex-auto appearance-none bg-transparent pl-10 text-zinc-900 outline-hidden placeholder:text-zinc-500 focus:w-full focus:flex-none sm:text-sm dark:text-white [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden',
@@ -313,7 +316,7 @@ const SearchInput = forwardRef<
       )}
     </div>
   );
-});
+}
 
 function SearchDialog({
   open,
@@ -326,7 +329,7 @@ function SearchDialog({
 }) {
   let formRef = useRef<React.ElementRef<'form'>>(null);
   let panelRef = useRef<React.ElementRef<'div'>>(null);
-  let inputRef = useRef<React.ElementRef<typeof SearchInput>>(null);
+  let inputRef = useRef<HTMLInputElement>(null);
   let { autocomplete, autocompleteState } = useAutocomplete({
     close() {
       setOpen(false);
