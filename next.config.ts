@@ -1,9 +1,11 @@
+import type { NextConfig } from 'next';
 import nextMDX from '@next/mdx';
+import bundleAnalyzer from '@next/bundle-analyzer';
 
 // Add bundle analyzer
-const withBundleAnalyzer = (await import('@next/bundle-analyzer')).default({
+const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 
 // Add frontmatter processing to MDX
 // In Next.js 16, plugins must be passed as strings for Turbopack compatibility
@@ -19,8 +21,15 @@ const withMDX = nextMDX({
   },
 });
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
+  // Enable React Compiler for automatic memoization
+  reactCompiler: true,
+
+  // Enable Turbopack file system cache for faster dev builds
+  experimental: {
+    turbopackFileSystemCacheForDev: true,
+  },
+
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   outputFileTracingIncludes: {

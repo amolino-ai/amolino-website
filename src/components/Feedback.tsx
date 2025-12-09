@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef, useState } from 'react';
+import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import clsx from 'clsx';
 
@@ -31,10 +31,13 @@ function FeedbackButton(
   );
 }
 
-const FeedbackForm = forwardRef<
-  React.ElementRef<'form'>,
-  React.ComponentPropsWithoutRef<'form'>
->(function FeedbackForm({ onSubmit, className, ...props }, ref) {
+// React 19: ref can be passed as a regular prop
+function FeedbackForm({
+  onSubmit,
+  className,
+  ref,
+  ...props
+}: React.ComponentPropsWithoutRef<'form'> & { ref?: React.Ref<HTMLFormElement> }) {
   return (
     <form
       {...props}
@@ -55,12 +58,14 @@ const FeedbackForm = forwardRef<
       </div>
     </form>
   );
-});
+}
 
-const FeedbackThanks = forwardRef<
-  React.ElementRef<'div'>,
-  React.ComponentPropsWithoutRef<'div'>
->(function FeedbackThanks({ className, ...props }, ref) {
+// React 19: ref can be passed as a regular prop
+function FeedbackThanks({
+  className,
+  ref,
+  ...props
+}: React.ComponentPropsWithoutRef<'div'> & { ref?: React.Ref<HTMLDivElement> }) {
   return (
     <div
       {...props}
@@ -76,7 +81,7 @@ const FeedbackThanks = forwardRef<
       </div>
     </div>
   );
-});
+}
 
 export function Feedback() {
   let [submitted, setSubmitted] = useState(false);

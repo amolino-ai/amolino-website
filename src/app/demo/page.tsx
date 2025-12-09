@@ -7,6 +7,7 @@ import { z } from 'zod';
 import Link from 'next/link';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
+import { submitDemoRequest } from './actions';
 
 // Define your form schema with Zod
 const formSchema = z.object({
@@ -42,15 +43,11 @@ export default function DemoPage() {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch('/api/bookdemo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-      if (response.ok) {
+      const result = await submitDemoRequest(data);
+      if (result.success) {
         router.push('/');
+      } else {
+        console.error('Error submitting form:', result.error);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
