@@ -5,22 +5,19 @@ import { useState } from 'react';
 import type { ReactNode } from 'react';
 
 export default function TeamTabs() {
-
-
-
-    const [activeTab, setActiveTab] = useState('sales');
+  const [activeTab, setActiveTab] = useState('sales');
 
   // Custom tab component to handle the active styling
   const CustomTab = ({ value, children }: { value: string; children: ReactNode }) => {
     const isActive = activeTab === value;
-    
+
     return (
-      <TabsTab 
-        value={value} 
+      <TabsTab
+        value={value}
         onClick={() => setActiveTab(value)}
         className={`transition duration-200 ${
-          isActive 
-            ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium' 
+          isActive
+            ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium'
             : ''
         }`}
       >
@@ -28,6 +25,7 @@ export default function TeamTabs() {
       </TabsTab>
     );
   };
+
   return (
     <Tabs 
       value={activeTab} 
@@ -36,13 +34,13 @@ export default function TeamTabs() {
       className="w-full"
     >
       <TabsList className="mb-6 flex flex-wrap gap-2">
-        <TabsTab value="sales" className={activeTab === 'sales' ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium' : ''}>Sales Team</TabsTab>
-        <TabsTab value="cs" className={activeTab === 'cs' ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium' : ''}>Customer Success</TabsTab>
-        <TabsTab value="marketing" className={activeTab === 'marketing' ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium' : ''}>Marketing</TabsTab>
-        <TabsTab value="product" className={activeTab === 'product' ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium' : ''}>Product</TabsTab>
-        <TabsTab value="finance" className={activeTab === 'finance' ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium' : ''}>Finance & FP&A</TabsTab>
-        <TabsTab value="ops" className={activeTab === 'ops' ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium' : ''}>Operations & Support</TabsTab>
-        <TabsTab value="hr" className={activeTab === 'hr' ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium' : ''}>People & Culture</TabsTab>
+        <CustomTab value="sales">Sales Team</CustomTab>
+        <CustomTab value="cs">Customer Success</CustomTab>
+        <CustomTab value="marketing">Marketing</CustomTab>
+        <CustomTab value="product">Product</CustomTab>
+        <CustomTab value="finance">Finance & FP&A</CustomTab>
+        <CustomTab value="ops">Operations & Support</CustomTab>
+        <CustomTab value="hr">People & Culture</CustomTab>
       </TabsList>
 
       <TabsPanel value="sales">

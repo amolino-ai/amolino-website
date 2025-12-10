@@ -1,6 +1,5 @@
 import { Badge } from '@/components/Badge';
-import { Container } from '@/components/Container';
-import { Screenshot, SCREENSHOT_PADDING } from '@/components/Screenshot';
+import { Screenshot } from '@/components/Screenshot';
 
 interface Feature {
   name: string;

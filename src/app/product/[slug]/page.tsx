@@ -2,7 +2,6 @@ import FeatureShowcase from '@/app/features/components/FeatureShowcase';
 import BottomFeature from '@/app/features/components/BottomFeature';
 import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
-import type { Metadata } from 'next';
 
 // Define product slugs for root-level products only
 // (New features are organized under pillar subfolders)

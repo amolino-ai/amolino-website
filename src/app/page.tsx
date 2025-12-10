@@ -1,5 +1,4 @@
 import { Container } from '@/components/Container';
-import { FeatureSection } from '@/components/FeatureSection';
 import { IntegrationsSection } from '@/components/IntegrationsSection';
 import { LogoCloud } from '@/components/LogoCloud';
 import OutcomeSection from '@/components/OutcomeSection';
@@ -9,16 +8,10 @@ import {
   getHeroContent,
   getProblemContent,
   getOutcomeContent,
-  getNumbersContent,
-  getBentoSectionContent,
-  getDarkBentoSectionContent,
-  getBlindSalesSectionContent,
   getSecuritySectionContent,
-  getFeatureSectionContent,
   getIntegrationsSectionContent,
 } from '@/lib/content';
 import type { Metadata } from 'next';
-import { BentoSection } from './page/components/bento-section';
 import { SecuritySection } from './page/components/security-section';
 
 export const metadata: Metadata = {

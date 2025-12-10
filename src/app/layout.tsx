@@ -63,14 +63,14 @@ export const metadata: Metadata = {
 
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  let pages = await glob('**/*.mdx', { cwd: 'src/app' });
-  let allSectionsEntries = (await Promise.all(
+  const pages = await glob('**/*.mdx', { cwd: 'src/app' });
+  const allSectionsEntries = (await Promise.all(
     pages.map(async (filename) => [
       '/' + filename.replace(/(^|\/)*page\.mdx$/, ''),
       (await import(`./${filename}`)).sections,
     ]),
   )) as Array<[string, Array<Section>]>;
-  let allSections = Object.fromEntries(allSectionsEntries);
+  const allSections = Object.fromEntries(allSectionsEntries);
   const footerContent = await getFooterContent();
   const navbarProducts = await getNavbarProducts();
   const navbarLinks = await getNavbarLinks();

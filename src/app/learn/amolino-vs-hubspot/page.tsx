@@ -1,5 +1,4 @@
 import { Badge } from '@/components/Badge';
-import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Screenshot } from '@/components/Screenshot';
@@ -138,30 +137,6 @@ function Benefits({ title, heading, items }: { title: string; heading: string; i
             <FeatureCheck key={index}>{item}</FeatureCheck>
           ))}
         </ul>
-      </Container>
-    </div>
-  );
-}
-
-function BottomCTA() {
-  return (
-    <div className="relative bg-white py-24 sm:py-32">
-      <Container>
-        <div className="mx-auto max-w-2xl rounded-3xl bg-gray-900 px-8 py-24 text-center sm:px-14">
-          <Heading as="h2" className="mx-auto max-w-4xl">
-            Ready to Upgrade Your Forecasting?
-          </Heading>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Stop guessing and start forecasting with confidence. Choose Amolino for real-time, AI-powered insights that
-            drive predictable growth.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button href="/demo">Get Started Today</Button>
-            <Button href="/contact" variant="secondary">
-              Talk to Sales
-            </Button>
-          </div>
-        </div>
       </Container>
     </div>
   );

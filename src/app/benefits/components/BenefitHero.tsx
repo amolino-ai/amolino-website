@@ -1,6 +1,5 @@
 import { Badge } from '@/components/Badge';
 import { GradientBackground } from '@/components/Gradient';
-import { Link } from '@/components/Link';
 import type { BenefitGroupHero, BenefitGroupProblems } from '@/lib/content/types';
 
 interface BenefitHeroProps {

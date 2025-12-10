@@ -1,7 +1,6 @@
 import { Prose } from '@/components/Prose';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Container } from '@/components/Container';
-import type { Metadata } from 'next';
 import GuideNavigation from './GuideNavigation';
 import GuideHeader from './GuideHeader';
 import Introduction from './Introduction';

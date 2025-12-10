@@ -1,6 +1,5 @@
 
 import { Container } from '@/components/Container';
-import { Footer } from '@/components/Footer';
 import { Link } from '@/components/Link';
 import * as mdxComponents from '@/components/Mdx';
 import { Heading, Lead, Subheading } from '@/components/Text';

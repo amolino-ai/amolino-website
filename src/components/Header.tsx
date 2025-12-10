@@ -25,11 +25,11 @@ export function Header({
   ref,
   ...props
 }: React.ComponentPropsWithoutRef<typeof motion.div> & { ref?: React.Ref<HTMLDivElement> }) {
-  let { isOpen: mobileNavIsOpen } = useMobileNavigationStore();
-  let isInsideMobileNavigation = useIsInsideMobileNavigation();
+  const { isOpen: mobileNavIsOpen } = useMobileNavigationStore();
+  const isInsideMobileNavigation = useIsInsideMobileNavigation();
 
-  let { scrollY } = useScroll();
-  let bgOpacityLight = useTransform(scrollY, [0, 72], [0.5, 0.9]);
+  const { scrollY } = useScroll();
+  const bgOpacityLight = useTransform(scrollY, [0, 72], [0.5, 0.9]);
 
   return (
     <motion.div

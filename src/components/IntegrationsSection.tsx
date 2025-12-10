@@ -1,9 +1,8 @@
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Heading, Subheading } from '@/components/Text';
-import { ChevronRightIcon } from '@heroicons/react/16/solid';
 import Image from 'next/image';
-import type { IntegrationsSectionContent, IntegrationCategory as IntegrationCategoryType } from '@/lib/content/types';
+import type { IntegrationsSectionContent } from '@/lib/content/types';
 
 interface IntegrationCategoryProps {
   title: 'MEETINGS' | 'EMAIL' | 'MESSAGING' | 'CRM'

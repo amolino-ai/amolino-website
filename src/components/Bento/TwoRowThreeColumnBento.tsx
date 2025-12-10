@@ -25,6 +25,9 @@ export function TwoRowThreeColumnBento({ title, subtitle, tagline, items }: TwoR
         <p className="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
           {title}
         </p>
+        <p className="mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+          {subtitle}
+        </p>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
           {displayItems.map((item, index) => {
             // Determine column span based on position
