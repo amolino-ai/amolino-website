@@ -28,6 +28,7 @@ export function wrapper({ children }: { children: React.ReactNode }) {
 // Heading (h1)
 export const h1 = ({ id, children, ...props }: { id: string; children: React.ReactNode }) => (
   <h1
+    id={id}
     {...props}
     className="font-display mt-12 mb-6 scroll-mt-24 text-4xl font-extrabold tracking-tight text-gray-800"
   >

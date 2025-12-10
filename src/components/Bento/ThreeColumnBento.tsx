@@ -28,6 +28,9 @@ export function ThreeColumnBento({ title, subtitle, tagline, items }: ThreeColum
         <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl dark:text-white">
           {title}
         </p>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-gray-600 dark:text-gray-400">
+          {subtitle}
+        </p>
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           {/* Showcase Item - Tall left column */}
           <div className="relative lg:row-span-2">

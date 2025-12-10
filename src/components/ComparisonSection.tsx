@@ -1,10 +1,6 @@
 import { Container } from '@/components/Container';
 import { Heading } from '@/components/Text';
-import { XMarkIcon, CheckIcon, MinusIcon } from '@heroicons/react/16/solid';
-
-interface ComparisonItem {
-  text: string
-}
+import { CheckIcon, MinusIcon } from '@heroicons/react/16/solid';
 
 interface ComparisonSectionProps {
   title: string

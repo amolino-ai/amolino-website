@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Container } from '@/components/Container';
 import { Heading, Subheading } from '@/components/Text';
 import { motion, useInView, AnimatePresence } from 'framer-motion';

@@ -40,7 +40,7 @@ export function Tag({
   variant = 'medium',
   color = valueColorMap[children] ?? 'emerald',
 }: {
-  children: keyof typeof valueColorMap & (string | {})
+  children: string
   variant?: keyof typeof variantStyles
   color?: keyof typeof colorStyles
 }) {

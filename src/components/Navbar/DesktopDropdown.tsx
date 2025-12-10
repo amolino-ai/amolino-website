@@ -163,7 +163,7 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
 
   return (
     <Popover className="relative h-full">
-      {({ open }: { open: boolean }) => (
+      {({ open: _open }: { open: boolean }) => (
         <div
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}

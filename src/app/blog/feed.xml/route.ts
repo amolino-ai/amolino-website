@@ -3,9 +3,9 @@ import { Feed } from 'feed';
 import assert from 'node:assert';
 
 export async function GET(req: Request) {
-  let siteUrl = new URL(req.url).origin;
+  const siteUrl = new URL(req.url).origin;
 
-  let feed = new Feed({
+  const feed = new Feed({
     title: 'The Amolino Blog',
     description:
       'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
@@ -23,7 +23,7 @@ export async function GET(req: Request) {
     },
   });
 
-  let posts = await getPostsForFeed();
+  const posts = await getPostsForFeed();
 
   posts.forEach((post) => {
     try {
@@ -31,7 +31,7 @@ export async function GET(req: Request) {
       assert(typeof post.slug === 'string');
       assert(typeof post.excerpt === 'string');
       assert(typeof post.publishedAt === 'string');
-    } catch (error) {
+    } catch {
       //console.log('Post is missing required fields for RSS feed:', post)
       return;
     }

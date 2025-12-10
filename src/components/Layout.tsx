@@ -15,7 +15,7 @@ export function Layout({
   allSections: Record<string, Array<Section>>
   footerContent: FooterContent
 }) {
-  let pathname = usePathname();
+  const pathname = usePathname();
 
   return (
       <SectionProvider sections={allSections[pathname] ?? []}>

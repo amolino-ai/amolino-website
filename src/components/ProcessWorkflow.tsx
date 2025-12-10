@@ -82,13 +82,15 @@ export function ProcessWorkflow({ title, subtitle, steps, testimonial }: Benefit
                 const Icon = iconMap[step.icon] || CloudArrowUpIcon;
 
                 return (
-                  <li key={step.title} className="flex gap-x-3">
+                  <li key={index} className="flex gap-x-3">
                     <Icon
                       aria-hidden="true"
                       className="mt-1 size-5 flex-none text-indigo-600 dark:text-indigo-400"
                     />
                     <span>
-                      <strong className="font-semibold text-gray-900 dark:text-white">{step.title}</strong>{' '}
+                      <strong className="font-semibold text-gray-900 dark:text-white">
+                        Step {index + 1}: {step.title}
+                      </strong>{' '}
                       {step.description}
                     </span>
                   </li>

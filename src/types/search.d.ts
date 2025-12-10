@@ -2,7 +2,7 @@ export interface Result {
   url: string;
   title: string;
   pageTitle?: string;
-  [key: string]: any;  // Add index signature to satisfy BaseItem constraint
+  [key: string]: unknown;  // Add index signature to satisfy BaseItem constraint
 }
 
 declare module '@/mdx/search.mjs' {

@@ -10,7 +10,7 @@ interface OutcomeSectionProps {
 }
 
 const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
-    const { eyebrow, headline, description, cta, products } = content;
+    const { eyebrow, headline, description, products } = content;
     const pinRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -135,7 +135,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                     {/* Right — cards layered & cross-fading in the same pinned viewport */}
                     <div className="relative p-6 xl:p-16">
                         <div className="relative w-full max-w-2xl h-full mx-auto">
-                            {products.map((p, i) => (
+                            {products.map((p, _i) => (
                                 <div
                                     key={p.id}
                                     data-card
@@ -257,8 +257,8 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
                         </div> */}
 
                             <ul className="grid grid-cols-1 gap-3 mt-6">
-                                {p.benefits.map((b, i) => (
-                                    <li key={i} className="group inline-flex items-center gap-3 hover:text-primary-400 cursor-pointer transition-colors">
+                                {p.benefits.map((b, _i) => (
+                                    <li key={_i} className="group inline-flex items-center gap-3 hover:text-primary-400 cursor-pointer transition-colors">
                                         <svg
                                             className="w-5 h-5 flex-shrink-0 translate-y-[0.05em] transition-colors"
                                             fill="currentColor"

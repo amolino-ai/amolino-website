@@ -1,5 +1,5 @@
 import SectionHeading from './SectionHeading';
-import { Container, Title, List, Box, Text, Divider } from '@mantine/core';
+import { Container, Title, Box, Text, Divider } from '@mantine/core';
 import { Table, TableThead, TableTr, TableTh, TableTd, TableTbody } from '@mantine/core';
 
 export default function AdditionalTips() {

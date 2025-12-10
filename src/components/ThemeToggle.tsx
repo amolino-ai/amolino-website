@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 function SunIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" {...props}>
@@ -13,12 +11,6 @@ function SunIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export function ThemeToggle() {
-  let [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div
       className="flex size-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5"
