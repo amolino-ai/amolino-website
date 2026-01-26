@@ -70,6 +70,14 @@ const frameworks: Framework[] = [
     imageUrl: '/images/frameworks/faint-framework.jpg',
     tags: ['Funds', 'Authority', 'Interest', 'Need', 'Timing'],
   },
+  {
+    id: 'scotsman',
+    name: 'SCOTSMAN',
+    description: 'Solution, Competition, Originality, Timescales, Size, Money, Authority, Need - A comprehensive framework for complex B2B sales with strong focus on competitive positioning and solution fit.',
+    color: 'bg-teal-600',
+    imageUrl: '/images/frameworks/scotsman-framework.jpg',
+    tags: ['Solution', 'Competition', 'Originality', 'Size', 'Authority'],
+  },
 ];
 
 export default function QualificationFrameworks() {
