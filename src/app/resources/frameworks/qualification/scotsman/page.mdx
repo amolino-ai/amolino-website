@@ -1,0 +1,438 @@
+import { ContentNavigation } from '@/components/ContentNavigation';
+import { sections } from '../components/sections';
+import Image from 'next/image';
+
+export const metadata = {
+  title: 'SCOTSMAN Sales Qualification Framework',
+  description: 'Learn how the SCOTSMAN framework helps qualify complex B2B sales opportunities by evaluating Solution, Competition, Originality, Timescales, Size, Money, Authority, and Need.',
+  images: {
+    hero: '/images/meddic.png',
+    overview: '/images/meddic.png',
+    components: '/images/meddic.png',
+    scenarios: '/images/meddic.png'
+  }
+};
+
+<div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+    <div className="lg:col-span-3">
+      <div id="overview">
+        # SCOTSMAN Framework
+
+        <div className="bg-gradient-to-r from-emerald-100 to-emerald-50 p-6 rounded-xl mb-10 mt-4">
+          <div className="grid md:grid-cols-4 gap-4 text-center">
+            {['Solution', 'Competition', 'Originality', 'Timescales', 'Size', 'Money', 'Authority', 'Need'].map((item) => (
+              <div key={item} className="bg-white p-4 rounded-lg shadow-sm transition-transform hover:scale-105">
+                <div className="text-2xl font-bold text-emerald-600">{item[0]}</div>
+                <div className="mt-2 font-medium text-gray-900">{item}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="what-is-it" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">What is SCOTSMAN?</h2>
+        <div className="text-gray-700 mb-4">
+          SCOTSMAN is a comprehensive sales qualification framework designed for complex B2B sales environments. The acronym stands for Solution, Competition, Originality, Timescales, Size, Money, Authority, and Need. It provides sales teams with eight critical dimensions to evaluate before investing significant time and resources into an opportunity.
+        </div>
+
+        <div className="text-gray-700 mb-4">
+          Unlike simpler frameworks like BANT, SCOTSMAN was built specifically for higher-ticket, complex deals where thorough early-stage qualification can dramatically improve win rates and forecast accuracy. The framework follows a "win fast, lose fast" philosophy—helping sales teams quickly identify winnable opportunities while exiting unwinnable ones early.
+        </div>
+
+        <div className="text-gray-700">
+          SCOTSMAN transforms traditional sales qualification into a structured, evidence-based process while maintaining the flexibility needed for complex sales situations. It's particularly valuable when selling technical solutions where product-fit evaluation and competitive differentiation are crucial.
+        </div>
+      </div>
+
+      <div id="history" className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">History & Origin</h2>
+        <div className="text-gray-700 mb-4">
+          The SCOTSMAN framework emerged from the professional sales training community, with development attributed to organizations including Huthwaite International and Advance. While the exact origin date isn't definitively documented, the framework was developed to address a persistent problem in enterprise B2B sales: teams wasting valuable time on unwinnable opportunities.
+        </div>
+        <div className="text-gray-700 mb-4">
+          The methodology shares philosophical roots with BANT (developed by IBM in the 1950s), but SCOTSMAN expanded the qualification criteria significantly to address the complexities of modern enterprise sales. Where BANT focuses on four criteria, SCOTSMAN evaluates eight dimensions—adding crucial elements like competitive analysis, solution fit, and deal sizing that are essential for complex technical sales.
+        </div>
+        <div className="text-gray-700">
+          The framework's name creates a memorable mnemonic that helps sales professionals remember all eight qualification criteria during prospect conversations. This practical design has contributed to its adoption across industries, particularly in technology, manufacturing, and professional services where complex, multi-stakeholder deals are common.
+        </div>
+      </div>
+
+      <div id="acronym" className="relative mb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl z-0" />
+        <div className="relative z-10 p-8">
+          <h2 className="text-2xl font-bold mb-6 text-center">The SCOTSMAN Acronym Explained</h2>
+
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-emerald-600 mb-3">S - Solution</h3>
+              <div className="text-gray-700">
+                Does your solution genuinely solve the prospect's problem?
+              </div>
+              <div className="mt-3 p-3 bg-emerald-50 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>How well does your product address their specific challenges?</li>
+                  <li>Can you deliver the outcomes they need?</li>
+                  <li>Are there gaps between their requirements and your capabilities?</li>
+                  <li>Is your solution technically feasible in their environment?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-teal-600 mb-3">C - Competition</h3>
+              <div className="text-gray-700">
+                Who and what are you competing against?
+              </div>
+              <div className="mt-3 p-3 bg-teal-50 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Which vendors are also being evaluated?</li>
+                  <li>What is the status quo alternative (doing nothing)?</li>
+                  <li>Are they considering building an internal solution?</li>
+                  <li>What is your competitive position and strategy?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-cyan-600 mb-3">O - Originality</h3>
+              <div className="text-gray-700">
+                What makes your solution uniquely valuable?
+              </div>
+              <div className="mt-3 p-3 bg-cyan-50 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What differentiates you from alternatives?</li>
+                  <li>Do your unique features matter to this prospect?</li>
+                  <li>Can competitors easily replicate your advantages?</li>
+                  <li>How do you articulate your unique value proposition?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-sky-600 mb-3">T - Timescales</h3>
+              <div className="text-gray-700">
+                What is the prospect's timeline for implementation?
+              </div>
+              <div className="mt-3 p-3 bg-sky-50 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>When do they need the solution operational?</li>
+                  <li>What events or deadlines are driving the timeline?</li>
+                  <li>Is their timeline realistic given your implementation process?</li>
+                  <li>What happens if the timeline slips?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-blue-600 mb-3">S - Size</h3>
+              <div className="text-gray-700">
+                Does the opportunity match your ideal deal profile?
+              </div>
+              <div className="mt-3 p-3 bg-blue-50 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What is the potential deal value?</li>
+                  <li>Does it meet your minimum deal size thresholds?</li>
+                  <li>What is the expansion potential over time?</li>
+                  <li>Is the opportunity worth the sales investment required?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-indigo-600 mb-3">M - Money</h3>
+              <div className="text-gray-700">
+                Do they have the budget to proceed?
+              </div>
+              <div className="mt-3 p-3 bg-indigo-50 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Is budget allocated for this initiative?</li>
+                  <li>Does the budget align with your pricing?</li>
+                  <li>Who controls the budget?</li>
+                  <li>What is their procurement and payment process?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-violet-600 mb-3">A - Authority</h3>
+              <div className="text-gray-700">
+                Are you engaging with decision-makers?
+              </div>
+              <div className="mt-3 p-3 bg-violet-50 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>Who has the power to approve this purchase?</li>
+                  <li>Have you mapped all stakeholders and influencers?</li>
+                  <li>Do you have access to the economic buyer?</li>
+                  <li>What is the decision-making process?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="text-xl font-bold text-purple-600 mb-3">N - Need</h3>
+              <div className="text-gray-700">
+                Is there a genuine, validated need?
+              </div>
+              <div className="mt-3 p-3 bg-purple-50 rounded">
+                <ul className="list-disc pl-4 space-y-1 text-sm">
+                  <li>What business problem are they trying to solve?</li>
+                  <li>How urgent is this need?</li>
+                  <li>What are the consequences of not addressing it?</li>
+                  <li>Is this a "must-have" or a "nice-to-have"?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="example">
+        <h2 className="text-2xl font-bold mb-6">SCOTSMAN in Action: Real-World Example</h2>
+
+        <div className="bg-white p-8 rounded-xl shadow-md my-8">
+          <h3 className="text-xl font-bold text-gray-900 mb-6">Enterprise Security Software for Financial Services Company</h3>
+
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Component</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sales Strategy</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-emerald-600">Solution</td>
+                  <td className="px-6 py-4">Need endpoint protection + SIEM integration; our platform covers both</td>
+                  <td className="px-6 py-4">Demo integrated solution, emphasize single-vendor simplicity</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-teal-600">Competition</td>
+                  <td className="px-6 py-4">Evaluating CrowdStrike and Palo Alto; incumbent is legacy McAfee</td>
+                  <td className="px-6 py-4">Position against each competitor's weaknesses; emphasize migration support</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-cyan-600">Originality</td>
+                  <td className="px-6 py-4">Our AI-driven threat detection is 40% faster than competitors</td>
+                  <td className="px-6 py-4">Run proof-of-concept to demonstrate detection speed advantage</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-sky-600">Timescales</td>
+                  <td className="px-6 py-4">Must be deployed before regulatory audit in Q3 (4 months)</td>
+                  <td className="px-6 py-4">Present accelerated implementation plan; assign dedicated team</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-blue-600">Size</td>
+                  <td className="px-6 py-4">5,000 endpoints, potential for 15,000 with subsidiary rollout</td>
+                  <td className="px-6 py-4">Structure initial deal with expansion pricing; highlight land-and-expand</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-indigo-600">Money</td>
+                  <td className="px-6 py-4">$800K allocated for security modernization this fiscal year</td>
+                  <td className="px-6 py-4">Align proposal to budget; offer multi-year discount for commitment</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-violet-600">Authority</td>
+                  <td className="px-6 py-4">CISO is champion; CFO and CTO must approve; Board visibility</td>
+                  <td className="px-6 py-4">Prepare executive briefing for CFO; ROI analysis for Board</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap font-medium text-purple-600">Need</td>
+                  <td className="px-6 py-4">Recent security incident; regulatory pressure; legacy system EOL</td>
+                  <td className="px-6 py-4">Reference similar financial services wins; emphasize compliance</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-8 p-4 bg-green-50 rounded-lg">
+            <p className="font-semibold text-green-700">Strategic Approach:</p>
+            <div className="text-gray-700">
+              With comprehensive SCOTSMAN qualification, the sales team has validated this as a high-priority opportunity. The combination of regulatory pressure, a recent security incident, and allocated budget creates genuine urgency. The competitive landscape is understood, and the unique AI-driven detection capability provides clear differentiation. The main risks are the tight timeline and multi-stakeholder approval process, which the team will address with an accelerated implementation plan and executive-level engagement.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tradeoffs" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Trade-Offs & Considerations</h2>
+
+        <div className="space-y-4">
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700"><span className="font-semibold">Comprehensive coverage</span> of eight critical qualification dimensions reduces blind spots</div>
+            </div>
+          </div>
+
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700"><span className="font-semibold">Strong competitive focus</span> with explicit evaluation of competition and differentiation</div>
+            </div>
+          </div>
+
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700"><span className="font-semibold">Deal sizing built-in</span> helps prioritize opportunities by potential value</div>
+            </div>
+          </div>
+
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700"><span className="font-semibold">Can feel interrogative</span> if questions aren't woven naturally into conversations</div>
+            </div>
+          </div>
+
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700"><span className="font-semibold">Overkill for simple deals</span> where eight-point qualification adds unnecessary friction</div>
+            </div>
+          </div>
+
+          <div className="flex">
+            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-100 flex items-center justify-center mt-0.5">
+              <svg className="h-4 w-4 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            </div>
+            <div className="ml-3">
+              <div className="text-gray-700"><span className="font-semibold">Requires discipline</span> to use consistently without becoming a checkbox exercise</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="when-to-use" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">When to Use SCOTSMAN</h2>
+
+        <div className="text-gray-700 mb-4">
+          SCOTSMAN works best for complex B2B sales where thorough qualification justifies the investment of time. It's particularly effective when selling technical solutions where solution fit and competitive differentiation are critical success factors.
+        </div>
+
+        <div className="text-gray-700 mb-4">
+          <strong>Ideal scenarios for SCOTSMAN:</strong>
+        </div>
+        <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+          <li>Higher-ticket enterprise deals with longer sales cycles</li>
+          <li>Competitive situations where multiple vendors are being evaluated</li>
+          <li>Technical solutions requiring product-fit validation</li>
+          <li>Multi-stakeholder buying environments</li>
+          <li>New rep onboarding (provides structured qualification approach)</li>
+        </ul>
+
+        <div className="text-gray-700">
+          For simpler, transactional sales with shorter cycles, consider using <a href="/resources/frameworks/qualification/bant" className="text-emerald-600 hover:underline">BANT</a> instead. For SaaS and recurring revenue models focused on customer outcomes, <a href="/resources/frameworks/qualification/spiced" className="text-emerald-600 hover:underline">SPICED</a> may be more appropriate.
+        </div>
+      </div>
+
+      <div id="summary">
+        <h2 className="text-2xl font-bold mb-6">Summary</h2>
+
+        <div className="bg-gradient-to-r from-emerald-50 to-white rounded-xl p-8 my-8 shadow-sm">
+          <h3 className="text-xl font-bold text-gray-900">Key Takeaways</h3>
+
+          <ul className="mt-6 space-y-3">
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-emerald-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>SCOTSMAN evaluates eight critical dimensions: Solution, Competition, Originality, Timescales, Size, Money, Authority, and Need.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-emerald-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>The framework follows a "win fast, lose fast" philosophy—quickly identifying winnable opportunities while exiting unwinnable ones early.</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-emerald-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Unlike simpler frameworks, SCOTSMAN includes explicit evaluation of competition and solution differentiation (Originality).</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="h-5 w-5 text-emerald-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Best suited for complex B2B sales, technical solutions, and competitive situations with multiple stakeholders.</span>
+            </li>
+          </ul>
+
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="text-gray-700">
+              By effectively implementing SCOTSMAN qualification, sales teams can improve forecast accuracy, focus resources on winnable opportunities, and develop targeted strategies that address competitive threats and differentiation. The framework's comprehensive approach ensures no critical qualification dimension is overlooked.
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 p-4 bg-emerald-50 rounded-lg">
+          <p className="text-gray-700">
+            <strong>Related reading:</strong> For practical tips on making any sales qualification methodology drive real results (not just CRM compliance), see <a href="/blog/25-way-to-make-meddpicc-useful" className="text-emerald-600 hover:underline">25 Ways to Make MEDDPICC Actually Improve Win Rates</a>.
+          </p>
+        </div>
+      </div>
+
+      <div id="other-frameworks" className="mt-12 bg-gray-50 rounded-xl p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4">Explore Other Qualification Frameworks</h3>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <a href="/resources/frameworks/qualification/bant" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-blue-600">BANT</h4>
+            <p className="text-sm text-gray-600 mt-1">Classic qualification framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification/meddic" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-purple-600">MEDDIC</h4>
+            <p className="text-sm text-gray-600 mt-1">Enterprise complex sales framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification/spiced" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-amber-600">SPICED</h4>
+            <p className="text-sm text-gray-600 mt-1">Customer-centric qualification approach</p>
+          </a>
+          <a href="/resources/frameworks/qualification/meddpicc" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-indigo-600">MEDDPICC</h4>
+            <p className="text-sm text-gray-600 mt-1">Extended enterprise framework</p>
+          </a>
+          <a href="/resources/frameworks/qualification" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <h4 className="font-bold text-gray-600">View All</h4>
+            <p className="text-sm text-gray-600 mt-1">Compare all qualification frameworks</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div className="hidden lg:block mt-24">
+      <ContentNavigation sections={sections} />
+    </div>
+  </div>
+
+  <div className="lg:hidden mt-12">
+    <ContentNavigation sections={sections} />
+  </div>
+</div>
