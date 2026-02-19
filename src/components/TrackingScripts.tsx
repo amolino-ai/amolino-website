@@ -25,3 +25,15 @@ export function ApolloScript({ appId }: { appId: string }) {
     />
   );
 }
+
+export function InstantlyScript({ pid }: { pid: string }) {
+  return (
+    <Script
+      id="vtag-ai-js"
+      src="https://r2.leadsy.ai/tag.js"
+      strategy="afterInteractive"
+      data-pid={pid}
+      data-version="062024"
+    />
+  );
+}

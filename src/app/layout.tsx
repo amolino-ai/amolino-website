@@ -13,7 +13,7 @@ import { type Metadata } from 'next';
 import { Inter, JetBrains_Mono, Lexend } from 'next/font/google';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/next';
-import { RB2BScript, ApolloScript } from '@/components/TrackingScripts';
+import { RB2BScript, ApolloScript, InstantlyScript } from '@/components/TrackingScripts';
 
 
 // Font configurations
@@ -89,6 +89,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
         {rb2bId && <RB2BScript rb2bId={rb2bId} />}
         <ApolloScript appId="67bc851a9bad43001da9ade8" />
+        <InstantlyScript pid="1yBt6e3kBBth7Eka1" />
         <PostHogProvider>
           <Providers>
             {/* Add DefaultSeo component here */}
