@@ -10,13 +10,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src",
-    "postbuild": "cp .next/server/app/sitemap.xml.body public/sitemap.xml"
+    "postbuild": "cp .next/server/app/sitemap.xml.body public/sitemap.xml",
+    "eval:status-audit": "npx tsx src/lib/evals/datasets/status-audit/run.ts"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.18.1",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.0.1",
+    "@lmnr-ai/lmnr": "^0.8.9",
     "@mantine/core": "^7.17.4",
     "@mantine/hooks": "^7.17.4",
     "@mdx-js/loader": "^3.1.0",
@@ -32,11 +34,11 @@
     "framer-motion": "^11.18.2",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "mdast-util-to-string": "^4.0.0",
     "mdx-annotations": "^0.1.4",
     "next": "16.0.7",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "next-sitemap": "^4.2.3",
     "posthog-js": "^1.335.3",
     "posthog-node": "^4.18.0",
@@ -82,6 +84,8 @@
     "typescript-eslint": "^8.48.1"
   },
   "overrides": {
+    "import-in-the-middle": "2.0.6",
+    "require-in-the-middle": "8.0.1",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4"
   }
