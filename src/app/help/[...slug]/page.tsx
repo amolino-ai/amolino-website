@@ -2,6 +2,7 @@
 import { Container } from '@/components/Container';
 import { Link } from '@/components/Link';
 import * as mdxComponents from '@/components/Mdx';
+import { Screenshot } from '@/components/Screenshot';
 import { Heading, Lead, Subheading } from '@/components/Text';
 import { getHelpArticle, getHelpArticleContent, getAllHelpArticles, getHelpArticlesBySection } from '@/lib/content';
 import type { HelpArticle } from '@/lib/content/types';
@@ -16,6 +17,7 @@ import dayjs from 'dayjs';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 
 interface Props {
   params: Promise<{
@@ -237,7 +239,15 @@ export default async function HelpArticlePage({ params }: Props) {
               </header>
               
               <div className="prose prose-lg max-w-none prose-headings:scroll-mt-8">
-                <MDXRemote source={content} components={mdxComponents} />
+                <MDXRemote
+                  source={content}
+                  components={{ ...mdxComponents, Screenshot }}
+                  options={{
+                    mdxOptions: {
+                      remarkPlugins: [remarkGfm],
+                    },
+                  }}
+                />
               </div>
               
               <div className="mt-12 pt-8 border-t border-gray-200">

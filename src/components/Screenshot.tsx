@@ -10,19 +10,19 @@ import Image from 'next/image';
 export const SCREENSHOT_PADDING = 2; // spacing units (0.5rem = 8px in Tailwind)
 
 export function Screenshot({
-  width,
-  height,
+  width: widthProp,
+  height: heightProp,
   src,
   className,
   alt = '',
   fillContainer = false,
-  
+
   cover = false,
   objectPosition = 'center',
   tilt = false,
 }: {
-  width: number
-  height: number
+  width: number | string
+  height: number | string
   src: string
   className?: string
   alt?: string
@@ -31,6 +31,10 @@ export function Screenshot({
   objectPosition?: 'center' | 'left' | 'right' | 'top' | 'bottom'
   tilt?: boolean
 }) {
+  // Coerce to numbers (MDX may pass strings)
+  const width = typeof widthProp === 'string' ? parseInt(widthProp, 10) : widthProp;
+  const height = typeof heightProp === 'string' ? parseInt(heightProp, 10) : heightProp;
+
   return (
     <div
       style={{

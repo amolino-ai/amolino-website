@@ -6,12 +6,45 @@ import { Code as code, CodeGroup, Pre as pre } from './Code';
 import { DocsHeading } from './headings/DocsHeading';
 import { Prose } from './Prose';
 import { LinkedInLink } from './LinkedInLink';
+import { Screenshot } from './Screenshot';
 
-export { LinkedInLink };
+export { LinkedInLink, Screenshot };
 
 // Re-exports
-export const a = Link;
 export { Button, code, CodeGroup, pre };
+
+// Link component with styling and external link handling
+export const a = ({
+  href,
+  children,
+  ...props
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+  const isExternal = href?.startsWith('http') || href?.startsWith('mailto:');
+
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 underline hover:text-blue-800 transition-colors"
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      href={href || '#'}
+      className="text-blue-600 underline hover:text-blue-800 transition-colors"
+      {...props}
+    >
+      {children}
+    </Link>
+  );
+};
 
 // Wrapper
 export function wrapper({ children }: { children: React.ReactNode }) {
