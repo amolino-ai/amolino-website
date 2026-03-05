@@ -43,18 +43,15 @@ export async function generateMetadata({ params }: BenefitGroupPageProps): Promi
   return {
     title,
     description,
+    alternates: {
+      canonical: `/benefits/${slug}`,
+    },
     openGraph: {
       title,
       description,
       type: 'website',
       ...(image && { images: [{ url: image }] }),
     },
-    // twitter: {
-    //   card: 'summary_large_card',
-    //   title,
-    //   description,
-    //   ...(image && { images: [image] }),
-    // },
   };
 }
 

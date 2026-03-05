@@ -2,11 +2,14 @@ import glob from 'fast-glob';
 import type { MetadataRoute } from 'next';
 import { getPostsForFeed } from '@/lib/content';
 
+// Pages to exclude from sitemap (test pages, internal pages, etc.)
+const EXCLUDED_PATHS = ['/mdx'];
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Get your base URL from environment variable
   const baseUrl = process.env.SITE_URL || 'https://amolino.ai';
 
-  // Get all MDX pages, excluding login page
+  // Get all MDX pages
   const mdxPages = await glob('**/*.mdx', {
     cwd: 'src/app',
   });
@@ -15,13 +18,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
   }));
 
-  // Define static routes
+  // Define static routes (non-MDX pages)
   const staticUrls = [
     '',
     '/blog',
-    '/company',
-    '/company/terms',
-    '/company/privacy',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -33,5 +33,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: post.publishedAt ? new Date(post.publishedAt) : new Date(),
   }));
 
-  return [ ...mdxUrls, ...blogUrls];
+  // Combine all URLs, deduplicate by URL, and filter excluded paths
+  const allUrls = [...staticUrls, ...mdxUrls, ...blogUrls];
+  const seen = new Set<string>();
+  const deduped = allUrls.filter((entry) => {
+    if (seen.has(entry.url)) return false;
+    seen.add(entry.url);
+    return true;
+  });
+
+  // Filter out excluded paths
+  return deduped.filter((entry) => {
+    const path = entry.url.replace(baseUrl, '');
+    return !EXCLUDED_PATHS.includes(path);
+  });
 }

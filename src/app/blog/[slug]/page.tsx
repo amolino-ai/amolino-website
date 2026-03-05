@@ -7,6 +7,7 @@ import { getBlogPost, getBlogPostContent, getFooterContent } from '@/lib/content
 import { cn } from '@/lib/utils'; // or import clsx from 'clsx'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid';
 import dayjs from 'dayjs';
+import type { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import styles from '../blog.module.css';
@@ -14,6 +15,32 @@ import Image from 'next/image';
 
 export const dynamic = 'force-static';
 export const revalidate = 0;
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
+
+  if (!post) {
+    return { title: 'Post Not Found' };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.publishedAt,
+      ...(post.mainImage && {
+        images: [{ url: post.mainImage.src, alt: post.mainImage.alt }],
+      }),
+    },
+  };
+}
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
