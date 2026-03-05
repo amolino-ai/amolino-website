@@ -39,11 +39,15 @@ const TITLE_SUFFIX = process.env.TITLE_SUFFIX || ' | AmolinoAI | Transform Pipel
 
 // Next.js built-in metadata
 export const metadata: Metadata = {
+  metadataBase: new URL(WEBSITE_URL),
   title: {
     template: `%s${TITLE_SUFFIX}`,
     default: `AmolinoAI | ${TITLE_SUFFIX}`,
   },
   description: 'Transform your pipeline visibility, forecast accuracy, and deal execution with Amolino.',
+  alternates: {
+    canonical: './',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

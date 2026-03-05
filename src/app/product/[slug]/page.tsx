@@ -2,6 +2,7 @@ import FeatureShowcase from '@/app/features/components/FeatureShowcase';
 import BottomFeature from '@/app/features/components/BottomFeature';
 import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
+import type { Metadata } from 'next';
 
 // Define product slugs for root-level products only
 // (New features are organized under pillar subfolders)
@@ -34,42 +35,28 @@ interface ProductPageProps {
  * Generate metadata for SEO optimization.
  * Uses content from YAML files to populate title, description, and OpenGraph tags.
  */
-// export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-//   const { slug } = await params;
-//   const content = await getProductContent(slug);
+export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const content = await getProductContent(slug);
 
-//   // Use metadata from YAML if available, otherwise fall back to hero content
-//   // Note: TITLE_SUFFIX is already applied by root layout's title template
-//   const title = content.metadata?.title || content.hero.title;
-//   const description = content.metadata?.description || content.hero.description;
-//   const image = content.metadata?.image;
+  const title = content.metadata?.title || content.hero.title;
+  const description = content.metadata?.description || content.hero.description;
+  const image = content.metadata?.image;
 
-//   // Debug logging
-//   console.log('Product metadata debug:', {
-//     slug,
-//     hasMetadata: !!content.metadata,
-//     metadataTitle: content.metadata?.title,
-//     heroTitle: content.hero.title,
-//     finalTitle: title,
-//   });
-
-//   return {
-//     title,
-//     description,
-//     openGraph: {
-//       title,
-//       description,
-//       type: 'website',
-//       ...(image && { images: [{ url: image }] }),
-//     },
-//     // twitter: {
-//     //   card: 'summary_large_card',
-//     //   title,
-//     //   description,
-//     //   ...(image && { images: [image] }),
-//     // },
-//   };
-// }
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/product/${slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      ...(image && { images: [{ url: image }] }),
+    },
+  };
+}
 
 /**
  * Dynamic product feature page component

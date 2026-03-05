@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src",
-    "postbuild": "cp .next/server/app/sitemap.xml.body public/sitemap.xml",
+    "postbuild": "npx tsx scripts/seo-audit.ts",
     "eval:status-audit": "npx tsx src/lib/evals/datasets/status-audit/run.ts"
   },
   "dependencies": {
