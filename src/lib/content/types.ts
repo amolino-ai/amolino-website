@@ -506,6 +506,49 @@ export interface UseCasePageContent {
   relatedContent?: RelatedContentBlock;
 }
 
+// Use Cases Overview Page content interfaces
+export interface UseCasesOverviewCard {
+  title: string;
+  description: string;
+  imagePath: string;
+  href: string;
+}
+
+export interface UseCasesOverviewFeatured {
+  eyebrow: string;
+  title: string;
+  description: string;
+  secondaryDescription: string;
+  ctaText: string;
+  ctaHref: string;
+  imagePath: string;
+  imageAlt: string;
+}
+
+export interface UseCasesOverviewBottomCta {
+  heading: string;
+  description: string;
+  primaryButtonText: string;
+  primaryButtonHref: string;
+  secondaryButtonText: string;
+  secondaryButtonHref: string;
+}
+
+export interface UseCasesOverviewPageContent {
+  metadata: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    heading: string;
+    description: string;
+  };
+  useCases: UseCasesOverviewCard[];
+  featuredUseCase: UseCasesOverviewFeatured;
+  bottomCta: UseCasesOverviewBottomCta;
+  cardCtaLabel: string;
+}
+
 // Product Page content interfaces
 export interface ProductScreenshot {
   src: string;

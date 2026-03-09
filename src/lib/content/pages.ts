@@ -19,6 +19,7 @@ import type {
   PricingPageContent,
   FooterContent,
   UseCasePageContent,
+  UseCasesOverviewPageContent,
   ProductPageContent,
   BlogPageContent,
   QBRGuidePageContent,
@@ -142,6 +143,13 @@ export async function getFooterContent(): Promise<FooterContent> {
  */
 export async function getUseCaseContent(slug: string): Promise<UseCasePageContent> {
   return loadYAML<UseCasePageContent>(`pages/use-cases/${slug}.yaml`);
+}
+
+/**
+ * Get use cases overview page content
+ */
+export async function getUseCasesOverviewContent(): Promise<UseCasesOverviewPageContent> {
+  return loadYAML<UseCasesOverviewPageContent>('pages/use-cases/overview.yaml');
 }
 
 /**
