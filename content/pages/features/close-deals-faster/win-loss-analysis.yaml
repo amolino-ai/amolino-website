@@ -18,7 +18,7 @@ hero:
     Win/Loss Analysis automatically analyzes deal outcomes to understand why deals close or slip away, revealing
     patterns and insights that improve your sales strategy and systematically increase win rates.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/prevent-deal-slippage/win-loss-analysis.png"
     width: 613

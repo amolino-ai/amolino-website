@@ -19,7 +19,7 @@ hero:
     Manual pipeline reviews take hours and still miss problems. Amolino automatically identifies opportunities that need
     updating, closing, or removing from the pipeline so your forecast reflects reality, not wishful thinking.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/accurate-forecasting/pipeline-lens.png"
     width: 1216

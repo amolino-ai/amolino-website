@@ -7,7 +7,7 @@ hero:
   primaryButtonText: "Transform Your Pipeline"
   primaryButtonLink: "https://app.amolino.com"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
 
 challenge:
   subheading: "The Challenge"
@@ -80,4 +80,20 @@ bottomCta:
   primaryButtonText: "Get Started"
   primaryButtonLink: "/demo"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "Turn visibility into action"
+  description: "Once the pipeline is visible, the next step is translating that signal into analytics, forecasting, and operating rhythm."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/benefits/accurate-forecasting"
+      title: "Forecast with Confidence"
+      description: "Move from pipeline visibility into explainable forecasting and scenario planning."
+    - href: "/product/revenue-analytics"
+      title: "Revenue Analytics"
+      description: "See the product layer that turns pipeline data into usable health, risk, and forecast insight."
+    - href: "/resources/b2b-sales-forecast-accuracy-guide"
+      title: "Forecast Accuracy Guide"
+      description: "Go deeper on the specific pipeline signals that surface erosion and stalls before quarter-end."

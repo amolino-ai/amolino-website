@@ -7,7 +7,7 @@ hero:
   primaryButtonText: "Transform Your Deal Management"
   primaryButtonLink: "https://app.amolino.com"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
 
 challenge:
   subheading: "The Challenge"
@@ -83,4 +83,20 @@ bottomCta:
   primaryButtonText: "Get Started"
   primaryButtonLink: "/demo"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "Expand from deal memory to execution"
+  description: "These follow-on pages deepen the connection between deal context, stakeholder visibility, and qualification discipline."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/benefits/win-more-deals"
+      title: "Make Every Rep Your Best Rep"
+      description: "See the strategic pillar that connects deal intelligence to rep consistency and coaching."
+    - href: "/product/customer-360"
+      title: "Customer 360"
+      description: "Explore the relationship view that keeps teams aligned around the account, not just the latest note."
+    - href: "/resources/frameworks/qualification/meddpicc"
+      title: "MEDDPICC Framework"
+      description: "Link deal tracking back to a qualification framework that helps teams inspect deal reality more rigorously."

@@ -78,3 +78,48 @@ export async function getPostsForFeed(): Promise<BlogPost[]> {
     return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
   });
 }
+
+function tokenize(value: string): string[] {
+  return value
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((token) => token.length > 2)
+    .filter((token) => !['from', 'with', 'that', 'this', 'your', 'into', 'when', 'what', 'have', 'will'].includes(token));
+}
+
+function getRelatedScore(currentPost: BlogPost, candidatePost: BlogPost): number {
+  const currentCategories = new Set(currentPost.categories?.map((category) => category.slug) ?? []);
+  const candidateCategories = new Set(candidatePost.categories?.map((category) => category.slug) ?? []);
+  const sharedCategories = [...currentCategories].filter((category) => candidateCategories.has(category)).length;
+
+  const currentTerms = new Set(tokenize(`${currentPost.title} ${currentPost.excerpt}`));
+  const candidateTerms = new Set(tokenize(`${candidatePost.title} ${candidatePost.excerpt}`));
+  const sharedTerms = [...currentTerms].filter((term) => candidateTerms.has(term)).length;
+
+  return sharedCategories * 10 + sharedTerms;
+}
+
+export async function getRelatedPosts(slug: string, limit: number = 3): Promise<BlogPost[]> {
+  const allPosts = await getAllBlogPosts();
+  const currentPost = allPosts.find((post) => post.slug === slug);
+
+  if (!currentPost) {
+    return [];
+  }
+
+  return allPosts
+    .filter((post) => post.slug !== slug)
+    .map((post) => ({
+      post,
+      score: getRelatedScore(currentPost, post),
+    }))
+    .sort((a, b) => {
+      if (a.score !== b.score) {
+        return b.score - a.score;
+      }
+
+      return new Date(b.post.publishedAt).getTime() - new Date(a.post.publishedAt).getTime();
+    })
+    .slice(0, limit)
+    .map(({ post }) => post);
+}

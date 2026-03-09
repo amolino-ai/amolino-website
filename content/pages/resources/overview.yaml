@@ -1,0 +1,25 @@
+metadata:
+  title: "Resources"
+  description: "Explore Amolino guides, frameworks, and long-form resources for forecasting, pipeline inspection, and sales execution."
+
+hero:
+  subheading: "Resources"
+  heading: "Guides and frameworks for revenue teams."
+  description: "These resources are organized for sales leaders, RevOps teams, and frontline managers who need sharper forecasting, cleaner inspection, and more consistent deal execution."
+
+cards:
+  - href: "/resources/b2b-sales-forecast-accuracy-guide"
+    eyebrow: "Guide"
+    title: "B2B Sales Forecast Accuracy Guide"
+    description: "A long-form breakdown of pipeline erosion, forecast accuracy, and the operating systems behind predictable revenue."
+    ctaLabel: "Explore resource"
+  - href: "/resources/guides/qbrs"
+    eyebrow: "Guide"
+    title: "Quarterly Business Review Guide"
+    description: "A practical guide to preparing, running, and following up on QBRs that actually improve decision quality."
+    ctaLabel: "Read guide"
+  - href: "/resources/frameworks/qualification"
+    eyebrow: "Frameworks"
+    title: "Sales Qualification Frameworks"
+    description: "Browse BANT, MEDDIC, MEDDPICC, SPICED, and other frameworks used to inspect deal quality more rigorously."
+    ctaLabel: "Explore frameworks"

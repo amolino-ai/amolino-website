@@ -19,7 +19,7 @@ hero:
     AI analyzes every opportunity against your ideal customer profile, buying signals, and historical win patterns
     to instantly score qualification. This ensures your team focuses on high-value, winnable deals.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/opportunity_details_meddic.png"
     width: 1104

@@ -18,7 +18,7 @@ hero:
     Pushed Out History tracks deals that repeatedly slip past their close dates, helping you identify slippage
     patterns, understand root causes, and prevent future push-outs before they happen.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/prevent-deal-slippage/pushed-out-history.png"
     width: 400

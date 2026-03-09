@@ -19,7 +19,7 @@ hero:
     AI Coaching Advisor analyzes rep performance, identifies skill gaps and coaching opportunities, and provides
     data-driven insights to help managers develop every team member into a top performer.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/coaching-advisor.png"
     width: 2760

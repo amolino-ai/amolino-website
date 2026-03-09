@@ -60,3 +60,19 @@ bottomFeature:
     src: "/screenshots/older/pipeline_radar_pushed_opportunities_march2025.png"
     width: 1216
     height: 768
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "Turn guidance into repeatable execution"
+  description: "These pages connect guided selling to the surrounding deal workflow and the broader benefit it supports."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/use-cases/account-management-and-deal-tracking"
+      title: "Account Management & Deal Tracking"
+      description: "See the day-to-day deal context where next-step guidance and stakeholder clarity matter most."
+    - href: "/benefits/win-more-deals"
+      title: "Make Every Rep Your Best Rep"
+      description: "Step back to the strategic pillar for scalable rep execution and coaching."
+    - href: "/blog/how-most-sales-teams-really-sell-and-what-consistent-sales-execution-looks-like"
+      title: "Consistent Sales Execution"
+      description: "Read the operating model behind turning guidance into repeatable team behavior."

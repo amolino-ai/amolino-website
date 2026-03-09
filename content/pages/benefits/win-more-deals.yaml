@@ -90,7 +90,7 @@ features:
         width: 352
         height: 616
         fillContainer: false
-      link: "/features/next-best-action-to-win/proactive-sales-guidance"
+      link: "/features/win-more-deals/proactive-sales-guidance"
       ctaText: "See Proactive Sales Guidance"
     - name: "Automatic Qualification Intelligence"
       category: "Development"
@@ -103,7 +103,7 @@ features:
         width: 1104
         height: 160
         fillContainer: false
-      link: "/features/next-best-action-to-win/automatic-qualification-intelligence"
+      link: "/features/win-more-deals/automatic-qualification-intelligence"
       ctaText: "See Automatic Qualification Intelligence"
     - name: "Channel Partner Intelligence"
       category: "Intelligence"
@@ -116,7 +116,7 @@ features:
         width: 728
         height: 160
         fillContainer: true
-      link: "/features/next-best-action-to-win/channel-partner-intelligence"
+      link: "/features/win-more-deals/channel-partner-intelligence"
       ctaText: "See Channel Partner Intelligence"
     - name: "Stakeholder Map"
       category: "Insights"
@@ -129,7 +129,7 @@ features:
         width: 1148
         height: 316
         fillContainer: true
-      link: "/features/next-best-action-to-win/stakeholder-map"
+      link: "/features/win-more-deals/stakeholder-map"
       ctaText: "See Stakeholder Map"
 
 howItWorks:
@@ -201,3 +201,19 @@ whoItsFor:
       description: "Your deals are too complex for reps to freestyle. You need a repeatable process that actually gets followed."
     - title: "Want to Coach, Not Police"
       description: "You'd rather spend time developing talent than chasing forecast updates and deal hygiene."
+
+relatedContent:
+  eyebrow: "Related Paths"
+  title: "Keep this workflow connected"
+  description: "Move from the high-level value prop into the use cases, products, and operating guidance that make this pillar concrete."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/use-cases/account-management-and-deal-tracking"
+      title: "Account Management & Deal Tracking"
+      description: "See how this pillar shows up in daily deal execution for account executives managing complex opportunities."
+    - href: "/product/guided-selling"
+      title: "Guided Selling"
+      description: "Explore the product surface that turns top-performer behavior into in-the-moment recommendations for every rep."
+    - href: "/blog/how-most-sales-teams-really-sell-and-what-consistent-sales-execution-looks-like"
+      title: "Consistent Sales Execution"
+      description: "Read the operating model behind making rep execution more repeatable instead of relying on heroics."

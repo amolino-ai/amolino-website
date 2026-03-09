@@ -2,8 +2,9 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Footer } from '@/components/Footer';
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { RelatedContentSection } from '@/components/RelatedContentSection';
 import * as mdxComponents from '@/components/Mdx';
-import { getBlogPost, getBlogPostContent, getFooterContent } from '@/lib/content';
+import { getBlogPageContent, getBlogPost, getBlogPostContent, getFooterContent, getRelatedPosts } from '@/lib/content';
 import { cn } from '@/lib/utils'; // or import clsx from 'clsx'
 import { ChevronLeftIcon } from '@heroicons/react/16/solid';
 import dayjs from 'dayjs';
@@ -47,6 +48,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const post = await getBlogPost(slug);
   const content = await getBlogPostContent(slug);
   const footerContent = await getFooterContent();
+  const blogPageContent = await getBlogPageContent();
+  const relatedPosts = await getRelatedPosts(slug, 3);
 
   if (!post || !content) {
     notFound();
@@ -102,6 +105,21 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           <div className={styles.blogProse}>
             <MDXRemote source={content} components={mdxComponents} />
           </div>
+
+          {relatedPosts.length > 0 && (
+            <RelatedContentSection
+              className="mt-16 rounded-3xl"
+              eyebrow={blogPageContent.relatedPosts.eyebrow}
+              title={blogPageContent.relatedPosts.title}
+              description={blogPageContent.relatedPosts.description}
+              ctaLabel={blogPageContent.relatedPosts.ctaLabel}
+              items={relatedPosts.map((relatedPost) => ({
+                href: `/blog/${relatedPost.slug}`,
+                title: relatedPost.title,
+                description: relatedPost.excerpt,
+              }))}
+            />
+          )}
 
           <div className={styles.blogBackButton}>
             <Button variant="outline" href="/blog">

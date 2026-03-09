@@ -7,7 +7,7 @@ hero:
   primaryButtonText: "Transform Your CRM"
   primaryButtonLink: "https://app.amolino.com"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
 
 challenge:
   subheading: "The Challenge"
@@ -83,4 +83,20 @@ bottomCta:
   primaryButtonText: "Get Started"
   primaryButtonLink: "/demo"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "Connect CRM automation to adoption"
+  description: "The strongest follow-on paths here are the feature detail and the setup guides that make zero-update capture real."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/benefits/win-more-deals"
+      title: "Make Every Rep Your Best Rep"
+      description: "See how automation supports better rep execution instead of turning CRM into a compliance task."
+    - href: "/features/win-more-deals/zero-effort-crm-updates"
+      title: "Zero-Effort CRM Updates"
+      description: "Go straight to the feature-level explanation of how Amolino keeps records current without manual entry."
+    - href: "/help/integrations/hubspot"
+      title: "HubSpot Integration Guide"
+      description: "Jump from the business case into the implementation path for a common CRM integration."

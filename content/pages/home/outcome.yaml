@@ -3,7 +3,7 @@ headline: "How Amolino Transforms Your Company"
 description: "Every sales leader wants the same things: more wins, shorter cycles, and forecasts they can trust. Amolino delivers all three by turning your sales data into actionable intelligence."
 cta:
   text: "Book a Demo"
-  url: "/book-demo"
+  url: "/demo"
 
 products:
   - id: 1

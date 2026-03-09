@@ -20,7 +20,7 @@ hero:
     impossible. Amolino continuously monitors your entire pipeline and highlights deals at risk before they
     impact your number. No more surprises. Just proactive risk management.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/accurate-forecasting/pipeline-monitor.png"
     width: 1104

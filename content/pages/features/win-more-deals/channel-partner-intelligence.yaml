@@ -19,7 +19,7 @@ hero:
     Get complete visibility into partner-sourced opportunities, track partner performance and contribution,
     enable effective co-selling, and drive predictable channel revenue with data-driven partner intelligence.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/opp_details_channel_partner.png"
     width: 728

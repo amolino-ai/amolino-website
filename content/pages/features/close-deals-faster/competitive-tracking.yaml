@@ -19,7 +19,7 @@ hero:
     Track competitor involvement across your pipeline, analyze win/loss patterns by competitor, understand their
     strengths and weaknesses, and develop data-driven strategies to outmaneuver the competition.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/prevent-deal-slippage/competitive-tracking-stacked.png"
     width: 570

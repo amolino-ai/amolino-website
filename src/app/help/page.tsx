@@ -16,11 +16,14 @@ export const metadata: Metadata = {
   description: 'Find guides, tutorials, and documentation to help you get the most out of our platform.',
 };
 
-async function HelpSections() {
-  const sections = await getHelpSections();
+async function HelpSections({ selectedSection }: { selectedSection?: string }) {
+  const allSections = await getHelpSections();
+  const sections = selectedSection
+    ? allSections.filter((section) => section.slug === selectedSection)
+    : allSections;
 
   if (sections.length === 0) {
-    return <p className="mt-6 text-gray-500">No help articles found.</p>;
+    return <p className="mt-6 text-gray-500">No help articles found for this section.</p>;
   }
 
   return (
@@ -76,7 +79,13 @@ async function HelpSections() {
   );
 }
 
-async function HelpFilters({ selectedTag }: { selectedTag?: string }) {
+async function HelpFilters({
+  selectedTag,
+  selectedSection,
+}: {
+  selectedTag?: string;
+  selectedSection?: string;
+}) {
   const tags = await getHelpTags();
 
   if (tags.length === 0) {
@@ -87,7 +96,11 @@ async function HelpFilters({ selectedTag }: { selectedTag?: string }) {
     <div className="flex flex-wrap items-center justify-between gap-2">
       <Menu>
         <MenuButton className="flex items-center justify-between gap-2 font-medium">
-          {selectedTag ? `Tagged: ${selectedTag}` : 'All topics'}
+          {selectedTag
+            ? `Tagged: ${selectedTag}`
+            : selectedSection
+            ? `Section: ${selectedSection}`
+            : 'All topics'}
           <ChevronUpDownIcon className="size-4 fill-gray-900" />
         </MenuButton>
         <MenuItems
@@ -120,17 +133,21 @@ async function HelpFilters({ selectedTag }: { selectedTag?: string }) {
       </Menu>
 
       <div className="flex gap-2">
-        <Button variant="outline" href="/help/search" className="gap-1">
-          Search Help
+        <Button
+          variant="outline"
+          href={selectedTag || selectedSection ? '/help' : '/help?section=integrations'}
+          className="gap-1"
+        >
+          {selectedTag || selectedSection ? 'View all help' : 'Browse integrations'}
         </Button>
       </div>
     </div>
   );
 }
 
-async function FilteredHelpArticles({ tag }: { tag?: string }) {
+async function FilteredHelpArticles({ tag, section }: { tag?: string; section?: string }) {
   if (!tag) {
-    return <HelpSections />;
+    return <HelpSections selectedSection={section} />;
   }
 
   // If we have a tag filter, we'll need to import and use getHelpArticlesByTag
@@ -214,6 +231,7 @@ export default async function HelpCenter(props: {
   const searchParams = await props.searchParams;
 
   const selectedTag = typeof searchParams.tag === 'string' ? searchParams.tag : undefined;
+  const selectedSection = typeof searchParams.section === 'string' ? searchParams.section : undefined;
 
   return (
     <main className="overflow-hidden">
@@ -229,8 +247,8 @@ export default async function HelpCenter(props: {
       </Container>
 
       <Container className="mt-16 pb-24">
-        <HelpFilters selectedTag={selectedTag} />
-        <FilteredHelpArticles tag={selectedTag} />
+        <HelpFilters selectedTag={selectedTag} selectedSection={selectedSection} />
+        <FilteredHelpArticles tag={selectedTag} section={selectedSection} />
       </Container>
 
     </main>

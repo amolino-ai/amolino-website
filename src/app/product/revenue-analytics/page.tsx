@@ -4,6 +4,7 @@ import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Container } from '@/components/Container';
+import { RelatedContentSection } from '@/components/RelatedContentSection';
 
 export default async function RevenueAnalytics() {
   const content = await getProductContent('revenue-analytics');
@@ -49,6 +50,7 @@ export default async function RevenueAnalytics() {
         aiPoweredPoints={content.showcase.aiPoweredPoints}
       />
       <BottomFeature {...content.bottomFeature} />
+      {content.relatedContent && <RelatedContentSection {...content.relatedContent} />}
     </>
   );
 }

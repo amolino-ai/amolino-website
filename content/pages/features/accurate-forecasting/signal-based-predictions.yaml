@@ -21,7 +21,7 @@ hero:
     patterns, timeline changes, stakeholder activity, and competitive signals. You get accurate predictions you can
     actually trust.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/accurate-forecasting/signal-based-predictions.horizontal.png"
     width: 955

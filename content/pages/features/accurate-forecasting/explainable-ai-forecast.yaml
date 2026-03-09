@@ -20,7 +20,7 @@ hero:
     revenue predictions you can actually explain. No more black-box forecasts. Just transparent, data-driven
     projections backed by the insights that matter.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/accurate-forecasting/dashboard-revenue_analysis-forecast-widget.png"
     width: 1077

@@ -1,0 +1,14 @@
+metadata:
+  title: "Blog"
+  description: "Stay informed with product updates, company news, and insights on how to sell smarter at your company."
+
+listing:
+  subheading: "Blog"
+  heading: "Insights for revenue teams."
+  description: "Stay informed with product updates, company news, and practical guidance on forecasting, RevOps, and sales execution."
+
+relatedPosts:
+  eyebrow: "Related Reading"
+  title: "Keep following the same thread"
+  description: "These articles cover adjacent operating problems and are the most relevant next stops from this post."
+  ctaLabel: "Read this article"

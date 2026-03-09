@@ -20,7 +20,7 @@ hero:
     Automatically analyze sales calls and meetings to extract key insights, track objections and questions, measure
     talk patterns, identify coaching opportunities, and surface winning conversation strategies that drive better outcomes.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/conversational-analytics.png"
     width: 2769

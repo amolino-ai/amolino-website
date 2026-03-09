@@ -20,12 +20,15 @@ import type {
   FooterContent,
   UseCasePageContent,
   ProductPageContent,
+  BlogPageContent,
+  QBRGuidePageContent,
   QBRIntroduction,
   QBRBestPractices,
   QBRSummary,
   NavbarProductsContent,
   NavbarLinksContent,
   BenefitGroupContent,
+  ResourceHubPageContent,
   ComparisonPageContent,
   SecurityHero,
   SecurityCertifications,
@@ -153,10 +156,24 @@ export async function getProductContent(benefitOrSlug: string, slug?: string): P
 }
 
 /**
+ * Get blog page content
+ */
+export async function getBlogPageContent(): Promise<BlogPageContent> {
+  return loadYAML<BlogPageContent>('pages/blog.yaml');
+}
+
+/**
+ * Get resources hub page content
+ */
+export async function getResourceHubContent(slug: string): Promise<ResourceHubPageContent> {
+  return loadYAML<ResourceHubPageContent>(`pages/resources/${slug}.yaml`);
+}
+
+/**
  * Get all products for a specific benefit pillar
  */
 export async function getProductsByBenefit(benefit: string): Promise<Array<ProductPageContent & { slug: string }>> {
-  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'product', benefit);
+  const benefitDir = path.join(process.cwd(), 'content', 'pages', 'features', benefit);
 
   // Check if directory exists
   if (!fs.existsSync(benefitDir)) {
@@ -176,7 +193,7 @@ export async function getProductsByBenefit(benefit: string): Promise<Array<Produ
     })
   );
 
-  return products;
+  return products.sort((a, b) => a.options.featureName.localeCompare(b.options.featureName));
 }
 
 /**
@@ -209,6 +226,10 @@ export async function getAllProductsGroupedByBenefit() {
  */
 export async function getQBRIntroduction(): Promise<QBRIntroduction> {
   return loadYAML<QBRIntroduction>('pages/qbr-guide/introduction.yaml');
+}
+
+export async function getQBRGuidePageContent(): Promise<QBRGuidePageContent> {
+  return loadYAML<QBRGuidePageContent>('pages/qbr-guide/page.yaml');
 }
 
 /**

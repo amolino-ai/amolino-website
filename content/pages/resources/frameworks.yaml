@@ -1,0 +1,15 @@
+metadata:
+  title: "Frameworks"
+  description: "Explore Amolino framework resources for qualification and sales inspection."
+
+hero:
+  subheading: "Frameworks"
+  heading: "Qualification frameworks and inspection tools."
+  description: "Use these pages when you want a framework-level reference for qualification, deal inspection, and pipeline discipline."
+
+cards:
+  - href: "/resources/frameworks/qualification"
+    eyebrow: "Qualification"
+    title: "Sales Qualification Frameworks"
+    description: "Compare BANT, MEDDIC, MEDDPICC, SPICED, GPCTBA/C&I, CHAMP, SCOTSMAN, and related frameworks in one place."
+    ctaLabel: "Explore frameworks"

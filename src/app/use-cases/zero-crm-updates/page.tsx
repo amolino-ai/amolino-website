@@ -5,6 +5,7 @@ import { Impact } from '../components/Impact';
 import { BottomCTA } from '../components/BottomCTA';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Container } from '@/components/Container';
+import { RelatedContentSection } from '@/components/RelatedContentSection';
 import { getUseCaseContent } from '@/lib/content';
 
 export default async function CRMAutomation() {
@@ -25,6 +26,7 @@ export default async function CRMAutomation() {
       <Solution {...content.solution} />
       <Impact {...content.impact} />
       <BottomCTA {...content.bottomCta} />
+      {content.relatedContent && <RelatedContentSection {...content.relatedContent} />}
     </main>
   );
 }

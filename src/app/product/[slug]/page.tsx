@@ -2,6 +2,7 @@ import FeatureShowcase from '@/app/features/components/FeatureShowcase';
 import BottomFeature from '@/app/features/components/BottomFeature';
 import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
+import { RelatedContentSection } from '@/components/RelatedContentSection';
 import type { Metadata } from 'next';
 
 // Define product slugs for root-level products only
@@ -99,6 +100,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         aiPoweredPoints={content.showcase.aiPoweredPoints}
       />
       <BottomFeature {...content.bottomFeature} />
+      {content.relatedContent && <RelatedContentSection {...content.relatedContent} />}
     </>
   );
 }

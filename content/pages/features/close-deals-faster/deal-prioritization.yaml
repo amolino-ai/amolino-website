@@ -18,7 +18,7 @@ hero:
     AI automatically prioritizes your pipeline based on deal value, win probability, urgency, health, and strategic fit,
     ensuring you always focus your time and energy on the opportunities that matter most.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/prevent-deal-slippage/deal-prioritization.png"
     width: 1216

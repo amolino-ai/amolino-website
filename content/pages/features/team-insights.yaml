@@ -60,3 +60,19 @@ bottomFeature:
     src: "/screenshots/next-best-action-to-win/team-insights.png"
     width: 1578
     height: 710
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "Use team insights in management rhythms"
+  description: "The natural next step is connecting team-level visibility to coaching, QBRs, and the benefit pillar it supports."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/benefits/win-more-deals"
+      title: "Make Every Rep Your Best Rep"
+      description: "See how team-level insight supports scalable coaching and more consistent rep execution."
+    - href: "/resources/guides/qbrs"
+      title: "QBR Guide"
+      description: "Bring team insight into a regular management cadence with a stronger quarterly review process."
+    - href: "/blog/how-most-sales-teams-really-sell-and-what-consistent-sales-execution-looks-like"
+      title: "Consistent Sales Execution"
+      description: "Read how consistent management rhythms support more reliable rep behavior and pipeline quality."

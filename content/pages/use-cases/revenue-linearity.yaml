@@ -7,7 +7,7 @@ hero:
   primaryButtonText: "Transform Your Revenue Linearity"
   primaryButtonLink: "https://app.amolino.com"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
 
 challenge:
   subheading: "The Challenge"
@@ -83,4 +83,20 @@ bottomCta:
   primaryButtonText: "Get Started"
   primaryButtonLink: "/demo"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "Tie linearity back to inspection and forecasting"
+  description: "Revenue linearity depends on earlier inspection, stronger pacing signals, and more disciplined forecasting."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/benefits/close-deals-faster"
+      title: "Prevent Deal Slippage"
+      description: "See the pillar focused on protecting momentum before deals fall out of the quarter."
+    - href: "/blog/two-types-of-sales-forecasts-every-cro-needs-and-when-to-use-each"
+      title: "Two Types of Sales Forecasts"
+      description: "Connect quarter-calling discipline to the pacing and commit logic behind linearity."
+    - href: "/blog/why-your-sales-cycle-is-getting-longer-and-why-sales-is-not-the-problem"
+      title: "Why Sales Cycles Get Longer"
+      description: "See how handoff friction and execution gaps turn into late-stage bunching and unpredictability."

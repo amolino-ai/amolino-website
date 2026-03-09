@@ -19,7 +19,7 @@ hero:
     AI analyzes every deal's health, stage, momentum, and context to automatically prioritize and recommend
     the most impactful next actions that will move your opportunities forward and maximize win rates.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/next-steps-tracking.png"
     width: 1347

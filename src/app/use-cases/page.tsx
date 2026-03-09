@@ -57,7 +57,7 @@ export default function UseCasesPage() {
       description:
         'Transform your CRM from a manual record-keeping system to an autonomous intelligence platform that captures, organizes, and enriches customer data with minimal human intervention.',
       imagePath: '/screenshots/Dashboard - Sales Rep - Feb 2025.png',
-      href: '/use-cases/crm-automation',
+      href: '/use-cases/zero-crm-updates',
     },
     {
       title: 'Account Management & Deal Tracking',
@@ -71,7 +71,7 @@ export default function UseCasesPage() {
       description:
         'Eliminate the end-of-quarter scramble with linearity intelligence that creates predictable, achievable paths to your number without the margin-eroding pressure of quarter-end loading.',
       imagePath: '/screenshots/older/dashboard_rep_view_april_2025.jpg',
-      href: '/use-cases/deal-linearity',
+      href: '/use-cases/revenue-linearity',
     },
   ];
 

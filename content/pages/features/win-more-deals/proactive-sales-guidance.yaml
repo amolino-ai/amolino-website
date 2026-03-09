@@ -18,7 +18,7 @@ hero:
     Amolino provides detailed steps to move each deal forward based on how your best reps close deals.
     Get custom recommendations based on your company's unique sales process and historical win patterns.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/proactive-sales-guidance-health-recommendations.png"
     width: 648

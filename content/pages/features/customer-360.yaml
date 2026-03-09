@@ -65,3 +65,19 @@ bottomFeature:
     src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216
     height: 768
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "See Customer 360 in the workflow"
+  description: "Move from the product page into the use case and adjacent features that make relationship context actionable."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/use-cases/account-management-and-deal-tracking"
+      title: "Account Management & Deal Tracking"
+      description: "See how customer context supports day-to-day deal orchestration for complex accounts."
+    - href: "/benefits/win-more-deals"
+      title: "Make Every Rep Your Best Rep"
+      description: "See the broader pillar that connects relationship intelligence to more consistent rep execution."
+    - href: "/resources/frameworks/qualification/meddpicc"
+      title: "MEDDPICC Framework"
+      description: "Connect relationship intelligence to a qualification process that keeps complex deals grounded in buyer reality."

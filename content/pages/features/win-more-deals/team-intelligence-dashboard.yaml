@@ -19,7 +19,7 @@ hero:
     Get real-time visibility into team performance, pipeline health, activity patterns, and win rates with comprehensive
     analytics dashboards that surface insights, identify coaching opportunities, and help managers make data-driven decisions.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/team-insights.png"
     width: 1578

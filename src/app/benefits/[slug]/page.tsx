@@ -9,6 +9,7 @@ import { getBenefitGroupContent } from '@/lib/content';
 import { getBenefitSlugs } from '@/lib/content/navigation';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Container } from '@/components/Container';
+import { RelatedContentSection } from '@/components/RelatedContentSection';
 import type { Metadata } from 'next';
 
 interface BenefitGroupPageProps {
@@ -83,6 +84,7 @@ export default async function BenefitGroupPage({ params }: BenefitGroupPageProps
       <ProcessWorkflow {...content.howItWorks} />
       <ComparisonTable {...content.comparison} />
       <WhoItsFor {...content.whoItsFor} />
+      {content.relatedContent && <RelatedContentSection {...content.relatedContent} />}
     </main>
   );
 }

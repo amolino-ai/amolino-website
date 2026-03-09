@@ -42,3 +42,19 @@ comparison:
   - aspect: "Culture"
     good: "Leaders report"
     great: "Leaders debate, decide, and own outcomes in front of their teams"
+
+relatedContent:
+  eyebrow: "Related Resources"
+  title: "Use QBRs to tighten forecasting and inspection"
+  description: "These pages extend the guide into forecast discipline, revenue inspection, and the systems behind predictable reviews."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/resources/b2b-sales-forecast-accuracy-guide"
+      title: "Forecast Accuracy Guide"
+      description: "See how the signals you review in QBRs connect to erosion, slippage, and forecast confidence."
+    - href: "/blog/two-types-of-sales-forecasts-every-cro-needs-and-when-to-use-each"
+      title: "Two Types of Sales Forecasts"
+      description: "Clarify which forecast you are trying to inspect in the room and what good looks like for each."
+    - href: "/benefits/accurate-forecasting"
+      title: "Forecast with Confidence"
+      description: "Connect the management cadence back to the product and operating system that supports it."

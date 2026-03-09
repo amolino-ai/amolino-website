@@ -1,0 +1,18 @@
+metadata:
+  title: "Guides"
+  description: "Browse Amolino guides for revenue leadership, forecasting, and management cadences."
+
+hero:
+  subheading: "Guides"
+  heading: "Practical guides for operating your revenue team."
+  description: "Start here if you want deeper, structured walkthroughs rather than feature pages or blog posts."
+
+cards:
+  - href: "/resources/guides/qbrs"
+    title: "Quarterly Business Review Guide"
+    description: "Learn how to structure QBRs so they improve inspection quality, decision-making, and cross-functional alignment."
+    ctaLabel: "Read guide"
+  - href: "/resources/b2b-sales-forecast-accuracy-guide"
+    title: "Forecast Accuracy Guide"
+    description: "Use this long-form guide to connect QBRs and pipeline reviews back to forecast accuracy and deal inspection."
+    ctaLabel: "Read guide"

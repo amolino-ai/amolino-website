@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { Link } from '@/components/Link';
 import { Heading, Lead, Subheading } from '@/components/Text';
 import {
+  getBlogPageContent,
   getCategories,
   getFeaturedPosts,
   getPosts,
@@ -27,11 +28,14 @@ import { notFound } from 'next/navigation';
 export const dynamic = 'force-static';
 export const revalidate = 0;
 
-export const metadata: Metadata = {
-  title: 'Blog',
-  description:
-    'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const content = await getBlogPageContent();
+
+  return {
+    title: content.metadata?.title ?? 'Blog',
+    description: content.metadata?.description,
+  };
+}
 
 const postsPerPage = 5;
 
@@ -278,6 +282,7 @@ export default async function Blog(
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>
   }
 ) {
+  const blogPageContent = await getBlogPageContent();
   const searchParams = await props.searchParams;
   const page =
     'page' in searchParams
@@ -296,13 +301,12 @@ export default async function Blog(
   return (
     <main className="overflow-hidden">
       <Container>
-        <Subheading className="mt-16">Blog</Subheading>
+        <Subheading className="mt-16">{blogPageContent.listing.subheading}</Subheading>
         <Heading as="h1" className="mt-2">
-          Whats happening at Amolino.
+          {blogPageContent.listing.heading}
         </Heading>
         <Lead className="mt-6 max-w-3xl">
-          Stay informed with product updates, company news, and insights on how
-          to sell smarter at your company.
+          {blogPageContent.listing.description}
         </Lead>
       </Container>
       {page === 1 && !category && <FeaturedPosts />}

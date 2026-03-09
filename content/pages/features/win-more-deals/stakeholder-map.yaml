@@ -18,7 +18,7 @@ hero:
     AI automatically identifies all stakeholders from emails, meetings, and CRM data, maps relationships and influence
     patterns, and provides personalized engagement strategies to navigate complex buying committees and win deals.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/next-best-action-to-win/opp_details_people.png"
     width: 1148

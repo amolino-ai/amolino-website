@@ -19,7 +19,7 @@ hero:
     Automatically capture and log all deal activities, intelligently update fields and stages, and maintain perfect
     CRM hygiene without any manual effort from your sales team, freeing them to focus on selling.
   ctaText: "Book a Demo"
-  ctaHref: "/book-demo"
+  ctaHref: "/demo"
   screenshot:
     src: "/screenshots/older/dashboard_rep_view_april_2025.jpg"
     width: 1216

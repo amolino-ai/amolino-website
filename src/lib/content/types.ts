@@ -478,12 +478,32 @@ export interface UseCaseBottomCTA {
   secondaryButtonLink: string;
 }
 
+export interface RelatedContentSettings {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  ctaLabel?: string;
+}
+
+export interface RelatedContentItem {
+  href: string;
+  title: string;
+  description: string;
+  ctaLabel?: string;
+  eyebrow?: string;
+}
+
+export interface RelatedContentBlock extends RelatedContentSettings {
+  items: RelatedContentItem[];
+}
+
 export interface UseCasePageContent {
   hero: UseCaseHero;
   challenge: UseCaseChallenge;
   solution: UseCaseSolution;
   impact: UseCaseImpact;
   bottomCta: UseCaseBottomCTA;
+  relatedContent?: RelatedContentBlock;
 }
 
 // Product Page content interfaces
@@ -549,6 +569,17 @@ export interface ProductPageContent {
   hero: ProductHero;
   showcase: ProductShowcase;
   bottomFeature: ProductBottomFeature;
+  relatedContent?: RelatedContentBlock;
+}
+
+export interface BlogPageContent {
+  metadata?: ProductPageMetadata;
+  listing: {
+    subheading: string;
+    heading: string;
+    description: string;
+  };
+  relatedPosts: RelatedContentSettings;
 }
 
 // QBR Guide content interfaces
@@ -591,12 +622,31 @@ export interface QBRComparisonRow {
   great: string;
 }
 
+export interface QBRGuideSection {
+  title: string;
+  id: string;
+}
+
+export interface QBRGuidePageContent {
+  metadata: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    subheading: string;
+    heading: string;
+    description: string;
+  };
+  sections: QBRGuideSection[];
+}
+
 export interface QBRSummary {
   introText: string;
   principlesHeading: string;
   principles: QBRSummaryPrinciple[];
   comparisonHeading: string;
   comparison: QBRComparisonRow[];
+  relatedContent?: RelatedContentBlock;
 }
 
 // Benefit Group content interfaces
@@ -731,6 +781,28 @@ export interface BenefitGroupContent {
   howItWorks: BenefitGroupHowItWorks;
   comparison: BenefitGroupComparison;
   whoItsFor: BenefitGroupWhoItsFor;
+  relatedContent?: RelatedContentBlock;
+}
+
+export interface ResourceHubCard {
+  href: string;
+  eyebrow?: string;
+  title: string;
+  description: string;
+  ctaLabel: string;
+}
+
+export interface ResourceHubPageContent {
+  metadata: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    subheading: string;
+    heading: string;
+    description: string;
+  };
+  cards: ResourceHubCard[];
 }
 
 // ============================================================================

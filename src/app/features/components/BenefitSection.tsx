@@ -61,7 +61,7 @@ export function BenefitSection({
               title={product.hero.title}
               description={product.hero.description}
               screenshot={product.hero.screenshot}
-              href={`/product/${benefit}/${product.slug}`}
+              href={`/features/${benefit}/${product.slug}`}
               index={productIndex}
             />
           ))}

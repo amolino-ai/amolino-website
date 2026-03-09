@@ -60,3 +60,19 @@ bottomFeature:
     src: "/screenshots/older/pipeline_radar_pushed_opportunities_march2025.png"
     width: 1216
     height: 768
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "Connect analytics to forecast outcomes"
+  description: "Use these paths to move from dashboards into the forecast use case and the deeper operating model."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/use-cases/revenue-forecasting"
+      title: "Revenue Forecasting Use Case"
+      description: "See how analytics turns into an actual forecast workflow for leaders and managers."
+    - href: "/benefits/accurate-forecasting"
+      title: "Forecast with Confidence"
+      description: "Step back to the pillar view for explainability, monitoring, and scenario planning."
+    - href: "/resources/b2b-sales-forecast-accuracy-guide"
+      title: "Forecast Accuracy Guide"
+      description: "Dive into the long-form explanation of why forecasts fail and how better analytics changes that."

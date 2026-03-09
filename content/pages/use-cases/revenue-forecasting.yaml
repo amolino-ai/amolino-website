@@ -7,7 +7,7 @@ hero:
   primaryButtonText: "Transform Your Revenue Linearity"
   primaryButtonLink: "https://app.amolino.com"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
 
 challenge:
   subheading: "The Challenge"
@@ -83,4 +83,20 @@ bottomCta:
   primaryButtonText: "Get Started"
   primaryButtonLink: "/demo"
   secondaryButtonText: "Talk to Sales"
-  secondaryButtonLink: "/contact"
+  secondaryButtonLink: "/demo"
+
+relatedContent:
+  eyebrow: "Explore Next"
+  title: "Build the forecasting system around the use case"
+  description: "Use this path to move from the use case into the product surface and the operating guidance that supports it."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/benefits/accurate-forecasting"
+      title: "Forecast with Confidence"
+      description: "See the broader pillar that connects forecasting, monitoring, and explainability."
+    - href: "/product/revenue-analytics"
+      title: "Revenue Analytics"
+      description: "Explore the analytics layer behind deal-level risk scoring, inspection, and forecasting."
+    - href: "/blog/two-types-of-sales-forecasts-every-cro-needs-and-when-to-use-each"
+      title: "Two Types of Sales Forecasts"
+      description: "Read the operating distinction between long-range planning forecasts and quarterly commits."

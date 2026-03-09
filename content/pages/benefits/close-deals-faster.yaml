@@ -15,7 +15,7 @@ hero:
     threats), giving your team time to course-correct before deals slip away. No more end-of-quarter surprises.
     Just proactive insights that keep your pipeline healthy and your forecast accurate.
   ctaText: "Book a Demo"
-  ctaLink: "/book-demo"
+  ctaLink: "/demo"
   backgroundGradient: "from-red-600 to-orange-600"
 
 featureHero:
@@ -95,7 +95,7 @@ features:
         width: 1056
         height: 270
         fillContainer: false
-      link: "/features/prevent-deal-slippage/deal-risk-radar"
+      link: "/features/close-deals-faster/deal-risk-radar"
     - name: "Pushed-Out History"
       category: "Prevention"
       benefit: "Stop deals from slipping"
@@ -107,7 +107,7 @@ features:
         width: 400
         height: 597
         fillContainer: true
-      link: "/features/prevent-deal-slippage/pushed-out-history"
+      link: "/features/close-deals-faster/pushed-out-history"
     - name: "Win/Loss Analysis"
       category: "Analytics"
       benefit: "Prioritize with AI"
@@ -119,7 +119,7 @@ features:
         width: 613
         height: 764
         fillContainer: true
-      link: "/features/prevent-deal-slippage/win-loss-analysis"
+      link: "/features/close-deals-faster/win-loss-analysis"
     - name: "Deal Prioritization"
       category: "Monitoring"
       benefit: "Detect problems early"
@@ -131,7 +131,7 @@ features:
         width: 1216
         height: 768
         fillContainer: true
-      link: "/features/prevent-deal-slippage/deal-prioritization"
+      link: "/features/close-deals-faster/deal-prioritization"
     - name: "Competitive Tracking"
       category: "Optimization"
       benefit: "Optimize activities"
@@ -143,7 +143,7 @@ features:
         width: 570
         height: 571
         fillContainer: true
-      link: "/features/prevent-deal-slippage/competitive-tracking"
+      link: "/features/close-deals-faster/competitive-tracking"
 
 howItWorks:
   title: "How Deal Protection Works"
@@ -211,3 +211,19 @@ whoItsFor:
       description: "You can't rely on rep intuition to spot at-risk deals. You need a systematic way to identify and prioritize interventions."
     - title: "Want Higher Win Rates"
       description: "You know the easiest way to hit your number is to stop losing deals. Every saved deal is pure incremental revenue."
+
+relatedContent:
+  eyebrow: "Related Paths"
+  title: "Connect deal protection to execution"
+  description: "This pillar is strongest when it is tied back to visibility, linearity, and the operating discipline behind deal progression."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/use-cases/pipeline-visibility"
+      title: "Pipeline Visibility Use Case"
+      description: "See how earlier signal capture makes it possible to identify slippage before it reaches the forecast."
+    - href: "/use-cases/revenue-linearity"
+      title: "Revenue Linearity Use Case"
+      description: "Follow the downstream impact of cleaner pacing, fewer push-outs, and less quarter-end scrambling."
+    - href: "/blog/why-your-sales-cycle-is-getting-longer-and-why-sales-is-not-the-problem"
+      title: "Why Sales Cycles Get Longer"
+      description: "Read how cross-functional bottlenecks, not just rep execution, create late-stage friction and slippage."

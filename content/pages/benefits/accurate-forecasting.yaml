@@ -14,7 +14,7 @@ hero:
     revenue with 90%+ accuracy, showing the engagement patterns, stakeholder signals, and timeline shifts
     behind every prediction.
   ctaText: "Book a Demo"
-  ctaLink: "/book-demo"
+  ctaLink: "/demo"
   backgroundGradient: "from-blue-600 to-cyan-600"
 
 featureHero:
@@ -199,3 +199,19 @@ whoItsFor:
       description: "You don't trust black-box predictions. You want to see exactly what signals drive your forecast and why deals are likely to close or slip."
     - title: "Need Early Warning of Risks"
       description: "You're done being surprised by deals that slip. You want to spot forecast risks weeks before they impact your quarter."
+
+relatedContent:
+  eyebrow: "Related Paths"
+  title: "Go deeper on forecast confidence"
+  description: "Pair the pillar overview with the underlying use case, operating model, and long-form guide on forecast accuracy."
+  ctaLabel: "Explore related page"
+  items:
+    - href: "/use-cases/revenue-forecasting"
+      title: "Revenue Forecasting Use Case"
+      description: "See how the forecasting pillar translates into an operating workflow for sales leaders and RevOps teams."
+    - href: "/resources/b2b-sales-forecast-accuracy-guide"
+      title: "Forecast Accuracy Guide"
+      description: "Review the full breakdown of erosion, compression, and how to build a forecasting system you can defend."
+    - href: "/blog/two-types-of-sales-forecasts-every-cro-needs-and-when-to-use-each"
+      title: "Two Types of Sales Forecasts"
+      description: "Understand when to use expected value thinking versus high-confidence quarter-calling."

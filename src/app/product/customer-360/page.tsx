@@ -4,6 +4,7 @@ import Hero from '@/app/features/components/Hero';
 import { getProductContent } from '@/lib/content';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Container } from '@/components/Container';
+import { RelatedContentSection } from '@/components/RelatedContentSection';
 
 export default async function Customer360() {
   const content = await getProductContent('customer-360');
@@ -49,6 +50,7 @@ export default async function Customer360() {
         aiPoweredPoints={content.showcase.aiPoweredPoints}
       />
       <BottomFeature {...content.bottomFeature} />
+      {content.relatedContent && <RelatedContentSection {...content.relatedContent} />}
     </>
   );
 } 

@@ -1,6 +1,8 @@
 import { Prose } from '@/components/Prose';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Container } from '@/components/Container';
+import { RelatedContentSection } from '@/components/RelatedContentSection';
+import { getQBRGuidePageContent, getQBRSummary } from '@/lib/content';
 import GuideNavigation from './GuideNavigation';
 import GuideHeader from './GuideHeader';
 import Introduction from './Introduction';
@@ -16,27 +18,18 @@ import AdditionalTips from './AdditionalTips';
 import Summary from './Summary';
 import AskingGoodQuestions from './AskingGoodQuestions';
 
-export const metadata = {
-  title: 'Ultimate Guide to Quarterly Business Reviews (QBRs)',
-  description: 'A comprehensive guide to preparing, running, and following up on effective Quarterly Business Reviews.',
-};
+export async function generateMetadata() {
+  const pageContent = await getQBRGuidePageContent();
 
-const sections = [
-  { title: 'Introduction', id: 'introduction' },
-  { title: 'Team Participation', id: 'team-participation' },
-  { title: 'Preparation', id: 'preparation' },
-  { title: 'Running the QBR', id: 'running-qbr' },
-  { title: 'Post-QBR', id: 'post-qbr' },
-  { title: 'Metrics to Track', id: 'metrics' },
-  { title: 'Asking Good Questions', id: 'asking-good-questions' },
-  { title: 'Challenges and Solutions', id: 'challenges' },
-  { title: 'Best Practices', id: 'best-practices' },
-  { title: 'RevOps Role', id: 'revops-role' },
-  { title: 'Additional Tips', id: 'additional-tips' },
-  { title: 'Summary', id: 'summary' },
-];
+  return {
+    title: pageContent.metadata.title,
+    description: pageContent.metadata.description,
+  };
+}
 
-export default function GuidePage() {
+export default async function GuidePage() {
+  const pageContent = await getQBRGuidePageContent();
+  const summaryContent = await getQBRSummary();
   const breadcrumbItems = [
     { label: 'Resources', href: '/resources' },
     { label: 'Guides', href: '/resources/guides' },
@@ -48,10 +41,14 @@ export default function GuidePage() {
       <Container>
         <Breadcrumb items={breadcrumbItems} className="py-4" />
       </Container>
-      <GuideHeader />
+      <GuideHeader
+        subheading={pageContent.hero.subheading}
+        heading={pageContent.hero.heading}
+        description={pageContent.hero.description}
+      />
 
       <div className="mt-16 flex flex-col gap-16 lg:flex-row lg:gap-8">
-        <GuideNavigation sections={sections} />
+        <GuideNavigation sections={pageContent.sections} />
 
         <div className="prose lg:prose-lg max-w-full overflow-hidden">
           <Prose>
@@ -72,6 +69,8 @@ export default function GuidePage() {
           </Prose>
         </div>
       </div>
+
+      {summaryContent.relatedContent && <RelatedContentSection {...summaryContent.relatedContent} />}
     </div>
   );
 }
