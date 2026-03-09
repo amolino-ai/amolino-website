@@ -835,6 +835,52 @@ export interface ResourceHubCard {
   ctaLabel: string;
 }
 
+// CRM Pipeline Design Resource types
+export interface CRMPipelineArticle {
+  id: string;
+  number: number;
+  title: string;
+  description: string;
+  status: 'published' | 'coming-soon';
+}
+
+export interface CRMPipelineLayer {
+  id: string;
+  name: string;
+  description: string;
+  color: 'blue' | 'purple' | 'emerald' | 'amber';
+  articles: CRMPipelineArticle[];
+}
+
+export interface CRMPipelineDesignContent {
+  metadata: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    badge: string;
+    heading: string;
+  };
+  layers: CRMPipelineLayer[];
+  introContent: {
+    paragraphs: string[];
+  };
+  whatThisCovers: {
+    heading: string;
+    paragraphs: string[];
+  };
+  platformNote: {
+    heading: string;
+    content: string;
+  };
+  whoBuiltThis: {
+    heading: string;
+    paragraphs: string[];
+    ctaText: string;
+    ctaHref: string;
+  };
+}
+
 export interface ResourceHubPageContent {
   metadata: {
     title: string;

@@ -1,0 +1,522 @@
+import { ContentNavigation } from '@/components/ContentNavigation';
+import { GuidanceCardPair } from '@/components/GuidanceCard';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Your CRM Pipeline Is Not a Stages List. It\'s a Theory of How Your Customers Buy.',
+  description: 'The foundational piece on CRM pipeline design. Pipeline stages should represent buyer state, not seller activity. Includes an audit checklist for your current CRM setup.',
+};
+
+export const sections = [
+  { id: 'a-word-about-pipeline', title: 'A Word About "Pipeline"' },
+  { id: 'what-a-pipeline-is', title: 'What a Pipeline Actually Is' },
+  { id: 'ten-years', title: 'The Ten-Year Problem' },
+  { id: 'multiple-pipelines', title: 'When You Need Multiple Pipelines' },
+  { id: 'cost-of-getting-wrong', title: 'The Cost of Getting This Wrong' },
+  { id: 'mental-model', title: 'The Right Mental Model' },
+  { id: 'stage-design', title: 'How to Design Stages' },
+  { id: 'hubspot-vs-salesforce', title: 'HubSpot vs Salesforce' },
+  { id: 'audit-checklist', title: 'Audit Checklist' },
+];
+
+<div className="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+    <div className="lg:col-span-3">
+
+      <div className="mb-8">
+        <Link href="/resources/frameworks/crm-pipeline-design" className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 mb-4">
+          <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to CRM Pipeline Design Guide
+        </Link>
+        <div className="inline-block px-3 py-1 mb-4 ml-4 rounded-full bg-blue-50 text-sm font-medium text-blue-600">
+          Foundational Layer
+        </div>
+      </div>
+
+      # Your CRM Pipeline Is Not a Stages List. It's a Theory of How Your Customers Buy.
+
+      <p className="text-xl text-gray-600 mt-6 mb-12 leading-relaxed">
+        Every revenue leader has sat through a version of the same meeting.
+      </p>
+
+      <div className="prose prose-lg max-w-none">
+
+      It's Monday morning. You're reviewing the pipeline. A deal has been sitting in "Proposal Sent" for three weeks. You ask the rep what's happening. They say they're following up. You ask what the buyer said last. The rep gives you something vague about timing. You move on because there are fourteen more deals to get through and you have almost the same conversation about half of them.
+
+      You leave the meeting with a forecast number that feels like a guess wearing a suit.
+
+      What most revenue leaders conclude from that meeting: they have a rep problem. Reps aren't updating the CRM. Reps aren't qualifying hard enough. Reps are being optimistic. So they respond with more training, tighter inspection, stricter hygiene rules, maybe a new manager.
+
+      What they rarely conclude is that they have a pipeline design problem.
+
+      **But that's almost always what it is.**
+
+      </div>
+
+      <div id="a-word-about-pipeline" className="mt-16 mb-12">
+        <h2 className="text-2xl font-bold mb-6">A Word About the Word "Pipeline"</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        Before we go further, we need to clear something up, because this word carries too much weight and means too many things depending on who's in the room.
+
+        When a CRO says "my pipeline looks healthy," they mean they have enough deals to hit their number. That's one meaning — the aggregate view of revenue in motion. When a sales rep says "I need to build my pipeline," they mean they need more prospects to work. That's another meaning entirely.
+
+        <div className="bg-blue-50 p-6 rounded-xl my-8 border-l-4 border-blue-500">
+          <p className="font-semibold text-gray-900 mb-2">In this article, pipeline design means something specific:</p>
+          <p className="text-gray-700">The structural decisions about how deals are organized, categorized, and tracked inside your CRM. The stages a deal moves through. The rules that govern when a deal advances. The way different types of deals are separated or combined.</p>
+        </div>
+
+        CRM pipeline design is an architectural decision. It lives inside HubSpot or Salesforce or whatever system your team uses to manage revenue, and it shapes everything downstream — forecasting, coaching, reporting, and your ability to learn from historical deal data.
+
+        Salesforce uses different language. They call it a Sales Process, attached to something called a Record Type. The concept is the same — a defined sequence of stages that a deal moves through — but the technical implementation is meaningfully different, and those differences matter in ways we'll cover in detail. For now: HubSpot calls it a pipeline. Salesforce calls it a Sales Process. When this article says pipeline design, it means both.
+
+        </div>
+      </div>
+
+      <div id="what-a-pipeline-is" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">What a Pipeline Actually Is</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        Most people, if you asked them, would describe a CRM pipeline as a list of stages. Prospect, Qualify, Demo, Proposal, Negotiation, Closed. Deal enters on the left, moves right, falls out or closes at the end.
+
+        That's what it looks like. That's not what it is.
+
+        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-8 rounded-xl my-8">
+          <p className="text-xl font-semibold text-gray-900 mb-4">A pipeline is a theory.</p>
+          <p className="text-gray-700">Specifically, it's your theory of how your buyer moves from recognizing a problem to committing to your solution. Every stage represents a claim about where the buyer is in that journey — what they now understand, what they've committed to, what has shifted in their thinking or their organization.</p>
+        </div>
+
+        When you move a deal from stage three to stage four, you are saying: something real happened on the buyer's side. Not on your side. On theirs.
+
+        **This is the foundational principle of good pipeline design, and it's the one almost every company violates.**
+
+        Look at the stage names in most CRMs. Demo Scheduled. Proposal Sent. Contract Out. Follow Up. These are seller activities. They describe what the rep did. A proposal can sit in a buyer's inbox for six weeks without them reading it. "Proposal Sent" tells you the rep hit send. It tells you nothing about whether the deal is alive.
+
+        Now compare that to a different set of stage names. Use Cases Confirmed. Solution Agreed. Decision Maker Bought In. These describe buyer states. They tell you what the buyer now believes or has committed to. A deal cannot be in "Decision Maker Bought In" unless someone has had a substantive conversation with the economic buyer and received a genuine commitment. That's a verifiable condition.
+
+        </div>
+
+        <GuidanceCardPair
+          className="my-8"
+          avoidCard={{
+            title: "Seller Activity",
+            items: ["Demo Scheduled", "Proposal Sent", "Contract Out", "Follow Up"],
+            footerNote: "Tracks what the rep did — not what the buyer decided."
+          }}
+          recommendedCard={{
+            title: "Buyer State",
+            items: ["Use Cases Confirmed", "Solution Agreed", "Decision Maker Bought In", "Terms Accepted"],
+            footerNote: "Tracks where the buyer actually stands in their journey."
+          }}
+        />
+
+        <div className="prose prose-lg max-w-none">
+
+        "Proposal Sent" is an action. "Decision Maker Bought In" is a state of affairs.
+
+        That reframe changes everything about how you coach, how you forecast, and how useful your CRM data is when you try to learn from won and lost deals a year from now.
+
+        </div>
+      </div>
+
+      <div id="ten-years" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">The Company That Has Been Doing This for Ten Years</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        There's a version of the pipeline design problem that's easy to spot: the early-stage company that stood up HubSpot in a weekend, used the default stages, and never thought about it again. Their pipeline is a mess, but it's a young mess. Recoverable.
+
+        The harder version is the company that has been using Salesforce for a decade, has two hundred sales reps, and has accumulated years of configuration decisions layered on top of each other like sediment. Six Sales Processes when three would do. Stage names that made sense in 2016 when the product was different. Validation rules nobody remembers writing, competing with automation flows nobody can fully trace. Their reporting looks sophisticated but produces numbers the CFO and CRO argue about every quarter-end.
+
+        For that company, the pipeline design problem is not a hygiene problem.
+
+        **It's a geological problem.** The mess is deep and load-bearing. You can't just rename stages because ten dashboards reference those stage names. You can't consolidate pipelines because three years of historical data is segmented that way. Every fix requires an archaeological dig before any construction can begin.
+
+        Both companies arrived at the same place through the same path: nobody made a deliberate decision about pipeline design. It accumulated. And accumulated systems almost always accumulate toward complexity, never toward simplicity.
+
+        </div>
+      </div>
+
+      <div id="multiple-pipelines" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">When You Need More Than One Pipeline</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        If a CRM pipeline is a theory of how your buyer makes a decision, then different buyers making genuinely different decisions need different pipelines. This is where companies either get the architecture right or create an entirely different kind of mess.
+
+        The right reason to have multiple pipelines is straightforward: two deal types have stages that mean genuinely different things, involve different stakeholders at each step, and would confuse a rep if they were combined. The buying process is different. Not just the product, not just the customer size — the actual process by which a human being decides to give you money.
+
+        Consider a B2B software company that sells directly and also through channel partners. In the direct motion, the rep owns everything — champion building, economic buyer access, procurement navigation, legal review. Stages represent milestones in a rep-driven process. In the partner motion, the rep owns almost none of that. The partner owns the customer relationship. The rep enables the partner, registers the deal, shows up when needed. Forcing both into one pipeline means half the stages are irrelevant for half the deals.
+
+        Or take a commercial insurance broker. New business development is discovery and competitive displacement. Renewals are completely different — the relationship exists, the coverage need is established, the timeline is fixed by the policy expiration date. "Proposal Sent" in a new business context means you've made a case to a skeptical buyer. "Proposal Sent" in a renewal context means you've sent paperwork to someone who is almost certainly renewing unless the price is catastrophically wrong. Same stage name. Completely different meaning.
+
+        </div>
+
+        <div className="my-8 overflow-x-auto">
+          <table className="min-w-full bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Industry</th>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Pipelines</th>
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Why They're Separate</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">B2B SaaS</td>
+                <td className="px-6 py-4 text-gray-600">Direct Sales / Partner Co-Sell</td>
+                <td className="px-6 py-4 text-gray-600">Rep-owned process vs. partner-mediated; different stages, different activities</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Commercial Real Estate</td>
+                <td className="px-6 py-4 text-gray-600">Tenant Rep / Landlord Listing / Investment Sales</td>
+                <td className="px-6 py-4 text-gray-600">Tenant rep is outbound search; landlord rep is inbound marketing; investment sales is financial analysis</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Enterprise Healthcare IT</td>
+                <td className="px-6 py-4 text-gray-600">Direct Enterprise / GPO Fulfillment / Renewal</td>
+                <td className="px-6 py-4 text-gray-600">GPO fulfillment is administrative, not a sales motion; renewals are calendar-triggered</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Manufacturing Equipment</td>
+                <td className="px-6 py-4 text-gray-600">New Equipment / Retrofit / Service / Gov Procurement</td>
+                <td className="px-6 py-4 text-gray-600">Capital expenditure vs. opex vs. renewal vs. regulatory compliance — different decision authorities</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Commercial Insurance</td>
+                <td className="px-6 py-4 text-gray-600">New Business / Renewal / Employee Benefits</td>
+                <td className="px-6 py-4 text-gray-600">Different buyers (CFO vs. HR), different renewal calendar forcing function</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Legal Services</td>
+                <td className="px-6 py-4 text-gray-600">New Client / Expansion / Contingency Matters</td>
+                <td className="px-6 py-4 text-gray-600">Contingency is an internal investment decision by the firm, not a client sales process</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Staffing & Recruiting</td>
+                <td className="px-6 py-4 text-gray-600">New Client / Job Order Fulfillment / MSP/VMS</td>
+                <td className="px-6 py-4 text-gray-600">Fulfillment is operational workflow; MSP accounts have pre-negotiated rates</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Residential Solar</td>
+                <td className="px-6 py-4 text-gray-600">Direct Homeowner / Builder / HOA / PACE</td>
+                <td className="px-6 py-4 text-gray-600">Builder deals close 12-18 months before installation; HOA requires board consensus</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Defense & Aerospace</td>
+                <td className="px-6 py-4 text-gray-600">Prime Contract / Subcontractor / SBIR / FMS</td>
+                <td className="px-6 py-4 text-gray-600">FMS involves State Department; SBIR is a grant motion; teaming is selling to a prime</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 font-medium text-gray-900">Specialty Food & Beverage</td>
+                <td className="px-6 py-4 text-gray-600">Retail / Foodservice / DTC Wholesale</td>
+                <td className="px-6 py-4 text-gray-600">Retail requires planogram committees; foodservice buyer is a chef with menu timing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="bg-amber-50 p-6 rounded-xl my-8 border border-amber-200">
+          <h3 className="font-bold text-amber-900 mb-3">The Two-Question Test</h3>
+          <ol className="list-decimal list-inside space-y-2 text-amber-900">
+            <li><strong>Do the stages represent genuinely different buyer commitments</strong> than the stages in your existing process?</li>
+            <li><strong>Would a rep working this deal type be confused or misled</strong> by stages designed for a different type of deal?</li>
+          </ol>
+          <p className="mt-4 text-amber-800">Yes to both means you need a separate pipeline. No to either means you need a property field.</p>
+        </div>
+
+        <div className="prose prose-lg max-w-none">
+
+        A new pipeline is an architectural decision. A property field is a data decision. Confusing the two is the most common reason companies end up with seven pipelines when three would serve them better.
+
+        </div>
+      </div>
+
+      <div id="cost-of-getting-wrong" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">The Cost of Getting This Wrong</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        Pipeline design failures don't announce themselves. They show up as symptoms that look like people problems, and they stay misdiagnosed for years.
+
+        **Forecast accuracy** is the most visible casualty. When deal types with different win rates and different cycle lengths share a pipeline, weighted pipeline value becomes a blended number that doesn't reflect reality for any individual deal type. A thirty percent probability on a three-week transactional deal and a thirty percent probability on a six-month enterprise deal are not the same thing. Blending them produces a forecast that is reliably wrong in ways that are hard to explain to a CFO.
+
+        **Win rate becomes uncoachable.** If your company-wide win rate is twenty-four percent, is that good or bad? You cannot answer that question without knowing the mix. A rep running mostly transactional deals will almost always show a higher win rate than a rep running complex enterprise deals — not because they're better, but because the denominator is different.
+
+        **Rep behavior adapts** to what the system measures, and not always helpfully. If stages represent seller activities rather than buyer states, reps advance stages when they do things, not when buyers commit to things. They send the proposal and move to "Proposal Sent." The pipeline looks progressed. The deals are not.
+
+        **Coaching becomes guesswork.** Without clear stage definitions and observable exit criteria, every coaching conversation starts from the rep's narrative rather than from verifiable deal evidence. The manager is not managing the deal. They're managing the rep's description of the deal.
+
+        **Historical data loses its value.** One of the most powerful things a mature sales organization can do is learn from its won and lost deals. Which patterns correlate with wins? At which stage do deals most commonly die? These questions are only answerable if the historical record is clean and consistent. If stage names have changed, if deal types were mixed together, if reps staged deals based on activity rather than buyer state — the record is noise.
+
+        </div>
+      </div>
+
+      <div id="mental-model" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">The Right Mental Model for Pipeline Design</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        Designing a CRM pipeline well requires thinking in three layers, in order. Most companies design only the middle layer and wonder why the other two fail.
+
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 my-8">
+          <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
+            <div className="text-3xl font-bold text-blue-600 mb-2">1</div>
+            <h3 className="font-bold text-gray-900 mb-2">The Buying Journey</h3>
+            <p className="text-gray-700 text-sm">What the buyer experiences, independent of your sales process. Map their journey from problem recognition to contract signature.</p>
+          </div>
+          <div className="bg-purple-50 p-6 rounded-xl border border-purple-200">
+            <div className="text-3xl font-bold text-purple-600 mb-2">2</div>
+            <h3 className="font-bold text-gray-900 mb-2">The Selling Motion</h3>
+            <p className="text-gray-700 text-sm">What your rep does to move the buyer through that journey. Stage activities and exit criteria exist to serve the buying journey.</p>
+          </div>
+          <div className="bg-emerald-50 p-6 rounded-xl border border-emerald-200">
+            <div className="text-3xl font-bold text-emerald-600 mb-2">3</div>
+            <h3 className="font-bold text-gray-900 mb-2">The Measurement Architecture</h3>
+            <p className="text-gray-700 text-sm">What data you need to forecast and coach. Which fields, which benchmarks, what you need to capture to learn from later.</p>
+          </div>
+        </div>
+
+        <div className="prose prose-lg max-w-none">
+
+        **The buying journey is the foundation.** Before you think about what your reps do, map what your buyer goes through — from the moment they recognize a problem worth solving to the moment they sign a contract. What do they need to understand at each step? Who in their organization gets involved, and when?
+
+        Skipping this layer is why most pipeline designs end up tracking seller activity instead of buyer state. If you don't know what the buyer is going through, you can't design stages that reflect where the buyer actually is.
+
+        **The selling motion is the middle layer.** Given the buying journey you've mapped, what does your rep need to do to help the buyer progress? What conversations need to happen? These become your stage activities and exit criteria.
+
+        **The measurement architecture is the layer almost everyone forgets.** What do you need to know about deal health to forecast accurately and coach effectively? What do you need to capture today so that twelve months from now you can learn from it?
+
+        Most pipelines are built from the selling motion layer only. The result is a pipeline that records what reps do, reflects neither what buyers experience nor what managers need to know, and produces historical data that can't teach you anything.
+
+        **Build the buying journey first. Design the selling motion to serve it. Then design the measurement architecture to make both visible.**
+
+        </div>
+      </div>
+
+      <div id="stage-design" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">How to Design Stages That Actually Work</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        Five principles. Each one is simple to state and harder to apply than it looks.
+
+        </div>
+
+        <div className="space-y-6 my-8">
+          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <h3 className="font-bold text-gray-900 mb-2">1. Stages should describe buyer state, not seller activity</h3>
+            <p className="text-gray-700">This is the foundational principle. "Discovery Call Completed" feels useful because you know a rep did something. But it tells you nothing about what the buyer decided. "Pain Confirmed" tells you something real about where the buyer is.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <h3 className="font-bold text-gray-900 mb-2">2. Every stage needs written entry and exit criteria</h3>
+            <p className="text-gray-700">An entry criterion defines what must be true for a deal to belong in this stage. An exit criterion defines what must be true before the deal can advance. Without these, stages become waiting rooms — deals pile up and age.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <h3 className="font-bold text-gray-900 mb-2">3. Fewer stages is almost always better</h3>
+            <p className="text-gray-700">The right number is the minimum that captures meaningful shifts in buyer commitment. If a stage exists to record that a rep sent a particular email, it is not a pipeline stage. It is a task record. Delete it.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <h3 className="font-bold text-gray-900 mb-2">4. Stages should have observable evidence</h3>
+            <p className="text-gray-700">You should be able to determine the correct stage for any deal by looking at the CRM record — meeting notes, emails, attached documents — without asking the rep. If the only evidence is the rep's assertion, the stage is subjective and unverifiable.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <h3 className="font-bold text-gray-900 mb-2">5. Time in each stage should be roughly proportional</h3>
+            <p className="text-gray-700">If deals consistently spend two days in stage two and four weeks in stage five, stage five is doing too much work. Either it contains multiple distinct buyer state changes, or the exit criterion is vague.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="hubspot-vs-salesforce" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">HubSpot and Salesforce: The Full Picture</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        The conceptual distinction between the two platforms — HubSpot as pipeline-centric, Salesforce as object-centric with Sales Processes — has concrete implications across every dimension of how you run your revenue organization. These are not superficial UI differences. They reflect genuinely different architectural philosophies.
+
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 my-8">
+          <div className="bg-orange-50 p-6 rounded-xl border border-orange-200">
+            <h3 className="font-bold text-orange-800 mb-4 text-xl">HubSpot</h3>
+            <div className="space-y-3 text-gray-700">
+              <p><strong>Accessibility:</strong> Creating a pipeline takes minutes. The UI is clean, intuitive. Low cost of experimentation.</p>
+              <p><strong>Governance gap:</strong> No native change management layer. Pipeline changes don't require approval. No version history.</p>
+              <p><strong>Enforcement:</strong> Cannot enforce stage advancement at the data model level. Conditional, stage-gated enforcement requires Operations Hub automation.</p>
+              <p><strong>Reporting:</strong> Deals in different pipelines are genuinely separate. Cross-pipeline aggregation requires custom reports or a BI tool.</p>
+              <p><strong>Best for:</strong> Twenty-person company with one sales motion and a RevOps team of one.</p>
+            </div>
+          </div>
+          <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
+            <h3 className="font-bold text-blue-800 mb-4 text-xl">Salesforce</h3>
+            <div className="space-y-3 text-gray-700">
+              <p><strong>Friction by design:</strong> Adding a stage means editing a master picklist and confirming nothing breaks. Changes require admin access.</p>
+              <p><strong>Enforcement:</strong> Validation rules scoped to Record Type can enforce qualification requirements at the stage level. Prevent deals from returning to earlier stages.</p>
+              <p><strong>Reporting:</strong> All Opportunities share a single object. A single report can show deals across all Sales Processes. Aggregate forecasting is structurally clean.</p>
+              <p><strong>Governance:</strong> Salesforce's friction is a feature at scale — protection against undisciplined changes.</p>
+              <p><strong>Best for:</strong> Two hundred reps and a decade of CRM history where enforcement mechanisms become necessary.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="prose prose-lg max-w-none">
+
+        The trap is growing through the transition point — from HubSpot-appropriate scale to Salesforce-appropriate scale — without recognizing that the architectural needs have changed. Companies that stay on HubSpot past the point where its governance model can handle their complexity, or that migrate to Salesforce without the RevOps maturity to use its architecture well, arrive at the same broken place by different routes.
+
+        </div>
+      </div>
+
+      <div id="audit-checklist" className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">How to Audit Your Pipeline Design Right Now</h2>
+
+        <div className="prose prose-lg max-w-none mb-6">
+
+        Use the following checklist to diagnose where your pipeline design stands today. You can complete this in a few hours. You need access to your CRM and a willingness to be honest about what you find.
+
+        </div>
+
+        <div className="space-y-8">
+          <div className="bg-gray-50 p-6 rounded-xl">
+            <h3 className="font-bold text-gray-900 mb-4 text-lg">Pipeline-Level Audit</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">List every pipeline or Sales Process in your CRM. Record active deals and date of most recent closed deal for each.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Any pipeline with fewer than ten active deals and no closed deal in ninety days is a consolidation candidate.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Apply the two-question test: genuinely different buyer commitments? Would reps be confused?</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Identify pipelines that exist because of org chart history rather than different buying process.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-xl">
+            <h3 className="font-bold text-gray-900 mb-4 text-lg">Stage-Level Audit</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">For every stage, write one sentence describing what the buyer now believes or has committed to. If you can't, it's a seller activity — flag for redesign.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">For every stage, identify observable evidence in the CRM that confirms a deal belongs there.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Check whether each stage has a written exit criterion. If not, write one.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Count your stages. If any pipeline has more than seven or eight, identify which could be consolidated.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-xl">
+            <h3 className="font-bold text-gray-900 mb-4 text-lg">Health Metrics Audit</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Pull a stage distribution report. Flag any stage holding a disproportionate number of deals.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Pull a stage age report. Deals aging beyond average cycle length are likely dead — flag for review.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Compare assigned stage probabilities to actual historical close rates. Divergence of 10+ points means miscalibrated forecast.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Check loss reason data. Freeform text, 8+ options, or 20%+ blank means data too dirty to learn from.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-xl">
+            <h3 className="font-bold text-gray-900 mb-4 text-lg">Governance Audit</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Who has permission to create or modify pipelines? "Anyone with manager access" is a governance gap.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">When was your pipeline design last deliberately reviewed? If you don't know, it probably hasn't been.</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">Are there stage names that don't match your current sales process — stages that exist because they used to mean something?</span>
+              </li>
+              <li className="flex items-start">
+                <input type="checkbox" className="mt-1 mr-3 h-4 w-4 rounded border-gray-300" disabled />
+                <span className="text-gray-700">In Salesforce: deprecated values in master picklist? In HubSpot: stages with zero deals for 6+ months?</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">Closing</h2>
+
+        <div className="prose prose-lg max-w-none">
+
+        Go back to the Monday morning pipeline review. The deal in "Proposal Sent" for three weeks. The manager who can't read the deal. The forecast that feels like a guess.
+
+        That conversation is not a rep problem.
+
+        It is the downstream consequence of a pipeline designed to track seller activity instead of buyer state — with no exit criteria to define what needs to happen for the deal to advance, and no distinction between deal types that have completely different velocity profiles. The system has no opinion about whether three weeks in "Proposal Sent" is normal or a red flag. It was never designed to have one.
+
+        Fix the pipeline design and the conversation changes. "Decision Maker Bought In" for three weeks with no logged activity is an immediate coaching flag because the stage has a clear meaning, observable evidence requirements, and a known velocity benchmark. You don't need the rep's narrative. The record tells you what's true.
+
+        **CRM pipeline design is not an admin task.** It is the foundational decision that determines whether your CRM is a management tool or a reporting burden. Whether your historical deal data is a source of competitive intelligence or an accumulated ruin. Whether your forecast reflects what is actually happening in your market or what your reps chose to enter into a text field.
+
+        Get it right, and the whole system gets easier. Forecasts become more accurate. Coaching becomes more specific. Reps spend less time managing a system and more time advancing deals. The data you accumulate becomes something you can actually learn from — a record of what works, what doesn't, and why.
+
+        **That learning is what separates sales organizations that get better over time from ones that repeat the same mistakes at increasing scale.**
+
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mt-12">
+        <h3 className="text-xl font-bold text-gray-900 mb-4">Continue Reading</h3>
+        <p className="text-gray-600 mb-6">This is the first article in the CRM Pipeline Design series. Next up:</p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Link href="/resources/frameworks/crm-pipeline-design" className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all">
+            <span className="text-sm text-blue-600 font-medium">View All</span>
+            <p className="text-gray-900 font-semibold mt-1">CRM Pipeline Design Guide</p>
+          </Link>
+          <div className="block p-4 bg-white rounded-lg shadow-sm opacity-75">
+            <span className="text-sm text-gray-500 font-medium">Coming Soon</span>
+            <p className="text-gray-900 font-semibold mt-1">Seven Ways Companies Destroy Their Own CRM Data</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div className="hidden lg:block mt-24">
+      <ContentNavigation sections={sections} />
+    </div>
+  </div>
+
+  <div className="lg:hidden mt-12">
+    <ContentNavigation sections={sections} />
+  </div>
+</div>

@@ -13,6 +13,8 @@ sections:
 
   - heading: "Resources"
     links:
+      - label: "CRM Pipeline Design Guide"
+        href: "/resources/frameworks/crm-pipeline-design"
       - label: "Sales Qualification Frameworks"
         href: "/resources/frameworks/qualification"
       - label: "QBR Playbook"

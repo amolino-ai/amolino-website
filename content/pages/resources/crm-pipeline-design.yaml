@@ -1,0 +1,144 @@
+metadata:
+  title: "CRM Pipeline Design Resource | Amolino"
+  description: "A comprehensive practitioner guide to CRM pipeline design — for revenue leaders, sales operations professionals, and CRM administrators."
+
+hero:
+  badge: "SALES RESOURCES"
+  heading: "The CRM Pipeline Design Resource"
+
+layers:
+  - id: "foundational"
+    name: "Foundational Layer"
+    description: "Start here if you want the mental model. Written for founders, CROs, and sales leaders who have felt the pain of bad pipeline design but never diagnosed it as an architecture problem."
+    color: "blue"
+    articles:
+      - id: "pipeline-theory"
+        number: 1
+        title: "Your CRM Pipeline Is Not a Stages List. It's a Theory of How Your Customers Buy."
+        description: "The foundational piece. Establishes the core principle — that pipeline stages should represent buyer state, not seller activity — and builds from there into when multiple pipelines are justified, how HubSpot and Salesforce approach the problem differently, and what good pipeline design actually looks like. Includes an audit checklist you can run on your current CRM setup."
+        status: "published"
+      - id: "seven-ways-destroy-data"
+        number: 2
+        title: "Seven Ways Companies Destroy Their Own CRM Data (And How to Fix Them)"
+        description: "A pattern-based diagnostic covering the most common pipeline design failures: stages named after seller activities, pipelines that exist for org chart reasons rather than process reasons, probability assignments nobody has updated since implementation, deals aging invisibly past their viable cycle length, and loss reason fields that produce data too dirty to learn from. Each pattern gets a diagnosis, a real example, and a concrete fix."
+        status: "coming-soon"
+      - id: "right-number-of-pipelines"
+        number: 3
+        title: "The Right Number of Pipelines for Your Business — and How to Know When You Have Too Many"
+        description: "A decision framework for one of the most debated questions in sales operations: when does a new deal type deserve its own pipeline versus a property field versus a new stage in an existing pipeline. Includes a decision tree you can apply to any proposed pipeline addition before approving it."
+        status: "coming-soon"
+
+  - id: "practitioner"
+    name: "Practitioner Layer"
+    description: "For RevOps professionals, sales operations leaders, and anyone responsible for the design, maintenance, and governance of a sales CRM. Assumes familiarity with HubSpot or Salesforce."
+    color: "purple"
+    articles:
+      - id: "design-pipeline-stages"
+        number: 4
+        title: "How to Design Pipeline Stages That Reflect How Buyers Actually Think"
+        description: "A deep practitioner guide covering the five principles of stage design, how to run a stage design workshop with your sales team, how to pressure-test stage definitions against real historical deals, and how to phase in changes without breaking historical reporting. Includes a stage design template."
+        status: "coming-soon"
+      - id: "reporting-multiple-pipelines"
+        number: 5
+        title: "Reporting Across Multiple Pipelines Without Losing Your Mind"
+        description: "Covers the four layers of pipeline reporting — per-pipeline health, forecast, win/loss analysis, and aggregate business performance — and what each requires to work. Explains stage equivalency mapping, why forecast categories solve the revenue aggregation problem but not the process analysis problem, and how to calibrate stage probabilities against actual historical close rates."
+        status: "coming-soon"
+      - id: "win-loss-analysis"
+        number: 6
+        title: "Win/Loss Analysis: From Garbage Data to Competitive Intelligence"
+        description: "How to design a loss reason taxonomy that produces clean data, how to make capture mandatory without creating rep burden, and how to turn win/loss patterns into actual changes in how reps sell. Includes a loss reason taxonomy template and a framework for quarterly win/loss reviews that produce action rather than just analysis."
+        status: "coming-soon"
+      - id: "qualification-frameworks"
+        number: 7
+        title: "Different Deals Need Different Qualification Frameworks"
+        description: "Challenges the common practice of picking one methodology and applying it universally. Explains when MEDDPICC is the right lens, when BANT is sufficient, when SPICED fits better, and when none of the above applies. Maps each methodology to specific pipeline types and covers the CRM implication: if different pipelines use different qualification frameworks, the required fields should reflect that at the pipeline level."
+        status: "coming-soon"
+      - id: "forecast-pipeline-design"
+        number: 8
+        title: "Why Your Forecast Is Wrong — and Why It's a Pipeline Design Problem"
+        description: "A forensic look at forecast inaccuracy through the lens of pipeline architecture. Covers probability drift, coverage ratio miscalibration across deal types with different win rates, sandbagging and happy ears as data quality problems rather than behavior problems, and what a well-calibrated forecast model actually looks like."
+        status: "coming-soon"
+      - id: "changing-pipeline-design"
+        number: 9
+        title: "Changing Your Pipeline Design Without Breaking Everything"
+        description: "How to make pipeline architecture changes safely in a live CRM — renaming stages without breaking reports, consolidating pipelines without losing historical data, deprecating stages without orphaning active deals, and managing the organizational change when reps have muscle memory around the old system."
+        status: "coming-soon"
+      - id: "decision-framework"
+        number: 10
+        title: "Pipeline, Property Field, or New Stage? A Decision Framework for Sales Operations"
+        description: "A focused article on a decision RevOps faces constantly but rarely has a clean framework for. Builds a decision tree for evaluating any proposed structural change to your CRM, with concrete examples of each decision path and the downstream consequences of getting it wrong."
+        status: "coming-soon"
+
+  - id: "technical"
+    name: "Technical Layer"
+    description: "For Salesforce administrators, HubSpot admins, and senior RevOps practitioners who need implementation-level detail. Includes field names, configuration walkthroughs, and architectural recommendations."
+    color: "emerald"
+    articles:
+      - id: "salesforce-complete-guide"
+        number: 11
+        title: "Salesforce Sales Processes and Record Types: The Complete Guide"
+        description: "The complete Salesforce architecture reference: how Record Types, Sales Processes, and the master Stage picklist relate to each other; how validation rules enforce stage-gated field requirements per Record Type; how Flows replace manual workarounds; how to structure the master picklist without creating maintenance chaos; and how to build a sandbox-to-production deployment workflow for pipeline configuration changes."
+        status: "coming-soon"
+      - id: "hubspot-complete-guide"
+        number: 12
+        title: "HubSpot Pipeline Architecture: The Complete Guide"
+        description: "Covers pipeline creation and stage configuration, how deal properties interact with pipeline stages, how to approximate stage-gated enforcement using Operations Hub workflows, how forecast categories work alongside stage probability, and governance practices that compensate for HubSpot's lack of native change management. Includes specific property names, workflow logic, and a governance checklist for admins."
+        status: "coming-soon"
+      - id: "stage-equivalency-layer"
+        number: 13
+        title: "Building a Stage Equivalency Layer for Cross-Pipeline Reporting"
+        description: "How to design a normalized stage taxonomy that maps every stage in every pipeline to a common set of process categories without disrupting the stage names reps use day to day. Shows how to implement this in HubSpot using custom properties and in Salesforce using formula fields or custom objects, and how this layer unlocks cross-pipeline conversion analysis and aggregate velocity reporting."
+        status: "coming-soon"
+      - id: "crm-data-model"
+        number: 14
+        title: "CRM Data Model Design for Companies With Multiple Sales Motions"
+        description: "A systems-level article for RevOps architects. Covers required fields strategy, the relationship between pipeline architecture and contact and account data models, how to design a win/loss taxonomy that works across deal types, and when the CRM data model needs to be supplemented by a data warehouse rather than extended further."
+        status: "coming-soon"
+
+  - id: "amolino-pov"
+    name: "Amolino POV Layer"
+    description: "Our perspective on what pipeline design problems mean at scale — based on what we've seen across hundreds of sales organizations and what it implies for how revenue teams should think about deal intelligence."
+    color: "amber"
+    articles:
+      - id: "hundreds-of-pipelines"
+        number: 15
+        title: "What Hundreds of Pipeline Configurations Taught Us About How B2B Companies Sell"
+        description: "A data-driven piece on the patterns we've observed across customer CRM configurations: which industries over-architect, which under-architect, what the most common design mistakes are at different company sizes, and what the pipeline configurations of consistently high-performing sales organizations have in common."
+        status: "coming-soon"
+      - id: "crm-lying-to-forecast"
+        number: 16
+        title: "Why Your CRM Is Lying to Your Forecast"
+        description: "On the systemic gap between CRM data and revenue reality — how stage-based probability models produce structurally biased forecasts, why rep-entered data is optimistic in predictable ways, and what a deal intelligence layer that learns from historical patterns looks like compared to one that relies on rep self-reporting."
+        status: "coming-soon"
+      - id: "survivorship-bias"
+        number: 17
+        title: "The Survivorship Bias Problem in Sales Playbooks"
+        description: "Most sales playbooks are built from won deals, which means they reflect the conditions of deals that survived to close rather than the full population including the ones that died quietly. This produces playbooks that are systematically biased. You need to learn from the full deal population — won and lost — to build a playbook that actually generalizes."
+        status: "coming-soon"
+
+introContent:
+  paragraphs:
+    - "Most sales teams blame their CRM problems on rep adoption. Reps don't update stages. Reps are optimistic about deals that are going nowhere. Reps enter whatever gets the manager off their back on a Friday afternoon."
+    - "The adoption explanation is comfortable because it points at behavior, and behavior feels fixable with training. Run another enablement session. Add more required fields. Inspect more aggressively."
+    - "But in most cases, the adoption problem is a symptom. The disease is pipeline design."
+    - "When a CRM pipeline is built around what reps do rather than what buyers decide, the data it produces is structurally unreliable — no matter how disciplined your reps are. When different deal types with different buying processes are forced into a single pipeline, your win rates are blended fiction and your forecast is a guess with decimal points. When stage names drift from their original meaning over time, the historical record stops being a source of intelligence and becomes an archaeological ruin that nobody quite trusts."
+    - "These are not behavior problems. They are architecture problems. And architecture, unlike behavior, can be fixed systematically."
+
+whatThisCovers:
+  heading: "What This Resource Covers"
+  paragraphs:
+    - "This is a practitioner's guide to CRM pipeline design — written for revenue leaders, sales operations professionals, and CRM administrators who are responsible for building and maintaining the systems that sales teams run on."
+    - "It covers the full stack: the foundational concepts that determine whether a pipeline design is sound, the reporting and forecasting implications of getting it wrong, the qualification methodology decisions that most teams never connect to pipeline architecture, and the technical implementation details for both Salesforce and HubSpot."
+    - "The articles are organized into four layers. You can read straight through or jump to the layer most relevant to where you are right now."
+
+platformNote:
+  heading: "A Note on Platform Coverage"
+  content: "Most articles in this resource are platform-agnostic — the concepts apply whether you're running HubSpot, Salesforce, or any other CRM. Where platform differences matter, they're called out in context. Articles 11 and 12 are dedicated deep dives into Salesforce and HubSpot respectively, written for administrators and senior RevOps practitioners who need implementation-level detail."
+
+whoBuiltThis:
+  heading: "Who Built This"
+  paragraphs:
+    - "Amolino is a deal guidance platform for B2B sales teams. We built this resource because pipeline design is the foundation everything else in revenue operations sits on — and most of the writing on the topic is either too abstract to be useful or too platform-specific to generalize. We wanted something that a RevOps practitioner, a sales leader, and a CRM administrator could all use, at whatever level of depth they needed."
+    - "If you're working on pipeline design problems at your company and want to talk through what we've seen work, we're easy to find."
+  ctaText: "Talk to us"
+  ctaHref: "/demo"

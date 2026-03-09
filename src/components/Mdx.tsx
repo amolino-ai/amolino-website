@@ -7,8 +7,9 @@ import { DocsHeading } from './headings/DocsHeading';
 import { Prose } from './Prose';
 import { LinkedInLink } from './LinkedInLink';
 import { Screenshot } from './Screenshot';
+import { GuidanceCard, GuidanceCardPair } from './GuidanceCard';
 
-export { LinkedInLink, Screenshot };
+export { LinkedInLink, Screenshot, GuidanceCard, GuidanceCardPair };
 
 // Re-exports
 export { Button, code, CodeGroup, pre };
@@ -49,10 +50,8 @@ export const a = ({
 // Wrapper
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (
-    <article className="mx-auto flex min-h-screen max-w-4xl flex-col px-6 py-20 lg:px-8">
-      <Prose className="prose lg:prose-lg prose-gray prose-headings:font-display prose-a:text-blue-600 prose-a:transition-colors prose-a:duration-200 prose-a:no-underline hover:prose-a:underline flex-grow">
-        {children}
-      </Prose>
+    <article className="mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-20 lg:px-8">
+      {children}
       <footer className="mt-16 border-t border-gray-200 pt-8">{/* <Feedback /> */}</footer>
     </article>
   );

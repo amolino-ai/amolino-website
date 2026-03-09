@@ -8,6 +8,11 @@ hero:
   description: "Use these pages when you want a framework-level reference for qualification, deal inspection, and pipeline discipline."
 
 cards:
+  - href: "/resources/frameworks/crm-pipeline-design"
+    eyebrow: "Pipeline Design"
+    title: "CRM Pipeline Design Guide"
+    description: "A practitioner's guide to CRM pipeline design — covering foundational concepts, reporting implications, qualification methodology, and technical implementation for Salesforce and HubSpot."
+    ctaLabel: "Explore guide"
   - href: "/resources/frameworks/qualification"
     eyebrow: "Qualification"
     title: "Sales Qualification Frameworks"

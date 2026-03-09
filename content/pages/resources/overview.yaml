@@ -8,6 +8,11 @@ hero:
   description: "These resources are organized for sales leaders, RevOps teams, and frontline managers who need sharper forecasting, cleaner inspection, and more consistent deal execution."
 
 cards:
+  - href: "/resources/frameworks/crm-pipeline-design"
+    eyebrow: "Guide"
+    title: "CRM Pipeline Design Guide"
+    description: "A practitioner's guide to pipeline architecture — covering foundational concepts, reporting, qualification methodology, and implementation for Salesforce and HubSpot."
+    ctaLabel: "Explore guide"
   - href: "/resources/b2b-sales-forecast-accuracy-guide"
     eyebrow: "Guide"
     title: "B2B Sales Forecast Accuracy Guide"

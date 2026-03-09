@@ -30,6 +30,7 @@ import type {
   NavbarLinksContent,
   BenefitGroupContent,
   ResourceHubPageContent,
+  CRMPipelineDesignContent,
   ComparisonPageContent,
   SecurityHero,
   SecurityCertifications,
@@ -175,6 +176,13 @@ export async function getBlogPageContent(): Promise<BlogPageContent> {
  */
 export async function getResourceHubContent(slug: string): Promise<ResourceHubPageContent> {
   return loadYAML<ResourceHubPageContent>(`pages/resources/${slug}.yaml`);
+}
+
+/**
+ * Get CRM Pipeline Design resource content
+ */
+export async function getCRMPipelineDesignContent(): Promise<CRMPipelineDesignContent> {
+  return loadYAML<CRMPipelineDesignContent>('pages/resources/crm-pipeline-design.yaml');
 }
 
 /**
