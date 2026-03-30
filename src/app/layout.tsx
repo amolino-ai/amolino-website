@@ -1,7 +1,7 @@
 import { Providers } from '@/app/providers';
 import { GradientBackground } from '@/components/Gradient';
 import { Layout } from '@/components/Layout';
-import { PostHogProvider } from '@/components/PostHogProvider';
+import { PostHogProvider } from '@/lib/posthog';
 import { type Section } from '@/components/SectionProvider';
 import { Navbar } from '@/components/Navbar';
 import { Container } from '@/components/Container';

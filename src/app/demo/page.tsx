@@ -5,9 +5,11 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import Link from 'next/link';
+import posthog from 'posthog-js';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { submitDemoRequest } from './actions';
+import { EVENTS } from '@/lib/posthog';
 
 // Define your form schema with Zod
 const formSchema = z.object({
@@ -43,6 +45,22 @@ export default function DemoPage() {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
+      // Identify the visitor with their real name and email.
+      // This merges their anonymous amolino-user-xxxx profile
+      // with their real identity in PostHog.
+      posthog.identify(posthog.get_distinct_id(), {
+        email: data.email,
+        name: data.name,
+        ...(data.company ? { company: data.company } : {}),
+        ...(data.phoneNumber ? { phone: data.phoneNumber } : {}),
+      });
+
+      posthog.capture(EVENTS.DEMO_FORM_SUBMITTED, {
+        company_provided: Boolean(data.company),
+        phone_provided: Boolean(data.phoneNumber),
+        message_provided: Boolean(data.message),
+      });
+
       const result = await submitDemoRequest(data);
       if (result.success) {
         router.push('/');
