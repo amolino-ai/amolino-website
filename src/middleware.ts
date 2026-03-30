@@ -28,10 +28,45 @@ function shouldSkip(pathname: string): boolean {
   return SKIP_PATTERNS.some((pattern) => pattern.test(pathname));
 }
 
+/**
+ * Detect non-human requests: build-time rendering, prefetches, and bots.
+ * These should not be counted as visitor pageviews.
+ */
+function isNonHumanRequest(request: NextRequest): boolean {
+  const userAgent = request.headers.get('user-agent') || '';
+
+  // Vercel build-time static generation / ISR
+  if (
+    request.headers.get('x-vercel-deployment-url') ||
+    request.headers.get('x-middleware-prefetch') === '1' ||
+    request.headers.get('purpose') === 'prefetch' ||
+    request.headers.get('sec-purpose') === 'prefetch'
+  ) {
+    return true;
+  }
+
+  // Next.js internal prefetch requests
+  if (request.headers.get('next-router-prefetch') === '1') {
+    return true;
+  }
+
+  // Headless browsers used during build
+  if (/vercel|headless|prerender|lighthouse|pingdom|uptimerobot/i.test(userAgent)) {
+    return true;
+  }
+
+  return false;
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (shouldSkip(pathname)) {
+    return NextResponse.next();
+  }
+
+  // Skip build-time rendering, prefetches, and monitoring bots
+  if (isNonHumanRequest(request)) {
     return NextResponse.next();
   }
 
