@@ -60,17 +60,11 @@ export async function captureEvent({
   };
 
   try {
-    const response = await fetch(`${POSTHOG_HOST}/capture/`, {
+    await fetch(`${POSTHOG_HOST}/capture/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
     });
-
-    // TODO: Remove before merging — dev debugging only
-    if (process.env.NODE_ENV === 'development') {
-      const responseText = await response.text();
-      console.log(`[PostHog middleware] ${event} → ${response.status} ${responseText} | distinct_id: ${distinctId}`);
-    }
   } catch (error) {
     // Analytics should never break the site
     console.error('PostHog capture failed:', error);
