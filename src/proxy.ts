@@ -8,6 +8,35 @@ import {
   EVENTS,
 } from '@/lib/posthog';
 
+/**
+ * Detect suspected bots by checking for browser-specific headers that real
+ * browsers always send but bots/crawlers/HTTP libraries typically don't.
+ *
+ * - Chromium browsers (Chrome, Edge, Brave, Opera) always send `sec-ch-ua`.
+ * - All modern browsers send `sec-fetch-dest` on navigation requests.
+ *
+ * If the UA claims to be a known browser but these headers are missing,
+ * the request is likely from a headless browser or HTTP client spoofing its UA.
+ */
+function isSuspectedBot(request: NextRequest, userAgent: string): boolean {
+  const isChromiumUA = /Chrome|CriOS|Edg|OPR|Brave|Vivaldi|SamsungBrowser/i.test(userAgent);
+  const hasSecChUa = !!request.headers.get('sec-ch-ua');
+  const hasSecFetchDest = !!request.headers.get('sec-fetch-dest');
+
+  // Chromium UA but missing sec-ch-ua → almost certainly not a real browser
+  if (isChromiumUA && !hasSecChUa) {
+    return true;
+  }
+
+  // Any browser UA but missing sec-fetch-dest → suspicious
+  // (all modern browsers send this on navigation requests)
+  if (userAgent && !hasSecFetchDest) {
+    return true;
+  }
+
+  return false;
+}
+
 // Skip middleware for static assets, API routes, and internal Next.js routes
 const SKIP_PATTERNS = [
   /^\/_next/,
@@ -96,10 +125,14 @@ export function proxy(request: NextRequest) {
   // Parse UA for browser/OS/device info (blocker-proof)
   const ua = parseUserAgent(userAgent);
 
-  // Skip bots — don't pollute analytics
+  // Skip known bots — don't pollute analytics
   if (ua.deviceType === 'Bot') {
     return response;
   }
+
+  // Detect suspected bots via missing browser headers
+  const suspectedBot = isSuspectedBot(request, userAgent);
+  const namePrefix = suspectedBot ? 'suspect-bot' : 'amolino-user';
 
   // Fire $pageview — this is the primary, blocker-proof pageview source.
   // Client-side SPA navigations fire separately with source:'client'.
@@ -122,6 +155,7 @@ export function proxy(request: NextRequest) {
       // Distinguish from client-side pageviews
       source: 'server',
       is_new_visitor: isNewVisitor,
+      is_suspected_bot: suspectedBot,
     },
     // $set — updates on every visit
     setProperties: {
@@ -132,11 +166,12 @@ export function proxy(request: NextRequest) {
       last_browser: ua.browser,
       last_os: ua.os,
       last_device_type: ua.deviceType,
+      is_suspected_bot: suspectedBot,
     },
     // $set_once — only set on first visit, never overwritten
     setOnceProperties: {
       // PostHog uses 'name' as the person display name
-      name: `amolino-user-${visitorId.slice(0, 8)}`,
+      name: `${namePrefix}-${visitorId.slice(0, 8)}`,
       first_seen_ip: clientIp,
       first_seen_at: new Date().toISOString(),
       initial_referrer: referer || 'direct',
