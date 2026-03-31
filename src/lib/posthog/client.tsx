@@ -52,7 +52,15 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
+    // The middleware sets the amolino_visitor_id cookie on the response.
+    // By the time useEffect fires the browser has processed Set-Cookie,
+    // so the cookie should be readable. If it's missing (bot, cookie
+    // blocker, etc.) we skip client-side init entirely — the middleware
+    // is the primary tracker and will still capture the pageview.
     const visitorId = getVisitorIdFromCookie();
+    if (!visitorId) {
+      return;
+    }
 
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
       api_host: POSTHOG_PROXY_HOST,
@@ -65,7 +73,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
       // See: https://posthog.com/docs/data/persons#capturing-person-profiles
       person_profiles: 'always',
       bootstrap: {
-        distinctID: visitorId || undefined,
+        distinctID: visitorId,
       },
     });
 
@@ -73,8 +81,11 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     // 'amolino-web' in PostHog, matching 'amolino-middleware' from server.
     posthog.register({ $lib: 'amolino-web' });
 
-    // Stitch middleware visitor ID to client-side PostHog
-    if (visitorId && posthog.get_distinct_id() !== visitorId) {
+    // Always identify with the middleware visitor ID so the client SDK
+    // and middleware events are stitched to the same person. This also
+    // handles the case where PostHog had a stale distinct ID in
+    // localStorage from a previous session.
+    if (posthog.get_distinct_id() !== visitorId) {
       posthog.identify(visitorId);
     }
 

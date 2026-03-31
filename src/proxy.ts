@@ -18,23 +18,23 @@ import {
  * If the UA claims to be a known browser but these headers are missing,
  * the request is likely from a headless browser or HTTP client spoofing its UA.
  */
-function isSuspectedBot(request: NextRequest, userAgent: string): boolean {
+function getSuspectedBotReason(request: NextRequest, userAgent: string): string | null {
   const isChromiumUA = /Chrome|CriOS|Edg|OPR|Brave|Vivaldi|SamsungBrowser/i.test(userAgent);
   const hasSecChUa = !!request.headers.get('sec-ch-ua');
   const hasSecFetchDest = !!request.headers.get('sec-fetch-dest');
 
   // Chromium UA but missing sec-ch-ua → almost certainly not a real browser
   if (isChromiumUA && !hasSecChUa) {
-    return true;
+    return 'Chromium UA but missing sec-ch-ua header';
   }
 
   // Any browser UA but missing sec-fetch-dest → suspicious
   // (all modern browsers send this on navigation requests)
   if (userAgent && !hasSecFetchDest) {
-    return true;
+    return 'UA present but missing sec-fetch-dest header';
   }
 
-  return false;
+  return null;
 }
 
 // Skip middleware for static assets, API routes, and internal Next.js routes
@@ -131,7 +131,8 @@ export function proxy(request: NextRequest) {
   }
 
   // Detect suspected bots via missing browser headers
-  const suspectedBot = isSuspectedBot(request, userAgent);
+  const suspectedBotReason = getSuspectedBotReason(request, userAgent);
+  const suspectedBot = suspectedBotReason !== null;
   const namePrefix = suspectedBot ? 'suspect-bot' : 'amolino-user';
 
   // Fire $pageview — this is the primary, blocker-proof pageview source.
@@ -156,6 +157,7 @@ export function proxy(request: NextRequest) {
       source: 'server',
       is_new_visitor: isNewVisitor,
       is_suspected_bot: suspectedBot,
+      suspected_bot_reason: suspectedBotReason,
     },
     // $set — updates on every visit
     setProperties: {
@@ -167,6 +169,7 @@ export function proxy(request: NextRequest) {
       last_os: ua.os,
       last_device_type: ua.deviceType,
       is_suspected_bot: suspectedBot,
+      suspected_bot_reason: suspectedBotReason,
     },
     // $set_once — only set on first visit, never overwritten
     setOnceProperties: {
