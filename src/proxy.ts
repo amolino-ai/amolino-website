@@ -35,9 +35,8 @@ function shouldSkip(pathname: string): boolean {
 function isNonHumanRequest(request: NextRequest): boolean {
   const userAgent = request.headers.get('user-agent') || '';
 
-  // Vercel build-time static generation / ISR
+  // Prefetch requests (browser or Next.js)
   if (
-    request.headers.get('x-vercel-deployment-url') ||
     request.headers.get('x-middleware-prefetch') === '1' ||
     request.headers.get('purpose') === 'prefetch' ||
     request.headers.get('sec-purpose') === 'prefetch'
@@ -58,7 +57,7 @@ function isNonHumanRequest(request: NextRequest): boolean {
   return false;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (shouldSkip(pathname)) {
