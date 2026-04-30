@@ -26,6 +26,18 @@ export function ApolloScript({ appId }: { appId: string }) {
   );
 }
 
+export function HappierLeadsScript({ clientId, version = '4.0.0' }: { clientId: string; version?: string }) {
+  return (
+    <Script
+      id="happierleads-script"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html: `!function(){var e="rest.happierleads.com/v3/script?clientId=${clientId}&version=${version}",t=document.createElement("script");window.location.protocol.split(":")[0];t.src="https://"+e;var c=document.getElementsByTagName("script")[0];t.async=true;t.onload=function(){new Happierleads.default};c.parentNode.insertBefore(t,c)}();`,
+      }}
+    />
+  );
+}
+
 export function InstantlyScript({ pid }: { pid: string }) {
   return (
     <Script
