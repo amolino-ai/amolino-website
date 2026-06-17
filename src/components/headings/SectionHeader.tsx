@@ -61,7 +61,7 @@ export function SectionHeader({
   className,
   as = 'h2',
 }: SectionHeaderProps) {
-  const descriptionColor = dark ? 'text-gray-300' : 'text-gray-600';
+  const descriptionColor = dark ? 'text-neutral-300' : 'text-neutral-600';
 
   return (
     <div className={clsx('mx-auto max-w-2xl', centered ? 'text-center lg:mx-auto' : 'lg:mx-0', className)}>

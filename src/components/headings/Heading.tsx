@@ -41,7 +41,7 @@ export function Heading({ className, as: Element = 'h2', dark = false, ...props 
       data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
-        'text-4xl font-medium tracking-tighter text-pretty text-gray-950 data-dark:text-white sm:text-6xl',
+        'text-4xl font-semibold tracking-tight text-pretty text-neutral-950 data-dark:text-white sm:text-6xl',
       )}
     />
   );

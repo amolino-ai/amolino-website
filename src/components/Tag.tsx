@@ -1,58 +1,31 @@
-import clsx from 'clsx';
-
-const variantStyles = {
-  small: '',
-  medium: 'rounded-lg px-1.5 ring-1 ring-inset',
-};
-
-const colorStyles = {
-  emerald: {
-    small: 'text-emerald-500',
-    medium: 'ring-emerald-300 bg-emerald-400/10 text-emerald-500',
-  },
-  sky: {
-    small: 'text-sky-500',
-    medium: 'ring-sky-300 bg-sky-400/10 text-sky-500',
-  },
-  amber: {
-    small: 'text-amber-500',
-    medium: 'ring-amber-300 bg-amber-400/10 text-amber-500',
-  },
-  rose: {
-    small: 'text-red-500',
-    medium: 'ring-rose-200 bg-rose-50 text-red-500',
-  },
-  zinc: {
-    small: 'text-zinc-400',
-    medium: 'ring-zinc-200 bg-zinc-50 text-zinc-500',
-  },
-};
+import { Badge, type TagColor, type TagSize } from '@/components/Badge';
 
 const valueColorMap = {
-  GET: 'emerald',
-  POST: 'sky',
-  PUT: 'amber',
-  DELETE: 'rose',
-} as Record<string, keyof typeof colorStyles>;
+  GET: 'success',
+  POST: 'primary',
+  PUT: 'warning',
+  DELETE: 'error',
+} as Record<string, TagColor>;
 
+/**
+ * Tag – back-compat wrapper around {@link Badge} (`variant="tag"`).
+ *
+ * @remarks
+ * Retained so existing call sites keep working. New code can use
+ * `<Badge variant="tag" color={...} size={...}>` directly.
+ */
 export function Tag({
   children,
   variant = 'medium',
-  color = valueColorMap[children] ?? 'emerald',
+  color = valueColorMap[children] ?? 'neutral',
 }: {
   children: string
-  variant?: keyof typeof variantStyles
-  color?: keyof typeof colorStyles
+  variant?: TagSize
+  color?: TagColor
 }) {
   return (
-    <span
-      className={clsx(
-        'font-mono text-[0.625rem]/6 font-semibold',
-        variantStyles[variant],
-        colorStyles[color][variant],
-      )}
-    >
+    <Badge variant="tag" size={variant} color={color}>
       {children}
-    </span>
+    </Badge>
   );
 }

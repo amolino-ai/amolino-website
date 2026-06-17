@@ -47,12 +47,12 @@ function MiddleTruncate({ text, maxLengthMobile = 40 }: { text: string; maxLengt
 export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
   return (
     <nav aria-label="Breadcrumb" className={`${className}`}>
-      <ol className="flex flex-col items-start space-y-1 text-sm text-gray-600 sm:flex-row sm:items-center sm:space-x-1 sm:space-y-0">
+      <ol className="flex flex-col items-start space-y-1 text-sm text-neutral-600 sm:flex-row sm:items-center sm:space-x-1 sm:space-y-0">
         {/* Home Icon */}
         <li>
           <Link
             href="/"
-            className="flex items-center text-gray-500 transition-colors hover:text-gray-700"
+            className="flex items-center text-neutral-500 transition-colors hover:text-neutral-700"
             aria-label="Home"
           >
             <HomeIcon className="size-4" />
@@ -65,17 +65,17 @@ export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
 
           return (
             <li key={index} className="flex items-center">
-              <ChevronRightIcon className="size-4 shrink-0 text-gray-400" aria-hidden="true" />
+              <ChevronRightIcon className="size-4 shrink-0 text-neutral-400" aria-hidden="true" />
 
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="ml-1 font-medium text-gray-600 transition-colors hover:text-gray-900 block max-w-[calc(100vw-3rem)] overflow-hidden sm:max-w-none"
+                  className="ml-1 font-medium text-neutral-600 transition-colors hover:text-neutral-900 block max-w-[calc(100vw-3rem)] overflow-hidden sm:max-w-none"
                 >
                   <MiddleTruncate text={item.label} maxLengthMobile={40} />
                 </Link>
               ) : (
-                <span className="ml-1 font-medium text-gray-900 block max-w-[calc(100vw-3rem)] overflow-hidden sm:max-w-none" aria-current="page">
+                <span className="ml-1 font-medium text-neutral-900 block max-w-[calc(100vw-3rem)] overflow-hidden sm:max-w-none" aria-current="page">
                   <MiddleTruncate text={item.label} maxLengthMobile={40} />
                 </span>
               )}
