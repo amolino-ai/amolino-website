@@ -62,7 +62,7 @@ const OutcomeSection: React.FC<OutcomeSectionProps> = ({ content }) => {
     }, []);
 
     return (
-        <section className="relative isolate overflow-hidden bg-test-one">
+        <section className="relative isolate overflow-hidden bg-primary-900">
             {/* ---------- Desktop / Large screens: GSAP pinned cross-fade ---------- */}
             <div
                 ref={pinRef}

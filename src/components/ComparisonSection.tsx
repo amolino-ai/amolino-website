@@ -1,4 +1,4 @@
-import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
 import { Heading } from '@/components/Text';
 import { CheckIcon, MinusIcon } from '@heroicons/react/16/solid';
 
@@ -16,7 +16,7 @@ export function ComparisonSection({
   aiPowered,
 }: ComparisonSectionProps) {
   return (
-    <Container className="py-24">
+    <Section padding="none" className="py-24">
       <div className="text-center">
         <Heading as="h2" className="text-3xl font-bold tracking-tight">
           {title}
@@ -57,7 +57,7 @@ export function ComparisonSection({
           </ul>
         </div>
       </div>
-    </Container>
+    </Section>
   );
 }
 
