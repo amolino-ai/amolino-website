@@ -171,7 +171,7 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
         >
           <PopoverButton
             ref={buttonRef}
-            className="flex items-center gap-1 px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/[2.5%] outline-none h-full"
+            className="flex items-center gap-1 px-4 py-3 text-base font-medium text-neutral-950 bg-blend-multiply data-hover:bg-black/[2.5%] outline-none h-full"
           >
             Product
             <ChevronDownIcon
@@ -184,7 +184,7 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
               <PopoverPanel
                 static
                 ref={panelRef}
-                className="fixed z-50 w-screen max-w-4xl rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-950/5"
+                className="fixed z-50 w-screen max-w-4xl rounded-2xl bg-white p-6 shadow-lg ring-1 ring-neutral-950/5"
                 style={{
                   top: `${position.top}px`,
                   left: `${position.left}px`,
@@ -202,12 +202,12 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
                     <Link
                       href={allProducts.href}
                       onClick={handleLinkClick}
-                      className="relative flex items-start gap-3 rounded-xl p-4 text-gray-950 transition-colors hover:bg-gray-50 border-b border-gray-100 mb-4"
+                      className="relative flex items-start gap-3 rounded-xl p-4 text-neutral-950 transition-colors hover:bg-neutral-50 border-b border-neutral-100 mb-4"
                     >
                       <img src={allProducts.icon} alt="" className="h-6 w-6 text-pink-600" />
                       <div className="flex flex-col gap-1">
                         <span className="text-base font-semibold">{allProducts.name}</span>
-                        <span className="text-sm text-gray-600">{allProducts.description}</span>
+                        <span className="text-sm text-neutral-600">{allProducts.description}</span>
                       </div>
                     </Link>
                   )}
@@ -220,7 +220,7 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
                         <Link
                           href={benefit.href}
                           onClick={handleLinkClick}
-                          className="text-base font-semibold text-gray-950 hover:text-indigo-600 transition-colors mb-3"
+                          className="text-base font-semibold text-neutral-950 hover:text-primary-600 transition-colors mb-3"
                         >
                           {benefit.name}
                         </Link>
@@ -235,17 +235,17 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
                                     key={index}
                                     href={feature.href}
                                     onClick={handleLinkClick}
-                                    className="block text-sm rounded-lg p-2 -mx-2 hover:bg-gray-50 transition-colors"
+                                    className="block text-sm rounded-lg p-2 -mx-2 hover:bg-neutral-50 transition-colors"
                                   >
-                                    <div className="font-medium text-gray-900 hover:text-indigo-600 transition-colors">
+                                    <div className="font-medium text-neutral-900 hover:text-primary-600 transition-colors">
                                       {feature.name}
                                     </div>
-                                    <div className="text-gray-600">{feature.description}</div>
+                                    <div className="text-neutral-600">{feature.description}</div>
                                   </Link>
                                 ) : (
                                   <div key={index} className="text-sm">
-                                    <div className="font-medium text-gray-900">{feature.name}</div>
-                                    <div className="text-gray-600">{feature.description}</div>
+                                    <div className="font-medium text-neutral-900">{feature.name}</div>
+                                    <div className="text-neutral-600">{feature.description}</div>
                                   </div>
                                 )
                               ))}
@@ -255,7 +255,7 @@ export function DesktopDropdown({ allProducts, benefits }: DesktopDropdownProps)
                             <Link
                               href={benefit.href}
                               onClick={handleLinkClick}
-                              className="text-sm font-medium text-indigo-600 hover:text-indigo-700 transition-colors mt-auto"
+                              className="text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors mt-auto"
                             >
                               All {benefit.totalFeatureCount} features →
                             </Link>

@@ -151,7 +151,7 @@ function LoadingIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function HighlightQuery({ text, query }: { text: string; query: string }) {
   return (
     <Highlighter
-      highlightClassName="underline bg-transparent text-emerald-500"
+      highlightClassName="underline bg-transparent text-primary-500"
       searchWords={[query]}
       autoEscape={true}
       textToHighlight={text}
@@ -184,8 +184,8 @@ function SearchResult({
   return (
     <li
       className={clsx(
-        'group block cursor-default px-4 py-3 aria-selected:bg-zinc-50 dark:aria-selected:bg-zinc-800/50',
-        resultIndex > 0 && 'border-t border-zinc-100 dark:border-zinc-800',
+        'group block cursor-default px-4 py-3 aria-selected:bg-neutral-50',
+        resultIndex > 0 && 'border-t border-neutral-100',
       )}
       aria-labelledby={`${id}-hierarchy ${id}-title`}
       {...autocomplete.getItemProps({
@@ -196,7 +196,7 @@ function SearchResult({
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="text-sm font-medium text-zinc-900 group-aria-selected:text-emerald-500 dark:text-white"
+        className="text-sm font-medium text-neutral-900 group-aria-selected:text-primary-500"
       >
         <HighlightQuery text={result.title} query={query} />
       </div>
@@ -204,7 +204,7 @@ function SearchResult({
         <div
           id={`${id}-hierarchy`}
           aria-hidden="true"
-          className="mt-1 truncate text-2xs whitespace-nowrap text-zinc-500"
+          className="mt-1 truncate text-2xs whitespace-nowrap text-neutral-500"
         >
           {hierarchy.map((item, itemIndex, items) => (
             <Fragment key={itemIndex}>
@@ -213,7 +213,7 @@ function SearchResult({
                 className={
                   itemIndex === items.length - 1
                     ? 'sr-only'
-                    : 'mx-2 text-zinc-300 dark:text-zinc-700'
+                    : 'mx-2 text-neutral-300'
                 }
               >
                 /
@@ -238,10 +238,10 @@ function SearchResults({
   if (collection.items.length === 0) {
     return (
       <div className="p-6 text-center">
-        <NoResultsIcon className="mx-auto h-5 w-5 stroke-zinc-900 dark:stroke-zinc-600" />
-        <p className="mt-2 text-xs text-zinc-700 dark:text-zinc-400">
+        <NoResultsIcon className="mx-auto h-5 w-5 stroke-neutral-900" />
+        <p className="mt-2 text-xs text-neutral-700">
           Nothing found for{' '}
-          <strong className="font-semibold break-words text-zinc-900 dark:text-white">
+          <strong className="font-semibold break-words text-neutral-900">
             &lsquo;{query}&rsquo;
           </strong>
           . Please try again.
@@ -282,12 +282,12 @@ function SearchInput({
 
   return (
     <div className="group relative flex h-12">
-      <SearchIcon className="pointer-events-none absolute top-0 left-3 h-full w-5 stroke-zinc-500" />
+      <SearchIcon className="pointer-events-none absolute top-0 left-3 h-full w-5 stroke-neutral-600" />
       <input
         ref={ref}
         data-autofocus
         className={clsx(
-          'flex-auto appearance-none bg-transparent pl-10 text-zinc-900 outline-hidden placeholder:text-zinc-500 focus:w-full focus:flex-none sm:text-sm dark:text-white [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden',
+          'flex-auto appearance-none bg-transparent pl-10 font-medium text-neutral-900 outline-hidden placeholder:text-neutral-600 focus:w-full focus:flex-none sm:text-sm [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden',
           autocompleteState.status === 'stalled' ? 'pr-11' : 'pr-4',
         )}
         {...inputProps}
@@ -311,7 +311,7 @@ function SearchInput({
       />
       {autocompleteState.status === 'stalled' && (
         <div className="absolute inset-y-0 right-3 flex items-center">
-          <LoadingIcon className="h-5 w-5 animate-spin stroke-zinc-200 text-zinc-900 dark:stroke-zinc-800 dark:text-emerald-400" />
+          <LoadingIcon className="h-5 w-5 animate-spin stroke-neutral-200 text-neutral-900" />
         </div>
       )}
     </div>
@@ -372,13 +372,13 @@ function SearchDialog({
     >
       <DialogBackdrop
         transition
-        className="fixed inset-0 bg-zinc-400/25 backdrop-blur-xs data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in dark:bg-black/40"
+        className="fixed inset-0 bg-neutral-400/25 backdrop-blur-xs data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
       />
 
       <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 lg:px-8 lg:py-[15vh]">
         <DialogPanel
           transition
-          className="mx-auto transform-gpu overflow-hidden rounded-lg bg-zinc-50 ring-1 shadow-xl ring-zinc-900/7.5 data-closed:scale-95 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:max-w-xl dark:bg-zinc-900 dark:ring-zinc-800"
+          className="mx-auto transform-gpu overflow-hidden rounded-card bg-white ring-1 shadow-lg ring-neutral-200 data-closed:scale-95 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:max-w-xl"
         >
           <div {...autocomplete.getRootProps({})}>
             <form
@@ -395,7 +395,7 @@ function SearchDialog({
               />
               <div
                 ref={panelRef}
-                className="border-t border-zinc-200 bg-white empty:hidden dark:border-zinc-100/5 dark:bg-white/2.5"
+                className="border-t border-neutral-200 bg-white empty:hidden"
                 {...autocomplete.getPanelProps({})}
               >
                 {autocompleteState.isOpen && (
@@ -455,12 +455,12 @@ export function Search() {
     <div className="hidden lg:block lg:max-w-md lg:flex-auto">
       <button
         type="button"
-        className="hidden h-8 w-full items-center gap-2 rounded-full bg-white pr-3 pl-2 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 lg:flex dark:bg-white/5 dark:text-zinc-400 dark:ring-white/10 dark:ring-inset dark:hover:ring-white/20"
+        className="hidden h-8 w-full items-center gap-2 rounded-md border border-neutral-200 bg-white px-2 text-sm font-medium text-neutral-600 transition hover:bg-neutral-100 focus-within:border-primary-600 lg:flex"
         {...buttonProps}
       >
         <SearchIcon className="h-5 w-5 stroke-current" />
         Find something...
-        <kbd className="ml-auto text-2xs text-zinc-400 dark:text-zinc-500">
+        <kbd className="ml-auto text-2xs text-neutral-400">
           <kbd className="font-sans">{modifierKey}</kbd>
           <kbd className="font-sans">K</kbd>
         </kbd>
@@ -479,12 +479,12 @@ export function MobileSearch() {
     <div className="contents lg:hidden">
       <button
         type="button"
-        className="relative flex size-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 lg:hidden dark:hover:bg-white/5"
+        className="relative flex size-6 items-center justify-center rounded-md transition hover:bg-neutral-900/5 lg:hidden"
         aria-label="Find something..."
         {...buttonProps}
       >
         <span className="absolute size-12 [@media(pointer:fine)]:hidden" />
-        <SearchIcon className="h-5 w-5 stroke-zinc-900 dark:stroke-white" />
+        <SearchIcon className="h-5 w-5 stroke-neutral-900" />
       </button>
       <Suspense fallback={null}>
         <SearchDialog className="lg:hidden" {...dialogProps} />

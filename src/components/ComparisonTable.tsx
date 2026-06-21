@@ -7,17 +7,17 @@ import type { BenefitGroupComparison } from '@/lib/content/types';
  */
 export function ComparisonTable({ title, columns, rows }: BenefitGroupComparison) {
   return (
-    <div className="bg-gray-50 py-24 sm:py-32 dark:bg-gray-900">
+    <div className="bg-neutral-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
+        <h2 className="text-4xl font-semibold tracking-tight text-pretty text-neutral-900 sm:text-5xl">
           {title}
         </h2>
 
         {/* Desktop Table View */}
         <div className="hidden lg:block mt-16">
-          <div className="overflow-hidden rounded-xl bg-white shadow-sm outline outline-black/5 dark:bg-gray-800 dark:outline-white/15">
+          <div className="overflow-hidden rounded-xl bg-white shadow-sm outline outline-black/5">
             {/* Header Row */}
-            <div className="grid grid-cols-3 bg-indigo-600 text-white font-bold">
+            <div className="grid grid-cols-3 bg-primary-600 text-white font-bold">
               {columns.map((column, index) => (
                 <div key={column.label} className={`px-6 py-4 ${index > 0 ? 'text-center' : ''}`}>
                   {column.label}
@@ -30,24 +30,24 @@ export function ComparisonTable({ title, columns, rows }: BenefitGroupComparison
               <div
                 key={row.capability}
                 className={`grid grid-cols-3 ${
-                  index !== rows.length - 1 ? 'border-b border-gray-200 dark:border-gray-700' : ''
-                } hover:bg-gray-50 dark:hover:bg-gray-700/50`}
+                  index !== rows.length - 1 ? 'border-b border-neutral-200' : ''
+                } hover:bg-neutral-50`}
               >
-                <div className="px-6 py-6 font-semibold text-gray-900 dark:text-white">
+                <div className="px-6 py-6 font-semibold text-neutral-900">
                   {row.capability}
                 </div>
-                <div className="px-6 py-6 text-center text-gray-600 dark:text-gray-400">
+                <div className="px-6 py-6 text-center text-neutral-600">
                   {row.traditional === '✓' ? (
-                    <span className="text-2xl text-green-600 dark:text-green-400">✓</span>
+                    <span className="text-2xl text-success-600">✓</span>
                   ) : row.traditional === '✗' ? (
-                    <span className="text-2xl text-red-600 dark:text-red-400">✗</span>
+                    <span className="text-2xl text-error-600">✗</span>
                   ) : (
                     row.traditional
                   )}
                 </div>
-                <div className="px-6 py-6 text-center font-medium text-gray-900 dark:text-white">
+                <div className="px-6 py-6 text-center font-medium text-neutral-900">
                   {row.solution === '✓' ? (
-                    <span className="text-2xl text-green-600 dark:text-green-400">✓</span>
+                    <span className="text-2xl text-success-600">✓</span>
                   ) : row.solution.includes('✓') ? (
                     <span>{row.solution}</span>
                   ) : (
@@ -64,33 +64,33 @@ export function ComparisonTable({ title, columns, rows }: BenefitGroupComparison
           {rows.map((row) => (
             <div
               key={row.capability}
-              className="rounded-xl bg-white p-6 shadow-sm outline outline-black/5 dark:bg-gray-800 dark:outline-white/15"
+              className="rounded-xl bg-white p-6 shadow-sm outline outline-black/5"
             >
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 dark:text-white">
+              <h3 className="text-lg font-semibold text-neutral-900 mb-4">
                 {row.capability}
               </h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                  <span className="text-sm font-medium text-neutral-600">
                     {columns[1].label}:
                   </span>
-                  <span className="text-gray-900 dark:text-white">
+                  <span className="text-neutral-900">
                     {row.traditional === '✓' ? (
-                      <span className="text-xl text-green-600 dark:text-green-400">✓</span>
+                      <span className="text-xl text-success-600">✓</span>
                     ) : row.traditional === '✗' ? (
-                      <span className="text-xl text-red-600 dark:text-red-400">✗</span>
+                      <span className="text-xl text-error-600">✗</span>
                     ) : (
                       row.traditional
                     )}
                   </span>
                 </div>
-                <div className="flex justify-between items-center pt-2 border-t border-gray-200 dark:border-gray-700">
-                  <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                <div className="flex justify-between items-center pt-2 border-t border-neutral-200">
+                  <span className="text-sm font-medium text-neutral-600">
                     {columns[2].label}:
                   </span>
-                  <span className="font-semibold text-indigo-600 dark:text-indigo-400">
+                  <span className="font-semibold text-primary-600">
                     {row.solution === '✓' ? (
-                      <span className="text-xl text-green-600 dark:text-green-400">✓</span>
+                      <span className="text-xl text-success-600">✓</span>
                     ) : row.solution.includes('✓') ? (
                       <span>{row.solution}</span>
                     ) : (

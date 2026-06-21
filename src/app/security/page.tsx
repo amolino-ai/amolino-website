@@ -61,7 +61,7 @@ async function Header() {
 
   return (
     <Container className="mt-16">
-      <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-6">
+      <div className="inline-flex items-center rounded-full bg-primary-50 px-3 py-1 text-sm font-medium text-primary-700 ring-1 ring-inset ring-primary-700/10 mb-6">
         <ShieldIcon />
         <span className="ml-2">{hero.badge}</span>
       </div>
@@ -82,12 +82,12 @@ async function Certifications() {
       </Heading>
       <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
         {content.certifications.map((cert, index) => (
-          <div key={index} className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+          <div key={index} className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-neutral-900/5">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600">
               {index === 0 ? <ShieldIcon /> : <DocumentIcon />}
             </div>
-            <h3 className="mt-6 text-lg font-semibold text-gray-900">{cert.title}</h3>
-            <p className="mt-3 text-sm text-gray-600">{cert.description}</p>
+            <h3 className="mt-6 text-lg font-semibold text-neutral-900">{cert.title}</h3>
+            <p className="mt-3 text-sm text-neutral-600">{cert.description}</p>
           </div>
         ))}
       </div>
@@ -106,24 +106,24 @@ async function DataSecurity() {
       </Heading>
       <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
-          <h3 className="text-xl font-semibold text-gray-900">{content.encryption.title}</h3>
+          <h3 className="text-xl font-semibold text-neutral-900">{content.encryption.title}</h3>
           <div className="mt-6 space-y-6">
             {content.encryption.items.map((item, index) => (
               <div key={index}>
-                <h4 className="font-semibold text-gray-900">{item.title}</h4>
-                <p className="mt-2 text-sm text-gray-600">{item.description}</p>
+                <h4 className="font-semibold text-neutral-900">{item.title}</h4>
+                <p className="mt-2 text-sm text-neutral-600">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold text-gray-900">{content.dataResidency.title}</h3>
+          <h3 className="text-xl font-semibold text-neutral-900">{content.dataResidency.title}</h3>
           <div className="mt-6 space-y-6">
             {content.dataResidency.items.map((item, index) => (
               <div key={index}>
-                <h4 className="font-semibold text-gray-900">{item.title}</h4>
-                <p className="mt-2 text-sm text-gray-600">{item.description}</p>
+                <h4 className="font-semibold text-neutral-900">{item.title}</h4>
+                <p className="mt-2 text-sm text-neutral-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -145,14 +145,14 @@ async function AccessControls() {
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {content.controls.map((control, index) => (
-            <div key={index} className="rounded-2xl bg-gray-50 p-8">
+            <div key={index} className="rounded-2xl bg-neutral-50 p-8">
               <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600 text-white">
                   <LockIcon />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{control.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">{control.description}</p>
+                  <h3 className="text-lg font-semibold text-neutral-900">{control.title}</h3>
+                  <p className="mt-2 text-sm text-neutral-600">{control.description}</p>
                 </div>
               </div>
             </div>
@@ -173,17 +173,17 @@ async function Infrastructure() {
         {content.subheading}
       </Heading>
       <div className="mt-12 space-y-8">
-        <div className="rounded-2xl border border-gray-200 bg-white p-8">
+        <div className="rounded-2xl border border-neutral-200 bg-white p-8">
           <div className="flex items-start gap-4">
             <img src="/icons/microsoft-azure.svg" alt="Microsoft Azure" className="h-12 w-12" />
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">{content.azure.title}</h3>
-              <p className="mt-2 text-sm text-gray-600">{content.azure.description}</p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-neutral-900">{content.azure.title}</h3>
+              <p className="mt-2 text-sm text-neutral-600">{content.azure.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-neutral-600">
                 {content.azure.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <svg
-                      className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600"
+                      className="mt-0.5 h-5 w-5 flex-shrink-0 text-success-600"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -201,13 +201,13 @@ async function Infrastructure() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-8">
-          <h3 className="text-lg font-semibold text-gray-900">{content.networkSecurity.title}</h3>
+        <div className="rounded-2xl border border-neutral-200 bg-white p-8">
+          <h3 className="text-lg font-semibold text-neutral-900">{content.networkSecurity.title}</h3>
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {content.networkSecurity.items.map((item, index) => (
               <div key={index}>
-                <h4 className="font-semibold text-gray-900">{item.title}</h4>
-                <p className="mt-1 text-sm text-gray-600">{item.description}</p>
+                <h4 className="font-semibold text-neutral-900">{item.title}</h4>
+                <p className="mt-1 text-sm text-neutral-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -228,9 +228,9 @@ async function SecurityPracticesSection() {
       </Heading>
       <div className="mt-12 space-y-6">
         {content.practices.map((practice, index) => (
-          <div key={index} className="rounded-xl border border-gray-200 bg-white p-6">
-            <h3 className="text-lg font-semibold text-gray-900">{practice.title}</h3>
-            <p className="mt-2 text-sm text-gray-600">{practice.description}</p>
+          <div key={index} className="rounded-xl border border-neutral-200 bg-white p-6">
+            <h3 className="text-lg font-semibold text-neutral-900">{practice.title}</h3>
+            <p className="mt-2 text-sm text-neutral-600">{practice.description}</p>
           </div>
         ))}
       </div>
@@ -247,7 +247,7 @@ async function ContactSection() {
         {/* <Backgrounds variant="gradient-blue-purple" asChild={false} className="rounded-3xl" /> */}
         <div className="relative mx-auto max-w-2xl text-center">
           <Heading as="h2">{content.heading}</Heading>
-          <p className="mt-6 text-lg text-gray-600">{content.description}</p>
+          <p className="mt-6 text-lg text-neutral-600">{content.description}</p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
             {content.ctas.map((cta, index) => (
               <Button key={index} href={cta.url} variant={cta.variant}>
@@ -255,7 +255,7 @@ async function ContactSection() {
               </Button>
             ))}
           </div>
-          <p className="mt-6 text-sm text-gray-500">{content.disclaimer}</p>
+          <p className="mt-6 text-sm text-neutral-500">{content.disclaimer}</p>
         </div>
       </div>
     </Container>

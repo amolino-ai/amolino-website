@@ -13,7 +13,7 @@
  *
  * @example With custom color
  * ```tsx
- * <LinkedInIcon className="h-5 w-5 text-blue-600" />
+ * <LinkedInIcon className="h-5 w-5 text-primary-600" />
  * ```
  */
 export function LinkedInIcon({ className }: { className?: string }) {

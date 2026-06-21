@@ -1,116 +1,176 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: Switzer, system-ui, sans-serif;
+  /* -------------------------------------------------------------------------
+   * Typography — AmolinoAI Design System v2 (font: Manrope)
+   * Loaded via next/font in src/app/layout.tsx as --font-manrope.
+   * ---------------------------------------------------------------------- */
+  --font-sans: var(--font-manrope), Manrope, system-ui, sans-serif;
 
+  /* -------------------------------------------------------------------------
+   * Radii — DS uses 5px (controls), 16px (cards/containers), 40px (pills).
+   * These are additive custom names; existing rounded-* utilities unchanged.
+   * ---------------------------------------------------------------------- */
   --radius-4xl: 2rem;
+  --radius-control: 0.3125rem; /* 5px  — buttons, inputs */
+  --radius-card: 1rem; /* 16px — cards, modals, containers */
+  --radius-pill: 2.5rem; /* 40px — pills / fully rounded chips */
 
-  /* Neutral grays - for backgrounds, borders, text */
-  --color-neutral-50: #f7f7f8;
-  --color-neutral-100: #eeeef0;
-  --color-neutral-200: #dadadd;
-  --color-neutral-300: #b9b9c0;
-  --color-neutral-400: #93949d;
-  --color-neutral-500: #767781;
-  --color-neutral-600: #52525b;
-  --color-neutral-700: #52525b;
-  --color-neutral-800: #434349;
-  --color-neutral-900: #3a3a40;
-  --color-neutral-950: #27272a;
+  /* -------------------------------------------------------------------------
+   * Shadows — DS elevation scale + brand glow.
+   * (#333 = rgb(51,51,51); brand blue = rgb(12,113,165) ≈ primary)
+   * ---------------------------------------------------------------------- */
+  --shadow-xs: 0 1px 2px rgba(10, 13, 20, 0.04);
+  --shadow-sm:
+    0 -1px 1px -0.5px rgba(51, 51, 51, 0.06), 0 0 0 1px rgba(51, 51, 51, 0.04),
+    0 1px 1px 0.5px rgba(51, 51, 51, 0.04), 0 4px 4px -1px rgba(51, 51, 51, 0.04);
+  --shadow-md:
+    0 -1px 1px -0.5px rgba(51, 51, 51, 0.06), 0 0 0 1px rgba(51, 51, 51, 0.04),
+    0 1px 1px 0.5px rgba(51, 51, 51, 0.04), 0 4px 4px -1px rgba(51, 51, 51, 0.04),
+    0 6px 6px -3px rgba(51, 51, 51, 0.04), 0 12px 12px -6px rgba(51, 51, 51, 0.04);
+  --shadow-lg:
+    0 -1px 1px -0.5px rgba(51, 51, 51, 0.06), 0 0 0 1px rgba(51, 51, 51, 0.04),
+    0 1px 1px 0.5px rgba(51, 51, 51, 0.04), 0 4px 4px -1px rgba(51, 51, 51, 0.04),
+    0 6px 6px -3px rgba(51, 51, 51, 0.04), 0 12px 12px -6px rgba(51, 51, 51, 0.04),
+    0 24px 24px -12px rgba(51, 51, 51, 0.04), 0 64px 64px -32px rgba(51, 51, 51, 0.12);
+  --shadow-brand:
+    0 8px 24px -6px rgba(12, 113, 165, 0.3), 0 2px 6px rgba(12, 113, 165, 0.14);
 
-  /* Primary - brand color (teal/cyan blue) */
+  /* -------------------------------------------------------------------------
+   * Color — mapped from DS palette (Figma: AmolinoAI Design System v2).
+   * DS defines stops 50–900; the 950 stop extends the scale (≈900 darkened)
+   * to preserve the existing 11-stop token API. See DESIGN_TOKENS.md.
+   * ---------------------------------------------------------------------- */
+
+  /* Neutral — DS "Neutral" (cool blue-slate) */
+  --color-neutral-50: #fafbfd;
+  --color-neutral-100: #f5f7fa;
+  --color-neutral-200: #e1e4ea;
+  --color-neutral-300: #cacfd8;
+  --color-neutral-400: #99a0ae;
+  --color-neutral-500: #717784;
+  --color-neutral-600: #525866;
+  --color-neutral-700: #2b303b;
+  --color-neutral-800: #222530;
+  --color-neutral-900: #0e121b;
+  --color-neutral-950: #0a0d13;
+
+  /* Primary — DS "Blue" (brand) */
   --color-primary-50: #f1f9fe;
   --color-primary-100: #e2f2fc;
   --color-primary-200: #bde6fa;
-  --color-primary-300: #83d3f6;
+  --color-primary-300: #84d3f5;
   --color-primary-400: #42bcee;
-  --color-primary-500: #19a5de;
+  --color-primary-500: #19a4de;
   --color-primary-600: #0c84bd;
-  --color-primary-700: #0b6a99;
+  --color-primary-700: #0c71a5;
   --color-primary-800: #0d597f;
-  --color-primary-900: #114b69;
-  --color-primary-950: #0b2f46;
+  --color-primary-900: #0b2f46;
+  --color-primary-950: #082232;
 
-  /* Secondary - complementary warm orange */
-  --color-secondary-50: #fff3ed;
+  /* Secondary — DS "Orange" */
+  --color-secondary-50: #fff1eb;
   --color-secondary-100: #ffe3d5;
-  --color-secondary-200: #fec7aa;
-  --color-secondary-300: #fda374;
-  --color-secondary-400: #fb7d3c;
-  --color-secondary-500: #f96416;
-  --color-secondary-600: #ea580c;
-  --color-secondary-700: #c24a0c;
-  --color-secondary-800: #9a4112;
-  --color-secondary-900: #7c3612;
-  --color-secondary-950: #431c07;
+  --color-secondary-200: #ffd5c0;
+  --color-secondary-300: #ffba97;
+  --color-secondary-400: #ff9a68;
+  --color-secondary-500: #ff8447;
+  --color-secondary-600: #e97135;
+  --color-secondary-700: #d05e25;
+  --color-secondary-800: #ad4e1f;
+  --color-secondary-900: #682f12;
+  --color-secondary-950: #4b220d;
 
-  /* Tertiary - purple for accents */
-  --color-tertiary-50: #faf5ff;
-  --color-tertiary-100: #f4e8ff;
-  --color-tertiary-200: #ebd5ff;
-  --color-tertiary-300: #c384fc;
-  --color-tertiary-400: #c384fc;
-  --color-tertiary-500: #aa55f7;
-  --color-tertiary-600: #9333ea;
-  --color-tertiary-700: #6821a8;
-  --color-tertiary-800: #6821a8;
-  --color-tertiary-900: #541c87;
-  --color-tertiary-950: #380764;
+  /* Tertiary — DS "Purple" */
+  --color-tertiary-50: #efebff;
+  --color-tertiary-100: #dcd5ff;
+  --color-tertiary-200: #cac0ff;
+  --color-tertiary-300: #a897ff;
+  --color-tertiary-400: #8c71f6;
+  --color-tertiary-500: #7d52f4;
+  --color-tertiary-600: #693ee0;
+  --color-tertiary-700: #5b2cc9;
+  --color-tertiary-800: #4c25a7;
+  --color-tertiary-900: #351a75;
+  --color-tertiary-950: #261354;
 
-  /* Success - semantic UI state */
-  --color-success-50: #f0fdf4;
-  --color-success-100: #dcfce7;
-  --color-success-200: #bbf7d0;
-  --color-success-300: #86efac;
-  --color-success-400: #4ade80;
-  --color-success-500: #22c55e;
-  --color-success-600: #16a34a;
-  --color-success-700: #15803d;
-  --color-success-800: #166534;
-  --color-success-900: #14532d;
-  --color-success-950: #052e16;
+  /* Success — DS "Green" */
+  --color-success-50: #e0faec;
+  --color-success-100: #d0fbe9;
+  --color-success-200: #c2f5da;
+  --color-success-300: #84ebb4;
+  --color-success-400: #3ee089;
+  --color-success-500: #1fc16b;
+  --color-success-600: #1daf61;
+  --color-success-700: #178c4e;
+  --color-success-800: #1a7544;
+  --color-success-900: #0b4627;
+  --color-success-950: #08321c;
 
-  /* Warning - semantic UI state */
-  --color-warning-50: #fffbeb;
-  --color-warning-100: #fef3c7;
-  --color-warning-200: #fde68a;
-  --color-warning-300: #fcd34d;
-  --color-warning-400: #fbbf24;
-  --color-warning-500: #f59e0b;
-  --color-warning-600: #d97706;
-  --color-warning-700: #b45309;
-  --color-warning-800: #92400e;
-  --color-warning-900: #78350f;
-  --color-warning-950: #451a03;
+  /* Warning — DS "Yellow" */
+  --color-warning-50: #fffaeb;
+  --color-warning-100: #ffefcc;
+  --color-warning-200: #ffecc0;
+  --color-warning-300: #ffe097;
+  --color-warning-400: #ffd268;
+  --color-warning-500: #f6b51e;
+  --color-warning-600: #e6a819;
+  --color-warning-700: #c99a2c;
+  --color-warning-800: #a78025;
+  --color-warning-900: #624c18;
+  --color-warning-950: #473711;
 
-  /* Error - semantic UI state */
-  --color-error-50: #fef2f2;
-  --color-error-100: #fee2e2;
-  --color-error-200: #fecaca;
-  --color-error-300: #fca5a5;
-  --color-error-400: #f87171;
-  --color-error-500: #ef4444;
-  --color-error-600: #dc2626;
-  --color-error-700: #b91c1c;
-  --color-error-800: #991b1b;
-  --color-error-900: #7f1d1d;
-  --color-error-950: #450a0a;
+  /* Error — DS "Red" */
+  --color-error-50: #ffebec;
+  --color-error-100: #ffd5d8;
+  --color-error-200: #ffc0c5;
+  --color-error-300: #ff97a0;
+  --color-error-400: #ff6875;
+  --color-error-500: #fb3748;
+  --color-error-600: #e93544;
+  --color-error-700: #d02533;
+  --color-error-800: #ad1f2b;
+  --color-error-900: #681219;
+  --color-error-950: #4b0d12;
 
-  /* Info - semantic UI state */
-  --color-info-50: #eff6ff;
-  --color-info-100: #dbeafe;
-  --color-info-200: #bfdbfe;
-  --color-info-300: #93c5fd;
-  --color-info-400: #60a5fa;
-  --color-info-500: #3b82f6;
-  --color-info-600: #2563eb;
-  --color-info-700: #1d4ed8;
-  --color-info-800: #1e40af;
-  --color-info-900: #1e3a8a;
-  --color-info-950: #172554;
+  /* Info — DS has a single blue; info shares the "Blue" scale with primary */
+  --color-info-50: #f1f9fe;
+  --color-info-100: #e2f2fc;
+  --color-info-200: #bde6fa;
+  --color-info-300: #84d3f5;
+  --color-info-400: #42bcee;
+  --color-info-500: #19a4de;
+  --color-info-600: #0c84bd;
+  --color-info-700: #0c71a5;
+  --color-info-800: #0d597f;
+  --color-info-900: #0b2f46;
+  --color-info-950: #082232;
 
-  --color-test-one: #2b3559;
-  --color-test-two: ##5ac5b5;
+  /* Teal — DS "Teal" (additional accent, available for use) */
+  --color-teal-50: #e4fbf8;
+  --color-teal-100: #d0fbf5;
+  --color-teal-200: #c2f5ee;
+  --color-teal-300: #84ebdd;
+  --color-teal-400: #3fdec9;
+  --color-teal-500: #22d3bb;
+  --color-teal-600: #1daf9c;
+  --color-teal-700: #178c7d;
+  --color-teal-800: #1a7569;
+  --color-teal-900: #0b463e;
+  --color-teal-950: #08322d;
+
+  /* Pink — DS "Pink" (additional accent, available for use) */
+  --color-pink-50: #ffebf4;
+  --color-pink-100: #ffd5ea;
+  --color-pink-200: #ffc0df;
+  --color-pink-300: #ff97cb;
+  --color-pink-400: #ff68b3;
+  --color-pink-500: #fb4ba3;
+  --color-pink-600: #e9358f;
+  --color-pink-700: #d0257a;
+  --color-pink-800: #ad1f66;
+  --color-pink-900: #68123d;
+  --color-pink-950: #4b0d2c;
 }
 
 @keyframes move-x {

@@ -31,10 +31,10 @@ export default async function BenefitsOverview() {
       <section className="bg-white py-16 sm:py-24">
         <Container>
           <div className="text-center">
-            <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
               Three Strategic Benefits, One Powerful Platform
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-600">
+            <p className="mx-auto mt-6 max-w-2xl text-xl text-neutral-600">
               AmolinoAI transforms your entire revenue organization with AI-powered intelligence
               that improves rep performance, forecast accuracy, and deal execution.
             </p>
@@ -46,7 +46,7 @@ export default async function BenefitsOverview() {
       </section>
 
       {/* Benefits Grid */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      <section className="bg-neutral-50 py-16 sm:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {benefits.map((benefit, index) => (
@@ -68,10 +68,10 @@ export default async function BenefitsOverview() {
       <section className="bg-white py-16 sm:py-24">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
               Ready to Transform Your Revenue Organization?
             </h2>
-            <p className="mt-6 text-lg text-gray-600">
+            <p className="mt-6 text-lg text-neutral-600">
               See how AmolinoAI can help your team execute better, forecast accurately, and win more deals.
             </p>
             <div className="mt-8 flex justify-center gap-4">

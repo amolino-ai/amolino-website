@@ -59,7 +59,7 @@ function DesktopNav({ allProducts, benefits, links }: DesktopNavProps) {
         <div key={href} className="flex items-center">
           <Link
             href={href}
-            className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-hover:bg-black/[2.5%]"
+            className="flex items-center px-4 py-3 text-base font-medium text-neutral-950 bg-blend-multiply data-hover:bg-black/[2.5%]"
           >
             {label}
           </Link>
@@ -104,7 +104,7 @@ function MobileNav({ benefits, links, close }: MobileNavProps) {
           >
             <Link
               href={href}
-              className="text-base font-medium text-gray-950"
+              className="text-base font-medium text-neutral-950"
               onClick={close}
             >
               {label}

@@ -12,11 +12,11 @@ function CallToAction({ content }: { content: FooterContent }) {
     <div className="relative pt-20 pb-16 text-center sm:py-24">
       <hgroup>
         <Subheading>{content.cta.subheading}</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
+        <p className="mt-6 text-3xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
           {content.cta.heading}
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
+      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-neutral-500">
         {content.cta.description}
       </p>
       <div className="mt-6">
@@ -29,7 +29,7 @@ function CallToAction({ content }: { content: FooterContent }) {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-gray-950/50">{children}</h3>;
+  return <h3 className="text-sm/6 font-medium text-neutral-950/50">{children}</h3>;
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -41,7 +41,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-gray-950 data-hover:text-gray-950/75"
+        className="font-medium text-neutral-950 data-hover:text-neutral-950/75"
       />
     </li>
   );
@@ -116,7 +116,7 @@ function SocialLinks({ content }: { content: FooterContent }) {
           href={social.href}
           target="_blank"
           aria-label={social.ariaLabel}
-          className="text-gray-950 data-hover:text-gray-950/75"
+          className="text-neutral-950 data-hover:text-neutral-950/75"
         >
           {getSocialIcon(social.platform)}
         </Link>
@@ -127,7 +127,7 @@ function SocialLinks({ content }: { content: FooterContent }) {
 
 function Copyright({ content }: { content: FooterContent }) {
   return (
-    <div className="text-sm/6 text-gray-950">
+    <div className="text-sm/6 text-neutral-950">
       &copy; {new Date().getFullYear()} {content.copyright}
     </div>
   );

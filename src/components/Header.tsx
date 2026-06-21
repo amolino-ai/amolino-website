@@ -11,7 +11,7 @@ function TopLevelNavItem({ href, children }: { href: string; children: React.Rea
     <li>
       <Link
         href={href}
-        className="text-sm/5 text-zinc-600 transition hover:text-zinc-900"
+        className="text-sm/5 text-neutral-600 transition hover:text-neutral-900"
       >
         {children}
       </Link>
@@ -52,7 +52,7 @@ export function Header({
       <div
         className={clsx(
           'absolute inset-x-0 top-full h-px transition',
-          (isInsideMobileNavigation || !mobileNavIsOpen) && 'bg-zinc-900/7.5',
+          (isInsideMobileNavigation || !mobileNavIsOpen) && 'bg-neutral-900/7.5',
         )}
       />
       <Search />
@@ -70,7 +70,7 @@ export function Header({
             <TopLevelNavItem href="#">Support</TopLevelNavItem>
           </ul>
         </nav>
-        <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10" />
+        <div className="hidden md:block md:h-5 md:w-px md:bg-neutral-900/10" />
         <div className="flex gap-4">
           <MobileSearch />
         </div>

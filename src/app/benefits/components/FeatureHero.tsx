@@ -47,16 +47,16 @@ export function FeatureHero({ badgeText, heading, description, image, features }
                 <Badge text={badgeText} />
               </div>
             )}
-            <h2 id="features-heading" className="text-4xl font-bold tracking-tight text-gray-900">
+            <h2 id="features-heading" className="text-4xl font-bold tracking-tight text-neutral-900">
               {heading}
             </h2>
-            <p className="mt-4 text-gray-500">{description}</p>
+            <p className="mt-4 text-neutral-500">{description}</p>
 
             <dl className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 text-sm sm:grid-cols-2">
               {features.map((feature) => (
                 <div key={feature.name}>
-                  <dt className="font-medium text-gray-900">{feature.name}</dt>
-                  <dd className="mt-2 text-gray-500">{feature.description}</dd>
+                  <dt className="font-medium text-neutral-900">{feature.name}</dt>
+                  <dd className="mt-2 text-neutral-500">{feature.description}</dd>
                 </div>
               ))}
             </dl>

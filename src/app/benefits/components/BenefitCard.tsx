@@ -31,7 +31,7 @@ export function BenefitCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-md ring-1 ring-gray-900/5 transition-all hover:shadow-xl hover:ring-gray-900/10">
+      <div className="flex h-full flex-col rounded-2xl bg-white p-8 shadow-md ring-1 ring-neutral-900/5 transition-all hover:shadow-xl hover:ring-neutral-900/10">
         {/* Badge */}
         {badgeText && (
           <div className="mb-6">
@@ -40,24 +40,24 @@ export function BenefitCard({
         )}
 
         {/* Title */}
-        <h3 className="text-2xl font-semibold text-gray-900">
+        <h3 className="text-2xl font-semibold text-neutral-900">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="mt-4 text-base text-gray-600 line-clamp-4">
+        <p className="mt-4 text-base text-neutral-600 line-clamp-4">
           {description}
         </p>
 
         {/* Stats */}
         {stats && stats.length > 0 && (
-          <div className="mt-8 grid grid-cols-2 gap-4 border-t border-gray-100 pt-6">
+          <div className="mt-8 grid grid-cols-2 gap-4 border-t border-neutral-100 pt-6">
             {stats.slice(0, 4).map((stat, statIndex) => (
               <div key={statIndex}>
                 <div className="text-2xl font-bold text-primary-600">
                   {stat.value}
                 </div>
-                <div className="mt-1 text-sm text-gray-600">
+                <div className="mt-1 text-sm text-neutral-600">
                   {stat.label}
                 </div>
               </div>

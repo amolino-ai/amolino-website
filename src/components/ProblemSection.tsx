@@ -2,6 +2,7 @@ import React from 'react';
 import type { ProblemContent } from '@/lib/content';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Section } from '@/components/Section';
 
 interface ProblemSectionProps {
     content: ProblemContent;
@@ -9,8 +10,7 @@ interface ProblemSectionProps {
 
 const ProblemSection: React.FC<ProblemSectionProps> = ({ content }) => {
     return (
-        <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary-800 to-primary-900 text-white">
-            <div className="max-w-7xl mx-auto px-6 py-20">
+        <Section background="dark-gradient" padding="none" className="isolate overflow-hidden py-20">
                 {/* Section Label */}
                 <div className="mb-8">
                     <span className="inline-block px-4 py-2 rounded-full border border-primary-400/30 text-primary-200 text-sm font-medium">
@@ -62,8 +62,7 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({ content }) => {
                         ))}
                     </div>
                 </div>
-            </div>
-        </section>
+        </Section>
     );
 };
 

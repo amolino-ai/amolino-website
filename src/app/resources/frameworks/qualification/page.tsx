@@ -18,7 +18,7 @@ const frameworks: Framework[] = [
     id: 'bant',
     name: 'BANT',
     description: 'Budget, Authority, Need, Timeline - IBM\'s classic qualification framework that focuses on financial capability, decision-making power, problem identification, and purchase timeframe.',
-    color: 'bg-blue-600',
+    color: 'bg-primary-600',
     imageUrl: '/images/frameworks/bant-framework.jpg',
     tags: ['Budget', 'Authority', 'Need', 'Timeline'],
   },
@@ -26,7 +26,7 @@ const frameworks: Framework[] = [
     id: 'meddic',
     name: 'MEDDIC',
     description: 'Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion - An enterprise-focused framework designed for complex B2B sales cycles.',
-    color: 'bg-purple-600',
+    color: 'bg-tertiary-600',
     imageUrl: '/images/meddic.png',
     tags: ['Metrics', 'Economic Buyer', 'Decision Criteria', 'Champion'],
   },
@@ -34,7 +34,7 @@ const frameworks: Framework[] = [
     id: 'meddpicc',
     name: 'MEDDPICC',
     description: 'Metrics, Economic Buyer, Decision Criteria, Decision Process, Paper Process, Identify Pain, Champion, Competition - An extended version of MEDDIC for complex enterprise sales with procurement and competitive considerations.',
-    color: 'bg-indigo-600',
+    color: 'bg-primary-600',
     imageUrl: '/images/frameworks/meddpicc-hero.jpg',
     tags: ['Metrics', 'Economic Buyer', 'Decision Process', 'Paper Process', 'Competition'],
   },
@@ -42,7 +42,7 @@ const frameworks: Framework[] = [
     id: 'spiced',
     name: 'SPICED',
     description: 'Situation, Pain, Impact, Critical Event, Decision - A customer-centric framework that focuses on understanding prospect situation and pain points.',
-    color: 'bg-amber-500',
+    color: 'bg-warning-500',
     imageUrl: '/images/frameworks/spiced-framework.jpg',
     tags: ['Situation', 'Pain', 'Impact', 'Critical Event'],
   },
@@ -50,7 +50,7 @@ const frameworks: Framework[] = [
     id: 'gpctba-c',
     name: 'GPCTBA/C&I',
     description: 'Goals, Plans, Challenges, Timeline, Budget, Authority / Consequences & Implications - HubSpot\'s comprehensive qualification framework.',
-    color: 'bg-emerald-600',
+    color: 'bg-success-600',
     imageUrl: '/images/frameworks/gpctba-framework.jpg',
     tags: ['Goals', 'Plans', 'Challenges', 'Timeline'],
   },
@@ -58,7 +58,7 @@ const frameworks: Framework[] = [
     id: 'champ',
     name: 'CHAMP',
     description: 'Challenges, Authority, Money, Prioritization - A streamlined framework focused on understanding prospect\'s challenges and decision-making process.',
-    color: 'bg-rose-600',
+    color: 'bg-error-600',
     imageUrl: '/images/frameworks/champ-framework.jpg',
     tags: ['Challenges', 'Authority', 'Money', 'Prioritization'],
   },
@@ -66,7 +66,7 @@ const frameworks: Framework[] = [
     id: 'faint',
     name: 'FAINT',
     description: 'Funds, Authority, Interest, Need, Timing - A modern framework that focuses on creating opportunities rather than just finding them, particularly for innovative solutions.',
-    color: 'bg-sky-600',
+    color: 'bg-primary-600',
     imageUrl: '/images/frameworks/faint-framework.jpg',
     tags: ['Funds', 'Authority', 'Interest', 'Need', 'Timing'],
   },
@@ -82,20 +82,20 @@ const frameworks: Framework[] = [
 
 export default function QualificationFrameworks() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-neutral-50 to-white">
       <Container>
         <div className="py-20 md:py-32">
           {/* Header Section */}
           <div className="max-w-3xl mx-auto text-center mb-20">
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50">
-              <span className="text-sm font-medium tracking-wide text-blue-600">
+            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary-50">
+              <span className="text-sm font-medium tracking-wide text-primary-600">
                 SALES RESOURCES
               </span>
             </div>
-            <h1 className="mt-4 text-5xl font-bold tracking-tight text-gray-900">
+            <h1 className="mt-4 text-5xl font-bold tracking-tight text-neutral-900">
               Sales Qualification Frameworks
             </h1>
-            <p className="mt-6 text-xl text-gray-600 leading-relaxed">
+            <p className="mt-6 text-xl text-neutral-600 leading-relaxed">
               Effective qualification is essential for sales success. Explore these proven frameworks 
               to qualify opportunities and focus your efforts on the right prospects.
             </p>
@@ -110,10 +110,10 @@ export default function QualificationFrameworks() {
                 transition={{ duration: 0.2 }}
                 className={`group relative bg-gradient-to-br rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden ${
                   frameworks.indexOf(framework) % 3 === 0
-                    ? 'from-blue-50 to-white'
+                    ? 'from-primary-50 to-white'
                     : frameworks.indexOf(framework) % 3 === 1
-                    ? 'from-purple-50 to-white'
-                    : 'from-green-50 to-white'
+                    ? 'from-tertiary-50 to-white'
+                    : 'from-success-50 to-white'
                 }`}
               >
                 {/* <div className="relative h-48 w-full overflow-hidden">
@@ -128,11 +128,11 @@ export default function QualificationFrameworks() {
                 </div> */}
                 
                 <div className="relative p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl font-bold text-neutral-900 mb-4">
                     {framework.name}
                   </h3>
                   
-                  <p className="text-gray-600 mb-6 line-clamp-3">
+                  <p className="text-neutral-600 mb-6 line-clamp-3">
                     {framework.description}
                   </p>
                   
@@ -140,7 +140,7 @@ export default function QualificationFrameworks() {
                     {framework.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700"
+                        className="px-3 py-1 text-sm rounded-full bg-neutral-100 text-neutral-700"
                       >
                         {tag}
                       </span>
@@ -149,7 +149,7 @@ export default function QualificationFrameworks() {
 
                   <Link 
                     href={`/resources/frameworks/qualification/${framework.id}`}
-                    className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+                    className="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors"
                   >
                     Learn more
                     <svg className="ml-2 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">

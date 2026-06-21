@@ -23,7 +23,7 @@ interface ChallengeProps {
 
 export function Challenge({ subheading, heading, description, stats, features }: ChallengeProps) {
   return (
-    <div className="relative bg-gray-50 py-24 sm:py-32">
+    <div className="relative bg-neutral-50 py-24 sm:py-32">
       <Container>
         <SectionHeader subheading={subheading} heading={heading} description={description} />
         <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">

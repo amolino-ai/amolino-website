@@ -24,8 +24,8 @@ interface UseCaseCardProps {
 
 const UseCaseCard: React.FC<UseCaseCardProps> = ({ title, description, imagePath, href, ctaLabel }) => {
   return (
-    <div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-      <div className="mb-6 overflow-hidden rounded-lg bg-gray-100">
+    <div className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+      <div className="mb-6 overflow-hidden rounded-lg bg-neutral-100">
         <div className="relative aspect-video w-full">
           <Image
             src={imagePath}
@@ -35,10 +35,10 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ title, description, imagePath
           />
         </div>
       </div>
-      <h3 className="mb-2 text-xl font-semibold text-gray-900">
+      <h3 className="mb-2 text-xl font-semibold text-neutral-900">
         {title}
       </h3>
-      <p className="mb-4 flex-grow text-gray-600">{description}</p>
+      <p className="mb-4 flex-grow text-neutral-600">{description}</p>
       <div className="mt-auto">
         <Button href={href} variant="text" arrow="right">
           {ctaLabel}
@@ -55,10 +55,10 @@ export default async function UseCasesPage() {
     <div className="relative min-h-screen bg-white">
       <Container className="pt-24 pb-16">
         <div className="mx-auto max-w-3xl text-center">
-          <Heading as="h1" className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <Heading as="h1" className="mb-6 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
             {content.hero.heading}
           </Heading>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600">
             {content.hero.description}
           </p>
         </div>
@@ -81,20 +81,20 @@ export default async function UseCasesPage() {
       </Container>
 
       {/* Featured Use Case (Larger showcase) */}
-      <div className="bg-blue-50 py-16">
+      <div className="bg-primary-50 py-16">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <Subheading as="h3" className="mb-2 text-blue-600">
+              <Subheading as="h3" className="mb-2 text-primary-600">
                 {content.featuredUseCase.eyebrow}
               </Subheading>
               <Heading as="h2" className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
                 {content.featuredUseCase.title}
               </Heading>
-              <p className="mb-6 text-lg text-gray-600">
+              <p className="mb-6 text-lg text-neutral-600">
                 {content.featuredUseCase.description}
               </p>
-              <p className="mb-8 text-lg text-gray-600">
+              <p className="mb-8 text-lg text-neutral-600">
                 {content.featuredUseCase.secondaryDescription}
               </p>
               <Button href={content.featuredUseCase.ctaHref} variant="primary">
@@ -130,13 +130,13 @@ export default async function UseCasesPage() {
       </Container>
 
       {/* CTA Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-neutral-50 py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <Heading as="h2" className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
               {content.bottomCta.heading}
             </Heading>
-            <p className="mb-8 text-lg text-gray-600">
+            <p className="mb-8 text-lg text-neutral-600">
               {content.bottomCta.description}
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

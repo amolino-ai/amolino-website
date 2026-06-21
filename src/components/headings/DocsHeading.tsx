@@ -58,10 +58,10 @@ function Eyebrow({ tag, label }: { tag?: string; label?: string }) {
     <div className="flex items-center gap-x-3">
       {tag && <Tag>{tag}</Tag>}
       {tag && label && (
-        <span className="h-0.5 w-0.5 rounded-full bg-zinc-300" />
+        <span className="h-0.5 w-0.5 rounded-full bg-neutral-300" />
       )}
       {label && (
-        <span className="font-mono text-xs text-zinc-400">{label}</span>
+        <span className="font-mono text-xs text-neutral-400">{label}</span>
       )}
     </div>
   );
@@ -83,8 +83,8 @@ function Anchor({
     >
       {inView && (
         <div className="absolute mt-1 ml-[calc(-1*var(--width))] hidden w-[var(--width)] opacity-0 transition [--width:calc(2.625rem+0.5px+50%-min(50%,calc(var(--container-lg)+(--spacing(8)))))] group-hover:opacity-100 group-focus:opacity-100 md:block lg:z-50 2xl:[--width:--spacing(10)]">
-          <div className="group/anchor block h-5 w-5 rounded-lg bg-zinc-50 ring-1 ring-zinc-300 transition ring-inset hover:ring-zinc-500">
-            <AnchorIcon className="h-5 w-5 stroke-zinc-500 transition" />
+          <div className="group/anchor block h-5 w-5 rounded-lg bg-neutral-50 ring-1 ring-neutral-300 transition ring-inset hover:ring-neutral-500">
+            <AnchorIcon className="h-5 w-5 stroke-neutral-500 transition" />
           </div>
         </div>
       )}

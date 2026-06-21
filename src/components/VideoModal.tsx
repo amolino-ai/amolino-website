@@ -57,13 +57,13 @@ export default function VideoModalSimple({ isOpen, onClose, videoUrl }: VideoMod
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-5xl bg-gray-900 rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-full max-w-5xl bg-neutral-900 rounded-card shadow-lg overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 rounded-full bg-gray-800/80 p-2 text-gray-300 transition-colors hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+          className="absolute top-4 right-4 z-10 rounded-full bg-neutral-800/80 p-2 text-neutral-300 transition-colors hover:bg-neutral-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
           aria-label="Close video"
         >
           <XMarkIcon className="h-6 w-6" aria-hidden="true" />

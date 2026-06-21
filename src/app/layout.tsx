@@ -10,13 +10,21 @@ import '@/styles/tailwind.css';
 import '@mantine/core/styles.css';
 import glob from 'fast-glob';
 import { type Metadata } from 'next';
-import { Inter, JetBrains_Mono, Lexend } from 'next/font/google';
+import { Inter, JetBrains_Mono, Lexend, Manrope } from 'next/font/google';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from '@vercel/analytics/next';
 import { RB2BScript, ApolloScript, InstantlyScript, HappierLeadsScript } from '@/components/TrackingScripts';
 
 
 // Font configurations
+// Manrope is the AmolinoAI Design System v2 typeface; --font-sans points at it
+// in src/styles/tailwind.css, so it applies document-wide via Tailwind preflight.
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-manrope',
+  weight: ['400', '500', '600', '700', '800'],
+});
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -87,10 +95,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html
       lang="en"
-      className={`h-full ${inter.variable} ${lexend.variable} ${jetbrainsMono.variable}`}
+      className={`h-full ${manrope.variable} ${inter.variable} ${lexend.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="h-full text-gray-950 antialiased" suppressHydrationWarning>
+      <body className="h-full font-sans text-neutral-950 antialiased" suppressHydrationWarning>
         {rb2bId && <RB2BScript rb2bId={rb2bId} />}
         <ApolloScript appId="67bc851a9bad43001da9ade8" />
         <InstantlyScript pid="1yBt6e3kBBth7Eka1" />

@@ -48,9 +48,9 @@ export default function FeatureShowcase({
                       <div className="flex-none rounded-full bg-pink-600/10 p-2">
                         {feature.icon}
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
+                      <h3 className="text-lg font-semibold text-neutral-900">{feature.title}</h3>
                     </div>
-                    <p className="text-base text-gray-600">{feature.description}</p>
+                    <p className="text-base text-neutral-600">{feature.description}</p>
                   </div>
                 ))}
               </div>

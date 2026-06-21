@@ -9,7 +9,7 @@ export function FeatureCard({ title, children }: FeatureCardProps) {
   return (
     <Card>
       <CardHeader title={title} />
-      <div className="mt-4 text-gray-600">{children}</div>
+      <div className="mt-4 text-neutral-600">{children}</div>
     </Card>
   );
 } 

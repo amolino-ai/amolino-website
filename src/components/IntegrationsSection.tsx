@@ -17,10 +17,10 @@ interface IntegrationIconProps {
 
 const IntegrationCategory = ({ title, children }: IntegrationCategoryProps) => {
   const categoryColors = {
-    MEETINGS: 'bg-cyan-100',
-    EMAIL: 'bg-purple-100',
-    MESSAGING: 'bg-green-100',
-    CRM: 'bg-blue-100',
+    MEETINGS: 'bg-primary-100',
+    EMAIL: 'bg-tertiary-100',
+    MESSAGING: 'bg-success-100',
+    CRM: 'bg-primary-100',
   } as const;
 
   return (
@@ -34,7 +34,7 @@ const IntegrationCategory = ({ title, children }: IntegrationCategoryProps) => {
 const IntegrationIcon = ({ name, src, alt }: IntegrationIconProps) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-blue-600">
+      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-primary-600">
         <Image src={src} alt={alt || `${name} logo`} width={40} height={40} />
       </div>
     </div>
@@ -47,18 +47,18 @@ interface IntegrationsSectionProps {
 
 export function IntegrationsSection({ content }: IntegrationsSectionProps) {
   return (
-    <div className="bg-gradient-to-b from-white via-blue-100 to-white">
-      <Container className="py-20 border-y-2 border-blue-200 shadow-md rounded-lg my-8">
+    <div className="bg-gradient-to-b from-white via-primary-100 to-white">
+      <Container className="py-20 border-y-2 border-primary-200 shadow-md rounded-lg my-8">
         <div className="text-center">
           <Subheading>{content.subheading}</Subheading>
           <Heading as="h2" className="mt-2">
             {content.heading}
           </Heading>
-          <p className="mx-auto mt-6 max-w-3xl text-xl text-gray-600">
+          <p className="mx-auto mt-6 max-w-3xl text-xl text-neutral-600">
             {content.description}
           </p>
         </div>
-        <h2 className="mt-8 text-center text-2xl font-bold text-gray-900">
+        <h2 className="mt-8 text-center text-2xl font-bold text-neutral-900">
           {content.tagline}
         </h2>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -79,7 +79,7 @@ export function IntegrationsSection({ content }: IntegrationsSectionProps) {
           <Button href={content.cta.primaryUrl} variant="primary">
             {content.cta.primaryText}
           </Button>
-          {/* <Link href="/integrations" className="flex items-center gap-1 font-medium text-blue-600">
+          {/* <Link href="/integrations" className="flex items-center gap-1 font-medium text-primary-600">
             View integrations <ChevronRightIcon className="size-4" />
           </Link> */}
         </div>

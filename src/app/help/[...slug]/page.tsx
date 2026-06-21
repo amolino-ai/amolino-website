@@ -58,21 +58,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 async function Breadcrumb({ article }: { article: HelpArticle }) {
   return (
-    <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8">
-      <Link href="/help" className="hover:text-gray-900 transition-colors">
+    <nav className="flex items-center gap-2 text-sm text-neutral-600 mb-8">
+      <Link href="/help" className="hover:text-neutral-900 transition-colors">
         Help Center
       </Link>
-      <ChevronRightIcon className="size-4 text-gray-400" />
+      <ChevronRightIcon className="size-4 text-neutral-400" />
       <Link 
         href={`/help?section=${article.section}`} 
-        className="hover:text-gray-900 transition-colors capitalize"
+        className="hover:text-neutral-900 transition-colors capitalize"
       >
         {article.section}
       </Link>
       {article.subsection && (
         <>
-          <ChevronRightIcon className="size-4 text-gray-400" />
-          <span className="capitalize text-gray-900">{article.subsection}</span>
+          <ChevronRightIcon className="size-4 text-neutral-400" />
+          <span className="capitalize text-neutral-900">{article.subsection}</span>
         </>
       )}
     </nav>
@@ -91,13 +91,13 @@ async function RelatedArticles({ article }: { article: HelpArticle }) {
   }
 
   return (
-    <div className="mt-16 border-t border-gray-200 pt-16">
+    <div className="mt-16 border-t border-neutral-200 pt-16">
       <h2 className="text-xl font-semibold mb-6">Related Articles</h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {relatedArticles.map((relatedArticle) => (
           <div
             key={relatedArticle.slug}
-            className="relative flex flex-col rounded-lg bg-gray-50 p-6 hover:bg-gray-100 transition-colors"
+            className="relative flex flex-col rounded-lg bg-neutral-50 p-6 hover:bg-neutral-100 transition-colors"
           >
             <h3 className="text-base font-medium leading-6">
               <Link href={`/help/${relatedArticle.slug}`}>
@@ -105,7 +105,7 @@ async function RelatedArticles({ article }: { article: HelpArticle }) {
                 {relatedArticle.title}
               </Link>
             </h3>
-            <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+            <p className="mt-2 text-sm text-neutral-600 line-clamp-2">
               {relatedArticle.excerpt}
             </p>
             
@@ -114,7 +114,7 @@ async function RelatedArticles({ article }: { article: HelpArticle }) {
                 {relatedArticle.tags.slice(0, 2).map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1 px-2 py-1 bg-white text-gray-700 text-xs rounded-md"
+                    className="inline-flex items-center gap-1 px-2 py-1 bg-white text-neutral-700 text-xs rounded-md"
                   >
                     <TagIcon className="size-3" />
                     {tag}
@@ -154,8 +154,8 @@ async function TableOfContents({ content }: { content: string }) {
 
   return (
     <div className="lg:sticky lg:top-8">
-      <div className="rounded-lg bg-gray-50 p-6">
-        <h3 className="text-sm font-semibold text-gray-900 mb-4">
+      <div className="rounded-lg bg-neutral-50 p-6">
+        <h3 className="text-sm font-semibold text-neutral-900 mb-4">
           On this page
         </h3>
         <nav className="space-y-1">
@@ -164,8 +164,8 @@ async function TableOfContents({ content }: { content: string }) {
               key={index}
               href={`#${heading.id}`}
               className={clsx(
-                'block text-sm hover:text-gray-900 transition-colors',
-                heading.level === 2 ? 'text-gray-700' : 'text-gray-600 pl-4',
+                'block text-sm hover:text-neutral-900 transition-colors',
+                heading.level === 2 ? 'text-neutral-700' : 'text-neutral-600 pl-4',
               )}
             >
               {heading.text}
@@ -204,7 +204,7 @@ export default async function HelpArticlePage({ params }: Props) {
                   {article.excerpt}
                 </Lead>
                 
-                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 border-b border-gray-200 pb-6">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-600 border-b border-neutral-200 pb-6">
                   <div className="flex items-center gap-1">
                     <ClockIcon className="size-4" />
                     <span>
@@ -216,7 +216,7 @@ export default async function HelpArticlePage({ params }: Props) {
                     <span>Section:</span>
                     <Link 
                       href={`/help?section=${article.section}`}
-                      className="font-medium text-blue-600 hover:text-blue-800 capitalize"
+                      className="font-medium text-primary-600 hover:text-primary-800 capitalize"
                     >
                       {article.section}
                     </Link>
@@ -230,7 +230,7 @@ export default async function HelpArticlePage({ params }: Props) {
                         <Link
                           key={tag}
                           href={`/help?tag=${tag}`}
-                          className="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full hover:bg-blue-200 transition-colors"
+                          className="inline-flex items-center gap-1 px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full hover:bg-primary-200 transition-colors"
                         >
                           <TagIcon className="size-3" />
                           {tag}
@@ -253,10 +253,10 @@ export default async function HelpArticlePage({ params }: Props) {
                 />
               </div>
               
-              <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="mt-12 pt-8 border-t border-neutral-200">
                 <Link
                   href="/help"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-800 transition-colors"
                 >
                   <ArrowLeftIcon className="size-4" />
                   Back to Help Center

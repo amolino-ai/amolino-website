@@ -17,7 +17,7 @@ export default function TeamTabs() {
         onClick={() => setActiveTab(value)}
         className={`transition duration-200 ${
           isActive
-            ? 'bg-blue-50 text-blue-700 border-blue-300 font-medium'
+            ? 'bg-primary-50 text-primary-700 border-primary-300 font-medium'
             : ''
         }`}
       >
@@ -45,9 +45,9 @@ export default function TeamTabs() {
 
       <TabsPanel value="sales">
         <div className="space-y-4">
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Content</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Content</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Quota attainment and revenue metrics (by team/rep)</li>
               <li>Win/loss analysis (key deals and reasons)</li>
               <li>Sales-cycle trends (deal velocity, ACV, conversion rates)</li>
@@ -57,9 +57,9 @@ export default function TeamTabs() {
               <li>Deal-execution strategy (closing priorities)</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Participants</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Participants</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Sales Leadership (VP/Director, CRO)</li>
               <li>Sales Managers</li>
               <li>Account Executives</li>
@@ -69,9 +69,9 @@ export default function TeamTabs() {
               </li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Outcome</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Outcome</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Shared view of last quarter vs. targets</li>
               <li>Pipeline health assessment with actions</li>
               <li>Accurate forecast with prioritized deals</li>
@@ -82,9 +82,9 @@ export default function TeamTabs() {
 
       <TabsPanel value="cs">
         <div className="space-y-4">
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Content</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Content</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>High-level recap of key accounts</li>
               <li>Upsell / cross-sell pipeline (opps & forecast)</li>
               <li>Account segmentation (prime for expansion)</li>
@@ -92,9 +92,9 @@ export default function TeamTabs() {
               <li>At-risk accounts (red flags, escalations, mitigation)</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Participants</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Participants</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>CS Leadership (VP/Director, CRO/CCO)</li>
               <li>Customer Success Managers</li>
               <li>Account Managers</li>
@@ -105,9 +105,9 @@ export default function TeamTabs() {
               </li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Outcome</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Outcome</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Clear list of at-risk customers & action plans</li>
               <li>Identified upsell/cross-sell opportunities</li>
               <li>Customer-feedback loop to Product</li>
@@ -119,9 +119,9 @@ export default function TeamTabs() {
 
       <TabsPanel value="marketing">
         <div className="space-y-4">
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Content</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Content</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Campaign performance vs. targets (MQL, SQL, CPL, CAC)</li>
               <li>Marketing-sourced pipeline & revenue attribution</li>
               <li>Key programs last quarter (events, ABM, content)</li>
@@ -131,9 +131,9 @@ export default function TeamTabs() {
               <li>Budget utilisation & ROI by channel</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Participants</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Participants</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>CMO / VP Marketing</li>
               <li>Demand Gen Lead</li>
               <li>Product-Marketing Manager</li>
@@ -144,9 +144,9 @@ export default function TeamTabs() {
               </li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Outcome</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Outcome</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Agreement on marketing-sourced pipeline goals</li>
               <li>Alignment on upcoming launches & sales-enablement assets</li>
               <li>Decisions on budget shifts & resourcing</li>
@@ -158,9 +158,9 @@ export default function TeamTabs() {
 
       <TabsPanel value="product">
         <div className="space-y-4">
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Content</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Content</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Roadmap delivery status (committed vs. shipped)</li>
               <li>Usage & adoption metrics for recent releases</li>
               <li>Customer-feedback themes & NPS drivers</li>
@@ -170,9 +170,9 @@ export default function TeamTabs() {
               <li>Resource constraints or trade-off requests</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Participants</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Participants</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>CPO / Head of Product</li>
               <li>Product Managers</li>
               <li>UX / Research Lead</li>
@@ -180,9 +180,9 @@ export default function TeamTabs() {
               <li>Representative from CS or Sales</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Outcome</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Outcome</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Cross-team alignment on priority features & dates</li>
               <li>Clear go-to-market dependencies (marketing, enablement)</li>
               <li>Decisions on trade-offs or de-scoping</li>
@@ -194,9 +194,9 @@ export default function TeamTabs() {
 
       <TabsPanel value="finance">
         <div className="space-y-4">
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Content</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Content</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Actuals vs. budget (revenue, GM, OPEX, EBITDA)</li>
               <li>Cash-flow & runway analysis</li>
               <li>CAC, LTV, payback-period trends</li>
@@ -205,18 +205,18 @@ export default function TeamTabs() {
               <li>Variance drivers & mitigation proposals</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Participants</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Participants</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>CFO / VP Finance</li>
               <li>FP&A Analysts</li>
               <li>Accounting Lead</li>
               <li>CEO, CRO, COO</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Outcome</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Outcome</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Confirmation of financial health & targets</li>
               <li>Approved budget or headcount adjustments</li>
               <li>Alignment on cost controls / new investments</li>
@@ -228,9 +228,9 @@ export default function TeamTabs() {
 
       <TabsPanel value="ops">
         <div className="space-y-4">
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Content</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Content</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Operational KPIs (on-time delivery, cycle time, capacity)</li>
               <li>Implementation / onboarding backlog & TTV metrics</li>
               <li>Support SLAs, ticket volume & resolution trends</li>
@@ -239,9 +239,9 @@ export default function TeamTabs() {
               <li>Risk log (supplier, compliance, infrastructure)</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Participants</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Participants</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>COO / Head of Operations</li>
               <li>Implementation / Professional-Services Lead</li>
               <li>Support / Customer-Care Manager</li>
@@ -251,9 +251,9 @@ export default function TeamTabs() {
               </li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Outcome</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Outcome</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Plans to clear operational bottlenecks or SLA risks</li>
               <li>Resource-scaling or tooling decisions</li>
               <li>Alignment on process-improvement road-map</li>
@@ -264,9 +264,9 @@ export default function TeamTabs() {
 
       <TabsPanel value="hr">
         <div className="space-y-4">
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Content</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Content</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>Headcount vs. plan by function</li>
               <li>Hiring pipeline & critical open roles</li>
               <li>Attrition & retention metrics (voluntary / involuntary)</li>
@@ -276,18 +276,18 @@ export default function TeamTabs() {
               <li>L&D programme uptake & future roll-outs</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Participants</h3>
-            <ul className="mt-2 list-disc pl-5 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Participants</h3>
+            <ul className="mt-2 list-disc pl-5 text-neutral-700">
               <li>CHRO / Head of People</li>
               <li>Talent Acquisition Lead</li>
               <li>HRBPs</li>
               <li>Department Heads</li>
             </ul>
           </div>
-          <div className="rounded-lg border border-zinc-200 p-4">
-            <h3 className="font-semibold text-zinc-900">Outcome</h3>
-            <ul className="mt-2 list-disc pl-6 text-zinc-700">
+          <div className="rounded-lg border border-neutral-200 p-4">
+            <h3 className="font-semibold text-neutral-900">Outcome</h3>
+            <ul className="mt-2 list-disc pl-6 text-neutral-700">
               <li>Prioritised hiring plan & timeline</li>
               <li>Retention & engagement action items</li>
               <li>Alignment on org-design or policy updates</li>

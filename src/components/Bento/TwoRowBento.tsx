@@ -19,13 +19,13 @@ export function TwoRowBento({ title, subtitle, tagline, items }: TwoRowBentoProp
   const displayItems = items.slice(0, 4);
 
   return (
-    <div className="bg-gray-50 py-24 sm:py-32 dark:bg-gray-900">
+    <div className="bg-neutral-50 py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">{tagline}</h2>
-        <p className="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
+        <h2 className="text-base/7 font-semibold text-primary-600">{tagline}</h2>
+        <p className="mt-2 max-w-lg text-4xl font-semibold tracking-tight text-pretty text-neutral-900 sm:text-5xl">
           {title}
         </p>
-        <p className="mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+        <p className="mt-4 max-w-2xl text-lg text-neutral-600">
           {subtitle}
         </p>
         <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
@@ -56,18 +56,18 @@ export function TwoRowBento({ title, subtitle, tagline, items }: TwoRowBentoProp
                 />
                 <div className="p-10">
                   {item.category && (
-                    <h3 className="text-sm/4 font-semibold text-gray-500 dark:text-gray-400">
+                    <h3 className="text-sm/4 font-semibold text-neutral-500">
                       {item.category}
                     </h3>
                   )}
-                  <p className="mt-2 text-lg font-medium tracking-tight text-gray-900 dark:text-white">
+                  <p className="mt-2 text-lg font-medium tracking-tight text-neutral-900">
                     {item.title}
                   </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400">
+                  <p className="mt-2 max-w-lg text-sm/6 text-neutral-600">
                     {item.description}
                   </p>
                   {item.ctaText && (
-                    <p className="mt-3 text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                    <p className="mt-3 text-sm font-medium text-primary-600">
                       {item.ctaText} →
                     </p>
                   )}
@@ -80,12 +80,12 @@ export function TwoRowBento({ title, subtitle, tagline, items }: TwoRowBentoProp
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass} dark:bg-gray-800 dark:shadow-none dark:outline-white/15 transition-transform hover:scale-[1.02]`}
+                    className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass} transition-transform hover:scale-[1.02]`}
                   >
                     {content}
                   </Link>
                 ) : (
-                  <div className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass} dark:bg-gray-800 dark:shadow-none dark:outline-white/15`}>
+                  <div className={`w-full overflow-hidden rounded-lg bg-white shadow-sm outline outline-black/5 ${roundedClass}`}>
                     {content}
                   </div>
                 )}

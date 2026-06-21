@@ -11,8 +11,8 @@ interface StatsCardProps {
 }
 
 export function StatsCard({ label, value, suffix = '', description = '', dark = false }: StatsCardProps) {
-  const textColor = dark ? 'text-gray-300' : 'text-gray-600';
-  const valueColor = dark ? 'text-white' : 'text-gray-900';
+  const textColor = dark ? 'text-neutral-300' : 'text-neutral-600';
+  const valueColor = dark ? 'text-white' : 'text-neutral-900';
 
   return (
     <Card dark={dark} padding="lg" as="div">

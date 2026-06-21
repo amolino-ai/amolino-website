@@ -27,13 +27,13 @@ export default function BottomFeature({
       <Container>
         <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:gap-x-16">
           <div className="lg:w-1/2">
-            <h2 className="text-3xl font-medium tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-medium tracking-tight text-neutral-900 sm:text-4xl">
               {title}
             </h2>
-            <p className="mt-6 text-lg text-gray-600">
+            <p className="mt-6 text-lg text-neutral-600">
               {subtitle}
             </p>
-            <ul className="mt-4 space-y-4 text-lg text-gray-600">
+            <ul className="mt-4 space-y-4 text-lg text-neutral-600">
               {points.map((point, index) => (
                 <li key={index}>
                   <strong>{point.title}</strong> {point.description}
