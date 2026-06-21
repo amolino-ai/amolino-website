@@ -25,7 +25,8 @@ This is a TypeScript project for our corporate website, <https://amolino.ai>. It
 
 ### Design tokens
 
-- See `DESIGN_TOKENS.md` and `src/styles/tailwind.css` for our design tokens.
+- See `DESIGN_SYSTEM.md` for the frontend/design-system developer guide (components, colors, conventions, recipes).
+- See `DESIGN_TOKENS.md` and `src/styles/tailwind.css` for the exact design token values.
 - Never use raw Tailwind colors (`gray-*`, `blue-*`, `indigo-*`, etc.). Use our semantic tokens (`neutral-*`, `primary-*`, `secondary-*`, etc.).
 - Use typography components from `src/components/typography/` instead of raw text size classes.
 
