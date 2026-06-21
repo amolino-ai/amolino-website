@@ -22,11 +22,11 @@ export function BottomCTA({
   return (
     <div className="relative bg-white py-24 sm:py-32">
       <Container>
-        <div className="mx-auto max-w-2xl rounded-3xl bg-gray-900 px-8 py-24 text-center sm:px-14">
+        <div className="mx-auto max-w-2xl rounded-3xl bg-neutral-900 px-8 py-24 text-center sm:px-14">
           <Heading as="h2" dark className="mx-auto max-w-4xl">
             {heading}
           </Heading>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">{description}</p>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-neutral-300">{description}</p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button href={primaryButtonLink}>{primaryButtonText}</Button>
             <Button href={secondaryButtonLink} variant="secondary">

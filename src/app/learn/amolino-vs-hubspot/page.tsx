@@ -8,11 +8,11 @@ import type { ComparisonItem } from '@/lib/content/types';
 
 function ComparisonCard({ title, amolino, hubspot }: ComparisonItem) {
   return (
-    <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-950/5">
-      <div className="border-b border-gray-100 p-6">
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+    <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-neutral-950/5">
+      <div className="border-b border-neutral-100 p-6">
+        <h3 className="text-lg font-semibold text-neutral-900">{title}</h3>
       </div>
-      <div className="grid grid-cols-1 divide-y divide-gray-100 lg:grid-cols-2 lg:divide-x lg:divide-y-0">
+      <div className="grid grid-cols-1 divide-y divide-neutral-100 lg:grid-cols-2 lg:divide-x lg:divide-y-0">
         <div className="p-6">
           <div className="mb-4 flex items-center gap-x-3">
             <div className="flex-none rounded-full bg-pink-600/10 p-1">
@@ -20,16 +20,16 @@ function ComparisonCard({ title, amolino, hubspot }: ComparisonItem) {
             </div>
             <h4 className="font-medium text-pink-600">Amolino</h4>
           </div>
-          <p className="text-gray-600">{amolino}</p>
+          <p className="text-neutral-600">{amolino}</p>
         </div>
         <div className="p-6">
           <div className="mb-4 flex items-center gap-x-3">
-            <div className="flex-none rounded-full bg-gray-600/10 p-1">
-              <div className="h-2 w-2 rounded-full bg-gray-600" />
+            <div className="flex-none rounded-full bg-neutral-600/10 p-1">
+              <div className="h-2 w-2 rounded-full bg-neutral-600" />
             </div>
-            <h4 className="font-medium text-gray-600">HubSpot</h4>
+            <h4 className="font-medium text-neutral-600">HubSpot</h4>
           </div>
-          <p className="text-gray-600">{hubspot}</p>
+          <p className="text-neutral-600">{hubspot}</p>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ function FeatureCheck({ children }: { children: React.ReactNode }) {
           clipRule="evenodd"
         />
       </svg>
-      <span className="text-gray-300">{children}</span>
+      <span className="text-neutral-300">{children}</span>
     </li>
   );
 }
@@ -57,13 +57,13 @@ function Hero({ badge, title, subtitle, description }: { badge: string; title: s
       <Container className="py-24 sm:py-32">
         <div className="mx-auto text-center">
           <Badge text={badge} backgroundColor="bg-pink-50" textColor="text-pink-700" />
-          <h1 className="mx-auto mt-6 max-w-5xl pb-12 text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="mx-auto mt-6 max-w-5xl pb-12 text-center text-4xl font-bold tracking-tight text-neutral-900 sm:text-6xl">
             {title}
           </h1>
         </div>
         <div className="mx-auto max-w-2xl text-center">
           <h2>{subtitle}</h2>
-          <p className="mt-6 text-left text-base/relaxed text-gray-600">
+          <p className="mt-6 text-left text-base/relaxed text-neutral-600">
             {description}
           </p>
         </div>
@@ -74,7 +74,7 @@ function Hero({ badge, title, subtitle, description }: { badge: string; title: s
 
 function Comparisons({ title, heading, items }: { title: string; heading: string; items: ComparisonItem[] }) {
   return (
-    <div className="bg-gray-50 py-24 sm:py-32">
+    <div className="bg-neutral-50 py-24 sm:py-32">
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <Subheading>{title}</Subheading>
@@ -97,7 +97,7 @@ function Analysis({ title, heading, description, scenarios, screenshot }: { titl
         <div className="mx-auto max-w-2xl lg:mx-0">
           <Subheading>{title}</Subheading>
           <Heading as="h2">{heading}</Heading>
-          <p className="mt-6 text-lg text-gray-600">
+          <p className="mt-6 text-lg text-neutral-600">
             {description}
           </p>
         </div>
@@ -124,7 +124,7 @@ function Analysis({ title, heading, description, scenarios, screenshot }: { titl
 
 function Benefits({ title, heading, items }: { title: string; heading: string; items: string[] }) {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
+    <div className="bg-neutral-900 py-24 sm:py-32">
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <Subheading>{title}</Subheading>

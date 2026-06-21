@@ -32,16 +32,16 @@ export default async function ResourcesPage() {
           {content.cards.map((resource) => (
             <article
               key={resource.href}
-              className="relative flex h-full flex-col rounded-3xl border border-gray-200 bg-gray-50 p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="relative flex h-full flex-col rounded-3xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              <p className="text-xs font-semibold tracking-wide text-blue-600 uppercase">{resource.eyebrow}</p>
-              <h2 className="mt-3 text-2xl font-semibold text-gray-900">
+              <p className="text-xs font-semibold tracking-wide text-primary-600 uppercase">{resource.eyebrow}</p>
+              <h2 className="mt-3 text-2xl font-semibold text-neutral-900">
                 <Link href={resource.href}>
                   <span className="absolute inset-0 rounded-3xl" />
                   {resource.title}
                 </Link>
               </h2>
-              <p className="mt-4 flex-1 text-base text-gray-600">{resource.description}</p>
+              <p className="mt-4 flex-1 text-base text-neutral-600">{resource.description}</p>
               <div className="mt-6">
                 <Button href={resource.href} variant="text" arrow="right">
                   {resource.ctaLabel}

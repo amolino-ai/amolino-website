@@ -23,22 +23,22 @@ async function HelpSections({ selectedSection }: { selectedSection?: string }) {
     : allSections;
 
   if (sections.length === 0) {
-    return <p className="mt-6 text-gray-500">No help articles found for this section.</p>;
+    return <p className="mt-6 text-neutral-500">No help articles found for this section.</p>;
   }
 
   return (
     <div className="mt-6">
       {sections.map((section) => (
         <div key={section.slug} className="mb-12">
-          <h2 className="mb-6 border-b border-gray-200 pb-2 text-xl font-semibold capitalize">{section.title}</h2>
+          <h2 className="mb-6 border-b border-neutral-200 pb-2 text-xl font-semibold capitalize">{section.title}</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {section.articles.map((article) => (
               <div
                 key={article.slug}
-                className="relative flex flex-col rounded-lg bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-shadow hover:shadow-md"
+                className="relative flex flex-col rounded-lg bg-white p-6 shadow-sm ring-1 ring-neutral-200 transition-shadow hover:shadow-md"
               >
                 <div className="flex items-start gap-3">
-                  <DocumentTextIcon className="mt-0.5 size-5 flex-shrink-0 text-blue-600" />
+                  <DocumentTextIcon className="mt-0.5 size-5 flex-shrink-0 text-primary-600" />
                   <div className="min-w-0 flex-1">
                     <h3 className="text-base leading-6 font-medium">
                       <Link href={`/help/${article.slug}`}>
@@ -46,26 +46,26 @@ async function HelpSections({ selectedSection }: { selectedSection?: string }) {
                         {article.title}
                       </Link>
                     </h3>
-                    <p className="mt-2 line-clamp-2 text-sm text-gray-600">{article.excerpt}</p>
+                    <p className="mt-2 line-clamp-2 text-sm text-neutral-600">{article.excerpt}</p>
 
                     {article.tags && article.tags.length > 0 && (
                       <div className="mt-3 flex flex-wrap gap-1">
                         {article.tags.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
-                            className="inline-flex items-center gap-1 rounded-md bg-gray-100 px-2 py-1 text-xs text-gray-700"
+                            className="inline-flex items-center gap-1 rounded-md bg-neutral-100 px-2 py-1 text-xs text-neutral-700"
                           >
                             <TagIcon className="size-3" />
                             {tag}
                           </span>
                         ))}
                         {article.tags.length > 3 && (
-                          <span className="text-xs text-gray-500">+{article.tags.length - 3} more</span>
+                          <span className="text-xs text-neutral-500">+{article.tags.length - 3} more</span>
                         )}
                       </div>
                     )}
 
-                    <div className="mt-4 text-xs text-gray-500">
+                    <div className="mt-4 text-xs text-neutral-500">
                       Last updated: {dayjs(article.lastUpdated).format('MMM D, YYYY')}
                     </div>
                   </div>
@@ -101,17 +101,17 @@ async function HelpFilters({
             : selectedSection
             ? `Section: ${selectedSection}`
             : 'All topics'}
-          <ChevronUpDownIcon className="size-4 fill-gray-900" />
+          <ChevronUpDownIcon className="size-4 fill-neutral-900" />
         </MenuButton>
         <MenuItems
           anchor="bottom start"
-          className="max-h-60 min-w-40 overflow-y-auto rounded-lg bg-white p-1 shadow-lg ring-1 ring-gray-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
+          className="max-h-60 min-w-40 overflow-y-auto rounded-lg bg-white p-1 shadow-lg ring-1 ring-neutral-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
         >
           <MenuItem>
             <Link
               href="/help"
               data-selected={selectedTag === undefined ? true : undefined}
-              className="group grid grid-cols-[1rem_1fr] items-center gap-2 rounded-md px-2 py-1 data-focus:bg-gray-950/5"
+              className="group grid grid-cols-[1rem_1fr] items-center gap-2 rounded-md px-2 py-1 data-focus:bg-neutral-950/5"
             >
               <CheckIcon className="hidden size-4 group-data-selected:block" />
               <p className="col-start-2 text-sm/6">All topics</p>
@@ -122,7 +122,7 @@ async function HelpFilters({
               <Link
                 href={`/help?tag=${tag}`}
                 data-selected={tag === selectedTag ? true : undefined}
-                className="group grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-2 py-1 data-focus:bg-gray-950/5"
+                className="group grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-2 py-1 data-focus:bg-neutral-950/5"
               >
                 <CheckIcon className="hidden size-4 group-data-selected:block" />
                 <p className="col-start-2 text-sm/6">{tag}</p>
@@ -157,9 +157,9 @@ async function FilteredHelpArticles({ tag, section }: { tag?: string; section?: 
   if (articles.length === 0) {
     return (
       <div className="mt-6 py-12 text-center">
-        <TagIcon className="mx-auto size-12 text-gray-400" />
-        <h3 className="mt-4 text-lg font-medium text-gray-900">No articles found</h3>
-        <p className="mt-2 text-gray-500">
+        <TagIcon className="mx-auto size-12 text-neutral-400" />
+        <h3 className="mt-4 text-lg font-medium text-neutral-900">No articles found</h3>
+        <p className="mt-2 text-neutral-500">
           No help articles are tagged with &ldquo;{tag}&rdquo;. Try browsing all topics or search for something else.
         </p>
         <Button href="/help" variant="outline" className="mt-4">
@@ -171,19 +171,19 @@ async function FilteredHelpArticles({ tag, section }: { tag?: string; section?: 
 
   return (
     <div className="mt-6">
-      <h2 className="mb-6 border-b border-gray-200 pb-2 text-xl font-semibold">
+      <h2 className="mb-6 border-b border-neutral-200 pb-2 text-xl font-semibold">
         Articles tagged with &ldquo;{tag}&rdquo;
       </h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => (
         <div
             key={article.slug}
-            className="relative flex flex-col rounded-lg bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-shadow hover:shadow-md"
+            className="relative flex flex-col rounded-lg bg-white p-6 shadow-sm ring-1 ring-neutral-200 transition-shadow hover:shadow-md"
           >
             <div className="flex items-start gap-3">
-              <DocumentTextIcon className="mt-0.5 size-5 flex-shrink-0 text-blue-600" />
+              <DocumentTextIcon className="mt-0.5 size-5 flex-shrink-0 text-primary-600" />
               <div className="min-w-0 flex-1">
-                <div className="mb-1 text-xs text-gray-500 capitalize">
+                <div className="mb-1 text-xs text-neutral-500 capitalize">
                   {article.section} {article.subsection && `/ ${article.subsection}`}
                 </div>
                 <h3 className="text-base leading-6 font-medium">
@@ -192,7 +192,7 @@ async function FilteredHelpArticles({ tag, section }: { tag?: string; section?: 
                     {article.title}
                   </Link>
                 </h3>
-                <p className="mt-2 line-clamp-2 text-sm text-gray-600">{article.excerpt}</p>
+                <p className="mt-2 line-clamp-2 text-sm text-neutral-600">{article.excerpt}</p>
 
                 {article.tags && article.tags.length > 0 && (
                   <div className="mt-3 flex flex-wrap gap-1">
@@ -200,7 +200,7 @@ async function FilteredHelpArticles({ tag, section }: { tag?: string; section?: 
                       <span
                         key={articleTag}
                         className={`inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs ${
-                          articleTag === tag ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'
+                          articleTag === tag ? 'bg-primary-100 text-primary-700' : 'bg-neutral-100 text-neutral-700'
                         }`}
                       >
                         <TagIcon className="size-3" />
@@ -208,12 +208,12 @@ async function FilteredHelpArticles({ tag, section }: { tag?: string; section?: 
                       </span>
                     ))}
                     {article.tags.length > 3 && (
-                      <span className="text-xs text-gray-500">+{article.tags.length - 3} more</span>
+                      <span className="text-xs text-neutral-500">+{article.tags.length - 3} more</span>
                     )}
                   </div>
                 )}
 
-                <div className="mt-4 text-xs text-gray-500">
+                <div className="mt-4 text-xs text-neutral-500">
                   Last updated: {dayjs(article.lastUpdated).format('MMM D, YYYY')}
                 </div>
               </div>

@@ -31,7 +31,7 @@ export function ProductFeatureCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className="rounded-xl bg-white shadow-md ring-1 ring-gray-900/5 transition-all hover:shadow-xl hover:ring-gray-900/10">
+      <div className="rounded-xl bg-white shadow-md ring-1 ring-neutral-900/5 transition-all hover:shadow-xl hover:ring-neutral-900/10">
         <div className="overflow-hidden rounded-t-xl">
           <Screenshot
             src={screenshot.src}
@@ -43,10 +43,10 @@ export function ProductFeatureCard({
         </div>
 
         <div className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900">
+          <h3 className="text-lg font-semibold text-neutral-900">
             {title}
           </h3>
-          <p className="mt-2 text-base text-gray-600 line-clamp-3">
+          <p className="mt-2 text-base text-neutral-600 line-clamp-3">
             {description}
           </p>
           <div className="mt-4">

@@ -48,10 +48,10 @@ function PricingCard({ tier }: { tier: PricingTier }) {
       <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
         <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
           <Subheading>{tier.name}</Subheading>
-          <p className="mt-2 text-sm/6 text-gray-950/75">{tier.description}</p>
+          <p className="mt-2 text-sm/6 text-neutral-950/75">{tier.description}</p>
           <div className="mt-8 flex items-center gap-4">
-            <div className="text-5xl font-medium text-gray-950">${tier.priceMonthly}</div>
-            <div className="text-sm/5 text-gray-950/75">
+            <div className="text-5xl font-medium text-neutral-950">${tier.priceMonthly}</div>
+            <div className="text-sm/5 text-neutral-950/75">
               <p>USD</p>
               <p>per month</p>
             </div>
@@ -60,7 +60,7 @@ function PricingCard({ tier }: { tier: PricingTier }) {
             <Button href="https://app.amolino.ai">21 day free trial</Button>
           </div>
           <div className="mt-8">
-            <h3 className="text-sm/6 font-medium text-gray-950">Accelerate your sales with:</h3>
+            <h3 className="text-sm/6 font-medium text-neutral-950">Accelerate your sales with:</h3>
             <ul className="mt-3 space-y-3">
               {tier.highlights.map((props, featureIndex) => (
                 <FeatureItem key={featureIndex} {...props} />
@@ -68,7 +68,7 @@ function PricingCard({ tier }: { tier: PricingTier }) {
             </ul>
           </div>
           <div className="mt-8">
-            <h3 className="text-sm/6 font-medium text-gray-950">Accelerate your sales with:</h3>
+            <h3 className="text-sm/6 font-medium text-neutral-950">Accelerate your sales with:</h3>
             <ul className="mt-3 space-y-3">
               {tier.highlights.map((props, featureIndex) => (
                 <FeatureItem key={featureIndex} {...props} />
@@ -121,11 +121,11 @@ function PricingTable({ selectedTier, tiers }: { selectedTier: PricingTier; tier
                 <Menu>
                   <MenuButton className="flex items-center justify-between gap-2 font-medium">
                     {selectedTier.name}
-                    <ChevronUpDownIcon className="size-4 fill-gray-900" />
+                    <ChevronUpDownIcon className="size-4 fill-neutral-900" />
                   </MenuButton>
                   <MenuItems
                     anchor="bottom start"
-                    className="min-w-(--button-width) rounded-lg bg-white p-1 shadow-lg ring-1 ring-gray-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
+                    className="min-w-(--button-width) rounded-lg bg-white p-1 shadow-lg ring-1 ring-neutral-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
                   >
                     {tiers.map((tier) => (
                       <MenuItem key={tier.slug}>
@@ -133,7 +133,7 @@ function PricingTable({ selectedTier, tiers }: { selectedTier: PricingTier; tier
                           scroll={false}
                           href={`/pricing?tier=${tier.slug}`}
                           data-selected={tier === selectedTier ? true : undefined}
-                          className="group flex items-center gap-2 rounded-md px-2 py-1 data-focus:bg-gray-200"
+                          className="group flex items-center gap-2 rounded-md px-2 py-1 data-focus:bg-neutral-200"
                         >
                           {tier.name}
                           <CheckIcon className="hidden size-4 group-data-selected:block" />
@@ -143,7 +143,7 @@ function PricingTable({ selectedTier, tiers }: { selectedTier: PricingTier; tier
                   </MenuItems>
                 </Menu>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-                  <ChevronUpDownIcon className="size-4 fill-gray-900" />
+                  <ChevronUpDownIcon className="size-4 fill-neutral-900" />
                 </div>
               </div>
             </td>
@@ -174,14 +174,14 @@ function PricingTable({ selectedTier, tiers }: { selectedTier: PricingTier; tier
           <tbody key={section} className="group">
             <tr>
               <th scope="colgroup" colSpan={4} className="px-0 pt-10 pb-0 group-first-of-type:pt-5">
-                <div className="-mx-4 rounded-lg bg-gray-50 px-4 py-3 text-sm/6 font-semibold">{section}</div>
+                <div className="-mx-4 rounded-lg bg-neutral-50 px-4 py-3 text-sm/6 font-semibold">{section}</div>
               </th>
             </tr>
             {tiers[0].features
               .filter((feature) => feature.section === section)
               .map(({ name }) => (
-                <tr key={name} className="border-b border-gray-100 last:border-none">
-                  <th scope="row" className="px-0 py-4 text-sm/6 font-normal text-gray-600">
+                <tr key={name} className="border-b border-neutral-100 last:border-none">
+                  <th scope="row" className="px-0 py-4 text-sm/6 font-normal text-neutral-600">
                     {name}
                   </th>
                   {tiers.map((tier) => {
@@ -197,12 +197,12 @@ function PricingTable({ selectedTier, tiers }: { selectedTier: PricingTier; tier
                       >
                         {value === true ? (
                           <>
-                            <CheckIcon className="size-4 fill-green-600" />
+                            <CheckIcon className="size-4 fill-success-600" />
                             <span className="sr-only">Included in {tier.name}</span>
                           </>
                         ) : value === false || value === undefined ? (
                           <>
-                            <MinusIcon className="size-4 fill-gray-400" />
+                            <MinusIcon className="size-4 fill-neutral-400" />
                             <span className="sr-only">Not included in {tier.name}</span>
                           </>
                         ) : (
@@ -224,10 +224,10 @@ function FeatureItem({ description, disabled = false }: { description: string; d
   return (
     <li
       data-disabled={disabled ? true : undefined}
-      className="flex items-start gap-4 text-sm/6 text-gray-950/75 data-disabled:text-gray-950/25"
+      className="flex items-start gap-4 text-sm/6 text-neutral-950/75 data-disabled:text-neutral-950/25"
     >
       <span className="inline-flex h-6 items-center">
-        <PlusIcon className="size-[0.9375rem] shrink-0 fill-gray-950/25" />
+        <PlusIcon className="size-[0.9375rem] shrink-0 fill-neutral-950/25" />
       </span>
       {disabled && <span className="sr-only">Not included:</span>}
       {description}
@@ -255,7 +255,7 @@ function FrequentlyAskedQuestions({ content }: { content: PricingPageContent }) 
           {content.faqs.map((faq, index) => (
             <dl key={index}>
               <dt className="text-sm font-semibold">{faq.question}</dt>
-              <dd className="mt-4 text-sm/6 text-gray-600">
+              <dd className="mt-4 text-sm/6 text-neutral-600">
                 {faq.answer}
               </dd>
             </dl>

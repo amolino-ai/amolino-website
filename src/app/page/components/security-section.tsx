@@ -60,25 +60,25 @@ const DefaultIcon = (
 
 export function SecuritySection({ content }: SecuritySectionProps) {
   return (
-    <div className="relative py-24 sm:py-32 bg-gradient-to-b from-white to-gray-50">
+    <div className="relative py-24 sm:py-32 bg-gradient-to-b from-white to-neutral-50">
       {/* <Backgrounds variant="pattern-medium" /> */}
 
       <Container className="relative">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-6">
+          <div className="inline-flex items-center rounded-full bg-primary-50 px-3 py-1 text-sm font-medium text-primary-700 ring-1 ring-inset ring-primary-700/10 mb-6">
             <svg className="mr-1.5 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             Enterprise Security
           </div>
 
-          <Heading as="h2" className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <Heading as="h2" className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
             {content.heading}
           </Heading>
           
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-lg leading-8 text-neutral-600">
             {content.description}
           </p>
         </div>
@@ -95,23 +95,23 @@ export function SecuritySection({ content }: SecuritySectionProps) {
                   className="group relative"
                 >
                   {/* Card */}
-                  <div className="relative h-full rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-lg hover:ring-gray-900/10">
+                  <div className="relative h-full rounded-2xl bg-white p-8 shadow-sm ring-1 ring-neutral-900/5 transition-all duration-300 hover:shadow-lg hover:ring-neutral-900/10">
                     {/* Icon container */}
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 ring-1 ring-inset ring-blue-600/10 transition-colors group-hover:bg-blue-100">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600 ring-1 ring-inset ring-primary-600/10 transition-colors group-hover:bg-primary-100">
                       {icon}
                     </div>
 
                     {/* Content */}
-                    <h3 className="mt-6 text-lg font-semibold leading-7 text-gray-900">
+                    <h3 className="mt-6 text-lg font-semibold leading-7 text-neutral-900">
                       {feature.title}
                     </h3>
                     
-                    <p className="mt-3 text-base leading-7 text-gray-600">
+                    <p className="mt-3 text-base leading-7 text-neutral-600">
                       {feature.description}
                     </p>
 
                     {/* Hover gradient effect */}
-                    <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-primary-50 to-tertiary-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   </div>
                 </div>
               );
@@ -120,10 +120,10 @@ export function SecuritySection({ content }: SecuritySectionProps) {
         </div>
 
         {/* Trust footer */}
-        <div className="mt-16 pt-16 border-t border-gray-200">
+        <div className="mt-16 pt-16 border-t border-neutral-200">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-3 text-sm text-gray-600">
-              <svg className="h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center gap-3 text-sm text-neutral-600">
+              <svg className="h-5 w-5 text-success-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
               </svg>
               <span className="font-medium">Ask us about our SOC 2 Type II certification</span>
@@ -131,7 +131,7 @@ export function SecuritySection({ content }: SecuritySectionProps) {
             
             <a 
               href="/security" 
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-500 transition-colors"
             >
               View detailed security documentation
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">

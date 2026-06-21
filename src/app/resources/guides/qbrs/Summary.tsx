@@ -9,7 +9,7 @@ export default async function Summary() {
     <section id="summary" className="scroll-mt-20">
       <SectionHeading>Summary & Conclusion</SectionHeading>
       <div className="mt-6 py-4">
-        <Text className="text-lg text-zinc-700 mb-8">
+        <Text className="text-lg text-neutral-700 mb-8">
           {content.introText}
         </Text>
 
@@ -18,17 +18,17 @@ export default async function Summary() {
         <Box className="space-y-6 mb-8">
           {content.principles.map((principle, index) => (
             <Box key={index} className="space-y-2">
-              <Text className="text-lg font-semibold text-zinc-800">
+              <Text className="text-lg font-semibold text-neutral-800">
                 {principle.title}
               </Text>
               {principle.description && (
-                <Text className="text-zinc-700 ml-6">
+                <Text className="text-neutral-700 ml-6">
                   {principle.description}
                 </Text>
               )}
               {principle.bulletPoints && (
                 <Box className="ml-6">
-                  <List className="text-zinc-700">
+                  <List className="text-neutral-700">
                     {principle.bulletPoints.map((point, idx) => (
                       <ListItem key={idx}>{point}</ListItem>
                     ))}

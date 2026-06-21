@@ -18,8 +18,8 @@ export function LinkedInLink({ name, url, className, children }: LinkedInLinkPro
       target="_blank"
       rel="noopener noreferrer"
       className={clsx(
-        'group inline-flex items-center gap-2 text-blue-600 transition-colors duration-200 hover:text-blue-800',
-        'rounded-md hover:underline focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none',
+        'group inline-flex items-center gap-2 text-primary-600 transition-colors duration-200 hover:text-primary-800',
+        'rounded-md hover:underline focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:outline-none',
         className,
       )}
     >

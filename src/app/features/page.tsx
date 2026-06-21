@@ -18,10 +18,10 @@ export default async function ProductOverview() {
       <section className="bg-white py-16 sm:py-24">
         <Container>
           <div className="text-center">
-            <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
               AI-Powered Sales Intelligence Platform
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-600">
+            <p className="mx-auto mt-6 max-w-2xl text-xl text-neutral-600">
               Transform your sales organization with comprehensive features across forecasting, execution, and deal protection.
             </p>
             <div className="mt-8">

@@ -25,14 +25,14 @@ function Item({ label, variant, index }: ItemProps) {
       onMouseLeave={() => setHovered(false)}
       className={clsx(
         'flex items-center gap-3 px-3.5 py-2.5 rounded-lg cursor-default transition-colors duration-150',
-        hovered && (isAvoid ? 'bg-red-500/5' : 'bg-emerald-500/5')
+        hovered && (isAvoid ? 'bg-error-500/5' : 'bg-success-500/5')
       )}
     >
       {/* Index number */}
       <span
         className={clsx(
           'font-mono text-[10px] font-semibold min-w-4 tracking-wide',
-          isAvoid ? 'text-red-800/35' : 'text-emerald-800/35'
+          isAvoid ? 'text-error-800/35' : 'text-success-800/35'
         )}
       >
         {String(index + 1).padStart(2, '0')}
@@ -42,7 +42,7 @@ function Item({ label, variant, index }: ItemProps) {
       <div
         className={clsx(
           'w-1.5 h-1.5 rounded-full flex-shrink-0 transition-transform duration-150',
-          isAvoid ? 'bg-red-500/50' : 'bg-emerald-500/60',
+          isAvoid ? 'bg-error-500/50' : 'bg-success-500/60',
           hovered && 'scale-150'
         )}
       />
@@ -51,7 +51,7 @@ function Item({ label, variant, index }: ItemProps) {
       <span
         className={clsx(
           'text-sm font-medium leading-tight tracking-tight',
-          isAvoid ? 'text-red-950' : 'text-emerald-950'
+          isAvoid ? 'text-error-950' : 'text-success-950'
         )}
       >
         {label}
@@ -93,8 +93,8 @@ export function GuidanceCard({
       className={clsx(
         'flex-1 min-w-0 rounded-2xl border p-7 flex flex-col gap-1.5 relative overflow-hidden',
         isAvoid
-          ? 'border-red-500/15 bg-gradient-to-br from-red-50 to-red-100/50'
-          : 'border-emerald-500/20 bg-gradient-to-br from-emerald-50 to-emerald-100/50',
+          ? 'border-error-500/15 bg-gradient-to-br from-error-50 to-error-100/50'
+          : 'border-success-500/20 bg-gradient-to-br from-success-50 to-success-100/50',
         className
       )}
     >
@@ -102,7 +102,7 @@ export function GuidanceCard({
       <div
         className={clsx(
           'absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-[0.07] pointer-events-none',
-          isAvoid ? 'bg-red-500' : 'bg-emerald-500'
+          isAvoid ? 'bg-error-500' : 'bg-success-500'
         )}
       />
 
@@ -112,14 +112,14 @@ export function GuidanceCard({
           <div
             className={clsx(
               'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full mb-2.5',
-              isAvoid ? 'bg-red-500/10' : 'bg-emerald-500/10'
+              isAvoid ? 'bg-error-500/10' : 'bg-success-500/10'
             )}
           >
             <span className="text-[10px]">{isAvoid ? '✗' : '✓'}</span>
             <span
               className={clsx(
                 'font-mono text-[9px] font-semibold tracking-widest uppercase',
-                isAvoid ? 'text-red-700' : 'text-emerald-700'
+                isAvoid ? 'text-error-700' : 'text-success-700'
               )}
             >
               {displayBadge}
@@ -128,7 +128,7 @@ export function GuidanceCard({
           <h3
             className={clsx(
               'text-lg font-bold tracking-tight leading-tight',
-              isAvoid ? 'text-red-950' : 'text-emerald-950'
+              isAvoid ? 'text-error-950' : 'text-success-950'
             )}
           >
             {title}
@@ -141,8 +141,8 @@ export function GuidanceCard({
         className={clsx(
           'h-px mb-2.5',
           isAvoid
-            ? 'bg-gradient-to-r from-red-500/20 to-transparent'
-            : 'bg-gradient-to-r from-emerald-500/25 to-transparent'
+            ? 'bg-gradient-to-r from-error-500/20 to-transparent'
+            : 'bg-gradient-to-r from-success-500/25 to-transparent'
         )}
       />
 
@@ -160,14 +160,14 @@ export function GuidanceCard({
           className={clsx(
             'mt-4 p-3.5 rounded-lg border border-dashed',
             isAvoid
-              ? 'bg-red-500/5 border-red-500/15'
-              : 'bg-emerald-500/5 border-emerald-500/15'
+              ? 'bg-error-500/5 border-error-500/15'
+              : 'bg-success-500/5 border-success-500/15'
           )}
         >
           <p
             className={clsx(
               'text-[11px] leading-relaxed italic m-0',
-              isAvoid ? 'text-red-900/60' : 'text-emerald-900/60'
+              isAvoid ? 'text-error-900/60' : 'text-success-900/60'
             )}
           >
             {footerNote}
@@ -205,12 +205,12 @@ export function GuidanceCardPair({
       {(sectionLabel || heading) && (
         <div className="text-center mb-8">
           {sectionLabel && (
-            <p className="font-mono text-[10px] tracking-widest uppercase text-gray-400 mb-2.5 font-semibold">
+            <p className="font-mono text-[10px] tracking-widest uppercase text-neutral-400 mb-2.5 font-semibold">
               {sectionLabel}
             </p>
           )}
           {heading && (
-            <h2 className="text-2xl font-bold text-gray-900 tracking-tight">
+            <h2 className="text-2xl font-bold text-neutral-900 tracking-tight">
               {heading}
             </h2>
           )}

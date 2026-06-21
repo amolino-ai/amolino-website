@@ -59,7 +59,7 @@ export function Card({
     <Component
       className={clsx(
         'rounded-2xl shadow-sm ring-1',
-        dark ? 'bg-white/5 ring-white/10' : 'bg-white ring-gray-950/5',
+        dark ? 'bg-white/5 ring-white/10' : 'bg-white ring-neutral-950/5',
         paddingClasses[padding],
         className
       )}
@@ -105,7 +105,7 @@ interface CardHeaderProps {
  * ```tsx
  * <CardHeader
  *   title="Forecast"
- *   badge={<span className="rounded-full bg-green-100 px-2 py-1">Live</span>}
+ *   badge={<span className="rounded-full bg-success-100 px-2 py-1">Live</span>}
  *   dark
  * />
  * ```
@@ -113,8 +113,8 @@ interface CardHeaderProps {
  * @see {@link Card}
  */
 export function CardHeader({ title, description, badge, dark = false, className }: CardHeaderProps) {
-  const titleColor = dark ? 'text-white' : 'text-gray-900';
-  const descriptionColor = dark ? 'text-gray-300' : 'text-gray-600';
+  const titleColor = dark ? 'text-white' : 'text-neutral-900';
+  const descriptionColor = dark ? 'text-neutral-300' : 'text-neutral-600';
 
   return (
     <div className={className}>
@@ -179,8 +179,8 @@ interface CardStatsProps {
  */
 export function CardStats({ stats, columns = 2, dark = false, className }: CardStatsProps) {
   const valueColor = dark ? 'text-white' : 'text-primary-600';
-  const labelColor = dark ? 'text-gray-300' : 'text-gray-600';
-  const borderColor = dark ? 'border-white/10' : 'border-gray-100';
+  const labelColor = dark ? 'text-neutral-300' : 'text-neutral-600';
+  const borderColor = dark ? 'border-white/10' : 'border-neutral-100';
 
   const gridClasses = {
     1: 'grid-cols-1',

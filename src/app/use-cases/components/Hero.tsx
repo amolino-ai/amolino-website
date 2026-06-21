@@ -38,7 +38,7 @@ export function Hero({
       secondaryButton={{
         text: secondaryButtonText,
         href: secondaryButtonLink,
-        className: 'bg-amber-100',
+        className: 'bg-warning-100',
       }}
     />
   );

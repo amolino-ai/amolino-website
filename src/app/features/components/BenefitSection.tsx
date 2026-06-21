@@ -24,7 +24,7 @@ export function BenefitSection({
   index,
 }: BenefitSectionProps) {
   // Alternate background colors
-  const bgColors = ['bg-white', 'bg-gray-50', 'bg-blue-50'];
+  const bgColors = ['bg-white', 'bg-neutral-50', 'bg-primary-50'];
   const bgColor = bgColors[index % bgColors.length];
 
   return (
@@ -37,13 +37,13 @@ export function BenefitSection({
               <Badge text={badgeText} variant="ring-glow" />
             </div>
           )}
-          <h2 className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
             {benefitTitle}
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="mt-4 text-xl text-neutral-600">
             {benefitSubtitle}
           </p>
-          <p className="mt-6 text-base text-gray-600 line-clamp-3">
+          <p className="mt-6 text-base text-neutral-600 line-clamp-3">
             {benefitDescription}
           </p>
           <div className="mt-6">

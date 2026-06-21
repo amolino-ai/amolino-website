@@ -75,42 +75,42 @@ export default function DemoPage() {
   };
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white">
+    <div className="relative overflow-hidden bg-gradient-to-b from-neutral-50 to-white">
       {/* Subtle background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl"></div>
-        <div className="absolute top-60 -left-40 w-96 h-96 bg-purple-100/30 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-100/40 rounded-full blur-3xl"></div>
+        <div className="absolute top-60 -left-40 w-96 h-96 bg-tertiary-100/30 rounded-full blur-3xl"></div>
       </div>
 
       <Container className="relative">
         <div className="py-16 sm:py-24 lg:py-32">
           {/* Header Section */}
           <div className="mx-auto max-w-2xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-8">
-              <svg className="h-1.5 w-1.5 fill-blue-600" viewBox="0 0 6 6" aria-hidden="true">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-700 ring-1 ring-inset ring-primary-700/10 mb-8">
+              <svg className="h-1.5 w-1.5 fill-primary-600" viewBox="0 0 6 6" aria-hidden="true">
                 <circle cx={3} cy={3} r={3} />
               </svg>
               Get Started
             </div>
             
-            <h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
               Book a Demo
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-xl mx-auto">
+            <p className="mt-6 text-lg leading-8 text-neutral-600 max-w-xl mx-auto">
 w              See how Amolino helps sales teams win more deals. Fill out the form below and we&apos;ll schedule a personalized demo.
             </p>
           </div>
 
           {/* Form Section */}
           <div className="mx-auto mt-16 max-w-xl">
-            <div className="bg-white rounded-2xl shadow-xl shadow-gray-900/5 ring-1 ring-gray-900/5 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-xl shadow-neutral-900/5 ring-1 ring-neutral-900/5 overflow-hidden">
               <div className="p-8 sm:p-10">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   {/* Name & Email - Two columns on larger screens */}
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div className="sm:col-span-2">
-                      <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
-                        Full Name <span className="text-red-500">*</span>
+                      <label htmlFor="name" className="block text-sm font-semibold leading-6 text-neutral-900">
+                        Full Name <span className="text-error-500">*</span>
                       </label>
                       <div className="mt-2.5">
                         <input
@@ -118,10 +118,10 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
                           {...register('name')}
                           type="text"
                           placeholder="John Doe"
-                          className="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 transition-shadow"
+                          className="block w-full rounded-lg border-0 px-4 py-3 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6 transition-shadow"
                         />
                         {errors.name && (
-                          <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                          <p className="mt-2 text-sm text-error-600 flex items-center gap-1">
                             <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                               <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
                             </svg>
@@ -132,8 +132,8 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
                     </div>
 
                     <div className="sm:col-span-2">
-                      <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-                        Work Email <span className="text-red-500">*</span>
+                      <label htmlFor="email" className="block text-sm font-semibold leading-6 text-neutral-900">
+                        Work Email <span className="text-error-500">*</span>
                       </label>
                       <div className="mt-2.5">
                         <input
@@ -141,10 +141,10 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
                           {...register('email')}
                           type="email"
                           placeholder="john@company.com"
-                          className="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 transition-shadow"
+                          className="block w-full rounded-lg border-0 px-4 py-3 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6 transition-shadow"
                         />
                         {errors.email && (
-                          <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                          <p className="mt-2 text-sm text-error-600 flex items-center gap-1">
                             <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                               <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
                             </svg>
@@ -158,7 +158,7 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
                   {/* Company & Phone */}
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+                      <label htmlFor="company" className="block text-sm font-semibold leading-6 text-neutral-900">
                         Company
                       </label>
                       <div className="mt-2.5">
@@ -167,13 +167,13 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
                           {...register('company')}
                           type="text"
                           // placeholder="Acme Inc."
-                          className="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 transition-shadow"
+                          className="block w-full rounded-lg border-0 px-4 py-3 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6 transition-shadow"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="phoneNumber" className="block text-sm font-semibold leading-6 text-gray-900">
+                      <label htmlFor="phoneNumber" className="block text-sm font-semibold leading-6 text-neutral-900">
                         Phone Number
                       </label>
                       <div className="mt-2.5">
@@ -183,7 +183,7 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
                           {...register('phoneNumber')}
                           type="tel"
                           //placeholder="+1 (555) 000-0000"
-                          className="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 transition-shadow"
+                          className="block w-full rounded-lg border-0 px-4 py-3 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6 transition-shadow"
                         />
                       </div>
                     </div>
@@ -191,7 +191,7 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+                    <label htmlFor="message" className="block text-sm font-semibold leading-6 text-neutral-900">
                       Tell us about your needs
                     </label>
                     <div className="mt-2.5">
@@ -200,17 +200,17 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
                         {...register('message')}
                         rows={4}
                         placeholder="Share any specific challenges or questions you&apos;d like us to address during the demo..."
-                        className="block w-full rounded-lg border-0 px-4 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 resize-none transition-shadow"
+                        className="block w-full rounded-lg border-0 px-4 py-3 text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-300 placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6 resize-none transition-shadow"
                       />
                     </div>
                   </div>
 
                   {/* Privacy Notice */}
-                  <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                    <svg className="h-5 w-5 text-gray-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <div className="flex items-start gap-3 p-4 bg-neutral-50 rounded-lg border border-neutral-200">
+                    <svg className="h-5 w-5 text-neutral-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                     </svg>
-                    <p className="text-xs leading-5 text-gray-600">
+                    <p className="text-xs leading-5 text-neutral-600">
                       We respect your privacy. Your information will only be used to contact you about the demo and will never be shared with third parties.
                     </p>
                   </div>
@@ -250,7 +250,7 @@ w              See how Amolino helps sales teams win more deals. Fill out the fo
 
             {/* Additional trust signals */}
             <div className="mt-8 text-center">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-neutral-500">
                 Trusted by sales teams at leading B2B companies
               </p>
             </div>

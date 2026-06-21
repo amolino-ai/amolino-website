@@ -95,8 +95,8 @@ export function Hero({
           <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-16">
             <div className="lg:w-1/2">
               <Badge text={badgeText} backgroundColor={badgeBgColor} textColor={badgeTextColor} />
-              <h1 className="mt-6 text-4xl font-medium tracking-tight text-gray-900 sm:text-5xl">{title}</h1>
-              <p className="mt-6 text-xl text-gray-600">{description}</p>
+              <h1 className="mt-6 text-4xl font-medium tracking-tight text-neutral-900 sm:text-5xl">{title}</h1>
+              <p className="mt-6 text-xl text-neutral-600">{description}</p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:gap-6">
                 <Button href={primaryButton.href}>{primaryButton.text}</Button>
                 {secondaryButton && (
@@ -130,8 +130,8 @@ export function Hero({
       <Container className="relative py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <Badge text={badgeText} backgroundColor={badgeBgColor} textColor={badgeTextColor} />
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{title}</h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">{description}</p>
+          <h1 className="mt-6 text-4xl font-bold tracking-tight text-neutral-900 sm:text-6xl">{title}</h1>
+          <p className="mt-6 text-lg leading-8 text-neutral-600">{description}</p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button href={primaryButton.href}>{primaryButton.text}</Button>
             {secondaryButton && (

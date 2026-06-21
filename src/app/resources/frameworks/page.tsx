@@ -31,18 +31,18 @@ export default async function FrameworksPage() {
         {content.cards.map((framework) => (
           <article
             key={framework.href}
-            className="relative mt-12 flex max-w-3xl flex-col rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm transition-shadow hover:shadow-md"
+            className="relative mt-12 flex max-w-3xl flex-col rounded-3xl border border-neutral-200 bg-neutral-50 p-8 shadow-sm transition-shadow hover:shadow-md"
           >
             {framework.eyebrow && (
-              <p className="text-xs font-semibold tracking-wide text-blue-600 uppercase">{framework.eyebrow}</p>
+              <p className="text-xs font-semibold tracking-wide text-primary-600 uppercase">{framework.eyebrow}</p>
             )}
-            <h2 className="mt-3 text-3xl font-semibold text-gray-900">
+            <h2 className="mt-3 text-3xl font-semibold text-neutral-900">
               <Link href={framework.href}>
                 <span className="absolute inset-0 rounded-3xl" />
                 {framework.title}
               </Link>
             </h2>
-            <p className="mt-4 text-base text-gray-600">{framework.description}</p>
+            <p className="mt-4 text-base text-neutral-600">{framework.description}</p>
             <div className="mt-6">
               <Button href={framework.href} variant="text" arrow="right">
                 {framework.ctaLabel}

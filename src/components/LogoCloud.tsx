@@ -41,7 +41,7 @@ export function LogoCloud() {
             {logos.map((logo) => (
               <div key={logo.name} className="flex h-32 flex-col items-center justify-center">
                 <Image alt={logo.name} src={logo.src} width={200} height={48} className="mb-3 h-12 w-auto object-contain" loading="lazy" />
-                <span className="text-center text-lg text-bold text-gray-600">{logo.name}</span>
+                <span className="text-center text-lg text-bold text-neutral-600">{logo.name}</span>
               </div>
             ))}
           </div>

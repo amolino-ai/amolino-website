@@ -32,15 +32,15 @@ export default async function GuidesPage() {
           {content.cards.map((guide) => (
             <article
               key={guide.href}
-              className="relative flex h-full flex-col rounded-3xl border border-gray-200 bg-gray-50 p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="relative flex h-full flex-col rounded-3xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              <h2 className="text-2xl font-semibold text-gray-900">
+              <h2 className="text-2xl font-semibold text-neutral-900">
                 <Link href={guide.href}>
                   <span className="absolute inset-0 rounded-3xl" />
                   {guide.title}
                 </Link>
               </h2>
-              <p className="mt-4 flex-1 text-base text-gray-600">{guide.description}</p>
+              <p className="mt-4 flex-1 text-base text-neutral-600">{guide.description}</p>
               <div className="mt-6">
                 <Button href={guide.href} variant="text" arrow="right">
                   {guide.ctaLabel}

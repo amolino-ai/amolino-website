@@ -49,11 +49,11 @@ export default function ProductGrid({ products }: ProductGridProps) {
         >
           <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-8">
             <div className="lg:w-1/2">
-              <h2 className="text-2xl font-semibold text-gray-900">{product.name}</h2>
-              <p className="mt-4 text-gray-600">{product.description}</p>
+              <h2 className="text-2xl font-semibold text-neutral-900">{product.name}</h2>
+              <p className="mt-4 text-neutral-600">{product.description}</p>
               <ul className="mt-6 space-y-3">
                 {product.features.map((feature) => (
-                  <li key={feature} className="flex items-center text-gray-600">
+                  <li key={feature} className="flex items-center text-neutral-600">
                     <svg
                       className="mr-3 h-5 w-5 text-pink-600"
                       fill="none"

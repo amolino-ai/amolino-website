@@ -15,10 +15,10 @@ export function NumbersSection({ content }: NumbersSectionProps) {
             <div
               key={index}
               className={`flex flex-col gap-y-2 ${
-                index === 1 ? 'max-sm:border-b max-sm:border-dotted max-sm:border-gray-200 max-sm:pb-4' : ''
+                index === 1 ? 'max-sm:border-b max-sm:border-dotted max-sm:border-neutral-200 max-sm:pb-4' : ''
               }`}
             >
-              <dt className="text-sm/6 text-gray-600">{stat.label}</dt>
+              <dt className="text-sm/6 text-neutral-600">{stat.label}</dt>
               <dd className="order-first text-6xl font-medium tracking-tight">
                 <AnimatedNumber start={0} end={stat.value} decimals={stat.decimals} />
                 {stat.suffix}

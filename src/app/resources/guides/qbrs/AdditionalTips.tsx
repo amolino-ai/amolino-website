@@ -7,7 +7,7 @@ export default function AdditionalTips() {
     <section id="additional-tips" className="scroll-mt-20">
       <SectionHeading>Additional Tips & Tools — Super-charging Your QBRs</SectionHeading>
       <Container size="lg" className="mt-6 py-4">
-        <Text size="lg" className="text-zinc-700  mb-8">
+        <Text size="lg" className="text-neutral-700  mb-8">
           Below is a grab-bag of <strong>practical add-ons</strong> you can cherry-pick to fit your culture, tech stack, and industry.
         </Text>
 
@@ -109,8 +109,8 @@ export default function AdditionalTips() {
           </TableTbody>
         </Table>
 
-        <Box className="bg-blue-50  p-4 rounded-lg mb-8">
-          <Text size="sm" className="text-blue-800 ">
+        <Box className="bg-primary-50  p-4 rounded-lg mb-8">
+          <Text size="sm" className="text-primary-800 ">
             <strong>Integration Hint:</strong> Pipe all tools into a <strong>data warehouse (Snowflake, BigQuery, Redshift)</strong> and treat dashboards & slide charts as read-only layers. One data model = zero metric disputes.
           </Text>
         </Box>
@@ -120,7 +120,7 @@ export default function AdditionalTips() {
         <Title order={3} className="mb-4">3. Re-usable Templates</Title>
         
         <Title order={4} className="mb-4">3.1 Executive Summary Slide</Title>
-        <Box className="bg-gray-50  p-4 rounded-lg mb-8 font-mono text-sm">
+        <Box className="bg-neutral-50  p-4 rounded-lg mb-8 font-mono text-sm">
           <pre className="whitespace-pre-wrap">
 {`📊 Q3 at a Glance
 ———————————————————
@@ -147,7 +147,7 @@ Cash Burn Multiple   : 1.3×    (last Q 1.5×)
         </Box>
 
         <Title order={4} className="mb-4">3.2 Issues & Recommendations Card</Title>
-        <Box className="bg-gray-50  p-4 rounded-lg mb-8 font-mono text-sm">
+        <Box className="bg-neutral-50  p-4 rounded-lg mb-8 font-mono text-sm">
           <pre className="whitespace-pre-wrap">
 {`ISSUE
 • Enterprise churn spike: 3 logos lost in Q3 worth $1.1M ARR.
@@ -207,7 +207,7 @@ DECISION NEEDED BY
           </TableTbody>
         </Table>
 
-        <Text size="sm" className="text-gray-600 mb-8">
+        <Text size="sm" className="text-neutral-600 mb-8">
           Color key: 🟢 On Track • 🟡 At Risk • 🔴 Off Track • ✅ Done
         </Text>
 
@@ -283,7 +283,7 @@ DECISION NEEDED BY
           </TableTbody>
         </Table>
 
-        <Text size="lg" className="text-zinc-700  mt-8">
+        <Text size="lg" className="text-neutral-700  mt-8">
           Embed these tips, tools, and templates into your playbook and you&apos;ll turn the QBR into a high-leverage ritual that informs strategy, accelerates execution, and keeps every leader laser-focused on what moves the revenue dial.
         </Text>
       </Container>

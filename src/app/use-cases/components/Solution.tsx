@@ -15,8 +15,8 @@ interface SolutionProps {
 function FeatureList({ title, items }: FeatureListProps) {
   return (
     <div>
-      <h3 className="text-2xl font-semibold text-gray-900">{title}</h3>
-      <ul className="mt-6 space-y-4 text-gray-600">
+      <h3 className="text-2xl font-semibold text-neutral-900">{title}</h3>
+      <ul className="mt-6 space-y-4 text-neutral-600">
         {items.map((item, index) => (
           <li key={index} className="flex gap-x-3">
             <svg className="h-6 w-5 flex-none text-pink-600" viewBox="0 0 20 20" fill="currentColor">

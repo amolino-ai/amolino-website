@@ -15,7 +15,7 @@ export function BentoSection({ content, dark = false }: BentoSectionProps) {
       <Heading as="h3" dark={dark} className="mt-2 max-w-5xl">
         {content.heading}
       </Heading>
-      <div className="mt-4 max-w-4xl text-gray-400">
+      <div className="mt-4 max-w-4xl text-neutral-400">
         {content.description}
       </div>
 
@@ -53,7 +53,7 @@ export function BentoSection({ content, dark = false }: BentoSectionProps) {
   // Wrap in dark theme container if dark mode is enabled
   if (dark) {
     return (
-      <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
+      <div className="mx-2 mt-2 rounded-4xl bg-neutral-900 py-32">
         {sectionContent}
       </div>
     );

@@ -184,8 +184,8 @@ function SearchResult({
   return (
     <li
       className={clsx(
-        'group block cursor-default px-4 py-3 aria-selected:bg-neutral-50 dark:aria-selected:bg-neutral-800/50',
-        resultIndex > 0 && 'border-t border-neutral-100 dark:border-neutral-800',
+        'group block cursor-default px-4 py-3 aria-selected:bg-neutral-50',
+        resultIndex > 0 && 'border-t border-neutral-100',
       )}
       aria-labelledby={`${id}-hierarchy ${id}-title`}
       {...autocomplete.getItemProps({
@@ -196,7 +196,7 @@ function SearchResult({
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="text-sm font-medium text-neutral-900 group-aria-selected:text-primary-500 dark:text-white"
+        className="text-sm font-medium text-neutral-900 group-aria-selected:text-primary-500"
       >
         <HighlightQuery text={result.title} query={query} />
       </div>
@@ -213,7 +213,7 @@ function SearchResult({
                 className={
                   itemIndex === items.length - 1
                     ? 'sr-only'
-                    : 'mx-2 text-neutral-300 dark:text-neutral-700'
+                    : 'mx-2 text-neutral-300'
                 }
               >
                 /
@@ -238,10 +238,10 @@ function SearchResults({
   if (collection.items.length === 0) {
     return (
       <div className="p-6 text-center">
-        <NoResultsIcon className="mx-auto h-5 w-5 stroke-neutral-900 dark:stroke-neutral-600" />
-        <p className="mt-2 text-xs text-neutral-700 dark:text-neutral-400">
+        <NoResultsIcon className="mx-auto h-5 w-5 stroke-neutral-900" />
+        <p className="mt-2 text-xs text-neutral-700">
           Nothing found for{' '}
-          <strong className="font-semibold break-words text-neutral-900 dark:text-white">
+          <strong className="font-semibold break-words text-neutral-900">
             &lsquo;{query}&rsquo;
           </strong>
           . Please try again.
@@ -311,7 +311,7 @@ function SearchInput({
       />
       {autocompleteState.status === 'stalled' && (
         <div className="absolute inset-y-0 right-3 flex items-center">
-          <LoadingIcon className="h-5 w-5 animate-spin stroke-neutral-200 text-neutral-900 dark:stroke-neutral-800 dark:text-primary-400" />
+          <LoadingIcon className="h-5 w-5 animate-spin stroke-neutral-200 text-neutral-900" />
         </div>
       )}
     </div>
@@ -372,7 +372,7 @@ function SearchDialog({
     >
       <DialogBackdrop
         transition
-        className="fixed inset-0 bg-neutral-400/25 backdrop-blur-xs data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in dark:bg-black/40"
+        className="fixed inset-0 bg-neutral-400/25 backdrop-blur-xs data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
       />
 
       <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 lg:px-8 lg:py-[15vh]">
@@ -395,7 +395,7 @@ function SearchDialog({
               />
               <div
                 ref={panelRef}
-                className="border-t border-neutral-200 bg-white empty:hidden dark:border-neutral-100/5 dark:bg-white/2.5"
+                className="border-t border-neutral-200 bg-white empty:hidden"
                 {...autocomplete.getPanelProps({})}
               >
                 {autocompleteState.isOpen && (
@@ -460,7 +460,7 @@ export function Search() {
       >
         <SearchIcon className="h-5 w-5 stroke-current" />
         Find something...
-        <kbd className="ml-auto text-2xs text-neutral-400 dark:text-neutral-500">
+        <kbd className="ml-auto text-2xs text-neutral-400">
           <kbd className="font-sans">{modifierKey}</kbd>
           <kbd className="font-sans">K</kbd>
         </kbd>
@@ -479,12 +479,12 @@ export function MobileSearch() {
     <div className="contents lg:hidden">
       <button
         type="button"
-        className="relative flex size-6 items-center justify-center rounded-md transition hover:bg-neutral-900/5 lg:hidden dark:hover:bg-white/5"
+        className="relative flex size-6 items-center justify-center rounded-md transition hover:bg-neutral-900/5 lg:hidden"
         aria-label="Find something..."
         {...buttonProps}
       >
         <span className="absolute size-12 [@media(pointer:fine)]:hidden" />
-        <SearchIcon className="h-5 w-5 stroke-neutral-900 dark:stroke-white" />
+        <SearchIcon className="h-5 w-5 stroke-neutral-900" />
       </button>
       <Suspense fallback={null}>
         <SearchDialog className="lg:hidden" {...dialogProps} />

@@ -55,7 +55,7 @@ export default async function Home() {
         </Container>
 
         {/* Feature section - full width background with contained content */}
-        {/* <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
+        {/* <div className="bg-linear-to-b from-white from-50% to-neutral-100 py-32">
           <FeatureSection content={featureSectionContent} /> */}
           {/* <BentoSection content={bentoSectionContent} /> */}
         {/* </div> */}

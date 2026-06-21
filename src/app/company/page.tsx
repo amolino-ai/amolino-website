@@ -21,7 +21,7 @@ function Header() {
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
           <h2 className="text-2xl font-medium tracking-tight">Our Misson</h2>
-          <p className="mt-6 text-sm/6 text-gray-600">
+          <p className="mt-6 text-sm/6 text-neutral-600">
             Our mission is to transform revenue leadership from an art of intuition to a science of certainty. We
             empower B2B organizations to achieve predictable, linear revenue growth by eliminating the fundamental
             challenges of pipeline visibility, forecast accuracy, and deal execution. Through AI-powered intelligence,
@@ -30,7 +30,7 @@ function Header() {
           </p>
 
           <h2 className="mt-12 text-2xl font-medium tracking-tight">Our Vision</h2>
-          <p className="mt-6 text-sm/6 text-gray-600">
+          <p className="mt-6 text-sm/6 text-neutral-600">
             We envision a future where revenue organizations operate with complete certainty rather than hopeful
             guesswork. A world where sales leaders no longer accept quarter-end loading, forecast inaccuracy, and
             pipeline surprises as inevitable, but instead use scientific intelligence to architect predictable revenue
@@ -100,13 +100,13 @@ function Person({
               href={linkedinURL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-neutral-600 hover:text-neutral-900"
             >
               <LinkedInIcon className="h-4 w-4" />
             </a>
           )}
         </div>
-        <p className="text-gray-500">{description}</p>
+        <p className="text-neutral-500">{description}</p>
       </div>
     </li>
   );
@@ -127,7 +127,7 @@ function Team() {
       </Lead>
       <div className="mt-12 grid grid-cols-1 gap-12">
         {/* <div className="max-w-3xl">
-          <p className="text-sm/6 text-gray-600">
+          <p className="text-sm/6 text-neutral-600">
             Amolino was founded by Aseem Asthana and Daniele Di Sarli with a vision to transform how sales teams
             operate. Their combined expertise in AI, sales, and technology has been instrumental in building Amolino
             into a leading sales intelligence platform.
@@ -145,17 +145,17 @@ function Team() {
             </div>
             <h3 className="mt-4 text-lg font-semibold">Aseem Asthana</h3>
             <div className="flex items-center gap-2">
-              <p className="text-sm text-gray-600">CEO and Co-Founder</p>
+              <p className="text-sm text-neutral-600">CEO and Co-Founder</p>
               <a
                 href="https://www.linkedin.com/in/aseemasthana/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900"
+                className="text-neutral-600 hover:text-neutral-900"
               >
                 <LinkedInIcon className="h-4 w-4" />
               </a>
             </div>
-            <p className="mt-2 text-sm text-gray-600">
+            <p className="mt-2 text-sm text-neutral-600">
               Aseem brings extensive experience in sales and AI, having previously led sales teams and developed AI
               solutions for enterprise customers.
             </p>
@@ -173,17 +173,17 @@ function Team() {
             </div>
             <h3 className="mt-4 text-lg font-semibold">Daniele Di Sarli</h3>
             <div className="flex items-center gap-2">
-              <p className="text-sm text-gray-600">CTO and Co-Founder</p>
+              <p className="text-sm text-neutral-600">CTO and Co-Founder</p>
               <a
                 href="https://www.linkedin.com/in/daniele-ds/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900"
+                className="text-neutral-600 hover:text-neutral-900"
               >
                 <LinkedInIcon className="h-4 w-4" />
               </a>
             </div>
-            <p className="mt-2 text-sm text-gray-600">
+            <p className="mt-2 text-sm text-neutral-600">
               Daniele brings deep technical expertise in AI and machine learning, having previously worked on
               cutting-edge AI solutions at leading tech companies.
             </p>
@@ -196,7 +196,7 @@ function Team() {
       <Heading as="h3" className="mt-2">
         Leading our growth and operations.
       </Heading>
-      <hr className="mt-6 border-t border-gray-200" />
+      <hr className="mt-6 border-t border-neutral-200" />
       <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
         <div className="flex flex-col items-center text-center">
           <div className="relative aspect-square w-32 overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
@@ -204,17 +204,17 @@ function Team() {
           </div>
           <h3 className="mt-4 text-lg font-semibold">Michael Segheri</h3>
           <div className="flex items-center gap-2">
-            <p className="text-sm text-gray-600">Head of Growth</p>
+            <p className="text-sm text-neutral-600">Head of Growth</p>
             <a
               href="https://www.linkedin.com/in/michaelseghieri/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-neutral-600 hover:text-neutral-900"
             >
               <LinkedInIcon className="h-4 w-4" />
             </a>
           </div>
-          <p className="mt-2 text-sm text-gray-600">
+          <p className="mt-2 text-sm text-neutral-600">
             Michael brings extensive revenue and growth expertise, having previously served as CRO at Canto, VP of Commercial Sales at Lean Data, and Director of Sales at Pandora.
           </p>
         </div>
@@ -225,7 +225,7 @@ function Team() {
       <Heading as="h3" className="mt-2">
         Advised by industry experts.
       </Heading>
-      <hr className="mt-6 border-t border-gray-200" />
+      <hr className="mt-6 border-t border-neutral-200" />
       <ul role="list" className="mx-auto mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
         <Person
           name="Jai Desai"
