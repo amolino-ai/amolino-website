@@ -1,6 +1,6 @@
 /**
- * Copies the Amolino app's forecast types, enums and labels into the website so
- * product widgets use the same data shape and vocabulary as the app.
+ * Copies the Amolino app's forecast and opportunity types, enums and labels into the
+ * website so product widgets and sample data use the same shape and vocabulary as the app.
  *
  * Usage:
  *   npm run sync:app-types              # regenerate src/lib/demo-data/app-types.generated.ts
@@ -25,9 +25,26 @@ const ENUM_FILE = 'app/web/types/Enums/Dashboard.enum.ts'
 const CHART_FILE =
   'app/web/components/pages/Dashboard/ForecastPage/ForecastBlock/ForecastChartAmolino/ForecastChartAmolino.tsx'
 
-/** Schema types copied from the generated OpenAPI file. Fields must be primitives. */
-const SCHEMA_OBJECT_TYPES = ['ForecastBreakdownResponse'] as const
-const SCHEMA_UNION_TYPES = ['ForecastState'] as const
+/**
+ * Schema types copied from the generated OpenAPI file, together with every schema type they reference.
+ * These shape the sample data in content/demo-data/sample-company.yaml.
+ */
+const SCHEMA_ROOT_TYPES = [
+  'ForecastBreakdownResponse',
+  'ForecastTransitionSnapshot',
+  'SalesOpportunityHealth',
+  'MEDDPICCAnalysis',
+  'DetailedBANTAnalysis',
+  'BlockerItem',
+  'CompetitorsInfo',
+  'NextStepsInfo',
+  'OpportunityHighlights',
+  'OpportunityPattern',
+  'ProjectActorDetails',
+] as const
+
+const SCHEMA_REFERENCE = /components\["schemas"\]\["([A-Za-z0-9_]+)"\]/g
+const SCHEMA_INDENT = '        '
 
 /** Declarations copied verbatim from the app's source files. */
 const ENUM_DECLARATIONS = [
@@ -71,22 +88,34 @@ function extractDeclaration(source: string, start: string, fileLabel: string): s
   return source.slice(startIndex, endIndex)
 }
 
-function extractSchemaObject(schema: string, name: string): string {
-  const marker = `        ${name}: {`
+/** The body of one schema type: `{ ... }` for objects, or the right-hand side of an alias such as a string union. */
+function extractSchemaBody(schema: string, name: string): string {
+  const marker = `\n${SCHEMA_INDENT}${name}: `
   const startIndex = schema.indexOf(marker)
   if (startIndex === -1) throw new SyncError(`Schema type ${name} not found in ${SCHEMA_FILE}`)
-  const openIndex = startIndex + marker.length - 1
-  const body = schema.slice(openIndex, findClosingBrace(schema, openIndex))
-  if (body.includes('components[')) {
-    throw new SyncError(`${name} references other schema types; extend the sync script to copy them too.`)
+  const bodyStart = startIndex + marker.length
+  if (schema[bodyStart] === '{') {
+    return schema.slice(bodyStart, findClosingBrace(schema, bodyStart))
   }
-  return `export interface ${name} ${body}`
+  return schema.slice(bodyStart, schema.indexOf(';\n', bodyStart))
 }
 
-function extractSchemaUnion(schema: string, name: string): string {
-  const match = schema.match(new RegExp(`^ {8}${name}: (.+);$`, 'm'))
-  if (!match) throw new SyncError(`Schema union ${name} not found in ${SCHEMA_FILE}`)
-  return `export type ${name} = ${match[1]}`
+/** Copies the root types and everything they reference, with `components["schemas"]["X"]` rewritten to `X`. */
+function extractSchemaTypes(schema: string, roots: readonly string[]): string[] {
+  const bodies = new Map<string, string>()
+  const queue = [...roots]
+  while (queue.length > 0) {
+    const name = queue.shift()!
+    if (bodies.has(name)) continue
+    const body = extractSchemaBody(schema, name)
+    bodies.set(name, body)
+    for (const [, referenced] of body.matchAll(SCHEMA_REFERENCE)) queue.push(referenced)
+  }
+
+  return [...bodies.keys()].sort().map((name) => {
+    const body = bodies.get(name)!.replace(SCHEMA_REFERENCE, '$1')
+    return body.startsWith('{') ? `export interface ${name} ${body}` : `export type ${name} = ${body}`
+  })
 }
 
 function getAppVersion(): string {
@@ -108,8 +137,7 @@ async function generate(): Promise<string> {
 //   ${SCHEMA_FILE}
 //   ${ENUM_FILE}
 //   ${CHART_FILE}`,
-    ...SCHEMA_UNION_TYPES.map((name) => extractSchemaUnion(schema, name)),
-    ...SCHEMA_OBJECT_TYPES.map((name) => extractSchemaObject(schema, name)),
+    ...extractSchemaTypes(schema, SCHEMA_ROOT_TYPES),
     `type ForecastBreakdownKey = keyof ForecastBreakdownResponse
 export type ForecastBackendState = Extract<ForecastState, ForecastBreakdownKey>`,
     ...ENUM_DECLARATIONS.map((start) => extractDeclaration(enums, start, ENUM_FILE)),

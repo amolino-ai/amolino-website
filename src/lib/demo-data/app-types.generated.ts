@@ -4,7 +4,238 @@
 //   app/web/types/Enums/Dashboard.enum.ts
 //   app/web/components/pages/Dashboard/ForecastPage/ForecastBlock/ForecastChartAmolino/ForecastChartAmolino.tsx
 
-export type ForecastState = 'new' | 'expected' | 'vulnerable' | 'recoverable' | 'unlikely' | 'booked' | 'lost'
+export type AffiliationStatus = 'internal' | 'external'
+
+export interface AuthorityInfo {
+  /**
+   * Has Authority
+   * @description Indicates if authority was discussed - yes, no, or not_discussed
+   * @enum {string}
+   */
+  has_authority: 'yes' | 'no' | 'not_discussed'
+  /**
+   * Budgetary Authority
+   * @description List of names and roles of budgetary authority
+   */
+  budgetary_authority?: string[]
+  /**
+   * Decision Makers
+   * @description List of names and roles of decision makers
+   */
+  decision_makers?: string[]
+  /**
+   * Confidence
+   * @description Confidence score between 1-10 on authority assessment
+   */
+  confidence: number
+  /**
+   * Summary
+   * @description List of important points about the authority discussion
+   */
+  summary?: string[]
+  /**
+   * Source
+   * @description List of abstract document IDs containing authority information
+   */
+  source?: string[]
+}
+
+export interface BlockerItem {
+  /**
+   * Description
+   * @description Description of the blocker.
+   */
+  description: string
+  /**
+   * Impact
+   * @description Description of the impact this blocker has on the sales opportunity.
+   */
+  impact: string
+  /**
+   * Source
+   * @description List of abstract document IDs containing blocker information
+   */
+  source?: string[]
+  /**
+   * Discovered Date
+   * Format: date
+   * @description Date the blocker was first discovered. There is no concept of a resolved date.
+   */
+  discovered_date: string
+}
+
+export interface BudgetInfo {
+  /**
+   * Has Budget
+   * @description Indicates if budget was discussed - yes, no, or not_discussed
+   * @enum {string}
+   */
+  has_budget: 'yes' | 'no' | 'not_discussed'
+  /**
+   * Budget Amount
+   * @description A list of two floats representing the budget range in USD. Empty if not mentioned
+   */
+  budget_amount?: number[] | null
+  /**
+   * Confidence
+   * @description Confidence score between 1-10 on budget assessment
+   */
+  confidence: number
+  /**
+   * Summary
+   * @description List of important points about the budget discussion
+   */
+  summary?: string[]
+  /**
+   * Source
+   * @description List of abstract document IDs containing budget information
+   */
+  source?: string[]
+}
+
+export interface ChampionField {
+  /** @default neutral */
+  state: NeutralIdentifiedConfirmState
+  /** Details */
+  details?: string[] | null
+  /**
+   * Long Details
+   * @default
+   */
+  long_details: string
+  /** Sources */
+  sources?: string[]
+}
+
+export interface CompetitionField {
+  /** @default neutral */
+  state: NeutralIdentifiedState
+  /** Details */
+  details?: string[] | null
+  /**
+   * Long Details
+   * @default
+   */
+  long_details: string
+  /** Sources */
+  sources?: string[]
+}
+
+export interface Competitor {
+  /**
+   * Company Name
+   * @description Name of the competitor company, if mentioned
+   */
+  company_name: string | null
+  /**
+   * Product Name
+   * @description Name of the product from the competitor, if mentioned
+   */
+  product_name?: string | null
+  /**
+   * Features
+   * @description List of features mentioned in relation to the competitor
+   */
+  features?: string[]
+  /**
+   * Source
+   * @description List of abstract document IDs containing competitor information
+   */
+  source?: string[]
+  /**
+   * Domain
+   * @description Website domain of the competitor, if verified
+   */
+  domain?: string | null
+  /**
+   * Logo Url
+   * @description Public URL of the competitor's logo, if found
+   */
+  logo_url?: string | null
+}
+
+export interface CompetitorsInfo {
+  /**
+   * Has Competitors
+   * @description Indicates if competitors were discussed (true) or not (false)
+   */
+  has_competitors: boolean
+  /**
+   * Competitors
+   * @description List of competitors with name and mentioned features
+   */
+  competitors?: Competitor[]
+  /**
+   * Confidence
+   * @description Confidence score between 1-10 on competitors assessment
+   */
+  confidence: number
+  /**
+   * Summary
+   * @description List of summarized points about the competitive discussion
+   */
+  summary?: string[]
+}
+
+export interface CurrentHealthExplanation {
+  /** Reasons */
+  reasons?: HealthReason[]
+  /** Health Reasons Summary */
+  health_reasons_summary?: string | null
+}
+
+export interface DecisionCriteriaField {
+  /** @default neutral */
+  state: NeutralIdentifiedNegativeState
+  /** Details */
+  details?: string[] | null
+  /**
+   * Long Details
+   * @default
+   */
+  long_details: string
+  /** Sources */
+  sources?: string[]
+}
+
+export interface DecisionProcessField {
+  /** @default neutral */
+  state: MEDDPICCFullState
+  /** Details */
+  details?: string[] | null
+  /**
+   * Long Details
+   * @default
+   */
+  long_details: string
+  /** Sources */
+  sources?: string[]
+}
+
+export interface DetailedBANTAnalysis {
+  /** @description Detailed information about the customer's budget */
+  budget: BudgetInfo
+  /** @description Detailed information about the decision-making authority */
+  authority: AuthorityInfo
+  /** @description Detailed information about the customer's needs */
+  need: NeedInfo
+  /** @description Detailed information about the project timeline */
+  timeline: TimelineInfo
+}
+
+export interface EconomicBuyerField {
+  /** @default neutral */
+  state: MEDDPICCFullState
+  /** Details */
+  details?: string[] | null
+  /**
+   * Long Details
+   * @default
+   */
+  long_details: string
+  /** Sources */
+  sources?: string[]
+}
 
 export interface ForecastBreakdownResponse {
   /**
@@ -52,6 +283,365 @@ export interface ForecastBreakdownResponse {
    * @description Quarter target (if target is set)
    */
   quarter_target?: number | null
+}
+
+export type ForecastState = 'new' | 'expected' | 'vulnerable' | 'recoverable' | 'unlikely' | 'booked' | 'lost'
+
+export interface ForecastTransitionSnapshot {
+  state?: TransitionState | null
+  value?: TransitionValue | null
+  expected_close_date?: TransitionExpectedCloseDate | null
+  /** Impact */
+  impact?: number | null
+  health?: TransitionHealth | null
+}
+
+export interface HealthReason {
+  /** Type */
+  type: string
+  /** Description */
+  description: string
+  /** Action */
+  action?: string | null
+  /** Source Abstract Document Ids */
+  source_abstract_document_ids?: string[]
+}
+
+export interface IdentifyPainField {
+  /** @default neutral */
+  state: NeutralIdentifiedNegativeState
+  /** Details */
+  details?: string[] | null
+  /**
+   * Long Details
+   * @default
+   */
+  long_details: string
+  /** Sources */
+  sources?: string[]
+}
+
+export interface MEDDPICCAnalysis {
+  fields: MEDDPICCFields
+  memory?: MEDDPICCMemory | null
+  /** Summary */
+  summary?: MEDDPICCSummarySegment[] | null
+}
+
+export type MEDDPICCFieldKey =
+  | 'metrics'
+  | 'economic_buyer'
+  | 'decision_criteria'
+  | 'decision_process'
+  | 'paper_process'
+  | 'identify_pain'
+  | 'champion'
+  | 'competition'
+
+export interface MEDDPICCFields {
+  metrics: MetricsField
+  economic_buyer: EconomicBuyerField
+  decision_criteria: DecisionCriteriaField
+  decision_process: DecisionProcessField
+  paper_process: PaperProcessField
+  identify_pain: IdentifyPainField
+  champion: ChampionField
+  competition: CompetitionField
+}
+
+export type MEDDPICCFullState = 'negative' | 'neutral' | 'identified' | 'confirmed'
+
+export interface MEDDPICCMemory {
+  /**
+   * Memory
+   * @description Long-lived contextual knowledge about the opportunity that helps assess MEDDPICC in future messages
+   */
+  memory: string
+  /** Updated At */
+  updated_at?: string | null
+}
+
+export interface MEDDPICCSummarySegment {
+  /** @description The MEDDPICC field this highlight is about. Use each field at most once. */
+  field: MEDDPICCFieldKey
+  /**
+   * Text
+   * @description One short sentence about this field only, naming the field once.
+   */
+  text: string
+}
+
+export interface MetricsField {
+  /** @default neutral */
+  state: MEDDPICCFullState
+  /** Details */
+  details?: string[] | null
+  /**
+   * Long Details
+   * @default
+   */
+  long_details: string
+  /** Sources */
+  sources?: string[]
+}
+
+export interface NeedInfo {
+  /**
+   * Has Need
+   * @description Indicates if need was discussed - yes, no, or not_discussed
+   * @enum {string}
+   */
+  has_need: 'yes' | 'no' | 'not_discussed'
+  /**
+   * Pain Points
+   * @description List of specific needs/pain points mentioned
+   */
+  pain_points?: string[]
+  /**
+   * Solution Requirements
+   * @description List of solution requirements mentioned
+   */
+  solution_requirements?: string[]
+  /**
+   * Confidence
+   * @description Confidence score between 1-10 on need assessment
+   */
+  confidence: number
+  /**
+   * Summary
+   * @description List of important points about the needs discussion
+   */
+  summary?: string[]
+  /**
+   * Source
+   * @description List of abstract document IDs containing need information
+   */
+  source?: string[]
+}
+
+export type NeutralIdentifiedConfirmState = 'neutral' | 'identified' | 'confirmed'
+
+export type NeutralIdentifiedNegativeState = 'neutral' | 'identified' | 'negative'
+
+export type NeutralIdentifiedState = 'neutral' | 'identified'
+
+export interface NextStepAction {
+  /**
+   * Action
+   * @description Title of the mutually agreed next step
+   */
+  action: string
+  /**
+   * Due Date
+   * @description Expected completion date if mentioned, 'unknown' if not specified
+   */
+  due_date: string
+  /** @description What the seller agreed to do for this next step */
+  seller: NextStepCommitment
+  /** @description What the buyer agreed to do for this next step */
+  buyer: NextStepCommitment
+  /**
+   * Summary
+   * @description List of summarized points about this specific next step
+   */
+  summary?: string[]
+  /**
+   * Source
+   * @description List of abstract document IDs that reference this specific next step
+   */
+  source?: string[]
+}
+
+export interface NextStepCommitment {
+  /**
+   * Title
+   * @description Short title for this party's commitment
+   */
+  title: string
+  /**
+   * Text
+   * @description Description of what this party agreed to do
+   */
+  text: string
+  /** @description Current status of this commitment */
+  status: NextStepCommitmentStatus
+}
+
+export type NextStepCommitmentStatus = 'done' | 'waiting' | 'past_due'
+
+export interface NextStepsInfo {
+  /**
+   * Has Next Steps
+   * @description Indicates if next steps were discussed (true) or not (false)
+   */
+  has_next_steps: boolean
+  /**
+   * Actions
+   * @description List of mutually agreed next steps, each with seller and buyer commitments
+   */
+  actions?: NextStepAction[]
+  /**
+   * Confidence
+   * @description Confidence score between 1-10 on next steps assessment
+   */
+  confidence: number
+  /**
+   * Summary
+   * @description List of summarized points about the next steps discussion
+   */
+  summary?: string[]
+  /**
+   * Source
+   * @description List of abstract document IDs containing next steps information
+   */
+  source?: string[]
+}
+
+export interface OpportunityHighlight {
+  /**
+   * Type
+   * @enum {string}
+   */
+  type: 'positive' | 'negative'
+  /** Title */
+  title: string
+  /** Detail */
+  detail: string
+  /** Source Doc Ids */
+  source_doc_ids?: string[]
+}
+
+export interface OpportunityHighlights {
+  /**
+   * From Date
+   * Format: date
+   */
+  from_date: string
+  /**
+   * To Date
+   * Format: date
+   */
+  to_date: string
+  /** Highlights */
+  highlights?: OpportunityHighlight[]
+  /**
+   * Generated At
+   * Format: date-time
+   */
+  generated_at?: string
+}
+
+export type OpportunityPattern =
+  | 'stalled'
+  | 'gone_silent'
+  | 'zombie'
+  | 'pushed_in'
+  | 'hollow_qualification'
+  | 'next_step_missing'
+  | 'slipping'
+  | 'past_close_date'
+  | 'missing_close_amount'
+  | 'thin_stakeholder_engagement'
+
+export interface PaperProcessField {
+  /** @default neutral */
+  state: MEDDPICCFullState
+  /** Details */
+  details?: string[] | null
+  /**
+   * Long Details
+   * @default
+   */
+  long_details: string
+  /** Sources */
+  sources?: string[]
+}
+
+export interface ProjectActorDetails {
+  /** Actor Id */
+  actor_id: string
+  /** Full Name */
+  full_name: string
+  /** Email Addresses */
+  email_addresses?: string[]
+  affiliation_status?: AffiliationStatus | null
+  /** Role */
+  role?: string | null
+  /** Sentiment */
+  sentiment?: number | null
+  /** Responsibility */
+  responsibility?: string | null
+}
+
+export interface SalesOpportunityHealth {
+  /**
+   * Health Score
+   * @default 1
+   */
+  health_score: number
+  /**
+   * Updated At
+   * Format: date-time
+   */
+  updated_at?: string
+  health_explanation?: CurrentHealthExplanation
+  /** Health Recommendations */
+  health_recommendations?: string[]
+}
+
+export interface TimelineInfo {
+  /**
+   * Has Timeline
+   * @description Indicates if timeline was discussed - yes, no, or not_discussed
+   * @enum {string}
+   */
+  has_timeline: 'yes' | 'no' | 'not_discussed'
+  /**
+   * Timeframe
+   * @description Expected implementation/purchase timeframe as [start_date, end_date]
+   */
+  timeframe?: string[] | null
+  /**
+   * Confidence
+   * @description Confidence score between 1-10 on timeline assessment
+   */
+  confidence: number
+  /**
+   * Summary
+   * @description List of important points about the timeline discussion
+   */
+  summary?: string[]
+  /**
+   * Source
+   * @description List of abstract document IDs containing timeline information
+   */
+  source?: string[]
+}
+
+export interface TransitionExpectedCloseDate {
+  /** From */
+  from?: string | null
+  /** To */
+  to?: string | null
+}
+
+export interface TransitionHealth {
+  /** From */
+  from?: number | null
+  /** To */
+  to?: number | null
+}
+
+export interface TransitionState {
+  from?: ForecastState | null
+  to: ForecastState
+}
+
+export interface TransitionValue {
+  /** From */
+  from?: number | null
+  /** To */
+  to?: number | null
 }
 
 type ForecastBreakdownKey = keyof ForecastBreakdownResponse
