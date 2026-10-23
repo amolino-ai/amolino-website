@@ -5,7 +5,7 @@ import { BenefitSection } from './components/BenefitSection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'All Product Features | AmolinoAI | ',
+  title: 'All Product Features',
   description: 'Explore all AmolinoAI product features organized by strategic benefits: Make Every Rep Your Best Rep, Forecast Confidently, and Prevent Deal Slippage.',
 };
 

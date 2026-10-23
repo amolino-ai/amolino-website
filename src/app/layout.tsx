@@ -43,14 +43,19 @@ const jetbrainsMono = JetBrains_Mono({
 
 
 const WEBSITE_URL = process.env.WEBSITE_URL || 'https://amolino.ai';
-const TITLE_SUFFIX = process.env.TITLE_SUFFIX || ' | AmolinoAI | Transform Pipeline Visibility, Forecast Accuracy & Deal Execution';
+const BRAND_NAME = 'AmolinoAI';
+const TITLE_SEPARATOR = ' | ';
+const DEFAULT_TITLE_TAGLINE = 'Transform Pipeline Visibility, Forecast Accuracy & Deal Execution';
+// TITLE_SUFFIX may be set with or without a leading " | AmolinoAI | "; keep only the tagline so the separator is always there.
+const LEADING_BRAND_AND_SEPARATORS = new RegExp(`^[\\s|]*(${BRAND_NAME})?[\\s|]*`);
+const TITLE_TAGLINE = process.env.TITLE_SUFFIX?.replace(LEADING_BRAND_AND_SEPARATORS, '') || DEFAULT_TITLE_TAGLINE;
 
 // Next.js built-in metadata
 export const metadata: Metadata = {
   metadataBase: new URL(WEBSITE_URL),
   title: {
-    template: `%s${TITLE_SUFFIX}`,
-    default: `AmolinoAI | ${TITLE_SUFFIX}`,
+    template: ['%s', BRAND_NAME, TITLE_TAGLINE].join(TITLE_SEPARATOR),
+    default: [BRAND_NAME, TITLE_TAGLINE].join(TITLE_SEPARATOR),
   },
   description: 'Transform your pipeline visibility, forecast accuracy, and deal execution with Amolino.',
   alternates: {
