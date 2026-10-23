@@ -14,7 +14,8 @@
     "start": "next start",
     "lint": "eslint src",
     "postbuild": "npx tsx scripts/seo-audit.ts",
-    "eval:status-audit": "npx tsx src/lib/evals/datasets/status-audit/run.ts"
+    "eval:status-audit": "npx tsx src/lib/evals/datasets/status-audit/run.ts",
+    "sync:app-types": "npx tsx scripts/sync-app-types.ts"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.18.1",

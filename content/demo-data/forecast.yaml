@@ -1,0 +1,33 @@
+# Sample data for the Forecast widgets on amolino.ai. All values are fictional.
+#
+# `breakdown` has the same shape as the Amolino API's ForecastBreakdownResponse
+# (see src/lib/demo-data/app-types.generated.ts). It goes through the same
+# category mapping as the app, so the widget shows what the app would show for
+# this data. It is validated at build time; a mismatch fails the build.
+#
+# These values reproduce the numbers in the help screenshots in
+# public/images/help/dashboard/forecast/ (rounded as the app rounds them).
+
+breakdown:
+  booked: 1312000 # Closed won
+  expected: 2524000 # Confident
+  vulnerable: 29500 # Upside
+  recoverable: 271200 # Accelerator
+  unlikely: 1850000
+  forecast: 3865500 # booked + expected + vulnerable
+  forecast_7_days_ago: 5465500
+  quarter_target: 10000000
+  shortfall: 6134500
+
+ui:
+  title: Amolino forecast
+  deltaSuffix: last 7 days
+  sourceAmolino: Amolino
+  sourceCrm: CRM
+  crmUnavailable: The CRM forecast isn't included in this sample.
+  targetPrefix: 'Target:'
+  baseLabel: Base
+  peakLabel: Peak
+  sampleDataLabel: Sample data
+  hint: Hover over a bar for details. Click a bar, Best case or Worst case to see which categories it includes.
+  chartLabel: Amolino forecast waterfall chart
