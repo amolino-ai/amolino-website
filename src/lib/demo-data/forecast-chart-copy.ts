@@ -14,6 +14,9 @@ const forecastChartCopySchema = z
     chartLabel: z.string(),
     detailsFrom: z.string(),
     detailsTo: z.string(),
+    tableCategory: z.string(),
+    tableAmount: z.string(),
+    tableDescription: z.string(),
   })
   .strict()
 

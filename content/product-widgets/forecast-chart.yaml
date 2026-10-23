@@ -10,3 +10,7 @@ hintPhone: Tap a category to see its details and what it includes.
 chartLabel: Amolino forecast waterfall chart
 detailsFrom: From
 detailsTo: to
+# Column headings of the chart's text version, read by screen readers.
+tableCategory: Category
+tableAmount: Amount
+tableDescription: Description

@@ -141,6 +141,7 @@ export function ForecastBlock({ breakdown, copy }: ForecastBlockProps) {
         />
       </div>
 
+      <ChartTable bars={bars} target={target} copy={copy} />
       <div className="hidden sm:block">
         <VerticalWaterfall {...chartProps} />
       </div>
@@ -150,7 +151,7 @@ export function ForecastBlock({ breakdown, copy }: ForecastBlockProps) {
 
       <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-neutral-100 pt-3">
         <Badge variant="subtle" text={copy.sampleDataLabel} />
-        <p className="hidden text-xs text-neutral-500 sm:block">{copy.hint}</p>
+        <p className="hidden text-xs text-neutral-600 sm:block">{copy.hint}</p>
       </div>
     </Card>
   )
@@ -172,6 +173,8 @@ interface ChartProps {
  */
 function VerticalWaterfall({ bars, axis, target, selected, included, copy, onToggle }: ChartProps) {
   const [hovered, setHovered] = useState<Selection>(null)
+  const [focused, setFocused] = useState<Selection>(null)
+  const descriptionIdPrefix = useId()
   const chartRef = useRef<HTMLDivElement>(null)
   const lastPointerType = useRef<string | null>(null)
 
@@ -234,8 +237,15 @@ function VerticalWaterfall({ bars, axis, target, selected, included, copy, onTog
                 onPointerDown={(event) => (lastPointerType.current = event.pointerType)}
                 onPointerEnter={(event) => handlePointerEnter(bar.key, event)}
                 onPointerLeave={handlePointerLeave}
-                onFocus={() => setHovered(bar.key)}
-                onBlur={() => setHovered(null)}
+                descriptionId={`${descriptionIdPrefix}-${bar.key}`}
+                onFocus={() => {
+                  setHovered(bar.key)
+                  setFocused(bar.key)
+                }}
+                onBlur={() => {
+                  setHovered(null)
+                  setFocused(null)
+                }}
                 onClick={() => handleClick(bar.key)}
               />
             ))}
@@ -252,7 +262,7 @@ function VerticalWaterfall({ bars, axis, target, selected, included, copy, onTog
           {axis.ticks.map((tick) => (
             <span
               key={tick}
-              className="absolute left-1.5 translate-y-1/2 text-xs text-neutral-400"
+              className="absolute left-1.5 translate-y-1/2 text-xs text-neutral-600"
               style={{ bottom: toPercent(tick, axis.max) }}
             >
               {formatCurrencyCompact(tick)}
@@ -272,7 +282,14 @@ function VerticalWaterfall({ bars, axis, target, selected, included, copy, onTog
       <div className="flex">
         <div className="grid flex-1" style={{ gridTemplateColumns: `repeat(${bars.length}, minmax(0, 1fr))` }}>
           {bars.map((bar, index) => (
-            <AxisLabel key={bar.key} label={bar.label} isFirst={index === 0} isLast={index === bars.length - 1} />
+            <AxisLabel
+              key={bar.key}
+              label={bar.label}
+              descriptionId={`${descriptionIdPrefix}-${bar.key}`}
+              isFocused={focused === bar.key}
+              isFirst={index === 0}
+              isLast={index === bars.length - 1}
+            />
           ))}
         </div>
         <div className="w-16 shrink-0" />
@@ -330,7 +347,7 @@ function HorizontalWaterfall({ bars, axis, target, selected, included, copy, onT
           <span
             key={tick}
             className={clsx(
-              'absolute top-0.5 text-[0.625rem] text-neutral-400',
+              'absolute top-0.5 text-[0.625rem] text-neutral-600',
               index === 0 ? '' : index === phoneTicks.length - 1 ? '-translate-x-full' : '-translate-x-1/2',
             )}
             style={{ left: toPercent(tick, axis.max) }}
@@ -341,7 +358,7 @@ function HorizontalWaterfall({ bars, axis, target, selected, included, copy, onT
       </div>
 
       <div aria-live="polite" className="mt-3 min-h-14 rounded-lg bg-neutral-50 px-3 py-2 text-xs">
-        {!selectedBar && <p className="text-neutral-500">{copy.hintPhone}</p>}
+        {!selectedBar && <p className="text-neutral-600">{copy.hintPhone}</p>}
         {selectedBar && (
           <>
             <div className="flex items-center gap-1.5 font-semibold text-neutral-900">
@@ -356,6 +373,44 @@ function HorizontalWaterfall({ bars, axis, target, selected, included, copy, onT
         )}
       </div>
     </div>
+  )
+}
+
+interface ChartTableProps {
+  bars: WaterfallBar[]
+  target: number | null
+  copy: ForecastWidgetCopy
+}
+
+/** The chart's numbers as a table, for screen readers. Visually hidden. */
+function ChartTable({ bars, target, copy }: ChartTableProps) {
+  return (
+    <table className="sr-only">
+      <caption>
+        {copy.chartLabel}
+        {target !== null && `. ${APP_LABELS.targetPrefix} ${formatCurrencyCompact(target)}`}
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">{copy.tableCategory}</th>
+          <th scope="col">{copy.tableAmount}</th>
+          <th scope="col">{APP_LABELS.base}</th>
+          <th scope="col">{APP_LABELS.peak}</th>
+          <th scope="col">{copy.tableDescription}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {bars.map((bar) => (
+          <tr key={bar.key}>
+            <th scope="row">{bar.label}</th>
+            <td>{formatCurrencyCompact(bar.value)}</td>
+            <td>{formatCurrencyCompact(bar.base)}</td>
+            <td>{formatCurrencyCompact(bar.peak)}</td>
+            <td>{FORECAST_CHART_LABEL_DESCRIPTIONS[bar.label]}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   )
 }
 
@@ -411,6 +466,8 @@ interface BarColumnProps {
   isHovered: boolean
   isDimmed: boolean
   isSelected: boolean
+  /** Id of the category description under the axis. */
+  descriptionId: string
   onPointerDown: (event: PointerEvent) => void
   onPointerEnter: (event: PointerEvent) => void
   onPointerLeave: (event: PointerEvent) => void
@@ -419,7 +476,16 @@ interface BarColumnProps {
   onClick: () => void
 }
 
-function BarColumn({ bar, axisMax, isLast, isHovered, isDimmed, isSelected, ...handlers }: BarColumnProps) {
+function BarColumn({
+  bar,
+  axisMax,
+  isLast,
+  isHovered,
+  isDimmed,
+  isSelected,
+  descriptionId,
+  ...handlers
+}: BarColumnProps) {
   const hasValue = bar.value > 0
   const style = BAR_STYLES[bar.key]
 
@@ -428,6 +494,7 @@ function BarColumn({ bar, axisMax, isLast, isHovered, isDimmed, isSelected, ...h
       type="button"
       disabled={!hasValue}
       aria-pressed={isSelected}
+      aria-describedby={descriptionId}
       aria-label={`${bar.label}: ${formatCurrencyCompact(bar.value)}`}
       {...handlers}
       className={clsx(
@@ -584,21 +651,28 @@ function BarTooltip({ bar, index, count, axisMax }: BarTooltipProps) {
 
 interface AxisLabelProps {
   label: string
+  /** The bar above points at this id with aria-describedby. */
+  descriptionId: string
+  /** The bar above has keyboard focus, so show the description as if hovered. */
+  isFocused: boolean
   isFirst: boolean
   isLast: boolean
 }
 
-function AxisLabel({ label, isFirst, isLast }: AxisLabelProps) {
+/** A category name under the chart. Its description shows on hover, or while the bar above has keyboard focus. */
+function AxisLabel({ label, descriptionId, isFocused, isFirst, isLast }: AxisLabelProps) {
   const description = FORECAST_CHART_LABEL_DESCRIPTIONS[label]
   return (
     <div className="group relative flex flex-col items-center">
       <span className="h-1 border-l border-neutral-500" />
-      <span className="mt-1 text-center text-xs leading-tight text-neutral-400">{label}</span>
+      <span className="mt-1 text-center text-xs leading-tight text-neutral-600">{label}</span>
       {description && (
         <span
+          id={descriptionId}
           role="tooltip"
           className={clsx(
             'pointer-events-none invisible absolute bottom-full z-20 mb-1 w-40 rounded-md bg-neutral-700 px-2 py-1 text-center text-xs text-white group-hover:visible',
+            isFocused && 'visible',
             isFirst && 'left-0',
             isLast && 'right-0',
           )}
