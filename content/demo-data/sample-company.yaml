@@ -1,0 +1,1213 @@
+# Sample company for product widgets on amolino.ai: help articles, marketing pages and the blog.
+# Everything here is fictional. Domains use the reserved .example TLD.
+#
+# The company, team, products and buyers follow the Amolino app's demo world "Meridian"
+# (demo/worlds/meridian/bible.yaml in the app repo), so the website and app demos tell the same story.
+#
+# Field names and values follow the Amolino API (see src/lib/demo-data/app-types.generated.ts,
+# synced from the app with `npm run sync:app-types`). The file is validated at build time;
+# a mismatch fails the build.
+#
+# Nothing in here is a total. Forecast numbers (the chart, best/worst case, "last 7 days") are
+# calculated from the opportunities and their forecast_history. The current values reproduce the
+# help screenshots: Closed won $1.3M, Confident $2.5M, Upside $29.5K, Accelerator $271.2K,
+# Forecast $3.9M (from $5.5M 7 days ago), target $10M.
+
+company:
+  name: Meridian Supply Co.
+  description: Distributor of field supplies, sampling consumables and site safety equipment for mining and exploration
+  domain: meridiansupply.example
+  currency: USD
+
+# "Today" for the sample. Relative labels such as "last 7 days" are measured from this date.
+as_of: '2026-10-21'
+current_quarter: Q4 2026
+
+quarters:
+  - label: Q4 2026
+    start: '2026-10-01'
+    end: '2026-12-31'
+  - label: Q1 2027
+    start: '2027-01-01'
+    end: '2027-03-31'
+
+team:
+  - id: priya-raman
+    name: Priya Raman
+    role: Sales manager
+    email: priya.raman@meridiansupply.example
+  - id: jack-whitfield
+    name: Jack Whitfield
+    role: Account executive
+    email: jack.whitfield@meridiansupply.example
+  - id: sofia-marchetti
+    name: Sofia Marchetti
+    role: Account executive
+    email: sofia.marchetti@meridiansupply.example
+  - id: dan-okafor
+    name: Dan Okafor
+    role: Account executive
+    email: dan.okafor@meridiansupply.example
+  - id: ellie-thorsen
+    name: Ellie Thorsen
+    role: Account executive
+    email: ellie.thorsen@meridiansupply.example
+  - id: marcus-bell
+    name: Marcus Bell
+    role: Account executive
+    email: marcus.bell@meridiansupply.example
+
+pipelines:
+  - id: new-business
+    name: New business
+    stages:
+      - Discovery
+      - Qualification
+      - Solution validation
+      - Quote created
+      - Negotiation
+      - Pending PO
+      - Closed won
+      - Closed lost
+
+forecast_targets:
+  - quarter: Q4 2026
+    pipeline_id: new-business
+    amount: 10000000
+  - quarter: Q1 2027
+    pipeline_id: new-business
+    amount: 11000000
+
+opportunities:
+  # ---------------------------------------------------------------------------
+  # Confident, healthy. Strong champion, economic buyer engaged, value just went up.
+  # ---------------------------------------------------------------------------
+  - id: kestrel-basin-storage-rollout
+    display_name: Kestrel Basin – Multi-site storage and handling rollout
+    company:
+      name: Kestrel Basin Resources
+      domain: kestrelbasin.example
+      industry: Mid-tier miner
+    owner_id: jack-whitfield
+    pipeline_id: new-business
+    pipeline_stage: Negotiation
+    value: 640000
+    expected_close_date: '2026-11-28'
+    crm_forecast_category: Commit
+    amolino_forecast: expected
+    win_probability: 0.82
+    pushed_out: 0
+    products:
+      - Galvanized storage rack
+      - High-vis storage bin set
+      - Heavy-duty field crate
+    health:
+      health_score: 0.84
+      updated_at: '2026-10-20'
+      health_explanation:
+        health_reasons_summary: Champion and economic buyer are both engaged, and the scope grew after the site walk.
+        reasons:
+          - type: '+'
+            description: Rachel Nguyen (Operations Manager) is pushing the rollout internally and shared the capex approval timeline.
+          - type: '+'
+            description: CFO Graham Hollis joined the commercial review and confirmed budget for all five sites.
+          - type: '+'
+            description: Scope grew from three to five sites after the site walk at Wattle Creek.
+          - type: '-'
+            description: Procurement has not yet seen the revised master supply agreement.
+            action: Send the revised agreement to Lena Fischer before the 4 November commercial meeting.
+      health_recommendations:
+        - Send the revised master supply agreement to procurement this week.
+        - Confirm delivery windows for the two new sites with logistics.
+        - Ask Rachel Nguyen to introduce Graham Hollis to the site safety lead before signature.
+    forecast_history:
+      - created_at: '2026-10-20'
+        transition_snapshot:
+          value:
+            from: 600000
+            to: 640000
+          health:
+            from: 0.79
+            to: 0.84
+    meddpicc:
+      fields:
+        metrics:
+          state: confirmed
+          details:
+            - Cut equipment search time at each site by 30%
+            - Reduce damaged sample crates by 40% a year
+          long_details: Kestrel measured an average of 25 minutes lost per shift looking for equipment across their three original sites. Rachel shared a target of a 30% reduction, and a 40% drop in damaged sample crates, which costs them about $180K a year.
+        economic_buyer:
+          state: confirmed
+          details:
+            - Graham Hollis, CFO
+          long_details: Graham Hollis joined the 14 October commercial review, confirmed the budget covers all five sites and asked for a single master agreement instead of per-site purchase orders.
+        decision_criteria:
+          state: identified
+          details:
+            - Galvanized racking rated for outdoor core yards
+            - One supplier for all sites
+            - Delivery to remote sites within 10 business days
+          long_details: The evaluation weights durability in outdoor core yards, consolidating suppliers, and reliable delivery to the two remote sites. Price is a secondary criterion.
+        decision_process:
+          state: confirmed
+          details:
+            - Operations recommends, CFO approves, procurement contracts
+          long_details: Operations (Rachel Nguyen) makes the recommendation, Graham Hollis approves the spend, and procurement (Lena Fischer) runs contracting. The commercial meeting on 4 November is the final step before signature.
+        paper_process:
+          state: identified
+          details:
+            - Master supply agreement through procurement
+            - Supplier onboarding form required
+          long_details: Procurement needs a master supply agreement and a completed supplier onboarding form. Legal review usually takes one week.
+        identify_pain:
+          state: identified
+          details:
+            - Equipment scattered across sites
+            - Sample crates damaged in transport
+          long_details: Each site buys its own storage equipment, so nothing is standard and crates fail in transport. Rachel described two lost core sample batches this year.
+        champion:
+          state: confirmed
+          details:
+            - Rachel Nguyen, Operations Manager
+          long_details: Rachel arranged the site walk, shared internal approval timelines and is presenting the business case to the CFO herself.
+        competition:
+          state: identified
+          details:
+            - Pilbara Industrial Supplies
+          long_details: Kestrel received a quote from Pilbara Industrial Supplies for racking only. They do not supply bins or crates, which works against them on the one-supplier criterion.
+      summary:
+        - field: champion
+          text: Rachel Nguyen is actively selling the rollout internally.
+        - field: economic_buyer
+          text: The CFO has confirmed budget for all five sites.
+    bant:
+      budget:
+        has_budget: 'yes'
+        budget_amount:
+          - 650000
+        confidence: 0.9
+        summary:
+          - Capex approved for five sites up to $650K.
+      authority:
+        has_authority: 'yes'
+        budgetary_authority:
+          - Graham Hollis
+        decision_makers:
+          - Graham Hollis
+          - Rachel Nguyen
+        confidence: 0.85
+        summary:
+          - The CFO approves; operations recommends.
+      need:
+        has_need: 'yes'
+        pain_points:
+          - Inconsistent storage across sites
+          - Damaged sample crates
+        solution_requirements:
+          - Outdoor-rated racking
+          - Standard bins and crates at every site
+        confidence: 0.9
+        summary:
+          - Clear operational and cost pain at every site.
+      timeline:
+        has_timeline: 'yes'
+        timeframe:
+          - Signature by end of November 2026
+          - Rollout in January 2027
+        confidence: 0.8
+        summary:
+          - They want everything installed before the wet season.
+    blockers:
+      - description: Procurement has not reviewed the revised master supply agreement.
+        impact: Signature could slip past 28 November if legal review starts late.
+        discovered_date: '2026-10-16'
+    competitors:
+      has_competitors: true
+      confidence: 0.8
+      competitors:
+        - company_name: Pilbara Industrial Supplies
+          product_name: Heavy-duty racking
+          features:
+            - Lower unit price on racking
+            - No bins or crates
+      summary:
+        - Pilbara quoted racking only, so they cannot meet the single-supplier requirement.
+    next_steps:
+      has_next_steps: true
+      confidence: 0.9
+      actions:
+        - action: Commercial review of the master supply agreement
+          due_date: '2026-11-04'
+          seller:
+            title: Send revised agreement
+            text: Jack sends the revised master supply agreement to Lena Fischer.
+            status: waiting
+          buyer:
+            title: Legal review
+            text: Kestrel procurement completes legal review before the meeting.
+            status: waiting
+        - action: Confirm delivery plan for the two new sites
+          due_date: '2026-10-24'
+          seller:
+            title: Delivery schedule
+            text: Meridian logistics shares delivery windows for Wattle Creek and Lake Ewart.
+            status: done
+          buyer:
+            title: Site access
+            text: Rachel confirms site access contacts for both sites.
+            status: done
+      summary:
+        - Both sides have dated commitments leading to the 4 November commercial review.
+    opportunity_highlights:
+      from_date: '2026-10-14'
+      to_date: '2026-10-21'
+      highlights:
+        - type: positive
+          title: Scope expanded to five sites
+          detail: After the Wattle Creek site walk, Kestrel added two sites and the deal value rose from $600K to $640K.
+        - type: positive
+          title: CFO confirmed budget
+          detail: Graham Hollis confirmed capex for all five sites in the commercial review.
+        - type: negative
+          title: Agreement not yet with procurement
+          detail: The revised master supply agreement still needs procurement review.
+    patterns: []
+    stakeholders:
+      - actor_id: rachel-nguyen
+        full_name: Rachel Nguyen
+        email_addresses:
+          - rachel.nguyen@kestrelbasin.example
+        affiliation_status: external
+        role: Operations Manager
+        responsibility: Champion. Owns the business case and the rollout plan.
+        sentiment: 88
+      - actor_id: graham-hollis
+        full_name: Graham Hollis
+        email_addresses:
+          - graham.hollis@kestrelbasin.example
+        affiliation_status: external
+        role: CFO
+        responsibility: Economic buyer. Approves the capex.
+        sentiment: 62
+      - actor_id: lena-fischer
+        full_name: Lena Fischer
+        email_addresses:
+          - lena.fischer@kestrelbasin.example
+        affiliation_status: external
+        role: Procurement Lead
+        responsibility: Runs contracting and supplier onboarding.
+        sentiment: 20
+      - actor_id: jack-whitfield
+        full_name: Jack Whitfield
+        email_addresses:
+          - jack.whitfield@meridiansupply.example
+        affiliation_status: internal
+        role: Account Executive
+        responsibility: Deal owner.
+        sentiment: null
+
+  # ---------------------------------------------------------------------------
+  # Confident, healthy. Close date pulled in. One blocker on site access.
+  # ---------------------------------------------------------------------------
+  - id: marlin-head-racking-fitout
+    display_name: Marlin Head Port – Warehouse racking fit-out
+    company:
+      name: Marlin Head Port Logistics
+      domain: marlinheadport.example
+      industry: Port logistics
+    owner_id: marcus-bell
+    pipeline_id: new-business
+    pipeline_stage: Negotiation
+    value: 798000
+    expected_close_date: '2026-11-14'
+    crm_forecast_category: Commit
+    amolino_forecast: expected
+    win_probability: 0.76
+    pushed_out: 0
+    products:
+      - Galvanized storage rack
+      - High-vis storage bin set
+    health:
+      health_score: 0.79
+      updated_at: '2026-10-19'
+      health_explanation:
+        health_reasons_summary: The buyer asked to move signature forward to meet a port expansion deadline.
+        reasons:
+          - type: '+'
+            description: Marlin Head asked to sign three weeks earlier so racking is installed before the new berth opens.
+          - type: '+'
+            description: Engineering approved the load ratings for the galvanized racking.
+          - type: '-'
+            description: Installation crews still need port security clearance.
+            action: Submit crew details to the port security office this week.
+      health_recommendations:
+        - Start the port security clearance for installation crews now.
+        - Lock in the installation start date with the operations manager.
+    forecast_history:
+      - created_at: '2026-10-19'
+        transition_snapshot:
+          expected_close_date:
+            from: '2026-12-04'
+            to: '2026-11-14'
+          health:
+            from: 0.71
+            to: 0.79
+    meddpicc:
+      fields:
+        metrics:
+          state: identified
+          details:
+            - 20% more pallet positions in the same footprint
+          long_details: Marlin Head needs 20% more pallet positions in the existing warehouse to handle volume from the new berth.
+        economic_buyer:
+          state: identified
+          details:
+            - Owen Petrakis, General Manager
+          long_details: Owen Petrakis signs off capital projects over $500K. He has been copied on proposals but has not met the team yet.
+        decision_criteria:
+          state: identified
+          details:
+            - Load ratings
+            - Installation before berth opening
+          long_details: Engineering load approval and an installation date before the new berth opens on 15 January.
+        decision_process:
+          state: confirmed
+          details:
+            - Engineering approval, then GM sign-off
+          long_details: Engineering approved the design on 12 October. The general manager signs after the commercial terms are agreed.
+        paper_process:
+          state: identified
+          details:
+            - Standard purchase order
+          long_details: A standard purchase order is raised once the general manager signs.
+        identify_pain:
+          state: identified
+          details:
+            - Warehouse at capacity
+          long_details: The warehouse is already at capacity and cannot absorb volume from the new berth.
+        champion:
+          state: identified
+          details:
+            - Tasha Brennan, Warehouse Operations Manager
+          long_details: Tasha is coordinating engineering and asked for the earlier signature date.
+        competition:
+          state: neutral
+          details: []
+          long_details: No competing supplier has been mentioned.
+    blockers:
+      - description: Installation crews need port security clearance.
+        impact: Installation could start late if clearances are not lodged two weeks ahead.
+        discovered_date: '2026-10-18'
+    competitors:
+      has_competitors: false
+      confidence: 0.6
+      competitors: []
+      summary:
+        - No competitors mentioned in calls or emails.
+    next_steps:
+      has_next_steps: true
+      confidence: 0.85
+      actions:
+        - action: Agree commercial terms with the general manager
+          due_date: '2026-11-07'
+          seller:
+            title: Final proposal
+            text: Marcus sends the final proposal with installation dates.
+            status: waiting
+          buyer:
+            title: GM review
+            text: Owen Petrakis reviews and confirms terms.
+            status: waiting
+      summary:
+        - Final terms are due with the general manager by 7 November.
+    opportunity_highlights:
+      from_date: '2026-10-14'
+      to_date: '2026-10-21'
+      highlights:
+        - type: positive
+          title: Signature moved forward
+          detail: The buyer moved the expected close from 4 December to 14 November.
+        - type: positive
+          title: Engineering approval
+          detail: Load ratings were approved by port engineering.
+    patterns:
+      - pushed_in
+    stakeholders:
+      - actor_id: tasha-brennan
+        full_name: Tasha Brennan
+        email_addresses:
+          - tasha.brennan@marlinheadport.example
+        affiliation_status: external
+        role: Warehouse Operations Manager
+        responsibility: Champion. Coordinates engineering and installation.
+        sentiment: 74
+      - actor_id: owen-petrakis
+        full_name: Owen Petrakis
+        email_addresses:
+          - owen.petrakis@marlinheadport.example
+        affiliation_status: external
+        role: General Manager
+        responsibility: Economic buyer. Signs capital projects over $500K.
+        sentiment: 10
+
+  # ---------------------------------------------------------------------------
+  # Was Confident, now Unlikely. Budget freeze. CRM still says Commit.
+  # ---------------------------------------------------------------------------
+  - id: saltbush-consumables-agreement
+    display_name: Saltbush Civil – Site consumables master agreement
+    company:
+      name: Saltbush Civil & Mining
+      domain: saltbushcm.example
+      industry: Civil and mining works
+    owner_id: sofia-marchetti
+    pipeline_id: new-business
+    pipeline_stage: Negotiation
+    value: 1150000
+    expected_close_date: '2026-12-31'
+    crm_forecast_category: Commit
+    amolino_forecast: unlikely
+    win_probability: 0.12
+    pushed_out: 1
+    products:
+      - Calico sample bags (1000)
+      - Survey marking paint (box)
+      - Site boundary flagging kit
+      - Field first-aid station
+    health:
+      health_score: 0.18
+      updated_at: '2026-10-16'
+      health_explanation:
+        health_reasons_summary: A company-wide spending freeze stopped the deal, and the champion has gone quiet since.
+        reasons:
+          - type: '-'
+            description: Saltbush announced a freeze on new supplier agreements until their FY27 budget review in February.
+            action: Ask Mark Delaney whether a smaller first-site agreement can go ahead under the operating budget.
+          - type: '-'
+            description: Mark Delaney has not replied to the last three emails.
+          - type: '-'
+            description: Coastline Safety Group offered to match pricing with 90-day payment terms.
+          - type: '+'
+            description: Site managers still rate Meridian's sample bags above the current supplier.
+      health_recommendations:
+        - Propose a smaller first-site agreement that fits the operating budget.
+        - Reach the site managers directly to keep the evaluation alive.
+        - Update the CRM forecast category; it still says Commit.
+    forecast_history:
+      - created_at: '2026-10-16'
+        transition_snapshot:
+          state:
+            from: expected
+            to: unlikely
+          health:
+            from: 0.58
+            to: 0.18
+    meddpicc:
+      fields:
+        metrics:
+          state: identified
+          details:
+            - Consolidate 14 suppliers into one
+          long_details: Saltbush wants to consolidate 14 consumables suppliers into one to cut admin costs.
+        economic_buyer:
+          state: negative
+          details:
+            - Claire Ashworth, CFO
+          long_details: The CFO announced the spending freeze and declined a meeting until after the February budget review.
+        decision_criteria:
+          state: identified
+          details:
+            - Price
+            - Payment terms
+            - Consolidated invoicing
+          long_details: Price, payment terms and consolidated monthly invoicing. Payment terms became more important after the freeze.
+        decision_process:
+          state: negative
+          details:
+            - Frozen until FY27 budget review
+          long_details: All new supplier agreements are on hold until the budget review in February 2027.
+        paper_process:
+          state: neutral
+          details: []
+          long_details: Paper process was not discussed before the freeze.
+        identify_pain:
+          state: identified
+          details:
+            - Too many suppliers to manage
+          long_details: Fourteen suppliers create invoicing overhead and inconsistent stock across sites.
+        champion:
+          state: neutral
+          details:
+            - Mark Delaney, Procurement Manager
+          long_details: Mark championed the consolidation but has stopped responding since the freeze was announced.
+        competition:
+          state: identified
+          details:
+            - Coastline Safety Group
+          long_details: Coastline Safety Group offered to match pricing with 90-day payment terms.
+      summary:
+        - field: economic_buyer
+          text: The CFO froze new supplier agreements until February.
+    bant:
+      budget:
+        has_budget: 'no'
+        budget_amount: null
+        confidence: 0.85
+        summary:
+          - Budget frozen until the FY27 budget review.
+      authority:
+        has_authority: 'no'
+        budgetary_authority:
+          - Claire Ashworth
+        decision_makers:
+          - Claire Ashworth
+        confidence: 0.7
+        summary:
+          - Only the CFO can lift the freeze.
+      need:
+        has_need: 'yes'
+        pain_points:
+          - Supplier sprawl
+        solution_requirements:
+          - Consolidated invoicing
+        confidence: 0.8
+        summary:
+          - The need is real but not urgent enough to break the freeze.
+      timeline:
+        has_timeline: 'no'
+        timeframe: null
+        confidence: 0.6
+        summary:
+          - No timeline until after February.
+    blockers:
+      - description: Spending freeze on new supplier agreements until the FY27 budget review.
+        impact: The deal cannot close this quarter.
+        discovered_date: '2026-10-16'
+      - description: Champion has stopped responding.
+        impact: No one inside Saltbush is pushing for an exception to the freeze.
+        discovered_date: '2026-10-19'
+    competitors:
+      has_competitors: true
+      confidence: 0.75
+      competitors:
+        - company_name: Coastline Safety Group
+          product_name: Site consumables program
+          features:
+            - Price match
+            - 90-day payment terms
+      summary:
+        - Coastline is using payment terms to work around the freeze.
+    next_steps:
+      has_next_steps: false
+      confidence: 0.7
+      actions: []
+      summary:
+        - No agreed next step since the freeze.
+    opportunity_highlights:
+      from_date: '2026-10-14'
+      to_date: '2026-10-21'
+      highlights:
+        - type: negative
+          title: Spending freeze announced
+          detail: Saltbush froze new supplier agreements until February, and Amolino moved the deal from Confident to Unlikely.
+        - type: negative
+          title: Champion gone quiet
+          detail: Mark Delaney has not replied to three emails.
+    patterns:
+      - gone_silent
+      - next_step_missing
+    stakeholders:
+      - actor_id: mark-delaney
+        full_name: Mark Delaney
+        email_addresses:
+          - mark.delaney@saltbushcm.example
+        affiliation_status: external
+        role: Procurement Manager
+        responsibility: Ran the supplier consolidation project.
+        sentiment: -10
+      - actor_id: claire-ashworth
+        full_name: Claire Ashworth
+        email_addresses:
+          - claire.ashworth@saltbushcm.example
+        affiliation_status: external
+        role: CFO
+        responsibility: Economic buyer. Announced the spending freeze.
+        sentiment: -45
+
+  # ---------------------------------------------------------------------------
+  # Accelerator. Off track but winnable: champion left, competitor in, health dropping.
+  # ---------------------------------------------------------------------------
+  - id: bluewattle-crate-standardisation
+    display_name: Bluewattle Drilling – Field crate and bin standardisation
+    company:
+      name: Bluewattle Drilling Services
+      domain: bluewattle.example
+      industry: Drilling contractor
+    owner_id: jack-whitfield
+    pipeline_id: new-business
+    pipeline_stage: Solution validation
+    value: 271200
+    expected_close_date: '2026-12-19'
+    crm_forecast_category: Best case
+    amolino_forecast: recoverable
+    win_probability: 0.28
+    pushed_out: 0
+    products:
+      - Heavy-duty field crate
+      - High-vis storage bin set
+    health:
+      health_score: 0.38
+      updated_at: '2026-10-18'
+      health_explanation:
+        health_reasons_summary: The champion left Bluewattle and a competitor is trialling crates at two rigs, but the field team still prefers Meridian.
+        reasons:
+          - type: '-'
+            description: Champion Ben Harlow left Bluewattle on 10 October.
+            action: Ask the field superintendent, Aisha Karim, to sponsor the trial results with the new operations lead.
+          - type: '-'
+            description: Outback Crate Co. is running a free trial at two rigs.
+          - type: '+'
+            description: Field crews reported 50% fewer broken crates in Meridian's trial.
+      health_recommendations:
+        - Share the trial results with the new operations lead, Callum Reid.
+        - Offer an extended trial at a third rig to match Outback's offer.
+    forecast_history:
+      - created_at: '2026-10-02'
+        transition_snapshot:
+          state:
+            from: vulnerable
+            to: recoverable
+          health:
+            from: 0.55
+            to: 0.62
+      - created_at: '2026-10-18'
+        transition_snapshot:
+          health:
+            from: 0.62
+            to: 0.38
+    meddpicc:
+      fields:
+        metrics:
+          state: confirmed
+          details:
+            - 50% fewer broken crates in the trial
+          long_details: The six-week trial at Rig 7 showed 50% fewer broken crates than Bluewattle's current supplier.
+        economic_buyer:
+          state: neutral
+          details: []
+          long_details: The new operations lead, Callum Reid, now owns the budget but has not been engaged.
+        decision_criteria:
+          state: identified
+          details:
+            - Crate durability
+            - Price per rig
+          long_details: Durability on rough access roads and the cost to equip each rig.
+        decision_process:
+          state: neutral
+          details: []
+          long_details: The decision process changed when the champion left and has not been re-established.
+        paper_process:
+          state: neutral
+          details: []
+          long_details: Not discussed.
+        identify_pain:
+          state: identified
+          details:
+            - Crates breaking on rough access roads
+          long_details: Broken crates lose core samples and delay assay results.
+        champion:
+          state: neutral
+          details:
+            - Previously Ben Harlow (left the company)
+          long_details: Ben Harlow sponsored the trial but left Bluewattle on 10 October. No new champion yet.
+        competition:
+          state: identified
+          details:
+            - Outback Crate Co.
+          long_details: Outback Crate Co. is running a free trial at two rigs.
+    competitors:
+      has_competitors: true
+      confidence: 0.85
+      competitors:
+        - company_name: Outback Crate Co.
+          product_name: RigTough crates
+          features:
+            - Free trial at two rigs
+            - Lower unit price
+      summary:
+        - Outback started a free trial right after the champion left.
+    next_steps:
+      has_next_steps: true
+      confidence: 0.5
+      actions:
+        - action: Present trial results to the new operations lead
+          due_date: '2026-10-30'
+          seller:
+            title: Results pack
+            text: Jack prepares a one-page summary of the Rig 7 trial.
+            status: done
+          buyer:
+            title: Meeting
+            text: Aisha Karim books time with Callum Reid.
+            status: past_due
+    opportunity_highlights:
+      from_date: '2026-10-14'
+      to_date: '2026-10-21'
+      highlights:
+        - type: negative
+          title: Competitor trial started
+          detail: Outback Crate Co. began a free trial at two rigs.
+        - type: positive
+          title: Trial results are strong
+          detail: Crews reported 50% fewer broken crates with Meridian's crates.
+    patterns:
+      - thin_stakeholder_engagement
+    stakeholders:
+      - actor_id: aisha-karim
+        full_name: Aisha Karim
+        email_addresses:
+          - aisha.karim@bluewattle.example
+        affiliation_status: external
+        role: Field Superintendent
+        responsibility: Ran the Rig 7 trial. Potential new champion.
+        sentiment: 58
+      - actor_id: callum-reid
+        full_name: Callum Reid
+        email_addresses:
+          - callum.reid@bluewattle.example
+        affiliation_status: external
+        role: Head of Operations
+        responsibility: New budget owner. Not yet engaged.
+        sentiment: null
+
+  # ---------------------------------------------------------------------------
+  # Slipped out of the quarter. Was Confident in Q4, pushed to Q1 2027.
+  # ---------------------------------------------------------------------------
+  - id: taggart-ridge-camp-supply
+    display_name: Taggart Ridge – Exploration camp supply program
+    company:
+      name: Taggart Ridge Exploration
+      domain: taggartridge.example
+      industry: Mineral exploration
+    owner_id: ellie-thorsen
+    pipeline_id: new-business
+    pipeline_stage: Quote created
+    value: 420000
+    expected_close_date: '2027-02-12'
+    crm_forecast_category: Best case
+    amolino_forecast: expected
+    win_probability: 0.41
+    pushed_out: 2
+    products:
+      - Sample bag carton (500)
+      - Chip tray pallet (60)
+      - Weatherproof document tube
+    health:
+      health_score: 0.44
+      updated_at: '2026-10-19'
+      health_explanation:
+        health_reasons_summary: The drilling season start moved to February, so the buyer pushed the close date for the second time.
+        reasons:
+          - type: '-'
+            description: The close date has been pushed twice, most recently from 15 December to 12 February.
+          - type: '-'
+            description: Taggart Ridge delayed their drilling season after a permit hold-up.
+            action: Agree a smaller first order for the camp setup in January.
+          - type: '+'
+            description: The exploration manager confirmed Meridian is still the preferred supplier.
+      health_recommendations:
+        - Offer a starter order for camp setup to keep the program moving.
+        - Confirm the new permit date with the exploration manager.
+    forecast_history:
+      - created_at: '2026-09-02'
+        transition_snapshot:
+          expected_close_date:
+            from: '2026-11-20'
+            to: '2026-12-15'
+      - created_at: '2026-10-19'
+        transition_snapshot:
+          expected_close_date:
+            from: '2026-12-15'
+            to: '2027-02-12'
+          health:
+            from: 0.61
+            to: 0.44
+    meddpicc:
+      fields:
+        metrics:
+          state: identified
+          details:
+            - One delivery per camp per month
+          long_details: Taggart Ridge wants one consolidated delivery per camp each month instead of weekly orders from several suppliers.
+        economic_buyer:
+          state: identified
+          details:
+            - Peter Lindqvist, Exploration Manager
+          long_details: Peter owns the exploration budget and confirmed Meridian is the preferred supplier.
+        decision_criteria:
+          state: identified
+          details:
+            - Remote delivery reliability
+          long_details: Reliable delivery to camps 300 km from Kalgoorlie.
+        decision_process:
+          state: identified
+          details:
+            - Exploration manager approves after permits are granted
+          long_details: Peter approves once the drilling permits are granted.
+        paper_process:
+          state: neutral
+          details: []
+          long_details: Not discussed yet.
+        identify_pain:
+          state: identified
+          details:
+            - Missed deliveries to remote camps
+          long_details: Missed deliveries have stalled drilling crews twice this year.
+        champion:
+          state: identified
+          details:
+            - Jess Moreau, Camp Logistics Lead
+          long_details: Jess handles camp logistics and raised the consolidation idea.
+        competition:
+          state: neutral
+          details: []
+          long_details: No competitor mentioned.
+    blockers:
+      - description: Drilling permits are delayed.
+        impact: The program cannot start until permits are granted, expected in February.
+        discovered_date: '2026-10-19'
+    next_steps:
+      has_next_steps: true
+      confidence: 0.6
+      actions:
+        - action: Agree a starter order for January camp setup
+          due_date: '2026-11-12'
+          seller:
+            title: Starter order quote
+            text: Ellie sends a reduced quote for camp setup only.
+            status: waiting
+          buyer:
+            title: Approval
+            text: Peter Lindqvist approves the starter order.
+            status: waiting
+    opportunity_highlights:
+      from_date: '2026-10-14'
+      to_date: '2026-10-21'
+      highlights:
+        - type: negative
+          title: Close date pushed again
+          detail: The close date moved from 15 December to 12 February, out of this quarter.
+    patterns:
+      - slipping
+    stakeholders:
+      - actor_id: peter-lindqvist
+        full_name: Peter Lindqvist
+        email_addresses:
+          - peter.lindqvist@taggartridge.example
+        affiliation_status: external
+        role: Exploration Manager
+        responsibility: Economic buyer.
+        sentiment: 45
+      - actor_id: jess-moreau
+        full_name: Jess Moreau
+        email_addresses:
+          - jess.moreau@taggartridge.example
+        affiliation_status: external
+        role: Camp Logistics Lead
+        responsibility: Champion. Runs camp supply.
+        sentiment: 66
+
+  # ---------------------------------------------------------------------------
+  # Lighter records: enough for tables, lists and the forecast.
+  # ---------------------------------------------------------------------------
+  - id: copperleaf-sampling-supply
+    display_name: Copperleaf – Sampling consumables annual supply
+    company:
+      name: Copperleaf Environmental
+      domain: copperleafenv.example
+      industry: Environmental monitoring
+    owner_id: sofia-marchetti
+    pipeline_id: new-business
+    pipeline_stage: Closed won
+    value: 900000
+    expected_close_date: '2026-10-17'
+    closed_at: '2026-10-17'
+    crm_forecast_category: Closed won
+    amolino_forecast: booked
+    win_probability: 1
+    pushed_out: 0
+    products:
+      - Calico sample bags (1000)
+      - Sample bag carton (500)
+    health:
+      health_score: 0.95
+      updated_at: '2026-10-17'
+    forecast_history:
+      - created_at: '2026-10-17'
+        transition_snapshot:
+          state:
+            from: expected
+            to: booked
+    patterns: []
+
+  - id: quarry-lane-safety-refresh
+    display_name: Quarry Lane – Site safety refresh
+    company:
+      name: Quarry Lane Aggregates
+      domain: quarrylane.example
+      industry: Aggregates producer
+    owner_id: dan-okafor
+    pipeline_id: new-business
+    pipeline_stage: Closed won
+    value: 412000
+    expected_close_date: '2026-10-09'
+    closed_at: '2026-10-09'
+    crm_forecast_category: Closed won
+    amolino_forecast: booked
+    win_probability: 1
+    pushed_out: 0
+    products:
+      - Field first-aid station
+      - Site boundary flagging kit
+    health:
+      health_score: 0.9
+      updated_at: '2026-10-09'
+    patterns: []
+
+  - id: halcyon-sample-bag-agreement
+    display_name: Halcyon Labs – Sample bag and chip tray agreement
+    company:
+      name: Halcyon Metallurgy Labs
+      domain: halcyonlabs.example
+      industry: Assay laboratory
+    owner_id: ellie-thorsen
+    pipeline_id: new-business
+    pipeline_stage: Quote created
+    value: 486000
+    expected_close_date: '2026-12-12'
+    crm_forecast_category: Commit
+    amolino_forecast: expected
+    win_probability: 0.64
+    pushed_out: 0
+    products:
+      - Calico sample bags (1000)
+      - Chip tray pallet (60)
+    health:
+      health_score: 0.66
+      updated_at: '2026-10-15'
+      health_explanation:
+        health_reasons_summary: Scope was reduced when the Kambalda lab dropped out, but the main lab is committed.
+        reasons:
+          - type: '-'
+            description: The Kambalda lab was removed from scope, reducing the value by $70K.
+          - type: '+'
+            description: The lab director confirmed the agreement for the Perth and Kalgoorlie labs.
+    forecast_history:
+      - created_at: '2026-10-15'
+        transition_snapshot:
+          value:
+            from: 556000
+            to: 486000
+    competitors:
+      has_competitors: true
+      confidence: 0.6
+      competitors:
+        - company_name: LabSource Direct
+          features:
+            - Incumbent supplier
+      summary:
+        - LabSource is the incumbent at the Kambalda lab.
+    patterns: []
+
+  - id: ironbark-core-splitter-stands
+    display_name: Ironbark Geotechnics – Core splitter stands (12 sites)
+    company:
+      name: Ironbark Geotechnics
+      domain: ironbarkgeo.example
+      industry: Geotechnical consultancy
+    owner_id: dan-okafor
+    pipeline_id: new-business
+    pipeline_stage: Pending PO
+    value: 600000
+    expected_close_date: '2026-10-31'
+    crm_forecast_category: Commit
+    amolino_forecast: expected
+    win_probability: 0.71
+    pushed_out: 0
+    products:
+      - Portable core splitter stand
+    health:
+      health_score: 0.71
+      updated_at: '2026-10-12'
+      health_explanation:
+        reasons:
+          - type: '+'
+            description: Purchase order is in final approval.
+          - type: '-'
+            description: The purchase order needs a second signature from the regional director, who is travelling.
+    next_steps:
+      has_next_steps: true
+      confidence: 0.8
+      actions:
+        - action: Receive the signed purchase order
+          due_date: '2026-10-28'
+          seller:
+            title: Confirm stock
+            text: Dan confirms stock for 12 stands.
+            status: done
+          buyer:
+            title: Second signature
+            text: Regional director signs the purchase order.
+            status: waiting
+    patterns: []
+
+  - id: silver-gimlet-starter-kits
+    display_name: Silver Gimlet – Field starter kits
+    company:
+      name: Silver Gimlet Prospecting
+      domain: silvergimlet.example
+      industry: Prospecting syndicate
+    owner_id: sofia-marchetti
+    pipeline_id: new-business
+    pipeline_stage: Quote created
+    value: 29500
+    expected_close_date: '2026-12-05'
+    crm_forecast_category: Best case
+    amolino_forecast: vulnerable
+    win_probability: 0.35
+    pushed_out: 0
+    products:
+      - Sample bag carton (500)
+      - Tag wire spool
+      - Survey marking paint (box)
+    health:
+      health_score: 0.48
+      updated_at: '2026-10-11'
+      health_explanation:
+        reasons:
+          - type: '-'
+            description: No next step agreed since the quote was sent on 2 October.
+            action: Call to confirm whether the quote fits their season budget.
+    patterns:
+      - next_step_missing
+
+  - id: boab-valley-storage-rollout
+    display_name: Boab Valley – High-vis storage rollout
+    company:
+      name: Boab Valley Earthmoving
+      domain: boabvalley.example
+      industry: Earthmoving contractor
+    owner_id: marcus-bell
+    pipeline_id: new-business
+    pipeline_stage: Qualification
+    value: 380000
+    expected_close_date: '2026-11-30'
+    crm_forecast_category: Pipeline
+    amolino_forecast: unlikely
+    win_probability: 0.1
+    pushed_out: 0
+    products:
+      - High-vis storage bin set
+    health:
+      health_score: 0.22
+      updated_at: '2026-10-08'
+      health_explanation:
+        reasons:
+          - type: '-'
+            description: No reply from Boab Valley in 31 days.
+    patterns:
+      - gone_silent
+      - hollow_qualification
+
+  - id: nullar-ridge-first-aid
+    display_name: Nullar Ridge – Camp first-aid stations
+    company:
+      name: Nullar Ridge Camp Services
+      domain: nullarridge.example
+      industry: Remote camp operator
+    owner_id: dan-okafor
+    pipeline_id: new-business
+    pipeline_stage: Solution validation
+    value: 320000
+    expected_close_date: '2026-11-15'
+    crm_forecast_category: Pipeline
+    amolino_forecast: unlikely
+    win_probability: 0.15
+    pushed_out: 0
+    products:
+      - Field first-aid station
+    health:
+      health_score: 0.27
+      updated_at: '2026-10-05'
+      health_explanation:
+        reasons:
+          - type: '-'
+            description: The opportunity has stayed in Solution validation for 74 days.
+    patterns:
+      - stalled
+      - zombie
+
+  - id: gidgee-flats-marking-kits
+    display_name: Gidgee Flats – Marking and flagging kits
+    company:
+      name: Gidgee Flats Exploration
+      domain: gidgeeflats.example
+      industry: Junior explorer
+    owner_id: ellie-thorsen
+    pipeline_id: new-business
+    pipeline_stage: Discovery
+    value: 85000
+    expected_close_date: '2026-12-20'
+    crm_forecast_category: Pipeline
+    amolino_forecast: new
+    win_probability: 0.2
+    pushed_out: 0
+    products:
+      - Site boundary flagging kit
+      - Survey marking paint (box)
+    health:
+      health_score: 0.55
+      updated_at: '2026-10-20'
+    forecast_history:
+      - created_at: '2026-10-20'
+        transition_snapshot:
+          state:
+            from: null
+            to: new
+          value:
+            from: null
+            to: 85000
+    patterns: []
+
+  - id: pelican-point-racking
+    display_name: Pelican Point – Galvanized racking
+    company:
+      name: Pelican Point Fabrication
+      domain: pelicanpointfab.example
+      industry: Steel fabrication
+    owner_id: marcus-bell
+    pipeline_id: new-business
+    pipeline_stage: Closed lost
+    value: 210000
+    expected_close_date: '2026-10-10'
+    closed_at: '2026-10-10'
+    crm_forecast_category: Closed lost
+    amolino_forecast: lost
+    win_probability: 0
+    pushed_out: 0
+    products:
+      - Galvanized storage rack
+    health:
+      health_score: 0.1
+      updated_at: '2026-10-10'
+    competitors:
+      has_competitors: true
+      confidence: 0.9
+      competitors:
+        - company_name: Pilbara Industrial Supplies
+          product_name: Heavy-duty racking
+          features:
+            - Lower unit price
+      summary:
+        - Lost to Pilbara on price.
+    patterns: []

@@ -1,0 +1,12 @@
+# Website text around the Forecast chart widget (src/components/product/ForecastBlock.tsx).
+# Labels copied from the app (title, "last 7 days", Base/Peak and so on) live in the component.
+# The numbers come from content/demo-data/sample-company.yaml.
+
+crmUnavailable: The CRM forecast isn't included in this sample.
+targetShortSuffix: target
+sampleDataLabel: Sample data
+hint: Hover over or tap a bar for details. Click a bar, Best case or Worst case to see which categories it includes.
+hintPhone: Tap a category to see its details and what it includes.
+chartLabel: Amolino forecast waterfall chart
+detailsFrom: From
+detailsTo: to

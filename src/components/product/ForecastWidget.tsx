@@ -1,8 +1,11 @@
-import { getForecastDemo } from '@/lib/demo-data/forecast'
+import { getForecastChartCopy } from '@/lib/demo-data/forecast-chart-copy'
+import { getForecastBreakdown } from '@/lib/demo-data/forecast-derive'
+import { getSampleCompany } from '@/lib/demo-data/sample-company'
 import { ForecastBlock } from './ForecastBlock'
 
-/** MDX entry point: `<ForecastWidget />` renders the Forecast block with the site's sample data. */
+/** MDX entry point: `<ForecastWidget />` renders the Forecast block for the sample company's current quarter. */
 export async function ForecastWidget() {
-  const demo = await getForecastDemo()
-  return <ForecastBlock breakdown={demo.breakdown} copy={demo.ui} />
+  const [company, copy] = await Promise.all([getSampleCompany(), getForecastChartCopy()])
+  const breakdown = getForecastBreakdown(company, { quarter: company.current_quarter })
+  return <ForecastBlock breakdown={breakdown} copy={copy} />
 }
