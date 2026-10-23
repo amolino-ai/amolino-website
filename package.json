@@ -13,6 +13,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
     "postbuild": "npx tsx scripts/seo-audit.ts",
     "eval:status-audit": "npx tsx src/lib/evals/datasets/status-audit/run.ts",
     "check:app-types": "npx tsx scripts/sync-app-types.ts --check",
@@ -68,6 +71,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^16.0.0",
+    "@playwright/test": "^1.64.1",
     "@shikijs/rehype": "^3.2.1",
     "@tailwindcss/postcss": "^4.0.17",
     "@tailwindcss/typography": "^0.5.16",
@@ -89,7 +93,8 @@
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4.0.15",
     "typescript": "^5",
-    "typescript-eslint": "^8.48.1"
+    "typescript-eslint": "^8.48.1",
+    "vitest": "^3.2.7"
   },
   "overrides": {
     "import-in-the-middle": "2.0.6",
