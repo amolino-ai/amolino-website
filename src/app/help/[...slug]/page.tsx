@@ -14,9 +14,12 @@ import {
 } from '@heroicons/react/16/solid';
 import { clsx } from 'clsx';
 import dayjs from 'dayjs';
+import GithubSlugger from 'github-slugger';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import { Fragment } from 'react';
+import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
 interface Props {
@@ -56,25 +59,54 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+/**
+ * One crumb per folder in the article's path, then the article itself.
+ * The first folder links to its section on /help; deeper folders link to the article
+ * of the same name if there is one (e.g. pages/dashboard/forecast.mdx).
+ */
+async function getBreadcrumbItems(article: HelpArticle): Promise<BreadcrumbItem[]> {
+  const folders = article.slug.split('/').slice(0, -1);
+  const articleSlugs = new Set((await getAllHelpArticles()).map((a) => a.slug));
+
+  return folders.map((folder, index) => {
+    const label = folder.replace(/-/g, ' ');
+    if (index === 0) {
+      return { label, href: `/help?section=${folder}` };
+    }
+    const folderPath = folders.slice(0, index + 1).join('/');
+    return { label, href: articleSlugs.has(folderPath) ? `/help/${folderPath}` : undefined };
+  });
+}
+
 async function Breadcrumb({ article }: { article: HelpArticle }) {
+  const items = await getBreadcrumbItems(article);
+
   return (
-    <nav className="flex items-center gap-2 text-sm text-neutral-600 mb-8">
+    <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm text-neutral-600 mb-8">
       <Link href="/help" className="hover:text-neutral-900 transition-colors">
         Help Center
       </Link>
-      <ChevronRightIcon className="size-4 text-neutral-400" />
-      <Link 
-        href={`/help?section=${article.section}`} 
-        className="hover:text-neutral-900 transition-colors capitalize"
-      >
-        {article.section}
-      </Link>
-      {article.subsection && (
-        <>
+      {items.map((item) => (
+        <Fragment key={item.label}>
           <ChevronRightIcon className="size-4 text-neutral-400" />
-          <span className="capitalize text-neutral-900">{article.subsection}</span>
-        </>
-      )}
+          {item.href ? (
+            <Link href={item.href} className="hover:text-neutral-900 transition-colors capitalize">
+              {item.label}
+            </Link>
+          ) : (
+            <span className="capitalize">{item.label}</span>
+          )}
+        </Fragment>
+      ))}
+      <ChevronRightIcon className="size-4 text-neutral-400" />
+      <span aria-current="page" className="text-neutral-900">
+        {article.title}
+      </span>
     </nav>
   );
 }
@@ -129,24 +161,51 @@ async function RelatedArticles({ article }: { article: HelpArticle }) {
   );
 }
 
-async function TableOfContents({ content }: { content: string }) {
-  // Extract headings from MDX content for table of contents
-  // This is a simple regex-based approach - you might want to use a proper MDX parser
-  const headingRegex = /^#{2,3}\s+(.+)$/gm;
-  const headings = [];
-  let match;
+const TOC_MIN_LEVEL = 2;
+const TOC_MAX_LEVEL = 3;
+const HEADING_LINE = /^(#{1,6})\s+(.+?)\s*#*\s*$/;
+const CODE_FENCE = /^\s*(```|~~~)/;
 
-  while ((match = headingRegex.exec(content)) !== null) {
-    const level = match[0].indexOf(' ') - 1;
-    const text = match[1];
-    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    
-    headings.push({
-      level,
-      text,
-      id,
-    });
+interface TocHeading {
+  level: number;
+  text: string;
+  id: string;
+}
+
+/** Heading text as rehype-slug sees it: link text kept, emphasis and code markers dropped. */
+function stripInlineMarkdown(text: string): string {
+  return text.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[*_`]/g, '');
+}
+
+/**
+ * Builds the table of contents with the same IDs rehype-slug gives the rendered headings:
+ * github-slugger over every heading in document order, so repeated titles get matching -1, -2 suffixes.
+ */
+function getTocHeadings(content: string): TocHeading[] {
+  const slugger = new GithubSlugger();
+  const headings: TocHeading[] = [];
+  let inCodeBlock = false;
+
+  for (const line of content.split('\n')) {
+    if (CODE_FENCE.test(line)) {
+      inCodeBlock = !inCodeBlock;
+      continue;
+    }
+    const match = inCodeBlock ? null : HEADING_LINE.exec(line);
+    if (!match) continue;
+
+    const level = match[1].length;
+    const text = stripInlineMarkdown(match[2]);
+    const id = slugger.slug(text);
+    if (level >= TOC_MIN_LEVEL && level <= TOC_MAX_LEVEL) {
+      headings.push({ level, text, id });
+    }
   }
+  return headings;
+}
+
+async function TableOfContents({ content }: { content: string }) {
+  const headings = getTocHeadings(content);
 
   if (headings.length === 0) {
     return null;
@@ -165,7 +224,7 @@ async function TableOfContents({ content }: { content: string }) {
               href={`#${heading.id}`}
               className={clsx(
                 'block text-sm hover:text-neutral-900 transition-colors',
-                heading.level === 2 ? 'text-neutral-700' : 'text-neutral-600 pl-4',
+                heading.level === TOC_MIN_LEVEL ? 'text-neutral-700' : 'text-neutral-600 pl-4',
               )}
             >
               {heading.text}
@@ -175,6 +234,11 @@ async function TableOfContents({ content }: { content: string }) {
       </div>
     </div>
   );
+}
+
+/** The page already provides the article layout, so skip the blog's MDX wrapper (padding, min-height, footer). */
+function HelpMdxWrapper({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }
 
 export default async function HelpArticlePage({ params }: Props) {
@@ -244,10 +308,11 @@ export default async function HelpArticlePage({ params }: Props) {
               <div className="prose prose-lg max-w-none prose-headings:scroll-mt-8">
                 <MDXRemote
                   source={content}
-                  components={{ ...mdxComponents, Screenshot }}
+                  components={{ ...mdxComponents, Screenshot, wrapper: HelpMdxWrapper }}
                   options={{
                     mdxOptions: {
                       remarkPlugins: [remarkGfm],
+                      rehypePlugins: [rehypeSlug],
                     },
                   }}
                 />
