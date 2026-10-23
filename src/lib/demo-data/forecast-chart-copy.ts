@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { z } from 'zod'
 import { loadYAML } from '../content/loaders'
 
@@ -18,12 +19,12 @@ const forecastChartCopySchema = z
 
 export type ForecastWidgetCopy = z.infer<typeof forecastChartCopySchema>
 
-/** Loads the Forecast chart widget's text. Throws (failing the build) if the file is invalid. */
-export async function getForecastChartCopy(): Promise<ForecastWidgetCopy> {
+/** Loads the Forecast chart widget's text. Throws (failing the build) if the file is invalid. Cached per render. */
+export const getForecastChartCopy = cache(async (): Promise<ForecastWidgetCopy> => {
   const raw = await loadYAML<unknown>(FORECAST_CHART_COPY_FILE)
   const result = forecastChartCopySchema.safeParse(raw)
   if (!result.success) {
     throw new Error(`Invalid widget text in content/${FORECAST_CHART_COPY_FILE}: ${result.error.message}`)
   }
   return result.data
-}
+})

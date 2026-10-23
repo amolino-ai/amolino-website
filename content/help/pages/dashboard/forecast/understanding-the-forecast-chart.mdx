@@ -17,9 +17,9 @@ The **Amolino forecast** panel at the top left of the Forecast dashboard shows h
 
 ## The forecast number
 
-The large number (for example **$3.9M**) is your **Amolino forecast** for the selected quarter and pipeline.
+The large number (for example **<DemoValue path="forecast.total" />**) is your **Amolino forecast** for the selected quarter and pipeline.
 
-The figure next to it (for example **-$1.6M last 7 days**) shows how much the forecast has moved over the past week. Red means it went down; green means it went up. To see which deals caused the change, open [Forecast updates](/help/pages/dashboard/forecast/forecast-updates).
+The figure next to it (for example **<DemoValue path="forecast.change7d" /> last 7 days**) shows how much the forecast has moved over the past week. Red means it went down; green means it went up. To see which deals caused the change, open [Forecast updates](/help/pages/dashboard/forecast/forecast-updates).
 
 ## Forecast categories
 
@@ -65,7 +65,7 @@ The chart is a waterfall. Reading from left to right, it builds the forecast one
 
 Solid bars (Closed won, Confident, Upside, Accelerator) are the amount each category adds. Striped bars (Worst case, Forecast, Best case) are running totals.
 
-The dark horizontal line marks your **target** for the quarter, for example **Target: $10M**. The distance between the bars and the line shows how far you are from target. To change the target, see [Setting forecast targets](/help/pages/dashboard/forecast/forecast-targets).
+The dark horizontal line marks your **target** for the quarter, for example **Target: <DemoValue path="forecast.target" />**. The distance between the bars and the line shows how far you are from target. To change the target, see [Setting forecast targets](/help/pages/dashboard/forecast/forecast-targets).
 
 ### Bar details
 
@@ -73,11 +73,11 @@ Hover over any bar to see its details:
 
 <img src="/images/help/dashboard/forecast/chart-tooltip.jpg" alt="Tooltip on the Accelerator bar showing its value, base and peak" width="1080" height="676" />
 
-- The **value** is the amount that category adds (for example, Accelerator adds **$271.2K**).
+- The **value** is the amount that category adds (for example, Accelerator adds **<DemoValue path="bars.accelerator.value" />**).
 - **Base** is where the bar starts: the running total before this category.
 - **Peak** is where the bar ends: the running total after this category.
 
-In the example above, Accelerator deals would take the forecast from **$3.9M** (base) to a best case of **$4.1M** (peak).
+In the example above, Accelerator deals would take the forecast from **<DemoValue path="bars.accelerator.base" />** (base) to a best case of **<DemoValue path="bars.accelerator.peak" />** (peak).
 
 ## Related articles
 

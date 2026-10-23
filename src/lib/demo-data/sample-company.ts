@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { z } from 'zod'
 import { loadYAML } from '../content/loaders'
 import {
@@ -28,7 +29,7 @@ import { findHistoryMismatch } from './forecast-derive'
  * so an app change that breaks the sample data fails the build here.
  */
 
-const SAMPLE_COMPANY_FILE = 'demo-data/sample-company.yaml'
+export const SAMPLE_COMPANY_FILE = 'demo-data/sample-company.yaml'
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/
 const MIN_SENTIMENT = -100
 const MAX_SENTIMENT = 100
@@ -355,9 +356,16 @@ export type SampleCompany = z.infer<typeof sampleCompanySchema>
 export type SampleOpportunity = SampleCompany['opportunities'][number]
 export type ForecastHistoryEntry = z.infer<typeof forecastHistoryEntrySchema>
 
-/** Loads and validates the sample company. Throws (failing the build) if the file is invalid. */
-export async function getSampleCompany(): Promise<SampleCompany> {
-  const raw = await loadYAML<unknown>(SAMPLE_COMPANY_FILE)
+/**
+ * Loads and validates the sample company. Throws (failing the build) if the file is invalid.
+ * Cached per render, so a page with several widgets and <DemoValue> tags reads the file once.
+ */
+export const getSampleCompany = cache(
+  async (): Promise<SampleCompany> => parseSampleCompany(await loadYAML<unknown>(SAMPLE_COMPANY_FILE)),
+)
+
+/** Validates raw sample data (the parsed YAML). Throws with every problem found. */
+export function parseSampleCompany(raw: unknown): SampleCompany {
   const result = sampleCompanySchema.safeParse(raw)
   if (!result.success) {
     throw new Error(`Invalid sample data in content/${SAMPLE_COMPANY_FILE}: ${result.error.message}`)

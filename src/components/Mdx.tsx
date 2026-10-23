@@ -8,9 +8,10 @@ import { Prose } from './Prose';
 import { LinkedInLink } from './LinkedInLink';
 import { Screenshot } from './Screenshot';
 import { GuidanceCard, GuidanceCardPair } from './GuidanceCard';
+import { DemoValue } from './product/DemoValue';
 import { ForecastWidget } from './product/ForecastWidget';
 
-export { LinkedInLink, Screenshot, GuidanceCard, GuidanceCardPair, ForecastWidget };
+export { LinkedInLink, Screenshot, GuidanceCard, GuidanceCardPair, ForecastWidget, DemoValue };
 
 // Re-exports
 export { Button, code, CodeGroup, pre };
